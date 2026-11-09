@@ -19,6 +19,14 @@ public sealed record DistributionProfile(DistributionChannel Channel)
 
     public bool AllowsDriverManagement => Channel == DistributionChannel.Website;
 
+    public bool AllowsStartupRegistration => Channel == DistributionChannel.Website;
+
+    public bool AllowsExternalUninstall => Channel == DistributionChannel.Website;
+
+    public bool AllowsSystemCleanup => Channel == DistributionChannel.Website;
+
+    public bool AllowsProcessMemoryOptimization => Channel == DistributionChannel.Website;
+
     public static DistributionProfile FromMetadata(string? value) =>
         new(string.Equals(value, nameof(DistributionChannel.Store), StringComparison.OrdinalIgnoreCase)
             ? DistributionChannel.Store

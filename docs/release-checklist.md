@@ -34,7 +34,7 @@
 - [ ] 审阅 `THIRD-PARTY-NOTICES.md` 中的待确认项
 - [ ] 确认报告文案（尤其是免责说明）的日文表述
 
-## 发布
+## Portable ZIP/EXE
 
 - [ ] 确认 `Directory.Build.props` 的版本号
 - [ ] 确认 GitHub Actions 的构建、单元测试和窗口冒烟测试全绿
@@ -45,6 +45,23 @@
 - [ ] 尽可能完成代码签名，并在签名后重新计算 SHA-256
 - [ ] 在网站发布：用途、支持的 Windows 版本、版本号、下载链接、文件大小、SHA-256、更新记录、使用注意事项
 - [ ] 确认 ZIP 内含 `licenses/` 和 `THIRD-PARTY-NOTICES.md`（发布脚本已包含）
+
+## MSI 安装包
+
+MSI 使用 `Website` 能力并按 per-machine 安装到 Program Files。MSI 只安装应用、许可证、注册信息和开始菜单
+快捷方式；PawnIO 仍由应用在用户明确运行时按现有生命周期管理，不注册为 MSI 驱动组件。
+
+- [ ] 发行者确认 WiX 或替代 MSI 编译器的当前许可证；脚本不下载工具，也不代替用户接受 EULA
+- [ ] 使用永久 UpgradeCode `{12B63A4E-3E26-4FF5-8A5B-1B0900C54A7A}`，发布后不得更换
+- [ ] 运行 `scripts/publish-msi.ps1 -WixExecutable <path> -ToolLicenseApproved`
+- [ ] 确认 Program Files 文件、开始菜单入口、应用与 Windows“已安装的应用”中的版本一致
+- [ ] 验证交互安装、`msiexec /i ... /quiet /l*v ...` 静默安装和标准用户/UAC 路径
+- [ ] 验证 Major Upgrade、同版本修复、低版本降级阻止和 `msiexec /x ... /quiet` 静默卸载
+- [ ] 卸载后检查程序文件、快捷方式和安装注册项；保留用户主动保存的报告
+- [ ] 先签应用 EXE，再构建 MSI，最后签 MSI；签名后重新计算 SHA-256
+
+当前 MSI 源文件和构建脚本已准备，但本机没有已批准的 MSI 编译器。WiX 6/7 可能对营收组织要求维护费，WiX 5
+已停止安全维护，因此在用户确认适用许可证前不生成正式 MSI。
 
 ## Microsoft Store 版
 
@@ -64,7 +81,7 @@ PawnIO、不显示需要管理员权限的入口，并从程序集排除 PawnIO 
 - [ ] Claude 独立复核 Store 政策、隐私、第三方许可和认证说明
 - [ ] 商店提交、公开可见时间和网站宣传分别取得授权；不得用本地构建通过代替认证通过
 
-当前仓库只生成经过能力裁剪的 Store payload。最终 MSIX 仍受 Partner Center 身份和商店素材阻断，身份取得前不生成
-假 manifest。
+当前仓库可生成经过能力裁剪的 Store payload，并已提供参数化 manifest 与 MSIX 脚本。最终 MSIX 仍受 Partner
+Center 真实身份和 Store PNG 素材阻断；身份取得前不生成假 manifest。
 
 网站规划路径为 `/tools/hardware-check/` 和 `/downloads/`。网站页面和部署不在本目录内，需要单独授权和实施。

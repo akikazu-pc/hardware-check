@@ -16,7 +16,9 @@ Windows 硬件检测、快速压力测试与诊断验收工具。
 | `src/AkikazuHardwareCheck.App` | WinForms 界面 |
 | `src/AkikazuHardwareCheck.Probe` | 控制台探针，用于现场诊断和实机验证 |
 | `tests/AkikazuHardwareCheck.Core.Tests` | 单元测试 |
-| `scripts/publish.ps1` | 生成便携发布包 |
+| `scripts/publish.ps1` | 生成 Portable ZIP/EXE |
+| `scripts/publish-msi.ps1` | 使用已批准的 WiX 工具生成官网 MSI |
+| `scripts/publish-store-msix.ps1` | 使用 Partner Center 身份生成 Store MSIX |
 | `licenses/` | 第三方许可证全文 |
 | `third-party/pawnio/` | 未修改的官方 PawnIO 安装程序，嵌入程序 |
 
@@ -39,6 +41,10 @@ dotnet build AkikazuHardwareCheck.slnx -c Release
 ```bash
 powershell -ExecutionPolicy Bypass -File scripts/publish.ps1
 ```
+
+项目维护三种 Windows 发行物：Portable ZIP/EXE 和 MSI 使用完整 `Website` 能力；Microsoft Store MSIX 使用
+受限 `Store` 能力，不含 PawnIO、不自动提权，也不提供修改系统或其他进程的入口。MSI 和 MSIX 的身份、签名、
+安装验证及必须由发行者提供的参数见 [发布清单](docs/release-checklist.md)。
 
 ## 权限和驱动
 

@@ -524,7 +524,10 @@ internal sealed class MainForm : Form
         menu.Items.Add(_trayCrosshairItem);
         menu.Items.Add(Item(_t["tray.chart"], (_, _) => ShowLiveChart()));
         menu.Items.Add(Item(_t["tray.diagnostic"], (_, _) => ShowMaintenance()));
-        menu.Items.Add(Item(_t["ui.junkCleanup"], (_, _) => ShowJunkCleanup()));
+        if (DistributionProfile.Current.AllowsSystemCleanup)
+        {
+            menu.Items.Add(Item(_t["ui.junkCleanup"], (_, _) => ShowJunkCleanup()));
+        }
         menu.Items.Add(new ToolStripSeparator());
         menu.Items.Add(Item(_t["tray.settings"], (_, _) => OpenSettingsForm()));
         menu.Items.Add(new ToolStripSeparator());
@@ -542,9 +545,12 @@ internal sealed class MainForm : Form
     private void BuildContextMenu()
     {
         _contextMenu = new ContextMenuStrip();
-        var cleanup = new ToolStripMenuItem(_t["ui.junkCleanup"]);
-        cleanup.Click += (_, _) => ShowJunkCleanup();
-        _contextMenu.Items.Add(cleanup);
+        if (DistributionProfile.Current.AllowsSystemCleanup)
+        {
+            var cleanup = new ToolStripMenuItem(_t["ui.junkCleanup"]);
+            cleanup.Click += (_, _) => ShowJunkCleanup();
+            _contextMenu.Items.Add(cleanup);
+        }
     }
 
     /// <summary>
@@ -957,7 +963,10 @@ internal sealed class MainForm : Form
         NativeMenu.AddSeparator(tools);
         NativeMenu.AddItem(tools, MenuCommand.AdvancedInfo, _t["ui.advancedInfo"]);
         NativeMenu.AddItem(tools, MenuCommand.Maintenance, _t["ui.maintenance"]);
-        NativeMenu.AddItem(tools, MenuCommand.JunkCleanup, _t["ui.junkCleanup"]);
+        if (DistributionProfile.Current.AllowsSystemCleanup)
+        {
+            NativeMenu.AddItem(tools, MenuCommand.JunkCleanup, _t["ui.junkCleanup"]);
+        }
         NativeMenu.AddItem(tools, MenuCommand.NetworkSpeedTest, _t["networkTest.title"]);
         NativeMenu.AddItem(tools, MenuCommand.DisplayInfo, _t["displayInfo.title"]);
         NativeMenu.AddSeparator(tools);
@@ -1476,7 +1485,7 @@ internal sealed class MainForm : Form
 
     private void SaveSettings(AppSettings settings)
     {
-        if (settings.StartWithWindows != _settings.StartWithWindows)
+        if (DistributionProfile.Current.AllowsStartupRegistration && settings.StartWithWindows != _settings.StartWithWindows)
         {
             try
             {
@@ -1522,7 +1531,7 @@ internal sealed class MainForm : Form
         Font = Ui.FontFor(_t.Language);
         BuildMenu();
         UpdateTrayIcon();
-        if (_contextMenu?.Items[0] is { } cleanupItem)
+        if (_contextMenu is { Items.Count: > 0 } && _contextMenu.Items[0] is { } cleanupItem)
         {
             cleanupItem.Text = _t["ui.junkCleanup"];
         }

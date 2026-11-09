@@ -19,18 +19,11 @@ if ($LASTEXITCODE -ne 0) {
 }
 
 $corePath = Join-Path $root 'src/AkikazuHardwareCheck.Core/bin/Release/net10.0-windows/win-x64/AkikazuHardwareCheck.Core.dll'
-$core = [System.Reflection.Assembly]::LoadFile($corePath)
-$resources = $core.GetManifestResourceNames()
-if ($resources -contains 'pawnio.setup.exe') {
-    throw 'Store payload contains the PawnIO installer.'
-}
-
-$channel = $core.GetCustomAttributesData() |
-    Where-Object { $_.AttributeType.Name -eq 'AssemblyMetadataAttribute' } |
-    Where-Object { $_.ConstructorArguments[0].Value -eq 'DistributionChannel' } |
-    ForEach-Object { $_.ConstructorArguments[1].Value }
-if ($channel -ne 'Store') {
-    throw "Unexpected distribution channel: $channel"
+$shell = (Get-Process -Id $PID).Path
+& $shell -NoProfile -File (Join-Path $PSScriptRoot 'assert-distribution.ps1') `
+    -AssemblyPath $corePath -ExpectedChannel Store -ExpectedPawnIo Absent
+if ($LASTEXITCODE -ne 0) {
+    throw "Distribution assertion failed with exit code $LASTEXITCODE"
 }
 
 $licenses = Join-Path $output 'licenses'
@@ -39,6 +32,6 @@ Copy-Item (Join-Path $root 'THIRD-PARTY-NOTICES.md') $output
 Copy-Item (Join-Path $root 'LICENSE') $output
 
 Write-Output "Version: $version"
-Write-Output "Channel: $channel"
+Write-Output 'Channel: Store'
 Write-Output 'PawnIO installer: excluded'
 Write-Output "Output: $output"

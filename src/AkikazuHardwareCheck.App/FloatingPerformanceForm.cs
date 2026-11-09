@@ -2,6 +2,7 @@ using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.Globalization;
 using System.Runtime.InteropServices;
+using AkikazuHardwareCheck.Core.Configuration;
 using AkikazuHardwareCheck.Core.Diagnostics;
 using AkikazuHardwareCheck.Core.Localization;
 using AkikazuHardwareCheck.Core.Monitoring;
@@ -162,9 +163,20 @@ internal sealed class FloatingPerformanceForm : Form
         AddMenuItem(_t["floating.dockRight"], () => DockTo(DockEdge.Right));
         AddMenuItem(_t["floating.undock"], Undock);
         _menu.Items.Add(new ToolStripSeparator());
-        AddMenuItem(_t["floating.clean"], StartCleanMemory);
-        AddMenuItem(_t["ui.junkCleanup"], ShowJunkCleanup);
-        _menu.Items.Add(new ToolStripSeparator());
+        if (DistributionProfile.Current.AllowsProcessMemoryOptimization)
+        {
+            AddMenuItem(_t["floating.clean"], StartCleanMemory);
+        }
+
+        if (DistributionProfile.Current.AllowsSystemCleanup)
+        {
+            AddMenuItem(_t["ui.junkCleanup"], ShowJunkCleanup);
+        }
+
+        if (DistributionProfile.Current.AllowsProcessMemoryOptimization || DistributionProfile.Current.AllowsSystemCleanup)
+        {
+            _menu.Items.Add(new ToolStripSeparator());
+        }
         AddMenuItem(_t["floating.hide"], Hide);
     }
 
@@ -548,7 +560,7 @@ internal sealed class FloatingPerformanceForm : Form
         }
 
         // Wait for a possible second click: a single click toggles the information, a double click cleans memory.
-        if (e.Clicks >= 2)
+        if (DistributionProfile.Current.AllowsProcessMemoryOptimization && e.Clicks >= 2)
         {
             _clickTimer.Stop();
             _clickPending = false;

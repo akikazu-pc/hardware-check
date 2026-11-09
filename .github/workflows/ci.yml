@@ -24,5 +24,11 @@ jobs:
       - name: Window smoke tests
         run: .\tests\AkikazuHardwareCheck.App.SmokeTests\bin\Release\net10.0-windows\win-x64\AkikazuHardwareCheck.App.SmokeTests.exe
 
+      - name: Portable package
+        run: .\scripts\publish.ps1
+
       - name: Store payload
         run: .\scripts\publish-store-payload.ps1
+
+      - name: Store window smoke tests
+        run: .\scripts\test-store.ps1

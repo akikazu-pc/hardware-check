@@ -13,9 +13,18 @@ if (Test-Path $output) {
 }
 
 # Single-file settings live in the project, so plain builds and publishing restore the same lock files.
-dotnet publish $project -c Release --self-contained true -o $output --nologo -p:DebugType=None
+dotnet publish $project -c Release --self-contained true -o $output --nologo `
+    -p:DistributionChannel=Website -p:DebugType=None
 if ($LASTEXITCODE -ne 0) {
     throw "dotnet publish failed with exit code $LASTEXITCODE"
+}
+
+$corePath = Join-Path $root 'src/AkikazuHardwareCheck.Core/bin/Release/net10.0-windows/win-x64/AkikazuHardwareCheck.Core.dll'
+$shell = (Get-Process -Id $PID).Path
+& $shell -NoProfile -File (Join-Path $PSScriptRoot 'assert-distribution.ps1') `
+    -AssemblyPath $corePath -ExpectedChannel Website -ExpectedPawnIo Present
+if ($LASTEXITCODE -ne 0) {
+    throw "Distribution assertion failed with exit code $LASTEXITCODE"
 }
 
 $licenses = Join-Path $output 'licenses'
@@ -38,6 +47,8 @@ Compress-Archive -Path (Join-Path $output '*') -DestinationPath $zip -Force
 $zipHash = (Get-FileHash $zip -Algorithm SHA256).Hash
 
 Write-Output "Version: $version"
+Write-Output 'Channel: Website'
+Write-Output 'PawnIO installer: included'
 Write-Output "Size:    $([math]::Round((Get-Item $exe).Length / 1MB, 1)) MB"
 Write-Output "SHA-256: $hash"
 Write-Output "Output:  $output"

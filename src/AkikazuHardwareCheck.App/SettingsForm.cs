@@ -70,7 +70,8 @@ internal sealed class SettingsForm : Form
         _gpuLimit.Value = (decimal)Math.Clamp(profile.GpuProtectionCelsius, MIN_LIMIT_CELSIUS, MAX_LIMIT_CELSIUS);
         _showTrayIcon.Checked = settings.ShowTrayIcon;
         _closeToTray.Checked = settings.CloseToTray;
-        _startWithWindows.Checked = settings.StartWithWindows || StartupRegistration.IsEnabled();
+        _startWithWindows.Checked = DistributionProfile.Current.AllowsStartupRegistration &&
+            (settings.StartWithWindows || StartupRegistration.IsEnabled());
         _alwaysOnTop.Checked = settings.IsAlwaysOnTop;
         _crosshairEnabled.Checked = settings.CrosshairEnabled;
         _crosshairColor = _crosshair.Color;
@@ -168,7 +169,10 @@ internal sealed class SettingsForm : Form
         AddField(fields, t["ui.reportFolder"], folderRow);
         AddField(fields, t["ui.showTrayIcon"], _showTrayIcon);
         AddField(fields, t["ui.closeToTray"], _closeToTray);
-        AddField(fields, t["ui.startWithWindows"], _startWithWindows);
+        if (DistributionProfile.Current.AllowsStartupRegistration)
+        {
+            AddField(fields, t["ui.startWithWindows"], _startWithWindows);
+        }
         AddField(fields, t["ui.alwaysOnTop"], _alwaysOnTop);
         page.Controls.Add(fields);
         return page;

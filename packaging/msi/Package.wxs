@@ -1,0 +1,41 @@
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+  <Package
+    Id="AkikazuHardwareCheck"
+    Name="秋和PC 硬件测试工具"
+    Manufacturer="株式会社秋和"
+    Version="$(var.ProductVersion)"
+    Language="1041"
+    Codepage="65001"
+    Scope="perMachine"
+    UpgradeCode="{12B63A4E-3E26-4FF5-8A5B-1B0900C54A7A}">
+    <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+    <MediaTemplate EmbedCab="yes" />
+
+    <StandardDirectory Id="ProgramFiles64Folder">
+      <Directory Id="INSTALLFOLDER" Name="Akikazu Hardware Check">
+        <Files Include="$(var.PayloadDir)\**" />
+      </Directory>
+    </StandardDirectory>
+
+    <StandardDirectory Id="ProgramMenuFolder">
+      <Directory Id="ApplicationProgramsFolder" Name="秋和PC">
+        <Component Id="StartMenuShortcut" Guid="*">
+          <Shortcut
+            Id="ApplicationStartMenuShortcut"
+            Name="秋和PC 硬件测试工具"
+            Description="Windows hardware diagnostics and acceptance testing"
+            Target="[INSTALLFOLDER]AkikazuHardwareCheck.exe"
+            WorkingDirectory="INSTALLFOLDER" />
+          <RemoveFolder Id="RemoveStartMenuFolder" On="uninstall" />
+          <RegistryValue
+            Root="HKLM"
+            Key="Software\Akikazu\HardwareCheck"
+            Name="Installed"
+            Type="integer"
+            Value="1"
+            KeyPath="yes" />
+        </Component>
+      </Directory>
+    </StandardDirectory>
+  </Package>
+</Wix>

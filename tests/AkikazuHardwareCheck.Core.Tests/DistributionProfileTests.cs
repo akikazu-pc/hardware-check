@@ -16,6 +16,10 @@ public sealed class DistributionProfileTests
         Assert.Equal(DistributionChannel.Website, profile.Channel);
         Assert.True(profile.AllowsElevation);
         Assert.True(profile.AllowsDriverManagement);
+        Assert.True(profile.AllowsStartupRegistration);
+        Assert.True(profile.AllowsExternalUninstall);
+        Assert.True(profile.AllowsSystemCleanup);
+        Assert.True(profile.AllowsProcessMemoryOptimization);
     }
 
     [Theory]
@@ -28,5 +32,9 @@ public sealed class DistributionProfileTests
         Assert.Equal(DistributionChannel.Store, profile.Channel);
         Assert.False(profile.AllowsElevation);
         Assert.False(profile.AllowsDriverManagement);
+        Assert.False(profile.AllowsStartupRegistration);
+        Assert.False(profile.AllowsExternalUninstall);
+        Assert.False(profile.AllowsSystemCleanup);
+        Assert.False(profile.AllowsProcessMemoryOptimization);
     }
 }

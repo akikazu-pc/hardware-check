@@ -17,11 +17,31 @@
 
 ## Authorization and Git
 
-- “只读”“只检查”“先分析”“先不改”只允许调查和报告。诊断不自动授权修复。
+- “只读”“只检查”“先分析”“先不改”只允许调查和报告；不得编辑、暂存、提交、同步、部署或执行外部写操作。诊断不自动授权修复。
 - 完成用户授权的修改并通过验证后自动 commit；用户明确要求不提交时除外。未经明确授权不得 push 或发布 Release。
-- 开始和提交前检查分支、HEAD、`git status` 与目标 diff；不 stash、不改写历史，不覆盖或夹带其他会话的修改。
+- push、GitHub Release、Microsoft Store 提交、网站部署和真实外部同步分别授权，不得互相推定。
+- 开始和提交前检查分支、HEAD、`git status`、文件归属与目标 diff；不 stash、不切换分支、不改写历史，不覆盖或夹带其他会话的修改。HEAD 意外变化或归属不明时暂停。
+- 状态异常但没有内容 diff 时检查 `git diff --summary` 和 `git update-index --refresh`；不得把索引、时间戳或换行噪声当作修改。
+- 只暂存本任务文件，确认验证对象与最终暂存内容一致；commit 后立即检查提交内容和 `git status --short`。
 - commit 前确认 `user.name` 为 `Expurgator`、`user.email` 为 GitHub noreply 地址，不得添加 `Co-authored-by`、AI 署名及生成工具标记。
 - commit message 使用 `<type>(<scope>): <subject>`；subject 为英文且不超过 20 个字符。正文每行不超过 100 字符。
+
+## Workflow
+
+- 默认单会话闭环：要求评估 → 方案准备 → 实施 → 自审补漏 → 验证 → commit → 只读核对；不得强制用户另开审查会话。
+- 每个会话保持一个主要目标；目标明显变化时优先新建会话或 fork，不把无关历史继续堆入当前任务。
+- 用户不保证实时在线；目标和授权明确时持续自主推进。仅在需要扩大授权、存在不可逆风险、必须接受许可证/使用私钥，或缺少会实质改变结果的产品决定时暂停。
+- 实施前检查安全、兼容、维护成本和三种发行渠道影响；最终验证前对照原始要求、确认方案和实际 diff，检查遗漏、假设、无关修改、测试与文档同步。
+- 多会话交接必须写明任务归属、基线 SHA、文件范围和验证状态；不得重复修改或提交同一范围。验证只适用于执行时的代码树，之后改变受验证文件或行为须按风险重跑。
+- 独立只读检查应批量执行，先搜索/过滤再读取相关文件、行和日志；工具输出默认限于摘要、命中行或尾部，通常不超过 100 行或 20 KB，任务确需完整内容时除外。
+- 不用模型调用轮询无变化状态；优先本地脚本或状态比较，仅在状态变化、错误或需要决定时调用模型。重大调查或验证里程碑后若同一目标仍继续且上下文已大，建议压缩；目标分叉则建议新会话。
+
+## AI collaboration
+
+- 用户决定产品优先级；Codex 协调、实施控制和最终验收；Harness 执行与自审；Claude 只做条件独立复核；本地 Qwen 和脚本承担机械检查。模型名称不授予额外权限。
+- 按“需求冻结 → 派发准备 → 单主题实施/自审 → 本地确定性验证 → 条件反审 → 条件终审 → 验收”推进。派发、确认收到、处理中和模型自报完成都不等于独立验证完成。
+- 反审前锁定基线 commit 和工作树状态，只审基线到当前差异；基线漂移则重新交接。外部代理不得自行 push、发布 Release、提交 Store 或部署网站。
+- 子代理只用于真正独立的并行工作，不用于简单顺序任务或单文件修改；状态没有变化时不重复调用模型。
 
 ## Product rules
 
@@ -99,10 +119,41 @@
 - 分别报告单元测试、窗口实测、发布版实测和真实硬件验证；未执行的标 `Unverified`。不得把模拟环境的结果说成真实系统通过。
 - 只有真实运行过的结果才写入 `docs/validation-record.md`。
 - 托盘右键、开机自启写入、系统级内存清理和垃圾删除这类高风险交互，未实际执行时必须标 `Unverified`，不能只凭编译通过。
+- 分别报告聚焦测试、`scripts/test.ps1`、窗口实测、便携 EXE、MSI 安装/升级/卸载、Store MSIX、远端 CI、签名、认证和真实硬件验证；任一产物通过不能代替另两种。
+- 修改 CI、打包脚本、manifest、测试入口或门禁顺序时同步 workflow、脚本、文档和相关测试。高风险系统行为必须实际执行才算验证。
+
+### Commit gates
+
+- 轻量：纯文档或注释且不改变规则、脚本、配置或行为；运行 `git diff --check`，没有测试时说明省略原因。
+- 中等：范围明确的局部逻辑或测试；运行相关测试、Release 构建和 `git diff --check`。
+- 完整：依赖/锁文件、CI、打包脚本、manifest、权限、驱动、Schema、发行渠道、安装/卸载或聚焦测试不能覆盖主要行为；串行运行 `scripts/test.ps1`、四语言窗口冒烟、Website 与 Store 构建，以及受影响的最终产物验证。
+- 推送后的 GitHub Actions 才是远端门禁；未运行时标 `Unverified`。本地通过不得表述为远端、签名、认证、发布或线上通过。
+
+## Audit records
+
+- 状态使用 `Open`、`Mitigated locally`、`Fixed locally`、`Unverified`、`Not a defect`、`Closed`；仍有风险或需要真实安装/硬件/认证验证时不得关闭。
+- commit 后、push 前执行 `git show <sha>`，检查 author、committer、共同作者、范围、回归、安全和文档漂移。发现阻断问题时用后续 commit 修正，不改写历史。
+- 明确区分代码已实现、产物已生成、安装已验证、签名已验证、Store 认证已通过和已发布。
+
+## Distribution channels
+
+- 三种发行物使用同一个产品版本，但能力、签名、更新机制、文件名、校验值和验证记录分别管理：
+  - `Portable EXE`：`Website` 能力，自包含单文件 ZIP，解压即用；由官网/GitHub Release 托管和更新。
+  - `MSI`：`Website` 能力，per-machine 安装，稳定 UpgradeCode、Major Upgrade、开始菜单入口和标准卸载；MSI 不直接安装 PawnIO，程序首次运行仍使用现有显式提权与驱动规则。
+  - `Store MSIX`：`Store` 能力，只通过 Microsoft Store 分发；禁止嵌入 PawnIO、驱动管理、自动提权和管理员入口，由 Store 签名和更新。
+- Portable 要验证非 ASCII 路径、受限目录、解压即用和许可证；MSI 要验证交互/静默安装、启动、升级、降级阻止、修复、静默卸载、残留和签名；MSIX 要验证 WACK、干净 Windows 10/11、无 UAC/驱动、离线启动、更新、卸载及数据保留边界。
+- 签名发生在所有二进制修改之后，签名后重新计算 SHA-256。不得提交证书、私钥、密码、Partner Center token、真实 Publisher 身份或客户报告。
+- Partner Center 名称保留和真实 Identity、付费证书或打包工具许可证、私钥操作及最终商店提交必须由用户本人完成；代码、脚本、素材清单和预检由当前会话推进。
 
 ## Release
 
-- 版本号在 `Directory.Build.props`。`scripts/publish.ps1` 生成固定文件名的 `AkikazuHardwareCheck-win-x64.zip`。
+- 版本号在 `Directory.Build.props`。`scripts/publish.ps1` 生成 Portable ZIP；MSI 和 Store MSIX 使用同一版本源，但独立生成与验证。
 - 用正式 Release 并标为 latest，不用 prerelease 标记：`releases/latest/download` 不会指向 prerelease。未完成硬件验证时在标题和说明里写“预览版”。
 - 发布后从 latest 链接下载并核对 SHA-256。
 - 网站 `AkiCust-PC/my-site` 的 `app/data/tools/hardware-check-release.json` 要同步版本号和 SHA-256；网站导入按 `SchemaVersion` 精确匹配，升版本要同步 `app/utils/forms/hardwareReportImport.ts`。推送网站 `main` 会自动部署到生产环境，需要明确授权。
+
+## Resources and safety
+
+- build、test、publish 和打包等重任务串行执行；临时验证文件用后清理。
+- 只停止 PID、完整命令行、工作目录和用途都确认属于本项目的残留进程；不得终止 VS Code、其他代理或归属不明进程。
+- 不提交开发机路径、账号身份、证书、私钥、Partner Center 信息、客户报告或其他个人数据；不使用破坏性 Git 命令。

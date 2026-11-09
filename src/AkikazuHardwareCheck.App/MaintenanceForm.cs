@@ -1,5 +1,6 @@
 using System.Diagnostics;
 using System.Globalization;
+using AkikazuHardwareCheck.Core.Configuration;
 using AkikazuHardwareCheck.Core.Diagnostics;
 using AkikazuHardwareCheck.Core.Localization;
 
@@ -107,7 +108,10 @@ internal sealed class MaintenanceForm : Form
         layout.RowStyles.Add(new RowStyle(SizeType.AutoSize));
         layout.Controls.Add(hint, 0, 0);
         layout.Controls.Add(_software, 0, 1);
-        layout.Controls.Add(uninstall, 0, 2);
+        if (DistributionProfile.Current.AllowsExternalUninstall)
+        {
+            layout.Controls.Add(uninstall, 0, 2);
+        }
         page.Controls.Add(layout);
         return page;
     }
