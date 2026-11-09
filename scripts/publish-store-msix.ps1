@@ -8,8 +8,7 @@ param(
     [Parameter(Mandatory = $true)]
     [string]$PublisherDisplayName,
 
-    [Parameter(Mandatory = $true)]
-    [string]$AssetsPath,
+    [string]$AssetsPath = (Join-Path (Split-Path -Parent $PSScriptRoot) 'packaging/store/Assets'),
 
     [Parameter(Mandatory = $true)]
     [string]$MakeAppxPath

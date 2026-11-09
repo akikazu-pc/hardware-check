@@ -51,17 +51,19 @@
 MSI 使用 `Website` 能力并按 per-machine 安装到 Program Files。MSI 只安装应用、许可证、注册信息和开始菜单
 快捷方式；PawnIO 仍由应用在用户明确运行时按现有生命周期管理，不注册为 MSI 驱动组件。
 
-- [ ] 发行者确认 WiX 或替代 MSI 编译器的当前许可证；脚本不下载工具，也不代替用户接受 EULA
+- [x] 选择仍维护的 Advanced Installer Freeware；Simple 项目允许商业和非商业用途且可免费分发
+- [ ] 从[官方 Freeware 下载页](https://www.advancedinstaller.com/advanced-installer-free.html)安装当前版本；页面要求创建免费账户，安装时只需保留 Freeware/Simple 功能
 - [ ] 使用永久 UpgradeCode `{12B63A4E-3E26-4FF5-8A5B-1B0900C54A7A}`，发布后不得更换
-- [ ] 运行 `scripts/publish-msi.ps1 -WixExecutable <path> -ToolLicenseApproved`
+- [ ] 安装当前 Advanced Installer Freeware（v22+ 会设置 `ADVINST_COM`），运行 `scripts/publish-msi.ps1`
 - [ ] 确认 Program Files 文件、开始菜单入口、应用与 Windows“已安装的应用”中的版本一致
 - [ ] 验证交互安装、`msiexec /i ... /quiet /l*v ...` 静默安装和标准用户/UAC 路径
 - [ ] 验证 Major Upgrade、同版本修复、低版本降级阻止和 `msiexec /x ... /quiet` 静默卸载
 - [ ] 卸载后检查程序文件、快捷方式和安装注册项；保留用户主动保存的报告
 - [ ] 先签应用 EXE，再构建 MSI，最后签 MSI；签名后重新计算 SHA-256
 
-当前 MSI 源文件和构建脚本已准备，但本机没有已批准的 MSI 编译器。WiX 6/7 可能对营收组织要求维护费，WiX 5
-已停止安全维护，因此在用户确认适用许可证前不生成正式 MSI。
+已放弃可能产生维护费的 WiX 6/7 和停止维护的 WiX 5。构建脚本只创建 Advanced Installer 的永久免费 Simple
+项目，不使用试用或付费功能。当前执行环境阻止静默安装系统软件，因此本机尚未安装编译器、尚未生成 MSI；安装后
+脚本会创建项目、加入 Website payload、生成开始菜单快捷方式并输出 MSI 与 SHA-256。
 
 ## Microsoft Store 版
 
@@ -71,7 +73,8 @@ PawnIO、不显示需要管理员权限的入口，并从程序集排除 PawnIO 
 - [ ] 运行 `scripts/publish-store-payload.ps1`；脚本必须确认 `DistributionChannel=Store` 且不含 `pawnio.setup.exe`
 - [ ] 在 Partner Center 保留产品名称，并取得准确的 Package Identity Name、Publisher 和 Publisher Display Name
 - [ ] 根据 Partner Center 身份生成 MSIX manifest；不得使用示例 Publisher 或临时身份提交
-- [ ] 准备 Store 图标、截图、简短说明、完整说明、搜索词、支持 URL 和隐私政策 URL
+- [x] 从 `my-site` 既有品牌图形生成包图标和 300 × 300 Store listing 图标，并记录来源
+- [ ] 准备最终版截图、简短说明、完整说明、搜索词、支持 URL 和隐私政策 URL
 - [ ] 隐私政策说明硬件信息和报告只保存在本机；Cloudflare 网络测速仅在用户主动启动时发送测试流量
 - [ ] 运行 Windows App Certification Kit，并保存结果
 - [ ] 在未安装 .NET、未安装 PawnIO 的干净 Windows 10 和 Windows 11 上安装 MSIX 并完成窗口实测
@@ -81,7 +84,8 @@ PawnIO、不显示需要管理员权限的入口，并从程序集排除 PawnIO 
 - [ ] Claude 独立复核 Store 政策、隐私、第三方许可和认证说明
 - [ ] 商店提交、公开可见时间和网站宣传分别取得授权；不得用本地构建通过代替认证通过
 
-当前仓库可生成经过能力裁剪的 Store payload，并已提供参数化 manifest 与 MSIX 脚本。最终 MSIX 仍受 Partner
-Center 真实身份和 Store PNG 素材阻断；身份取得前不生成假 manifest。
+当前仓库可生成经过能力裁剪的 Store payload，并已提供参数化 manifest、PNG 素材与 MSIX 脚本。最终 MSIX 仍受
+Partner Center 真实身份阻断；身份取得前不生成假 manifest。发行者本人步骤见
+[`partner-center-store-setup.md`](partner-center-store-setup.md)。
 
 网站规划路径为 `/tools/hardware-check/` 和 `/downloads/`。网站页面和部署不在本目录内，需要单独授权和实施。

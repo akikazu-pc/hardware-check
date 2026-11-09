@@ -34,11 +34,12 @@ public sealed class PackagingContractTests
     [Fact]
     public void MsiUsesStablePerMachineUpgradeContract()
     {
-        var source = File.ReadAllText(Path.Combine(Root, "packaging", "msi", "Package.wxs"));
+        var source = File.ReadAllText(Path.Combine(Root, "scripts", "publish-msi.ps1"));
 
-        Assert.Contains("Scope=\"perMachine\"", source, StringComparison.Ordinal);
-        Assert.Contains("UpgradeCode=\"{12B63A4E-3E26-4FF5-8A5B-1B0900C54A7A}\"", source, StringComparison.Ordinal);
-        Assert.Contains("<MajorUpgrade", source, StringComparison.Ordinal);
+        Assert.Contains("UpgradeCode=$upgradeCode", source, StringComparison.Ordinal);
+        Assert.Contains("{12B63A4E-3E26-4FF5-8A5B-1B0900C54A7A}", source, StringComparison.Ordinal);
+        Assert.Contains("ALLUSERS=1", source, StringComparison.Ordinal);
+        Assert.Contains("Simple (Freeware)", source, StringComparison.Ordinal);
         Assert.DoesNotContain("PawnIO", source, StringComparison.OrdinalIgnoreCase);
     }
 

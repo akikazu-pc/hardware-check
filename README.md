@@ -17,7 +17,7 @@ Windows 硬件检测、快速压力测试与诊断验收工具。
 | `src/AkikazuHardwareCheck.Probe` | 控制台探针，用于现场诊断和实机验证 |
 | `tests/AkikazuHardwareCheck.Core.Tests` | 单元测试 |
 | `scripts/publish.ps1` | 生成 Portable ZIP/EXE |
-| `scripts/publish-msi.ps1` | 使用已批准的 WiX 工具生成官网 MSI |
+| `scripts/publish-msi.ps1` | 使用 Advanced Installer Freeware Simple 项目生成官网 MSI |
 | `scripts/publish-store-msix.ps1` | 使用 Partner Center 身份生成 Store MSIX |
 | `licenses/` | 第三方许可证全文 |
 | `third-party/pawnio/` | 未修改的官方 PawnIO 安装程序，嵌入程序 |
