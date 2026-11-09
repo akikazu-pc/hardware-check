@@ -1,6 +1,7 @@
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Globalization;
+using AkikazuHardwareCheck.Core.Configuration;
 using AkikazuHardwareCheck.Core.Hardware;
 using AkikazuHardwareCheck.Core.Localization;
 
@@ -37,7 +38,10 @@ internal static class Program
 
         // CPU temperatures need administrator rights, so the tool asks for them right away and staff answer one Windows prompt.
         // Declining is not an error: this copy then keeps running with what ordinary rights can read.
-        if (!args.Contains(NO_ELEVATE_ARGUMENT) && !Elevation.IsAdministrator() && Environment.ProcessPath is { } path)
+        if (DistributionProfile.Current.AllowsElevation &&
+            !args.Contains(NO_ELEVATE_ARGUMENT) &&
+            !Elevation.IsAdministrator() &&
+            Environment.ProcessPath is { } path)
         {
             try
             {

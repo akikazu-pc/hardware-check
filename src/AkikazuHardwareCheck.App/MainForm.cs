@@ -948,8 +948,11 @@ internal sealed class MainForm : Form
 
         var tools = menu.AddSubmenu(_t["ui.menuTools"]);
         NativeMenu.AddItem(tools, MenuCommand.Reload, _t["ui.reload"]);
-        NativeMenu.AddItem(tools, MenuCommand.RestartToFirmware, _t["ui.restartToFirmware"]);
-        NativeMenu.AddItem(tools, MenuCommand.KeyboardFix, _t["ui.keyboardFix"]);
+        if (DistributionProfile.Current.AllowsElevation)
+        {
+            NativeMenu.AddItem(tools, MenuCommand.RestartToFirmware, _t["ui.restartToFirmware"]);
+            NativeMenu.AddItem(tools, MenuCommand.KeyboardFix, _t["ui.keyboardFix"]);
+        }
         NativeMenu.AddItem(tools, MenuCommand.Copy, $"{_t["ui.copy"]}\tCtrl+C");
         NativeMenu.AddSeparator(tools);
         NativeMenu.AddItem(tools, MenuCommand.AdvancedInfo, _t["ui.advancedInfo"]);
@@ -1642,6 +1645,11 @@ internal sealed class MainForm : Form
     /// <summary>Installs the built-in sensor driver when it is missing. Everything else still works if this fails.</summary>
     private async Task PrepareSensorDriverAsync()
     {
+        if (!DistributionProfile.Current.AllowsDriverManagement)
+        {
+            return;
+        }
+
         var outcome = await Task.Run(() => PawnIoSetup.Install(Elevation.IsAdministrator(), HardwareInfoService.IsPawnIoInstalled()));
         _isDriverOurs = outcome.Result is DriverSetupResult.Installed or DriverSetupResult.RebootRequired;
         _isDriverPackageOurs = _isDriverOurs && !outcome.HadDriverBefore;
@@ -2131,11 +2139,11 @@ internal sealed class MainForm : Form
 
         var environment = _hardware.Environment;
         var lines = new List<string>();
-        if (!environment.IsAdministrator)
+        if (DistributionProfile.Current.AllowsElevation && !environment.IsAdministrator)
         {
             lines.Add(_t["environment.needAdministrator"]);
         }
-        else if (!environment.IsPawnIoInstalled)
+        else if (DistributionProfile.Current.AllowsDriverManagement && !environment.IsPawnIoInstalled)
         {
             lines.Add(_t["environment.needPawnIo"]);
         }
@@ -2158,7 +2166,7 @@ internal sealed class MainForm : Form
         lines.AddRange(_hardware.Diagnostics.Select(entry => $"{_t["section.diagnostics"]} - {entry.Source}: {entry.Message}"));
         _noticeLabel.Text = string.Join(Environment.NewLine, lines);
         _noticePanel.Visible = lines.Count > 0;
-        _elevateButton.Visible = !environment.IsAdministrator;
+        _elevateButton.Visible = DistributionProfile.Current.AllowsElevation && !environment.IsAdministrator;
     }
 
     private void StartLiveMonitor()

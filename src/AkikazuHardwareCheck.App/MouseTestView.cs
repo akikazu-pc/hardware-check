@@ -26,8 +26,17 @@ internal sealed class MouseTestView : UserControl
     private readonly HashSet<string> _pressedNames = [];
     private readonly Dictionary<string, int> _counts = new()
     {
-        ["left"] = 0, ["middle"] = 0, ["right"] = 0, ["back"] = 0, ["forward"] = 0,
-        ["wheelUp"] = 0, ["wheelDown"] = 0, ["wheelLeft"] = 0, ["wheelRight"] = 0, ["zoomIn"] = 0, ["zoomOut"] = 0,
+        ["left"] = 0,
+        ["middle"] = 0,
+        ["right"] = 0,
+        ["back"] = 0,
+        ["forward"] = 0,
+        ["wheelUp"] = 0,
+        ["wheelDown"] = 0,
+        ["wheelLeft"] = 0,
+        ["wheelRight"] = 0,
+        ["zoomIn"] = 0,
+        ["zoomOut"] = 0,
     };
     private long? _pollingStartedAt;
     private int _pollingEvents;

@@ -46,4 +46,25 @@
 - [ ] 在网站发布：用途、支持的 Windows 版本、版本号、下载链接、文件大小、SHA-256、更新记录、使用注意事项
 - [ ] 确认 ZIP 内含 `licenses/` 和 `THIRD-PARTY-NOTICES.md`（发布脚本已包含）
 
+## Microsoft Store 版
+
+商店版和官网完整版共用代码。使用 `DistributionChannel=Store` 构建时，程序不自动提权、不安装或卸载
+PawnIO、不显示需要管理员权限的入口，并从程序集排除 PawnIO 安装程序。官网构建默认仍为 `Website`，行为不变。
+
+- [ ] 运行 `scripts/publish-store-payload.ps1`；脚本必须确认 `DistributionChannel=Store` 且不含 `pawnio.setup.exe`
+- [ ] 在 Partner Center 保留产品名称，并取得准确的 Package Identity Name、Publisher 和 Publisher Display Name
+- [ ] 根据 Partner Center 身份生成 MSIX manifest；不得使用示例 Publisher 或临时身份提交
+- [ ] 准备 Store 图标、截图、简短说明、完整说明、搜索词、支持 URL 和隐私政策 URL
+- [ ] 隐私政策说明硬件信息和报告只保存在本机；Cloudflare 网络测速仅在用户主动启动时发送测试流量
+- [ ] 运行 Windows App Certification Kit，并保存结果
+- [ ] 在未安装 .NET、未安装 PawnIO 的干净 Windows 10 和 Windows 11 上安装 MSIX 并完成窗口实测
+- [ ] 确认商店版启动不出现 UAC，工具菜单没有“重启进入 BIOS”和“修复为日语 106 键”
+- [ ] 确认商店版缺少 CPU 温度、主板风扇等特权传感器时不会显示误导性的管理员/PawnIO提示
+- [ ] 确认安装、更新、卸载后不残留驱动、服务或自启动项
+- [ ] Claude 独立复核 Store 政策、隐私、第三方许可和认证说明
+- [ ] 商店提交、公开可见时间和网站宣传分别取得授权；不得用本地构建通过代替认证通过
+
+当前仓库只生成经过能力裁剪的 Store payload。最终 MSIX 仍受 Partner Center 身份和商店素材阻断，身份取得前不生成
+假 manifest。
+
 网站规划路径为 `/tools/hardware-check/` 和 `/downloads/`。网站页面和部署不在本目录内，需要单独授权和实施。

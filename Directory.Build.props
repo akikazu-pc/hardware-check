@@ -7,5 +7,9 @@
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
     <Version>0.2.0</Version>
+    <DistributionChannel Condition="'$(DistributionChannel)' == ''">Website</DistributionChannel>
   </PropertyGroup>
+  <ItemGroup>
+    <AssemblyMetadata Include="DistributionChannel" Value="$(DistributionChannel)" />
+  </ItemGroup>
 </Project>
