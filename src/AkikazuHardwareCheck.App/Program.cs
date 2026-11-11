@@ -4,6 +4,7 @@ using System.Globalization;
 using AkikazuHardwareCheck.Core.Configuration;
 using AkikazuHardwareCheck.Core.Hardware;
 using AkikazuHardwareCheck.Core.Localization;
+using AkikazuHardwareCheck.Core.SharedDesktop;
 
 namespace AkikazuHardwareCheck.App;
 
@@ -12,7 +13,6 @@ internal static class Program
     public const string REMOVE_DRIVER_ARGUMENT = "--remove-driver";
     public const string KEYBOARD_JAPANESE_ARGUMENT = "--keyboard-106";
 
-    private const string NO_ELEVATE_ARGUMENT = "--no-elevate";
     private const string INSTANCE_MUTEX_NAME = "Local\\AkikazuHardwareCheck.SingleInstance";
     private const uint SEM_FAILCRITICALERRORS = 0x0001;
     private const uint SEM_NOGPFAULTERRORBOX = 0x0002;
@@ -35,11 +35,18 @@ internal static class Program
         }
 
         StartupTrace.Record("main");
+        var startup = SharedDesktopStartupPolicy.Resolve(
+            args,
+            SharedModuleDiscovery.ReadCurrentUser(),
+            DistributionProfile.Current.Channel == DistributionChannel.Store);
+        StartupTrace.Record("modules-ready");
 
-        // CPU temperatures need administrator rights, so the tool asks for them right away and staff answer one Windows prompt.
+        // CPU temperatures need administrator rights, so the hardware module asks for them right away and staff answer
+        // one Windows prompt. The rescue module never asks at startup: only its later driver action may elevate.
         // Declining is not an error: this copy then keeps running with what ordinary rights can read.
-        if (DistributionProfile.Current.AllowsElevation &&
-            !args.Contains(NO_ELEVATE_ARGUMENT) &&
+        if (startup.ActiveModule == SharedModuleId.HardwareCheck &&
+            DistributionProfile.Current.AllowsElevation &&
+            !startup.NoElevate &&
             !Elevation.IsAdministrator() &&
             Environment.ProcessPath is { } path)
         {
@@ -59,60 +66,51 @@ internal static class Program
         InstallCrashGuard();
         StartupTrace.Record("guard-ready");
 
-        // Only one main window is allowed. A second launch asks the existing instance to show itself,
-        // then exits without creating another window.
-        using var instance = new Mutex(true, INSTANCE_MUTEX_NAME, out var createdNew);
-        if (!createdNew)
+        // Only one main window is allowed across both entries. A second launch asks the existing window to show the
+        // requested module, then exits without creating another window. The mutex is per Windows session (Local\).
+        Mutex instance;
+        bool createdNew;
+        try
         {
-            SingleInstanceListener.NotifyExisting();
+            instance = new Mutex(true, INSTANCE_MUTEX_NAME, out createdNew);
+        }
+        catch (Exception exception) when (exception is UnauthorizedAccessException or IOException)
+        {
+            // An elevated first instance may own a mutex this process cannot open. Treat it as the existing instance
+            // and use the file request, which works across integrity levels.
+            SingleInstanceListener.NotifyExisting(startup.RequestedModule);
             StartupTrace.Record("second-instance");
             return;
         }
 
-        StartupTrace.Record("instance-acquired");
+        using (instance)
+        {
+            if (!createdNew)
+            {
+                SingleInstanceListener.NotifyExisting(startup.RequestedModule);
+                StartupTrace.Record("second-instance");
+                return;
+            }
 
-        // Lets standard controls and the title bar follow the Windows light or dark setting.
-        Application.SetColorMode(SystemColorMode.System);
-        try
-        {
-            StartupTrace.Record("main-form-start");
-            var main = new MainForm(args.Contains("--tray", StringComparer.OrdinalIgnoreCase));
-            StartupTrace.Record("main-form-created");
-            using var restore = SingleInstanceListener.CreateRestoreEvent();
-            var restoreThread = new Thread(() =>
+            SingleInstanceListener.ClearStaleRequests();
+            StartupTrace.Record("instance-acquired");
+
+            // Lets standard controls and the title bar follow the Windows light or dark setting.
+            Application.SetColorMode(SystemColorMode.System);
+            try
             {
-                while (!main.IsDisposed)
-                {
-                    if (restore.WaitOne(500))
-                    {
-                        try
-                        {
-                            main.RestoreFromExternalLaunch();
-                        }
-                        catch (ObjectDisposedException)
-                        {
-                            return;
-                        }
-                        catch (InvalidOperationException)
-                        {
-                            return;
-                        }
-                    }
-                }
-            })
+                StartupTrace.Record("main-form-start");
+                var main = new MainForm(startup.StartHidden, startup);
+                StartupTrace.Record("main-form-created");
+                StartupTrace.Record("message-loop");
+                Application.Run(main);
+                StartupTrace.Record("exit");
+            }
+            catch (Exception exception)
             {
-                IsBackground = true,
-                Name = "Single-instance restore listener",
-            };
-            restoreThread.Start();
-            StartupTrace.Record("message-loop");
-            Application.Run(main);
-            StartupTrace.Record("exit");
-        }
-        catch (Exception exception)
-        {
-            StartupTrace.Record("crash");
-            ExitSilently(exception);
+                StartupTrace.Record("crash");
+                ExitSilently(exception);
+            }
         }
     }
 
@@ -206,7 +204,7 @@ internal static class Program
     private static string ElevationArguments(string[] args) =>
         string.Join(
             ' ',
-            args.Where(argument => !string.Equals(argument, NO_ELEVATE_ARGUMENT, StringComparison.OrdinalIgnoreCase))
-                .Append(NO_ELEVATE_ARGUMENT)
+            args.Where(argument => !string.Equals(argument, SharedDesktopContract.NO_ELEVATE_ARGUMENT, StringComparison.OrdinalIgnoreCase))
+                .Append(SharedDesktopContract.NO_ELEVATE_ARGUMENT)
                 .Select(argument => argument.Contains(' ') ? $"\"{argument}\"" : argument));
 }

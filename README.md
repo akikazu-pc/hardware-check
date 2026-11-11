@@ -22,6 +22,12 @@ Windows 硬件检测、快速压力测试与诊断验收工具。
 | `licenses/` | 第三方许可证全文 |
 | `third-party/pawnio/` | 未修改的官方 PawnIO 安装程序，嵌入程序 |
 
+## 共享桌面原型
+
+硬件测试与断网急救的共享主窗口、两个安装身份、入口导航和每会话单实例首轮原型见
+[共享桌面原型](docs/shared-desktop-prototype.md)。安装与验证脚本在 `scripts/prototype/`。该原型不包含真实驱动安装、
+MSI 或 Store 提审，不作为发行物。
+
 ## 构建与测试
 
 需要 .NET SDK 10（见 `global.json`）。想直接看窗口：双击 `scripts/run.cmd`，或在 VS Code 按 F5（调试）、运行任务里的“运行工具”。命令行在本目录运行：
