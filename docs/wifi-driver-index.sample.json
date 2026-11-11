@@ -1,0 +1,180 @@
+{
+  "schemaVersion": 1,
+  "scope": "sample",
+  "boards": [
+    {
+      "platform": "AM4",
+      "vendor": "GIGABYTE",
+      "model": "A520I AC",
+      "revision": "1.5",
+      "module": "RTL8821CE",
+      "source": "https://www.gigabyte.com/de/Motherboard/A520I-AC-rev-15/sp",
+      "driverSource": "https://www.gigabyte.com/id/Motherboard/A520I-AC-rev-15/support",
+      "hardwareIds": [],
+      "moduleEvidence": "vendor-documented",
+      "targets": [
+        {
+          "os": "Windows 10",
+          "architecture": "x64",
+          "builds": [],
+          "infEvidence": "pending",
+          "deviceTest": "pending",
+          "packages": []
+        },
+        {
+          "os": "Windows 11",
+          "architecture": "x64",
+          "builds": [],
+          "infEvidence": "pending",
+          "deviceTest": "pending",
+          "packages": []
+        }
+      ]
+    },
+    {
+      "platform": "AM5",
+      "vendor": "GIGABYTE",
+      "model": "B650 AORUS ELITE AX",
+      "revision": "1.0",
+      "module": "RZ616 (MT7922A22M)",
+      "source": "https://download.gigabyte.com/FileList/Manual/mb_manual_b650-aorus-elite-ax_1203_e.pdf",
+      "driverSource": "https://www.gigabyte.com/Motherboard/B650-AORUS-ELITE-AX-rev-10-11/support",
+      "hardwareIds": [],
+      "moduleEvidence": "vendor-documented",
+      "targets": [
+        {
+          "os": "Windows 10",
+          "architecture": "x64",
+          "builds": [],
+          "infEvidence": "pending",
+          "deviceTest": "pending",
+          "packages": []
+        },
+        {
+          "os": "Windows 11",
+          "architecture": "x64",
+          "builds": [],
+          "infEvidence": "pending",
+          "deviceTest": "pending",
+          "packages": []
+        }
+      ]
+    },
+    {
+      "platform": "AM5",
+      "vendor": "GIGABYTE",
+      "model": "B650 AORUS ELITE AX",
+      "revision": "1.1",
+      "module": "AX210",
+      "source": "https://download.gigabyte.com/FileList/Manual/mb_manual_b650-aorus-elite-ax_1203_e.pdf",
+      "driverSource": "https://www.gigabyte.com/Motherboard/B650-AORUS-ELITE-AX-rev-10-11/support",
+      "hardwareIds": [],
+      "moduleEvidence": "vendor-documented",
+      "targets": [
+        {
+          "os": "Windows 10",
+          "architecture": "x64",
+          "builds": [],
+          "infEvidence": "pending",
+          "deviceTest": "pending",
+          "packages": []
+        },
+        {
+          "os": "Windows 11",
+          "architecture": "x64",
+          "builds": [],
+          "infEvidence": "pending",
+          "deviceTest": "pending",
+          "packages": []
+        }
+      ]
+    },
+    {
+      "platform": "AM5",
+      "vendor": "GIGABYTE",
+      "model": "B650 AORUS ELITE AX",
+      "revision": "1.2",
+      "module": "RTL8852CE",
+      "source": "https://download.gigabyte.com/FileList/Manual/mb_manual_b650-aorus-elite-ax_1203_e.pdf",
+      "driverSource": "https://www.gigabyte.com/Motherboard/B650-AORUS-ELITE-AX-rev-12/Support/sp",
+      "hardwareIds": [],
+      "moduleEvidence": "vendor-documented",
+      "targets": [
+        {
+          "os": "Windows 10",
+          "architecture": "x64",
+          "builds": [],
+          "infEvidence": "pending",
+          "deviceTest": "pending",
+          "packages": []
+        },
+        {
+          "os": "Windows 11",
+          "architecture": "x64",
+          "builds": [],
+          "infEvidence": "pending",
+          "deviceTest": "pending",
+          "packages": []
+        }
+      ]
+    },
+    {
+      "platform": "LGA1700",
+      "vendor": "ASRock",
+      "model": "B760M PG SONIC WiFi",
+      "revision": null,
+      "module": null,
+      "source": "https://pg.asrock.com/mb/Intel/B760M%20PG%20SONIC%20WiFi/Specification.asp",
+      "driverSource": null,
+      "hardwareIds": [],
+      "moduleEvidence": "unknown",
+      "targets": [
+        {
+          "os": "Windows 10",
+          "architecture": "x64",
+          "builds": [],
+          "infEvidence": "pending",
+          "deviceTest": "pending",
+          "packages": []
+        },
+        {
+          "os": "Windows 11",
+          "architecture": "x64",
+          "builds": [],
+          "infEvidence": "pending",
+          "deviceTest": "pending",
+          "packages": []
+        }
+      ]
+    },
+    {
+      "platform": "LGA1851",
+      "vendor": "GIGABYTE",
+      "model": "Z890 EAGLE WIFI7",
+      "revision": "1.0",
+      "module": "MT7925",
+      "source": "https://www.gigabyte.com/se/Motherboard/Z890-EAGLE-WIFI7/sp",
+      "driverSource": null,
+      "hardwareIds": [],
+      "moduleEvidence": "vendor-documented",
+      "targets": [
+        {
+          "os": "Windows 10",
+          "architecture": "x64",
+          "builds": [],
+          "infEvidence": "pending",
+          "deviceTest": "pending",
+          "packages": []
+        },
+        {
+          "os": "Windows 11",
+          "architecture": "x64",
+          "builds": [],
+          "infEvidence": "pending",
+          "deviceTest": "pending",
+          "packages": []
+        }
+      ]
+    }
+  ]
+}

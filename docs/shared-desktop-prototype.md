@@ -202,3 +202,9 @@ powershell -NoProfile -ExecutionPolicy Bypass -File scripts/prototype/test-share
 4. 为 Store 配置工具做最小 MSIX 原型，验证相互打开、状态访问、双装/卸载和商店政策边界。
 5. 运行中的共享窗口增加版本刷新或安全重启协议，处理“旧窗口收到新模块导航”的升级场景。
 6. 用真实断网、Explorer 重启、不同 Windows 用户和混合提权场景补全验证记录。
+
+## 只读网卡扫描
+
+断网急救页可按需扫描当前枚举的 PCI 网络控制器候选，并导出 Windows 构建、系统架构、有序硬件 ID、SUBSYS 和设备问题码。PCI 0280 是候选类别。问题码 28 表示没有安装驱动。导出保存在用户选择的位置，只包含诊断字段。此流程不联网，也不会安装驱动。
+
+[四平台驱动索引样例](wifi-driver-index.sample.json)保留出厂模块和驱动来源证据，分别记录 Windows 10/11 的 INF 核验与实机测试状态。当前样例没有经过 INF 匹配验证的包记录，不参与自动匹配。

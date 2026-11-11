@@ -17,8 +17,15 @@ internal sealed class NetworkRescueView : UserControl
     private readonly Label _networkHeading = Ui.Label(isBold: true);
     private readonly Button _refresh = Ui.Button();
     private readonly ListView _adapters = ListViewTable.Create();
-    private readonly Label _modulesHeading = Ui.Label(isBold: true);
     private readonly ListView _moduleList = ListViewTable.Create();
+    private readonly Button _scan = Ui.Button();
+    private readonly Button _export = Ui.Button();
+    private readonly Label _scanStatus = Ui.Label();
+    private readonly ListView _pciDevices = ListViewTable.Create();
+    private readonly TabPage _pciPage = new();
+    private readonly TabPage _modulesPage = new();
+    private PciNetworkDiagnostic? _diagnostic;
+    private string? _scanStatusKey;
     private Translator _t;
 
     public NetworkRescueView(Translator t, IReadOnlyList<InstalledModule> modules)
@@ -33,6 +40,15 @@ internal sealed class NetworkRescueView : UserControl
         _heading.Font = new Font(Font.FontFamily, HEADING_FONT_SIZE, FontStyle.Bold);
         _note.ForeColor = Ui.MutedTextColor;
         _refresh.Click += (_, _) => RefreshStatus();
+        _scan.Click += async (_, _) => await ScanAsync();
+        _export.Click += (_, _) => ExportDiagnostics();
+        _export.Enabled = false;
+        _pciDevices.Columns.Add("", 550);
+        _pciDevices.Columns.Add("", 150);
+        _pciDevices.Columns.Add("SUBSYS", 130);
+        ListViewTable.EnableSort(_pciDevices);
+        ListViewTable.EnableColumnMenu(_pciDevices, _t);
+        ListViewTable.EnableCopy(_pciDevices, _t);
 
         _adapters.Columns.Add("", 260);
         _adapters.Columns.Add("", 90);
@@ -62,7 +78,13 @@ internal sealed class NetworkRescueView : UserControl
         _note.Text = t["rescue.note"];
         _networkHeading.Text = t["rescue.network"];
         _refresh.Text = t["rescue.refresh"];
-        _modulesHeading.Text = t["rescue.modules"];
+        _modulesPage.Text = t["rescue.modules"];
+        _pciPage.Text = t["rescue.pci"];
+        _scan.Text = t["rescue.scan"];
+        _export.Text = t["rescue.export"];
+        _pciDevices.Columns[0].Text = t["rescue.hardwareIds"];
+        _pciDevices.Columns[1].Text = t["rescue.problemCode"];
+        ShowDiagnostic();
         _adapters.Columns[0].Text = t["rescue.adapter"];
         _adapters.Columns[1].Text = t["rescue.kind"];
         _adapters.Columns[2].Text = t["rescue.state"];
@@ -120,16 +142,77 @@ internal sealed class NetworkRescueView : UserControl
         _moduleList.EndUpdate();
     }
 
+    private async Task ScanAsync()
+    {
+        _scan.Enabled = false;
+        _export.Enabled = false;
+        _diagnostic = null;
+        _scanStatusKey = "rescue.scanning";
+        ShowDiagnostic();
+        try
+        {
+            _diagnostic = await Task.Run(PciNetworkInventory.Read);
+            _scanStatusKey = _diagnostic.Devices.Count == 0 ? "rescue.noPci" : null;
+        }
+        catch (Exception exception) when (exception is System.Management.ManagementException
+            or System.Runtime.InteropServices.COMException or UnauthorizedAccessException)
+        {
+            _scanStatusKey = "rescue.scanFailed";
+        }
+
+        if (!IsDisposed)
+        {
+            _scan.Enabled = true;
+            _export.Enabled = _diagnostic is not null;
+            ShowDiagnostic();
+        }
+    }
+
+    private void ShowDiagnostic()
+    {
+        _scanStatus.Text = _scanStatusKey is { } key ? _t[key] : "";
+        _pciDevices.Items.Clear();
+        foreach (var device in _diagnostic?.Devices ?? [])
+        {
+            var item = new ListViewItem(string.Join(" | ", device.HardwareIds));
+            item.SubItems.Add(device.ProblemCode == 28 ? _t["rescue.missingDriver"] : device.ProblemCode?.ToString() ?? "");
+            item.SubItems.Add(device.SubsystemId ?? "");
+            _pciDevices.Items.Add(item);
+        }
+    }
+
+    private void ExportDiagnostics()
+    {
+        if (_diagnostic is not { } diagnostic)
+        {
+            return;
+        }
+
+        using var dialog = new SaveFileDialog { FileName = "wifi-diagnostics.json", DefaultExt = "json" };
+        if (dialog.ShowDialog(this) != DialogResult.OK)
+        {
+            return;
+        }
+
+        try
+        {
+            File.WriteAllText(dialog.FileName, PciNetworkInventory.Export(diagnostic));
+        }
+        catch (Exception exception) when (exception is IOException or UnauthorizedAccessException)
+        {
+            MessageBox.Show(this, _t["rescue.exportFailed"], _t["rescue.heading"], MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+    }
+
     private Control BuildLayout()
     {
-        var root = new TableLayoutPanel { Dock = DockStyle.Fill, ColumnCount = 1, RowCount = 6, Margin = new Padding(0) };
+        var root = new TableLayoutPanel { Dock = DockStyle.Fill, ColumnCount = 1, RowCount = 5, Margin = new Padding(0) };
         root.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100));
         root.RowStyles.Add(new RowStyle(SizeType.AutoSize));
         root.RowStyles.Add(new RowStyle(SizeType.AutoSize));
         root.RowStyles.Add(new RowStyle(SizeType.AutoSize));
-        root.RowStyles.Add(new RowStyle(SizeType.Percent, 55));
-        root.RowStyles.Add(new RowStyle(SizeType.AutoSize));
-        root.RowStyles.Add(new RowStyle(SizeType.Percent, 45));
+        root.RowStyles.Add(new RowStyle(SizeType.Percent, 40));
+        root.RowStyles.Add(new RowStyle(SizeType.Percent, 60));
 
         var headingRow = new TableLayoutPanel { Dock = DockStyle.Top, AutoSize = true, ColumnCount = 2, Margin = new Padding(0) };
         headingRow.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100));
@@ -151,11 +234,22 @@ internal sealed class NetworkRescueView : UserControl
         _adapters.Margin = new Padding(0, 0, 0, Ui.SPACING);
         root.Controls.Add(_adapters, 0, 3);
 
-        _modulesHeading.Margin = new Padding(0, Ui.SPACING, 0, Ui.SPACING / 2);
-        root.Controls.Add(_modulesHeading, 0, 4);
-
-        _moduleList.Margin = new Padding(0);
-        root.Controls.Add(_moduleList, 0, 5);
+        var tabs = new TabControl { Dock = DockStyle.Fill };
+        var scanLayout = new TableLayoutPanel { Dock = DockStyle.Fill, ColumnCount = 1, RowCount = 3 };
+        scanLayout.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+        scanLayout.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+        scanLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 100));
+        var actions = new FlowLayoutPanel { Dock = DockStyle.Fill, AutoSize = true };
+        actions.Controls.Add(_scan);
+        actions.Controls.Add(_export);
+        scanLayout.Controls.Add(actions, 0, 0);
+        scanLayout.Controls.Add(_scanStatus, 0, 1);
+        scanLayout.Controls.Add(_pciDevices, 0, 2);
+        _pciPage.Controls.Add(scanLayout);
+        _modulesPage.Controls.Add(_moduleList);
+        tabs.TabPages.Add(_pciPage);
+        tabs.TabPages.Add(_modulesPage);
+        root.Controls.Add(tabs, 0, 4);
         return root;
     }
 
