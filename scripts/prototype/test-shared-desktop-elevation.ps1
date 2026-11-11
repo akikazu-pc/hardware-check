@@ -78,6 +78,85 @@ public static class ElevationProbe
         }
     }
 }
+
+public static class TrayProbe
+{
+    private delegate bool EnumWindowsProc(IntPtr hWnd, IntPtr lParam);
+
+    [DllImport("user32.dll")]
+    private static extern bool EnumWindows(EnumWindowsProc callback, IntPtr lParam);
+
+    [DllImport("user32.dll")]
+    private static extern uint GetWindowThreadProcessId(IntPtr hWnd, out uint pid);
+
+    [DllImport("user32.dll", CharSet = CharSet.Unicode)]
+    private static extern int GetClassName(IntPtr hWnd, System.Text.StringBuilder name, int max);
+
+    [DllImport("user32.dll", CharSet = CharSet.Unicode)]
+    private static extern int GetWindowText(IntPtr hWnd, System.Text.StringBuilder text, int max);
+
+    [StructLayout(LayoutKind.Sequential)]
+    private struct NOTIFYICONIDENTIFIER
+    {
+        public uint cbSize;
+        public IntPtr hWnd;
+        public uint uID;
+        public Guid guidItem;
+    }
+
+    [StructLayout(LayoutKind.Sequential)]
+    private struct RECT
+    {
+        public int Left;
+        public int Top;
+        public int Right;
+        public int Bottom;
+    }
+
+    [DllImport("shell32.dll")]
+    private static extern int Shell_NotifyIconGetRect(ref NOTIFYICONIDENTIFIER identifier, out RECT rect);
+
+    // Finds the real notification-area icon owned by a process, including an elevated process observed from a
+    // medium-integrity test. Each successful line is one icon identity and its screen rectangle.
+    public static string Find(int pid)
+    {
+        var results = new System.Collections.Generic.List<string>();
+        EnumWindows((window, state) =>
+        {
+            uint windowPid;
+            GetWindowThreadProcessId(window, out windowPid);
+            if (windowPid != (uint)pid)
+            {
+                return true;
+            }
+
+            var className = new System.Text.StringBuilder(256);
+            GetClassName(window, className, className.Capacity);
+            var text = new System.Text.StringBuilder(256);
+            GetWindowText(window, text, text.Capacity);
+            for (uint uid = 0; uid <= 2; uid++)
+            {
+                var identifier = new NOTIFYICONIDENTIFIER
+                {
+                    cbSize = (uint)Marshal.SizeOf(typeof(NOTIFYICONIDENTIFIER)),
+                    hWnd = window,
+                    uID = uid,
+                    guidItem = Guid.Empty
+                };
+                RECT rect;
+                var result = Shell_NotifyIconGetRect(ref identifier, out rect);
+                if (result == 0)
+                {
+                    results.Add("hwnd=0x" + window.ToInt64().ToString("X") + " uid=" + uid + " class=" + className + " text=" + text + " rect=" + rect.Left + "," + rect.Top + "," + rect.Right + "," + rect.Bottom);
+                }
+            }
+
+            return true;
+        }, IntPtr.Zero);
+
+        return string.Join("\n", results);
+    }
+}
 '@
 
 function Check {
@@ -263,6 +342,35 @@ try {
     Stop-TestApps
     $hardwareLauncher.WaitForExit(10000) | Out-Null
     $rescueLauncher.WaitForExit(10000) | Out-Null
+
+    Write-Host '--- mixed entries: hardware first (elevated), then rescue ---'
+    $hardwareLauncher = Start-TestApp -App 'hardware-check'
+    $hardwareWindow = Wait-Window -TitlePrefix ($hardwareTitle + '0.2.0')
+    $hardwareWindowHandle = $hardwareWindow.MainWindowHandle
+    Check ([ElevationProbe]::GetElevation($hardwareWindow.Id) -eq 1) 'the first hardware window is elevated'
+    Check (@(Get-TestProcesses).Count -eq 1) 'the elevated hardware host is the only process'
+    $trayBefore = [TrayProbe]::Find($hardwareWindow.Id)
+    Check (-not [string]::IsNullOrWhiteSpace($trayBefore)) 'the elevated hardware host has an actual notification-area icon'
+    Check (@($trayBefore -split "`n").Count -eq 1) 'the elevated hardware host has exactly one actual notification-area icon'
+    Write-Host "  hardware tray: $trayBefore"
+    $rescueLauncher = Start-TestApp -App 'network-rescue'
+    $rescueLauncher.WaitForExit(10000) | Out-Null
+    Check ($rescueLauncher.HasExited) 'the non-elevated rescue entry exits after signalling'
+    $window = Wait-Window -TitlePrefix ($rescueTitle + '0.1.0')
+    Check ($window.Id -eq $hardwareWindow.Id) 'the elevated hardware host switches to the rescue page in the same process'
+    Check ($window.MainWindowHandle -eq $hardwareWindowHandle) 'the elevated host keeps the same main window handle'
+    Check (@(Get-TestProcesses).Count -eq 1) 'the mixed reverse order keeps one shared host process'
+    Check ([ElevationProbe]::GetElevation($window.Id) -eq 1) 'the surviving shared window remains elevated'
+    $trayAfter = [TrayProbe]::Find($window.Id)
+    Check (-not [string]::IsNullOrWhiteSpace($trayAfter)) 'the switched rescue page keeps an actual notification-area icon'
+    Check (@($trayAfter -split "`n").Count -eq 1) 'the switched rescue page still has exactly one actual notification-area icon'
+    $beforeIdentity = [regex]::Match($trayBefore, '^(hwnd=\S+ uid=\d+)').Groups[1].Value
+    $afterIdentity = [regex]::Match($trayAfter, '^(hwnd=\S+ uid=\d+)').Groups[1].Value
+    Check (-not [string]::IsNullOrWhiteSpace($beforeIdentity)) 'the hardware tray identity was readable'
+    Check ($afterIdentity -eq $beforeIdentity) 'the switch keeps the same tray icon identity (the notification area may reflow its rectangle)'
+    Write-Host "  rescue tray: $trayAfter"
+    Stop-TestApps
+    $hardwareLauncher.WaitForExit(10000) | Out-Null
 
     Uninstall-TestApp -App 'hardware-check'
     Uninstall-TestApp -App 'network-rescue'

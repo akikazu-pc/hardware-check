@@ -82,6 +82,9 @@ public sealed class SharedDesktopPackagingTests
         Assert.Contains("FileVersion", upgrade, StringComparison.Ordinal);
         Assert.Contains("Assert-AutostartHost", upgrade, StringComparison.Ordinal);
         Assert.Contains("ElevationProbe", elevation, StringComparison.Ordinal);
+        Assert.Contains("TrayProbe", elevation, StringComparison.Ordinal);
+        Assert.Contains("mixed entries: hardware first", elevation, StringComparison.Ordinal);
+        Assert.Contains("the switch keeps the same tray icon identity", elevation, StringComparison.Ordinal);
         Assert.Contains("hardware entry runs in an elevated process", elevation, StringComparison.Ordinal);
         Assert.Contains("rescue entry runs in a non-elevated process", elevation, StringComparison.Ordinal);
     }
