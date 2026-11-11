@@ -46,6 +46,8 @@ public sealed class SharedDesktopPackagingTests
         Assert.Contains("HostInterfaceVersion", source, StringComparison.Ordinal);
         Assert.Contains("UninstallString", source, StringComparison.Ordinal);
         Assert.Contains("WScript.Shell", source, StringComparison.Ordinal);
+        Assert.Contains("Update-StartupRegistration", source, StringComparison.Ordinal);
+        Assert.Contains("AkikazuHardwareCheck", source, StringComparison.Ordinal);
         Assert.DoesNotContain("PawnIO", source, StringComparison.OrdinalIgnoreCase);
         Assert.DoesNotContain("DistributionChannel=Store", source, StringComparison.OrdinalIgnoreCase);
     }
@@ -60,11 +62,28 @@ public sealed class SharedDesktopPackagingTests
         Assert.Contains("install order: rescue then hardware", source, StringComparison.Ordinal);
         Assert.Contains("independent upgrade: rescue host moves", source, StringComparison.Ordinal);
         Assert.Contains("independent upgrade: hardware host moves", source, StringComparison.Ordinal);
+        Assert.Contains("--autostart-check", source, StringComparison.Ordinal);
+        Assert.Contains("--tray-check", source, StringComparison.Ordinal);
+        Assert.Contains("Assert-AutostartHost", source, StringComparison.Ordinal);
         Assert.Contains("concurrent launch", source, StringComparison.Ordinal);
         Assert.Contains("tray-hidden launch", source, StringComparison.Ordinal);
         Assert.Contains("registered uninstall command", source, StringComparison.Ordinal);
         Assert.Contains("offline-simulated", source, StringComparison.Ordinal);
         Assert.DoesNotContain(@"D:\Users", source, StringComparison.OrdinalIgnoreCase);
+    }
+
+    [Fact]
+    public void PrototypeIncludesRealVersionUpgradeAndElevationEvidence()
+    {
+        var upgrade = File.ReadAllText(Path.Combine(Root, "scripts", "prototype", "test-shared-desktop-upgrade.ps1"));
+        var elevation = File.ReadAllText(Path.Combine(Root, "scripts", "prototype", "test-shared-desktop-elevation.ps1"));
+
+        Assert.Contains("-p:Version=0.2.1", upgrade, StringComparison.Ordinal);
+        Assert.Contains("FileVersion", upgrade, StringComparison.Ordinal);
+        Assert.Contains("Assert-AutostartHost", upgrade, StringComparison.Ordinal);
+        Assert.Contains("ElevationProbe", elevation, StringComparison.Ordinal);
+        Assert.Contains("hardware entry runs in an elevated process", elevation, StringComparison.Ordinal);
+        Assert.Contains("rescue entry runs in a non-elevated process", elevation, StringComparison.Ordinal);
     }
 
     [Fact]

@@ -7,6 +7,8 @@ $script:RepoRoot = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
 $script:ManifestPath = Join-Path (Join-Path $script:RepoRoot 'packaging') 'shared-desktop\app-identities.json'
 $script:DefaultRegistryPath = 'HKCU:\Software\Akikazu\SharedDesktop'
 $script:UninstallRoot = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Uninstall'
+$script:RunKey = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Run'
+$script:StartupValueName = 'AkikazuHardwareCheck'
 
 function Get-PrototypeManifest {
     if (-not (Test-Path -LiteralPath $script:ManifestPath)) {
@@ -262,6 +264,125 @@ function Remove-EmptyDirectory {
     }
 }
 
+function Get-RegisteredModules {
+    param([string]$RegistryPath)
+
+    if ([string]::IsNullOrWhiteSpace($RegistryPath)) {
+        $RegistryPath = $script:DefaultRegistryPath
+    }
+
+    $modules = @()
+    $modulesKey = Join-Path $RegistryPath 'Modules'
+    if (Test-Path -LiteralPath $modulesKey) {
+        foreach ($key in @(Get-ChildItem -Path $modulesKey -ErrorAction SilentlyContinue)) {
+            $values = Get-ItemProperty -Path $key.PSPath -ErrorAction SilentlyContinue
+            $modules += [pscustomobject]@{
+                Id = $key.PSChildName
+                Version = $values.Version
+                HostVersion = $values.HostVersion
+                HostPath = $values.HostPath
+                InstallRoot = $values.InstallRoot
+            }
+        }
+    }
+
+    return $modules
+}
+
+function Get-StartupCommandPath {
+    param([string]$Command)
+
+    $text = $Command.Trim()
+    if ([string]::IsNullOrWhiteSpace($text)) {
+        return $null
+    }
+
+    if ($text.StartsWith('"')) {
+        $end = $text.IndexOf('"', 1)
+        if ($end -gt 1) {
+            return $text.Substring(1, $end - 1)
+        }
+
+        return $null
+    }
+
+    $parts = $text -split '\s+', 2
+    if ($parts.Count -gt 0) {
+        return $parts[0]
+    }
+
+    return $null
+}
+
+function Get-PrimaryLaunchModule {
+    param([string]$RegistryPath)
+
+    $modules = @(Get-RegisteredModules -RegistryPath $RegistryPath)
+    $hardware = @($modules | Where-Object {
+        $_.Id -eq 'hardware-check' -and
+        -not [string]::IsNullOrWhiteSpace([string]$_.HostPath) -and
+        (Test-Path -LiteralPath $_.HostPath)
+    }) | Select-Object -First 1
+    if ($null -ne $hardware) {
+        return $hardware
+    }
+
+    foreach ($module in $modules) {
+        if (-not [string]::IsNullOrWhiteSpace([string]$module.HostPath) -and (Test-Path -LiteralPath $module.HostPath)) {
+            return $module
+        }
+    }
+
+    return $null
+}
+
+# The Run value is written by the application from the running host path. That path is versioned, so install,
+# upgrade and uninstall rewrite it to the current primary module, or remove it when the last module goes away.
+# A value that points outside this shared root (for example a portable copy) is left untouched.
+function Update-StartupRegistration {
+    param(
+        [string]$Root,
+        [string]$RegistryPath
+    )
+
+    if ([string]::IsNullOrWhiteSpace($Root)) {
+        $Root = Join-Path $env:LOCALAPPDATA 'Akikazu\SharedDesktop'
+    }
+
+    if (-not (Test-Path -LiteralPath $script:RunKey)) {
+        return
+    }
+
+    $current = (Get-ItemProperty -Path $script:RunKey -Name $script:StartupValueName -ErrorAction SilentlyContinue).$script:StartupValueName
+    if ([string]::IsNullOrWhiteSpace([string]$current)) {
+        return
+    }
+
+    $executable = Get-StartupCommandPath -Command ([string]$current)
+    if ([string]::IsNullOrWhiteSpace($executable)) {
+        return
+    }
+
+    $rootFull = [System.IO.Path]::GetFullPath($Root).TrimEnd('\')
+    try {
+        $executableFull = [System.IO.Path]::GetFullPath($executable)
+    } catch {
+        return
+    }
+
+    if (-not $executableFull.StartsWith($rootFull + '\', [System.StringComparison]::OrdinalIgnoreCase)) {
+        return
+    }
+
+    $primary = Get-PrimaryLaunchModule -RegistryPath $RegistryPath
+    if ($null -eq $primary) {
+        Remove-ItemProperty -Path $script:RunKey -Name $script:StartupValueName -ErrorAction SilentlyContinue
+        return
+    }
+
+    Set-ItemProperty -Path $script:RunKey -Name $script:StartupValueName -Value ('"' + $primary.HostPath + '" --tray') -Type String
+}
+
 function Install-SharedApp {
     param(
         [Parameter(Mandatory = $true)][string]$App,
@@ -327,6 +448,7 @@ function Install-SharedApp {
     }
 
     Remove-OrphanedHostDirectories -Root $Root -RegistryPath $script:DefaultRegistryPath
+    Update-StartupRegistration -Root $Root -RegistryPath $script:DefaultRegistryPath
 
     return [pscustomobject]@{
         App = $identity.Id
@@ -376,6 +498,7 @@ function Uninstall-SharedApp {
     $moduleDirectory = Join-Path (Join-Path $Root 'modules') $Id
     Remove-Item -LiteralPath $moduleDirectory -Recurse -Force -ErrorAction SilentlyContinue
     Remove-OrphanedHostDirectories -Root $Root -RegistryPath $RegistryPath
+    Update-StartupRegistration -Root $Root -RegistryPath $RegistryPath
 
     $modulesKey = Join-Path $RegistryPath 'Modules'
     $remaining = @(Get-ChildItem -Path $modulesKey -ErrorAction SilentlyContinue)
@@ -405,20 +528,7 @@ function Get-SharedState {
         $RegistryPath = $script:DefaultRegistryPath
     }
 
-    $modules = @()
-    $modulesKey = Join-Path $RegistryPath 'Modules'
-    if (Test-Path -LiteralPath $modulesKey) {
-        foreach ($key in @(Get-ChildItem -Path $modulesKey -ErrorAction SilentlyContinue)) {
-            $values = Get-ItemProperty -Path $key.PSPath -ErrorAction SilentlyContinue
-            $modules += [pscustomobject]@{
-                Id = $key.PSChildName
-                Version = $values.Version
-                HostVersion = $values.HostVersion
-                HostPath = $values.HostPath
-                InstallRoot = $values.InstallRoot
-            }
-        }
-    }
+    $modules = @(Get-RegisteredModules -RegistryPath $RegistryPath)
 
     $hostVersions = @()
     $hostRoot = Join-Path $Root 'host'

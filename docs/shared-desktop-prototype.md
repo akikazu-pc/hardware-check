@@ -80,10 +80,20 @@ HKCU\Software\Microsoft\Windows\CurrentVersion\Uninstall\Akikazu.NetworkRescue
 
 1. 读取模块注册并解析入口；只有硬件测试模块沿用原有自动提权策略，断网急救入口不提权。
 2. 用 `Local\AkikazuHardwareCheck.SingleInstance` 命名互斥锁保证每个 Windows 登录会话一个主窗口。
-3. 第一个实例清理两分钟前的陈旧请求，创建主窗口；第二个实例把 `{Module, RequestedAt}` 写入 `%LOCALAPPDATA%\AkikazuHardwareCheck\launch-requests\session-<会话ID>\` 后立即退出。
+3. 第一个实例清理本进程启动前遗留的请求，创建主窗口；第二个实例把 `{Module, RequestedAt}` 写入 `%LOCALAPPDATA%\AkikazuHardwareCheck\launch-requests\session-<会话ID>\` 后立即退出。
 4. 主窗口每 300 ms 读取请求；文件方式可跨越 Windows 完整性级别（提权的硬件窗口和非提权的急救入口可以互相唤回），不依赖托盘事件。
 5. 请求的模块已安装时切换页面，否则只恢复当前窗口。
 6. 托盘、语言、关闭到后台和自启动仍由主窗口统一管理；不新增第二个常驻进程或第二个图标。
+
+### 自启动入口
+
+- `StartupRegistration.Set(true)` 不再固定写当前运行副本，而是写主模块已安装宿主的 `HostPath`；没有安装记录时才回退到当前进程路径（Portable）。
+- 安装器在安装、升级和卸载后调用 `Update-StartupRegistration`：
+  - 只处理指向本共享根目录的 Run 值，指向其他位置的 Portable/其他应用值不动；
+  - 还有模块时，改写到主模块（硬件优先）存在且可启动的宿主；
+  - 最后一个模块卸载后删除 Run 值；
+  - 原本禁用（没有 Run 值）时不做任何写入。
+- 采用“安装迁移时可靠重写”的方案，不引入额外常驻启动器。实际 Windows 登录触发未在本轮验证。
 
 ## 页面
 
@@ -110,14 +120,19 @@ powershell -NoProfile -ExecutionPolicy Bypass -File scripts/prototype/uninstall-
 
 ```powershell
 powershell -NoProfile -ExecutionPolicy Bypass -File scripts/prototype/test-shared-desktop.ps1
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/prototype/test-shared-desktop-upgrade.ps1
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/prototype/test-shared-desktop-elevation.ps1
 ```
 
 脚本会：
 
 - 拒绝在已有共享桌面注册的电脑上运行，避免覆盖用户安装；
-- 备份、写入并恢复 `%LOCALAPPDATA%\AkikazuHardwareCheck\settings.json`；
+- 备份、写入并恢复 `settings.json` 和 `HKCU\...\Run\AkikazuHardwareCheck`；
 - 在 `%TEMP%\AkikazuSharedDesktopTest-<随机>` 下安装，结束后清理测试根目录、注册表、快捷方式和进程；
-- 覆盖单装、两种安装顺序、双装导航、并发启动、托盘隐藏恢复、各自升级、两种卸载方向、注册卸载命令和断网模拟启动。
+- 覆盖单装、两种安装顺序、双装导航、并发启动、托盘隐藏恢复、各自升级、两种卸载方向、注册卸载命令和断网模拟启动；
+- 主脚本补测自启动 Run 迁移、禁用后无残留、`Shell_NotifyIconGetRect` 实际托盘注册；
+- `test-shared-desktop-upgrade.ps1` 构建 0.2.0 和 0.2.1 两个不同二进制，验证真实文件版本升级和 Run 迁移；
+- `test-shared-desktop-elevation.ps1` 验证硬件入口提权、急救入口不提权和混合入口单窗口；该脚本要求本机已安装 PawnIO，避免测试触发驱动安装。
 
 指定构建产物：
 
@@ -132,7 +147,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File scripts/prototype/test-share
 | 项目 | 结果 |
 | --- | --- |
 | Release 构建 | 0 警告、0 错误 |
-| 单元测试 | 481 个全部通过（含新增 `SharedDesktopTests` 和 `SharedDesktopPackagingTests`） |
+| 单元测试 | 482 个全部通过（含新增 `SharedDesktopTests` 和 `SharedDesktopPackagingTests`） |
 | Website 窗口冒烟 | 四语言全部窗口构造通过；双装初始页、导航切换、急救单装隐藏硬件页通过 |
 | Store 窗口冒烟 | 通过；Store 构建不出现急救模块和导航 |
 | 共享窗口截图 | 双装断网急救页：标题“断网急救 v0.1.0”，顶部两个原生导航按钮，本机网卡与已安装模块列表正常 |
@@ -143,26 +158,35 @@ powershell -NoProfile -ExecutionPolicy Bypass -File scripts/prototype/test-share
 | 并发启动 | 同时启动两个入口后只保留一个共享宿主进程和一个窗口，随后导航正常 |
 | 托盘隐藏 | `--tray` 启动无可见主窗口；第二入口唤回并显示急救页；进程数 1 |
 | 独立升级 | 急救升级到 0.1.1/宿主 0.2.1 时硬件保持 0.2.0/0.2.0；硬件升级到 0.2.1/宿主 0.2.2 时急救保持 0.1.1/0.2.1；旧宿主按引用清理 |
+| 真实版本升级 | 0.2.0 与 0.2.1 是不同二进制（FileVersion 0.2.0.0 / 0.2.1.0）；升级后新宿主可启动，急救保留 0.2.0 宿主；Run 指向新宿主 |
 | 独立卸载 | 卸载硬件后急救仍可启动；卸载急救后硬件及其宿主仍可启动；最后卸载清理共享根目录和注册表 |
+| 自启动迁移 | 双装、单装急救、急救/硬件各自升级和任一卸载后，Run 都指向存在的主模块宿主；最后一款卸载后 Run 被删除 |
+| 禁用自启动 | `--autostart-check` 启用后写入 `--tray`，禁用后无 Run 值；安装/升级/卸载不会重新创建已禁用的值 |
+| 实际托盘 | 双装窗口的 `NotifyIcon` 通过 `Shell_NotifyIconGetRect` 返回真实通知区域矩形；进程数和图标创建路径都是 1 |
+| 提权入口 | 硬件入口自动提权；运行窗口令牌为 elevated；原非提权启动器退出，只保留一个宿主进程 |
+| 非提权入口 | 急救入口运行窗口令牌为 non-elevated；只保留一个宿主进程 |
+| 混合入口 | 先急救后硬件只有一个非提权窗口，窗口切到硬件页但不会变成提权进程（已知首轮限制） |
 | 断网模拟 | 把 `HTTP_PROXY`/`HTTPS_PROXY`/`ALL_PROXY` 指向死端点后急救页仍在 15 秒内打开 |
+
+提权测试在 PawnIO 已安装且运行的开发机上执行，未触发驱动安装或卸载；不能代表干净机器上的驱动生命周期。
 
 **未验证**：
 
 - 真实拔网/断网环境；本轮只验证急救页启动路径没有互联网依赖，并用死代理模拟。
 - MSI 交互/静默安装、升级、降级阻止和签名；本机没有 Advanced Installer，未生成 MSI。本轮安装器是 per-user PowerShell 原型，不是 per-machine MSI。
 - Store MSIX、WACK、Partner Center 身份和提审。
-- 真实驱动安装、驱动备份和回退；急救页本轮没有驱动操作。
-- 不同二进制版本的接口兼容性；升级测试把同一构建产物复制到不同宿主版本目录，验证的是注册、快捷方式、宿主保留和卸载逻辑，不是二进制升级本身。
-- 提权硬件实例与非提权急救入口混合运行的跨完整性级别请求；文件请求按设计可跨级别，但本轮测试都在普通权限下。
-- 通过硬件测试快捷方式实际点击启动（快捷方式参数和直接启动已验证；快捷方式会触发原有 UAC，本轮未自动点“是”）。
-- 运行中的窗口热切换升级；本轮升级测试在停止窗口后进行。
-- 通知区域图标数量的自动计数；本轮验证一个进程/一个主窗口/一个 `NotifyIcon` 创建路径，实际图标矩形沿用 2026-11-06 的托盘验证记录。
-- Explorer 重启、多个 Windows 用户会话、真实开机自启。现有开机自启仍写当前运行宿主的版本化路径；升级或卸载宿主后需要重新确认，本轮未验证。
+- 真实驱动安装、驱动备份和回退；急救页本轮没有驱动操作；提权测试借用已安装的 PawnIO。
+- 不同二进制版本之间的长期接口兼容性；本轮只验证了 0.2.0→0.2.1 的一次真实硬件宿主升级。
+- 通过硬件测试快捷方式实际点击启动（快捷方式参数和直接启动已验证；硬件入口自动提权已验证，但未从 `.lnk` 点击触发）。
+- 运行中的窗口热切换升级；本轮真实版本升级在停止窗口后进行。
+- 通知区域图标数量的跨 Explorer 重启、图标溢出区和多用户会话计数；本轮验证了双装窗口实际注册的一个 `NotifyIcon`。
+- Explorer 重启、多个 Windows 用户会话、实际登录触发自启动。Run 值迁移已验证，但登录时实际启动未验证。
+- 混合入口在提权宿主已存在时的反向顺序；本轮只验证了先非提权急救、后硬件入口。
 
 ## 后续工作
 
 1. 用身份清单和稳定 UpgradeCode 生成两个 per-machine MSI 项目；安装器把共享宿主放到受控目录，并用 HKLM 或安装上下文解析模块。
-2. 把开机自启改成稳定的启动入口，避免版本化宿主目录被清理后自启失效。
+2. 评估把自启动迁移改成稳定启动器，减少对安装器重写的依赖，并验证实际登录触发。
 3. 把断网急救的驱动安装、离线包索引和回退做成独立模块，驱动操作单独提权并保持主窗口权限不变。
 4. 为 Store 配置工具做最小 MSIX 原型，验证相互打开、状态访问、双装/卸载和商店政策边界。
 5. 运行中的共享窗口增加版本刷新或安全重启协议，处理“旧窗口收到新模块导航”的升级场景。
