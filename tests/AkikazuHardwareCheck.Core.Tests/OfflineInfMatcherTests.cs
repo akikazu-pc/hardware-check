@@ -38,9 +38,14 @@ public sealed class OfflineInfMatcherTests
                 new([@"PCI\VEN_8086&DEV_5678"], null, 28),
             ];
 
+            Assert.Null(OfflineDriverInstaller.Verify(path));
             var match = Assert.Single(OfflineInfMatcher.Match(path, devices));
             Assert.Equal(devices[0].HardwareIds[0], match.HardwareId);
             Assert.Equal("Models.NTamd64", match.ModelsSection, ignoreCase: true);
+            Assert.Equal(match, OfflineDriverInstaller.SelectMissingMatch([match]));
+            Assert.Null(OfflineDriverInstaller.SelectMissingMatch([match, match]));
+            Assert.Null(OfflineDriverInstaller.SelectMissingMatch(
+                [match with { Device = match.Device with { ProblemCode = 0 } }]));
         }
         finally
         {

@@ -13,6 +13,8 @@ internal static class Program
     public const string REMOVE_DRIVER_ARGUMENT = "--remove-driver";
     public const string KEYBOARD_JAPANESE_ARGUMENT = "--keyboard-106";
 
+    public const string INSTALL_NETWORK_DRIVER_ARGUMENT = "--install-network-driver";
+
     private const string INSTANCE_MUTEX_NAME = "Local\\AkikazuHardwareCheck.SingleInstance";
     private const uint SEM_FAILCRITICALERRORS = 0x0001;
     private const uint SEM_NOGPFAULTERRORBOX = 0x0002;
@@ -31,6 +33,15 @@ internal static class Program
         if (args is [KEYBOARD_JAPANESE_ARGUMENT, var keyboardLanguage])
         {
             ApplyKeyboardFix(keyboardLanguage);
+            return;
+        }
+
+        if (args is [INSTALL_NETWORK_DRIVER_ARGUMENT, var infPath, var hardwareId, var expectedHash])
+        {
+            Environment.ExitCode = (int)(DistributionProfile.Current.Channel != DistributionChannel.Store &&
+                Elevation.IsAdministrator()
+                    ? OfflineDriverInstaller.Install(infPath, hardwareId, expectedHash)
+                    : OfflineInstallResult.InstallationFailed);
             return;
         }
 

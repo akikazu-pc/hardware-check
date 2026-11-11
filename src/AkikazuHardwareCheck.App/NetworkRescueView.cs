@@ -1,3 +1,5 @@
+using System.Diagnostics;
+using AkikazuHardwareCheck.Core.Configuration;
 using AkikazuHardwareCheck.Core.Localization;
 using AkikazuHardwareCheck.Core.SharedDesktop;
 
@@ -43,7 +45,7 @@ internal sealed class NetworkRescueView : UserControl
         _refresh.Click += (_, _) => RefreshStatus();
         _scan.Click += async (_, _) => await ScanAsync();
         _export.Click += (_, _) => ExportDiagnostics();
-        _preview.Click += (_, _) => PreviewInf();
+        _preview.Click += async (_, _) => await PreviewInfAsync();
         _preview.Enabled = false;
         _export.Enabled = false;
         _pciDevices.Columns.Add("", 550);
@@ -210,7 +212,7 @@ internal sealed class NetworkRescueView : UserControl
         }
     }
 
-    private void PreviewInf()
+    private async Task PreviewInfAsync()
     {
         if (_diagnostic is not { Devices.Count: > 0 } diagnostic)
         {
@@ -227,6 +229,13 @@ internal sealed class NetworkRescueView : UserControl
         try
         {
             var matches = OfflineInfMatcher.Match(dialog.FileName, diagnostic.Devices);
+            if (OfflineDriverInstaller.SelectMissingMatch(matches) is { } eligible &&
+                DistributionProfile.Current.Channel != DistributionChannel.Store)
+            {
+                await ConfirmInstallAsync(dialog.FileName, eligible);
+                return;
+            }
+
             message = matches.Count == 0
                 ? _t["rescue.infNoMatch"]
                 : string.Join(Environment.NewLine,
@@ -241,6 +250,83 @@ internal sealed class NetworkRescueView : UserControl
         MessageBox.Show(this, message, _t["rescue.infMatches", Path.GetFileName(dialog.FileName)],
             MessageBoxButtons.OK, MessageBoxIcon.Information);
     }
+
+    private async Task ConfirmInstallAsync(string path, OfflineInfMatch match)
+    {
+        OfflineDriverIdentity? identity;
+        try
+        {
+            identity = OfflineDriverInstaller.Verify(path);
+        }
+        catch (Exception exception) when (exception is IOException or UnauthorizedAccessException)
+        {
+            identity = null;
+        }
+
+        if (identity is null)
+        {
+            MessageBox.Show(this, $"{match.HardwareId} [{match.ModelsSection}]" + Environment.NewLine +
+                _t["rescue.packageRejected"], _t["rescue.infMatches", Path.GetFileName(path)],
+                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            return;
+        }
+
+        var details = string.Join(Environment.NewLine, _t["rescue.installConfirm"], Path.GetFileName(path),
+            $"{match.HardwareId} [{match.ModelsSection}]", $"{_t["rescue.signer"]}: {identity.Signer}");
+        if (MessageBox.Show(this, details, _t["rescue.heading"], MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) != DialogResult.Yes ||
+            Environment.ProcessPath is not { } executable)
+        {
+            return;
+        }
+
+        _scan.Enabled = false;
+        _preview.Enabled = false;
+        _export.Enabled = false;
+        string resultKey;
+        try
+        {
+            var start = new ProcessStartInfo(executable) { UseShellExecute = true, Verb = "runas" };
+            start.ArgumentList.Add(Program.INSTALL_NETWORK_DRIVER_ARGUMENT);
+            start.ArgumentList.Add(path);
+            start.ArgumentList.Add(match.HardwareId);
+            start.ArgumentList.Add(identity.Sha256);
+            using var helper = Process.Start(start);
+            if (helper is null)
+            {
+                resultKey = "rescue.elevationCanceled";
+            }
+            else
+            {
+                await helper.WaitForExitAsync();
+                resultKey = (OfflineInstallResult)helper.ExitCode switch
+                {
+                    OfflineInstallResult.Bound => "rescue.bound",
+                    OfflineInstallResult.RestartRequired => "rescue.restartRequired",
+                    OfflineInstallResult.BindingUnconfirmed => "rescue.bindingUnconfirmed",
+                    OfflineInstallResult.NoEligibleDevice => "rescue.noEligibleDevice",
+                    OfflineInstallResult.PackageRejected => "rescue.packageRejected",
+                    _ => "rescue.installationFailed",
+                };
+            }
+        }
+        catch (System.ComponentModel.Win32Exception)
+        {
+            resultKey = "rescue.elevationCanceled";
+        }
+
+        if (!IsDisposed)
+        {
+            await ScanAsync();
+            if (!IsDisposed)
+            {
+                ShowInstallResult(resultKey);
+            }
+        }
+    }
+
+    private void ShowInstallResult(string key) => MessageBox.Show(this, _t[key], _t["rescue.heading"],
+        MessageBoxButtons.OK, MessageBoxIcon.Information);
 
     private Control BuildLayout()
     {
