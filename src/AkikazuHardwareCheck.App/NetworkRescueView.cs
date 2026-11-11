@@ -20,6 +20,7 @@ internal sealed class NetworkRescueView : UserControl
     private readonly ListView _moduleList = ListViewTable.Create();
     private readonly Button _scan = Ui.Button();
     private readonly Button _export = Ui.Button();
+    private readonly Button _preview = Ui.Button();
     private readonly Label _scanStatus = Ui.Label();
     private readonly ListView _pciDevices = ListViewTable.Create();
     private readonly TabPage _pciPage = new();
@@ -42,6 +43,8 @@ internal sealed class NetworkRescueView : UserControl
         _refresh.Click += (_, _) => RefreshStatus();
         _scan.Click += async (_, _) => await ScanAsync();
         _export.Click += (_, _) => ExportDiagnostics();
+        _preview.Click += (_, _) => PreviewInf();
+        _preview.Enabled = false;
         _export.Enabled = false;
         _pciDevices.Columns.Add("", 550);
         _pciDevices.Columns.Add("", 150);
@@ -82,6 +85,7 @@ internal sealed class NetworkRescueView : UserControl
         _pciPage.Text = t["rescue.pci"];
         _scan.Text = t["rescue.scan"];
         _export.Text = t["rescue.export"];
+        _preview.Text = t["rescue.previewInf"];
         _pciDevices.Columns[0].Text = t["rescue.hardwareIds"];
         _pciDevices.Columns[1].Text = t["rescue.problemCode"];
         ShowDiagnostic();
@@ -146,6 +150,7 @@ internal sealed class NetworkRescueView : UserControl
     {
         _scan.Enabled = false;
         _export.Enabled = false;
+        _preview.Enabled = false;
         _diagnostic = null;
         _scanStatusKey = "rescue.scanning";
         ShowDiagnostic();
@@ -164,6 +169,7 @@ internal sealed class NetworkRescueView : UserControl
         {
             _scan.Enabled = true;
             _export.Enabled = _diagnostic is not null;
+            _preview.Enabled = _diagnostic?.Devices.Count > 0;
             ShowDiagnostic();
         }
     }
@@ -204,6 +210,38 @@ internal sealed class NetworkRescueView : UserControl
         }
     }
 
+    private void PreviewInf()
+    {
+        if (_diagnostic is not { Devices.Count: > 0 } diagnostic)
+        {
+            return;
+        }
+
+        using var dialog = new OpenFileDialog { Filter = _t["rescue.infFilter"] + " (*.inf)|*.inf" };
+        if (dialog.ShowDialog(this) != DialogResult.OK)
+        {
+            return;
+        }
+
+        string message;
+        try
+        {
+            var matches = OfflineInfMatcher.Match(dialog.FileName, diagnostic.Devices);
+            message = matches.Count == 0
+                ? _t["rescue.infNoMatch"]
+                : string.Join(Environment.NewLine,
+                    matches.Select(match => $"{match.HardwareId} [{match.ModelsSection}]").Distinct())
+                    + Environment.NewLine + Environment.NewLine + _t["rescue.infPreviewNote"];
+        }
+        catch (System.ComponentModel.Win32Exception)
+        {
+            message = _t["rescue.infReadFailed"];
+        }
+
+        MessageBox.Show(this, message, _t["rescue.infMatches", Path.GetFileName(dialog.FileName)],
+            MessageBoxButtons.OK, MessageBoxIcon.Information);
+    }
+
     private Control BuildLayout()
     {
         var root = new TableLayoutPanel { Dock = DockStyle.Fill, ColumnCount = 1, RowCount = 5, Margin = new Padding(0) };
@@ -242,6 +280,7 @@ internal sealed class NetworkRescueView : UserControl
         var actions = new FlowLayoutPanel { Dock = DockStyle.Fill, AutoSize = true };
         actions.Controls.Add(_scan);
         actions.Controls.Add(_export);
+        actions.Controls.Add(_preview);
         scanLayout.Controls.Add(actions, 0, 0);
         scanLayout.Controls.Add(_scanStatus, 0, 1);
         scanLayout.Controls.Add(_pciDevices, 0, 2);
