@@ -27,7 +27,7 @@ FIELDS = [
 
 
 def key(vendor, socket, name):
-    return vendor, socket.upper(), re.sub(r"[^A-Z0-9]", "", name.upper())
+    return vendor, socket.upper(), re.sub(r"[^A-Z0-9+]", "", name.upper())
 
 
 def checked_snapshot(directory, name, manifest):
@@ -95,6 +95,7 @@ def main():
     parser.add_argument("snapshot", type=Path)
     parser.add_argument("output", type=Path)
     parser.add_argument("--workers", type=int, default=8)
+    parser.add_argument("--package-plan", type=Path, help="Write exact package associations grouped by SHA-256")
     args = parser.parse_args()
     if args.workers < 1:
         parser.error("--workers must be positive")
@@ -133,6 +134,19 @@ def main():
         writer.writeheader()
         writer.writerows(results)
     temporary.replace(args.output)
+    if args.package_plan:
+        packages = defaultdict(list)
+        for row in results:
+            digest = row.get("sha256", "")
+            if row["status"] == "unique-snapshot-package" and re.fullmatch(r"[A-F0-9]{64}", digest):
+                packages[digest].append(row)
+        plan = [dict(sha256=digest, modelCount=len({(row["brand"], row["platform"], row["model"]) for row in entries}),
+                     associations=entries) for digest, entries in packages.items()]
+        plan.sort(key=lambda package: (-package["modelCount"], package["sha256"]))
+        path = args.package_plan.with_suffix(args.package_plan.suffix + ".tmp")
+        path.write_text(json.dumps(dict(snapshotGenerated=generation, packages=plan), ensure_ascii=False, indent=2) + "\n",
+                        encoding="utf-8")
+        path.replace(args.package_plan)
     print(f"Checked {len(rows)} motherboard records against {generation}.")
 
 
