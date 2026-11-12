@@ -1,21 +1,22 @@
 # AGENTS.md
 
-## Project
+## 项目定义
 
-- 秋和PC 硬件测试工具：Windows 硬件检测、压力测试、诊断和验收工具。C#、.NET 10、WinForms、LibreHardwareMonitorLib、Vortice。
-- UI 支持 `ja-JP`、`zh-CN`、`zh-TW`、`en-US`，默认跟随系统语言。
-- 公开仓库，MIT 许可证。不提交客户信息、密钥、Token，也不提交开发机的个人路径或个人邮箱。
-- 常用入口：`scripts/run.cmd`（双击打开窗口）、`scripts/run.ps1`、`scripts/test.ps1`、`scripts/publish.ps1`；VS Code 按 F5 调试，任务里有运行、测试和打包。
-- 产品说明见 `README.md`，已验证和未验证内容见 `docs/validation-record.md`，发布步骤见 `docs/release-checklist.md`，JSON 格式见 `docs/json-format.md`。
+- 本项目是面向 Windows 的硬件检测、压力测试、故障诊断与交付验收工具，核心流程涵盖硬件识别、运行采样、CPU 与显卡联合负载测试、结果统计及测试报告生成。
+- 技术栈为 C#、.NET 10 与 WinForms；硬件监控和图形接口分别基于 LibreHardwareMonitorLib 与 Vortice。
+- 用户界面支持 `ja-JP`、`zh-CN`、`zh-TW`、`en-US`，默认采用操作系统语言。
+- 本项目为采用 MIT 许可证的公开仓库；不得提交客户信息、密钥、访问令牌、开发机个人路径或个人邮箱。
+- 运行、测试与发布入口分别为 `scripts/run.cmd`、`scripts/run.ps1`、`scripts/test.ps1` 和 `scripts/publish.ps1`；VS Code 支持 F5 调试及对应任务。
+- 产品定义见 `README.md`，验证边界见 `docs/validation-record.md`，发布规程见 `docs/release-checklist.md`，数据交换格式见 `docs/json-format.md`。
 
-## Communication
+## 沟通规范
 
 - 默认使用用户母语；结论优先，采用短句、分组列表和准确术语，仅保留必要证据、决定与限制。
 - 不回贴整文件或整页结果。
 - 完成修改后说明改动、验证、commit、push、Release 和网站状态；这些证据分别报告，不得互相替代。
 - 说明“已实现”“窗口实测”“Release 实测”“真实硬件验证”的边界，未执行的标 `Unverified`。
 
-## Authorization and Git
+## 授权与版本控制
 
 - “只读”“只检查”“先分析”“先不改”只允许调查和报告；不得编辑、暂存、提交、同步、部署或执行外部写操作。诊断不自动授权修复。
 - 完成用户授权的修改并通过验证后自动 commit；用户明确要求不提交时除外。未经明确授权不得 push 或发布 Release。
@@ -26,7 +27,7 @@
 - commit 前确认 `user.name` 为 `Expurgator`、`user.email` 为 GitHub noreply 地址，不得添加 `Co-authored-by`、AI 署名及生成工具标记。
 - commit message 使用 `<type>(<scope>): <subject>`；subject 为英文且不超过 20 个字符。正文每行不超过 100 字符。
 
-## Workflow
+## 工作流程
 
 - 默认单会话闭环：要求评估 → 方案准备 → 实施 → 自审补漏 → 验证 → commit → 只读核对；不得强制用户另开审查会话。
 - 每个会话保持一个主要目标；目标明显变化时优先新建会话或 fork，不把无关历史继续堆入当前任务。
@@ -36,14 +37,14 @@
 - 独立只读检查应批量执行，先搜索/过滤再读取相关文件、行和日志；工具输出默认限于摘要、命中行或尾部，通常不超过 100 行或 20 KB，任务确需完整内容时除外。
 - 不用模型调用轮询无变化状态；优先本地脚本或状态比较，仅在状态变化、错误或需要决定时调用模型。重大调查或验证里程碑后若同一目标仍继续且上下文已大，建议压缩；目标分叉则建议新会话。
 
-## AI collaboration
+## AI 协作规范
 
 - 用户决定产品优先级；Codex 协调、实施控制和最终验收；Harness 执行与自审；Claude 只做条件独立复核；本地 Qwen 和脚本承担机械检查。模型名称不授予额外权限。
 - 按“需求冻结 → 派发准备 → 单主题实施/自审 → 本地确定性验证 → 条件反审 → 条件终审 → 验收”推进。派发、确认收到、处理中和模型自报完成都不等于独立验证完成。
 - 反审前锁定基线 commit 和工作树状态，只审基线到当前差异；基线漂移则重新交接。外部代理不得自行 push、发布 Release、提交 Store 或部署网站。
 - 子代理只用于真正独立的并行工作，不用于简单顺序任务或单文件修改；状态没有变化时不重复调用模型。
 
-## Product rules
+## 产品规则
 
 - **原生 UI（方案 A）**：只使用系统标准控件和 Win32 原生菜单，不自绘。默认用系统颜色，Windows 按自身版本绘制，并跟随浅色或深色。用户可在“外观”菜单选背景颜色和图片，用系统调色盘、文件对话框和图形库实现。状态色只用于表达异常。
 - **不迁移 WinUI 3/WPF**：当前产品保持 WinForms 原生控件，不为了模仿 Windows 11 设置而重写 UI。可以统一字体、间距和系统颜色，但不伪装成 Fluent。
@@ -58,7 +59,7 @@
 - **安全**：不做破坏性磁盘测试，不写自己的内核驱动，不改变温度保护的默认值而不说明理由。
 - **异常处理**：未处理异常不得弹出 WinForms/Windows 错误对话框。UI 线程、后台线程和未观察 Task 的异常写入 `%LOCALAPPDATA%\AkikazuHardwareCheck\error.log` 后以退出码 1 直接退出，并抑制 Windows Error Reporting 弹窗。
 
-## Current UI and interaction decisions
+## 当前界面与交互决策
 
 - 三层信息：主要硬件、完整信息、高级信息；高级信息默认使用原生 ListView，分类/组用原生 `ListViewGroup`。
 - 主窗口默认尺寸为 1280×800 逻辑像素（16:10），但不设置硬最小尺寸；宽、高可独立缩小，文字优先换行，内容确实放不下时才出现滚动条。左侧长值换行，不允许把主监控栏挤出窗口。窗口尺寸/位置、最大化状态、硬件/监控/测试显示状态，以及悬浮窗位置/停靠/信息显隐都保存到本机设置文件；启动时恢复并限制在可见屏幕内。
@@ -87,21 +88,21 @@
 - “本版本未接入”占位状态不再作为用户可见状态；未实现的功能直接移除，不逐行展示空占位。额外信息保留“来源”列，来源可为 WMI、CPUID、DisplayConfig、DriveInfo 等。
 - 当前架构为 x64；不添加 x86。ARM64 先做原生预览和实机验证，不能把 x64 模拟运行当作支持。
 
-## PawnIO driver
+## PawnIO 驱动管理
 
 - 只内置官方签名、未修改的安装程序，运行前校验固定的 SHA-256；升级时同步哈希、`THIRD-PARTY-NOTICES.md` 和验证记录。
 - 由本次运行安装的驱动在退出后删除。官方卸载程序不删服务和驱动包，由工具补删；主程序退出前占用驱动，所以由子进程在它退出后执行。
 - 只有运行前系统里没有该服务时才删服务和驱动包，绝不删除其他软件在用的驱动。
 - 自动提权和安装驱动会改变系统。测试前说明影响；普通测试加 `--no-elevate`。开发机若已关闭 UAC 提示，提权不会弹窗，不能代表客户电脑。
 
-## Language, region and encoding
+## 语言、区域与编码
 
 - 工具语言和 Windows 区域相互独立。显示给用户的数字和日期一律用 `CultureInfo.InvariantCulture`，不随区域变化。
 - 调用带字符串的 Win32 接口必须用 Unicode 版本。文件一律 UTF-8。不解析系统工具的本地化文本输出，用错误码或直接核对结果。
 - 涉及显示或报告的改动，要保证 `CultureTests` 覆盖到。
 - 新文案必须同步四个语言文件；表格排序和数字格式化不能依赖当前区域。
 
-## Engineering
+## 工程规范
 
 - 最小变更优先：只改需求相关代码，单次提交保持单主题；避免无关重构和批量格式化。
 - 分层：`Core` 放硬件、测试、判定和报告，不依赖 WinForms；`App` 只放界面；`Probe` 是控制台诊断工具。
@@ -111,7 +112,7 @@
 - 未发布的废弃实现直接移除。JSON 字段发生破坏性变化时升 `CURRENT_SCHEMA_VERSION`，并同步 `docs/json-format.md` 和网站导入。
 - 不再为表格引入 DataGridView、OwnerDraw 或第三方 UI 主题；已有原生 ListView 保持单一风格。
 
-## Testing and evidence
+## 测试与证据
 
 - 修 bug 先写可复现测试并确认失败，再修复并确认通过。所有修改运行 `git diff --check`。
 - 单元测试用 `scripts/test.ps1`。核对测试总数：数量意外减少说明有问题，即使显示通过。批量替换脚本在匹配失败时必须中止，不得写回文件。
@@ -122,20 +123,20 @@
 - 分别报告聚焦测试、`scripts/test.ps1`、窗口实测、便携 EXE、MSI 安装/升级/卸载、Store MSIX、远端 CI、签名、认证和真实硬件验证；任一产物通过不能代替另两种。
 - 修改 CI、打包脚本、manifest、测试入口或门禁顺序时同步 workflow、脚本、文档和相关测试。高风险系统行为必须实际执行才算验证。
 
-### Commit gates
+### 提交门禁
 
 - 轻量：纯文档或注释且不改变规则、脚本、配置或行为；运行 `git diff --check`，没有测试时说明省略原因。
 - 中等：范围明确的局部逻辑或测试；运行相关测试、Release 构建和 `git diff --check`。
 - 完整：依赖/锁文件、CI、打包脚本、manifest、权限、驱动、Schema、发行渠道、安装/卸载或聚焦测试不能覆盖主要行为；串行运行 `scripts/test.ps1`、四语言窗口冒烟、Website 与 Store 构建，以及受影响的最终产物验证。
 - 推送后的 GitHub Actions 才是远端门禁；未运行时标 `Unverified`。本地通过不得表述为远端、签名、认证、发布或线上通过。
 
-## Audit records
+## 审计记录
 
 - 状态使用 `Open`、`Mitigated locally`、`Fixed locally`、`Unverified`、`Not a defect`、`Closed`；仍有风险或需要真实安装/硬件/认证验证时不得关闭。
 - commit 后、push 前执行 `git show <sha>`，检查 author、committer、共同作者、范围、回归、安全和文档漂移。发现阻断问题时用后续 commit 修正，不改写历史。
 - 明确区分代码已实现、产物已生成、安装已验证、签名已验证、Store 认证已通过和已发布。
 
-## Distribution channels
+## 分发渠道
 
 - 三种发行物使用同一个产品版本，但能力、签名、更新机制、文件名、校验值和验证记录分别管理：
   - `Portable EXE`：`Website` 能力，自包含单文件 ZIP，解压即用；由官网/GitHub Release 托管和更新。
@@ -145,14 +146,14 @@
 - 签名发生在所有二进制修改之后，签名后重新计算 SHA-256。不得提交证书、私钥、密码、Partner Center token、真实 Publisher 身份或客户报告。
 - Partner Center 名称保留和真实 Identity、付费证书或打包工具许可证、私钥操作及最终商店提交必须由用户本人完成；代码、脚本、素材清单和预检由当前会话推进。
 
-## Release
+## 发布规范
 
 - 版本号在 `Directory.Build.props`。`scripts/publish.ps1` 生成 Portable ZIP；MSI 和 Store MSIX 使用同一版本源，但独立生成与验证。
 - 用正式 Release 并标为 latest，不用 prerelease 标记：`releases/latest/download` 不会指向 prerelease。未完成硬件验证时在标题和说明里写“预览版”。
 - 发布后从 latest 链接下载并核对 SHA-256。
 - 网站 `akikazu-pc/my-site` 的 `app/data/tools/hardware-check-release.json` 要同步版本号和 SHA-256；网站导入按 `SchemaVersion` 精确匹配，升版本要同步 `app/utils/forms/hardwareReportImport.ts`。推送网站 `main` 会自动部署到生产环境，需要明确授权。
 
-## Resources and safety
+## 资源与安全
 
 - build、test、publish 和打包等重任务串行执行；临时验证文件用后清理。
 - 只停止 PID、完整命令行、工作目录和用途都确认属于本项目的残留进程；不得终止 VS Code、其他代理或归属不明进程。
