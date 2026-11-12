@@ -42,8 +42,10 @@ HP 从[官方 SoftPaq](https://ftp.ext.hp.com/pub/softpaq/sp173001-173500/sp1731
 
 华硕 TUF Gaming A16 FA608WM 新增 MediaTek 和 Realtek 两包。ROG Strix G16 G615LR 新增 Intel BE200 包。共 54 个精确 PCI/SUBSYS 条目通过 Windows 11 x64 构建 26300 的 INF 匹配和签名检查。在线目录按华硕支持范围从 Windows 11 24H2（26100）提供这些候选。来源为 [TUF FA608WM](https://www.asus.com/laptops/for-gaming/tuf-gaming/asus-tuf-gaming-a16-2025/helpdesk_download/?model2Name=FA608WM)和 [ROG G615LR](https://www.asus.com/supportonly/g615lr/helpdesk_download/)。
 
-戴尔 7TY65 包加入在线目录和离线完整版。在线入口限 Windows 11 x64 的 MT7925 参考子系统 PCI\VEN_14C3&DEV_7925&SUBSYS_792514C3。Alienware 16 Aurora AC16250 和 16X Aurora AC16251 的原厂手册列有 MT7925B22M。不同整机出厂批次的 SUBSYS 和实机联网结果仍待核验。[戴尔 7TY65 驱动及兼容列表](https://www.dell.com/support/home/en-us/drivers/driversdetails?driverid=7ty65)
+戴尔 7TY65 包加入在线目录和离线完整版。在线入口支持 Windows 11 x64 的 MT7925 参考子系统 PCI\VEN_14C3&DEV_7925&SUBSYS_792514C3 及下文的 AC16250 子系统。Alienware 16 Aurora AC16250 和 16X Aurora AC16251 的原厂手册列有 MT7925B22M。其他整机出厂批次的 SUBSYS 和实机联网结果仍待核验。[戴尔 7TY65 驱动及兼容列表](https://www.dell.com/support/home/en-us/drivers/driversdetails?driverid=7ty65)
 
 打包和在线安装均先核对原包 SHA-256，再静态解出嵌入的 7z。离线文件夹扫描使用当前 Windows 的 INF 适用性和设备硬件 ID。上述结果仍需断网实机安装及联网验证。
 
-DeepSeek Harness 为联想 DS575356 找到了 Inno Setup 静态解包路径。使用 InnoExtract 1.9 独立复验后，Windows 11 x64 构建 26300 匹配到三个微软签名 INF 中的七个联想子系统 ID。MediaTek 为 DEV_7925 的 E02517AA、E0FF17AA 及 DEV_7927 的 E0E417AA。Realtek 为 DEV_B852 的 485317AA、B85317AA 及 DEV_8922 的 492217AA、492317AA。当前两款发行包尚未纳入 DS575356，下一步需要接入解包流程及型号证据。[联想 DS575356](https://support.lenovo.com/ao/en/downloads/DS575356)
+DeepSeek Harness 为联想 DS575356 找到了 Inno Setup 静态解包路径，现已接入在线版和离线完整版。在线版按需下载并验证 InnoExtract 1.9 和联想原包的 SHA-256，离线版在打包时解出 INF 和对应文件。Windows 11 x64 构建 26300 的实际下载验证匹配了三个微软签名 INF 中的七个联想子系统 ID。MediaTek 为 DEV_7925 的 E02517AA、E0FF17AA 及 DEV_7927 的 E0E417AA。Realtek 为 DEV_B852 的 485317AA、B85317AA 及 DEV_8922 的 492217AA、492317AA。联想支持页列出 Legion 5 16IAX10、Legion Pro 5 16IAX10 和 16IAX10H，具体出厂配置对应关系仍待实机核对。[联想 DS575356](https://support.lenovo.com/ao/en/downloads/DS575356)
+
+Alienware 16 Aurora AC16250（0D35）的三个 Ubuntu 认证配置均列出 MT7925 的子系统 `105B:E123`。戴尔 7TY65 的微软签名 INF 在 Windows 11 构建 26300 匹配 `PCI\VEN_14C3&DEV_7925&SUBSYS_E123105B`，该 ID 已加入在线目录。AC16251 的原厂资料确认 MT7925B22M，精确出厂 ID 仍待核验。[Canonical 认证记录](https://ubuntu.com/certified/platforms/15401) · [戴尔 7TY65](https://www.dell.com/support/home/en-us/drivers/driversdetails?driverid=7ty65)

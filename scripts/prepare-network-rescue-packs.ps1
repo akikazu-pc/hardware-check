@@ -33,6 +33,31 @@ try {
         $payload = Join-Path $inputRoot 'payload'
         if ($package.archiveLayout -eq 'direct') {
             Expand-Archive -LiteralPath $archive -DestinationPath $payload
+        } elseif ($package.archiveLayout -eq 'inno') {
+            # Keep the extraction path short for InnoExtract 1.9 on Windows.
+            $tempRoot = (Resolve-Path -LiteralPath ([IO.Path]::GetTempPath())).Path
+            $innoRoot = New-Item -ItemType Directory -Path (Join-Path $tempRoot ('wifi-inno-' + [Guid]::NewGuid().ToString('N').Substring(0, 8)))
+            try {
+                $toolArchive = Join-Path $innoRoot.FullName 'innoextract.zip'
+                Invoke-WebRequest -Uri 'https://github.com/dscharrer/innoextract/releases/download/1.9/innoextract-1.9-windows.zip' -OutFile $toolArchive
+                if ((Get-FileHash -LiteralPath $toolArchive -Algorithm SHA256).Hash -ne '6989342C9B026A00A72A38F23B62A8E6A22CC5DE69805CF47D68AC2FEC993065') {
+                    throw 'InnoExtract ZIP hash mismatch.'
+                }
+                $tool = Join-Path $innoRoot.FullName 'tool'
+                $innoPayload = Join-Path $innoRoot.FullName 'payload'
+                Expand-Archive -LiteralPath $toolArchive -DestinationPath $tool
+                & (Join-Path $tool 'innoextract.exe') -s -d $innoPayload $archive
+                if ($LASTEXITCODE -ne 0) {
+                    throw "Could not unpack $fileName."
+                }
+                New-Item -ItemType Directory -Path $inputRoot | Out-Null
+                Copy-Item -LiteralPath $innoPayload -Destination $payload -Recurse
+            } finally {
+                $resolvedInnoRoot = (Resolve-Path -LiteralPath $innoRoot.FullName).Path
+                if ((Split-Path -Parent $resolvedInnoRoot) -eq $tempRoot -and (Split-Path -Leaf $resolvedInnoRoot) -like 'wifi-inno-*') {
+                    Remove-Item -LiteralPath $resolvedInnoRoot -Recurse -Force
+                }
+            }
         } else {
             New-Item -ItemType Directory -Path $payload | Out-Null
             if ($package.archiveLayout -eq 'embedded-7z') {

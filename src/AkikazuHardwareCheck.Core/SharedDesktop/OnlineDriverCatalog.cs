@@ -35,21 +35,8 @@ public static class OnlineDriverCatalog
 
         var root = Path.Combine(workspace, package.Id);
         Directory.CreateDirectory(root);
-        var archive = Path.Combine(root, "vendor.zip");
-        using (var download = await Client.GetStreamAsync(package.Source, cancellationToken).ConfigureAwait(false))
-        await using (var output = File.Create(archive))
-        {
-            await download.CopyToAsync(output, cancellationToken).ConfigureAwait(false);
-        }
-
-        await using (var input = File.OpenRead(archive))
-        {
-            var hash = await SHA256.HashDataAsync(input, cancellationToken).ConfigureAwait(false);
-            if (!string.Equals(Convert.ToHexString(hash), package.ArchiveSha256, StringComparison.OrdinalIgnoreCase))
-            {
-                throw new InvalidDataException("The driver archive checksum changed.");
-            }
-        }
+        var archive = Path.Combine(root, package.ArchiveLayout == "inno" ? "vendor.exe" : "vendor.zip");
+        await DownloadVerifiedAsync(package.Source, package.ArchiveSha256, archive, cancellationToken).ConfigureAwait(false);
 
         var payload = Path.Combine(root, "extracted");
         if (package.ArchiveLayout == "embedded-7z")
@@ -68,6 +55,16 @@ public static class OnlineDriverCatalog
             }
 
             await ExtractArchiveAsync(embedded, payload, cancellationToken).ConfigureAwait(false);
+        }
+        else if (package.ArchiveLayout == "inno")
+        {
+            var toolArchive = Path.Combine(root, "innoextract.zip");
+            await DownloadVerifiedAsync("https://github.com/dscharrer/innoextract/releases/download/1.9/innoextract-1.9-windows.zip",
+                "6989342C9B026A00A72A38F23B62A8E6A22CC5DE69805CF47D68AC2FEC993065", toolArchive, cancellationToken).ConfigureAwait(false);
+            var tool = Path.Combine(root, "innoextract");
+            ZipFile.ExtractToDirectory(toolArchive, tool);
+            await RunExtractorAsync(Path.Combine(tool, "innoextract.exe"),
+                ["-s", "-d", payload, archive], cancellationToken).ConfigureAwait(false);
         }
         else
         {
@@ -89,16 +86,38 @@ public static class OnlineDriverCatalog
         return Directory.Exists(driver) ? driver : throw new InvalidDataException("The expected driver folder was not found.");
     }
 
-    private static async Task ExtractArchiveAsync(string archive, string destination, CancellationToken cancellationToken)
+    private static async Task DownloadVerifiedAsync(string source, string expectedSha256, string archive, CancellationToken cancellationToken)
+    {
+        using (var download = await Client.GetStreamAsync(source, cancellationToken).ConfigureAwait(false))
+        await using (var output = File.Create(archive))
+        {
+            await download.CopyToAsync(output, cancellationToken).ConfigureAwait(false);
+        }
+
+        await using var input = File.OpenRead(archive);
+        var hash = await SHA256.HashDataAsync(input, cancellationToken).ConfigureAwait(false);
+        if (!string.Equals(Convert.ToHexString(hash), expectedSha256, StringComparison.OrdinalIgnoreCase))
+        {
+            throw new InvalidDataException("The downloaded archive checksum changed.");
+        }
+    }
+
+    private static Task ExtractArchiveAsync(string archive, string destination, CancellationToken cancellationToken)
     {
         Directory.CreateDirectory(destination);
+        return RunExtractorAsync(Path.Combine(Environment.SystemDirectory, "tar.exe"),
+            ["-xf", archive, "-C", destination], cancellationToken);
+    }
+
+    private static async Task RunExtractorAsync(string executable, string[] arguments, CancellationToken cancellationToken)
+    {
         cancellationToken.ThrowIfCancellationRequested();
-        var start = new ProcessStartInfo(Path.Combine(Environment.SystemDirectory, "tar.exe"))
+        var start = new ProcessStartInfo(executable) { UseShellExecute = false, CreateNoWindow = true };
+        foreach (var argument in arguments)
         {
-            UseShellExecute = false,
-            CreateNoWindow = true,
-            ArgumentList = { "-xf", archive, "-C", destination },
-        };
+            start.ArgumentList.Add(argument);
+        }
+
         using var extract = Process.Start(start) ?? throw new IOException("Could not launch archive extraction.");
         using var cancel = cancellationToken.Register(() =>
         {
