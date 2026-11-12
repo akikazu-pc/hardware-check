@@ -2,7 +2,8 @@
 
 enum HomeControl {
     HomeTools = 201, HomeLanguage, HomeHelp, HomeHeading, HomeIntro, HomeList, HomeRefresh, HomePrimary,
-    HomeSummary, HomeNetworkHeading, HomeDriverHeading, HomeNetworkList
+    HomeSummary, HomeNetworkHeading, HomeDriverHeading, HomeNetworkList,
+    HomeBrandIcon, HomeNetworkIcon, HomeDriverIcon
 };
 
 struct HomeState {
@@ -12,7 +13,27 @@ struct HomeState {
     HFONT font = nullptr;
     HFONT headingFont = nullptr;
     HFONT sectionFont = nullptr;
+    HICON networkIcon = nullptr;
+    HICON driverIcon = nullptr;
 };
+
+static HICON LoadHomeIcon(int width, int height)
+{
+    return static_cast<HICON>(LoadImageW(GetModuleHandleW(nullptr), MAKEINTRESOURCEW(1),
+        IMAGE_ICON, width, height, LR_SHARED));
+}
+
+static void SetHomeIcon(HWND control, HICON icon)
+{
+    if (control && icon) SendMessageW(control, STM_SETICON, reinterpret_cast<WPARAM>(icon), 0);
+}
+
+static HICON LoadHomeSectionIcon(SHSTOCKICONID id)
+{
+    SHSTOCKICONINFO info{};
+    info.cbSize = sizeof info;
+    return SUCCEEDED(SHGetStockIconInfo(id, SHGSI_ICON | SHGSI_SMALLICON, &info)) ? info.hIcon : nullptr;
+}
 
 static void AddHomeRow(HWND list, const std::wstring& name, const wchar_t* status)
 {
@@ -201,9 +222,10 @@ static INT_PTR CALLBACK SharedHomeDialog(HWND window, UINT message, WPARAM wpara
         auto& state = *reinterpret_cast<HomeState*>(lparam);
         SetWindowLongPtrW(window, GWLP_USERDATA, lparam);
         SetWindowTextW(window, L"Network Rescue");
-        const auto icon = LoadIconW(GetModuleHandleW(nullptr), MAKEINTRESOURCEW(1));
-        SendMessageW(window, WM_SETICON, ICON_SMALL, reinterpret_cast<LPARAM>(icon));
-        SendMessageW(window, WM_SETICON, ICON_BIG, reinterpret_cast<LPARAM>(icon));
+        const auto smallIcon = LoadHomeIcon(GetSystemMetrics(SM_CXSMICON), GetSystemMetrics(SM_CYSMICON));
+        const auto largeIcon = LoadHomeIcon(GetSystemMetrics(SM_CXICON), GetSystemMetrics(SM_CYICON));
+        SendMessageW(window, WM_SETICON, ICON_SMALL, reinterpret_cast<LPARAM>(smallIcon));
+        SendMessageW(window, WM_SETICON, ICON_BIG, reinterpret_cast<LPARAM>(largeIcon));
 
         constexpr auto dropdown = WS_TABSTOP | WS_VSCROLL | CBS_DROPDOWNLIST | CBS_HASSTRINGS;
         const auto tools = ChoiceControl(window, L"COMBOBOX", L"", dropdown, HomeTools, { 10, 8, 94, 75 });
@@ -212,20 +234,33 @@ static INT_PTR CALLBACK SharedHomeDialog(HWND window, UINT message, WPARAM wpara
         ChoiceControl(window, L"COMBOBOX", L"", dropdown, HomeHelp, { 195, 8, 268, 75 });
         const int right = state.isPe ? 404 : 362;
         ChoiceControl(window, L"STATIC", L"", SS_ETCHEDHORZ, -1, { 10, 28, right, 30 });
-        ChoiceControl(window, L"STATIC", L"", SS_NOPREFIX, HomeHeading, { 10, 37, right, 57 });
-        ChoiceControl(window, L"STATIC", L"", SS_NOPREFIX, HomeIntro, { 10, 59, right, 75 });
+        if (state.isPe) {
+            SetHomeIcon(ChoiceControl(window, L"STATIC", L"", SS_ICON,
+                HomeBrandIcon, { 14, 44, 39, 73 }), largeIcon);
+        }
+        const int headingLeft = state.isPe && largeIcon ? 45 : 10;
+        ChoiceControl(window, L"STATIC", L"", SS_NOPREFIX, HomeHeading, { headingLeft, 37, right, 57 });
+        ChoiceControl(window, L"STATIC", L"", SS_NOPREFIX, HomeIntro, { headingLeft, 59, right, 75 });
 
         const auto& text = peText[state.language];
         HWND list = nullptr;
         HWND primary = nullptr;
         if (state.isPe) {
-            ChoiceControl(window, L"STATIC", L"", SS_NOPREFIX, HomeNetworkHeading, { 10, 78, right, 91 });
+            state.networkIcon = LoadHomeSectionIcon(SIID_NETWORKCONNECT);
+            state.driverIcon = LoadHomeSectionIcon(SIID_DRIVEFIXED);
+            SetHomeIcon(ChoiceControl(window, L"STATIC", L"", SS_ICON | SS_CENTERIMAGE,
+                HomeNetworkIcon, { 10, 78, 22, 91 }), state.networkIcon);
+            const int networkLeft = state.networkIcon ? 26 : 10;
+            ChoiceControl(window, L"STATIC", L"", SS_NOPREFIX, HomeNetworkHeading, { networkLeft, 78, right, 91 });
             if (!CreateHomeList(window, HomeNetworkList, { 10, 93, right, 144 }, text.homeDevice, text.homeStatus)) {
                 EndDialog(window, 1);
                 return TRUE;
             }
             ChoiceControl(window, L"STATIC", L"", SS_ETCHEDHORZ, -1, { 10, 152, right, 154 });
-            ChoiceControl(window, L"STATIC", L"", SS_NOPREFIX, HomeDriverHeading, { 10, 160, right, 174 });
+            SetHomeIcon(ChoiceControl(window, L"STATIC", L"", SS_ICON | SS_CENTERIMAGE,
+                HomeDriverIcon, { 10, 160, 22, 174 }), state.driverIcon);
+            const int driverLeft = state.driverIcon ? 26 : 10;
+            ChoiceControl(window, L"STATIC", L"", SS_NOPREFIX, HomeDriverHeading, { driverLeft, 160, right, 174 });
             primary = ChoiceControl(window, L"BUTTON", L"", WS_TABSTOP | BS_DEFPUSHBUTTON,
                 HomePrimary, { 10, 178, 220, 200 });
             ChoiceControl(window, L"BUTTON", L"", WS_TABSTOP, HomeRefresh, { 226, 178, 294, 200 });
@@ -323,5 +358,7 @@ static int RunSharedHome(const fs::path& bundle, bool isPe)
     if (state.font) DeleteObject(state.font);
     if (state.headingFont) DeleteObject(state.headingFont);
     if (state.sectionFont) DeleteObject(state.sectionFont);
+    if (state.networkIcon) DestroyIcon(state.networkIcon);
+    if (state.driverIcon) DestroyIcon(state.driverIcon);
     return result < 0 ? 1 : static_cast<int>(result);
 }

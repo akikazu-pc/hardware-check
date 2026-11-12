@@ -14,7 +14,9 @@ set "PE_OUT=%REPO%\artifacts\network-rescue-pe"
 if not exist "%PE_OUT%" mkdir "%PE_OUT%"
 pwsh -NoProfile -File "%REPO%\scripts\generate-network-rescue-pe-strings.ps1" -Destination "%PE_OUT%\PeStrings.generated.h"
 if errorlevel 1 exit /b 1
-rc /nologo /fo"%PE_OUT%\PeNetworkRescue.res" /I"%REPO%\src\AkikazuHardwareCheck.App" "%REPO%\src\AkikazuNetworkRescue.PE\PeNetworkRescue.rc"
+pwsh -NoProfile -File "%REPO%\scripts\generate-network-rescue-pe-icon.ps1" -Source "%REPO%\src\AkikazuHardwareCheck.App\app.ico" -Destination "%PE_OUT%\PeApp.ico"
+if errorlevel 1 exit /b 1
+rc /nologo /fo"%PE_OUT%\PeNetworkRescue.res" /I"%PE_OUT%" "%REPO%\src\AkikazuNetworkRescue.PE\PeNetworkRescue.rc"
 if errorlevel 1 exit /b 1
 cl /nologo /std:c++17 /EHsc /W4 /WX /O2 /MT /utf-8 /DUNICODE /D_UNICODE /I"%PE_OUT%" /D_WIN32_WINNT=0x0A00 /DNTDDI_VERSION=0x0A000002 /Fo"%PE_OUT%\PeNetworkRescue.obj" /Fe"%PE_OUT%\PeNetworkRescue.exe" "%REPO%\src\AkikazuNetworkRescue.PE\PeNetworkRescue.cpp" "%PE_OUT%\PeNetworkRescue.res" setupapi.lib version.lib advapi32.lib user32.lib gdi32.lib cfgmgr32.lib bcrypt.lib shell32.lib comctl32.lib
 if errorlevel 1 exit /b 1
