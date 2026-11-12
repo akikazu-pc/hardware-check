@@ -307,6 +307,66 @@
       ],
       "windows11Only": true,
       "adapterName": "MediaTek MT7925"
+    },
+    {
+      "id": "asus-mb-mtk-3501349",
+      "version": "3.5.0.1349",
+      "source": "https://dlcdnets.asus.com/pub/ASUS/mb/08WIRELESS/DRV_WiFi_MediaTek_SZ-TSD_W11_64_V3501349_20260305R.zip",
+      "archiveSha256": "B16FDEAAFF776BFF342AC45C76F53CCFEB2EDBE674ACF87B45860B78BB05DCE8",
+      "driverDirectory": ".",
+      "scope": "ASUS motherboard OEM WLAN; offline matching",
+      "archiveLayout": "direct",
+      "devicePrefixes": [],
+      "windows11Only": false,
+      "adapterName": "MediaTek MT7902/MT7921/MT7922"
+    },
+    {
+      "id": "asus-mb-mtk-3601425",
+      "version": "3.6.0.1425",
+      "source": "https://dlcdnets.asus.com/pub/ASUS/mb/08WIRELESS/DRV_WiFi_MediaTek_SZ-TSD_W11_64_V3601425_20260804R.zip",
+      "archiveSha256": "DA92DBB9097B6EB273C633DE4C63382311A06EB71549920BC22D36A7D946D616",
+      "driverDirectory": ".",
+      "scope": "ASUS motherboard OEM WLAN; offline matching",
+      "archiveLayout": "direct",
+      "devicePrefixes": [],
+      "windows11Only": false,
+      "adapterName": "MediaTek MT7902/MT7921/MT7922"
+    },
+    {
+      "id": "asus-mb-rtl8851-134100",
+      "version": "6001.19.134.100",
+      "source": "https://dlcdnets.asus.com/pub/ASUS/mb/08WIRELESS/DRV_WiFi_RTK_8851BE_SZ-TSD_W11_64_V600119134100_20251128R.zip",
+      "archiveSha256": "E2A6D1E627CF88C31380FB89AA16F7610A246627F4A6A9CE88A223BC2FBBB881",
+      "driverDirectory": "Win10X64",
+      "scope": "ASUS motherboard OEM WLAN; offline matching",
+      "archiveLayout": "direct",
+      "devicePrefixes": [],
+      "windows11Only": false,
+      "adapterName": "Realtek RTL8851BE"
+    },
+    {
+      "id": "asus-mb-rtl8851-1380",
+      "version": "6001.19.138.0",
+      "source": "https://dlcdnets.asus.com/pub/ASUS/mb/08WIRELESS/DRV_WiFi_RTK_8851BE_SZ-TSD_W11_64_V6001191380_20260722R.zip",
+      "archiveSha256": "2002CF86831891F4B0E052336AF1561D24FB404573AE4101A16DA0AFE11F711C",
+      "driverDirectory": "Win10X64",
+      "scope": "ASUS motherboard OEM WLAN; offline matching",
+      "archiveLayout": "direct",
+      "devicePrefixes": [],
+      "windows11Only": false,
+      "adapterName": "Realtek RTL8851BE"
+    },
+    {
+      "id": "asus-mb-intel-22190",
+      "version": "22.190.0.4",
+      "source": "https://dlcdnets.asus.com/pub/ASUS/mb/08WIRELESS/DRV_WiFi_Intel_TP_W11_64_V2219004_20230130R.zip",
+      "archiveSha256": "CF7582F89EB04A367816F3C3108F6622EAD1DDAE75112BB5DE35EBF60989D629",
+      "driverDirectory": "UWD/Win64/Drivers",
+      "scope": "ASUS motherboard OEM WLAN; offline matching",
+      "archiveLayout": "direct",
+      "devicePrefixes": [],
+      "windows11Only": false,
+      "adapterName": "Intel Wireless"
     }
   ]
 }

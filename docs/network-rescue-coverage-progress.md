@@ -2,7 +2,7 @@
 
 [逐型号 Wi-Fi 缺口清单](network-rescue-model-gaps.csv)记录当前已发现的 1,237 条主板型号或修订、912 条笔记本系列或型号、1 条一体机型号，以及 167 条戴尔系统与 Windows 组合。同一台笔记本可出现在多个系统组合。
 
-清单分别记录 `windows10X64Evidence` 和 `windows11X64Evidence`。`oem-package-indexed` 表示原厂包已入索引，`oem-wlan-listed` 表示原厂资料列出无线驱动，`oem-driver-pack-listed` 表示原厂列出该系统的整机部署包，仍需检查包内 WLAN 驱动。`oem-os-upgrade-tested` 表示原厂列出 Windows 11 升级测试，WLAN 驱动仍待核对。`pending` 表示该系统的证据待核。`oem-wlan-not-supported` 表示原厂明确说明该系统没有该出厂无线模块的驱动。仅预留接口和 ARM64 组合另有标记。原厂下载索引目前有 9 个包标注支持 Windows 10 x64，18 个包标注支持 Windows 11 x64，部分包另有最低构建号要求。[原厂下载索引](network-rescue-driver-index.csv)
+清单分别记录 `windows10X64Evidence` 和 `windows11X64Evidence`。`oem-package-indexed` 表示原厂包已入索引，`oem-wlan-listed` 表示原厂资料列出无线驱动，`oem-driver-pack-listed` 表示原厂列出该系统的整机部署包，仍需检查包内 WLAN 驱动。`oem-os-upgrade-tested` 表示原厂列出 Windows 11 升级测试，WLAN 驱动仍待核对。`pending` 表示该系统的证据待核。`oem-wlan-not-supported` 表示原厂明确说明该系统没有该出厂无线模块的驱动。仅预留接口和 ARM64 组合另有标记。原厂下载索引目前有 14 个包标注支持 Windows 10 x64，23 个包标注支持 Windows 11 x64，部分包另有最低构建号要求。[原厂下载索引](network-rescue-driver-index.csv)
 
 | 主板范围 | 已发现的型号或修订 |
 | --- | ---: |
@@ -194,3 +194,14 @@ python scripts/collect-oem-wlan-documents.py --brand MSI docs/msi-motherboard-di
 python scripts/collect-oem-wlan-documents.py --brand ASRock --workers 2 --limit 137 docs/asrock-motherboard-discovery.csv docs/asrock-wlan-manual-audit.csv
 pwsh -File scripts/merge-network-rescue-model-gaps.ps1
 ```
+
+
+### 已知无线模块的批量驱动映射
+
+本批核对 141 条有网卡型号候选的主板记录，涵盖华硕 98 条、技嘉 9 条和微星 34 条。按已记录的模块或芯片族建立 157 条映射，均能在当前完整版 ZIP 中找到 Win11 Build 26300 上通过签名检查的 PCI INF 候选。表中示例硬件 ID 来自 INF。具体主板的出厂 SUBSYS 和断网联网仍待实机验证。 [主板与 INF 候选表](network-rescue-motherboard-inf-candidates.csv)
+
+华硕原厂下载接口按型号和 Win10/Win11 分别查询，返回 181 个型号与系统组合的 WLAN 下载证据，涉及 93 个不同 URL。其中 MediaTek 3.5.0.1349 在 92 个组合重复出现。新增 MediaTek 两包、Realtek RTL8851BE 两包、Intel 一包，均在本地保存原档并静态解包，新增原厂包已进入本地 ZIP。对成品重新提取审计，共 1,688 个 INF，其中 617 个通过当前构建的匹配与签名检查，签名有效的 PCI 和 USB ID 去重后分别为 17,555 和 1,228。新增包让更多型号能关联到原厂指定下载，去重后的 ID 数在这次 Win11 审计中保持一致。 [华硕下载审计](asus-wlan-download-audit.csv) · [原厂下载索引](network-rescue-driver-index.csv)
+
+仅在当前记录的所有已知模块都能同时对应到原厂列出的适用包和 ZIP 内签名 INF 时，更新该系统的主表状态。Win10 回填 65 条、Win11 回填 73 条，共涉及 73 条主板记录。待核降至 Win10 **1,081**、Win11 **1,076**。Win10 的原厂支持状态根据原厂接口及包索引填写，仍未在 Win10 环境实测签名匹配或联网。微星和技嘉本轮的 43 条已有模块记录补到 INF 候选阶段，其型号专属包证据仍待补齐。
+
+采集器 `scripts/collect-asus-wlan-downloads.py` 复用成功的查询。解压完整版 ZIP 的 `driver-packs` 和 `pe-drivers` 后，用 `scripts/audit-network-rescue-library.ps1 -EvidenceCsv` 导出签名 INF 证据。再用 `scripts/map-network-rescue-wlan.py` 生成本批候选表。核对结果后加 `--apply` 可回填主表，后续批次使用新的输出路径保存快照。
