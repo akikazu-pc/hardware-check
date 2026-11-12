@@ -4,8 +4,7 @@ param(
     [switch]$IncludeCatalog,
     [string]$VendorSourceDirectory,
     [string]$WlanArchive,
-    [string]$PeEthernetPackDirectory,
-    [string]$SevenZipExecutable
+    [string]$PeEthernetPackDirectory
 )
 
 $ErrorActionPreference = 'Stop'
@@ -13,9 +12,6 @@ $root = Split-Path -Parent $PSScriptRoot
 if ($WlanArchive) {
     if (-not $IncludeCatalog) {
         throw 'Use -IncludeCatalog with -WlanArchive.'
-    }
-    if (-not $SevenZipExecutable) {
-        throw 'Use -SevenZipExecutable with -WlanArchive to generate matching ZIP and 7z bundles.'
     }
     if (-not $PeEthernetPackDirectory) {
         throw 'Use -PeEthernetPackDirectory with -WlanArchive to include both Ethernet packs.'
@@ -28,12 +24,6 @@ if ($PeEthernetPackDirectory) {
         throw 'Use -PeEthernetPackDirectory with -WlanArchive.'
     }
     $PeEthernetPackDirectory = (Resolve-Path -LiteralPath $PeEthernetPackDirectory).Path
-}
-if ($SevenZipExecutable) {
-    if (-not $WlanArchive) {
-        throw 'Use -SevenZipExecutable with -WlanArchive.'
-    }
-    $SevenZipExecutable = (Resolve-Path -LiteralPath $SevenZipExecutable).Path
 }
 if ($WlanArchive) {
     & (Join-Path $PSScriptRoot 'build-network-rescue-pe.cmd')
@@ -152,22 +142,6 @@ start "" "%~dp0AkikazuHardwareCheck.exe" --portable-rescue
                 $expectedFiles.Add($file.FullName.Substring($bundleRoot.Length + 1).Replace('\', '/'), $file)
             }
 
-            $temporarySevenZip = Join-Path $staging.FullName 'portable.7z'
-            $extracted = Join-Path $staging.FullName 'verified-7z'
-            Push-Location -LiteralPath $bundleRoot
-            try {
-                & $SevenZipExecutable a -t7z -mx=5 -bb0 -bso0 -bsp0 $temporarySevenZip '*'
-                if ($LASTEXITCODE -ne 0) { throw "7z creation failed ($LASTEXITCODE)." }
-            } finally {
-                Pop-Location
-            }
-            & $SevenZipExecutable x -bb0 -bso0 -bsp0 "-o$extracted" $temporarySevenZip
-            if ($LASTEXITCODE -ne 0) { throw "7z extraction failed ($LASTEXITCODE)." }
-            $extractedCount = @(Get-ChildItem -LiteralPath $extracted -Recurse -File).Count
-            if ($extractedCount -ne $expectedFiles.Count) {
-                throw "Unexpected 7z file count ($extractedCount, expected $($expectedFiles.Count))."
-            }
-
             $zip = [IO.Compression.ZipFile]::OpenRead($temporaryArchive)
             try {
                 foreach ($entry in $zip.Entries) {
@@ -179,16 +153,11 @@ start "" "%~dp0AkikazuHardwareCheck.exe" --portable-rescue
                     }
                     $stream = $entry.Open()
                     try {
-                        $stagedHash = (Get-FileHash -LiteralPath $file.FullName).Hash
-                        if ((Get-FileHash -InputStream $stream).Hash -ne $stagedHash) {
+                        if ((Get-FileHash -InputStream $stream).Hash -ne (Get-FileHash -LiteralPath $file.FullName).Hash) {
                             throw "ZIP entry content differs from the staged file: $($entry.FullName)"
                         }
                     } finally {
                         $stream.Dispose()
-                    }
-                    $extractedFile = Join-Path $extracted $entry.FullName
-                    if ((Get-FileHash -LiteralPath $extractedFile).Hash -ne $stagedHash) {
-                        throw "7z entry content differs from the staged file: $($entry.FullName)"
                     }
                     [void]$expectedFiles.Remove($entry.FullName)
                 }
@@ -199,11 +168,6 @@ start "" "%~dp0AkikazuHardwareCheck.exe" --portable-rescue
                 $zip.Dispose()
             }
             Move-Item -LiteralPath $temporaryArchive -Destination $archive -Force
-            $sevenZipArchive = [IO.Path]::ChangeExtension($archive, '.7z')
-            $sevenZipHash = (Get-FileHash -LiteralPath $temporarySevenZip).Hash
-            Move-Item -LiteralPath $temporarySevenZip -Destination $sevenZipArchive -Force
-            Set-Content -LiteralPath "$sevenZipArchive.sha256" -Value "$sevenZipHash  $([IO.Path]::GetFileName($sevenZipArchive))" -Encoding ascii
-            Write-Output "Output: $sevenZipArchive"
         } else {
             Compress-Archive -Path (Join-Path $bundleRoot '*') -DestinationPath $archive -CompressionLevel Fastest -Force
         }
