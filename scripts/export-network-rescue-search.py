@@ -13,7 +13,8 @@ BRANDS = {"asrock": "ASRock", "asus": "ASUS", "dell": "Dell", "gigabyte": "GIGAB
           "lenovo": "Lenovo", "msi": "MSI"}
 OTHER_TAGS = {"all-in-one": "AllInOne", "mini-pc": "MiniPc", "workstation": "Workstation",
               "branded-desktop": "BrandedDesktop", "windows-tablet": "WindowsTablet",
-              "windows-handheld": "Handheld"}
+              "windows-handheld": "Handheld", "single-board-computer": "SingleBoardComputer",
+              "htpc": "Htpc", "windows-phone": "WindowsPhone"}
 ADAPTER_TYPES = {"usb-wifi": "USB Wi-Fi", "usb-ethernet": "USB Ethernet", "pcie-wifi": "PCIe Wi-Fi",
                  "pci-wifi": "PCI Wi-Fi", "pci-ethernet": "PCI/PCIe Ethernet"}
 OEM_SOURCES = (
@@ -23,6 +24,7 @@ OEM_SOURCES = (
     ("honor", "HONOR", "Laptop", ""), ("apple", "Apple", "Other", "Mac"),
     ("microsoft-surface", "Microsoft", "Other", ""), ("asus-rog-handhelds", "ASUS", "Other", "Handheld"),
     ("fujitsu", "Fujitsu", "Other", ""),
+    ("special", "", "Other", ""),
     ("tplink", "TP-Link", "Other", "NetworkAdapter"), ("dlink", "D-Link", "Other", "NetworkAdapter"),
 )
 
@@ -45,6 +47,8 @@ def catalog_row(brand, model, category, *, tag="", evidence=None, driver_page=""
         name += f" ({code})"
     aliases = [model.get("vendorModelId"), code, *model.get("modelAliases", []),
                *(variant["model"] for variant in model.get("modelVariants", []))]
+    if model.get("hardwareRevision") and name != model["model"]:
+        aliases.append(model["model"])
     aliases.extend(value for values in (model.get("smbios") or {}).values() if isinstance(values, list)
                    for value in values)
     tag = tag or next((OTHER_TAGS[value] for value in model.get("deviceTags", []) if value in OTHER_TAGS), "")
@@ -68,7 +72,7 @@ def oem_rows(state, source, brand, category, tag, indexed):
             records[identity(listing)].append((url, listing))
     for key, row in report["boards"].items():
         model = row if isinstance(row, dict) else {"model": key, "support": row}
-        evidence = {}
+        evidence = dict.fromkeys(("10", "11"), "outside-x64-record") if model.get("evidence") == "outside-x64-record" else {}
         listings = records[identity(model)]
         for url, listing in listings:
             for version in re.findall(r"(?<!\d)(?:10|11)(?!\d)", str(listing.get("listedWindows", ""))):
@@ -80,7 +84,7 @@ def oem_rows(state, source, brand, category, tag, indexed):
         driver_page = (model.get("bundlePage") or model.get("driverInstructions")
                        or (model["support"] if listings and source != "honor" else ""))
         model_category = "Laptop" if model.get("productType") == "laptop" else category
-        yield catalog_row(brand, model, model_category, tag=tag, evidence=evidence, driver_page=driver_page)
+        yield catalog_row(model.get("brand") or brand, model, model_category, tag=tag, evidence=evidence, driver_page=driver_page)
 
 
 def main():

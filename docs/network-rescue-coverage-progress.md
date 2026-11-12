@@ -360,3 +360,13 @@ D-Link 本轮补入 34 个原厂网卡型号。首批检查 7 个型号的 11 �
 驱动继续按包核验。另下载 6 个 TP-Link 原厂 ZIP，5 个包在 Windows 11 Build 26300 验得 16 个签名网络 INF，关联 7 条新核修订。UE302C 的包仍待静态提取。D-Link DUB-1312 Rev A 已按 `USB\VID_2001&PID_4A00` 接入在线下载和本地离线构建清单。实测应用从原厂下载、校验 SHA-256、解出驱动并匹配该 ID。另生成仅含此包的本地 ZIP，重新提取验得 1 个签名 INF。Win10 原厂列出，目标 Win10 与实机联网仍待验证。 [TP-Link Archer T3U 支持](https://www.tp-link.com/us/support/download/archer-t3u/v1/) · [D-Link DUB-1312 支持](https://support.dlink.com/ProductInfo.aspx?m=DUB-1312)
 
 先用更新脚本刷新来源，再运行 `python scripts/export-network-rescue-search.py` 重建嵌入目录。设备来源另存于其他状态目录时，传入 `--device-state`。仓库测试覆盖原厂代码、硬件修订、分类和 D-Link 精确硬件 ID。
+
+### 补齐设备分类与多语言模糊搜索
+
+逐一核对应用的 12 个其他设备子类。之前有 8 个子类存在型号记录。本轮加入 20 条 LattePanda 单板机 SKU、2 条 ASRock Beebox HTPC 和 2 条 Microsoft Lumia 手机，增至 11/12 个子类。Lumia 只记录 Windows 10 Mobile 型号，Win10/11 x64 驱动栏标为范围之外。改装 Chromebook 仍待取得逐型号原生 Windows 与网卡证据。Google 的 Chromebook 文档所述 Windows 运行方式为虚拟机。 [LattePanda 官方目录](https://docs.lattepanda.com/) · [Beebox 原厂公告](https://www.asrock.com/news/index.asp?iD=3033) · [Microsoft Lumia 公告](https://news.microsoft.com/en-in/lumia-950-and-lumia-950-xl-launch-in-india/) · [Google 官方说明](https://support.google.com/chrome/a/answer/10044480?hl=en)
+
+新增简中、繁中、日文和英文的品牌／类别词查询，并统一全角型号字符。精确、前缀和包含匹配优先。无结果时才尝试一次增删、替换或相邻字符交换，保留型号中的数字顺序和 `+`，并提示用户核对完整型号和修订。下一轮补测了无空格的品牌加类别查询，以及省略网卡硬件修订的错字查询。`小米笔记本ＴＭ２４２３` 可精确定位型号，`Arhcer T3U Plus` 可显示相关修订，输入 `V1.60` 后保持该修订。
+
+在 27,576 个检索键上，以相同规则比较模糊候选全扫和按数字序列与 `+` 分组。七轮、每轮 1,400 次查询，结果一致，候选阶段中位耗时由 64.097 毫秒降到 1.172 毫秒，约 54.7 倍。已采纳分组，计时未包含首次建索引、精确匹配或界面绘制。完整回查 6,684 条源记录和 7,577 次别名查询，应用合并后有 7,430 条可检索记录。
+
+另核实 A620AM Pro RS、A620AM Pro-A、B650M-HDV/M.2、B650M-HDV/M.2 White、B650M-H/M.2+、B650M PG Lightning 均不随板附送 Wi-Fi 模块。Win10 待核从 1,017 降至 1,011，Win11 从 1,001 降至 995。A520M-ITX/ac、A520M/ac、B550M-ITX/ac、B550M/ac 的逐板报告与候选包版本一致但日期不一致，仍待原厂关联确认。本轮没有新增驱动包。 [华擎 A620AM Pro RS](https://asrock.com/MB/AMD/A620AM%20Pro%20RS/index.asp) · [华擎 B650M-HDV/M.2](https://asrock.com/MB/AMD/B650M-HDVM.2/index.asp)

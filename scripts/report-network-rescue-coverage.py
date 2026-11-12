@@ -97,7 +97,7 @@ def main():
 
     sources = {}
     for vendor in ("panasonic", "dynabook", "xiaomi", "honor", "tplink", "dlink", "apple", "microsoft-surface",
-                   "asus-rog-handhelds", "fujitsu"):
+                   "asus-rog-handhelds", "fujitsu", "special"):
         state = args.state if vendor in {"panasonic", "dynabook", "xiaomi", "honor"} else args.device_state or args.state
         path = state / vendor / "last-run.json"
         if not path.is_file():

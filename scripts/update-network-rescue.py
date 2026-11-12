@@ -21,6 +21,7 @@ from network_rescue_apple import load_apple
 from network_rescue_china import HONOR_SUPPORT, load_honor, load_xiaomi
 from network_rescue_extra import load_dlink
 from network_rescue_japan import load_dynabook, load_fujitsu, load_panasonic
+from network_rescue_special import load_special
 
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -691,6 +692,7 @@ def main():
             ("microsoft-surface", load_surface, None),
             ("asus-rog-handhelds", load_rog_handhelds, None),
             ("fujitsu", partial(load_fujitsu, fetch=fetch), None),
+            ("special", partial(load_special, fetch=fetch), None),
             ("tplink", partial(load_tplink, fetch=fetch), None),
             ("dlink", partial(load_dlink, fetch=fetch), None),
         )

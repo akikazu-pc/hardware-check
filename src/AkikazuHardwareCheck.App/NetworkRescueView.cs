@@ -394,7 +394,7 @@ internal sealed class NetworkRescueView : UserControl
         var category = SelectedCatalogCategory;
         RescueDeviceTag? tag = category == RescueDeviceCategory.Other && _catalogTag.SelectedIndex > 0
             ? CatalogTags[_catalogTag.SelectedIndex - 1] : null;
-        var results = RescueModelCatalog.Search(_catalogQuery.Text, category, tag);
+        var results = RescueModelCatalog.Search(_catalogQuery.Text, category, tag, out var approximate);
         _catalogResults.BeginUpdate();
         _catalogResults.Items.Clear();
         foreach (var entry in results)
@@ -410,7 +410,8 @@ internal sealed class NetworkRescueView : UserControl
         }
         _catalogResults.EndUpdate();
         _catalogStatus.Text = string.IsNullOrWhiteSpace(_catalogQuery.Text) && category is null ? "" :
-            results.Count == 0 ? _t["rescue.catalogNoResults"] : _t["rescue.catalogResults", results.Count];
+            results.Count == 0 ? _t["rescue.catalogNoResults"] :
+            _t[approximate ? "rescue.catalogApproximateResults" : "rescue.catalogResults", results.Count];
         ShowCatalogDetails();
     }
 

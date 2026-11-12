@@ -1,4 +1,5 @@
 using Microsoft.VisualBasic.FileIO;
+using System.Text;
 
 namespace AkikazuHardwareCheck.Core.SharedDesktop;
 
@@ -24,29 +25,96 @@ public static class RescueModelCatalog
     private readonly record struct SearchKey(string Name, string FullName, string LooseName, string LooseFullName);
 
     private static readonly Lazy<SearchEntry[]> Models = new(() => BuildSearchIndex().ToArray());
+    private static readonly Lazy<ILookup<(string Digits, int Plus), (SearchEntry Entry, string Key)>> FuzzyKeys = new(() =>
+        Models.Value.SelectMany(entry => entry.Keys.SelectMany(key => new[] { key.Name, key.FullName })
+            .Distinct(StringComparer.Ordinal).Select(key => (entry, key))).ToLookup(row => Fingerprint(row.key)));
 
     public static IReadOnlyList<RescueCatalogModel> Search(string query, RescueDeviceCategory? category = null,
-        RescueDeviceTag? tag = null)
+        RescueDeviceTag? tag = null) => Search(query, category, tag, out _);
+
+    public static IReadOnlyList<RescueCatalogModel> Search(string query, RescueDeviceCategory? category,
+        RescueDeviceTag? tag, out bool approximate)
     {
-        var exactQuery = query.Trim();
+        approximate = false;
+        var (exactQuery, queryCategory, queryTag) = RescueCatalogQuery.Parse(query);
+        if ((category is not null && queryCategory is not null && category != queryCategory) ||
+            (tag is not null && queryTag is not null && tag != queryTag))
+        {
+            return [];
+        }
+
+        category ??= queryCategory;
+        tag ??= queryTag;
         var key = Normalize(exactQuery);
         if ((tag is not null && category != RescueDeviceCategory.Other) || (key.Length < 2 && category is null))
         {
             return [];
         }
 
-        var terms = query.Split((char[]?)null, StringSplitOptions.RemoveEmptyEntries)
+        var terms = exactQuery.Split((char[]?)null, StringSplitOptions.RemoveEmptyEntries)
             .Select(Normalize).Where(term => term.Length > 0).ToArray();
         var looseKey = WithoutPlus(key);
         var looseTerms = terms.Select(WithoutPlus).ToArray();
-        return Models.Value.Where(entry => (category is null || entry.Model.Category == category) &&
-                (tag is null || entry.Model.DeviceTag == tag))
+        bool InScope(SearchEntry entry) => (category is null || entry.Model.Category == category) &&
+            (tag is null || entry.Model.DeviceTag == tag);
+        var ranked = Models.Value.Where(InScope)
             .Select(entry => (entry.Model, Rank: MatchRank(entry, exactQuery, key, terms, looseKey, looseTerms)))
             .Where(row => row.Rank >= 0)
             .OrderBy(row => row.Rank)
             .ThenBy(row => row.Model.Model, StringComparer.OrdinalIgnoreCase)
-            .Select(row => row.Model)
             .ToArray();
+        if (ranked.Length > 0)
+        {
+            approximate = ranked[0].Rank == 4;
+            return ranked.Select(row => row.Model).ToArray();
+        }
+
+        if (key.Length < 6 || key.Length > 80)
+        {
+            return [];
+        }
+
+        var fingerprint = Fingerprint(key);
+        if (fingerprint.Digits.Length == 0 && key.Length < 8)
+        {
+            return [];
+        }
+
+        var results = FuzzyKeys.Value[fingerprint].Where(row => InScope(row.Entry) && IsOneEdit(key, row.Key))
+            .Select(row => row.Entry.Model).Distinct().OrderBy(model => model.Model, StringComparer.OrdinalIgnoreCase).ToArray();
+        approximate = results.Length > 0;
+        return results;
+    }
+
+    private static (string Digits, int Plus) Fingerprint(string key) =>
+        (new string(key.Where(char.IsDigit).ToArray()), key.Count(character => character == '+'));
+
+    private static bool IsOneEdit(ReadOnlySpan<char> left, ReadOnlySpan<char> right)
+    {
+        if (Math.Abs(left.Length - right.Length) > 1)
+        {
+            return false;
+        }
+
+        if (left.Length > right.Length)
+        {
+            return IsOneEdit(right, left);
+        }
+
+        var first = 0;
+        while (first < left.Length && left[first] == right[first])
+        {
+            first++;
+        }
+
+        if (left.Length < right.Length)
+        {
+            return left[first..].SequenceEqual(right[(first + 1)..]);
+        }
+
+        return first < left.Length && (left[(first + 1)..].SequenceEqual(right[(first + 1)..]) ||
+            (first + 1 < left.Length && left[first] == right[first + 1] && left[first + 1] == right[first] &&
+             left[(first + 2)..].SequenceEqual(right[(first + 2)..])));
     }
 
     private static int MatchRank(SearchEntry entry, string query, string key, string[] terms, string looseKey,
@@ -215,7 +283,8 @@ public static class RescueModelCatalog
     }
 
     private static string Normalize(string value) =>
-        new(value.Where(c => char.IsLetterOrDigit(c) || c == '+').Select(char.ToUpperInvariant).ToArray());
+        new(value.Normalize(NormalizationForm.FormKC).Where(c => char.IsLetterOrDigit(c) || c == '+')
+            .Select(char.ToUpperInvariant).ToArray());
 
     private static string WithoutPlus(string value) => value.Replace("+", "", StringComparison.Ordinal);
 }
