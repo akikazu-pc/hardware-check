@@ -45,3 +45,5 @@ HP 从[官方 SoftPaq](https://ftp.ext.hp.com/pub/softpaq/sp173001-173500/sp1731
 戴尔 7TY65 包加入在线目录和离线完整版。在线入口限 Windows 11 x64 的 MT7925 参考子系统 PCI\VEN_14C3&DEV_7925&SUBSYS_792514C3。Alienware 16 Aurora AC16250 和 16X Aurora AC16251 的原厂手册列有 MT7925B22M。不同整机出厂批次的 SUBSYS 和实机联网结果仍待核验。[戴尔 7TY65 驱动及兼容列表](https://www.dell.com/support/home/en-us/drivers/driversdetails?driverid=7ty65)
 
 打包和在线安装均先核对原包 SHA-256，再静态解出嵌入的 7z。离线文件夹扫描使用当前 Windows 的 INF 适用性和设备硬件 ID。上述结果仍需断网实机安装及联网验证。
+
+DeepSeek Harness 为联想 DS575356 找到了 Inno Setup 静态解包路径。使用 InnoExtract 1.9 独立复验后，Windows 11 x64 构建 26300 匹配到三个微软签名 INF 中的七个联想子系统 ID。MediaTek 为 DEV_7925 的 E02517AA、E0FF17AA 及 DEV_7927 的 E0E417AA。Realtek 为 DEV_B852 的 485317AA、B85317AA 及 DEV_8922 的 492217AA、492317AA。当前两款发行包尚未纳入 DS575356，下一步需要接入解包流程及型号证据。[联想 DS575356](https://support.lenovo.com/ao/en/downloads/DS575356)
