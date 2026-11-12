@@ -5,7 +5,7 @@
 ## 接手基线
 
 - GitHub 仓库为 [akikazu-pc/hardware-check](https://github.com/akikazu-pc/hardware-check)。远端 `main` 已合并至 [`ee26ee4`](https://github.com/akikazu-pc/hardware-check/commit/ee26ee4ddf2cb887c9a20c04bb4af472de6b8b42)，`proto/shared-desktop` 已删除。合并后相对该分支最后提交 `2f446fd` 的树差异只有 `AGENTS.md`。
-- `1fb8dcc` 接入 PE 空盘部署，`9c55511` 收录 B850M 普通版无线驱动，`2f446fd` 修复 I226-V 兼容 ID 漏匹配。本地 `main` 的 `8dc0c77` 相对远端 `main` 多 25 个提交、少 21 个提交。后续从最新 `origin/main` 创建工作分支。需要取用本地目录补库工作时，先逐项核对差异和证据。
+- `1fb8dcc` 接入 PE 空盘部署，`9c55511` 收录 B850M 普通版无线驱动，`2f446fd` 修复 I226-V 兼容 ID 漏匹配。本地 `main` 的补库提交已与远端 `1347ce8` 合并到 `eebb252`，按包 ID 和行键合并索引，重复的华硕 MediaTek 3.5.0.1349 包统一为 `asus-mb-mtk-3501349`。补库流程见[采集与核验交接](network-rescue-catalog-handoff.md)。之后直接在 `main` 上开发。
 - [合并后 GitHub Actions](https://github.com/akikazu-pc/hardware-check/actions/runs/43266106438)已通过。以下安装包是本地产物。本次合并尚未制作新 GitHub Release、提交商店或部署网站。
 
 ## 使用方式和交付包
@@ -40,7 +40,7 @@
 
 ## 下一阶段验收
 
-1. **实机断网恢复。** 在可隔离的实体机器上分别测试 Wi-Fi 和有线。以缺驱动、无法联网为起点，依次记录硬件 ID、INF 签名、安装结果、驱动绑定、地址和网关、DNS 与 HTTPS。记录系统构建、INF 版本和重启要求。补测 Windows 10 x64 与 Windows 11 Home／Pro x64，分别覆盖正在运行的 Windows、PE 修复已有系统、全新安装后首次联网。
+1. **实机断网恢复。** 在可隔离的实体机器上分别测试 Wi-Fi 和有线。以缺驱动、无法联网为起点，依次记录硬件 ID、INF 签名、安装结果、驱动绑定、地址和网关、DNS 与 HTTPS。记录系统构建、INF 版本和重启要求。补测 Windows 10 x64 与 Windows 11 Home／Pro x64，分别覆盖正在运行的 Windows、PE 修复已有系统、全新安装后首次联网。步骤、场景矩阵和只读采集脚本见[实机验收](network-rescue-field-test.md)。
 2. **重点型号补库。** 先完成 AM5、LGA1851 以及较新的 Legion／ROG／TUF／Alienware，再扩到 AM4、LGA1700 和旧设备。按型号、修订和地区 SKU 对照原厂页面、硬件 ID、适用系统及签名 INF。B850M CSM 需要从该型号实卡取得 `VEN/DEV/SUBSYS` 或清晰模块标签。型号发现、候选包、精确 INF、实机安装和联网应分别计数。
 3. **PE 兜底。** 当前一次注入一个签名 INF，无匹配时停止。待补多网卡驱动、确认使用系统自带驱动继续、缺存储驱动时加载，以及中断后续装。验证多盘、不同存储控制器和固件启动顺序。保留对目标盘身份和空白状态的确认。
 4. **后续交付。** 在线版待做驱动升级检查与回退。Microsoft Store 当前只有 Hardware Check 负载，断网急救配置工具及跨版本联动仍待实现。GitHub Release、商店和网站各按对应交付流程处理。
