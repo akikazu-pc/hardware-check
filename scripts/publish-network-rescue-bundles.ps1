@@ -3,8 +3,7 @@ param(
     [string]$RealtekVendorZip,
     [switch]$IncludeCatalog,
     [string]$VendorSourceDirectory,
-    [string]$WlanArchive,
-    [string]$SevenZipExecutable
+    [string]$WlanArchive
 )
 
 $ErrorActionPreference = 'Stop'
@@ -14,13 +13,6 @@ if ($WlanArchive) {
         throw 'Use -IncludeCatalog with -WlanArchive.'
     }
     $WlanArchive = (Resolve-Path -LiteralPath $WlanArchive).Path
-    if (-not $SevenZipExecutable) {
-        $SevenZipExecutable = (Get-Command 7z.exe, 7za.exe -ErrorAction SilentlyContinue | Select-Object -First 1).Source
-    }
-    if (-not $SevenZipExecutable) {
-        throw 'Specify -SevenZipExecutable for the solid offline archive.'
-    }
-    $SevenZipExecutable = (Resolve-Path -LiteralPath $SevenZipExecutable).Path
 }
 
 if ($RealtekVendorZip) {
@@ -88,19 +80,50 @@ start "" "%~dp0AkikazuHardwareCheck.exe" --portable-rescue
         }
 
         Copy-Item -LiteralPath (Join-Path $root 'docs/network-rescue-driver-index.csv') -Destination $bundleRoot
-        $extension = if ($flavor -eq 'offline-full-portable') { '7z' } else { 'zip' }
-        $name = "NetworkRescue-$version-$flavor-win-x64.$extension"
+        $name = "NetworkRescue-$version-$flavor-win-x64.zip"
         $archive = Join-Path $output $name
-        if ($extension -eq '7z') {
-            $temporaryArchive = Join-Path $staging.FullName 'portable.7z'
-            Push-Location -LiteralPath $bundleRoot
+        if ($flavor -eq 'offline-full-portable') {
+            $driverRoot = Join-Path $bundleRoot 'driver-packs'
+            $wlanLibrary = Join-Path $driverRoot 'sdio-wlan-wifi-26082'
+            $libraryInfCount = @(Get-ChildItem -LiteralPath $wlanLibrary -Recurse -File -Filter '*.inf').Count
+            $driverInfCount = @(Get-ChildItem -LiteralPath $driverRoot -Recurse -File -Filter '*.inf').Count
+            if ($libraryInfCount -eq 0 -or $driverInfCount -le $libraryInfCount) {
+                throw 'The full bundle must contain both the WLAN library and OEM driver packs.'
+            }
+
+            Add-Type -AssemblyName System.IO.Compression.FileSystem
+            $temporaryArchive = Join-Path $staging.FullName 'portable.zip'
+            [IO.Compression.ZipFile]::CreateFromDirectory(
+                $bundleRoot, $temporaryArchive, [IO.Compression.CompressionLevel]::Fastest, $false)
+            $expectedFiles = [Collections.Generic.Dictionary[string, IO.FileInfo]]::new([StringComparer]::Ordinal)
+            foreach ($file in Get-ChildItem -LiteralPath $bundleRoot -Recurse -File) {
+                $expectedFiles.Add($file.FullName.Substring($bundleRoot.Length + 1).Replace('\', '/'), $file)
+            }
+
+            $zip = [IO.Compression.ZipFile]::OpenRead($temporaryArchive)
             try {
-                & $SevenZipExecutable a -t7z -mx=3 -mqs=on -ms=512m -bd -bso0 $temporaryArchive '*'
-                if ($LASTEXITCODE -ne 0) { throw 'Solid archive creation failed.' }
-                & $SevenZipExecutable t -bd -bso0 $temporaryArchive
-                if ($LASTEXITCODE -ne 0) { throw 'Solid archive integrity test failed.' }
+                foreach ($entry in $zip.Entries) {
+                    if ($entry.FullName.EndsWith('/') -and $entry.Length -eq 0) { continue }
+                    $file = $null
+                    if (-not $expectedFiles.TryGetValue($entry.FullName, [ref]$file) -or
+                        $entry.Length -ne $file.Length) {
+                        throw "Unexpected ZIP entry: $($entry.FullName)"
+                    }
+                    $stream = $entry.Open()
+                    try {
+                        if ((Get-FileHash -InputStream $stream).Hash -ne (Get-FileHash -LiteralPath $file.FullName).Hash) {
+                            throw "ZIP entry content differs from the staged file: $($entry.FullName)"
+                        }
+                    } finally {
+                        $stream.Dispose()
+                    }
+                    [void]$expectedFiles.Remove($entry.FullName)
+                }
+                if ($expectedFiles.Count -ne 0) {
+                    throw "The ZIP is missing $($expectedFiles.Count) staged files."
+                }
             } finally {
-                Pop-Location
+                $zip.Dispose()
             }
             Move-Item -LiteralPath $temporaryArchive -Destination $archive -Force
         } else {
