@@ -11,8 +11,13 @@ public sealed class RescueModelCatalogTests
         Assert.Equal("all-in-one", model.Type);
         Assert.Equal("oem-driver-pack-listed", model.Windows10Evidence);
         Assert.Equal("pending", model.Windows11Evidence);
-        Assert.Contains(model, RescueModelCatalog.Search("", allInOnesOnly: true));
-        Assert.Empty(RescueModelCatalog.Search("A320M", allInOnesOnly: true));
+        Assert.Equal(RescueDeviceCategory.Other, model.Category);
+        Assert.Equal(RescueDeviceTag.AllInOne, model.DeviceTag);
+        Assert.Contains(model, RescueModelCatalog.Search("", RescueDeviceCategory.Other, RescueDeviceTag.AllInOne));
+        Assert.Empty(RescueModelCatalog.Search("A320M", RescueDeviceCategory.Other, RescueDeviceTag.AllInOne));
+        Assert.Empty(RescueModelCatalog.Search("", RescueDeviceCategory.Laptop, RescueDeviceTag.AllInOne));
+        Assert.Contains(RescueModelCatalog.Search("A320M", RescueDeviceCategory.DiyDesktop),
+            entry => entry.Model == "A320M");
     }
 
     [Theory]

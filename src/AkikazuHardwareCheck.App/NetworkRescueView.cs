@@ -41,7 +41,10 @@ internal sealed class NetworkRescueView : UserControl
     private readonly TabPage _modulesPage = new();
     private readonly TabPage _catalogPage = new();
     private readonly TextBox _catalogQuery = new() { Dock = DockStyle.Top };
-    private readonly CheckBox _catalogAllInOnes = new() { AutoSize = true };
+    private readonly ComboBox _catalogCategory = new() { DropDownStyle = ComboBoxStyle.DropDownList, Width = 160 };
+    private readonly ComboBox _catalogTag = new() { DropDownStyle = ComboBoxStyle.DropDownList, Width = 230 };
+    private static readonly RescueDeviceCategory[] CatalogCategories = Enum.GetValues<RescueDeviceCategory>();
+    private static readonly RescueDeviceTag[] CatalogTags = Enum.GetValues<RescueDeviceTag>();
     private readonly Label _catalogStatus = Ui.Label();
     private readonly ListView _catalogResults = ListViewTable.Create();
     private readonly TextBox _catalogDetails = new() { Dock = DockStyle.Fill, Multiline = true, ReadOnly = true, ScrollBars = ScrollBars.Vertical };
@@ -86,7 +89,16 @@ internal sealed class NetworkRescueView : UserControl
         };
         _modelLink.LinkClicked += (_, _) => OpenOfficialPage();
         _catalogQuery.TextChanged += (_, _) => SearchCatalog();
-        _catalogAllInOnes.CheckedChanged += (_, _) => SearchCatalog();
+        _catalogCategory.SelectedIndexChanged += (_, _) =>
+        {
+            _catalogTag.Enabled = SelectedCatalogCategory == RescueDeviceCategory.Other;
+            if (!_catalogTag.Enabled && _catalogTag.Items.Count > 0)
+            {
+                _catalogTag.SelectedIndex = 0;
+            }
+            SearchCatalog();
+        };
+        _catalogTag.SelectedIndexChanged += (_, _) => SearchCatalog();
         _catalogResults.SelectedIndexChanged += (_, _) => ShowCatalogDetails();
         _catalogDriverPage.LinkClicked += (_, _) => OpenCatalogPage(driverPage: true);
         _catalogSource.LinkClicked += (_, _) => OpenCatalogPage(driverPage: false);
@@ -163,7 +175,17 @@ internal sealed class NetworkRescueView : UserControl
         _catalogPage.Text = t["rescue.catalog"];
         _catalogQuery.PlaceholderText = t["rescue.searchModel"];
         _catalogQuery.AccessibleName = _catalogQuery.PlaceholderText;
-        _catalogAllInOnes.Text = t["rescue.catalogAllInOne"];
+        var selectedTag = _catalogTag.SelectedIndex;
+        SetCatalogChoices(_catalogCategory, t["rescue.catalogAllDevices"],
+            CatalogCategories.Select(category => t[$"rescue.category{category}"]));
+        SetCatalogChoices(_catalogTag, t["rescue.catalogAllTags"],
+            CatalogTags.Select(tag => t[$"rescue.tag{tag}"]));
+        if (SelectedCatalogCategory == RescueDeviceCategory.Other && selectedTag > 0)
+        {
+            _catalogTag.SelectedIndex = selectedTag;
+        }
+        _catalogCategory.AccessibleName = t["rescue.catalogAllDevices"];
+        _catalogTag.AccessibleName = t["rescue.catalogAllTags"];
         _catalogDriverPage.Text = t["rescue.officialDrivers"];
         _catalogSource.Text = t["rescue.catalogSource"];
         _catalogResults.Columns[0].Text = t["rescue.catalogBrand"];
@@ -368,14 +390,17 @@ internal sealed class NetworkRescueView : UserControl
     private void SearchCatalog()
     {
         var selected = SelectedCatalogEntry;
-        var results = RescueModelCatalog.Search(_catalogQuery.Text, _catalogAllInOnes.Checked);
+        var category = SelectedCatalogCategory;
+        RescueDeviceTag? tag = category == RescueDeviceCategory.Other && _catalogTag.SelectedIndex > 0
+            ? CatalogTags[_catalogTag.SelectedIndex - 1] : null;
+        var results = RescueModelCatalog.Search(_catalogQuery.Text, category, tag);
         _catalogResults.BeginUpdate();
         _catalogResults.Items.Clear();
         foreach (var entry in results)
         {
             var qualifier = entry.Type == "laptop-os-record"
                 ? string.Join(" · ", new[] { entry.Platform, entry.Windows }.Where(value => value.Length > 0))
-                : entry.Type == "all-in-one" ? _t["rescue.catalogAllInOne"] : entry.Platform;
+                : entry.DeviceTag is { } deviceTag ? _t[$"rescue.tag{deviceTag}"] : entry.Platform;
             var item = new ListViewItem(entry.Brand) { Tag = entry };
             item.SubItems.Add(entry.Model);
             item.SubItems.Add(qualifier);
@@ -383,9 +408,50 @@ internal sealed class NetworkRescueView : UserControl
             item.Selected = entry == selected;
         }
         _catalogResults.EndUpdate();
-        _catalogStatus.Text = string.IsNullOrWhiteSpace(_catalogQuery.Text) && !_catalogAllInOnes.Checked ? "" :
+        _catalogStatus.Text = string.IsNullOrWhiteSpace(_catalogQuery.Text) && category is null ? "" :
             results.Count == 0 ? _t["rescue.catalogNoResults"] : _t["rescue.catalogResults", results.Count];
         ShowCatalogDetails();
+    }
+
+    private RescueDeviceCategory? SelectedCatalogCategory => _catalogCategory.SelectedIndex > 0
+        ? CatalogCategories[_catalogCategory.SelectedIndex - 1] : null;
+
+    private static void SetCatalogChoices(ComboBox combo, string all, IEnumerable<string> choices)
+    {
+        var selected = Math.Max(0, combo.SelectedIndex);
+        combo.Items.Clear();
+        combo.Items.Add(all);
+        combo.Items.AddRange(choices.Cast<object>().ToArray());
+        combo.SelectedIndex = selected;
+    }
+
+    protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+    {
+        if (keyData == (Keys.Control | Keys.F) && _catalogPage.Parent is TabControl tabs)
+        {
+            tabs.SelectedTab = _catalogPage;
+            _catalogQuery.Focus();
+            _catalogQuery.SelectAll();
+            return true;
+        }
+        if (_catalogPage.ContainsFocus && keyData == (Keys.Alt | Keys.D))
+        {
+            _catalogCategory.Focus();
+            return true;
+        }
+        if (_catalogPage.ContainsFocus && keyData == (Keys.Alt | Keys.T) && _catalogTag.Enabled)
+        {
+            _catalogTag.Focus();
+            return true;
+        }
+        if (_catalogQuery.Focused && keyData == Keys.Enter && _catalogResults.Items.Count > 0)
+        {
+            var first = _catalogResults.Items[0];
+            first.Selected = first.Focused = true;
+            _catalogResults.Focus();
+            return true;
+        }
+        return base.ProcessCmdKey(ref msg, keyData);
     }
 
     private void ShowCatalogDetails()
@@ -1051,11 +1117,12 @@ internal sealed class NetworkRescueView : UserControl
         var links = new FlowLayoutPanel { Dock = DockStyle.Fill, AutoSize = true };
         links.Controls.Add(_catalogDriverPage);
         links.Controls.Add(_catalogSource);
-        var search = new TableLayoutPanel { Dock = DockStyle.Top, AutoSize = true, ColumnCount = 2 };
-        search.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100));
-        search.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize));
+        var search = new TableLayoutPanel { Dock = DockStyle.Top, AutoSize = true, ColumnCount = 1, RowCount = 2 };
+        var filters = new FlowLayoutPanel { Dock = DockStyle.Top, AutoSize = true };
+        filters.Controls.Add(_catalogCategory);
+        filters.Controls.Add(_catalogTag);
         search.Controls.Add(_catalogQuery, 0, 0);
-        search.Controls.Add(_catalogAllInOnes, 1, 0);
+        search.Controls.Add(filters, 0, 1);
         layout.Controls.Add(search, 0, 0);
         layout.Controls.Add(_catalogStatus, 0, 1);
         layout.Controls.Add(_catalogResults, 0, 2);

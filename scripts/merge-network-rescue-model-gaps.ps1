@@ -77,6 +77,8 @@ foreach ($supplement in $supplements) {
             source = $entry.officialUrl
             windows10X64Evidence = $windows10
             windows11X64Evidence = $windows11
+            deviceCategory = $entry.deviceCategory
+            deviceTag = $entry.deviceTag
         }
         $keys[$key] = $row
         $added.Add($row)
@@ -85,6 +87,29 @@ foreach ($supplement in $supplements) {
 }
 
 $all = $existing + @($added | Sort-Object type,brand,platform,model)
+$otherTags = 'BrandedDesktop', 'MiniPc', 'WindowsTablet', 'Handheld', 'AllInOne', 'Htpc',
+    'SingleBoardComputer', 'WindowsPhone', 'Mac', 'ModifiedChromebook'
+foreach ($row in $all) {
+    if (!$row.deviceCategory) {
+        $category = switch ($row.type) {
+            'motherboard' { 'DiyDesktop' }
+            { $_ -in 'laptop', 'laptop-os-record' } { 'Laptop' }
+            default { 'Other' }
+        }
+        $row | Add-Member -NotePropertyName deviceCategory -NotePropertyValue $category -Force
+        $changed = $true
+    }
+    if (!$row.PSObject.Properties['deviceTag'] -or (!$row.deviceTag -and $row.type -eq 'all-in-one')) {
+        $tag = if ($row.type -eq 'all-in-one') { 'AllInOne' } else { '' }
+        $row | Add-Member -NotePropertyName deviceTag -NotePropertyValue $tag -Force
+        $changed = $true
+    }
+    if ($row.deviceCategory -cnotin 'DiyDesktop', 'Laptop', 'Other' -or
+        ($row.deviceTag -and ($row.deviceCategory -cne 'Other' -or $row.deviceTag -cnotin $otherTags))) {
+        throw "Invalid device category or tag for $($row.brand) $($row.model)"
+    }
+}
+
 if ($changed) {
     $temporaryPath = $gapPath + '.' + [guid]::NewGuid().ToString('N') + '.tmp'
     try {
