@@ -11,6 +11,7 @@ public enum NetworkCandidateKind
     PciController,
     UsbNetwork,
     UsbUnidentified,
+    PciEthernet,
 }
 
 public sealed record NetworkDeviceCandidate(
@@ -41,11 +42,14 @@ public static class NetworkDeviceInventory
         string? setupClass = null)
     {
         var pciIds = hardwareIds.Where(id => id.StartsWith(@"PCI\VEN_", StringComparison.OrdinalIgnoreCase)).ToArray();
-        if (pciIds.Length > 0 && hardwareIds.Concat(compatibleIds).Any(IsPciNetworkController))
+        var deviceIds = hardwareIds.Concat(compatibleIds);
+        var missingEthernet = problemCode == 28 && deviceIds.Any(id => HasPciClass(id, "CC_0200"));
+        if (pciIds.Length > 0 && (missingEthernet || deviceIds.Any(id => HasPciClass(id, "CC_0280"))))
         {
             var subsystemId = pciIds.SelectMany(id => id.Split('&'))
                 .FirstOrDefault(segment => segment.StartsWith("SUBSYS_", StringComparison.OrdinalIgnoreCase));
-            return new NetworkDeviceCandidate(pciIds, subsystemId, problemCode);
+            return new NetworkDeviceCandidate(pciIds, subsystemId, problemCode,
+                missingEthernet ? NetworkCandidateKind.PciEthernet : NetworkCandidateKind.PciController);
         }
 
         var usbIds = hardwareIds.Where(IsUsbProductId).ToArray();
@@ -76,8 +80,8 @@ public static class NetworkDeviceInventory
         id.StartsWith(@"USB\VID_", StringComparison.OrdinalIgnoreCase) &&
         id.Contains("&PID_", StringComparison.OrdinalIgnoreCase);
 
-    private static bool IsPciNetworkController(string id) =>
-        id.StartsWith(@"PCI\CC_0280", StringComparison.OrdinalIgnoreCase) ||
+    private static bool HasPciClass(string id, string classCode) =>
+        id.StartsWith(@"PCI\" + classCode, StringComparison.OrdinalIgnoreCase) ||
         (id.StartsWith(@"PCI\VEN_", StringComparison.OrdinalIgnoreCase) &&
-         id.Split('&').Any(segment => segment.StartsWith("CC_0280", StringComparison.OrdinalIgnoreCase)));
+         id.Split('&').Any(segment => segment.StartsWith(classCode, StringComparison.OrdinalIgnoreCase)));
 }

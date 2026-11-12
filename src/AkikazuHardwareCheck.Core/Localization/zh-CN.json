@@ -307,6 +307,7 @@
   "rescue.infPath": "INF 路径",
   "rescue.reviewInf": "查看所选 INF",
   "rescue.candidateType": "设备类型",
+  "rescue.pciEthernet": "PCI 有线网卡",
   "rescue.pciController": "PCI 网络控制器",
   "rescue.usbNetwork": "USB 网络设备",
   "rescue.usbUnknown": "未识别的 USB 设备",

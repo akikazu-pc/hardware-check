@@ -307,6 +307,7 @@
   "rescue.infPath": "INF path",
   "rescue.reviewInf": "Review selected INF",
   "rescue.candidateType": "Device type",
+  "rescue.pciEthernet": "PCI Ethernet adapter",
   "rescue.pciController": "PCI network controller",
   "rescue.usbNetwork": "USB network device",
   "rescue.usbUnknown": "Unidentified USB device",

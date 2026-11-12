@@ -15,10 +15,29 @@ public sealed class NetworkDeviceInventoryTests
         Assert.Equal(28, device.ProblemCode);
     }
 
-    [Fact]
-    public void ExcludesPciEthernetAndUnrelatedUsbDevices()
+    [Theory]
+    [InlineData(@"PCI\CC_0200", 28, true)]
+    [InlineData(@"PCI\CC_020000", 28, true)]
+    [InlineData(@"PCI\VEN_10EC&DEV_8168&CC_020000", 28, true)]
+    [InlineData(@"PCI\CC_020000", 0, false)]
+    [InlineData(@"PCI\CC_010000", 28, false)]
+    public void FindsEthernetControllersMissingDrivers(string compatibleId, int code, bool expected)
     {
-        Assert.Null(NetworkDeviceInventory.Classify([@"PCI\VEN_10EC&DEV_8168"], [@"PCI\CC_020000"], 0));
+        string[] ids = [@"PCI\VEN_10EC&DEV_8168&SUBSYS_E0001458", @"PCI\VEN_10EC&DEV_8168"];
+        var device = NetworkDeviceInventory.Classify(ids, [compatibleId], code);
+
+        Assert.Equal(expected, device is not null);
+        if (device is not null)
+        {
+            Assert.Equal(NetworkCandidateKind.PciEthernet, device.Kind);
+            Assert.Equal(ids, device.HardwareIds);
+            Assert.Equal("SUBSYS_E0001458", device.SubsystemId);
+        }
+    }
+
+    [Fact]
+    public void ExcludesUnrelatedUsbDevices()
+    {
         Assert.Null(NetworkDeviceInventory.Classify([@"USB\VID_1234&PID_5678"], [], 28, "HIDClass"));
     }
 

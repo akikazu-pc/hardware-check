@@ -307,6 +307,7 @@
   "rescue.infPath": "INF のパス",
   "rescue.reviewInf": "選択した INF を確認",
   "rescue.candidateType": "デバイスの種類",
+  "rescue.pciEthernet": "PCI 有線 LAN",
   "rescue.pciController": "PCI ネットワーク コントローラー",
   "rescue.usbNetwork": "USB ネットワーク デバイス",
   "rescue.usbUnknown": "未識別の USB デバイス",

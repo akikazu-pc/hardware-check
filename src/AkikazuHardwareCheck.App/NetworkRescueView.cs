@@ -318,6 +318,7 @@ internal sealed class NetworkRescueView : UserControl
             item.SubItems.Add(device.SubsystemId ?? "");
             item.SubItems.Add(_t[device.Kind switch
             {
+                NetworkCandidateKind.PciEthernet => "rescue.pciEthernet",
                 NetworkCandidateKind.UsbNetwork => "rescue.usbNetwork",
                 NetworkCandidateKind.UsbUnidentified => "rescue.usbUnknown",
                 _ => "rescue.pciController",

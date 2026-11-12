@@ -93,3 +93,17 @@ Windows 11 构建 26300 的最新库审计覆盖 1,666 个 INF。其中 682 个�
 华硕的 B850M AYW GAMING WIFI-CSM 官方规格明确列出板载 Wi-Fi 模块。已知样本的无线状态达到 101/101，其中 99 条有板载 Wi-Fi，两条仅预留接口。具体模块候选为 98/99，缺口是该 CSM 型号的芯片。普通版的 MediaTek 驱动和 -E CSM 版的 Realtek 驱动各对应自己的型号。[华硕 CSM 型号规格](https://www.asus.com/product-compare?LevelId=Motherboards-Components-Motherboards&ProductID=31128%2C28588)
 
 复查 B850M AYW GAMING WIFI-CSM 的华硕全球、南非及沙特支持页。页面可打开，华硕型号查询接口返回空下载地址。用普通版的原厂 MediaTek 3.5.0.1349 ZIP 做候选比对，归档 SHA-256 与华硕公布值一致，`mtkwl6ex.inf` 通过签名校验。Windows 11 构建 26300 匹配了 75 个精确子系统 ID，涉及 MT7902、MT7920、MT7921、MT7922、RZ608 和 RZ616。普通版 INF 可用于核对实机硬件 ID，CSM 出厂模块仍需独立证据。[CSM 支持页](https://www.asus.com/motherboards-components/motherboards/csm/b850m-ayw-gaming-wifi-csm/helpdesk_download/?model2Name=B850M-AYW-GAMING-WIFI-CSM) · [普通版支持页](https://www.asus.com/motherboards-components/motherboards/others/b850m-ayw-gaming-wifi/helpdesk_download/?model2Name=B850M-AYW-GAMING-WIFI) · [华硕原厂 ZIP](https://dlcdnets.asus.com/pub/ASUS/mb/08WIRELESS/DRV_WiFi_MediaTek_SZ-TSD_W11_64_V3501349_20260305R.zip)
+
+
+## 有线联网救援
+
+设备扫描会识别缺驱动（Code 28）的 PCI 有线网卡，按实际硬件 ID 搜索本地网络类 INF。已具备驱动的 PCI 有线网卡仍显示在网络状态区。救援安装沿用硬件 ID 精确匹配和签名校验。
+
+首批样本来自 [技嘉 B550M DS3H AC R2 Rev. 1.2 驱动页](https://www.gigabyte.com/Motherboard/B550M-DS3H-AC-R2-rev-12/Support)。两个系统的原厂压缩包独立校验。提取外层 ZIP 后，用完整版 7-Zip 解开其中的自解压包，再选取对应系统的 64 位驱动目录。用户可解压对应系统的本地驱动包，在「断网急救」中选择该文件夹扫描。
+
+| 系统 | 原厂版本和下载 | 原厂 ZIP SHA-256 | 提取目录 | CAT 签名 |
+| --- | --- | --- | --- | --- |
+| Windows 10 x64 | [10.079.50.1003](https://download.gigabyte.com/FileList/Driver/mb_driver_542_w10_10.079.50.1003.zip) | `353AF723FD09FAC659341D5078B8B15D0534BE0DEF0249E411C27350AEC57821` | `mbdriver/WIN10/64` | 1 份有效 |
+| Windows 11 x64 | [11.29.50.0202](https://download.gigabyte.com/FileList/Driver/mb_driver_654_w11_11.29.50.0202.zip) | `07013117E12AB44C0AFADC2D898ED4904121E56C3579DF33CE7E3F687F43AE1F` | `mbdriver/WIN11/64` | 8 份有效 |
+
+当前样本为按系统分开的本地补充包。完整离线包集成、对应主板实机断网安装及联网恢复验证待完成。上述样本单独计入有线驱动记录。
