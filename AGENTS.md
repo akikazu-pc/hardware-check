@@ -151,7 +151,7 @@
 - 版本号在 `Directory.Build.props`。`scripts/publish.ps1` 生成 Portable ZIP；MSI 和 Store MSIX 使用同一版本源，但独立生成与验证。
 - 用正式 Release 并标为 latest，不用 prerelease 标记：`releases/latest/download` 不会指向 prerelease。未完成硬件验证时在标题和说明里写“预览版”。
 - 发布后从 latest 链接下载并核对 SHA-256。
-- 网站 `AkiCust-PC/my-site` 的 `app/data/tools/hardware-check-release.json` 要同步版本号和 SHA-256；网站导入按 `SchemaVersion` 精确匹配，升版本要同步 `app/utils/forms/hardwareReportImport.ts`。推送网站 `main` 会自动部署到生产环境，需要明确授权。
+- 网站 `akikazu-pc/my-site` 的 `app/data/tools/hardware-check-release.json` 要同步版本号和 SHA-256；网站导入按 `SchemaVersion` 精确匹配，升版本要同步 `app/utils/forms/hardwareReportImport.ts`。推送网站 `main` 会自动部署到生产环境，需要明确授权。
 
 ## 资源与安全
 
