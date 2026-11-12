@@ -313,3 +313,15 @@ WinDriverIndex 中 1,296 个笔记本型号标识已生成 `artifacts/network-re
 - 富士通 FMV 已查到具体型号的原厂 WLAN 页面和再分发限制。华为已查到按型号查询的官方入口。两家待补批量来源核验。 [富士通驱动说明](https://azby.fmworld.net/app/customer/driversearch/pc/drvdownload?driverNumber=E1033939&mode=0) · [华为驱动目录](https://consumer.huawei.com/cn/support/driver-list/)
 
 笔记本专用模式完整复跑成功。共复用 Panasonic、小米和荣耀 135 个已记录下载条目，下载 0 个驱动包。受控用例核对了首次建立基线、相同条目复用、新型号关联既有地址触发下载、主动补采和原厂版本变化触发重查。
+
+### 其他整机与独立网卡
+
+双击更新同时检查其他设备。单独运行使用 `python scripts/update-network-rescue.py --devices-only`。首次保存独立网卡原厂下载基线，之后按地址、条目版本和型号关联变化取包。需要补采既有候选时可加 `--backfill-devices`。整机、Intel Mac 和 Surface 记录用于型号发现与原厂支持定位。
+
+- **品牌整机**，`devices.json` 收录 Dell 240、HP 303、联想 179，共 722 个原厂产品 ID。按名称证据标注品牌台式机 378、一体机 129、迷你电脑 77、工作站 99，另有 52 条形态待核。标签可重叠。例如 Dell Precision 5470 的快照类型是 desktop，原厂标为移动工作站，因此不据快照将它计入台式工作站。 [WinDriverIndex 快照](https://windriverindex.tucny.com/v1/latest/manifest.json) · [Dell Precision 5470](https://www.dell.com/en-us/shop/precision-mobile-workstations/14-5470-workstation/spd/precision-14-5470-laptop)
+- **Intel Mac**，收录 59 个 Apple Model Identifier，仅按官方 Windows 10 x64 Boot Camp 兼容范围。 [Boot Camp 支持范围](https://support.apple.com/en-us/102622) · [原厂驱动说明](https://support.apple.com/en-us/102465)
+- **Microsoft Surface**，收录 25 条 Surface Pro／Go 平板型号与驱动固件包页面，以及 3 条 Surface Studio 一体机记录。整机 MSI 可能同时含固件，本轮保存官方包页面，WLAN INF 和各 Windows 构建适用范围待核。 [Microsoft Surface 驱动固件目录](https://learn.microsoft.com/en-us/surface/Manage-surface-driver-and-firmware-updates)
+- **Windows 掌机**，ROG Ally 全球产品目录收录 6 个原厂 SKU 条目，含套装 SKU。WLAN 包待逐型号核对。 [ROG Ally 产品目录](https://rog.asus.com/gaming-handhelds/rog-ally-series/)
+- **TP-Link 独立网卡**，美国支持站覆盖 89 个产品、214 条型号修订，含 USB 无线 101、USB 有线 30、PCIe 无线 64、PCI／PCIe 有线 19。实测 60 个原厂下载地址、118 条修订与下载地址的关联。TX401 原厂 ZIP 实下载验得 2 个签名网络 INF。Archer TX20U Plus 样本 ZIP 内含安装程序，待静态提取。 [TP-Link 下载中心](https://www.tp-link.com/us/support/download/) · [TX401 V2.60 支持页](https://www.tp-link.com/us/support/download/tx401/v2.60/)
+
+沿用上轮验证过的按地址复用方法。其他设备模式从空缓存只读取一份 `boards.json`，重复运行下载 0 份快照数据，笔记本模式也能直接复用该文件。TP-Link 直接复用 89 个型号页已显示的默认修订，实跑 215 次目录请求，较逐条重查的 304 次少 29.3%。完整复跑复用 60 个已记录下载地址，未下载驱动包。另用不同 URL 指向同一真实驱动 ZIP 做受控测试，两个地址各下载一次，匹配同一 SHA-256 后 Windows 验签从 2 次减为 1 次，两个型号关联和每条记录的 2 个签名 INF 证据均保留。该优化仅复用本次运行中同字节包的验签结果。
