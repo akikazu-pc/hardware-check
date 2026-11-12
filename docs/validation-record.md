@@ -349,3 +349,10 @@ v0.1.0 退出后，重启仍留下 `PawnIO` 服务和驱动包。复现确认：
 ## PE 网卡状态
 
 - 独立 x64 WinPE 中，将模拟 Intel 有线控制器置于未知设备类并设为问题码 28。PE 首页通过 PCI 网络类 ID 显示该设备为「缺少驱动」，已启动且驱动已加载的虚拟网卡显示为「驱动运行中」。
+
+## Windows 11 全新安装和驱动存储
+
+- 在启用虚拟 TPM 和 Secure Boot 的 Hyper-V 第 2 代空盘来宾，从断网急救选择包含六个 INF 的 Realtek USB 网卡包。确认安装磁盘后，Windows 11 Enterprise LTSC Evaluation 24H2 完成安装并自动重启到首次设置页。首次设置中运行 `pnputil /enum-drivers /class Net`，仅列出一个第三方网络驱动 `oem0.inf`，原始文件名为 `rtu56cx22x64sta.inf`，版本为 1156.19.20.603，签名者为 Microsoft Windows Hardware Compatibility Publisher。
+- 来宾以合成 RTL8156 硬件 ID 触发驱动选择。验收覆盖新系统驱动存储，实体 USB 网卡绑定和联网仍待验证。
+- 另一台启用虚拟 TPM 的空盘来宾用实验室专用应答文件指定安装映像和唯一的空白虚拟磁盘，再通过 `/InstallDrivers` 提供同一个已隔离 INF。从执行启动命令到自动重启进入首次设置，全程没有键盘或鼠标操作。首次设置中独立核对驱动存储，仍只列出 `oem0.inf`（`rtu56cx22x64sta.inf`）。
+- 第三台空盘来宾增加首次设置的地区和实验室临时本地账户配置。执行启动命令后无键鼠操作，安装、重启和首次设置自动完成，最终进入 Windows 登录前的锁屏。通过 PowerShell Direct 核对，同一个 INF 是驱动存储中唯一的第三方网络驱动。实验环境使用虚拟 TPM 和 Secure Boot，验证范围为 Windows 11 Enterprise LTSC Evaluation 24H2。
