@@ -107,10 +107,16 @@ public static class OfflineDriverInstaller
             : null;
     }
 
+    // UpdateDriverForPlugAndPlayDevices matches hardware and compatible IDs; some signed INFs (e.g. Intel
+    // I226-V e2fn.inf) list only the vendor/device ID that Windows reports as a compatible ID.
+    public static bool ReportsDeviceId(string[] hardwareIds, string[] compatibleIds, string id) =>
+        hardwareIds.Contains(id, StringComparer.OrdinalIgnoreCase) ||
+        compatibleIds.Contains(id, StringComparer.OrdinalIgnoreCase);
+
     private static PresentDevice[] ReadDevices(string hardwareId) =>
         Wmi.Query(Wmi.CIM_SCOPE,
-            "SELECT DeviceID, HardwareID, ConfigManagerErrorCode, Service FROM Win32_PnPEntity WHERE Present = TRUE",
-            item => (item["HardwareID"] as string[] ?? []).Contains(hardwareId, StringComparer.OrdinalIgnoreCase)
+            "SELECT DeviceID, HardwareID, CompatibleID, ConfigManagerErrorCode, Service FROM Win32_PnPEntity WHERE Present = TRUE",
+            item => ReportsDeviceId(item["HardwareID"] as string[] ?? [], item["CompatibleID"] as string[] ?? [], hardwareId)
                 ? new PresentDevice(Wmi.Text(item, "DeviceID"), Wmi.Integer(item, "ConfigManagerErrorCode"), Wmi.Text(item, "Service"))
                 : null).OfType<PresentDevice>().ToArray();
 
