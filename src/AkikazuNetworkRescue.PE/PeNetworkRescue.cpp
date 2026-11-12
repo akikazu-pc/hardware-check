@@ -3,6 +3,12 @@
 #define USE_SP_ALTPLATFORM_INFO_V3 1
 #include <windows.h>
 #include <setupapi.h>
+#include <cfgmgr32.h>
+#include <cfg.h>
+#include <bcrypt.h>
+#include <shellapi.h>
+#include <fcntl.h>
+#include <io.h>
 
 #include <algorithm>
 #include <array>
@@ -88,7 +94,7 @@ static std::vector<Target> DiscoverTargets()
     return targets;
 }
 
-static std::vector<std::wstring> ReadDeviceHardwareIds()
+static std::vector<std::wstring> ReadDeviceHardwareIds(bool missingOnly = false)
 {
     std::vector<std::wstring> ids;
     const auto devices = SetupDiGetClassDevsW(nullptr, nullptr, nullptr, DIGCF_ALLCLASSES | DIGCF_PRESENT);
@@ -101,6 +107,14 @@ static std::vector<std::wstring> ReadDeviceHardwareIds()
         device.cbSize = sizeof device;
         if (!SetupDiEnumDeviceInfo(devices, index, &device)) {
             break;
+        }
+        if (missingOnly) {
+            ULONG status = 0;
+            ULONG problem = 0;
+            if (CM_Get_DevNode_Status(&status, &problem, device.DevInst, 0) != CR_SUCCESS ||
+                !(status & DN_HAS_PROBLEM) || problem != CM_PROB_FAILED_INSTALL) {
+                continue;
+            }
         }
         DWORD size = 0;
         SetupDiGetDeviceRegistryPropertyW(devices, &device, SPDRP_HARDWAREID, nullptr, nullptr, 0, &size);
@@ -231,9 +245,9 @@ struct DriverMatch {
     std::wstring name;
 };
 
-static std::vector<DriverMatch> ScanDrivers(const fs::path& bundle, DWORD build)
+static std::vector<DriverMatch> ScanDrivers(const fs::path& bundle, DWORD build, bool missingOnly = false)
 {
-    const auto ids = ReadDeviceHardwareIds();
+    const auto ids = ReadDeviceHardwareIds(missingOnly);
     std::vector<DriverMatch> candidates;
     if (ids.empty()) {
         return candidates;
@@ -260,90 +274,26 @@ static std::vector<DriverMatch> ScanDrivers(const fs::path& bundle, DWORD build)
 
 #include "PeWizard.h"
 
-static size_t ReadSelection(size_t maximum)
-{
-    std::wstring answer;
-    std::getline(std::wcin, answer);
-    wchar_t* end = nullptr;
-    const auto value = wcstoul(answer.c_str(), &end, 10);
-    return end != answer.c_str() && *end == L'\0' && value <= maximum ? value : 0;
-}
+#include "RescueCli.h"
 
 int wmain(int argc, wchar_t** argv)
 {
     wchar_t executable[MAX_PATH]{};
     const auto length = GetModuleFileNameW(nullptr, executable, MAX_PATH);
-    if (!length || length >= MAX_PATH) {
-        return 3;
-    }
+    if (!length || length >= MAX_PATH) return 3;
     const auto bundle = fs::path(executable).parent_path();
-    if (argc == 2 && wcscmp(argv[1], L"--ui-preview") == 0) {
-        return RunPeWizard(bundle, true);
-    }
-
-    const auto targets = DiscoverTargets();
-    for (size_t i = 0; i < targets.size(); ++i) {
-        std::wcout << i + 1 << L". " << targets[i].root.c_str() << L" Windows "
-            << (targets[i].build < 22000 ? 10 : 11) << L" x64, kernel build " << targets[i].build << L'\n';
-    }
+    if (argc == 2 && wcscmp(argv[1], L"--ui-preview") == 0) return RunPeWizard(bundle, true);
     if (argc == 2 && wcscmp(argv[1], L"--list-targets") == 0) {
+        const auto targets = DiscoverTargets();
+        for (const auto& target : targets) std::wcout << WindowsLabel(target.root, target.build) << L'\n';
         std::wcout << L"Offline Windows installations: " << targets.size() << L'\n';
         return 0;
     }
     HKEY miniNt{};
-    if (RegOpenKeyExW(HKEY_LOCAL_MACHINE, L"SYSTEM\\CurrentControlSet\\Control\\MiniNT",
-            0, KEY_READ, &miniNt) != ERROR_SUCCESS) {
-        std::wcerr << L"Start this repair tool from WinPE.\n";
-        return 1;
-    }
-    RegCloseKey(miniNt);
-    if (argc == 2 && wcscmp(argv[1], L"--ui") == 0) {
-        return RunPeWizard(bundle, false);
-    }
-    if (targets.empty()) {
-        std::wcerr << L"No accessible offline Windows 10/11 x64 installation found. Unlock locked volumes first.\n";
-        return 2;
-    }
-    std::wcout << L"Select target Windows (0 to cancel): ";
-    const auto selection = ReadSelection(targets.size());
-    if (!selection) {
-        return 0;
-    }
-    const auto& target = targets[selection - 1];
-
-    const auto candidates = ScanDrivers(bundle, target.build);
-    for (size_t i = 0; i < candidates.size(); ++i) {
-        std::wcout << i + 1 << L". " << candidates[i].path.c_str() << L" [" << candidates[i].id << L"]\n";
-    }
-    if (candidates.empty()) {
-        std::wcerr << L"No verified exact driver match. Check the extracted driver folders.\n";
-        return 4;
-    }
-
-    std::wcout << L"Select driver (0 to cancel): ";
-    const auto driver = ReadSelection(candidates.size());
-    if (!driver) {
-        return 0;
-    }
-    const auto& inf = candidates[driver - 1].path;
-    std::wcout << L"Stage " << inf.c_str() << L" in " << target.root.c_str()
-        << L" Windows kernel build " << target.build << L"? [y/N] ";
-    std::wstring confirmation;
-    std::getline(std::wcin, confirmation);
-    if (confirmation != L"y" && confirmation != L"Y") {
-        return 0;
-    }
-    if (ReadWindowsBuild(target.root) != target.build || !VerifyNetworkDriver(inf)) {
-        std::wcerr << L"The target or driver changed. Restart the scan.\n";
-        return 5;
-    }
-    const auto result = RunDism(target, L"/Add-Driver /Driver:\"" + inf.wstring() + L"\"");
-    std::wcout << L"DISM exit code: " << result << L'\n';
-    if (result == ERROR_SUCCESS || result == ERROR_SUCCESS_REBOOT_REQUIRED) {
-        const auto inventory = RunDism(target, L"/Get-Drivers");
-        std::wcout << L"DISM driver inventory exit code: " << inventory
-            << L"\nRestart into the target Windows and verify the device and connection.\n";
-        return inventory == ERROR_SUCCESS ? 0 : 7;
-    }
-    return 6;
+    const bool isPe = RegOpenKeyExW(HKEY_LOCAL_MACHINE, L"SYSTEM\\CurrentControlSet\\Control\\MiniNT",
+        0, KEY_READ, &miniNt) == ERROR_SUCCESS;
+    if (isPe) RegCloseKey(miniNt);
+    if (argc == 2 && wcscmp(argv[1], L"--ui") == 0) return isPe ? RunPeWizard(bundle, false) : 1;
+    const bool keepOpen = argc == 2 && wcscmp(argv[1], L"--cli-window") == 0;
+    return StartCli(bundle, isPe, keepOpen);
 }

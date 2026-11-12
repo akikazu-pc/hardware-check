@@ -367,10 +367,8 @@ static bool StartSetup(const SetupMedia& media, const fs::path& inf)
     return true;
 }
 
-static int RunPeWizard(const fs::path& bundle, bool preview)
+static int PreferredLanguage()
 {
-    const auto fontFile = bundle / L"pe-fonts/NotoSansCJK-Regular.ttc";
-    AddFontResourceExW(fontFile.c_str(), FR_PRIVATE, nullptr);
     const LANGID uiLanguage = GetUserDefaultUILanguage();
     int preferred = 0;
     if (PRIMARYLANGID(uiLanguage) == LANG_JAPANESE) preferred = 1;
@@ -378,7 +376,14 @@ static int RunPeWizard(const fs::path& bundle, bool preview)
         const auto sublanguage = SUBLANGID(uiLanguage);
         preferred = sublanguage == SUBLANG_CHINESE_SIMPLIFIED || sublanguage == SUBLANG_CHINESE_SINGAPORE ? 2 : 3;
     }
-    int language = preferred;
+    return preferred;
+}
+
+static int RunPeWizard(const fs::path& bundle, bool preview)
+{
+    const auto fontFile = bundle / L"pe-fonts/NotoSansCJK-Regular.ttc";
+    AddFontResourceExW(fontFile.c_str(), FR_PRIVATE, nullptr);
+    int language = PreferredLanguage();
     for (;;) {
         const auto& text = peText[language];
         const auto action = Choose(text, text.action, {}, 0, nullptr, false, language);

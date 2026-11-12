@@ -287,7 +287,7 @@ pwsh -NoProfile -File scripts/publish-network-rescue-bundles.ps1 -IncludeCatalog
 
 ## 离线完整版在 Windows 与 WinPE 中使用
 
-将同一个离线完整版 ZIP 解压到 U 盘，两种环境都双击 `NetworkRescue.exe`。启动器自动检测 WinPE。在普通 Windows 打开急救窗口，在 x64 WinPE 进入键盘操作的修复入口。PE 入口为原生 x64 图形向导，运行时不依赖 WMI、PowerShell 或 .NET。普通 Windows 和 PE 的顶部工具栏都支持日语、简体中文、繁体中文和英语。需要英文控制台时，在 PE 运行 `Run-Network-Rescue.cmd --cli`。
+将同一个离线完整版 ZIP 解压到 U 盘，两种环境都双击 `NetworkRescue.exe`。启动器自动检测 WinPE。在普通 Windows 打开急救窗口，在 x64 WinPE 进入键盘操作的修复入口。PE 入口为原生 x64 图形向导，运行时不依赖 WMI、PowerShell 或 .NET。普通 Windows 和 PE 的顶部工具栏都支持日语、简体中文、繁体中文和英语。从终端运行 EXE 时打开命令行界面。使用 `NetworkRescue.exe --gui` 可显式打开图形窗口，使用 `Run-Network-Rescue.cmd --cli` 可在当前控制台运行。两种界面默认跟随 Windows 显示语言，无法匹配时使用英语。交互式命令行等待 3 秒，按键后持续等待语言编号，超时则继续。唯一目标和唯一签名驱动自动选中，写入前仍需确认。控制台以 Unicode 输出，精简 PE 的中日文显示取决于控制台可用字体；图形向导使用离线包内置字体。
 
 在 PE 的「工具」中选择「修复已有 Windows」，工具列出可访问的固定磁盘分区中的 Windows 10/11 x64 系统。它用内核版本区分系统和匹配 INF 最低构建号，启用包更新的 Windows 可能显示较早的基线内核构建号。若找不到预期分区，先检查 PE 是否能读取磁盘，或在具备相应组件的 PE 中解锁 BitLocker。
 
