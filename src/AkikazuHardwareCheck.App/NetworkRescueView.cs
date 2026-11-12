@@ -82,7 +82,7 @@ internal sealed class NetworkRescueView : UserControl
         {
             if (Directory.Exists(BundledDriverDirectory))
             {
-                await SearchFolderAsync(useBundled: true);
+                await SearchFolderAsync(useBundled: true, forRepair: true);
             }
             else if (HasOnlineCandidates())
             {
@@ -90,7 +90,7 @@ internal sealed class NetworkRescueView : UserControl
             }
             else
             {
-                await SearchFolderAsync();
+                await SearchFolderAsync(forRepair: true);
             }
         };
         _modelLink.LinkClicked += (_, _) => OpenOfficialPage();
@@ -151,7 +151,7 @@ internal sealed class NetworkRescueView : UserControl
         _moduleList.Columns.Add("", 120);
 
         _tools.DropDownItems.AddRange([_refresh, _export, _preview, _searchFolder]);
-        if (_portableDriverDirectory is null && DistributionProfile.Current.Channel != DistributionChannel.Store)
+        if (DistributionProfile.Current.Channel != DistributionChannel.Store)
         {
             _tools.DropDownItems.Add(_online);
         }
@@ -421,8 +421,7 @@ internal sealed class NetworkRescueView : UserControl
             : [];
         var names = string.Join(" / ", packages.Select(package => package.AdapterName ?? package.Id).Distinct());
         var localNames = string.Join(" / ", _bundledAdapterNames);
-        _adapterLink.Text = !string.IsNullOrEmpty(_installedWifi) ? _installedWifi :
-            localNames.Length > 0 ? localNames : names;
+        _adapterLink.Text = localNames.Length > 0 ? localNames : names.Length > 0 ? names : _installedWifi;
         _adapterLink.Links.Clear();
         _adapterLink.LinkArea = new LinkArea(0, 0);
         if (DistributionProfile.Current.Channel != DistributionChannel.Store &&
@@ -629,9 +628,14 @@ internal sealed class NetworkRescueView : UserControl
             MessageBoxButtons.OK, MessageBoxIcon.Information);
     }
 
-    private async Task SearchFolderAsync(bool useBundled = false, bool exportOnly = false)
+    private async Task SearchFolderAsync(bool useBundled = false, bool exportOnly = false, bool forRepair = false)
     {
         if (_diagnostic is not { Devices.Count: > 0 } diagnostic)
+        {
+            return;
+        }
+        IReadOnlyList<NetworkDeviceCandidate> devices = forRepair ? MissingDriverDevices(diagnostic) : diagnostic.Devices;
+        if (devices.Count == 0)
         {
             return;
         }
@@ -658,7 +662,14 @@ internal sealed class NetworkRescueView : UserControl
         var root = useBundled ? BundledDriverDirectory : folder.SelectedPath;
         if (root is null || !Directory.Exists(root))
         {
-            ShowInstallResult("rescue.folderReadFailed");
+            if (useBundled && forRepair)
+            {
+                await OfferOtherDriverSourcesAsync(_t["rescue.folderReadFailed"]);
+            }
+            else
+            {
+                ShowInstallResult("rescue.folderReadFailed");
+            }
             return;
         }
         _scan.Enabled = _preview.Enabled = _searchFolder.Enabled = _online.Enabled = false;
@@ -668,7 +679,7 @@ internal sealed class NetworkRescueView : UserControl
         try
         {
             var roots = useBundled ? BundledDriverRoots(root, diagnostic) : [root];
-            result = await Task.Run(() => OfflinePackageSearch.Find(roots, diagnostic.Devices, includePossible: true));
+            result = await Task.Run(() => OfflinePackageSearch.Find(roots, devices, includePossible: true));
             _scanStatusKey = null;
         }
         catch (Exception exception) when (exception is IOException or UnauthorizedAccessException)
@@ -686,14 +697,26 @@ internal sealed class NetworkRescueView : UserControl
         _scanStatus.Text = _scanStatusKey is { } status ? _t[status] : "";
         if (result is null)
         {
+            if (useBundled && forRepair)
+            {
+                await OfferOtherDriverSourcesAsync(_t["rescue.folderReadFailed"]);
+            }
             return;
         }
 
         var skipped = result.UnreadableInfCount > 0 ? _t["rescue.unreadableInfs", result.UnreadableInfCount] : "";
         if (result.Candidates.Count == 0)
         {
-            MessageBox.Show(this, string.Join(Environment.NewLine, new[] { _t["rescue.infNoMatch"], skipped }
-                .Where(text => text.Length > 0)), _t["rescue.driverCandidates"], MessageBoxButtons.OK, MessageBoxIcon.Information);
+            var message = string.IsNullOrEmpty(skipped) ? _t["rescue.infNoMatch"] :
+                _t["rescue.infNoMatch"] + Environment.NewLine + skipped;
+            if (useBundled && forRepair)
+            {
+                await OfferOtherDriverSourcesAsync(message);
+            }
+            else
+            {
+                MessageBox.Show(this, message, _t["rescue.driverCandidates"], MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
             return;
         }
 
@@ -714,9 +737,41 @@ internal sealed class NetworkRescueView : UserControl
                 return;
             }
 
-            await ReviewInfAsync(selected.InfPath, diagnostic.Devices);
+            await ReviewInfAsync(selected.InfPath, devices);
         }
     }
+
+    private async Task OfferOtherDriverSourcesAsync(string details)
+    {
+        var local = new TaskDialogCommandLinkButton(_t["rescue.recoveryChooseFolder"]);
+        var online = new TaskDialogCommandLinkButton(_t["rescue.recoveryTryDownload"]);
+        var page = new TaskDialogPage
+        {
+            Caption = _t["rescue.heading"],
+            Heading = _t["rescue.recoveryOtherSources"],
+            Text = details,
+            AllowCancel = true,
+            DefaultButton = TaskDialogButton.Cancel,
+        };
+        page.Buttons.Add(local);
+        if (HasOnlineCandidates())
+        {
+            page.Buttons.Add(online);
+        }
+        page.Buttons.Add(TaskDialogButton.Cancel);
+        var selected = TaskDialog.ShowDialog(this, page);
+        if (selected == local)
+        {
+            await SearchFolderAsync(forRepair: true);
+        }
+        else if (selected == online)
+        {
+            await DownloadDriverAsync();
+        }
+    }
+
+    private static NetworkDeviceCandidate[] MissingDriverDevices(NetworkDeviceDiagnostic diagnostic) =>
+        diagnostic.Devices.Where(device => device.ProblemCode == 28).ToArray();
 
     private async Task DownloadDriverAsync(bool downloadOnly = false)
     {
@@ -727,6 +782,7 @@ internal sealed class NetworkRescueView : UserControl
 
         var packages = OnlineDriverCatalog.Find(diagnostic, includeInstalled: downloadOnly);
         var possible = OnlineDriverCatalog.FindPossible(diagnostic, includeInstalled: downloadOnly);
+        IReadOnlyList<NetworkDeviceCandidate> devices = downloadOnly ? diagnostic.Devices : MissingDriverDevices(diagnostic);
         if (packages.Count == 0 && possible.Count == 0)
         {
             ShowInstallResult("rescue.onlineNoMatch");
@@ -762,7 +818,7 @@ internal sealed class NetworkRescueView : UserControl
                 using var timeout = new CancellationTokenSource(TimeSpan.FromMinutes(3));
                 var root = workspace.FullName;
                 driverDirectory = await Task.Run(() => OnlineDriverCatalog.DownloadAsync(selected, root, timeout.Token));
-                result = await Task.Run(() => OfflinePackageSearch.Find(driverDirectory, diagnostic.Devices, includePossible: true));
+                result = await Task.Run(() => OfflinePackageSearch.Find(driverDirectory, devices, includePossible: true));
                 _scanStatusKey = null;
             }
             catch (Exception exception) when (exception is IOException or UnauthorizedAccessException or HttpRequestException
@@ -806,7 +862,7 @@ internal sealed class NetworkRescueView : UserControl
                     return;
                 }
 
-                await ReviewInfAsync(candidate.InfPath, diagnostic.Devices);
+                await ReviewInfAsync(candidate.InfPath, devices);
             }
         }
         finally
