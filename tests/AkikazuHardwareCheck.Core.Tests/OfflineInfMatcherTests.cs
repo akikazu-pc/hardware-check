@@ -14,6 +14,7 @@ public sealed class OfflineInfMatcherTests
             Signature="$Windows NT$"
             Class=Net
             ClassGuid={4d36e972-e325-11ce-bfc1-08002be10318}
+            DriverVer=10/16/2025,6001.16.172.0
             Provider=%Vendor%
 
             [Manufacturer]
@@ -47,6 +48,7 @@ public sealed class OfflineInfMatcherTests
                 search.Candidates.Select(candidate => candidate.InfPath));
             Assert.Equal(1, search.UnreadableInfCount);
 
+            Assert.Equal("6001.16.172.0", OfflineInfMatcher.ReadDriverVersion(path));
             Assert.Null(OfflineDriverInstaller.Verify(path));
             var match = Assert.Single(OfflineInfMatcher.Match(path, devices));
             Assert.Equal(devices[0].HardwareIds[0], match.HardwareId);

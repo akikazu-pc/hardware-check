@@ -2,6 +2,7 @@ using System.ComponentModel;
 using System.Management;
 using System.Runtime.InteropServices;
 using System.Security.Cryptography;
+using System.Text;
 using AkikazuHardwareCheck.Core.Hardware;
 
 namespace AkikazuHardwareCheck.Core.SharedDesktop;
@@ -49,7 +50,7 @@ public static class OfflineDriverInstaller
             var eligible = SelectMissingMatch(OfflineInfMatcher.Match(path, candidates));
             var present = ReadDevices(hardwareId);
             if (eligible is null || !string.Equals(eligible.HardwareId, hardwareId, StringComparison.OrdinalIgnoreCase) ||
-                present is not [{ ProblemCode: 28, Service: null or "" }])
+                present is not [{ InstanceId: { Length: > 0 } instanceId, ProblemCode: 28, Service: null or "" }])
             {
                 return OfflineInstallResult.NoEligibleDevice;
             }
@@ -67,11 +68,13 @@ public static class OfflineDriverInstaller
 
             try
             {
-                return ReadDevices(hardwareId) is [{ ProblemCode: 0, Service: { Length: > 0 } }]
+                return ReadDevices(hardwareId) is [{ InstanceId: var boundId, ProblemCode: 0, Service: { Length: > 0 } }] &&
+                    string.Equals(boundId, instanceId, StringComparison.OrdinalIgnoreCase) &&
+                    VerifyBoundPackage(instanceId, identity.Sha256, OfflineInfMatcher.ReadDriverVersion(path))
                     ? OfflineInstallResult.Bound
                     : OfflineInstallResult.BindingUnconfirmed;
             }
-            catch (Exception exception) when (exception is ManagementException or COMException or UnauthorizedAccessException)
+            catch (Exception exception) when (exception is ManagementException or COMException or UnauthorizedAccessException or IOException)
             {
                 return OfflineInstallResult.BindingUnconfirmed;
             }
@@ -96,12 +99,39 @@ public static class OfflineDriverInstaller
 
     private static PresentDevice[] ReadDevices(string hardwareId) =>
         Wmi.Query(Wmi.CIM_SCOPE,
-            "SELECT HardwareID, ConfigManagerErrorCode, Service FROM Win32_PnPEntity WHERE Present = TRUE",
+            "SELECT DeviceID, HardwareID, ConfigManagerErrorCode, Service FROM Win32_PnPEntity WHERE Present = TRUE",
             item => (item["HardwareID"] as string[] ?? []).Contains(hardwareId, StringComparer.OrdinalIgnoreCase)
-                ? new PresentDevice(Wmi.Integer(item, "ConfigManagerErrorCode"), Wmi.Text(item, "Service"))
+                ? new PresentDevice(Wmi.Text(item, "DeviceID"), Wmi.Integer(item, "ConfigManagerErrorCode"), Wmi.Text(item, "Service"))
                 : null).OfType<PresentDevice>().ToArray();
 
-    private sealed record PresentDevice(int? ProblemCode, string? Service);
+    private static bool VerifyBoundPackage(string instanceId, string expectedHash, string? expectedVersion)
+    {
+        var bindings = Wmi.Query(Wmi.CIM_SCOPE, "SELECT DeviceID, InfName, DriverVersion FROM Win32_PnPSignedDriver",
+            item => string.Equals(Wmi.Text(item, "DeviceID"), instanceId, StringComparison.OrdinalIgnoreCase)
+                ? new DriverBinding(Wmi.Text(item, "InfName"), Wmi.Text(item, "DriverVersion"))
+                : null).OfType<DriverBinding>().ToArray();
+
+        if (bindings is not [{ InfName: { Length: > 0 } name, DriverVersion: var version }] ||
+            !Version.TryParse(expectedVersion, out var expected) ||
+            !Version.TryParse(version, out var actual) || actual != expected ||
+            !string.Equals(name, Path.GetFileName(name), StringComparison.Ordinal) ||
+            !string.Equals(Path.GetExtension(name), ".inf", StringComparison.OrdinalIgnoreCase))
+        {
+            return false;
+        }
+
+        var storePath = new StringBuilder(4096);
+        if (!SetupGetInfDriverStoreLocation(name, IntPtr.Zero, null, storePath, storePath.Capacity, out _))
+        {
+            return false;
+        }
+
+        using var storedInf = File.OpenRead(storePath.ToString());
+        return string.Equals(Convert.ToHexString(SHA256.HashData(storedInf)), expectedHash, StringComparison.OrdinalIgnoreCase);
+    }
+
+    private sealed record PresentDevice(string? InstanceId, int? ProblemCode, string? Service);
+    private sealed record DriverBinding(string? InfName, string? DriverVersion);
 
     [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode)]
     private struct InfSignerInfo
@@ -115,6 +145,11 @@ public static class OfflineDriverInstaller
     [DllImport("setupapi.dll", CharSet = CharSet.Unicode)]
     [return: MarshalAs(UnmanagedType.Bool)]
     private static extern bool SetupVerifyInfFile(string infName, IntPtr platform, ref InfSignerInfo signer);
+
+    [DllImport("setupapi.dll", CharSet = CharSet.Unicode)]
+    [return: MarshalAs(UnmanagedType.Bool)]
+    private static extern bool SetupGetInfDriverStoreLocation(string fileName, IntPtr platform, string? locale,
+        StringBuilder storePath, int size, out uint requiredSize);
 
     [DllImport("newdev.dll", CharSet = CharSet.Unicode)]
     [return: MarshalAs(UnmanagedType.Bool)]

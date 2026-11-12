@@ -61,6 +61,24 @@ public static class OfflineInfMatcher
         }
     }
 
+    public static string? ReadDriverVersion(string path)
+    {
+        var inf = SetupOpenInfFile(path, null, INF_STYLE_WIN4, out _);
+        if (inf == new IntPtr(-1))
+        {
+            return null;
+        }
+
+        try
+        {
+            return SetupFindFirstLine(inf, "Version", "DriverVer", out var line) ? ReadField(ref line, 2) : null;
+        }
+        finally
+        {
+            SetupCloseInfFile(inf);
+        }
+    }
+
     private static void ReadModels(IntPtr inf, string section, Dictionary<string, string> modelIds)
     {
         if (!SetupFindFirstLine(inf, section, null, out var model))

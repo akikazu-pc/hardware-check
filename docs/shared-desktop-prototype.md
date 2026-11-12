@@ -211,10 +211,18 @@ powershell -NoProfile -ExecutionPolicy Bypass -File scripts/prototype/test-share
 
 扫描到候选设备后，可以选择解包后的本地网络驱动 INF 预览匹配。通过 Windows SetupAPI 读取适用于当前系统的 Models 段，并按已扫描设备的有序硬件 ID 显示匹配依据。该操作只读取选中的 INF 文件。包签名、依赖、正式 Windows 驱动排名和安装另行处理。
 
-官网渠道可对单个问题码为 28 的匹配设备确认安装。预览使用 Windows catalog 验证 INF 并显示签名者。短时管理员进程重新检查 INF 指纹、catalog、当前系统匹配与设备状态。若同一硬件 ID 对应多台设备，退出安装。Windows 负责驱动包依赖、安装策略与排名。结束后按设备问题码和驱动服务报告绑定状态，需重启时由用户决定重启。联网状态需另行检查。商店渠道仅提供预览。
+官网渠道可对单个问题码为 28 的匹配设备确认安装。预览使用 Windows catalog 验证 INF 并显示签名者。短时管理员进程重新检查 INF 指纹、catalog、当前系统匹配与设备状态。若同一硬件 ID 对应多台设备，退出安装。Windows 负责驱动包依赖、安装策略与排名。结束后核对原设备实例、问题码、驱动服务、实际绑定版本以及驱动库中 INF 的 SHA-256，再报告绑定状态，需重启时由用户决定重启。联网状态需另行检查。商店渠道仅提供预览。
 
 ## 从离线驱动目录查找候选
 
 把已解包的驱动目录带到断网电脑。扫描设备后选择「搜索驱动目录」。工具遍历目录下的 INF，列出当前 Windows 上有硬件 ID 匹配的候选，并提示不可读取的 INF 数量。排序优先显示较具体的硬件 ID。选中后使用原有的预览、签名校验和安装确认。保留厂商包的目录结构和依赖文件。压缩包和厂商安装程序需要事先解包。
 
-首批候选之一是[技嘉 B650 AORUS ELITE AX rev. 1.2 Realtek 8852 Wi-Fi 6001.16.172.0](https://www.gigabyte.com/Motherboard/B650-AORUS-ELITE-AX-rev-12/Support/sp)，厂商标注支持 Windows 10/11 x64。实测官方下载 ZIP 的 SHA-256 为 A6CD81E7792678D6BCB7A9F791C2CBD1972BC653B7A3A4102D0AF342F8038725。该 ZIP 内是厂商 EXE，尚未核对其内部 INF，也未确认再分发授权。
+首批候选之一是[技嘉 B650 AORUS ELITE AX rev. 1.2 Realtek 8852 Wi-Fi 6001.16.172.0](https://www.gigabyte.com/Motherboard/B650-AORUS-ELITE-AX-rev-12/Support/sp)，厂商标注支持 Windows 10/11 x64。实测官方下载 ZIP 的 SHA-256 为 A6CD81E7792678D6BCB7A9F791C2CBD1972BC653B7A3A4102D0AF342F8038725。已通过 Windows tar 解包厂商自解压文件，未执行厂商 EXE。包内 netrtwlane602.inf 版本为 6001.16.172.0，包含 RTL8852CE 的多个 SUBSYS 项。Windows 在开发机上将 catalog 签名判为有效，签名者为 Microsoft Windows Hardware Compatibility Publisher。包内 Realtek 版权声明列明附条件的二进制再分发许可，准备脚本会保留原声明。具体主板实机 SUBSYS 与安装结果仍待确认。
+
+用官方下载 ZIP 生成可搜索的本地目录：
+
+```powershell
+powershell -NoProfile -File scripts/prototype/prepare-realtek-wifi-pack.ps1 -VendorZip <下载的ZIP> -OutputDirectory <新的目录>
+```
+
+准备脚本固定 ZIP 和 INF 的 SHA-256，保留完整的驱动子目录和版权声明。它不执行安装，也不生成正式离线安装器。
