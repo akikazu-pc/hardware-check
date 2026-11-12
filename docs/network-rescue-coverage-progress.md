@@ -106,4 +106,4 @@ Windows 11 构建 26300 的最新库审计覆盖 1,666 个 INF。其中 682 个�
 | Windows 10 x64 | [10.079.50.1003](https://download.gigabyte.com/FileList/Driver/mb_driver_542_w10_10.079.50.1003.zip) | `353AF723FD09FAC659341D5078B8B15D0534BE0DEF0249E411C27350AEC57821` | `mbdriver/WIN10/64` | 1 份有效 |
 | Windows 11 x64 | [11.29.50.0202](https://download.gigabyte.com/FileList/Driver/mb_driver_654_w11_11.29.50.0202.zip) | `07013117E12AB44C0AFADC2D898ED4904121E56C3579DF33CE7E3F687F43AE1F` | `mbdriver/WIN11/64` | 8 份有效 |
 
-当前样本为按系统分开的本地补充包。完整离线包集成、对应主板实机断网安装及联网恢复验证待完成。上述样本单独计入有线驱动记录。
+当前离线完整版随包提供按系统分开的有线驱动目录。普通 Windows 的「安装驱动」入口和 WinPE 入口都按目标 Windows 10/11 x64 选择对应目录。对应主板的实机断网安装和联网恢复待验。上述样本单独计入有线驱动记录。

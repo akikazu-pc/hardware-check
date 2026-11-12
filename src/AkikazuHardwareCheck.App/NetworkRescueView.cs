@@ -599,7 +599,19 @@ internal sealed class NetworkRescueView : UserControl
         OfflinePackageSearchResult? result = null;
         try
         {
-            result = await Task.Run(() => OfflinePackageSearch.Find(root, diagnostic.Devices, includePossible: true));
+            var roots = new List<string> { root };
+            if (useBundled && _portableDriverDirectory is not null && diagnostic.WindowsBuild >= 10240 &&
+                string.Equals(diagnostic.Architecture, "X64", StringComparison.OrdinalIgnoreCase) &&
+                Path.GetDirectoryName(root) is { } bundle)
+            {
+                var ethernet = Path.Combine(bundle, "pe-drivers",
+                    diagnostic.WindowsBuild < 22000 ? "windows10-x64" : "windows11-x64");
+                if (Directory.Exists(ethernet))
+                {
+                    roots.Add(ethernet);
+                }
+            }
+            result = await Task.Run(() => OfflinePackageSearch.Find(roots, diagnostic.Devices, includePossible: true));
             _scanStatusKey = null;
         }
         catch (Exception exception) when (exception is IOException or UnauthorizedAccessException)

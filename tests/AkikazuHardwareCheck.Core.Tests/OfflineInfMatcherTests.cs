@@ -41,13 +41,18 @@ public sealed class OfflineInfMatcherTests
                 new([@"PCI\VEN_8086&DEV_5678"], null, 28),
             ];
 
-            File.WriteAllText(Path.Combine(directory.FullName, "bad.inf"), "invalid");
-            File.WriteAllText(Path.Combine(directory.FullName, "generic.inf"), File.ReadAllText(path)
+            var alternate = directory.CreateSubdirectory("alternate").FullName;
+            File.WriteAllText(Path.Combine(alternate, "bad.inf"), "invalid");
+            File.WriteAllText(Path.Combine(alternate, "generic.inf"), File.ReadAllText(path)
                 .Replace(@"%Vendor%=Install,PCI\VEN_8086&DEV_2725&SUBSYS_00248086", ""));
             var search = OfflinePackageSearch.Find(directory.FullName, devices);
-            Assert.Equal([path, Path.Combine(directory.FullName, "generic.inf")],
-                search.Candidates.Select(candidate => candidate.InfPath));
+            var expected = new[] { path, Path.Combine(alternate, "generic.inf") };
+            Assert.Equal(expected, search.Candidates.Select(candidate => candidate.InfPath));
             Assert.Equal(1, search.UnreadableInfCount);
+
+            var combined = OfflinePackageSearch.Find([Path.GetDirectoryName(path)!, alternate], devices, includePossible: true);
+            Assert.Equal(expected, combined.Candidates.Select(candidate => candidate.InfPath));
+            Assert.Equal(1, combined.UnreadableInfCount);
 
             var unmatched = new NetworkDeviceCandidate([@"PCI\VEN_8086&DEV_2725&SUBSYS_FFFFFFFF"], null, 28);
             Assert.Empty(OfflinePackageSearch.Find(directory.FullName, [unmatched]).Candidates);

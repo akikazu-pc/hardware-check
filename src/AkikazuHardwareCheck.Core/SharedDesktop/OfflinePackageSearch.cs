@@ -10,7 +10,10 @@ public static class OfflinePackageSearch
     public static OfflinePackageSearchResult Find(string root, IReadOnlyList<NetworkDeviceCandidate> devices) =>
         Find(root, devices, includePossible: false);
 
-    public static OfflinePackageSearchResult Find(string root, IReadOnlyList<NetworkDeviceCandidate> devices, bool includePossible)
+    public static OfflinePackageSearchResult Find(string root, IReadOnlyList<NetworkDeviceCandidate> devices, bool includePossible) =>
+        Find([root], devices, includePossible);
+
+    public static OfflinePackageSearchResult Find(IEnumerable<string> roots, IReadOnlyList<NetworkDeviceCandidate> devices, bool includePossible)
     {
         var options = new EnumerationOptions
         {
@@ -21,7 +24,7 @@ public static class OfflinePackageSearch
         var candidates = new List<OfflinePackageCandidate>();
         var possible = new List<OfflinePackageCandidate>();
         var unreadable = 0;
-        foreach (var path in Directory.EnumerateFiles(root, "*.inf", options))
+        foreach (var path in roots.SelectMany(root => Directory.EnumerateFiles(root, "*.inf", options)))
         {
             try
             {
