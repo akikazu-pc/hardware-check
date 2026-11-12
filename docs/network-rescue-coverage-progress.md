@@ -2,7 +2,7 @@
 
 [逐型号 Wi-Fi 缺口清单](network-rescue-model-gaps.csv)记录当前已发现的 1,237 条主板型号或修订、912 条笔记本系列或型号、1 条一体机型号，以及 167 条戴尔系统与 Windows 组合。同一台笔记本可出现在多个系统组合。
 
-清单分别记录 `windows10X64Evidence` 和 `windows11X64Evidence`。`oem-package-indexed` 表示原厂包已入索引，`oem-wlan-listed` 表示原厂资料列出无线驱动，`oem-driver-pack-listed` 表示原厂列出该系统的整机部署包，仍需检查包内 WLAN 驱动。`oem-os-upgrade-tested` 表示原厂列出 Windows 11 升级测试，WLAN 驱动仍待核对。`pending` 表示该系统的证据待核。仅预留接口和 ARM64 组合另有标记。原厂下载索引目前有 8 个包标注支持 Windows 10 x64，17 个包标注支持 Windows 11 x64，部分包另有最低构建号要求。[原厂下载索引](network-rescue-driver-index.csv)
+清单分别记录 `windows10X64Evidence` 和 `windows11X64Evidence`。`oem-package-indexed` 表示原厂包已入索引，`oem-wlan-listed` 表示原厂资料列出无线驱动，`oem-driver-pack-listed` 表示原厂列出该系统的整机部署包，仍需检查包内 WLAN 驱动。`oem-os-upgrade-tested` 表示原厂列出 Windows 11 升级测试，WLAN 驱动仍待核对。`pending` 表示该系统的证据待核。仅预留接口和 ARM64 组合另有标记。原厂下载索引目前有 9 个包标注支持 Windows 10 x64，18 个包标注支持 Windows 11 x64，部分包另有最低构建号要求。[原厂下载索引](network-rescue-driver-index.csv)
 
 | 主板范围 | 已发现的型号或修订 |
 | --- | ---: |
@@ -142,3 +142,13 @@ B550 UD WIFI6E rev. 1.2 的支持页列出适用两个系统的 MediaTek Wi-Fi 6
 | 合计 | 1,237 | 1,218 | 1,216 |
 
 上述待核数字按主表中 `pending` 字段计数。只有厂商页面证据或原厂包索引的条目仍需完成实机验证。375 条开源型号线索中还有 372 条未完成原厂型号核对。下一批优先核查已有明确型号支持页的待核记录，再用已验证型号补充开源线索。所有新增映射仍需获取出厂网卡 SUBSYS，按目标 Windows 测试离线安装、重启后的驱动绑定和联网。
+
+
+### 技嘉支持页与驱动复查
+
+先保留原厂 URL 中的完整型号和 PCB 修订，例如 `B550-UD-WIFI6E-rev-12` 或 `A520I-AC-rev-15`。技嘉产品页采用 `/Motherboard/<型号及修订>/support` 查询下载，末尾替换为 `/sp` 可查询规格。全球页打不开或资料缺失时，可在 `/Motherboard/` 前试用已有的地区前缀，例如 `/us`、`/eu`、`/jp`。也可查 AORUS 的 `/motherboards/<型号及修订>/support/driver`。这些地址作为查询入口，打开后核对页面标题、PCB 修订、驱动下载项自身的限制和 Windows 版本。下载链接应从原厂页面提取，文件名不按模板推算。
+
+- **B550 UD WIFI6E rev. 1.2**。技嘉规格确认 MediaTek MT7902。通过同修订的 AORUS 支持页取得原厂 3.5.0.1392 ZIP，原厂标注 Win10/11 x64。已保存到本地研究目录，静态解开 ZIP 里的 NSIS 安装包，未运行安装程序。Win11 Build 26300 的审计匹配 1 个有效签名 INF、78 个 PCI ID，其中 12 个是 MT7902 的精确子系统 ID。驱动已入索引，出厂实机 SUBSYS 和安装待验。 [原厂规格](https://www.gigabyte.com/us/Motherboard/B550-UD-WIFI6E-rev-12/sp) · [AORUS 下载页](https://www.aorus.com/pk/motherboards/B550-UD-WIFI6E-rev-12/support/driver)
+- **A520I AC rev. 1.5**。技嘉规格和该修订手册确认 AzureWave AW-CB304NF（Realtek RTL8821CE）。复查了 2024.10.138.3 原厂 ZIP，SHA-256 与已有索引一致。Win11 Build 26300 匹配了 40 个 RTL8821CE 的精确子系统 ID，其中 11 个子系统厂商为 AzureWave。下载项仍明确标注仅适用于 rev. 1.4。两套系统的 rev. 1.5 驱动匹配仍待实机 ID 或原厂说明确认。 [原厂规格](https://www.gigabyte.com/eu/Motherboard/A520I-AC-rev-15/sp) · [原厂下载页](https://www.gigabyte.com/eu/Motherboard/A520I-AC-rev-15/support)
+
+本次更新了原厂包索引与型号证据，B550 的系统状态从原厂列出提升为包已入索引。两条记录的 `pending` 计数因此维持 Win10 1,218 条、Win11 1,216 条。完整版 ZIP 尚未重建。
