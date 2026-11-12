@@ -1,9 +1,9 @@
 #include <commctrl.h>
 
 enum HomeControl {
-    HomeTools = 201, HomeLanguage, HomeHelp, HomeHeading, HomeIntro, HomeList, HomeRefresh, HomePrimary,
+    HomeHeading = 201, HomeIntro, HomeList, HomeRefresh, HomePrimary,
     HomeSummary, HomeNetworkHeading, HomeDriverHeading, HomeNetworkList,
-    HomeBrandIcon, HomeNetworkIcon, HomeDriverIcon
+    HomeRepair, HomeGuide, HomeAbout, HomeTools, HomeLanguage, HomeHelp
 };
 
 struct HomeState {
@@ -13,26 +13,12 @@ struct HomeState {
     HFONT font = nullptr;
     HFONT headingFont = nullptr;
     HFONT sectionFont = nullptr;
-    HICON networkIcon = nullptr;
-    HICON driverIcon = nullptr;
 };
 
 static HICON LoadHomeIcon(int width, int height)
 {
     return static_cast<HICON>(LoadImageW(GetModuleHandleW(nullptr), MAKEINTRESOURCEW(1),
         IMAGE_ICON, width, height, LR_SHARED));
-}
-
-static void SetHomeIcon(HWND control, HICON icon)
-{
-    if (control && icon) SendMessageW(control, STM_SETICON, reinterpret_cast<WPARAM>(icon), 0);
-}
-
-static HICON LoadHomeSectionIcon(SHSTOCKICONID id)
-{
-    SHSTOCKICONINFO info{};
-    info.cbSize = sizeof info;
-    return SUCCEEDED(SHGetStockIconInfo(id, SHGSI_ICON | SHGSI_SMALLICON, &info)) ? info.hIcon : nullptr;
 }
 
 static void AddHomeRow(HWND list, const std::wstring& name, const wchar_t* status)
@@ -102,12 +88,14 @@ static void LocalizeList(HWND list, const wchar_t* first, const wchar_t* second)
     ListView_SetColumn(list, 1, &column);
 }
 
-static void SetHomeCombo(HWND window, int id, const std::vector<const wchar_t*>& items, int selected)
+static void SetHomeDropDown(HWND window, int id, std::initializer_list<const wchar_t*> labels)
 {
     const auto combo = GetDlgItem(window, id);
     SendMessageW(combo, CB_RESETCONTENT, 0, 0);
-    for (const auto* item : items) SendMessageW(combo, CB_ADDSTRING, 0, reinterpret_cast<LPARAM>(item));
-    SendMessageW(combo, CB_SETCURSEL, selected, 0);
+    for (const auto* label : labels) {
+        SendMessageW(combo, CB_ADDSTRING, 0, reinterpret_cast<LPARAM>(label));
+    }
+    SendMessageW(combo, CB_SETCURSEL, 0, 0);
 }
 
 static void LocalizeHome(HWND window, HomeState& state)
@@ -121,9 +109,12 @@ static void LocalizeHome(HWND window, HomeState& state)
     SetDlgItemTextW(window, HomeRefresh, text.homeScan);
     SetDlgItemTextW(window, HomePrimary, state.isPe ? text.setup : text.homeInstall);
     SetDlgItemTextW(window, IDCANCEL, text.close);
-    SetHomeCombo(window, HomeTools, { text.tools, state.isPe ? text.repair : text.homeAdvanced }, 0);
-    SetHomeCombo(window, HomeLanguage, { L"English", L"日本語", L"简体中文", L"繁體中文" }, state.language);
-    SetHomeCombo(window, HomeHelp, { text.homeHelp, text.homeGuide, text.homeAbout }, 0);
+    std::wstring help = text.homeHelp;
+    const auto accelerator = help.find(L'&');
+    if (accelerator != std::wstring::npos) help.erase(accelerator, 1);
+    SetHomeDropDown(window, HomeTools, { text.tools, text.homeScan, state.isPe ? text.repair : text.homeAdvanced });
+    SetHomeDropDown(window, HomeLanguage, { text.language, L"日本語", L"简体中文", L"繁體中文", L"English" });
+    SetHomeDropDown(window, HomeHelp, { help.c_str(), text.homeGuide, text.homeAbout });
     const auto font = WizardFont(text);
     LOGFONTW heading{};
     const bool haveHeadingFont = font && GetObjectW(font, sizeof heading, &heading) == sizeof heading;
@@ -227,53 +218,38 @@ static INT_PTR CALLBACK SharedHomeDialog(HWND window, UINT message, WPARAM wpara
         SendMessageW(window, WM_SETICON, ICON_SMALL, reinterpret_cast<LPARAM>(smallIcon));
         SendMessageW(window, WM_SETICON, ICON_BIG, reinterpret_cast<LPARAM>(largeIcon));
 
-        constexpr auto dropdown = WS_TABSTOP | WS_VSCROLL | CBS_DROPDOWNLIST | CBS_HASSTRINGS;
-        const auto tools = ChoiceControl(window, L"COMBOBOX", L"", dropdown, HomeTools, { 10, 8, 94, 75 });
-        SendMessageW(tools, CB_SETDROPPEDWIDTH, 330, 0);
-        ChoiceControl(window, L"COMBOBOX", L"", dropdown, HomeLanguage, { 99, 8, 190, 88 });
-        ChoiceControl(window, L"COMBOBOX", L"", dropdown, HomeHelp, { 195, 8, 268, 75 });
         const int right = state.isPe ? 404 : 362;
-        ChoiceControl(window, L"STATIC", L"", SS_ETCHEDHORZ, -1, { 10, 28, right, 30 });
-        if (state.isPe) {
-            SetHomeIcon(ChoiceControl(window, L"STATIC", L"", SS_ICON,
-                HomeBrandIcon, { 14, 44, 39, 73 }), largeIcon);
-        }
-        const int headingLeft = state.isPe && largeIcon ? 45 : 10;
-        ChoiceControl(window, L"STATIC", L"", SS_NOPREFIX, HomeHeading, { headingLeft, 37, right, 57 });
-        ChoiceControl(window, L"STATIC", L"", SS_NOPREFIX, HomeIntro, { headingLeft, 59, right, 75 });
+        constexpr auto dropdown = WS_TABSTOP | WS_VSCROLL | CBS_DROPDOWNLIST | CBS_HASSTRINGS;
+        const auto tools = ChoiceControl(window, L"COMBOBOX", L"", dropdown, HomeTools, { 10, 5, 76, 78 });
+        SendMessageW(tools, CB_SETDROPPEDWIDTH, 330, 0);
+        ChoiceControl(window, L"COMBOBOX", L"", dropdown, HomeLanguage, { 80, 5, 155, 90 });
+        ChoiceControl(window, L"COMBOBOX", L"", dropdown, HomeHelp, { 159, 5, 225, 78 });
+        ChoiceControl(window, L"STATIC", L"", SS_ETCHEDHORZ, -1, { 10, 26, right, 28 });
+        ChoiceControl(window, L"STATIC", L"", SS_NOPREFIX, HomeHeading, { 10, 36, right, 56 });
+        ChoiceControl(window, L"STATIC", L"", SS_NOPREFIX, HomeIntro, { 10, 57, right, 74 });
 
         const auto& text = peText[state.language];
         HWND list = nullptr;
         HWND primary = nullptr;
         if (state.isPe) {
-            state.networkIcon = LoadHomeSectionIcon(SIID_NETWORKCONNECT);
-            state.driverIcon = LoadHomeSectionIcon(SIID_DRIVEFIXED);
-            SetHomeIcon(ChoiceControl(window, L"STATIC", L"", SS_ICON | SS_CENTERIMAGE,
-                HomeNetworkIcon, { 10, 78, 22, 91 }), state.networkIcon);
-            const int networkLeft = state.networkIcon ? 26 : 10;
-            ChoiceControl(window, L"STATIC", L"", SS_NOPREFIX, HomeNetworkHeading, { networkLeft, 78, right, 91 });
-            if (!CreateHomeList(window, HomeNetworkList, { 10, 93, right, 144 }, text.homeDevice, text.homeStatus)) {
+            ChoiceControl(window, L"STATIC", L"", SS_NOPREFIX, HomeNetworkHeading, { 10, 77, right, 91 });
+            if (!CreateHomeList(window, HomeNetworkList, { 10, 93, right, 156 }, text.homeDevice, text.homeStatus)) {
                 EndDialog(window, 1);
                 return TRUE;
             }
-            ChoiceControl(window, L"STATIC", L"", SS_ETCHEDHORZ, -1, { 10, 152, right, 154 });
-            SetHomeIcon(ChoiceControl(window, L"STATIC", L"", SS_ICON | SS_CENTERIMAGE,
-                HomeDriverIcon, { 10, 160, 22, 174 }), state.driverIcon);
-            const int driverLeft = state.driverIcon ? 26 : 10;
-            ChoiceControl(window, L"STATIC", L"", SS_NOPREFIX, HomeDriverHeading, { driverLeft, 160, right, 174 });
+            ChoiceControl(window, L"BUTTON", L"", BS_GROUPBOX, HomeDriverHeading, { 10, 163, right, 279 });
             primary = ChoiceControl(window, L"BUTTON", L"", WS_TABSTOP | BS_DEFPUSHBUTTON,
-                HomePrimary, { 10, 178, 220, 200 });
-            ChoiceControl(window, L"BUTTON", L"", WS_TABSTOP, HomeRefresh, { 226, 178, 294, 200 });
-            list = CreateHomeList(window, HomeList, { 10, 206, right, 263 }, text.homeOffline, text.homeStatus);
-            ChoiceControl(window, L"STATIC", L"", SS_NOPREFIX, HomeSummary, { 10, 267, 324, 288 });
-            ChoiceControl(window, L"BUTTON", L"", WS_TABSTOP, IDCANCEL, { 334, 270, right, 291 });
+                HomePrimary, { 19, 179, 229, 201 });
+            list = CreateHomeList(window, HomeList, { 19, 207, right - 9, 254 }, text.homeOffline, text.homeStatus);
+            ChoiceControl(window, L"STATIC", L"", SS_NOPREFIX, HomeSummary, { 19, 258, right - 9, 274 });
+            ChoiceControl(window, L"BUTTON", L"", WS_TABSTOP, IDCANCEL, { 334, 285, right, 306 });
         } else {
-            list = CreateHomeList(window, HomeList, { 10, 83, right, 166 }, text.homeDevice, text.homeStatus);
-            ChoiceControl(window, L"STATIC", L"", SS_NOPREFIX, HomeSummary, { 10, 170, right, 189 });
-            ChoiceControl(window, L"BUTTON", L"", WS_TABSTOP, HomeRefresh, { 10, 195, 76, 216 });
+            list = CreateHomeList(window, HomeList, { 10, 82, right, 165 }, text.homeDevice, text.homeStatus);
+            ChoiceControl(window, L"STATIC", L"", SS_NOPREFIX, HomeSummary, { 10, 169, right, 188 });
+            ChoiceControl(window, L"BUTTON", L"", WS_TABSTOP, HomeRefresh, { 10, 194, 76, 215 });
             primary = ChoiceControl(window, L"BUTTON", L"", WS_TABSTOP | BS_DEFPUSHBUTTON,
-                HomePrimary, { 81, 195, 287, 216 });
-            ChoiceControl(window, L"BUTTON", L"", WS_TABSTOP, IDCANCEL, { 292, 195, right, 216 });
+                HomePrimary, { 81, 194, 287, 215 });
+            ChoiceControl(window, L"BUTTON", L"", WS_TABSTOP, IDCANCEL, { 292, 194, right, 215 });
         }
         if (!list || !primary) {
             EndDialog(window, 1);
@@ -292,39 +268,39 @@ static INT_PTR CALLBACK SharedHomeDialog(HWND window, UINT message, WPARAM wpara
     if (message != WM_COMMAND && message != selectedMenu) return FALSE;
     auto* state = reinterpret_cast<HomeState*>(GetWindowLongPtrW(window, GWLP_USERDATA));
     if (!state) return FALSE;
-    const auto control = LOWORD(wparam);
-    if (message == WM_COMMAND && (control == HomeLanguage || control == HomeTools || control == HomeHelp) &&
-        HIWORD(wparam) == CBN_SELENDOK) {
-        const auto selection = SendDlgItemMessageW(window, control, CB_GETCURSEL, 0, 0);
-        if (selection != CB_ERR) PostMessageW(window, selectedMenu, control, selection);
-        return TRUE;
-    }
-    if (control == HomeLanguage && message == selectedMenu) {
-        if (lparam >= 0 && lparam < ARRAYSIZE(peText)) {
-            state->language = static_cast<int>(lparam);
-            LocalizeHome(window, *state);
+    int control = LOWORD(wparam);
+    if (control == HomeTools || control == HomeLanguage || control == HomeHelp) {
+        if (message == WM_COMMAND && HIWORD(wparam) == CBN_SELENDOK) {
+            const auto selection = SendDlgItemMessageW(window, control, CB_GETCURSEL, 0, 0);
+            if (selection > 0) PostMessageW(window, selectedMenu, control, selection);
         }
-        return TRUE;
+        if (message != selectedMenu) return TRUE;
+        SendDlgItemMessageW(window, control, CB_SETCURSEL, 0, 0);
+        if (control == HomeLanguage) {
+            constexpr int languages[] = { 1, 2, 3, 0 };
+            if (lparam > 0 && lparam <= ARRAYSIZE(languages)) {
+                state->language = languages[lparam - 1];
+                LocalizeHome(window, *state);
+            }
+            return TRUE;
+        }
+        if (control == HomeTools) control = lparam == 1 ? HomeRefresh : HomeRepair;
+        else control = lparam == 1 ? HomeGuide : HomeAbout;
     }
     if (control == HomeRefresh) {
         FillHomeList(window, *state);
         return TRUE;
     }
     const auto& text = peText[state->language];
-    if (control == HomePrimary || ((control == HomeTools || control == HomeHelp) && message == selectedMenu)) {
-        const auto selection = lparam;
-        if (control != HomePrimary) {
-            SendDlgItemMessageW(window, control, CB_SETCURSEL, 0, 0);
-            if (selection <= 0) return TRUE;
-        }
+    if (control == HomePrimary || control == HomeRepair || control == HomeGuide || control == HomeAbout) {
         wizardOwner = window;
         if (control == HomePrimary) {
             if (state->isPe) RunPeAction(state->bundle, text, true);
             else RepairCurrentFromHome(*state);
-        } else if (control == HomeTools) {
+        } else if (control == HomeRepair) {
             if (state->isPe) RunPeAction(state->bundle, text, false);
             else if (!OpenFullWindowsTools(state->bundle, state->language)) Notice(text, text.failed);
-        } else if (selection == 1) {
+        } else if (control == HomeGuide) {
             Notice(text, state->isPe ? text.homePeGuide : text.homeWindowsGuide);
         } else {
             Notice(text, (std::wstring(text.homeTitle) + L"  " + peVersion + L"\nhttps://github.com/akikazu-pc/hardware-check").c_str());
@@ -349,7 +325,7 @@ static int RunSharedHome(const fs::path& bundle, bool isPe)
         WORD title;
     };
     const EmptyDialog layout{
-        { WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_MINIMIZEBOX | DS_CENTER, 0, 0, 0, 0, static_cast<short>(isPe ? 414 : 372), static_cast<short>(isPe ? 301 : 226) },
+        { WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_MINIMIZEBOX | DS_CENTER, 0, 0, 0, 0, static_cast<short>(isPe ? 414 : 372), static_cast<short>(isPe ? 314 : 225) },
         0, 0, 0
     };
     HomeState state{ bundle, isPe, PreferredLanguage() };
@@ -358,7 +334,5 @@ static int RunSharedHome(const fs::path& bundle, bool isPe)
     if (state.font) DeleteObject(state.font);
     if (state.headingFont) DeleteObject(state.headingFont);
     if (state.sectionFont) DeleteObject(state.sectionFont);
-    if (state.networkIcon) DestroyIcon(state.networkIcon);
-    if (state.driverIcon) DestroyIcon(state.driverIcon);
     return result < 0 ? 1 : static_cast<int>(result);
 }
