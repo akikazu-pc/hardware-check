@@ -266,3 +266,10 @@ pwsh -NoProfile -File scripts/publish-network-rescue-bundles.ps1 -IncludeCatalog
 [华硕型号发现快照](asus-motherboard-discovery.csv)采集于 2026-11-12，来自[华硕全球产品目录](https://www.asus.com/motherboards-components/motherboards/all-series/filter?Series=All-series)的四个插槽过滤结果。AM4 35 条、AM5 140 条、LGA1700 176 条、LGA1851 56 条。174 条目录卡片提及 Wi-Fi。未提及的条目保持 unknown，下一步需查产品规格、区域修订、出厂模块和实际硬件 ID。该目录未覆盖其他品牌、所有历史型号或区域变体。
 
 本次在 Windows 构建 26300 检查 1,651 个 INF，其中 669 个匹配当前系统的网络设备 ID，582 个 INF 通过签名检查。签名有效的 ID 去重后有 4,566 个 PCI ID、1,228 个 USB ID。一个网卡可能有多个 ID，同一芯片也可能有多个 SUBSYS。该数字不代表网卡或主板型号数。实际安装及联网、Windows 10 审计和其余品牌目录仍待核对。大型 ZIP 超过 FAT32 单文件大小限制，U 盘可使用 exFAT 或 NTFS。
+
+## 当前交付方式
+
+- 在线安装版 `NetworkRescue-<version>-online-install-win-x64.zip` 解包后运行 `Install.cmd`。包内不含驱动本体。扫描到缺驱动设备后，可从内置目录查询官方来源，选择并确认下载。ZIP 通过 SHA-256 校验后解包，随后用本机 Windows 的硬件 ID 和签名流程确认安装。目录是随程序发布的固定快照，暂不提供全量联网索引、驱动升级或回退。
+- 离线完整版 `NetworkRescue-<version>-offline-full-portable-win-x64.zip` 解包后运行 `Run-Network-Rescue.cmd`。主程序无需安装，直接使用随附运行时与同目录 `driver-packs`。关闭窗口即退出。免安装入口不创建安装注册、托盘或自启动；安装 Wi-Fi 驱动仍需管理员确认。
+
+两版都覆盖桌面和笔记本。在线安装版沿用与硬件测试的双装联动。旧的 `offline-wlan-library` 安装 ZIP 记录保留供追踪，当前离线交付以免安装完整版为准。

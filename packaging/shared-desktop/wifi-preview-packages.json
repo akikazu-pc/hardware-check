@@ -8,7 +8,11 @@
       "source": "https://download.gigabyte.com/FileList/Driver/mb_driver_639_realtekwifi_2024.10.138.3.zip",
       "archiveSha256": "766B5CD8702A31B11B29C582E109F23E8422F37571E11E77CEF1C93698A364AB",
       "driverDirectory": "RTWLANE_Driver/Win10X64",
-      "scope": "AM4 RTL8821CE; rev. 1.5 subsystem not verified"
+      "scope": "AM4 RTL8821CE; rev. 1.5 subsystem not verified",
+      "devicePrefixes": [
+        "PCI\\VEN_10EC&DEV_C821"
+      ],
+      "windows11Only": false
     },
     {
       "id": "intel22",
@@ -16,7 +20,14 @@
       "source": "https://download.gigabyte.com/FileList/Driver/mb_driver_630_dchsetup_22.200.0.6.zip",
       "archiveSha256": "7AA503DEBBF829A1E7D3FD9A0D9DD8AAA331AE5E63C89AB33BC015061F3DDC47",
       "driverDirectory": "DCH",
-      "scope": "AM4 older Intel adapters and AM5 AX210 candidate"
+      "scope": "AM4 older Intel adapters and AM5 AX210 candidate",
+      "devicePrefixes": [
+        "PCI\\VEN_8086&DEV_24FB",
+        "PCI\\VEN_8086&DEV_2526",
+        "PCI\\VEN_8086&DEV_2725",
+        "PCI\\VEN_8086&DEV_7A70"
+      ],
+      "windows11Only": false
     },
     {
       "id": "intel24",
@@ -24,7 +35,12 @@
       "source": "https://download.gigabyte.com/FileList/Driver/mb_driver_630_dchsetup_24.10.0.4.zip",
       "archiveSha256": "5B97C6386558C0B99B31B5044B1ED4AE71455AAF3A5AEB4387837FFE3F19ADAB",
       "driverDirectory": "DCH",
-      "scope": "AM5 AX210 candidate; LGA1700 Intel adapter candidate"
+      "scope": "AM5 AX210 candidate; LGA1700 Intel adapter candidate",
+      "devicePrefixes": [
+        "PCI\\VEN_8086&DEV_2725",
+        "PCI\\VEN_8086&DEV_7A70"
+      ],
+      "windows11Only": false
     },
     {
       "id": "rz616",
@@ -32,7 +48,11 @@
       "source": "https://download.gigabyte.com/FileList/Driver/mb_driver_644_amdwifi_3.3.0.496.zip",
       "archiveSha256": "20B761CD3433B570D154B6FB02A4893646CA47BEECFED95CB45634F5D3D0660F",
       "driverDirectory": "WLAN",
-      "scope": "AM5 RZ616"
+      "scope": "AM5 RZ616",
+      "devicePrefixes": [
+        "PCI\\VEN_14C3&DEV_7922"
+      ],
+      "windows11Only": false
     },
     {
       "id": "rtl8852",
@@ -40,7 +60,11 @@
       "source": "https://download.gigabyte.com/FileList/Driver/mb_driver_674_realtek8852wifi_6001.16.172.0.zip",
       "archiveSha256": "A6CD81E7792678D6BCB7A9F791C2CBD1972BC653B7A3A4102D0AF342F8038725",
       "driverDirectory": "RTWLANE_Driver/Win10X64",
-      "scope": "AM5 RTL8852CE"
+      "scope": "AM5 RTL8852CE",
+      "devicePrefixes": [
+        "PCI\\VEN_10EC&DEV_C852"
+      ],
+      "windows11Only": false
     },
     {
       "id": "mt7925",
@@ -48,7 +72,11 @@
       "source": "https://download.gigabyte.com/FileList/Driver/mb_driver_2682_mtk_5.7.0.4669.zip",
       "archiveSha256": "8F8C481A079DB0F1628C4491AF4580B3F17249C219C1671DABC53A4626FEB662",
       "driverDirectory": "WLAN",
-      "scope": "LGA1851 MT7925; vendor lists Windows 11 only"
+      "scope": "LGA1851 MT7925; vendor lists Windows 11 only",
+      "devicePrefixes": [
+        "PCI\\VEN_14C3&DEV_7925"
+      ],
+      "windows11Only": true
     },
     {
       "id": "rtl8922",
@@ -56,7 +84,11 @@
       "source": "https://download.gigabyte.com/FileList/Driver/mb_driver_3701_realtek8922wifi_6102.24.143.0_n.zip",
       "archiveSha256": "1FB90817CA682481197B65D746B5E8328283DBE4DF28A5CAECAA764E918FC589",
       "driverDirectory": "RTWLANE_Driver/Win11",
-      "scope": "LGA1851 alternate Realtek Wi-Fi; vendor lists Windows 11 only"
+      "scope": "LGA1851 alternate Realtek Wi-Fi; vendor lists Windows 11 only",
+      "devicePrefixes": [
+        "PCI\\VEN_10EC&DEV_8922"
+      ],
+      "windows11Only": true
     },
     {
       "id": "archer-t3u-plus",
@@ -65,7 +97,11 @@
       "archiveSha256": "8951271F3E1217E8FF2D5BBD6BFAB358D2DFA5F330BDFB682928F305F1960E4F",
       "driverDirectory": "Archer_T3U_Plus_V1_Setup/plugins/Driver Files/Driver",
       "archiveLayout": "direct",
-      "scope": "TP-Link Archer T3U Plus V1/V1.6 USB; vendor lists Windows 10/11 x64"
+      "scope": "TP-Link Archer T3U Plus V1/V1.6 USB; vendor lists Windows 10/11 x64",
+      "devicePrefixes": [
+        "USB\\VID_2357&PID_0138"
+      ],
+      "windows11Only": false
     },
     {
       "id": "qualcomm-wifi7",
@@ -73,7 +109,11 @@
       "source": "https://download.gigabyte.com/FileList/Driver/mb_driver_2686_qualcomm_3.1.0.1571.zip?v=178bb71655f20275bdc06eafb817aea6",
       "archiveSha256": "EB846CDE735A836C17D25A298363C05C283800970EE8DF2D2496A389BD04DD16",
       "driverDirectory": "WLAN",
-      "scope": "GIGABYTE X870E AORUS MASTER Qualcomm Wi-Fi 7; vendor lists Windows 11 x64 only"
+      "scope": "GIGABYTE X870E AORUS MASTER Qualcomm Wi-Fi 7; vendor lists Windows 11 x64 only",
+      "devicePrefixes": [
+        "PCI\\VEN_17CB&DEV_1107"
+      ],
+      "windows11Only": true
     }
   ]
 }

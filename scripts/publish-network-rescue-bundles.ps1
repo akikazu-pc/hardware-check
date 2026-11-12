@@ -44,33 +44,44 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%~dp0install.ps1"
 if errorlevel 1 pause
 "@ | Set-Content -LiteralPath (Join-Path $staging.FullName 'Install.cmd') -Encoding ascii
 
-    $flavors = @('slim')
+    $flavors = @('online-install')
     if ($IncludeCatalog) {
-        $flavors += $(if ($WlanArchive) { 'offline-wlan-library' } else { 'offline-catalog' })
+        $flavors += $(if ($WlanArchive) { 'offline-full-portable' } else { 'offline-catalog-portable' })
     }
     if ($RealtekVendorZip -and -not $IncludeCatalog) {
-        $flavors += 'offline-preview'
+        $flavors += 'offline-preview-portable'
     }
 
     foreach ($flavor in $flavors) {
-        if ($flavor -eq 'offline-preview') {
-            $packRoot = Join-Path $staging.FullName 'driver-packs'
+        $bundleRoot = $staging.FullName
+        if ($flavor -ne 'online-install') {
+            $bundleRoot = Join-Path $staging.FullName 'portable'
+            New-Item -ItemType Directory -Path $bundleRoot | Out-Null
+            Get-ChildItem -LiteralPath $releasePayload | Copy-Item -Destination $bundleRoot -Recurse
+            @"
+@echo off
+start "" "%~dp0AkikazuHardwareCheck.exe" --portable-rescue
+"@ | Set-Content -LiteralPath (Join-Path $bundleRoot 'Run-Network-Rescue.cmd') -Encoding ascii
+        }
+
+        if ($flavor -eq 'offline-preview-portable') {
+            $packRoot = Join-Path $bundleRoot 'driver-packs'
             New-Item -ItemType Directory -Path $packRoot | Out-Null
             & (Join-Path $PSScriptRoot 'prototype/prepare-realtek-wifi-pack.ps1') -VendorZip $RealtekVendorZip `
                 -OutputDirectory (Join-Path $packRoot 'realtek-8852-wifi-6001.16.172.0')
         }
 
-        if ($flavor -in 'offline-catalog', 'offline-wlan-library') {
-            & (Join-Path $PSScriptRoot 'prepare-network-rescue-packs.ps1') -OutputDirectory $staging.FullName -VendorSourceDirectory $VendorSourceDirectory
+        if ($flavor -in 'offline-catalog-portable', 'offline-full-portable') {
+            & (Join-Path $PSScriptRoot 'prepare-network-rescue-packs.ps1') -OutputDirectory $bundleRoot -VendorSourceDirectory $VendorSourceDirectory
         }
 
-        if ($flavor -eq 'offline-wlan-library') {
-            & (Join-Path $PSScriptRoot 'prepare-sdio-wlan-library.ps1') -Archive $WlanArchive -OutputDirectory $staging.FullName
+        if ($flavor -eq 'offline-full-portable') {
+            & (Join-Path $PSScriptRoot 'prepare-sdio-wlan-library.ps1') -Archive $WlanArchive -OutputDirectory $bundleRoot
         }
 
         $name = "NetworkRescue-$version-$flavor-win-x64.zip"
         $archive = Join-Path $output $name
-        Compress-Archive -Path (Join-Path $staging.FullName '*') -DestinationPath $archive -CompressionLevel Fastest -Force
+        Compress-Archive -Path (Join-Path $bundleRoot '*') -DestinationPath $archive -CompressionLevel Fastest -Force
         $hash = (Get-FileHash -LiteralPath $archive -Algorithm SHA256).Hash
         Set-Content -LiteralPath "$archive.sha256" -Value "$hash  $name" -Encoding ascii
         Write-Output "Output: $archive"

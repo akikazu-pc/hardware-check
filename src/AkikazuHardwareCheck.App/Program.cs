@@ -45,6 +45,12 @@ internal static class Program
             return;
         }
 
+        if (args is ["--portable-rescue"] && DistributionProfile.Current.Channel != DistributionChannel.Store)
+        {
+            RunPortableRescue();
+            return;
+        }
+
         StartupTrace.Record("main");
         var startup = SharedDesktopStartupPolicy.Resolve(
             args,
@@ -123,6 +129,29 @@ internal static class Program
                 ExitSilently(exception);
             }
         }
+    }
+
+    private static void RunPortableRescue()
+    {
+        ApplicationConfiguration.Initialize();
+        InstallCrashGuard();
+        Application.SetColorMode(SystemColorMode.System);
+        using var instance = new Mutex(true, @"Local\Akikazu.NetworkRescue.Portable", out var created);
+        if (!created)
+        {
+            return;
+        }
+
+        var translator = Translator.Load(AppLanguage.FromCulture(CultureInfo.CurrentUICulture.Name));
+        using var window = new Form
+        {
+            Text = translator[SharedModuleId.NetworkRescue.DisplayNameKey()],
+            Icon = Ui.AppIcon,
+            StartPosition = FormStartPosition.CenterScreen,
+            ClientSize = new Size(1100, 720),
+        };
+        window.Controls.Add(new NetworkRescueView(translator, [], Path.Combine(AppContext.BaseDirectory, "driver-packs")));
+        Application.Run(window);
     }
 
     /// <summary>

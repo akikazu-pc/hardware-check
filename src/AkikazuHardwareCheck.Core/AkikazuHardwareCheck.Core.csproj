@@ -6,6 +6,7 @@
     <SelfContained>false</SelfContained>
   </PropertyGroup>
   <ItemGroup>
+    <EmbeddedResource Include="..\..\packaging\shared-desktop\wifi-preview-packages.json" LogicalName="rescue.wifi-preview-packages.json" />
     <EmbeddedResource Include="Localization\*.json" LogicalName="i18n.%(Filename).json" />
     <EmbeddedResource Include="Reporting\Resources\*" LogicalName="report.%(Filename)%(Extension)" />
     <EmbeddedResource Include="..\..\third-party\pawnio\PawnIO_setup.exe" LogicalName="pawnio.setup.exe" Condition="'$(DistributionChannel)' != 'Store'" />

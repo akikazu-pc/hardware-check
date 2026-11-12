@@ -14,6 +14,7 @@ internal sealed class NetworkRescueView : UserControl
     private const float HEADING_FONT_SIZE = 12f;
 
     private readonly IReadOnlyList<InstalledModule> _modules;
+    private readonly string? _portableDriverDirectory;
     private readonly Label _heading = Ui.Label(isBold: true);
     private readonly Label _note = Ui.Label();
     private readonly Label _networkHeading = Ui.Label(isBold: true);
@@ -24,6 +25,7 @@ internal sealed class NetworkRescueView : UserControl
     private readonly Button _export = Ui.Button();
     private readonly Button _preview = Ui.Button();
     private readonly Button _searchFolder = Ui.Button();
+    private readonly Button _online = Ui.Button();
     private readonly Label _scanStatus = Ui.Label();
     private readonly ListView _pciDevices = ListViewTable.Create();
     private readonly TabPage _pciPage = new();
@@ -32,10 +34,11 @@ internal sealed class NetworkRescueView : UserControl
     private string? _scanStatusKey;
     private Translator _t;
 
-    public NetworkRescueView(Translator t, IReadOnlyList<InstalledModule> modules)
+    public NetworkRescueView(Translator t, IReadOnlyList<InstalledModule> modules, string? portableDriverDirectory = null)
     {
         _t = t;
         _modules = modules;
+        _portableDriverDirectory = portableDriverDirectory;
         Dock = DockStyle.Fill;
         Margin = new Padding(0);
         BackColor = SystemColors.Control;
@@ -48,8 +51,10 @@ internal sealed class NetworkRescueView : UserControl
         _export.Click += (_, _) => ExportDiagnostics();
         _preview.Click += async (_, _) => await PreviewInfAsync();
         _searchFolder.Click += async (_, _) => await SearchFolderAsync();
+        _online.Click += async (_, _) => await DownloadDriverAsync();
         _preview.Enabled = false;
         _searchFolder.Enabled = false;
+        _online.Enabled = false;
         _export.Enabled = false;
         _pciDevices.Columns.Add("", 550);
         _pciDevices.Columns.Add("", 150);
@@ -93,6 +98,7 @@ internal sealed class NetworkRescueView : UserControl
         _export.Text = t["rescue.export"];
         _preview.Text = t["rescue.previewInf"];
         _searchFolder.Text = t["rescue.searchFolder"];
+        _online.Text = t["rescue.online"];
         _pciDevices.Columns[0].Text = t["rescue.hardwareIds"];
         _pciDevices.Columns[1].Text = t["rescue.problemCode"];
         _pciDevices.Columns[3].Text = t["rescue.candidateType"];
@@ -160,6 +166,7 @@ internal sealed class NetworkRescueView : UserControl
         _export.Enabled = false;
         _preview.Enabled = false;
         _searchFolder.Enabled = false;
+        _online.Enabled = false;
         _diagnostic = null;
         _scanStatusKey = "rescue.scanning";
         ShowDiagnostic();
@@ -180,6 +187,7 @@ internal sealed class NetworkRescueView : UserControl
             _export.Enabled = _diagnostic is not null;
             _preview.Enabled = _diagnostic?.Devices.Count > 0;
             _searchFolder.Enabled = _preview.Enabled;
+            _online.Enabled = _diagnostic?.Devices.Any(device => device.ProblemCode == 28) == true;
             ShowDiagnostic();
         }
     }
@@ -278,7 +286,11 @@ internal sealed class NetworkRescueView : UserControl
         }
 
         using var folder = new FolderBrowserDialog { Description = _t["rescue.selectFolder"], ShowNewFolderButton = false };
-        if (_modules.FirstOrDefault(module => module.Module == SharedModuleId.NetworkRescue) is { } rescue)
+        if (Directory.Exists(_portableDriverDirectory))
+        {
+            folder.SelectedPath = _portableDriverDirectory;
+        }
+        else if (_modules.FirstOrDefault(module => module.Module == SharedModuleId.NetworkRescue) is { } rescue)
         {
             var bundledPacks = Path.Combine(rescue.InstallRoot, "driver-packs");
             if (Directory.Exists(bundledPacks))
@@ -293,7 +305,7 @@ internal sealed class NetworkRescueView : UserControl
         }
 
         var root = folder.SelectedPath;
-        _scan.Enabled = _preview.Enabled = _searchFolder.Enabled = false;
+        _scan.Enabled = _preview.Enabled = _searchFolder.Enabled = _online.Enabled = false;
         _scanStatusKey = "rescue.searchingFolder";
         _scanStatus.Text = _t[_scanStatusKey];
         OfflinePackageSearchResult? result = null;
@@ -313,6 +325,7 @@ internal sealed class NetworkRescueView : UserControl
         }
 
         _scan.Enabled = _preview.Enabled = _searchFolder.Enabled = true;
+        _online.Enabled = diagnostic.Devices.Any(device => device.ProblemCode == 28);
         _scanStatus.Text = _scanStatusKey is { } status ? _t[status] : "";
         if (result is null)
         {
@@ -332,6 +345,126 @@ internal sealed class NetworkRescueView : UserControl
             await ReviewInfAsync(selected.InfPath, diagnostic.Devices);
         }
     }
+
+    private async Task DownloadDriverAsync()
+    {
+        if (_diagnostic is not { } diagnostic)
+        {
+            return;
+        }
+
+        var packages = OnlineDriverCatalog.Find(diagnostic);
+        if (packages.Count == 0)
+        {
+            ShowInstallResult("rescue.onlineNoMatch");
+            return;
+        }
+
+        var selected = packages.Count == 1 ? packages[0] : SelectOnlinePackage(packages);
+        if (selected is null)
+        {
+            return;
+        }
+
+        var prompt = string.Join(Environment.NewLine, _t["rescue.onlineConfirm"], PackageLabel(selected), selected.Source);
+        if (MessageBox.Show(this, prompt, _t["rescue.onlineCandidates"], MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) != DialogResult.Yes)
+        {
+            return;
+        }
+
+        DirectoryInfo? workspace = null;
+        string? driverDirectory = null;
+        OfflinePackageSearchResult? result = null;
+        _scan.Enabled = _preview.Enabled = _searchFolder.Enabled = _online.Enabled = false;
+        _scanStatusKey = "rescue.onlineDownloading";
+        _scanStatus.Text = _t[_scanStatusKey];
+        try
+        {
+            try
+            {
+                workspace = Directory.CreateTempSubdirectory("akikazu-rescue-");
+                using var timeout = new CancellationTokenSource(TimeSpan.FromMinutes(3));
+                var root = workspace.FullName;
+                driverDirectory = await Task.Run(() => OnlineDriverCatalog.DownloadAsync(selected, root, timeout.Token));
+                result = await Task.Run(() => OfflinePackageSearch.Find(driverDirectory, diagnostic.Devices));
+                _scanStatusKey = null;
+            }
+            catch (Exception exception) when (exception is IOException or UnauthorizedAccessException or HttpRequestException
+                or OperationCanceledException or InvalidDataException or System.ComponentModel.Win32Exception)
+            {
+                _scanStatusKey = "rescue.onlineFailed";
+            }
+
+            if (IsDisposed)
+            {
+                return;
+            }
+
+            _scan.Enabled = _preview.Enabled = _searchFolder.Enabled = _online.Enabled = true;
+            _scanStatus.Text = _scanStatusKey is { } status ? _t[status] : "";
+            if (result is null || driverDirectory is null)
+            {
+                return;
+            }
+
+            if (result.Candidates.Count == 0)
+            {
+                ShowInstallResult("rescue.infNoMatch");
+                return;
+            }
+
+            var candidate = result.Candidates.Count == 1 ? result.Candidates[0] : SelectCandidate(driverDirectory, result.Candidates, "");
+            if (candidate is not null)
+            {
+                await ReviewInfAsync(candidate.InfPath, diagnostic.Devices);
+            }
+        }
+        finally
+        {
+            try
+            {
+                workspace?.Delete(recursive: true);
+            }
+            catch (Exception exception) when (exception is IOException or UnauthorizedAccessException)
+            {
+                // A third-party lock can delay removal of temporary files.
+            }
+        }
+    }
+
+    private OnlineDriverPackage? SelectOnlinePackage(IReadOnlyList<OnlineDriverPackage> packages)
+    {
+        using var dialog = new Form
+        {
+            Text = _t["rescue.onlineCandidates"],
+            StartPosition = FormStartPosition.CenterParent,
+            ClientSize = new Size(570, 280),
+            MinimizeBox = false,
+            ShowInTaskbar = false,
+        };
+        var list = new ListBox { Dock = DockStyle.Fill };
+        foreach (var package in packages)
+        {
+            list.Items.Add(PackageLabel(package));
+        }
+
+        var select = Ui.Button();
+        select.Text = _t["rescue.onlineSelect"];
+        select.DialogResult = DialogResult.OK;
+        select.Enabled = false;
+        list.SelectedIndexChanged += (_, _) => select.Enabled = list.SelectedIndex >= 0;
+        var footer = new FlowLayoutPanel { Dock = DockStyle.Bottom, AutoSize = true };
+        footer.Controls.Add(select);
+        dialog.Controls.Add(list);
+        dialog.Controls.Add(footer);
+        dialog.AcceptButton = select;
+        return dialog.ShowDialog(this) == DialogResult.OK && list.SelectedIndex >= 0
+            ? packages[list.SelectedIndex]
+            : null;
+    }
+
+    private static string PackageLabel(OnlineDriverPackage package) => $"{package.Id} {package.Version}";
 
     private OfflinePackageCandidate? SelectCandidate(string root, IReadOnlyList<OfflinePackageCandidate> candidates, string skipped)
     {
@@ -411,6 +544,7 @@ internal sealed class NetworkRescueView : UserControl
         _scan.Enabled = false;
         _preview.Enabled = false;
         _searchFolder.Enabled = false;
+        _online.Enabled = false;
         _export.Enabled = false;
         string resultKey;
         try
@@ -497,13 +631,20 @@ internal sealed class NetworkRescueView : UserControl
         actions.Controls.Add(_export);
         actions.Controls.Add(_preview);
         actions.Controls.Add(_searchFolder);
+        if (_portableDriverDirectory is null && DistributionProfile.Current.Channel != DistributionChannel.Store)
+        {
+            actions.Controls.Add(_online);
+        }
         scanLayout.Controls.Add(actions, 0, 0);
         scanLayout.Controls.Add(_scanStatus, 0, 1);
         scanLayout.Controls.Add(_pciDevices, 0, 2);
         _pciPage.Controls.Add(scanLayout);
         _modulesPage.Controls.Add(_moduleList);
         tabs.TabPages.Add(_pciPage);
-        tabs.TabPages.Add(_modulesPage);
+        if (_portableDriverDirectory is null)
+        {
+            tabs.TabPages.Add(_modulesPage);
+        }
         root.Controls.Add(tabs, 0, 4);
         return root;
     }
