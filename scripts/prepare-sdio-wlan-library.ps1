@@ -11,16 +11,10 @@ if ((Get-FileHash -LiteralPath $archivePath -Algorithm SHA256).Hash -ne $expecte
     throw "The WLAN archive does not match the pinned SDIO snapshot $archiveName."
 }
 
-$originals = Join-Path $OutputDirectory 'vendor-installers'
 $drivers = Join-Path $OutputDirectory 'driver-packs/sdio-wlan-wifi-26082'
 New-Item -ItemType Directory -Path $drivers | Out-Null
-$copy = Join-Path $originals $archiveName
-Copy-Item -LiteralPath $archivePath -Destination $copy
-if ((Get-FileHash -LiteralPath $copy -Algorithm SHA256).Hash -ne $expectedHash) {
-    throw 'The copied archive did not match its expected hash.'
-}
 
-& (Join-Path ([Environment]::SystemDirectory) 'tar.exe') -xf $copy -C $drivers
+& (Join-Path ([Environment]::SystemDirectory) 'tar.exe') -xf $archivePath -C $drivers
 if ($LASTEXITCODE -ne 0) {
     throw "Unable to unpack $archiveName."
 }

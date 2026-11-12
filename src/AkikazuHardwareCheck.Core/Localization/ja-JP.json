@@ -236,6 +236,7 @@
   "rescue.noModules": "インストール済みモジュールが見つかりません",
   "rescue.scan": "ネットワーク候補をスキャン",
   "rescue.export": "診断情報をエクスポート",
+  "rescue.exportDriver": "ドライバー ZIP をエクスポート",
   "rescue.pci": "ネットワーク デバイス候補",
   "rescue.hardwareIds": "ハードウェア ID",
   "rescue.problemCode": "デバイスの問題コード",

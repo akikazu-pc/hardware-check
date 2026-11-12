@@ -3,7 +3,8 @@ param(
     [string]$RealtekVendorZip,
     [switch]$IncludeCatalog,
     [string]$VendorSourceDirectory,
-    [string]$WlanArchive
+    [string]$WlanArchive,
+    [string]$SevenZipExecutable
 )
 
 $ErrorActionPreference = 'Stop'
@@ -13,6 +14,13 @@ if ($WlanArchive) {
         throw 'Use -IncludeCatalog with -WlanArchive.'
     }
     $WlanArchive = (Resolve-Path -LiteralPath $WlanArchive).Path
+    if (-not $SevenZipExecutable) {
+        $SevenZipExecutable = (Get-Command 7z.exe, 7za.exe -ErrorAction SilentlyContinue | Select-Object -First 1).Source
+    }
+    if (-not $SevenZipExecutable) {
+        throw 'Specify -SevenZipExecutable for the solid offline archive.'
+    }
+    $SevenZipExecutable = (Resolve-Path -LiteralPath $SevenZipExecutable).Path
 }
 
 if ($RealtekVendorZip) {
@@ -72,16 +80,32 @@ start "" "%~dp0AkikazuHardwareCheck.exe" --portable-rescue
         }
 
         if ($flavor -in 'offline-catalog-portable', 'offline-full-portable') {
-            & (Join-Path $PSScriptRoot 'prepare-network-rescue-packs.ps1') -OutputDirectory $bundleRoot -VendorSourceDirectory $VendorSourceDirectory
+            & (Join-Path $PSScriptRoot 'prepare-network-rescue-packs.ps1') -OutputDirectory $bundleRoot -VendorSourceDirectory $VendorSourceDirectory -ExcludeVendorArchives:($flavor -eq 'offline-full-portable')
         }
 
         if ($flavor -eq 'offline-full-portable') {
             & (Join-Path $PSScriptRoot 'prepare-sdio-wlan-library.ps1') -Archive $WlanArchive -OutputDirectory $bundleRoot
         }
 
-        $name = "NetworkRescue-$version-$flavor-win-x64.zip"
+        Copy-Item -LiteralPath (Join-Path $root 'docs/network-rescue-driver-index.csv') -Destination $bundleRoot
+        $extension = if ($flavor -eq 'offline-full-portable') { '7z' } else { 'zip' }
+        $name = "NetworkRescue-$version-$flavor-win-x64.$extension"
         $archive = Join-Path $output $name
-        Compress-Archive -Path (Join-Path $bundleRoot '*') -DestinationPath $archive -CompressionLevel Fastest -Force
+        if ($extension -eq '7z') {
+            $temporaryArchive = Join-Path $staging.FullName 'portable.7z'
+            Push-Location -LiteralPath $bundleRoot
+            try {
+                & $SevenZipExecutable a -t7z -mx=3 -mqs=on -ms=512m -bd -bso0 $temporaryArchive '*'
+                if ($LASTEXITCODE -ne 0) { throw 'Solid archive creation failed.' }
+                & $SevenZipExecutable t -bd -bso0 $temporaryArchive
+                if ($LASTEXITCODE -ne 0) { throw 'Solid archive integrity test failed.' }
+            } finally {
+                Pop-Location
+            }
+            Move-Item -LiteralPath $temporaryArchive -Destination $archive -Force
+        } else {
+            Compress-Archive -Path (Join-Path $bundleRoot '*') -DestinationPath $archive -CompressionLevel Fastest -Force
+        }
         $hash = (Get-FileHash -LiteralPath $archive -Algorithm SHA256).Hash
         Set-Content -LiteralPath "$archive.sha256" -Value "$hash  $name" -Encoding ascii
         Write-Output "Output: $archive"

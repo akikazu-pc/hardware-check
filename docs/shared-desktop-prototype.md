@@ -255,10 +255,10 @@ pwsh -NoProfile -File scripts/publish-network-rescue-bundles.ps1 -IncludeCatalog
 
 ### 扩展 WLAN 驱动库和主板目录
 
-从 [SDIO 官方种子](https://www.glenn.delahoy.com/snappy-driver-installer-origin/)仅下载 WLAN/Wi-Fi 压缩包。当前固定快照为 `DP_WLAN-WiFi_26082.7z`，约 681 MiB，含 1,634 个 INF。构建会校验归档 SHA-256，保留原始归档并解包到驱动搜索目录。安装和搜索使用断网急救自身功能。第三方驱动的再分发条款按各包处理，本构建用于本地救援。
+从 [SDIO 官方种子](https://www.glenn.delahoy.com/snappy-driver-installer-origin/)仅下载 WLAN/Wi-Fi 压缩包。固定快照 `DP_WLAN-WiFi_26082.7z` 含 1,634 个 INF。构建校验归档 SHA-256，并将驱动文件解包到驱动搜索目录。完整版使用固实 7z 保存相对路径，原始下载包的链接和哈希可从索引查询。
 
 ```powershell
-pwsh -NoProfile -File scripts/publish-network-rescue-bundles.ps1 -IncludeCatalog -WlanArchive <本地WLAN归档>
+pwsh -NoProfile -File scripts/publish-network-rescue-bundles.ps1 -IncludeCatalog -WlanArchive <本地WLAN归档> -SevenZipExecutable <7z.exe或7za.exe>
 ```
 
 可用 `scripts/audit-network-rescue-library.ps1 -DriverDirectory <已解包的driver-packs>` 检查当前 Windows 构建能解析的网络类 INF 和通过签名验证的硬件 ID。该脚本从文件提取字面 ID，再通过应用的 SetupAPI 匹配检查。结果是一份当前构建上的证据下界。它不会安装驱动，不能替代板载模块映射或缺驱动实机测试。
@@ -270,6 +270,8 @@ pwsh -NoProfile -File scripts/publish-network-rescue-bundles.ps1 -IncludeCatalog
 ## 当前交付方式
 
 - 在线安装版 `NetworkRescue-<version>-online-install-win-x64.zip` 解包后运行 `Install.cmd`。包内不含驱动本体。扫描到缺驱动设备后，可从内置目录查询官方来源，选择并确认下载。ZIP 通过 SHA-256 校验后解包，随后用本机 Windows 的硬件 ID 和签名流程确认安装。目录是随程序发布的固定快照，暂不提供全量联网索引、驱动升级或回退。
-- 离线完整版 `NetworkRescue-<version>-offline-full-portable-win-x64.zip` 解包后运行 `Run-Network-Rescue.cmd`。主程序无需安装，直接使用随附运行时与同目录 `driver-packs`。关闭窗口即退出。免安装入口不创建安装注册、托盘或自启动；安装 Wi-Fi 驱动仍需管理员确认。
+- 离线完整版 `NetworkRescue-<version>-offline-full-portable-win-x64.7z` 解包后运行 `Run-Network-Rescue.cmd`。主程序直接使用随附运行时与同目录 `driver-packs`。关闭窗口即退出。安装 Wi-Fi 驱动需要管理员确认。
+
+两版均包含[原厂驱动下载索引](network-rescue-driver-index.csv)，可按型号查找官网支持页、下载直链、版本和 SHA-256。在驱动候选列表选中一项后，点击「导出驱动 ZIP」可带走该 INF 所在的签名驱动目录及子目录，保留相对路径供另一台电脑解压使用。
 
 两版都覆盖桌面和笔记本。在线安装版沿用与硬件测试的双装联动。旧的 `offline-wlan-library` 安装 ZIP 记录保留供追踪，当前离线交付以免安装完整版为准。

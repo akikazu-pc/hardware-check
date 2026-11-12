@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using System.IO.Compression;
 using AkikazuHardwareCheck.Core.Configuration;
 using AkikazuHardwareCheck.Core.Localization;
 using AkikazuHardwareCheck.Core.SharedDesktop;
@@ -414,7 +415,7 @@ internal sealed class NetworkRescueView : UserControl
                 return;
             }
 
-            var candidate = result.Candidates.Count == 1 ? result.Candidates[0] : SelectCandidate(driverDirectory, result.Candidates, "");
+            var candidate = SelectCandidate(driverDirectory, result.Candidates, "");
             if (candidate is not null)
             {
                 await ReviewInfAsync(candidate.InfPath, diagnostic.Devices);
@@ -494,9 +495,24 @@ internal sealed class NetworkRescueView : UserControl
         review.Text = _t["rescue.reviewInf"];
         review.DialogResult = DialogResult.OK;
         review.Enabled = false;
-        list.SelectedIndexChanged += (_, _) => review.Enabled = list.SelectedItems.Count == 1;
+        var export = Ui.Button();
+        export.Text = _t["rescue.exportDriver"];
+        export.Enabled = false;
+        export.Click += async (_, _) =>
+        {
+            if (list.SelectedItems.Count == 1 && list.SelectedItems[0].Tag is OfflinePackageCandidate candidate)
+            {
+                await ExportDriverAsync(dialog, candidate.InfPath);
+            }
+        };
+        list.SelectedIndexChanged += (_, _) => review.Enabled = export.Enabled = list.SelectedItems.Count == 1;
+        if (list.Items.Count == 1)
+        {
+            list.Items[0].Selected = true;
+        }
         var footer = new FlowLayoutPanel { Dock = DockStyle.Bottom, AutoSize = true };
         footer.Controls.Add(review);
+        footer.Controls.Add(export);
         if (skipped.Length > 0)
         {
             var note = Ui.Label();
@@ -510,6 +526,70 @@ internal sealed class NetworkRescueView : UserControl
         return dialog.ShowDialog(this) == DialogResult.OK && list.SelectedItems.Count == 1
             ? (OfflinePackageCandidate?)list.SelectedItems[0].Tag
             : null;
+    }
+
+    private async Task ExportDriverAsync(Form owner, string infPath)
+    {
+        using var dialog = new SaveFileDialog
+        {
+            Filter = "ZIP (*.zip)|*.zip",
+            FileName = Path.GetFileNameWithoutExtension(infPath) + ".zip",
+        };
+        if (dialog.ShowDialog(owner) != DialogResult.OK)
+        {
+            return;
+        }
+
+        owner.Enabled = false;
+        try
+        {
+            await Task.Run(() =>
+            {
+                if (OfflineDriverInstaller.Verify(infPath) is null)
+                {
+                    throw new InvalidDataException();
+                }
+
+                var source = Path.GetDirectoryName(infPath)!;
+                var destination = dialog.FileName;
+                var relative = Path.GetRelativePath(source, destination);
+                if (!Path.IsPathRooted(relative) && !relative.StartsWith(".." + Path.DirectorySeparatorChar, StringComparison.Ordinal))
+                {
+                    throw new InvalidDataException();
+                }
+
+                var temporary = destination + "." + Guid.NewGuid().ToString("N") + ".tmp";
+                try
+                {
+                    using (var zip = ZipFile.Open(temporary, ZipArchiveMode.Create))
+                    {
+                        var options = new EnumerationOptions
+                        {
+                            RecurseSubdirectories = true,
+                            AttributesToSkip = FileAttributes.ReparsePoint,
+                            IgnoreInaccessible = false,
+                        };
+                        foreach (var file in Directory.EnumerateFiles(source, "*", options))
+                        {
+                            zip.CreateEntryFromFile(file, Path.GetRelativePath(source, file));
+                        }
+                    }
+                    File.Move(temporary, destination, overwrite: true);
+                }
+                finally
+                {
+                    File.Delete(temporary);
+                }
+            });
+        }
+        catch (Exception exception) when (exception is IOException or UnauthorizedAccessException or InvalidDataException)
+        {
+            MessageBox.Show(owner, _t["rescue.exportFailed"], _t["rescue.heading"], MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+        finally
+        {
+            owner.Enabled = true;
+        }
     }
 
     private async Task ConfirmInstallAsync(string path, OfflineInfMatch match)

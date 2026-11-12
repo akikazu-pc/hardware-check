@@ -236,6 +236,7 @@
   "rescue.noModules": "未发现已安装模块",
   "rescue.scan": "扫描网卡候选",
   "rescue.export": "导出诊断清单",
+  "rescue.exportDriver": "导出驱动 ZIP",
   "rescue.pci": "网络设备候选",
   "rescue.hardwareIds": "硬件 ID",
   "rescue.problemCode": "设备问题码",

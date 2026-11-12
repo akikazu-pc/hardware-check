@@ -4,7 +4,7 @@
 
 | 统计范围 | 分母 | 已核对 | 比例 |
 | --- | ---: | ---: | ---: |
-| 华硕 AM5 / LGA1851 已发现的 Wi-Fi 主板（全球目录 100 条加 ROG HERO 手册 1 条） | 101 | 5 条有原厂手册模块证据 | 4.95% |
+| 华硕 AM5 / LGA1851 已发现的 Wi-Fi 主板样本 | 99 | 98 条有原厂手册或型号专属下载页的模块候选 | 98.99% |
 | 戴尔近期笔记本，Windows 11 x64 系统 ID 组合 | 127 | 125 条 OEM 元数据列出 WLAN INF | 98.43% |
 | 戴尔近期笔记本，Windows 10 x64 系统 ID 组合 | 39 | 39 条 OEM 元数据列出 WLAN INF | 100% |
 | HP sp173191 文档的具体 PCI SUBSYS，在 Windows 11 构建 26300 | 23 | 23 条被离线库的签名 INF 匹配 | 100% |
@@ -15,7 +15,7 @@
 
 HP 从[官方 SoftPaq](https://ftp.ext.hp.com/pub/softpaq/sp173001-173500/sp173191.html)提取了 23 个带 SUBSYS 的 PCI ID，再用应用的 SetupAPI 匹配和 INF 签名校验核对。硬件 ID 按缺驱动样例传给程序，未对本机安装驱动。一次 Windows 11 审计不能代表 Windows 10 或实机联网。
 
-总体百分比分母尚未冻结。上述新型号没有完整的缺驱动实机安装联网记录。下一批补戴尔元数据不匹配的两条、华硕 96 条待核记录及技嘉、微星、华擎等新平台型号。随后核对 HP、联想及其他笔记本 OEM，按各型号实际网卡变体分别验证 Windows 10/11。
+总体百分比分母尚未冻结。上述新型号缺少完整的断网实机安装与联网记录。继续补齐戴尔两条元数据缺口、华硕的出厂子系统 ID，以及技嘉、微星、华擎等新平台型号。后续按实际网卡变体分别验证 Windows 10/11。
 
 ## 优先系列覆盖
 
@@ -49,3 +49,11 @@ HP 从[官方 SoftPaq](https://ftp.ext.hp.com/pub/softpaq/sp173001-173500/sp1731
 DeepSeek Harness 为联想 DS575356 找到了 Inno Setup 静态解包路径，现已接入在线版和离线完整版。在线版按需下载并验证 InnoExtract 1.9 和联想原包的 SHA-256，离线版在打包时解出 INF 和对应文件。Windows 11 x64 构建 26300 的实际下载验证匹配了三个微软签名 INF 中的七个联想子系统 ID。MediaTek 为 DEV_7925 的 E02517AA、E0FF17AA 及 DEV_7927 的 E0E417AA。Realtek 为 DEV_B852 的 485317AA、B85317AA 及 DEV_8922 的 492217AA、492317AA。联想支持页列出 Legion 5 16IAX10、Legion Pro 5 16IAX10 和 16IAX10H，具体出厂配置对应关系仍待实机核对。[联想 DS575356](https://support.lenovo.com/ao/en/downloads/DS575356)
 
 Alienware 16 Aurora AC16250（0D35）的三个 Ubuntu 认证配置均列出 MT7925 的子系统 `105B:E123`。戴尔 7TY65 的微软签名 INF 在 Windows 11 构建 26300 匹配 `PCI\VEN_14C3&DEV_7925&SUBSYS_E123105B`，该 ID 已加入在线目录。AC16251 的原厂资料确认 MT7925B22M，精确出厂 ID 仍待核验。[Canonical 认证记录](https://ubuntu.com/certified/platforms/15401) · [戴尔 7TY65](https://www.dell.com/support/home/en-us/drivers/driversdetails?driverid=7ty65)
+
+### 离线归档审计与下一批型号
+
+原 6.28 GiB ZIP 的 12,405 个文件均可完整读取并通过 CRC 校验。按内容 SHA-256 分组后有 7,170 份唯一内容，5,235 个重复副本。重复副本占原始文件约 2.94 GiB，在 ZIP 中约占 1.69 GiB。另有约 0.99 GiB 为已解包驱动对应的原始下载归档。固实 7z 成品为 1.95 GiB，减少 68.96%。全部 12,373 个驱动文件的路径、大小和 CRC 与原 ZIP 一致。索引记录 14 个已收录的原厂包。[驱动下载索引](network-rescue-driver-index.csv)
+
+Windows 11 构建 26300 的库审计覆盖 1,665 个 INF。其中 681 个匹配当前系统的网络设备 ID，594 个通过签名检查。去重后签名有效的 ID 有 4,566 个 PCI ID 和 1,228 个 USB ID。其余 INF 仍需按系统、架构及驱动组件用途核对。
+
+华硕 PRIME B650M-A AX 的型号专属驱动页列出 Realtek RTL8852BE，适用于 Windows 10/11 x64。原厂 ZIP 的 SHA-256 和包内 INF 签名已核对。INF 中有 21 个 RTL8852BE 子系统 ID，整机出厂 ID 与实机安装仍待查。华硕样本现有 98/99 条模块候选证据，另有两条明确为预留接口。最后一个模块资料缺口为 B850M AYW GAMING WIFI-CSM。[PRIME B650M-A AX 下载页](https://www.asus.com/us/supportonly/prime%20b650m-a%20ax/helpdesk_download/) · [原厂 ZIP](https://dlcdnets.asus.com/pub/ASUS/mb/08WIRELESS/DRV_WiFi_RTK_8852BE_SZ-TSD1_W11_64_V6001151610_20251128R.zip)

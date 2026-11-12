@@ -236,6 +236,7 @@
   "rescue.noModules": "未發現已安裝模組",
   "rescue.scan": "掃描網卡候選",
   "rescue.export": "匯出診斷清單",
+  "rescue.exportDriver": "匯出驅動程式 ZIP",
   "rescue.pci": "網路裝置候選",
   "rescue.hardwareIds": "硬體 ID",
   "rescue.problemCode": "裝置問題碼",

@@ -1,6 +1,7 @@
 param(
     [Parameter(Mandatory)] [string] $OutputDirectory,
-    [string] $VendorSourceDirectory
+    [string] $VendorSourceDirectory,
+    [switch] $ExcludeVendorArchives
 )
 
 $ErrorActionPreference = 'Stop'
@@ -9,11 +10,11 @@ $manifestPath = Join-Path $repo 'packaging/shared-desktop/wifi-preview-packages.
 $manifest = Get-Content -LiteralPath $manifestPath -Raw -Encoding utf8 | ConvertFrom-Json
 $tar = Join-Path ([Environment]::SystemDirectory) 'tar.exe'
 $drivers = Join-Path $OutputDirectory 'driver-packs'
-$originals = Join-Path $OutputDirectory 'vendor-installers'
-New-Item -ItemType Directory -Path $drivers, $originals | Out-Null
-
 $staging = New-Item -ItemType Directory -Path (Join-Path $OutputDirectory ('.wifi-inputs-' + [Guid]::NewGuid()))
 try {
+    $archiveRoot = if ($ExcludeVendorArchives) { $staging.FullName } else { $OutputDirectory }
+    $originals = Join-Path $archiveRoot 'vendor-installers'
+    New-Item -ItemType Directory -Path $drivers, $originals | Out-Null
     foreach ($package in $manifest.packages) {
         $fileName = [IO.Path]::GetFileName(([uri]$package.source).LocalPath)
         $archive = Join-Path $originals $fileName
