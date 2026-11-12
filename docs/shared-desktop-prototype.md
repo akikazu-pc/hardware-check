@@ -284,3 +284,13 @@ pwsh -NoProfile -File scripts/publish-network-rescue-bundles.ps1 -IncludeCatalog
 断网急救打开后读取本机主板或笔记本型号。型号链接优先使用原厂包索引的已核对页面，华硕主板另可用型号目录定位其下载页。已识别的网卡名称可点击保存本地驱动 ZIP，离线版优先使用随附驱动。醒目的「安装 Wi-Fi 驱动」入口优先扫描本地驱动目录，也可按已识别的设备下载驱动。安装继续使用 INF 匹配、签名核验及管理员确认。
 
 两版都覆盖桌面和笔记本。在线安装版沿用与硬件测试的双装联动。旧的 `offline-wlan-library` 安装 ZIP 记录保留供追踪，当前离线交付以免安装完整版为准。
+
+## WinPE 修复已有的 Windows
+
+使用 Visual Studio Build Tools 的 MSVC x64 和 Windows SDK 运行 `scripts/build-network-rescue-pe.cmd`。产物位于 `artifacts/network-rescue-pe/PeNetworkRescue.exe`。这是单独的原生 x64 控制台入口，键盘操作，运行时不依赖 WMI、PowerShell 或 .NET。首个预览的控制台提示为英文。
+
+在 Windows 中先解压预览 ZIP 到 U 盘。启动 x64 WinPE 后，在命令提示符运行 U 盘里的 `PeNetworkRescue.exe`。程序会列出可访问的固定磁盘分区中识别出的 Windows 10/11 x64 系统。通过内核版本区分系统和匹配 INF 的最低构建号，启用包更新的 Windows 可能显示较早的基线内核构建号。若找不到预期分区，先检查 PE 是否能读取磁盘，或在具备相应组件的 PE 中解锁 BitLocker。
+
+输入目标序号后，程序自动读取当前机器的 PCI/USB 硬件 ID，在相邻的 `pe-drivers/windows10-x64` 或 `pe-drivers/windows11-x64` 目录查找网络类签名 INF。用户选择精确匹配项并按 Y 确认后，调用系统 DISM 写入选中的离线 Windows 并列出其驱动存储。请保留完整的 INF、CAT、SYS 和依赖文件；每个驱动只放到原厂支持的系统目录。工具在非 PE 系统只允许通过 `--list-targets` 读取目标列表。
+
+首批本地预览包包括技嘉 B550M DS3H AC R2 Rev. 1.2 的两份 Realtek 有线补充包，以及华硕 PRIME B650M-A AX 的 RTL8852BE Wi-Fi 样本，来源见 [驱动证据和索引](network-rescue-coverage-progress.md)。可把已验证适用目标系统的 Wi-Fi 签名驱动放进对应目录。当前验证覆盖编译、只读目标发现和普通 Windows 写入保护。真实 WinPE 启动、离线 DISM 写入、重启后的实际驱动绑定与联网，以及新安装的 Setup 应答文件流程仍待验证或实现。
