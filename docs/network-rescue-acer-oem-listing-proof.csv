@@ -1,0 +1,601 @@
+model,windows,supportUrl,queriedModel,step3,status,fileName,version,date,systemFileCount
+Predator Helios Neo 14 AI PHN14-71-906J (NH.U1BAA.001),10,https://www.acer.com/us-en/support/product-support/PHN14-71,PHN14-71,PREDATOR PHN14-71,oem-os-not-listed,,,,0
+Predator Helios Neo 14 AI PHN14-71-906J (NH.U1BAA.001),11,https://www.acer.com/us-en/support/product-support/PHN14-71,PHN14-71,PREDATOR PHN14-71,oem-wlan-listed,Wireless LAN_Killer_24.20.0.4_W11x64_(1675i).zip,24.20.0.4,2026/07/17,40
+Predator Helios 18 PH18-71-756U (NH.QMJAA.001),10,https://www.acer.com/us-en/support/product-support/PH18-71,PH18-71,PREDATOR PH18-71,oem-os-not-listed,,,,0
+Predator Helios 18 PH18-71-756U (NH.QMJAA.001),11,https://www.acer.com/us-en/support/product-support/PH18-71,PH18-71,PREDATOR PH18-71,oem-wlan-listed,Wireless LAN_Killer_22.180.0.4_W11x64.zip,22.180.0.4,2023/02/14,37
+Predator Helios 16 PH16-71-74UU (NH.QJQAA.001),10,https://www.acer.com/us-en/support/product-support/PH16-71,PH16-71,PREDATOR PH16-71,oem-os-not-listed,,,,0
+Predator Helios 16 PH16-71-74UU (NH.QJQAA.001),11,https://www.acer.com/us-en/support/product-support/PH16-71,PH16-71,PREDATOR PH16-71,oem-wlan-listed,Wireless LAN_Killer_22.180.0.4_W11x64.zip,22.180.0.4,2023/02/13,39
+A515-48M,10,https://www.acer.com/us-en/support/product-support/A515-48M,A515-48M,ASPIRE A515-48M,oem-os-not-listed,,,,0
+A515-48M,11,https://www.acer.com/us-en/support/product-support/A515-48M,A515-48M,ASPIRE A515-48M,oem-wlan-listed,Wireless LAN_MTK_3.3.0.723_W11x64_(MTRZ616).zip,3.3.0.723,2023/04/06,30
+A515-58P,10,https://www.acer.com/us-en/support/product-support/A515-58P,A515-58P,ASPIRE A515-58P,oem-os-not-listed,,,,0
+A515-58P,11,https://www.acer.com/us-en/support/product-support/A515-58P,A515-58P,ASPIRE A515-58P,oem-wlan-listed,Wireless LAN_Intel_23.30.0.6_W11x64_(AX211).zip,23.30.0.6,2024/08/19,36
+A515-58PT,10,https://www.acer.com/us-en/support/product-support/A515-58PT,A515-58PT,ASPIRE A515-58PT,oem-os-not-listed,,,,0
+A515-58PT,11,https://www.acer.com/us-en/support/product-support/A515-58PT,A515-58PT,ASPIRE A515-58PT,oem-wlan-listed,Wireless LAN_MTK_3.3.0.662_W11x64_(MT7921LE).zip,3.3.0.662,2023/03/01,32
+A9500-A,10,https://www.acer.com/us-en/support/product-support/A9500-A,A9500-A,A9500-A,oem-wlan-listed,Wireless LAN_Atheros_12.0.0.938_W10x64_(NFA344).zip,12.0.0.938,2021/11/22,24
+A9500-A,11,https://www.acer.com/us-en/support/product-support/A9500-A,A9500-A,A9500-A,oem-os-not-listed,,,,0
+AP714-51GT,10,https://www.acer.com/us-en/support/product-support/AP714-51GT,AP714-51GT,AP714-51GT,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64_(AX201).zip,22.0.1.1,2021/04/20,33
+AP714-51GT,11,https://www.acer.com/us-en/support/product-support/AP714-51GT,AP714-51GT,AP714-51GT,oem-os-not-listed,,,,0
+AP714-51T,10,https://www.acer.com/us-en/support/product-support/AP714-51T,AP714-51T,AP714-51T,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64_(AX201).zip,22.0.1.1,2021/04/20,33
+AP714-51T,11,https://www.acer.com/us-en/support/product-support/AP714-51T,AP714-51T,AP714-51T,oem-os-not-listed,,,,0
+Aspire A111-31,10,https://www.acer.com/us-en/support/product-support/A111-31,A111-31,ASPIRE A111-31,oem-wlan-listed,Wireless LAN_Intel_20.10.2_W10x64.zip,20.10.2,2018/02/23,13
+Aspire A111-31,11,https://www.acer.com/us-en/support/product-support/A111-31,A111-31,ASPIRE A111-31,oem-os-not-listed,,,,0
+Aspire A114-21,10,https://www.acer.com/us-en/support/product-support/A114-21,A114-21,ASPIRE A114-21,oem-wlan-listed,Wireless LAN_Atheros_12.0.0.953_W10x64_(NFA344).zip,12.0.0.953,2021/07/05,21
+Aspire A114-21,11,https://www.acer.com/us-en/support/product-support/A114-21,A114-21,ASPIRE A114-21,oem-wlan-listed,Wireless LAN_Intel_19.51.38.2_W11x64.zip,19.51.38.2,2022/10/19,24
+Aspire A114-32,10,https://www.acer.com/us-en/support/product-support/A114-32,A114-32,ASPIRE A114-32,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64_(INT9462 and INT9560).zip,22.0.1.1,2021/03/09,27
+Aspire A114-32,11,https://www.acer.com/us-en/support/product-support/A114-32,A114-32,ASPIRE A114-32,oem-os-not-listed,,,,0
+Aspire A114-33,10,https://www.acer.com/us-en/support/product-support/A114-33,A114-33,ASPIRE A114-33,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64.zip,22.0.1.1,2021/02/04,17
+Aspire A114-33,11,https://www.acer.com/us-en/support/product-support/A114-33,A114-33,ASPIRE A114-33,oem-wlan-listed,Wireless LAN_Intel_23.60.1.2_W11x64_(AX101).zip,23.60.1.2,2024/10/17,39
+Aspire A114-61,10,https://www.acer.com/us-en/support/product-support/A114-61,A114-61,ASPIRE A114-61,short-list,,,,1
+Aspire A114-61,11,https://www.acer.com/us-en/support/product-support/A114-61,A114-61,ASPIRE A114-61,short-list,,,,0
+Aspire A114-61L,10,https://www.acer.com/us-en/support/product-support/A114-61L,A114-61L,ASPIRE A114-61L,short-list,,,,1
+Aspire A114-61L,11,https://www.acer.com/us-en/support/product-support/A114-61L,A114-61L,ASPIRE A114-61L,short-list,,,,0
+Aspire A115-22,10,https://www.acer.com/us-en/support/product-support/A115-22,A115-22,ASPIRE A115-22,oem-wlan-listed,Wireless LAN_Atheros_12.0.0.953_W10x64_(NFA344).zip,12.0.0.953,2021/07/08,20
+Aspire A115-22,11,https://www.acer.com/us-en/support/product-support/A115-22,A115-22,ASPIRE A115-22,oem-wlan-listed,Wireless LAN_Intel_19.51.38.2_W11x64.zip,19.51.38.2,2022/10/17,25
+Aspire A115-31,10,https://www.acer.com/us-en/support/product-support/A115-31,A115-31,ASPIRE A115-31,oem-wlan-listed,Wireless LAN_Intel_21.80.2.1_W10x64_(INT9462 and INT9560).zip,21.80.2.1,2020/11/06,28
+Aspire A115-31,11,https://www.acer.com/us-en/support/product-support/A115-31,A115-31,ASPIRE A115-31,oem-wlan-listed,Wireless LAN_Realtek_2024.0.10.135_W11x64.zip,2024.0.10.135,2022/02/25,23
+Aspire A115-32,10,https://www.acer.com/us-en/support/product-support/A115-32,A115-32,ASPIRE A115-32,oem-wlan-listed,Wireless LAN_Intel_22.0.0.6_W10x64_(INT9560).zip,22.0.0.6,2021/06/07,20
+Aspire A115-32,11,https://www.acer.com/us-en/support/product-support/A115-32,A115-32,ASPIRE A115-32,oem-wlan-listed,Wireless LAN_MTK_3.3.0.749_W11x64_(MTK7902).zip,3.3.0.749,2023/07/06,37
+Aspire A311-31,10,https://www.acer.com/us-en/support/product-support/A311-31,A311-31,ASPIRE A311-31,oem-wlan-listed,Wireless LAN_Intel_20.10.2_W10x64.zip,20.10.2,2018/02/23,13
+Aspire A311-31,11,https://www.acer.com/us-en/support/product-support/A311-31,A311-31,ASPIRE A311-31,oem-os-not-listed,,,,0
+Aspire A314-22,10,https://www.acer.com/us-en/support/product-support/A314-22,A314-22,ASPIRE A314-22,oem-wlan-listed,Wireless LAN_Atheros_12.0.0.953_W10x64_(NFA344).zip,12.0.0.953,2021/07/05,21
+Aspire A314-22,11,https://www.acer.com/us-en/support/product-support/A314-22,A314-22,ASPIRE A314-22,oem-wlan-listed,Wireless LAN_Intel_19.51.38.2_W11x64.zip,19.51.38.2,2022/10/19,24
+Aspire A314-22G,10,https://www.acer.com/us-en/support/product-support/A314-22G,A314-22G,ASPIRE A314-22G,oem-wlan-listed,Wireless LAN_Atheros_12.0.0.953_W10x64_(NFA344).zip,12.0.0.953,2021/07/05,21
+Aspire A314-22G,11,https://www.acer.com/us-en/support/product-support/A314-22G,A314-22G,ASPIRE A314-22G,oem-wlan-listed,Wireless LAN_Intel_19.51.38.2_W11x64.zip,19.51.38.2,2022/10/19,24
+Aspire A314-22S,10,,,,support-list-empty,,,,
+Aspire A314-22S,11,,,,support-list-empty,,,,
+Aspire A314-32,10,https://www.acer.com/us-en/support/product-support/A314-32,A314-32,ASPIRE A314-32,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64_(INT9462 and INT9560).zip,22.0.1.1,2021/03/09,26
+Aspire A314-32,11,https://www.acer.com/us-en/support/product-support/A314-32,A314-32,ASPIRE A314-32,oem-os-not-listed,,,,0
+Aspire A314-33,10,https://www.acer.com/us-en/support/product-support/A314-33,A314-33,ASPIRE A314-33,oem-wlan-listed,Wireless LAN_Intel_20.80.1.1_W10x64.zip,20.80.1.1,2018/12/07,17
+Aspire A314-33,11,https://www.acer.com/us-en/support/product-support/A314-33,A314-33,ASPIRE A314-33,oem-os-not-listed,,,,0
+Aspire A314-35,10,https://www.acer.com/us-en/support/product-support/A314-35,A314-35,ASPIRE A314-35,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64.zip,22.0.1.1,2021/02/04,17
+Aspire A314-35,11,https://www.acer.com/us-en/support/product-support/A314-35,A314-35,ASPIRE A314-35,oem-wlan-listed,Wireless LAN_Intel_23.60.1.2_W11x64_(AX101).zip,23.60.1.2,2024/10/17,39
+Aspire A315-23,10,https://www.acer.com/us-en/support/product-support/A315-23,A315-23,ASPIRE A315-23,oem-wlan-listed,Wireless LAN_Atheros_12.0.0.953_W10x64_(NFA344).zip,12.0.0.953,2021/07/08,20
+Aspire A315-23,11,https://www.acer.com/us-en/support/product-support/A315-23,A315-23,ASPIRE A315-23,oem-wlan-listed,Wireless LAN_Intel_19.51.38.2_W11x64.zip,19.51.38.2,2022/10/17,25
+Aspire A315-23G,10,https://www.acer.com/us-en/support/product-support/A315-23G,A315-23G,ASPIRE A315-23G,oem-wlan-listed,Wireless LAN_Atheros_12.0.0.953_W10x64_(NFA344).zip,12.0.0.953,2021/07/08,20
+Aspire A315-23G,11,https://www.acer.com/us-en/support/product-support/A315-23G,A315-23G,ASPIRE A315-23G,oem-wlan-listed,Wireless LAN_Intel_19.51.38.2_W11x64.zip,19.51.38.2,2022/10/17,25
+Aspire A315-23S,10,,,,support-list-empty,,,,
+Aspire A315-23S,11,,,,support-list-empty,,,,
+Aspire A315-32,10,https://www.acer.com/us-en/support/product-support/A315-32,A315-32,ASPIRE A315-32,oem-wlan-listed,Wireless LAN_Intel_20.10.2_W10x64.zip,20.10.2,2018/02/07,12
+Aspire A315-32,11,https://www.acer.com/us-en/support/product-support/A315-32,A315-32,ASPIRE A315-32,oem-os-not-listed,,,,0
+Aspire A315-34,10,https://www.acer.com/us-en/support/product-support/A315-34,A315-34,ASPIRE A315-34,oem-wlan-listed,Wireless LAN_Intel_21.80.2.1_W10x64_(INT9462 and INT9560).zip,21.80.2.1,2020/11/06,28
+Aspire A315-34,11,https://www.acer.com/us-en/support/product-support/A315-34,A315-34,ASPIRE A315-34,oem-wlan-listed,Wireless LAN_Realtek_2024.0.10.135_W11x64.zip,2024.0.10.135,2022/02/25,23
+Aspire A315-35,10,https://www.acer.com/us-en/support/product-support/A315-35,A315-35,ASPIRE A315-35,oem-wlan-listed,Wireless LAN_Intel_22.0.0.6_W10x64_(INT9560).zip,22.0.0.6,2021/06/07,20
+Aspire A315-35,11,https://www.acer.com/us-en/support/product-support/A315-35,A315-35,ASPIRE A315-35,oem-wlan-listed,Wireless LAN_MTK_3.3.0.749_W11x64_(MTK7902).zip,3.3.0.749,2023/07/06,37
+Aspire A315-35S,10,,,,support-list-empty,,,,
+Aspire A315-35S,11,,,,support-list-empty,,,,
+Aspire A315-42,10,https://www.acer.com/us-en/support/product-support/A315-42,A315-42,ASPIRE A315-42,oem-wlan-listed,Wireless LAN_Intel_19.51.27.1_W10x64.zip,19.51.27.1,2020/10/28,24
+Aspire A315-42,11,https://www.acer.com/us-en/support/product-support/A315-42,A315-42,ASPIRE A315-42,oem-os-not-listed,,,,0
+Aspire A315-42G,10,https://www.acer.com/us-en/support/product-support/A315-42G,A315-42G,ASPIRE A315-42G,oem-wlan-listed,Wireless LAN_Intel_19.51.27.1_W10x64.zip,19.51.27.1,2020/10/28,24
+Aspire A315-42G,11,https://www.acer.com/us-en/support/product-support/A315-42G,A315-42G,ASPIRE A315-42G,oem-os-not-listed,,,,0
+Aspire A315-54,10,https://www.acer.com/us-en/support/product-support/A315-54,A315-54,ASPIRE A315-54,oem-wlan-listed,Wireless LAN_Intel_21.20.1.1_W10x64.zip,21.20.1.1,2019/11/12,21
+Aspire A315-54,11,https://www.acer.com/us-en/support/product-support/A315-54,A315-54,ASPIRE A315-54,oem-os-not-listed,,,,0
+Aspire A315-56,10,https://www.acer.com/us-en/support/product-support/A315-56,A315-56,ASPIRE A315-56,oem-wlan-listed,Wireless LAN_Intel_22.10.0.7_W10x64_(INT9462 and INT9560).zip,22.10.0.7,2021/03/09,38
+Aspire A315-56,11,https://www.acer.com/us-en/support/product-support/A315-56,A315-56,ASPIRE A315-56,oem-wlan-listed,Wireless LAN_Intel_22.120.1.9_W11x64_(INT9462 and INT9560).zip,22.120.1.9,2022/03/29,27
+Aspire A315-57G,10,https://www.acer.com/us-en/support/product-support/A315-57G,A315-57G,ASPIRE A315-57G,oem-wlan-listed,Wireless LAN_Atheros_12.0.0.916_W10x64.zip,12.0.0.916,2022/05/23,15
+Aspire A315-57G,11,https://www.acer.com/us-en/support/product-support/A315-57G,A315-57G,ASPIRE A315-57G,oem-wlan-listed,Wireless LAN_Atheros_12.0.0.916_W11x64.zip,12.0.0.916,2022/05/12,19
+Aspire A315-58,10,https://www.acer.com/us-en/support/product-support/A315-58,A315-58,ASPIRE A315-58,oem-wlan-listed,Wireless LAN_MTK_2.0.9.253_W10x64_(MTK7663).zip,2.0.9.253,2023/02/08,26
+Aspire A315-58,11,https://www.acer.com/us-en/support/product-support/A315-58,A315-58,ASPIRE A315-58,oem-wlan-listed,Wireless LAN_MTK_2.00.09.0257_W11x64_(MTK7663).zip,2.00.09.0257,2023/10/20,42
+Aspire A315-58G,10,https://www.acer.com/us-en/support/product-support/A315-58G,A315-58G,ASPIRE A315-58G,oem-wlan-listed,Wireless LAN_MTK_2.0.9.253_W10x64_(MTK7663).zip,2.0.9.253,2023/02/08,26
+Aspire A315-58G,11,https://www.acer.com/us-en/support/product-support/A315-58G,A315-58G,ASPIRE A315-58G,oem-wlan-listed,Wireless LAN_MTK_2.00.09.0257_W11x64_(MTK7663).zip,2.00.09.0257,2023/10/20,42
+Aspire A317-32,10,https://www.acer.com/us-en/support/product-support/A317-32,A317-32,ASPIRE A317-32,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64.zip,22.0.1.1,2021/02/18,22
+Aspire A317-32,11,https://www.acer.com/us-en/support/product-support/A317-32,A317-32,ASPIRE A317-32,oem-os-not-listed,,,,0
+Aspire A317-33,10,https://www.acer.com/us-en/support/product-support/A317-33,A317-33,ASPIRE A317-33,oem-wlan-listed,Wireless LAN_Intel_22.0.0.6_W10x64_(INT9560).zip,22.0.0.6,2022/02/17,21
+Aspire A317-33,11,https://www.acer.com/us-en/support/product-support/A317-33,A317-33,ASPIRE A317-33,oem-wlan-listed,Wireless LAN_MTK_3.3.0.749_W11x64_(MTK7902).zip,3.3.0.749,2023/11/02,32
+Aspire A317-51,10,https://www.acer.com/us-en/support/product-support/A317-51,A317-51,ASPIRE A317-51,oem-wlan-listed,Wireless LAN_Intel_21.70.0.6_W10x64.zip,21.70.0.6,2020/10/30,37
+Aspire A317-51,11,https://www.acer.com/us-en/support/product-support/A317-51,A317-51,ASPIRE A317-51,oem-os-not-listed,,,,0
+Aspire A317-51G,10,https://www.acer.com/us-en/support/product-support/A317-51G,A317-51G,ASPIRE A317-51G,oem-wlan-listed,Wireless LAN_Intel_21.70.0.6_W10x64.zip,21.70.0.6,2020/10/30,37
+Aspire A317-51G,11,https://www.acer.com/us-en/support/product-support/A317-51G,A317-51G,ASPIRE A317-51G,oem-os-not-listed,,,,0
+Aspire A317-52,10,https://www.acer.com/us-en/support/product-support/A317-52,A317-52,ASPIRE A317-52,oem-wlan-listed,Wireless LAN_Intel_22.10.0.7_W10x64_(INT9462 and INT9560).zip,22.10.0.7,2021/04/29,20
+Aspire A317-52,11,https://www.acer.com/us-en/support/product-support/A317-52,A317-52,ASPIRE A317-52,oem-wlan-listed,Wireless LAN_Intel_22.120.1.9_W11x64_(INT9462 and INT9560).zip,22.120.1.9,2022/03/18,22
+Aspire A317-53,10,https://www.acer.com/us-en/support/product-support/A317-53,A317-53,ASPIRE A317-53,oem-wlan-listed,Wireless LAN_Intel_22.10.0.7_W10x64_(INT9462 and INT9560).zip,22.10.0.7,2022/02/17,25
+Aspire A317-53,11,https://www.acer.com/us-en/support/product-support/A317-53,A317-53,ASPIRE A317-53,oem-wlan-listed,Wireless LAN_MTK_2.00.09.0257_W11x64_(MTK7663).zip,2.00.09.0257,2023/11/02,41
+Aspire A317-53G,10,https://www.acer.com/us-en/support/product-support/A317-53G,A317-53G,ASPIRE A317-53G,oem-wlan-listed,Wireless LAN_Intel_22.10.0.7_W10x64_(INT9462 and INT9560).zip,22.10.0.7,2022/02/17,25
+Aspire A317-53G,11,https://www.acer.com/us-en/support/product-support/A317-53G,A317-53G,ASPIRE A317-53G,oem-wlan-listed,Wireless LAN_MTK_2.00.09.0257_W11x64_(MTK7663).zip,2.00.09.0257,2023/11/02,41
+Aspire A514-51,10,https://www.acer.com/us-en/support/product-support/A514-51,A514-51,ASPIRE A514-51,oem-wlan-listed,Wireless LAN_Intel_20.80.1.1_W10x64.zip,20.80.1.1,2018/11/28,17
+Aspire A514-51,11,https://www.acer.com/us-en/support/product-support/A514-51,A514-51,ASPIRE A514-51,oem-os-not-listed,,,,0
+Aspire A514-51G,10,https://www.acer.com/us-en/support/product-support/A514-51G,A514-51G,ASPIRE A514-51G,oem-wlan-listed,Wireless LAN_Intel_20.80.1.1_W10x64.zip,20.80.1.1,2018/11/28,17
+Aspire A514-51G,11,https://www.acer.com/us-en/support/product-support/A514-51G,A514-51G,ASPIRE A514-51G,oem-os-not-listed,,,,0
+Aspire A514-52,10,https://www.acer.com/us-en/support/product-support/A514-52,A514-52,ASPIRE A514-52,oem-wlan-listed,Wireless LAN_Intel_21.60.2.1_W10x64_(for 10th generation CPU),21.60.2.1,2020/05/08,40
+Aspire A514-52,11,https://www.acer.com/us-en/support/product-support/A514-52,A514-52,ASPIRE A514-52,oem-os-not-listed,,,,0
+Aspire A514-52G,10,https://www.acer.com/us-en/support/product-support/A514-52G,A514-52G,ASPIRE A514-52G,oem-wlan-listed,Wireless LAN_Intel_21.60.2.1_W10x64_(for 10th generation CPU),21.60.2.1,2020/05/08,40
+Aspire A514-52G,11,https://www.acer.com/us-en/support/product-support/A514-52G,A514-52G,ASPIRE A514-52G,oem-os-not-listed,,,,0
+Aspire A514-53,10,https://www.acer.com/us-en/support/product-support/A514-53,A514-53,ASPIRE A514-53,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64_(AX201).zip,22.0.1.1,2021/02/08,58
+Aspire A514-53,11,https://www.acer.com/us-en/support/product-support/A514-53,A514-53,ASPIRE A514-53,oem-os-not-listed,,,,0
+Aspire A514-53G,10,https://www.acer.com/us-en/support/product-support/A514-53G,A514-53G,ASPIRE A514-53G,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64_(AX201).zip,22.0.1.1,2021/02/08,58
+Aspire A514-53G,11,https://www.acer.com/us-en/support/product-support/A514-53G,A514-53G,ASPIRE A514-53G,oem-os-not-listed,,,,0
+Aspire A514-54,10,https://www.acer.com/us-en/support/product-support/A514-54,A514-54,ASPIRE A514-54,oem-wlan-listed,Wireless LAN_MTK_3.0.1.1300_W10x64.zip,3.0.1.1300,2022/04/20,29
+Aspire A514-54,11,https://www.acer.com/us-en/support/product-support/A514-54,A514-54,ASPIRE A514-54,oem-wlan-listed,Wireless LAN_MTK_3.0.1.1300_W11x64_(MT7921LE).zip,3.0.1.1300,2022/10/17,34
+Aspire A514-54G,10,https://www.acer.com/us-en/support/product-support/A514-54G,A514-54G,ASPIRE A514-54G,oem-wlan-listed,Wireless LAN_MTK_3.0.1.1300_W10x64.zip,3.0.1.1300,2022/04/20,29
+Aspire A514-54G,11,https://www.acer.com/us-en/support/product-support/A514-54G,A514-54G,ASPIRE A514-54G,oem-wlan-listed,Wireless LAN_MTK_3.0.1.1300_W11x64_(MT7921LE).zip,3.0.1.1300,2022/10/17,34
+Aspire A514-54S,10,,,,support-list-empty,,,,
+Aspire A514-54S,11,,,,support-list-empty,,,,
+Aspire A515-41G,10,,,,support-list-empty,,,,
+Aspire A515-41G,11,,,,support-list-empty,,,,
+Aspire A515-43,10,https://www.acer.com/us-en/support/product-support/A515-43,A515-43,ASPIRE A515-43,oem-wlan-listed,Wireless LAN_Intel_19.51.31.1_W10x64.zip,19.51.31.1,2021/07/21,30
+Aspire A515-43,11,https://www.acer.com/us-en/support/product-support/A515-43,A515-43,ASPIRE A515-43,oem-wlan-listed,Wireless LAN_Intel_19.51.31.1_W11x64.zip,19.51.31.1,2022/02/24,16
+Aspire A515-43G,10,https://www.acer.com/us-en/support/product-support/A515-43G,A515-43G,ASPIRE A515-43G,oem-wlan-listed,Wireless LAN_Intel_19.51.31.1_W10x64.zip,19.51.31.1,2021/07/21,30
+Aspire A515-43G,11,https://www.acer.com/us-en/support/product-support/A515-43G,A515-43G,ASPIRE A515-43G,oem-wlan-listed,Wireless LAN_Intel_19.51.31.1_W11x64.zip,19.51.31.1,2022/02/24,16
+Aspire A515-44,10,https://www.acer.com/us-en/support/product-support/A515-44,A515-44,ASPIRE A515-44,oem-wlan-listed,Wireless LAN_Atheros_12.0.0.938_W10x64_(NFA344).zip,12.0.0.938,2021/11/22,24
+Aspire A515-44,11,https://www.acer.com/us-en/support/product-support/A515-44,A515-44,ASPIRE A515-44,oem-os-not-listed,,,,0
+Aspire A515-44G,10,https://www.acer.com/us-en/support/product-support/A515-44G,A515-44G,ASPIRE A515-44G,oem-wlan-listed,Wireless LAN_Atheros_12.0.0.938_W10x64_(NFA344).zip,12.0.0.938,2021/11/22,24
+Aspire A515-44G,11,https://www.acer.com/us-en/support/product-support/A515-44G,A515-44G,ASPIRE A515-44G,oem-os-not-listed,,,,0
+Aspire A515-44S,10,,,,support-list-empty,,,,
+Aspire A515-44S,11,,,,support-list-empty,,,,
+Aspire A515-45,10,https://www.acer.com/us-en/support/product-support/A515-45,A515-45,ASPIRE A515-45,oem-wlan-listed,Wireless LAN_MTK_3.0.1.1309_W10x64_MT7921LE.zip,3.0.1.1309,2022/08/26,15
+Aspire A515-45,11,https://www.acer.com/us-en/support/product-support/A515-45,A515-45,ASPIRE A515-45,oem-wlan-listed,Wireless LAN_Intel_22.180.0.4_W11x64_(AX200).zip,22.180.0.4,2024/03/07,23
+Aspire A515-45G,10,https://www.acer.com/us-en/support/product-support/A515-45G,A515-45G,ASPIRE A515-45G,oem-wlan-listed,Wireless LAN_MTK_3.0.1.1309_W10x64_MT7921LE.zip,3.0.1.1309,2022/08/26,15
+Aspire A515-45G,11,https://www.acer.com/us-en/support/product-support/A515-45G,A515-45G,ASPIRE A515-45G,oem-wlan-listed,Wireless LAN_Intel_22.180.0.4_W11x64_(AX200).zip,22.180.0.4,2024/03/07,23
+Aspire A515-45S,10,,,,support-list-empty,,,,
+Aspire A515-45S,11,,,,support-list-empty,,,,
+Aspire A515-46,10,https://www.acer.com/us-en/support/product-support/A515-46,A515-46,ASPIRE A515-46,oem-wlan-listed,Wireless LAN_MTK_3.0.1.1309_W10x64_MT7921LE.zip,3.0.1.1309,2022/08/26,13
+Aspire A515-46,11,https://www.acer.com/us-en/support/product-support/A515-46,A515-46,ASPIRE A515-46,oem-wlan-listed,Wireless LAN_MTK_3.0.1.1309_W11x64_MT7921LE.zip,3.0.1.1309,2022/08/16,14
+Aspire A515-52,10,https://www.acer.com/us-en/support/product-support/A515-52,A515-52,ASPIRE A515-52,oem-wlan-listed,Wireless Lan_Intel_21.70.0.6_W10x64,21.70.0.6,2020/02/19,18
+Aspire A515-52,11,https://www.acer.com/us-en/support/product-support/A515-52,A515-52,ASPIRE A515-52,oem-os-not-listed,,,,0
+Aspire A515-52G,10,https://www.acer.com/us-en/support/product-support/A515-52G,A515-52G,ASPIRE A515-52G,oem-wlan-listed,Wireless Lan_Intel_21.70.0.6_W10x64,21.70.0.6,2020/02/19,18
+Aspire A515-52G,11,https://www.acer.com/us-en/support/product-support/A515-52G,A515-52G,ASPIRE A515-52G,oem-os-not-listed,,,,0
+Aspire A515-53,10,https://www.acer.com/us-en/support/product-support/A515-53,A515-53,ASPIRE A515-53,oem-wlan-listed,Wireless LAN_Intel_20.80.1.1_W10x64.zip,20.80.1.1,2019/01/30,20
+Aspire A515-53,11,https://www.acer.com/us-en/support/product-support/A515-53,A515-53,ASPIRE A515-53,oem-os-not-listed,,,,0
+Aspire A515-53G,10,https://www.acer.com/us-en/support/product-support/A515-53G,A515-53G,ASPIRE A515-53G,oem-wlan-listed,Wireless LAN_Intel_20.80.1.1_W10x64.zip,20.80.1.1,2019/01/30,20
+Aspire A515-53G,11,https://www.acer.com/us-en/support/product-support/A515-53G,A515-53G,ASPIRE A515-53G,oem-os-not-listed,,,,0
+Aspire A515-54,10,https://www.acer.com/us-en/support/product-support/A515-54,A515-54,ASPIRE A515-54,oem-wlan-listed,Wireless LAN_MTK_3.0.1.1050_W10x64.zip,3.0.1.1050,2021/07/07,31
+Aspire A515-54,11,https://www.acer.com/us-en/support/product-support/A515-54,A515-54,ASPIRE A515-54,oem-wlan-listed,Wireless LAN_MTK_3.0.1.1050_W11x64.zip,3.0.1.1050,2021/10/20,25
+Aspire A515-54G,10,https://www.acer.com/us-en/support/product-support/A515-54G,A515-54G,ASPIRE A515-54G,oem-wlan-listed,Wireless LAN_MTK_3.0.1.1050_W10x64.zip,3.0.1.1050,2021/07/07,31
+Aspire A515-54G,11,https://www.acer.com/us-en/support/product-support/A515-54G,A515-54G,ASPIRE A515-54G,oem-wlan-listed,Wireless LAN_MTK_3.0.1.1050_W11x64.zip,3.0.1.1050,2021/10/20,25
+Aspire A515-55,10,https://www.acer.com/us-en/support/product-support/A515-55,A515-55,ASPIRE A515-55,oem-wlan-listed,Wireless LAN_MTK_3.0.1.1050_W10x64.zip,3.0.1.1050,2021/04/20,29
+Aspire A515-55,11,https://www.acer.com/us-en/support/product-support/A515-55,A515-55,ASPIRE A515-55,oem-os-not-listed,,,,0
+Aspire A515-55G,10,https://www.acer.com/us-en/support/product-support/A515-55G,A515-55G,ASPIRE A515-55G,oem-wlan-listed,Wireless LAN_MTK_3.0.1.1050_W10x64.zip,3.0.1.1050,2021/04/20,29
+Aspire A515-55G,11,https://www.acer.com/us-en/support/product-support/A515-55G,A515-55G,ASPIRE A515-55G,oem-os-not-listed,,,,0
+Aspire A515-55T,10,https://www.acer.com/us-en/support/product-support/A515-55T,A515-55T,ASPIRE A515-55T,oem-wlan-listed,Wireless LAN_MTK_3.0.1.1050_W10x64.zip,3.0.1.1050,2021/04/20,29
+Aspire A515-55T,11,https://www.acer.com/us-en/support/product-support/A515-55T,A515-55T,ASPIRE A515-55T,oem-os-not-listed,,,,0
+Aspire A515-56,10,https://www.acer.com/us-en/support/product-support/A515-56,A515-56,ASPIRE A515-56,oem-wlan-listed,Wireless LAN_MTK_3.0.1.1300_W10x64.zip,3.0.1.1300,2022/04/20,35
+Aspire A515-56,11,https://www.acer.com/us-en/support/product-support/A515-56,A515-56,ASPIRE A515-56,oem-wlan-listed,Wireless LAN_MTK_3.0.1.1300_W11x64_(MT7921LE).zip,3.0.1.1300,2022/12/02,31
+Aspire A515-56G,10,https://www.acer.com/us-en/support/product-support/A515-56G,A515-56G,ASPIRE A515-56G,oem-wlan-listed,Wireless LAN_MTK_3.0.1.1300_W10x64.zip,3.0.1.1300,2022/04/20,35
+Aspire A515-56G,11,https://www.acer.com/us-en/support/product-support/A515-56G,A515-56G,ASPIRE A515-56G,oem-wlan-listed,Wireless LAN_MTK_3.0.1.1300_W11x64_(MT7921LE).zip,3.0.1.1300,2022/12/02,31
+Aspire A515-56S,10,,,,support-list-empty,,,,
+Aspire A515-56S,11,,,,support-list-empty,,,,
+Aspire A515-56T,10,https://www.acer.com/us-en/support/product-support/A515-56T,A515-56T,ASPIRE A515-56T,oem-wlan-listed,Wireless LAN_MTK_3.0.1.1300_W10x64.zip,3.0.1.1300,2022/04/20,35
+Aspire A515-56T,11,https://www.acer.com/us-en/support/product-support/A515-56T,A515-56T,ASPIRE A515-56T,oem-wlan-listed,Wireless LAN_MTK_3.0.1.1300_W11x64_(MT7921LE).zip,3.0.1.1300,2022/12/02,31
+Aspire A517-52,10,https://www.acer.com/us-en/support/product-support/A517-52,A517-52,ASPIRE A517-52,oem-wlan-listed,Wireless LAN_MTK_3.0.1.1300_W10x64.zip,3.0.1.1300,2022/04/20,35
+Aspire A517-52,11,https://www.acer.com/us-en/support/product-support/A517-52,A517-52,ASPIRE A517-52,oem-wlan-listed,Wireless LAN_MTK_3.0.1.1300_W11x64_(MT7921LE).zip,3.0.1.1300,2022/10/14,35
+Aspire A517-52G,10,https://www.acer.com/us-en/support/product-support/A517-52G,A517-52G,ASPIRE A517-52G,oem-wlan-listed,Wireless LAN_MTK_3.0.1.1300_W10x64.zip,3.0.1.1300,2022/04/20,35
+Aspire A517-52G,11,https://www.acer.com/us-en/support/product-support/A517-52G,A517-52G,ASPIRE A517-52G,oem-wlan-listed,Wireless LAN_MTK_3.0.1.1300_W11x64_(MT7921LE).zip,3.0.1.1300,2022/10/14,35
+Aspire A715-41G,10,https://www.acer.com/us-en/support/product-support/A715-41G,A715-41G,ASPIRE A715-41G,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64_(AX200).zip,22.0.1.1,2021/03/03,32
+Aspire A715-41G,11,https://www.acer.com/us-en/support/product-support/A715-41G,A715-41G,ASPIRE A715-41G,oem-os-not-listed,,,,0
+Aspire A715-42G,10,https://www.acer.com/us-en/support/product-support/A715-42G,A715-42G,ASPIRE A715-42G,oem-wlan-listed,Wireless LAN_MTK_3.0.1.1300_W10x64.zip,3.0.1.1300,2022/04/20,20
+Aspire A715-42G,11,https://www.acer.com/us-en/support/product-support/A715-42G,A715-42G,ASPIRE A715-42G,oem-wlan-listed,Wireless LAN_MTK_3.00.01.1300_W11x64_(MT7921LE).zip,3.00.01.1300,2022/10/11,26
+Aspire A715-74G,10,https://www.acer.com/us-en/support/product-support/A715-74G,A715-74G,ASPIRE A715-74G,oem-wlan-listed,Wireless LAN_Intel_20.120.1.1_W10x64.zip,20.120.1.1,2019/06/05,21
+Aspire A715-74G,11,https://www.acer.com/us-en/support/product-support/A715-74G,A715-74G,ASPIRE A715-74G,oem-os-not-listed,,,,0
+Aspire A715-75G,10,https://www.acer.com/us-en/support/product-support/A715-75G,A715-75G,ASPIRE A715-75G,oem-wlan-listed,Wireless LAN_Intel_21.90.3.2_W10x64_(AX200).zip,21.90.3.2,2020/10/28,50
+Aspire A715-75G,11,https://www.acer.com/us-en/support/product-support/A715-75G,A715-75G,ASPIRE A715-75G,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W11x64_(AX200).zip,22.0.1.1,2021/11/25,27
+Aspire S40-52,10,https://www.acer.com/us-en/support/product-support/S40-52,S40-52,S40-52,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64_(AX201).zip,22.0.1.1,2021/02/08,58
+Aspire S40-52,11,https://www.acer.com/us-en/support/product-support/S40-52,S40-52,S40-52,oem-os-not-listed,,,,0
+Aspire S50-51,10,https://www.acer.com/us-en/support/product-support/S50-51,S50-51,S50-51,oem-wlan-listed,Wireless LAN_MTK_3.0.1.1050_W10x64.zip,3.0.1.1050,2021/07/07,31
+Aspire S50-51,11,https://www.acer.com/us-en/support/product-support/S50-51,S50-51,S50-51,oem-wlan-listed,Wireless LAN_MTK_3.0.1.1050_W11x64.zip,3.0.1.1050,2021/10/20,25
+Aspire T8000,10,https://www.acer.com/us-en/support/product-support/T8000,T8000,ASPIRE T8000,oem-wlan-listed,Wireless LAN_Intel_20.120.1.1_W10x64.zip,20.120.1.1,2019/06/05,21
+Aspire T8000,11,https://www.acer.com/us-en/support/product-support/T8000,T8000,ASPIRE T8000,oem-os-not-listed,,,,0
+Aspire Vero AV15-51,10,https://www.acer.com/us-en/support/product-support/AV15-51,AV15-51,ASPIRE AV15-51,oem-os-not-listed,,,,0
+Aspire Vero AV15-51,11,https://www.acer.com/us-en/support/product-support/AV15-51,AV15-51,ASPIRE AV15-51,oem-wlan-listed,Wireless LAN_MTK_3.0.1.1300_W11x64_(MT7921LE).zip,3.0.1.1300,2022/07/14,31
+ConceptD CC314-72,10,https://www.acer.com/us-en/support/product-support/CC314-72,CC314-72,CONCEPTD CC314-72,oem-wlan-listed,Wireless LAN_Intel_21.90.3.2_W10x64_(AX201).zip,21.90.3.2,2020/10/29,28
+ConceptD CC314-72,11,https://www.acer.com/us-en/support/product-support/CC314-72,CC314-72,CONCEPTD CC314-72,oem-os-not-listed,,,,0
+ConceptD CC314-72G,10,https://www.acer.com/us-en/support/product-support/CC314-72G,CC314-72G,CONCEPTD CC314-72G,oem-wlan-listed,Wireless LAN_Intel_21.90.3.2_W10x64_(AX201).zip,21.90.3.2,2020/10/29,28
+ConceptD CC314-72G,11,https://www.acer.com/us-en/support/product-support/CC314-72G,CC314-72G,CONCEPTD CC314-72G,oem-os-not-listed,,,,0
+ConceptD CC314-72P,10,https://www.acer.com/us-en/support/product-support/CC314-72P,CC314-72P,CONCEPTD CC314-72P,oem-wlan-listed,Wireless LAN_Intel_21.90.3.2_W10x64_(AX201).zip,21.90.3.2,2020/10/29,28
+ConceptD CC314-72P,11,https://www.acer.com/us-en/support/product-support/CC314-72P,CC314-72P,CONCEPTD CC314-72P,oem-os-not-listed,,,,0
+ConceptD CC314-73G,10,https://www.acer.com/us-en/support/product-support/CC314-73G,CC314-73G,CONCEPTD CC314-73G,oem-os-not-listed,,,,0
+ConceptD CC314-73G,11,https://www.acer.com/us-en/support/product-support/CC314-73G,CC314-73G,CONCEPTD CC314-73G,oem-wlan-listed,Wireless LAN_Intel_22.40.0.7_W11x64_(AX201).zip,22.40.0.7,2021/10/14,23
+ConceptD CC314-73P,10,https://www.acer.com/us-en/support/product-support/CC314-73P,CC314-73P,CONCEPTD CC314-73P,oem-os-not-listed,,,,0
+ConceptD CC314-73P,11,https://www.acer.com/us-en/support/product-support/CC314-73P,CC314-73P,CONCEPTD CC314-73P,oem-wlan-listed,Wireless LAN_Intel_22.40.0.7_W11x64_(AX201).zip,22.40.0.7,2021/10/14,23
+ConceptD CC315-72,10,https://www.acer.com/us-en/support/product-support/CC315-72,CC315-72,CONCEPTD CC315-72,oem-wlan-listed,Wireless LAN_Intel_21.90.3.2_W10x64_(AX201).zip,21.90.3.2,2020/10/30,30
+ConceptD CC315-72,11,https://www.acer.com/us-en/support/product-support/CC315-72,CC315-72,CONCEPTD CC315-72,oem-os-not-listed,,,,0
+ConceptD CC315-72G,10,https://www.acer.com/us-en/support/product-support/CC315-72G,CC315-72G,CONCEPTD CC315-72G,oem-wlan-listed,Wireless LAN_Intel_21.90.3.2_W10x64_(AX201).zip,21.90.3.2,2020/10/30,30
+ConceptD CC315-72G,11,https://www.acer.com/us-en/support/product-support/CC315-72G,CC315-72G,CONCEPTD CC315-72G,oem-os-not-listed,,,,0
+ConceptD CC315-72P,10,https://www.acer.com/us-en/support/product-support/CC315-72P,CC315-72P,CONCEPTD CC315-72P,oem-wlan-listed,Wireless LAN_Intel_21.90.3.2_W10x64_(AX201).zip,21.90.3.2,2020/10/30,30
+ConceptD CC315-72P,11,https://www.acer.com/us-en/support/product-support/CC315-72P,CC315-72P,CONCEPTD CC315-72P,oem-os-not-listed,,,,0
+ConceptD CC315-73G,10,https://www.acer.com/us-en/support/product-support/CC315-73G,CC315-73G,CONCEPTD CC315-73G,oem-os-not-listed,,,,0
+ConceptD CC315-73G,11,https://www.acer.com/us-en/support/product-support/CC315-73G,CC315-73G,CONCEPTD CC315-73G,oem-wlan-listed,Wireless LAN_Intel_22.40.0.7_W11x64_(AX201).zip,22.40.0.7,2021/10/07,26
+ConceptD CC315-73P,10,https://www.acer.com/us-en/support/product-support/CC315-73P,CC315-73P,CONCEPTD CC315-73P,oem-os-not-listed,,,,0
+ConceptD CC315-73P,11,https://www.acer.com/us-en/support/product-support/CC315-73P,CC315-73P,CONCEPTD CC315-73P,oem-wlan-listed,Wireless LAN_Intel_22.40.0.7_W11x64_(AX201).zip,22.40.0.7,2021/10/07,26
+ConceptD CC715-71,10,https://www.acer.com/us-en/support/product-support/CC715-71,CC715-71,CONCEPTD CC715-71,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64_(AX201).zip,22.0.1.1,2021/04/20,46
+ConceptD CC715-71,11,https://www.acer.com/us-en/support/product-support/CC715-71,CC715-71,CONCEPTD CC715-71,oem-os-not-listed,,,,0
+ConceptD CC715-71P,10,https://www.acer.com/us-en/support/product-support/CC715-71P,CC715-71P,CONCEPTD CC715-71P,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64_(AX201).zip,22.0.1.1,2021/04/20,46
+ConceptD CC715-71P,11,https://www.acer.com/us-en/support/product-support/CC715-71P,CC715-71P,CONCEPTD CC715-71P,oem-os-not-listed,,,,0
+ConceptD CC715-72G,10,https://www.acer.com/us-en/support/product-support/CC715-72G,CC715-72G,CONCEPTD CC715-72G,oem-os-not-listed,,,,0
+ConceptD CC715-72G,11,https://www.acer.com/us-en/support/product-support/CC715-72G,CC715-72G,CONCEPTD CC715-72G,oem-wlan-listed,Wireless LAN_Intel_22.70.0.6_W11x64_(AX201).zip,22.70.0.6,2021/11/10,33
+ConceptD CC715-72P,10,https://www.acer.com/us-en/support/product-support/CC715-72P,CC715-72P,CONCEPTD CC715-72P,oem-os-not-listed,,,,0
+ConceptD CC715-72P,11,https://www.acer.com/us-en/support/product-support/CC715-72P,CC715-72P,CONCEPTD CC715-72P,oem-wlan-listed,Wireless LAN_Intel_22.70.0.6_W11x64_(AX201).zip,22.70.0.6,2021/11/10,33
+ConceptD CC715-91P,10,https://www.acer.com/us-en/support/product-support/CC715-91P,CC715-91P,CONCEPTD CC715-91P,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64_(AX201).zip,22.0.1.1,2021/04/20,30
+ConceptD CC715-91P,11,https://www.acer.com/us-en/support/product-support/CC715-91P,CC715-91P,CONCEPTD CC715-91P,oem-os-not-listed,,,,0
+ConceptD CC715-92P,10,https://www.acer.com/us-en/support/product-support/CC715-92P,CC715-92P,CONCEPTD CC715-92P,oem-os-not-listed,,,,0
+ConceptD CC715-92P,11,https://www.acer.com/us-en/support/product-support/CC715-92P,CC715-92P,CONCEPTD CC715-92P,oem-wlan-listed,Wireless LAN_Intel_22.70.0.6_W11x64_(AX201).zip,22.70.0.6,2021/11/10,33
+ConceptD CN314-72,10,https://www.acer.com/us-en/support/product-support/CN314-72,CN314-72,CONCEPTD CN314-72,oem-wlan-listed,Wireless LAN_Intel_21.90.3.2_W10x64_(AX201).zip,21.90.3.2,2020/10/29,28
+ConceptD CN314-72,11,https://www.acer.com/us-en/support/product-support/CN314-72,CN314-72,CONCEPTD CN314-72,oem-os-not-listed,,,,0
+ConceptD CN314-72G,10,https://www.acer.com/us-en/support/product-support/CN314-72G,CN314-72G,CONCEPTD CN314-72G,oem-wlan-listed,Wireless LAN_Intel_21.90.3.2_W10x64_(AX201).zip,21.90.3.2,2020/10/29,28
+ConceptD CN314-72G,11,https://www.acer.com/us-en/support/product-support/CN314-72G,CN314-72G,CONCEPTD CN314-72G,oem-os-not-listed,,,,0
+ConceptD CN314-72P,10,https://www.acer.com/us-en/support/product-support/CN314-72P,CN314-72P,CONCEPTD CN314-72P,oem-wlan-listed,Wireless LAN_Intel_21.90.3.2_W10x64_(AX201).zip,21.90.3.2,2020/10/29,28
+ConceptD CN314-72P,11,https://www.acer.com/us-en/support/product-support/CN314-72P,CN314-72P,CONCEPTD CN314-72P,oem-os-not-listed,,,,0
+ConceptD CN314-73G,10,https://www.acer.com/us-en/support/product-support/CN314-73G,CN314-73G,CONCEPTD CN314-73G,oem-os-not-listed,,,,0
+ConceptD CN314-73G,11,https://www.acer.com/us-en/support/product-support/CN314-73G,CN314-73G,CONCEPTD CN314-73G,oem-wlan-listed,Wireless LAN_Intel_22.40.0.7_W11x64_(AX201).zip,22.40.0.7,2021/10/14,24
+ConceptD CN314-73P,10,https://www.acer.com/us-en/support/product-support/CN314-73P,CN314-73P,CONCEPTD CN314-73P,oem-os-not-listed,,,,0
+ConceptD CN314-73P,11,https://www.acer.com/us-en/support/product-support/CN314-73P,CN314-73P,CONCEPTD CN314-73P,oem-wlan-listed,Wireless LAN_Intel_22.40.0.7_W11x64_(AX201).zip,22.40.0.7,2021/10/14,24
+ConceptD CN315-71,10,https://www.acer.com/us-en/support/product-support/CN315-71,CN315-71,CONCEPTD CN315-71,oem-wlan-listed,Wireless LAN_Intel_22.10.0.7_W10x64_(INT9560).zip,22.10.0.7,2021/07/08,53
+ConceptD CN315-71,11,https://www.acer.com/us-en/support/product-support/CN315-71,CN315-71,CONCEPTD CN315-71,oem-os-not-listed,,,,0
+ConceptD CN315-71P,10,https://www.acer.com/us-en/support/product-support/CN315-71P,CN315-71P,CONCEPTD CN315-71P,oem-wlan-listed,Wireless LAN_Intel_22.10.0.7_W10x64_(INT9560).zip,22.10.0.7,2021/07/08,53
+ConceptD CN315-71P,11,https://www.acer.com/us-en/support/product-support/CN315-71P,CN315-71P,CONCEPTD CN315-71P,oem-os-not-listed,,,,0
+ConceptD CN315-72,10,https://www.acer.com/us-en/support/product-support/CN315-72,CN315-72,CONCEPTD CN315-72,oem-wlan-listed,Wireless LAN_Intel_21.90.3.2_W10x64_(AX201).zip,21.90.3.2,2020/10/30,30
+ConceptD CN315-72,11,https://www.acer.com/us-en/support/product-support/CN315-72,CN315-72,CONCEPTD CN315-72,oem-os-not-listed,,,,0
+ConceptD CN315-72G,10,https://www.acer.com/us-en/support/product-support/CN315-72G,CN315-72G,CONCEPTD CN315-72G,oem-wlan-listed,Wireless LAN_Intel_21.90.3.2_W10x64_(AX201).zip,21.90.3.2,2020/10/30,30
+ConceptD CN315-72G,11,https://www.acer.com/us-en/support/product-support/CN315-72G,CN315-72G,CONCEPTD CN315-72G,oem-os-not-listed,,,,0
+ConceptD CN315-72P,10,https://www.acer.com/us-en/support/product-support/CN315-72P,CN315-72P,CONCEPTD CN315-72P,oem-wlan-listed,Wireless LAN_Intel_21.90.3.2_W10x64_(AX201).zip,21.90.3.2,2020/10/30,30
+ConceptD CN315-72P,11,https://www.acer.com/us-en/support/product-support/CN315-72P,CN315-72P,CONCEPTD CN315-72P,oem-os-not-listed,,,,0
+ConceptD CN316-73G,10,https://www.acer.com/us-en/support/product-support/CN316-73G,CN316-73G,CONCEPTD CN316-73G,oem-os-not-listed,,,,0
+ConceptD CN316-73G,11,https://www.acer.com/us-en/support/product-support/CN316-73G,CN316-73G,CONCEPTD CN316-73G,oem-wlan-listed,Wireless LAN_Intel_22.40.0.7_W11x64_(AX201).zip,22.40.0.7,2021/10/07,24
+ConceptD CN316-73P,10,https://www.acer.com/us-en/support/product-support/CN316-73P,CN316-73P,CONCEPTD CN316-73P,oem-os-not-listed,,,,0
+ConceptD CN316-73P,11,https://www.acer.com/us-en/support/product-support/CN316-73P,CN316-73P,CONCEPTD CN316-73P,oem-wlan-listed,Wireless LAN_Intel_22.40.0.7_W11x64_(AX201).zip,22.40.0.7,2021/10/07,24
+ConceptD CN515-71,10,https://www.acer.com/us-en/support/product-support/CN515-71,CN515-71,CONCEPTD CN515-71,oem-wlan-listed,Wireless LAN_Intel_21.70.0.6_W10x64_(AX200).zip,21.70.0.6,2020/12/01,49
+ConceptD CN515-71,11,https://www.acer.com/us-en/support/product-support/CN515-71,CN515-71,CONCEPTD CN515-71,oem-os-not-listed,,,,0
+ConceptD CN515-71P,10,https://www.acer.com/us-en/support/product-support/CN515-71P,CN515-71P,CONCEPTD CN515-71P,oem-wlan-listed,Wireless LAN_Intel_21.70.0.6_W10x64_(AX200).zip,21.70.0.6,2020/12/01,49
+ConceptD CN515-71P,11,https://www.acer.com/us-en/support/product-support/CN515-71P,CN515-71P,CONCEPTD CN515-71P,oem-os-not-listed,,,,0
+ConceptD CN516-72,10,,,,support-list-empty,,,,
+ConceptD CN516-72,11,,,,support-list-empty,,,,
+ConceptD CN516-72G,10,https://www.acer.com/us-en/support/product-support/CN516-72G,CN516-72G,CONCEPTD CN516-72G,oem-wlan-listed,Wireless LAN_Killer_22.40.0.7_W10x64.zip,22.40.0.7,2021/07/06,30
+ConceptD CN516-72G,11,https://www.acer.com/us-en/support/product-support/CN516-72G,CN516-72G,CONCEPTD CN516-72G,oem-wlan-listed,Wireless LAN_Killer_22.40.0.7_W11x64.zip,22.40.0.7,2021/11/30,31
+ConceptD CN517-71,10,https://www.acer.com/us-en/support/product-support/CN517-71,CN517-71,CONCEPTD CN517-71,oem-wlan-listed,Wireless LAN_Killer_21.90.2.1_W10x64.zip,21.90.2.1,2020/09/23,32
+ConceptD CN517-71,11,https://www.acer.com/us-en/support/product-support/CN517-71,CN517-71,CONCEPTD CN517-71,oem-os-not-listed,,,,0
+ConceptD CN517-71P,10,https://www.acer.com/us-en/support/product-support/CN517-71P,CN517-71P,CONCEPTD CN517-71P,oem-wlan-listed,Wireless LAN_Killer_21.90.2.1_W10x64.zip,21.90.2.1,2020/09/23,32
+ConceptD CN517-71P,11,https://www.acer.com/us-en/support/product-support/CN517-71P,CN517-71P,CONCEPTD CN517-71P,oem-os-not-listed,,,,0
+ConceptD CN715-71,10,https://www.acer.com/us-en/support/product-support/CN715-71,CN715-71,CONCEPTD CN715-71,oem-wlan-listed,Wireless LAN_Killer_21.90.2.1_W10x64.zip,21.90.2.1,2020/10/30,50
+ConceptD CN715-71,11,https://www.acer.com/us-en/support/product-support/CN715-71,CN715-71,CONCEPTD CN715-71,oem-os-not-listed,,,,0
+ConceptD CN715-71P,10,https://www.acer.com/us-en/support/product-support/CN715-71P,CN715-71P,CONCEPTD CN715-71P,oem-wlan-listed,Wireless LAN_Killer_21.90.2.1_W10x64.zip,21.90.2.1,2020/10/30,48
+ConceptD CN715-71P,11,https://www.acer.com/us-en/support/product-support/CN715-71P,CN715-71P,CONCEPTD CN715-71P,oem-os-not-listed,,,,0
+ConceptD CN715-72G,10,https://www.acer.com/us-en/support/product-support/CN715-72G,CN715-72G,CONCEPTD CN715-72G,oem-wlan-listed,Wireless LAN_Killer_2.3.3314.0_W10x64_(Killer control center).zip,2.3.3314.0,2021/04/08,26
+ConceptD CN715-72G,11,https://www.acer.com/us-en/support/product-support/CN715-72G,CN715-72G,CONCEPTD CN715-72G,oem-os-not-listed,,,,0
+ConceptD CN715-72P,10,https://www.acer.com/us-en/support/product-support/CN715-72P,CN715-72P,CONCEPTD CN715-72P,oem-wlan-listed,Wireless LAN_Killer_2.3.3314.0_W10x64_(Killer control center).zip,2.3.3314.0,2021/04/08,26
+ConceptD CN715-72P,11,https://www.acer.com/us-en/support/product-support/CN715-72P,CN715-72P,CONCEPTD CN715-72P,oem-os-not-listed,,,,0
+ConceptD CN715-73G,10,https://www.acer.com/us-en/support/product-support/CN715-73G,CN715-73G,CONCEPTD CN715-73G,oem-os-not-listed,,,,0
+ConceptD CN715-73G,11,https://www.acer.com/us-en/support/product-support/CN715-73G,CN715-73G,CONCEPTD CN715-73G,oem-wlan-listed,Wireless LAN_Intel_22.70.0.6_W11x64_(AX201).zip,22.70.0.6,2021/11/10,33
+ConceptD CN917-71,10,https://www.acer.com/us-en/support/product-support/CN917-71,CN917-71,CONCEPTD CN917-71,oem-wlan-listed,Wireless LAN_Killer_2.1.2925.0_W10x64_(Killer control center).zip,2.1.2925.0,2021/07/14,46
+ConceptD CN917-71,11,https://www.acer.com/us-en/support/product-support/CN917-71,CN917-71,CONCEPTD CN917-71,oem-os-not-listed,,,,0
+ConceptD CN917-71P,10,https://www.acer.com/us-en/support/product-support/CN917-71P,CN917-71P,CONCEPTD CN917-71P,oem-wlan-listed,Wireless LAN_Killer_2.1.2925.0_W10x64_(Killer control center).zip,2.1.2925.0,2021/07/14,46
+ConceptD CN917-71P,11,https://www.acer.com/us-en/support/product-support/CN917-71P,CN917-71P,CONCEPTD CN917-71P,oem-os-not-listed,,,,0
+Enduro EN314-51W,10,https://www.acer.com/us-en/support/product-support/EN314-51W,EN314-51W,ENDURO EN314-51W,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64_(AX201).zip,22.0.1.1,2021/08/11,31
+Enduro EN314-51W,11,https://www.acer.com/us-en/support/product-support/EN314-51W,EN314-51W,ENDURO EN314-51W,oem-wlan-listed,Wireless LAN_Intel_22.120.1.9_W11x64_(AX201).zip,22.120.1.9,2023/02/10,27
+Enduro EN314-51WG,10,https://www.acer.com/us-en/support/product-support/EN314-51WG,EN314-51WG,ENDURO EN314-51WG,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64_(AX201).zip,22.0.1.1,2021/08/11,31
+Enduro EN314-51WG,11,https://www.acer.com/us-en/support/product-support/EN314-51WG,EN314-51WG,ENDURO EN314-51WG,oem-wlan-listed,Wireless LAN_Intel_22.120.1.9_W11x64_(AX201).zip,22.120.1.9,2023/02/10,27
+Enduro EUN314-51W,10,https://www.acer.com/us-en/support/product-support/EUN314-51W,EUN314-51W,ENDURO EUN314-51W,oem-wlan-listed,Wireless LAN_Intel_22.170.0.3_W10x64_(AX201).zip,22.170.0.3,2023/08/30,22
+Enduro EUN314-51W,11,https://www.acer.com/us-en/support/product-support/EUN314-51W,EUN314-51W,ENDURO EUN314-51W,oem-wlan-listed,Wireless LAN_Intel_22.180.0.4_W11x64_(AX201).zip,22.180.0.4,2023/10/19,26
+Enduro EUN314-51WG,10,https://www.acer.com/us-en/support/product-support/EUN314-51WG,EUN314-51WG,ENDURO EUN314-51WG,oem-wlan-listed,Wireless LAN_Intel_22.170.0.3_W10x64_(AX201).zip,22.170.0.3,2023/08/30,22
+Enduro EUN314-51WG,11,https://www.acer.com/us-en/support/product-support/EUN314-51WG,EUN314-51WG,ENDURO EUN314-51WG,oem-wlan-listed,Wireless LAN_Intel_22.180.0.4_W11x64_(AX201).zip,22.180.0.4,2023/10/19,26
+Extensa 214-52,10,https://www.acer.com/us-en/support/product-support/EX214-52,EX214-52,EXTENSA 214-52,oem-wlan-listed,Wireless LAN_MTK_3.0.1.1300_W10x64_(MT7921LE).zip,3.0.1.1300,2022/08/12,31
+Extensa 214-52,11,https://www.acer.com/us-en/support/product-support/EX214-52,EX214-52,EXTENSA 214-52,oem-wlan-listed,Wireless LAN_MTK_3.0.1.1300_W11x64.zip,3.0.1.1300,2022/05/12,24
+Extensa 214-52G,10,https://www.acer.com/us-en/support/product-support/EX214-52G,EX214-52G,EXTENSA 214-52G,oem-wlan-listed,Wireless LAN_MTK_3.0.1.1300_W10x64_(MT7921LE).zip,3.0.1.1300,2022/08/12,31
+Extensa 214-52G,11,https://www.acer.com/us-en/support/product-support/EX214-52G,EX214-52G,EXTENSA 214-52G,oem-wlan-listed,Wireless LAN_MTK_3.0.1.1300_W11x64.zip,3.0.1.1300,2022/05/12,24
+Extensa 215-22,10,https://www.acer.com/us-en/support/product-support/EX215-22,EX215-22,EXTENSA 215-22,oem-wlan-listed,Wireless LAN_Intel_19.51.31.1_W10x64.zip,19.51.31.1,2021/03/09,22
+Extensa 215-22,11,https://www.acer.com/us-en/support/product-support/EX215-22,EX215-22,EXTENSA 215-22,oem-wlan-listed,Wireless LAN_MTK_3.0.1.1050_W11x64.zip,3.0.1.1050,2022/02/25,20
+Extensa 215-22G,10,https://www.acer.com/us-en/support/product-support/EX215-22G,EX215-22G,EXTENSA 215-22G,oem-wlan-listed,Wireless LAN_Intel_19.51.31.1_W10x64.zip,19.51.31.1,2021/03/09,22
+Extensa 215-22G,11,https://www.acer.com/us-en/support/product-support/EX215-22G,EX215-22G,EXTENSA 215-22G,oem-wlan-listed,Wireless LAN_MTK_3.0.1.1050_W11x64.zip,3.0.1.1050,2022/02/25,20
+Extensa 215-31,10,https://www.acer.com/us-en/support/product-support/EX215-31,EX215-31,EXTENSA 215-31,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64_(INT9462 and INT9560).zip,22.0.1.1,2021/03/09,32
+Extensa 215-31,11,https://www.acer.com/us-en/support/product-support/EX215-31,EX215-31,EXTENSA 215-31,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W11x64_(INT9462 and INT9560).zip,22.0.1.1,2022/02/24,16
+Extensa 215-32,10,https://www.acer.com/us-en/support/product-support/EX215-32,EX215-32,EXTENSA 215-32,oem-wlan-listed,Wireless LAN_Intel_22.0.0.6_W10x64.zip,22.0.0.6,2021/07/28,16
+Extensa 215-32,11,https://www.acer.com/us-en/support/product-support/EX215-32,EX215-32,EXTENSA 215-32,oem-wlan-listed,Wireless LAN_Atheros_12.0.0.1259_W11x64_(NFA435 Liteon).zip,12.0.0.1259,2024/02/26,31
+Extensa 215-51,10,https://www.acer.com/us-en/support/product-support/EX215-51,EX215-51,EXTENSA 215-51,oem-wlan-listed,Wireless LAN_Intel_21.70.0.6_W10x64_(INT9462 and INT9560).zip,21.70.0.6,2020/11/12,37
+Extensa 215-51,11,https://www.acer.com/us-en/support/product-support/EX215-51,EX215-51,EXTENSA 215-51,oem-os-not-listed,,,,0
+Extensa 215-51G,10,https://www.acer.com/us-en/support/product-support/EX215-51G,EX215-51G,EXTENSA 215-51G,oem-wlan-listed,Wireless LAN_Intel_21.70.0.6_W10x64_(INT9462 and INT9560).zip,21.70.0.6,2020/11/12,37
+Extensa 215-51G,11,https://www.acer.com/us-en/support/product-support/EX215-51G,EX215-51G,EXTENSA 215-51G,oem-os-not-listed,,,,0
+Extensa 215-52,10,https://www.acer.com/us-en/support/product-support/EX215-52,EX215-52,EXTENSA 215-52,oem-wlan-listed,Wireless LAN_Intel_22.10.0.7_W10x64_(INT9462 and INT9560).zip,22.10.0.7,2021/04/29,22
+Extensa 215-52,11,https://www.acer.com/us-en/support/product-support/EX215-52,EX215-52,EXTENSA 215-52,oem-wlan-listed,Wireless LAN_Intel_22.120.1.9_W11x64_(INT9462 and INT9560).zip,22.120.1.9,2023/01/06,25
+Extensa 215-53G,10,https://www.acer.com/us-en/support/product-support/EX215-53G,EX215-53G,EXTENSA 215-53G,oem-wlan-listed,Wireless LAN_Intel_22.10.0.7_W10x64.zip,22.10.0.7,2021/02/05,19
+Extensa 215-53G,11,https://www.acer.com/us-en/support/product-support/EX215-53G,EX215-53G,EXTENSA 215-53G,oem-os-not-listed,,,,0
+Extensa 215-54,10,https://www.acer.com/us-en/support/product-support/EX215-54,EX215-54,EXTENSA 215-54,oem-wlan-listed,Wireless LAN_Intel_22.200.0.6_W10x64_(AX101).zip,22.200.0.6,2023/08/29,31
+Extensa 215-54,11,https://www.acer.com/us-en/support/product-support/EX215-54,EX215-54,EXTENSA 215-54,oem-wlan-listed,Wireless LAN_Intel_22.200.2.1_W11x64_(AX101).zip,22.200.2.1,2023/11/15,39
+Extensa 215-54G,10,https://www.acer.com/us-en/support/product-support/EX215-54G,EX215-54G,EXTENSA 215-54G,oem-wlan-listed,Wireless LAN_Intel_22.200.0.6_W10x64_(AX101).zip,22.200.0.6,2023/08/29,31
+Extensa 215-54G,11,https://www.acer.com/us-en/support/product-support/EX215-54G,EX215-54G,EXTENSA 215-54G,oem-wlan-listed,Wireless LAN_Intel_22.200.2.1_W11x64_(AX101).zip,22.200.2.1,2023/11/15,39
+Extensa EX214-51,10,https://www.acer.com/us-en/support/product-support/EX214-51,EX214-51,EXTENSA 214-51,oem-wlan-listed,Wireless LAN_Intel_21.90.2.1_W10x64_(AX201).zip,21.90.2.1,2020/09/23,31
+Extensa EX214-51,11,https://www.acer.com/us-en/support/product-support/EX214-51,EX214-51,EXTENSA 214-51,oem-os-not-listed,,,,0
+Extensa EX214-51G,10,https://www.acer.com/us-en/support/product-support/EX214-51G,EX214-51G,EXTENSA 214-51G,oem-wlan-listed,Wireless LAN_Intel_21.90.2.1_W10x64_(AX201).zip,21.90.2.1,2020/09/23,31
+Extensa EX214-51G,11,https://www.acer.com/us-en/support/product-support/EX214-51G,EX214-51G,EXTENSA 214-51G,oem-os-not-listed,,,,0
+N9500-A,10,https://www.acer.com/us-en/support/product-support/N9500-A,N9500-A,N9500-A,oem-wlan-listed,Wireless LAN_Intel_21.70.0.6_W10x64_(AX200).zip,21.70.0.6,2020/11/06,35
+N9500-A,11,https://www.acer.com/us-en/support/product-support/N9500-A,N9500-A,N9500-A,oem-os-not-listed,,,,0
+Nitro AN514-54,10,,,,support-list-empty,,,,
+Nitro AN514-54,11,,,,support-list-empty,,,,
+Nitro AN515-43,10,https://www.acer.com/us-en/support/product-support/AN515-43,AN515-43,NITRO AN515-43,oem-wlan-listed,Wireless LAN_Atheros_12.0.0.910_W10x64_(NFA344).zip,12.0.0.910,2020/11/02,28
+Nitro AN515-43,11,https://www.acer.com/us-en/support/product-support/AN515-43,AN515-43,NITRO AN515-43,oem-os-not-listed,,,,0
+Nitro AN515-44,10,https://www.acer.com/us-en/support/product-support/AN515-44,AN515-44,NITRO AN515-44,oem-wlan-listed,Wireless LAN_Intel_21.70.0.6_W10x64_(AX200).zip,21.70.0.6,2020/11/06,35
+Nitro AN515-44,11,https://www.acer.com/us-en/support/product-support/AN515-44,AN515-44,NITRO AN515-44,oem-os-not-listed,,,,0
+Nitro AN515-45,10,https://www.acer.com/us-en/support/product-support/AN515-45,AN515-45,NITRO AN515-45,oem-wlan-listed,Wireless LAN_MTK_3.0.1.1300_W10x64.zip,3.0.1.1300,2022/04/20,23
+Nitro AN515-45,11,https://www.acer.com/us-en/support/product-support/AN515-45,AN515-45,NITRO AN515-45,oem-wlan-listed,Wireless LAN_MTK_3.0.1.1300_W11x64_(MT7921LE).zip,3.0.1.1300,2022/11/18,29
+Nitro AN515-52,10,https://www.acer.com/us-en/support/product-support/AN515-52,AN515-52,NITRO AN515-52,oem-wlan-listed,Wireless LAN_Intel_20.20.0.4_W10x64.zip,20.20.0.4,2018/04/13,16
+Nitro AN515-52,11,https://www.acer.com/us-en/support/product-support/AN515-52,AN515-52,NITRO AN515-52,oem-os-not-listed,,,,0
+Nitro AN515-53,10,https://www.acer.com/us-en/support/product-support/AN515-53,AN515-53,NITRO AN515-53,oem-wlan-listed,Wireless LAN_Intel_20.20.0.4_W10x64.zip,20.20.0.4,2018/04/13,16
+Nitro AN515-53,11,https://www.acer.com/us-en/support/product-support/AN515-53,AN515-53,NITRO AN515-53,oem-os-not-listed,,,,0
+Nitro AN515-54,10,https://www.acer.com/us-en/support/product-support/AN515-54,AN515-54,NITRO AN515-54,oem-wlan-listed,Wireless LAN_Intel_22.10.0.7_W10x64_(INT9560).zip,22.10.0.7,2021/06/10,48
+Nitro AN515-54,11,https://www.acer.com/us-en/support/product-support/AN515-54,AN515-54,NITRO AN515-54,oem-os-not-listed,,,,0
+Nitro AN515-55,10,https://www.acer.com/us-en/support/product-support/AN515-55,AN515-55,NITRO AN515-55,oem-wlan-listed,Wireless LAN_Intel_22.40.0.7_W10x64_(AX201).zip,22.40.0.7,2021/06/07,43
+Nitro AN515-55,11,https://www.acer.com/us-en/support/product-support/AN515-55,AN515-55,NITRO AN515-55,oem-wlan-listed,Wireless LAN_Intel_22.40.0.7_W11x64_(AX201).zip,22.40.0.7,2021/10/08,30
+Nitro AN515-56,10,https://www.acer.com/us-en/support/product-support/AN515-56,AN515-56,NITRO AN515-56,oem-wlan-listed,Wireless LAN_Killer_22.10.0.7_W10x64.zip,22.10.0.7,2021/03/30,25
+Nitro AN515-56,11,https://www.acer.com/us-en/support/product-support/AN515-56,AN515-56,NITRO AN515-56,oem-wlan-listed,Wireless LAN_Killer_22.40.0.7_W11x64.zip,22.40.0.7,2021/11/11,27
+Nitro AN515-57,10,https://www.acer.com/us-en/support/product-support/AN515-57,AN515-57,NITRO AN515-57,oem-wlan-listed,Wireless LAN_Killer_22.40.0.7_W10x64.zip,22.40.0.7,2021/05/06,33
+Nitro AN515-57,11,https://www.acer.com/us-en/support/product-support/AN515-57,AN515-57,NITRO AN515-57,oem-wlan-listed,Wireless LAN_Killer_22.130.0.5_W11x64.zip,22.130.0.5,2022/09/05,41
+Nitro AN517-41,10,https://www.acer.com/us-en/support/product-support/AN517-41,AN517-41,NITRO AN517-41,oem-wlan-listed,Wireless LAN_MTK_3.0.1.1300_W10x64.zip,3.0.1.1300,2022/04/20,23
+Nitro AN517-41,11,https://www.acer.com/us-en/support/product-support/AN517-41,AN517-41,NITRO AN517-41,oem-wlan-listed,Wireless LAN_MTK_3.0.1.1300_W11x64_(MT7921LE).zip,3.0.1.1300,2022/10/19,28
+Nitro AN517-51,10,https://www.acer.com/us-en/support/product-support/AN517-51,AN517-51,NITRO AN517-51,oem-wlan-listed,Wireless LAN_Intel_22.10.0.7_W10x64_(AX200).zip,22.10.0.7,2021/05/04,47
+Nitro AN517-51,11,https://www.acer.com/us-en/support/product-support/AN517-51,AN517-51,NITRO AN517-51,oem-os-not-listed,,,,0
+Nitro AN517-52,10,https://www.acer.com/us-en/support/product-support/AN517-52,AN517-52,NITRO AN517-52,oem-wlan-listed,Wireless LAN_Intel_22.10.0.7_W10x64_(AX201).zip,22.10.0.7,2021/02/08,37
+Nitro AN517-52,11,https://www.acer.com/us-en/support/product-support/AN517-52,AN517-52,NITRO AN517-52,oem-wlan-listed,Wireless LAN_Intel_22.40.0.7_W11x64_(AX201).zip,22.40.0.7,2021/10/13,30
+Nitro AN517-53,10,https://www.acer.com/us-en/support/product-support/AN517-53,AN517-53,NITRO AN517-53,oem-wlan-listed,Wireless LAN_Killer_22.10.0.7_W10x64.zip,22.10.0.7,2021/03/04,25
+Nitro AN517-53,11,https://www.acer.com/us-en/support/product-support/AN517-53,AN517-53,NITRO AN517-53,oem-wlan-listed,Wireless LAN_Killer_22.40.0.7_W11x64.zip,22.40.0.7,2021/10/27,27
+Nitro AN517-54,10,https://www.acer.com/us-en/support/product-support/AN517-54,AN517-54,NITRO AN517-54,oem-wlan-listed,Wireless LAN_Killer_22.40.0.7_W10x64.zip,22.40.0.7,2021/05/26,26
+Nitro AN517-54,11,https://www.acer.com/us-en/support/product-support/AN517-54,AN517-54,NITRO AN517-54,oem-wlan-listed,Wireless LAN_Killer_22.130.0.5_W11x64.zip,22.130.0.5,2022/09/07,41
+Nitro AN715-51,10,https://www.acer.com/us-en/support/product-support/AN715-51,AN715-51,NITRO AN715-51,oem-wlan-listed,Wireless LAN_Intel_20.120.1.1_W10x64.zip,20.120.1.1,2019/05/27,21
+Nitro AN715-51,11,https://www.acer.com/us-en/support/product-support/AN715-51,AN715-51,NITRO AN715-51,oem-os-not-listed,,,,0
+Nitro AN715-52,10,https://www.acer.com/us-en/support/product-support/AN715-52,AN715-52,NITRO AN715-52,oem-wlan-listed,Wireless LAN_Intel_21.70.0.6_W10x64_(AX201).zip,21.70.0.6,2020/09/28,43
+Nitro AN715-52,11,https://www.acer.com/us-en/support/product-support/AN715-52,AN715-52,NITRO AN715-52,oem-os-not-listed,,,,0
+Predator PH315-52,10,https://www.acer.com/us-en/support/product-support/PH315-52,PH315-52,PREDATOR PH315-52,oem-wlan-listed,Wireless LAN_Killer_2.0.2324.0_W10x64_(Killer control center).zip,2.0.2324.0,2020/03/23,21
+Predator PH315-52,11,https://www.acer.com/us-en/support/product-support/PH315-52,PH315-52,PREDATOR PH315-52,oem-os-not-listed,,,,0
+Predator PH315-53,10,https://www.acer.com/us-en/support/product-support/PH315-53,PH315-53,PREDATOR PH315-53,oem-wlan-listed,Wireless LAN_Killer_22.10.0.7_W10x64.zip,22.10.0.7,2021/01/22,54
+Predator PH315-53,11,https://www.acer.com/us-en/support/product-support/PH315-53,PH315-53,PREDATOR PH315-53,oem-os-not-listed,,,,0
+Predator PH315-54,10,https://www.acer.com/us-en/support/product-support/PH315-54,PH315-54,PREDATOR PH315-54,oem-wlan-listed,Wireless LAN_Killer_22.40.0.7_W10x64.zip,22.40.0.7,2021/06/16,28
+Predator PH315-54,11,https://www.acer.com/us-en/support/product-support/PH315-54,PH315-54,PREDATOR PH315-54,oem-wlan-listed,Wireless LAN_Killer_22.130.0.5_W11x64.zip,22.130.0.5,2022/09/12,36
+Predator PH317-53,10,https://www.acer.com/us-en/support/product-support/PH317-53,PH317-53,PREDATOR PH317-53,oem-wlan-listed,Wireless LAN_Killer_20.110.0.3_W10x64.zip,20.110.0.3,2019/06/25,20
+Predator PH317-53,11,https://www.acer.com/us-en/support/product-support/PH317-53,PH317-53,PREDATOR PH317-53,oem-os-not-listed,,,,0
+Predator PH317-54,10,https://www.acer.com/us-en/support/product-support/PH317-54,PH317-54,PREDATOR PH317-54,oem-wlan-listed,Wireless LAN_Killer_21.90.2.1_W10x64.zip,21.90.2.1,2020/10/06,39
+Predator PH317-54,11,https://www.acer.com/us-en/support/product-support/PH317-54,PH317-54,PREDATOR PH317-54,oem-os-not-listed,,,,0
+Predator PH317-55,10,https://www.acer.com/us-en/support/product-support/PH317-55,PH317-55,PREDATOR PH317-55,oem-wlan-listed,Wireless LAN_Killer_22.40.0.7_W10x64.zip,22.40.0.7,2021/07/06,27
+Predator PH317-55,11,https://www.acer.com/us-en/support/product-support/PH317-55,PH317-55,PREDATOR PH317-55,oem-wlan-listed,Wireless LAN_Killer_22.130.0.5_W11x64.zip,22.130.0.5,2022/10/17,36
+Predator PH517-51,10,https://www.acer.com/us-en/support/product-support/PH517-51,PH517-51,PREDATOR PH517-51,oem-wlan-listed,Wireless LAN_Killer_1.5.1805_W10x64.zip,1.5.1805,2018/05/21,14
+Predator PH517-51,11,https://www.acer.com/us-en/support/product-support/PH517-51,PH517-51,PREDATOR PH517-51,oem-os-not-listed,,,,0
+Predator PH517-52,10,https://www.acer.com/us-en/support/product-support/PH517-52,PH517-52,PREDATOR PH517-52,oem-wlan-listed,Wireless LAN_Killer_22.40.0.7_W10x64.zip,22.40.0.7,2021/10/14,22
+Predator PH517-52,11,https://www.acer.com/us-en/support/product-support/PH517-52,PH517-52,PREDATOR PH517-52,oem-wlan-listed,Wireless LAN_Killer_22.40.0.7_W11x64.zip,22.40.0.7,2022/02/24,22
+Predator PH717-71,10,https://www.acer.com/us-en/support/product-support/PH717-71,PH717-71,PREDATOR PH717-71,oem-wlan-listed,Wireless LAN_Killer_21.10.1.2_W10x64.zip,21.10.1.2,2019/06/18,19
+Predator PH717-71,11,https://www.acer.com/us-en/support/product-support/PH717-71,PH717-71,PREDATOR PH717-71,oem-os-not-listed,,,,0
+Predator PH717-72,10,https://www.acer.com/us-en/support/product-support/PH717-72,PH717-72,PREDATOR PH717-72,oem-wlan-listed,Wireless LAN_Killer_21.90.2.1_W10x64.zip,21.90.2.1,2020/09/03,23
+Predator PH717-72,11,https://www.acer.com/us-en/support/product-support/PH717-72,PH717-72,PREDATOR PH717-72,oem-os-not-listed,,,,0
+Predator PT314-51s,10,https://www.acer.com/us-en/support/product-support/PT314-51S,PT314-51S,PREDATOR PT314-51S,oem-wlan-listed,Wireless LAN_Killer_22.40.0.7_W10x64.zip,22.40.0.7,2021/05/21,26
+Predator PT314-51s,11,https://www.acer.com/us-en/support/product-support/PT314-51S,PT314-51S,PREDATOR PT314-51S,oem-wlan-listed,Wireless LAN_Killer_22.40.0.7_W11x64.zip,22.40.0.7,2021/10/19,29
+Predator PT315-51,10,https://www.acer.com/us-en/support/product-support/PT315-51,PT315-51,PREDATOR PT315-51,oem-wlan-listed,Wireless LAN_Killer_21.30.1.1_W10x64.zip,21.30.1.1,2019/09/27,20
+Predator PT315-51,11,https://www.acer.com/us-en/support/product-support/PT315-51,PT315-51,PREDATOR PT315-51,oem-os-not-listed,,,,0
+Predator PT315-52,10,https://www.acer.com/us-en/support/product-support/PT315-52,PT315-52,PREDATOR PT315-52,oem-wlan-listed,Wireless LAN_Killer_22.40.0.7_W10x64.zip,22.40.0.7,2021/04/29,48
+Predator PT315-52,11,https://www.acer.com/us-en/support/product-support/PT315-52,PT315-52,PREDATOR PT315-52,oem-os-not-listed,,,,0
+Predator PT315-53,10,https://www.acer.com/us-en/support/product-support/PT315-53,PT315-53,PREDATOR PT315-53,oem-wlan-listed,Wireless LAN_Killer_22.40.0.7_W10x64.zip,22.40.0.7,2021/07/06,27
+Predator PT315-53,11,https://www.acer.com/us-en/support/product-support/PT315-53,PT315-53,PREDATOR PT315-53,oem-wlan-listed,Wireless LAN_Killer_22.40.0.7_W11x64.zip,22.40.0.7,2021/10/19,27
+Predator PT515-51,10,https://www.acer.com/us-en/support/product-support/PT515-51,PT515-51,PREDATOR PT515-51,oem-wlan-listed,Wireless LAN_Killer_20.110.0.3_W10x64.zip,20.110.0.3,2019/02/12,23
+Predator PT515-51,11,https://www.acer.com/us-en/support/product-support/PT515-51,PT515-51,PREDATOR PT515-51,oem-os-not-listed,,,,0
+Predator PT515-52,10,https://www.acer.com/us-en/support/product-support/PT515-52,PT515-52,PREDATOR PT515-52,oem-wlan-listed,Wireless LAN_Killer_22.0.0.6_W10x64.zip,22.0.0.6,2021/01/22,50
+Predator PT515-52,11,https://www.acer.com/us-en/support/product-support/PT515-52,PT515-52,PREDATOR PT515-52,oem-os-not-listed,,,,0
+Predator PT516-51s,10,https://www.acer.com/us-en/support/product-support/PT516-51S,PT516-51S,PREDATOR PT516-51S,oem-wlan-listed,Wireless LAN_Killer_22.40.0.7_W10x64.zip,22.40.0.7,2021/06/02,28
+Predator PT516-51s,11,https://www.acer.com/us-en/support/product-support/PT516-51S,PT516-51S,PREDATOR PT516-51S,oem-wlan-listed,Wireless LAN_Killer_22.40.0.7_W11x64.zip,22.40.0.7,2021/10/20,28
+Predator PT917-71,10,https://www.acer.com/us-en/support/product-support/PT917-71,PT917-71,PREDATOR PT917-71,oem-wlan-listed,Wireless LAN_Killer_20.110.0.3_W10x64.zip,20.110.0.3,2019/04/01,18
+Predator PT917-71,11,https://www.acer.com/us-en/support/product-support/PT917-71,PT917-71,PREDATOR PT917-71,oem-os-not-listed,,,,0
+S40-51,10,https://www.acer.com/us-en/support/product-support/S40-51,S40-51,S40-51,oem-wlan-listed,Wireless LAN_Intel_21.60.2.1_W10x64_(for 10th generation CPU),21.60.2.1,2020/05/08,40
+S40-51,11,https://www.acer.com/us-en/support/product-support/S40-51,S40-51,S40-51,oem-os-not-listed,,,,0
+S40-53,10,https://www.acer.com/us-en/support/product-support/S40-53,S40-53,S40-53,oem-wlan-listed,Wireless LAN_MTK_3.0.1.1300_W10x64.zip,3.0.1.1300,2022/04/20,29
+S40-53,11,https://www.acer.com/us-en/support/product-support/S40-53,S40-53,S40-53,oem-wlan-listed,Wireless LAN_MTK_3.0.1.1300_W11x64_(MT7921LE).zip,3.0.1.1300,2022/10/17,34
+S50-53,10,https://www.acer.com/us-en/support/product-support/S50-53,S50-53,S50-53,oem-wlan-listed,Wireless LAN_MTK_3.0.1.1300_W10x64.zip,3.0.1.1300,2022/04/20,35
+S50-53,11,https://www.acer.com/us-en/support/product-support/S50-53,S50-53,S50-53,oem-wlan-listed,Wireless LAN_MTK_3.0.1.1300_W11x64_(MT7921LE).zip,3.0.1.1300,2022/12/02,31
+S9300,10,https://www.acer.com/us-en/support/product-support/S9300,S9300,S9300,oem-wlan-listed,Wireless LAN_Intel_21.80.2.1_W10x64_(AX201).zip,21.80.2.1,2020/11/06,23
+S9300,11,https://www.acer.com/us-en/support/product-support/S9300,S9300,S9300,oem-os-not-listed,,,,0
+S9400-A,10,https://www.acer.com/us-en/support/product-support/S9400-A,S9400-A,S9400-A,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64_(AX200).zip,22.0.1.1,2021/03/29,14
+S9400-A,11,https://www.acer.com/us-en/support/product-support/S9400-A,S9400-A,S9400-A,oem-os-not-listed,,,,0
+SP9300,10,https://www.acer.com/us-en/support/product-support/SP9300,SP9300,SP9300,oem-wlan-listed,Wireless LAN_Intel_22.40.0.7_W10x64_(AX201).zip,22.40.0.7,2021/05/11,25
+SP9300,11,https://www.acer.com/us-en/support/product-support/SP9300,SP9300,SP9300,oem-os-not-listed,,,,0
+Spin SP111-33,10,https://www.acer.com/us-en/support/product-support/SP111-33,SP111-33,SP111-33,oem-wlan-listed,Wireless LAN_Intel_21.80.2.1_W10x64_(INT9560).zip,21.80.2.1,2020/10/30,22
+Spin SP111-33,11,https://www.acer.com/us-en/support/product-support/SP111-33,SP111-33,SP111-33,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W11x64_(INT9560).zip,22.0.1.1,2021/10/25,13
+Spin SP111-34N,10,https://www.acer.com/us-en/support/product-support/SP111-34N,SP111-34N,SP111-34N,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64_(INT9560).zip,22.0.1.1,2021/02/05,24
+Spin SP111-34N,11,https://www.acer.com/us-en/support/product-support/SP111-34N,SP111-34N,SP111-34N,oem-os-not-listed,,,,0
+Spin SP114-31,10,https://www.acer.com/us-en/support/product-support/SP114-31,SP114-31,SP114-31,oem-wlan-listed,Wireless LAN_Intel_22.20.0.6_W10x64_(INT9560).zip,22.20.0.6,2021/04/12,13
+Spin SP114-31,11,https://www.acer.com/us-en/support/product-support/SP114-31,SP114-31,SP114-31,oem-wlan-listed,Wireless LAN_Intel_22.40.0.7_W11x64_(INT9560).zip,22.40.0.7,2021/10/12,14
+Spin SP114-31N,10,https://www.acer.com/us-en/support/product-support/SP114-31N,SP114-31N,SP114-31N,oem-wlan-listed,Wireless LAN_Intel_22.20.0.6_W10x64_(INT9560).zip,22.20.0.6,2021/04/12,13
+Spin SP114-31N,11,https://www.acer.com/us-en/support/product-support/SP114-31N,SP114-31N,SP114-31N,oem-wlan-listed,Wireless LAN_Intel_22.40.0.7_W11x64_(INT9560).zip,22.40.0.7,2021/10/12,14
+Spin SP313-51N,10,https://www.acer.com/us-en/support/product-support/SP313-51N,SP313-51N,SP313-51N,oem-wlan-listed,Wireless LAN_Intel_22.40.0.7_W10x64_(AX201).zip,22.40.0.7,2021/05/25,28
+Spin SP313-51N,11,https://www.acer.com/us-en/support/product-support/SP313-51N,SP313-51N,SP313-51N,oem-wlan-listed,Wireless LAN_Intel_22.40.0.7_W11x64_(AX201).zip,22.40.0.7,2022/02/24,25
+Spin SP314-21,10,https://www.acer.com/us-en/support/product-support/SP314-21,SP314-21,SP314-21,oem-wlan-listed,Wireless LAN_Atheros_12.0.0.953_W10x64_(NFA344A Liteon).zip,12.0.0.953,2020/10/07,13
+Spin SP314-21,11,https://www.acer.com/us-en/support/product-support/SP314-21,SP314-21,SP314-21,oem-wlan-listed,Wireless LAN_Atheros_12.0.0.953_W11x64_(NFA344A Liteon).zip,12.0.0.953,2021/10/28,13
+Spin SP314-21N,10,https://www.acer.com/us-en/support/product-support/SP314-21N,SP314-21N,SP314-21N,oem-wlan-listed,Wireless LAN_Atheros_12.0.0.953_W10x64_(NFA344A Liteon).zip,12.0.0.953,2020/10/07,13
+Spin SP314-21N,11,https://www.acer.com/us-en/support/product-support/SP314-21N,SP314-21N,SP314-21N,oem-wlan-listed,Wireless LAN_Atheros_12.0.0.953_W11x64_(NFA344A Liteon).zip,12.0.0.953,2021/10/28,13
+Spin SP314-51,10,https://www.acer.com/us-en/support/product-support/SP314-51,SP314-51,SP314-51,oem-wlan-listed,Wireless LAN_Atheros_12.0.0.428_W10x64_(NFA344A Liteon).zip,12.0.0.428,2018/01/15,12
+Spin SP314-51,11,https://www.acer.com/us-en/support/product-support/SP314-51,SP314-51,SP314-51,oem-os-not-listed,,,,0
+Spin SP314-52,10,https://www.acer.com/us-en/support/product-support/SP314-52,SP314-52,SP314-52,oem-wlan-listed,Wireless LAN_Intel_20.80.0.5_W10x64.zip,20.80.0.5,2018/11/13,15
+Spin SP314-52,11,https://www.acer.com/us-en/support/product-support/SP314-52,SP314-52,SP314-52,oem-os-not-listed,,,,0
+Spin SP314-54,10,https://www.acer.com/us-en/support/product-support/SP314-54,SP314-54,SP314-54,oem-wlan-listed,Wireless LAN_Intel_22.40.0.7_W10x64_(AX201).zip,22.40.0.7,2021/06/07,44
+Spin SP314-54,11,https://www.acer.com/us-en/support/product-support/SP314-54,SP314-54,SP314-54,oem-wlan-listed,Wireless LAN_Intel_22.40.0.7_W11x64_(AX201).zip,22.40.0.7,2021/10/28,21
+Spin SP314-54N,10,https://www.acer.com/us-en/support/product-support/SP314-54N,SP314-54N,SP314-54N,oem-wlan-listed,Wireless LAN_Intel_22.40.0.7_W10x64_(AX201).zip,22.40.0.7,2021/06/07,44
+Spin SP314-54N,11,https://www.acer.com/us-en/support/product-support/SP314-54N,SP314-54N,SP314-54N,oem-wlan-listed,Wireless LAN_Intel_22.40.0.7_W11x64_(AX201).zip,22.40.0.7,2021/10/28,21
+Spin SP513-41N,10,https://www.acer.com/us-en/support/product-support/SP513-41N,SP513-41N,SP513-41N,oem-wlan-listed,Wireless LAN_Liteon_3.0.1.1075_W10x64.zip,3.0.1.1075,2021/08/05,13
+Spin SP513-41N,11,https://www.acer.com/us-en/support/product-support/SP513-41N,SP513-41N,SP513-41N,oem-os-not-listed,,,,0
+Spin SP513-53N,10,https://www.acer.com/us-en/support/product-support/SP513-53N,SP513-53N,SP513-53N,oem-wlan-listed,Wireless LAN_Intel_20.80.0.5_W10x64.zip,20.80.0.5,2018/11/13,22
+Spin SP513-53N,11,https://www.acer.com/us-en/support/product-support/SP513-53N,SP513-53N,SP513-53N,oem-os-not-listed,,,,0
+Spin SP513-54N,10,https://www.acer.com/us-en/support/product-support/SP513-54N,SP513-54N,SP513-54N,oem-wlan-listed,Wireless LAN_Intel_22.40.0.7_W10x64_(AX201).zip,22.40.0.7,2021/05/11,42
+Spin SP513-54N,11,https://www.acer.com/us-en/support/product-support/SP513-54N,SP513-54N,SP513-54N,oem-os-not-listed,,,,0
+Spin SP513-55N,10,https://www.acer.com/us-en/support/product-support/SP513-55N,SP513-55N,SP513-55N,oem-wlan-listed,Wireless LAN_Intel_22.40.0.7_W10x64_(AX201).zip,22.40.0.7,2021/06/22,28
+Spin SP513-55N,11,https://www.acer.com/us-en/support/product-support/SP513-55N,SP513-55N,SP513-55N,oem-wlan-listed,Wireless LAN_Intel_22.40.0.7_W11x64_(AX201).zip,22.40.0.7,2021/11/01,24
+Spin SP513-55NA,10,,,,support-list-empty,,,,
+Spin SP513-55NA,11,,,,support-list-empty,,,,
+Spin SP714-61NA,10,https://www.acer.com/us-en/support/product-support/SP714-61NA,SP714-61NA,SP714-61NA,short-list,,,,1
+Spin SP714-61NA,11,https://www.acer.com/us-en/support/product-support/SP714-61NA,SP714-61NA,SP714-61NA,short-list,,,,0
+Swift S40-20,10,https://www.acer.com/us-en/support/product-support/S40-20,S40-20,S40-20,oem-wlan-listed,Wireless LAN_Intel_20.90.0.7_W10x64.zip,20.90.0.7,2019/02/21,25
+Swift S40-20,11,https://www.acer.com/us-en/support/product-support/S40-20,S40-20,S40-20,oem-os-not-listed,,,,0
+Swift SF114-32,10,https://www.acer.com/us-en/support/product-support/SF114-32,SF114-32,SF114-32,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64_(INT9560).zip,22.0.1.1,2021/02/19,30
+Swift SF114-32,11,https://www.acer.com/us-en/support/product-support/SF114-32,SF114-32,SF114-32,oem-os-not-listed,,,,0
+Swift SF114-33,10,https://www.acer.com/us-en/support/product-support/SF114-33,SF114-33,SF114-33,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64_(AX200).zip,22.0.1.1,2021/03/09,15
+Swift SF114-33,11,https://www.acer.com/us-en/support/product-support/SF114-33,SF114-33,SF114-33,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W11x64_(AX200).zip,22.0.1.1,2021/10/28,17
+Swift SF114-34,10,https://www.acer.com/us-en/support/product-support/SF114-34,SF114-34,SF114-34,oem-wlan-listed,Wireless LAN_Intel_22.0.0.6_W10x64_(AX201).zip,22.0.0.6,2021/02/04,16
+Swift SF114-34,11,https://www.acer.com/us-en/support/product-support/SF114-34,SF114-34,SF114-34,oem-wlan-listed,Wireless LAN_Intel_22.40.0.7_W11x64_(AX201).zip,22.40.0.7,2021/10/28,23
+Swift SF313-52,10,https://www.acer.com/us-en/support/product-support/SF313-52,SF313-52,SF313-52,oem-wlan-listed,Wireless LAN_Intel_21.80.2.1_W10x64_(AX201).zip,21.80.2.1,2020/11/06,34
+Swift SF313-52,11,https://www.acer.com/us-en/support/product-support/SF313-52,SF313-52,SF313-52,oem-os-not-listed,,,,0
+Swift SF313-52G,10,https://www.acer.com/us-en/support/product-support/SF313-52G,SF313-52G,SF313-52G,oem-wlan-listed,Wireless LAN_Intel_21.80.2.1_W10x64_(AX201).zip,21.80.2.1,2020/11/06,34
+Swift SF313-52G,11,https://www.acer.com/us-en/support/product-support/SF313-52G,SF313-52G,SF313-52G,oem-os-not-listed,,,,0
+Swift SF313-53,10,https://www.acer.com/us-en/support/product-support/SF313-53,SF313-53,SF313-53,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64_(AX201).zip,22.0.1.1,2021/04/20,35
+Swift SF313-53,11,https://www.acer.com/us-en/support/product-support/SF313-53,SF313-53,SF313-53,oem-os-not-listed,,,,0
+Swift SF313-53G,10,https://www.acer.com/us-en/support/product-support/SF313-53G,SF313-53G,SF313-53G,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64_(AX201).zip,22.0.1.1,2021/04/20,35
+Swift SF313-53G,11,https://www.acer.com/us-en/support/product-support/SF313-53G,SF313-53G,SF313-53G,oem-os-not-listed,,,,0
+Swift SF314-41,10,https://www.acer.com/us-en/support/product-support/SF314-41,SF314-41,SF314-41,oem-wlan-listed,Wireless LAN_Atheros_12.0.0.948_W10x64_(NFA344A Liteon).zip,12.0.0.948,2020/11/09,24
+Swift SF314-41,11,https://www.acer.com/us-en/support/product-support/SF314-41,SF314-41,SF314-41,oem-os-not-listed,,,,0
+Swift SF314-41G,10,https://www.acer.com/us-en/support/product-support/SF314-41G,SF314-41G,SF314-41G,oem-wlan-listed,Wireless LAN_Atheros_12.0.0.948_W10x64_(NFA344A Liteon).zip,12.0.0.948,2020/11/09,24
+Swift SF314-41G,11,https://www.acer.com/us-en/support/product-support/SF314-41G,SF314-41G,SF314-41G,oem-os-not-listed,,,,0
+Swift SF314-42,10,https://www.acer.com/us-en/support/product-support/SF314-42,SF314-42,SF314-42,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64_(AX200).zip,22.0.1.1,2021/03/29,24
+Swift SF314-42,11,https://www.acer.com/us-en/support/product-support/SF314-42,SF314-42,SF314-42,oem-os-not-listed,,,,0
+Swift SF314-43,10,https://www.acer.com/us-en/support/product-support/SF314-43,SF314-43,SF314-43,oem-wlan-listed,Wireless LAN_MTK_3.0.1.1300_W10x64.zip,3.0.1.1300,2022/04/20,17
+Swift SF314-43,11,https://www.acer.com/us-en/support/product-support/SF314-43,SF314-43,SF314-43,oem-wlan-listed,Wireless LAN_MTK_3.4.0.1046_W11x64_(MT7921LE).zip,3.4.0.1046,2024/08/27,28
+Swift SF314-44G,10,,,,support-list-empty,,,,
+Swift SF314-44G,11,,,,support-list-empty,,,,
+Swift SF314-510,10,https://www.acer.com/us-en/support/product-support/SF314-510,SF314-510,SF314-510G,near-model-match,,,,
+Swift SF314-510,11,https://www.acer.com/us-en/support/product-support/SF314-510,SF314-510,SF314-510G,near-model-match,,,,
+Swift SF314-510G,10,https://www.acer.com/us-en/support/product-support/SF314-510G,SF314-510G,SF314-510G,oem-wlan-listed,Wireless LAN_Intel_22.40.0.7_W10x64_(AX201).zip,22.40.0.7,2021/08/11,22
+Swift SF314-510G,11,https://www.acer.com/us-en/support/product-support/SF314-510G,SF314-510G,SF314-510G,oem-wlan-listed,Wireless LAN_Intel_22.40.0.7_W11x64_(AX201).zip,22.40.0.7,2021/10/13,20
+Swift SF314-511,10,https://www.acer.com/us-en/support/product-support/SF314-511,SF314-511,SF314-511,oem-wlan-listed,Wireless LAN_Intel_22.10.0.7_W10x64_(AX201).zip,22.10.0.7,2021/06/23,22
+Swift SF314-511,11,https://www.acer.com/us-en/support/product-support/SF314-511,SF314-511,SF314-511,oem-wlan-listed,Wireless LAN_Intel_22.40.0.7_W11x64_(AX201).zip,22.40.0.7,2021/11/04,23
+Swift SF314-56,10,https://www.acer.com/us-en/support/product-support/SF314-56,SF314-56,SF314-56,oem-wlan-listed,Wireless LAN_Intel_20.90.0.7_W10x64.zip,20.90.0.7,2019/02/21,40
+Swift SF314-56,11,https://www.acer.com/us-en/support/product-support/SF314-56,SF314-56,SF314-56,oem-os-not-listed,,,,0
+Swift SF314-56G,10,https://www.acer.com/us-en/support/product-support/SF314-56G,SF314-56G,SF314-56G,oem-wlan-listed,Wireless LAN_Intel_20.90.0.7_W10x64.zip,20.90.0.7,2019/02/21,40
+Swift SF314-56G,11,https://www.acer.com/us-en/support/product-support/SF314-56G,SF314-56G,SF314-56G,oem-os-not-listed,,,,0
+Swift SF314-57,10,https://www.acer.com/us-en/support/product-support/SF314-57,SF314-57,SF314-57,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64_(AX201).zip,22.0.1.1,2021/04/29,50
+Swift SF314-57,11,https://www.acer.com/us-en/support/product-support/SF314-57,SF314-57,SF314-57,oem-os-not-listed,,,,0
+Swift SF314-57G,10,https://www.acer.com/us-en/support/product-support/SF314-57G,SF314-57G,SF314-57G,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64_(AX201).zip,22.0.1.1,2021/04/29,50
+Swift SF314-57G,11,https://www.acer.com/us-en/support/product-support/SF314-57G,SF314-57G,SF314-57G,oem-os-not-listed,,,,0
+Swift SF314-58,10,https://www.acer.com/us-en/support/product-support/SF314-58,SF314-58,SF314-58,oem-wlan-listed,Wireless LAN_Intel_21.90.2.1_W10x64_(AX201).zip,21.90.2.1,2020/10/06,42
+Swift SF314-58,11,https://www.acer.com/us-en/support/product-support/SF314-58,SF314-58,SF314-58,oem-os-not-listed,,,,0
+Swift SF314-58G,10,https://www.acer.com/us-en/support/product-support/SF314-58G,SF314-58G,SF314-58G,oem-wlan-listed,Wireless LAN_Intel_21.90.2.1_W10x64_(AX201).zip,21.90.2.1,2020/10/06,42
+Swift SF314-58G,11,https://www.acer.com/us-en/support/product-support/SF314-58G,SF314-58G,SF314-58G,oem-os-not-listed,,,,0
+Swift SF314-59,10,https://www.acer.com/us-en/support/product-support/SF314-59,SF314-59,SF314-59,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64_(AX201).zip,22.0.1.1,2021/04/20,24
+Swift SF314-59,11,https://www.acer.com/us-en/support/product-support/SF314-59,SF314-59,SF314-59,oem-os-not-listed,,,,0
+Swift SF316-51,10,https://www.acer.com/us-en/support/product-support/SF316-51,SF316-51,SF316-51,oem-wlan-listed,Wireless LAN_Intel_22.10.0.7_W10x64_(AX201).zip,22.10.0.7,2021/04/20,21
+Swift SF316-51,11,https://www.acer.com/us-en/support/product-support/SF316-51,SF316-51,SF316-51,oem-wlan-listed,Wireless LAN_Intel_22.40.0.7_W11x64_(AX201).zip,22.40.0.7,2021/11/11,22
+Swift SF514-53T,10,https://www.acer.com/us-en/support/product-support/SF514-53T,SF514-53T,SF514-53T,oem-wlan-listed,Wireless LAN_Intel_20.70.0.5_W10x64.zip,20.70.0.5,2018/11/01,14
+Swift SF514-53T,11,https://www.acer.com/us-en/support/product-support/SF514-53T,SF514-53T,SF514-53T,oem-os-not-listed,,,,0
+Swift SF514-54,10,https://www.acer.com/us-en/support/product-support/SF514-54,SF514-54,SF514-54,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64_(AX201).zip,22.0.1.1,2021/02/09,42
+Swift SF514-54,11,https://www.acer.com/us-en/support/product-support/SF514-54,SF514-54,SF514-54,oem-os-not-listed,,,,0
+Swift SF514-54G,10,https://www.acer.com/us-en/support/product-support/SF514-54G,SF514-54G,SF514-54G,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64_(AX201).zip,22.0.1.1,2021/02/09,42
+Swift SF514-54G,11,https://www.acer.com/us-en/support/product-support/SF514-54G,SF514-54G,SF514-54G,oem-os-not-listed,,,,0
+Swift SF514-54GT,10,https://www.acer.com/us-en/support/product-support/SF514-54GT,SF514-54GT,SF514-54GT,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64_(AX201).zip,22.0.1.1,2021/02/09,58
+Swift SF514-54GT,11,https://www.acer.com/us-en/support/product-support/SF514-54GT,SF514-54GT,SF514-54GT,oem-os-not-listed,,,,0
+Swift SF514-54T,10,https://www.acer.com/us-en/support/product-support/SF514-54T,SF514-54T,SF514-54T,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64_(AX201).zip,22.0.1.1,2021/02/09,58
+Swift SF514-54T,11,https://www.acer.com/us-en/support/product-support/SF514-54T,SF514-54T,SF514-54T,oem-os-not-listed,,,,0
+Swift SF514-55GT,10,https://www.acer.com/us-en/support/product-support/SF514-55GT,SF514-55GT,SF514-55GT,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64_(AX201).zip,22.0.1.1,2021/04/20,23
+Swift SF514-55GT,11,https://www.acer.com/us-en/support/product-support/SF514-55GT,SF514-55GT,SF514-55GT,oem-wlan-listed,Wireless LAN_Intel_22.40.0.7_W11x64_(AX201).zip,22.40.0.7,2021/11/18,30
+Swift SF514-55T,10,https://www.acer.com/us-en/support/product-support/SF514-55T,SF514-55T,SF514-55T,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64_(AX201).zip,22.0.1.1,2021/04/20,23
+Swift SF514-55T,11,https://www.acer.com/us-en/support/product-support/SF514-55T,SF514-55T,SF514-55T,oem-wlan-listed,Wireless LAN_Intel_22.40.0.7_W11x64_(AX201).zip,22.40.0.7,2021/11/18,30
+Swift SF514-55TA,10,https://www.acer.com/us-en/support/product-support/SF514-55TA,SF514-55TA,SF514-55TA,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64_(AX201).zip,22.0.1.1,2021/04/20,23
+Swift SF514-55TA,11,https://www.acer.com/us-en/support/product-support/SF514-55TA,SF514-55TA,SF514-55TA,oem-wlan-listed,Wireless LAN_Intel_22.40.0.7_W11x64_(AX201).zip,22.40.0.7,2021/11/18,30
+Swift SF714-52T,10,https://www.acer.com/us-en/support/product-support/SF714-52T,SF714-52T,SF714-52T,oem-wlan-listed,Wireless LAN_Intel_21.90.3.2_W10x64_(AX200).zip,21.90.3.2,2020/11/12,22
+Swift SF714-52T,11,https://www.acer.com/us-en/support/product-support/SF714-52T,SF714-52T,SF714-52T,oem-os-not-listed,,,,0
+Swift SFX14-41G,10,https://www.acer.com/us-en/support/product-support/SFX14-41G,SFX14-41G,SFX14-41G,oem-wlan-listed,Wireless LAN_MTK_3.0.1.1300_W10x64.zip,3.0.1.1300,2022/04/20,17
+Swift SFX14-41G,11,https://www.acer.com/us-en/support/product-support/SFX14-41G,SFX14-41G,SFX14-41G,oem-wlan-listed,Wireless LAN_MTK_3.3.0.760_W11x64_(MT7921LE).zip,3.3.0.760,2023/11/15,26
+Swift SFX16-51G,10,https://www.acer.com/us-en/support/product-support/SFX16-51G,SFX16-51G,SFX16-51G,oem-os-not-listed,,,,0
+Swift SFX16-51G,11,https://www.acer.com/us-en/support/product-support/SFX16-51G,SFX16-51G,SFX16-51G,oem-wlan-listed,Wireless LAN_Intel_22.30.1.1_W11x64_(AX201).zip,22.30.1.1,2021/10/07,28
+T9000,10,https://www.acer.com/us-en/support/product-support/T9000,T9000,T9000,oem-wlan-listed,Wireless LAN_Intel_21.90.3.2_W10x64_(AX200).zip,21.90.3.2,2020/10/28,26
+T9000,11,https://www.acer.com/us-en/support/product-support/T9000,T9000,T9000,oem-os-not-listed,,,,0
+TravelMate B118-M,10,https://www.acer.com/us-en/support/product-support/TMB118-M,TMB118-M,TRAVELMATE B118-M,oem-wlan-listed,Wireless LAN_Intel_22.10.0.7_W10x64.zip,22.10.0.7,2021/04/15,29
+TravelMate B118-M,11,https://www.acer.com/us-en/support/product-support/TMB118-M,TMB118-M,TRAVELMATE B118-M,oem-wlan-listed,Wireless LAN_Intel_22.10.0.7_W11x64.zip,22.10.0.7,2023/03/22,16
+TravelMate B311-31,10,https://www.acer.com/us-en/support/product-support/TMB311-31,TMB311-31,TRAVELMATE B311-31,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64_(INT9560).zip,22.0.1.1,2021/02/08,36
+TravelMate B311-31,11,https://www.acer.com/us-en/support/product-support/TMB311-31,TMB311-31,TRAVELMATE B311-31,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W11x64_(INT9560).zip,22.0.1.1,2022/07/14,19
+TravelMate B311-32,10,https://www.acer.com/us-en/support/product-support/TMB311-32,TMB311-32,TRAVELMATE B311-32,wlan-row-ambiguous,Wifi LED Driver_Acer_1.0.0.0_W10x64.zip,1.0.0.0,2021/03/31,17
+TravelMate B311-32,11,https://www.acer.com/us-en/support/product-support/TMB311-32,TMB311-32,TRAVELMATE B311-32,oem-wlan-listed,Wireless LAN_Intel_24.10.0.4_W11x64_(AX201).zip,24.10.0.4,2026/08/31,34
+TravelMate P214-41,10,https://www.acer.com/us-en/support/product-support/TMP214-41,TMP214-41,TRAVELMATE P214-41,oem-wlan-listed,Wireless LAN_MTK_3.3.0.760_W10x64_(MT7921LE).zip,3.3.0.760,2023/03/22,21
+TravelMate P214-41,11,https://www.acer.com/us-en/support/product-support/TMP214-41,TMP214-41,TRAVELMATE P214-41,oem-wlan-listed,Wireless LAN_Intel_22.180.0.4_W11x64_(AX200).zip,22.180.0.4,2023/11/01,35
+TravelMate P214-41-G2,10,https://www.acer.com/us-en/support/product-support/TMP214-41-G2,TMP214-41-G2,TRAVELMATE P214-41-G2,oem-wlan-listed,Wireless LAN_MTK_3.3.0.760_W10x64_(MT7921LE).zip,3.3.0.760,2023/03/22,21
+TravelMate P214-41-G2,11,https://www.acer.com/us-en/support/product-support/TMP214-41-G2,TMP214-41-G2,TRAVELMATE P214-41-G2,oem-wlan-listed,Wireless LAN_Intel_22.180.0.4_W11x64_(AX200).zip,22.180.0.4,2023/11/01,35
+TravelMate P214-41-G3,10,https://www.acer.com/us-en/support/product-support/TMP214-41-G3,TMP214-41-G3,TRAVELMATE P214-41-G3,oem-wlan-listed,Wireless LAN_MTK_3.3.0.760_W10x64_(MT7921LE).zip,3.3.0.760,2023/03/22,21
+TravelMate P214-41-G3,11,https://www.acer.com/us-en/support/product-support/TMP214-41-G3,TMP214-41-G3,TRAVELMATE P214-41-G3,oem-wlan-listed,Wireless LAN_Intel_22.180.0.4_W11x64_(AX200).zip,22.180.0.4,2023/11/01,35
+TravelMate P214-52,10,https://www.acer.com/us-en/support/product-support/TMP214-52,TMP214-52,TRAVELMATE P214-52,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64_(AX201).zip,22.0.1.1,2021/03/09,47
+TravelMate P214-52,11,https://www.acer.com/us-en/support/product-support/TMP214-52,TMP214-52,TRAVELMATE P214-52,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W11x64_(AX201).zip,22.0.1.1,2021/12/21,26
+TravelMate P214-52G,10,https://www.acer.com/us-en/support/product-support/TMP214-52G,TMP214-52G,TRAVELMATE P214-52G,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64_(AX201).zip,22.0.1.1,2021/03/09,47
+TravelMate P214-52G,11,https://www.acer.com/us-en/support/product-support/TMP214-52G,TMP214-52G,TRAVELMATE P214-52G,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W11x64_(AX201).zip,22.0.1.1,2021/12/21,26
+TravelMate P214-53,10,https://www.acer.com/us-en/support/product-support/TMP214-53,TMP214-53,TRAVELMATE P214-53,oem-wlan-listed,Wireless LAN_Intel_22.170.0.3_W10x64_(AX201).zip,22.170.0.3,2023/02/10,31
+TravelMate P214-53,11,https://www.acer.com/us-en/support/product-support/TMP214-53,TMP214-53,TRAVELMATE P214-53,oem-wlan-listed,WLAN_Intel_23.120.0.3_W11x64.zip,23.120.0.3,2025/08/07,56
+TravelMate P214-53G,10,https://www.acer.com/us-en/support/product-support/TMP214-53G,TMP214-53G,TRAVELMATE P214-53G,oem-wlan-listed,Wireless LAN_Intel_22.170.0.3_W10x64_(AX201).zip,22.170.0.3,2023/02/10,31
+TravelMate P214-53G,11,https://www.acer.com/us-en/support/product-support/TMP214-53G,TMP214-53G,TRAVELMATE P214-53G,oem-wlan-listed,WLAN_Intel_23.120.0.3_W11x64.zip,23.120.0.3,2025/08/07,56
+TravelMate P215-41,10,https://www.acer.com/us-en/support/product-support/TMP215-41,TMP215-41,TRAVELMATE P215-41,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64_(AX200).zip,22.0.1.1,2021/03/31,19
+TravelMate P215-41,11,https://www.acer.com/us-en/support/product-support/TMP215-41,TMP215-41,TRAVELMATE P215-41,oem-wlan-listed,Wireless LAN_Intel_22.180.0.4_W11x64_(AX200).zip,22.180.0.4,2023/11/02,33
+TravelMate P215-41-G2,10,https://www.acer.com/us-en/support/product-support/TMP215-41-G2,TMP215-41-G2,TRAVELMATE P215-41-G2,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64_(AX200).zip,22.0.1.1,2021/03/31,19
+TravelMate P215-41-G2,11,https://www.acer.com/us-en/support/product-support/TMP215-41-G2,TMP215-41-G2,TRAVELMATE P215-41-G2,oem-wlan-listed,Wireless LAN_Intel_22.180.0.4_W11x64_(AX200).zip,22.180.0.4,2023/11/02,33
+TravelMate P215-41-G3,10,https://www.acer.com/us-en/support/product-support/TMP215-41-G3,TMP215-41-G3,TRAVELMATE P215-41-G3,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64_(AX200).zip,22.0.1.1,2021/03/31,19
+TravelMate P215-41-G3,11,https://www.acer.com/us-en/support/product-support/TMP215-41-G3,TMP215-41-G3,TRAVELMATE P215-41-G3,oem-wlan-listed,Wireless LAN_Intel_22.180.0.4_W11x64_(AX200).zip,22.180.0.4,2023/11/02,33
+TravelMate P215-52,10,https://www.acer.com/us-en/support/product-support/TMP215-52,TMP215-52,TRAVELMATE P215-52,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64_(AX201).zip,22.0.1.1,2021/06/07,37
+TravelMate P215-52,11,https://www.acer.com/us-en/support/product-support/TMP215-52,TMP215-52,TRAVELMATE P215-52,oem-os-not-listed,,,,0
+TravelMate P215-52G,10,https://www.acer.com/us-en/support/product-support/TMP215-52G,TMP215-52G,TRAVELMATE P215-52G,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64_(AX201).zip,22.0.1.1,2021/06/07,37
+TravelMate P215-52G,11,https://www.acer.com/us-en/support/product-support/TMP215-52G,TMP215-52G,TRAVELMATE P215-52G,oem-os-not-listed,,,,0
+TravelMate P215-53,10,https://www.acer.com/us-en/support/product-support/TMP215-53,TMP215-53,TRAVELMATE P215-53,oem-wlan-listed,Wireless LAN_Intel_22.170.0.3_W10x64_(AX201).zip,22.170.0.3,2023/08/10,35
+TravelMate P215-53,11,https://www.acer.com/us-en/support/product-support/TMP215-53,TMP215-53,TRAVELMATE P215-53,oem-wlan-listed,Wireless LAN_Intel_22.180.0.4_W11x64_(AX201).zip,22.180.0.4,2023/10/20,40
+TravelMate P215-53G,10,https://www.acer.com/us-en/support/product-support/TMP215-53G,TMP215-53G,TRAVELMATE P215-53G,oem-wlan-listed,Wireless LAN_Intel_22.170.0.3_W10x64_(AX201).zip,22.170.0.3,2023/08/10,35
+TravelMate P215-53G,11,https://www.acer.com/us-en/support/product-support/TMP215-53G,TMP215-53G,TRAVELMATE P215-53G,oem-wlan-listed,Wireless LAN_Intel_22.180.0.4_W11x64_(AX201).zip,22.180.0.4,2023/10/20,40
+TravelMate P40-41,10,https://www.acer.com/us-en/support/product-support/TMP40-41,TMP40-41,TRAVELMATE P40-41,oem-wlan-listed,Wireless LAN_MTK_3.3.0.760_W10x64_(MT7921LE).zip,3.3.0.760,2023/03/22,21
+TravelMate P40-41,11,https://www.acer.com/us-en/support/product-support/TMP40-41,TMP40-41,TRAVELMATE P40-41,oem-wlan-listed,Wireless LAN_Intel_22.180.0.4_W11x64_(AX200).zip,22.180.0.4,2023/11/01,35
+TravelMate P40-41-G2,10,,,,support-list-empty,,,,
+TravelMate P40-41-G2,11,,,,support-list-empty,,,,
+TravelMate P40-41-G3,10,,,,support-list-empty,,,,
+TravelMate P40-41-G3,11,,,,support-list-empty,,,,
+TravelMate P40-52,10,https://www.acer.com/us-en/support/product-support/TMP40-52,TMP40-52,TRAVELMATE P40-52,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64_(AX201).zip,22.0.1.1,2021/03/09,47
+TravelMate P40-52,11,https://www.acer.com/us-en/support/product-support/TMP40-52,TMP40-52,TRAVELMATE P40-52,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W11x64_(AX201).zip,22.0.1.1,2021/12/21,26
+TravelMate P40-53,10,https://www.acer.com/us-en/support/product-support/TMP40-53,TMP40-53,TRAVELMATE P40-53,oem-wlan-listed,Wireless LAN_Intel_22.170.0.3_W10x64_(AX201).zip,22.170.0.3,2023/02/10,31
+TravelMate P40-53,11,https://www.acer.com/us-en/support/product-support/TMP40-53,TMP40-53,TRAVELMATE P40-53,oem-wlan-listed,WLAN_Intel_23.120.0.3_W11x64.zip,23.120.0.3,2025/08/07,55
+TravelMate P414-51,10,https://www.acer.com/us-en/support/product-support/TMP414-51,TMP414-51,TRAVELMATE P414-51,oem-wlan-listed,Wireless LAN_Intel_22.160.0.3_W10x64_(AX201).zip,22.160.0.3,2023/08/28,57
+TravelMate P414-51,11,https://www.acer.com/us-en/support/product-support/TMP414-51,TMP414-51,TRAVELMATE P414-51,oem-wlan-listed,Wireless LAN_Intel_22.160.0.3_W11x64_(AX201).zip,22.160.0.3,2022/10/21,45
+TravelMate P414-51G,10,https://www.acer.com/us-en/support/product-support/TMP414-51G,TMP414-51G,TRAVELMATE P414-51G,oem-wlan-listed,Wireless LAN_Intel_22.160.0.3_W10x64_(AX201).zip,22.160.0.3,2023/08/28,57
+TravelMate P414-51G,11,https://www.acer.com/us-en/support/product-support/TMP414-51G,TMP414-51G,TRAVELMATE P414-51G,oem-wlan-listed,Wireless LAN_Intel_22.160.0.3_W11x64_(AX201).zip,22.160.0.3,2022/10/21,45
+TravelMate P50-41,10,https://www.acer.com/us-en/support/product-support/TMP50-41,TMP50-41,TRAVELMATE P50-41-G2,near-model-match,,,,
+TravelMate P50-41,11,https://www.acer.com/us-en/support/product-support/TMP50-41,TMP50-41,TRAVELMATE P50-41-G2,near-model-match,,,,
+TravelMate P50-41-G2,10,https://www.acer.com/us-en/support/product-support/TMP50-41-G2,TMP50-41-G2,TRAVELMATE P50-41-G2,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64_(AX200).zip,22.0.1.1,2021/03/31,19
+TravelMate P50-41-G2,11,https://www.acer.com/us-en/support/product-support/TMP50-41-G2,TMP50-41-G2,TRAVELMATE P50-41-G2,oem-wlan-listed,Wireless LAN_Intel_22.180.0.4_W11x64_(AX200).zip,22.180.0.4,2023/11/02,33
+TravelMate P50-41-G3,10,,,,support-list-empty,,,,
+TravelMate P50-41-G3,11,,,,support-list-empty,,,,
+TravelMate P50-52,10,https://www.acer.com/us-en/support/product-support/TMP50-52,TMP50-52,TRAVELMATE P50-52,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64_(AX201).zip,22.0.1.1,2021/06/07,37
+TravelMate P50-52,11,https://www.acer.com/us-en/support/product-support/TMP50-52,TMP50-52,TRAVELMATE P50-52,oem-os-not-listed,,,,0
+TravelMate P50-53,10,https://www.acer.com/us-en/support/product-support/TMP50-53,TMP50-53,TRAVELMATE P50-53,oem-wlan-listed,Wireless LAN_Intel_22.170.0.3_W10x64_(AX201).zip,22.170.0.3,2023/08/10,35
+TravelMate P50-53,11,https://www.acer.com/us-en/support/product-support/TMP50-53,TMP50-53,TRAVELMATE P50-53,oem-wlan-listed,Wireless LAN_Intel_22.180.0.4_W11x64_(AX201).zip,22.180.0.4,2023/10/20,40
+TravelMate P614-51-G2,10,https://www.acer.com/us-en/support/product-support/TMP614-51-G2,TMP614-51-G2,TRAVELMATE P614-51-G2,oem-wlan-listed,Wireless LAN_Intel_22.40.0.7_W10x64_(AX201).zip,22.40.0.7,2022/02/17,60
+TravelMate P614-51-G2,11,https://www.acer.com/us-en/support/product-support/TMP614-51-G2,TMP614-51-G2,TRAVELMATE P614-51-G2,oem-wlan-listed,Wireless LAN_Intel_22.40.0.7_W11x64_(AX201).zip,22.40.0.7,2022/02/24,35
+TravelMate P614-51G-G2,10,https://www.acer.com/us-en/support/product-support/TMP614-51G-G2,TMP614-51G-G2,TRAVELMATE P614-51G-G2,oem-wlan-listed,Wireless LAN_Intel_22.40.0.7_W10x64_(AX201).zip,22.40.0.7,2022/02/17,60
+TravelMate P614-51G-G2,11,https://www.acer.com/us-en/support/product-support/TMP614-51G-G2,TMP614-51G-G2,TRAVELMATE P614-51G-G2,oem-wlan-listed,Wireless LAN_Intel_22.40.0.7_W11x64_(AX201).zip,22.40.0.7,2022/02/24,35
+TravelMate P614-51T-G2,10,https://www.acer.com/us-en/support/product-support/TMP614-51T-G2,TMP614-51T-G2,TRAVELMATE P614-51T-G2,oem-wlan-listed,Wireless LAN_Intel_22.40.0.7_W10x64_(AX201).zip,22.40.0.7,2022/02/17,60
+TravelMate P614-51T-G2,11,https://www.acer.com/us-en/support/product-support/TMP614-51T-G2,TMP614-51T-G2,TRAVELMATE P614-51T-G2,oem-wlan-listed,Wireless LAN_Intel_22.40.0.7_W11x64_(AX201).zip,22.40.0.7,2022/02/24,35
+TravelMate P614-51TG-G2,10,https://www.acer.com/us-en/support/product-support/TMP614-51TG-G2,TMP614-51TG-G2,TRAVELMATE P614-51TG-G2,oem-wlan-listed,Wireless LAN_Intel_22.40.0.7_W10x64_(AX201).zip,22.40.0.7,2022/02/17,60
+TravelMate P614-51TG-G2,11,https://www.acer.com/us-en/support/product-support/TMP614-51TG-G2,TMP614-51TG-G2,TRAVELMATE P614-51TG-G2,oem-wlan-listed,Wireless LAN_Intel_22.40.0.7_W11x64_(AX201).zip,22.40.0.7,2022/02/24,35
+TravelMate P614-52,10,https://www.acer.com/us-en/support/product-support/TMP614-52,TMP614-52,TRAVELMATE P614-52,oem-wlan-listed,Wireless LAN_Intel_22.40.0.7_W10x64_(AX201).zip,22.40.0.7,2021/10/08,29
+TravelMate P614-52,11,https://www.acer.com/us-en/support/product-support/TMP614-52,TMP614-52,TRAVELMATE P614-52,oem-wlan-listed,Wireless LAN_Intel_23.60.1.2_W11x64_(AX201).zip,23.60.1.2,2024/10/17,48
+TravelMate P614P-52,10,https://www.acer.com/us-en/support/product-support/TMP614P-52,TMP614P-52,TRAVELMATE P614P-52,oem-wlan-listed,Wireless LAN_Intel_22.40.0.7_W10x64_(AX201).zip,22.40.0.7,2021/10/08,29
+TravelMate P614P-52,11,https://www.acer.com/us-en/support/product-support/TMP614P-52,TMP614P-52,TRAVELMATE P614P-52,oem-wlan-listed,Wireless LAN_Intel_23.60.1.2_W11x64_(AX201).zip,23.60.1.2,2024/10/17,48
+TravelMate P614RN-52,10,https://www.acer.com/us-en/support/product-support/TMP614RN-52,TMP614RN-52,TRAVELMATE SPIN P614RN-52,oem-wlan-listed,Wireless LAN_Intel_22.40.0.7_W10x64_(AX201).zip,22.40.0.7,2021/10/08,29
+TravelMate P614RN-52,11,https://www.acer.com/us-en/support/product-support/TMP614RN-52,TMP614RN-52,TRAVELMATE SPIN P614RN-52,oem-wlan-listed,Wireless LAN_Intel_23.60.1.2_W11x64_(AX201).zip,23.60.1.2,2024/10/17,48
+TravelMate Spin 311R-31,10,,,,support-list-empty,,,,
+TravelMate Spin 311R-31,11,,,,support-list-empty,,,,
+TravelMate Spin 311RN-31,10,,,,support-list-empty,,,,
+TravelMate Spin 311RN-31,11,,,,support-list-empty,,,,
+TravelMate Spin B118-G2-R,10,,,,support-list-empty,,,,
+TravelMate Spin B118-G2-R,11,,,,support-list-empty,,,,
+TravelMate Spin B118-G2-RN,10,,,,support-list-empty,,,,
+TravelMate Spin B118-G2-RN,11,,,,support-list-empty,,,,
+TravelMate Spin B311R-31,10,,,,support-list-empty,,,,
+TravelMate Spin B311R-31,11,,,,support-list-empty,,,,
+TravelMate Spin B311R-32,10,,,,support-list-empty,,,,
+TravelMate Spin B311R-32,11,,,,support-list-empty,,,,
+TravelMate Spin B311RA-31,10,,,,support-list-empty,,,,
+TravelMate Spin B311RA-31,11,,,,support-list-empty,,,,
+TravelMate Spin B311RA-32,10,,,,support-list-empty,,,,
+TravelMate Spin B311RA-32,11,,,,support-list-empty,,,,
+TravelMate Spin B311RN-31,10,,,,support-list-empty,,,,
+TravelMate Spin B311RN-31,11,,,,support-list-empty,,,,
+TravelMate Spin B311RN-32,10,,,,support-list-empty,,,,
+TravelMate Spin B311RN-32,11,,,,support-list-empty,,,,
+TravelMate Spin B311RNA-31,10,,,,support-list-empty,,,,
+TravelMate Spin B311RNA-31,11,,,,support-list-empty,,,,
+TravelMate Spin B311RNA-32,10,,,,support-list-empty,,,,
+TravelMate Spin B311RNA-32,11,,,,support-list-empty,,,,
+TravelMate Spin P414RN-51,10,,,,support-list-empty,,,,
+TravelMate Spin P414RN-51,11,,,,support-list-empty,,,,
+TravelMate X314-51-M,10,,,,support-list-empty,,,,
+TravelMate X314-51-M,11,,,,support-list-empty,,,,
+TravelMate X314-51-MG,10,,,,support-list-empty,,,,
+TravelMate X314-51-MG,11,,,,support-list-empty,,,,
+TravelMate X40-52-M,10,,,,support-list-empty,,,,
+TravelMate X40-52-M,11,,,,support-list-empty,,,,
+TravelMate X40-52-MG,10,,,,support-list-empty,,,,
+TravelMate X40-52-MG,11,,,,support-list-empty,,,,
+TravelMate X40-53,10,,,,support-list-empty,,,,
+TravelMate X40-53,11,,,,support-list-empty,,,,
+TravelMate X40-53G,10,,,,support-list-empty,,,,
+TravelMate X40-53G,11,,,,support-list-empty,,,,
+TravelMate X45-51,10,,,,support-list-empty,,,,
+TravelMate X45-51,11,,,,support-list-empty,,,,
+TravelMate X514-51,10,,,,support-list-empty,,,,
+TravelMate X514-51,11,,,,support-list-empty,,,,
+TravelMate X514-51T,10,,,,support-list-empty,,,,
+TravelMate X514-51T,11,,,,support-list-empty,,,,

@@ -132,16 +132,40 @@ def apply_oem_evidence(path, models, proof):
                 row[field] = status
                 updates[f"{system}:{status}"] += 1
     if updates:
-        raw = path.read_bytes()
-        temporary = path.with_suffix(path.suffix + ".tmp")
-        with temporary.open("w", encoding="utf-8-sig" if raw.startswith(b"\xef\xbb\xbf") else "utf-8",
-                            newline="") as output:
-            writer = csv.DictWriter(output, list(models[0]), quoting=csv.QUOTE_ALL,
-                                    lineterminator="\r\n" if b"\r\n" in raw else "\n")
-            writer.writeheader()
-            writer.writerows(models)
-        temporary.replace(path)
+        write_models(path, models)
     return dict(updates)
+
+
+def apply_laptop_listings(path, models, proof):
+    """Laptop proof rows come from a family support page whose specification lists the exact model.
+    Only positive listings are applied: the short laptop lists do not prove an omission."""
+    listed = {(item["model"], item["windows"]) for item in proof
+              if item["status"] == "oem-wlan-listed" and item["specListsModel"] == "true"
+              and urlsplit(item["downloadUrl"]).hostname in DOWNLOAD_HOSTS}
+    updates = Counter()
+    for row in models:
+        if row["type"] != "laptop" or row["brand"] != "MSI":
+            continue
+        for system in SYSTEMS:
+            field = f"windows{system}X64Evidence"
+            if row[field] == "pending" and (row["model"], system) in listed:
+                row[field] = "oem-wlan-listed"
+                updates[f"{system}:oem-wlan-listed"] += 1
+    if updates:
+        write_models(path, models)
+    return dict(updates)
+
+
+def write_models(path, models):
+    raw = path.read_bytes()
+    temporary = path.with_suffix(path.suffix + ".tmp")
+    with temporary.open("w", encoding="utf-8-sig" if raw.startswith(b"\xef\xbb\xbf") else "utf-8",
+                        newline="") as output:
+        writer = csv.DictWriter(output, list(models[0]), quoting=csv.QUOTE_ALL,
+                                lineterminator="\r\n" if b"\r\n" in raw else "\n")
+        writer.writeheader()
+        writer.writerows(models)
+    temporary.replace(path)
 
 
 def main():
@@ -152,8 +176,12 @@ def main():
     parser.add_argument("--candidates", type=Path, help="Board package candidate CSV for SHA-256 cross-checks")
     parser.add_argument("--emit-slugs", type=Path, help="Write the pending product slugs as a JSON array")
     parser.add_argument("--apply-oem-evidence", action="store_true")
+    parser.add_argument("--laptop-proof", type=Path,
+                        help="Apply positive rows of an MSI laptop family listing proof CSV")
     args = parser.parse_args()
     models = read(args.models)
+    if args.laptop_proof:
+        print("MSI laptop listing updates:", apply_laptop_listings(args.models, models, read(args.laptop_proof)))
     rows = pending_rows(models)
     if args.emit_slugs:
         args.emit_slugs.write_text(json.dumps(sorted({product_slug(row["model"]) for row in rows})), encoding="utf-8")

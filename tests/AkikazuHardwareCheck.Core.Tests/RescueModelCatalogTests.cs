@@ -5,7 +5,7 @@ namespace AkikazuHardwareCheck.Core.Tests;
 public sealed class RescueModelCatalogTests
 {
     [Theory]
-    [InlineData("NH.U1BAA.001", "pending", "AX1675i")]
+    [InlineData("NH.U1BAA.001", "oem-wlan-listed", "AX1675i")]
     [InlineData("NX.KYXAA.002", "outside-x64-record", "802.11be")]
     public void FindsAcerRetailPartNumbersWithTheirSeparatePlatformEvidence(string part, string evidence, string module)
     {
@@ -153,13 +153,23 @@ public sealed class RescueModelCatalogTests
     [Fact]
     public void ExposesAcerUpgradeEvidenceAndMsiModelsWithoutInferringWifiCompatibility()
     {
-        var acer = Assert.Single(RescueModelCatalog.Search("Acer AP714-51GT"), model => model.Model == "AP714-51GT");
+        // The Windows 11 upgrade list alone does not establish a WLAN driver for another system.
+        var acer = Assert.Single(RescueModelCatalog.Search("Acer A314-22S"), model => model.Model == "Aspire A314-22S");
         Assert.Equal("pending", acer.Windows10Evidence);
         Assert.Equal("oem-os-upgrade-tested", acer.Windows11Evidence);
 
-        var msi = Assert.Single(RescueModelCatalog.Search("MSI Creator M16 A12UC"));
+        var listed = Assert.Single(RescueModelCatalog.Search("Acer AP714-51GT"), model => model.Model == "AP714-51GT");
+        Assert.Equal("oem-wlan-listed", listed.Windows10Evidence);
+        Assert.Equal("oem-os-upgrade-tested", listed.Windows11Evidence);
+
+        // A family support page is not applied to a variant its specification does not list.
+        var msi = Assert.Single(RescueModelCatalog.Search("MSI Katana GF66 12UC"), model => model.Model == "Katana GF66 12UC");
         Assert.False(msi.IsSeries);
         Assert.Equal("pending", msi.Windows10Evidence);
         Assert.Equal("pending", msi.Windows11Evidence);
+
+        var creator = Assert.Single(RescueModelCatalog.Search("MSI Creator M16 A12UC"));
+        Assert.Equal("oem-wlan-listed", creator.Windows10Evidence);
+        Assert.Equal("oem-wlan-listed", creator.Windows11Evidence);
     }
 }
