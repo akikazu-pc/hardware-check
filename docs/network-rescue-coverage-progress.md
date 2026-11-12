@@ -233,3 +233,14 @@ pwsh -File scripts/merge-network-rescue-model-gaps.ps1
 后续以当前主表、原厂包索引、快照审计和完整版 ZIP 为输入运行 `scripts/rank-network-rescue-wlan-packages.py`。华硕下载采集器支持 `--model-list`，可针对入选包涉及的型号补查原厂系统和下载证据。
 
 成品验收发现 AzureWave 原厂版本名含下划线，原有目录筛选跳过了该包。普通 Windows 与 WinPE 的包名检查已允许下划线。对新版 ZIP 的系统清单复查，本轮新增包在 Win10 扫描中可见 1 个，在 Win11 可见 3 个。
+
+
+### 优先回填 ZIP 已收录的原厂包
+
+复算上轮的三包预算，按出现次数选包可为 52 条主板增加候选，按新增主板去重选择可增加 60 条，增加 8 条约 15.4%。该排序作为新增驱动包的选择方法。开始选新包前，先用现有 ZIP 的包回查原厂型号下载栏，减少重复下载与重打包。
+
+本轮选择 78 条已有原厂无线规格或模块证据的华硕主板，共 147 条待核系统记录。先按公开快照分组，再用型号专属原厂接口对照 SHA-256、原厂系统、ZIP 实际 INF 路径及最低构建号。重用组 46 条主板中，38 条取得包与型号一致的原厂证据。另 32 条对照组未取得一致的现有包证据。本样本如果先处理重用组，可用 46 条主板查询范围取得同样的结果，范围缩小约 41%。这项比例只适用于本轮样本。 [华硕原厂下载审计](asus-wlan-download-audit.csv) · [已收录包复用审计](network-rescue-bundled-wlan-reuse-audit.csv)
+
+从现有 ZIP 提取华硕原厂驱动目录，在 Win11 Build 26300 上确认 16 个签名 PCI INF。Win10 回填 28 条、Win11 回填 38 条，待核分别降至 **1,023／1,008**。回填使用 `oem-wlan-listed`，后续仍需确认各出厂模块变体。原先记录了多模块的型号，本轮尚无一条能把所有已知模块同时关联到适用原厂包。未下载新驱动或重建 ZIP。
+
+用 `scripts/audit-network-rescue-library.ps1 -EvidenceCsv` 导出成品内签名 INF，再用 `scripts/reconcile-asus-bundled-wlan.py` 输出待核条目的原厂包证据。审阅后用 `--apply` 回填。本轮只将具备出厂无线规格或模块证据、原厂下载 SHA-256 一致、且包内有签名 PCI INF 的条目提升为原厂列出。
