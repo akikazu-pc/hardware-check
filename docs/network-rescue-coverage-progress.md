@@ -2,7 +2,7 @@
 
 [逐型号 Wi-Fi 缺口清单](network-rescue-model-gaps.csv)记录当前已发现的 1,237 条主板型号或修订、912 条笔记本系列或型号、1 条一体机型号，以及 167 条戴尔系统与 Windows 组合。同一台笔记本可出现在多个系统组合。
 
-清单分别记录 `windows10X64Evidence` 和 `windows11X64Evidence`。`oem-package-indexed` 表示原厂包已入索引，`oem-wlan-listed` 表示原厂资料列出无线驱动，`oem-driver-pack-listed` 表示原厂列出该系统的整机部署包，仍需检查包内 WLAN 驱动。`oem-os-upgrade-tested` 表示原厂列出 Windows 11 升级测试，WLAN 驱动仍待核对。`pending` 表示该系统的证据待核。`oem-wlan-not-supported` 表示原厂明确说明该系统没有该出厂无线模块的驱动。仅预留接口和 ARM64 组合另有标记。原厂下载索引目前有 17 个包标注支持 Windows 10 x64，29 个包标注支持 Windows 11 x64，部分包另有最低构建号要求。[原厂下载索引](network-rescue-driver-index.csv)
+清单分别记录 `windows10X64Evidence` 和 `windows11X64Evidence`。`oem-package-indexed` 表示原厂包已入索引，`oem-wlan-listed` 表示原厂资料列出无线驱动，`oem-driver-pack-listed` 表示原厂列出该系统的整机部署包，仍需检查包内 WLAN 驱动。`oem-os-upgrade-tested` 表示原厂列出 Windows 11 升级测试，WLAN 驱动仍待核对。`pending` 表示该系统的证据待核。`oem-wlan-not-supported` 表示原厂明确说明该系统没有该出厂无线模块的驱动。仅预留接口和 ARM64 组合另有标记。原厂下载索引目前有 18 个包标注支持 Windows 10 x64，32 个包标注支持 Windows 11 x64，部分包另有最低构建号要求。[原厂下载索引](network-rescue-driver-index.csv)
 
 | 主板范围 | 已发现的型号或修订 |
 | --- | ---: |
@@ -216,3 +216,20 @@ pwsh -File scripts/merge-network-rescue-model-gaps.ps1
 华擎手册改用 curl 读取官方 PDF，恢复 97 条先前缺少的无线规格证据。另回查技嘉原厂下载项及原厂手册，把 B860M C、B850M AORUS ELITE WIFI7 ICE-P、Z890 EAGLE WIFI7 rev. 1.0 与 rev. 1.1 共四条关联到 ZIP 中已有的 Win11 签名驱动。原厂无线下载栏未列 Win10 WLAN 包。主板待核降至 Win10 **1,077**、Win11 **1,072**。 [技嘉修订映射](network-rescue-motherboard-driver-matches.csv) · [华擎手册审计](asrock-wlan-manual-audit.csv)
 
 普通 Windows 便携版与 WinPE 现在共用完整版的最低构建号列表。只标注 Win11 的 OEM 包从 Windows 10 自动扫描入口排除。旧版无列表的便携包继续使用原目录扫描。已通过 Windows 10、Windows 11 及 Win11 24H2 最低构建号的目录选择回归测试。仍需实机验证出厂网卡 ID、驱动绑定和断网恢复。
+
+
+### 按新增主板候选选择下载
+
+先读取现有 ZIP 中实际包含 INF 的原厂包目录，再按索引的原包 SHA-256 排除已收录的驱动。候选范围取 Win11 待核主板。每选一个包，就从其他包的得分中扣掉已经获得候选的型号。试跑前有 270 条待核主板已有同一快照的包候选。用同样的三包预算，按原始出现次数和原表顺序选包新增 52 条候选，按去重后的新增数选择则新增 **60 条**。原始排名第三、第四的两个包各出现 13 次，扣除已收录和当轮已选覆盖后，分别贡献 5 条和 13 条。 [优先顺序与原包 SHA-256](network-rescue-wlan-priority-round.csv) · [WinDriverIndex 快照来源](https://windriverindex.tucny.com/)
+
+| 优先包 | 新增主板候选 | Win11 26300 签名 INF |
+| --- | ---: | ---: |
+| 华硕 Intel 24.20.0.4 | 26 | 2 |
+| 华擎 AzureWave RTL8922AE EB601NF | 21 | 1 |
+| 华擎 Intel 23.170.0.1G | 13 | 2 |
+
+三份驱动均从厂商 CDN 下载，与快照 SHA-256 一致，已静态解包并收录到完整版 ZIP。华硕以精确型号重新请求原厂接口，在 26 条主板的 Win10 和 Win11 下载栏均核对到同一 SHA-256，因此两套系统各将 26 条回填为 `oem-wlan-listed`。仍需确认这些主板具体出厂模块和 SUBSYS。两份华擎包保留 Win11 候选范围，华擎型号专属下载页仍未能稳定读取。Win10 待核降至 **1,051**，Win11 待核降至 **1,046**。 [华硕原厂下载审计](asus-wlan-download-audit.csv) · [华硕原厂样例](https://www.asus.com/us/motherboards-components/motherboards/prime/prime-z690-p-wifi/helpdesk_download?model2Name=PRIME-Z690-P-WIFI)
+
+后续以当前主表、原厂包索引、快照审计和完整版 ZIP 为输入运行 `scripts/rank-network-rescue-wlan-packages.py`。华硕下载采集器支持 `--model-list`，可针对入选包涉及的型号补查原厂系统和下载证据。
+
+成品验收发现 AzureWave 原厂版本名含下划线，原有目录筛选跳过了该包。普通 Windows 与 WinPE 的包名检查已允许下划线。对新版 ZIP 的系统清单复查，本轮新增包在 Win10 扫描中可见 1 个，在 Win11 可见 3 个。

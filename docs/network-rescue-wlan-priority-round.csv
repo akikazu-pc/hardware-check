@@ -1,0 +1,4 @@
+"rank","rawRank","brand","family","version","candidateModels","additionalModels","sha256","downloadUrl","snapshotGenerated"
+"1","1","ASUS","Intel Wi-Fi","24.20.0.4","26","26","5110939D2760126D4F681E407CD17662193A4A7E49CA6F6C791F0A612E537A6F","https://dlcdnets.asus.com/pub/ASUS/mb/08WIRELESS/DRV_WiFi_Intel_All_SZ-TSD_W11_64_V242004_20260309R.zip","2026-11-02T00:02:03+00:00"
+"2","2","ASRock","Realtek Wi-Fi","EB601NF_v6102.24.146.0","21","21","402A144CA76ADD877C6C1B83B2E46092A1D57D6A4B8B8938689D2BE639E9EC25","https://download.asrock.com/Drivers/All/WLAN/AzureWave_WLAN(EB601NF_v6102.24.146.0).zip","2026-11-02T00:02:03+00:00"
+"3","4","ASRock","Intel Wi-Fi","23.170.0.1G","13","13","CF431AC60B3000426DB6B3EC5F5669403B9FC0EE469B1145E091F79644034216","https://download.asrock.com/Drivers/Intel/WLAN/Intel_WLAN(v23.170.0.1G).zip","2026-11-02T00:02:03+00:00"

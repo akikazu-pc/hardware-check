@@ -12,12 +12,12 @@ public sealed class OfflineInfMatcherTests
         {
             var drivers = bundle.CreateSubdirectory("driver-packs");
             var common = drivers.CreateSubdirectory("common").FullName;
-            var win11 = drivers.CreateSubdirectory("win11").FullName;
+            var win11 = drivers.CreateSubdirectory("win11_version").FullName;
             var modern = drivers.CreateSubdirectory("modern").FullName;
             var win10Scoped = bundle.CreateSubdirectory("pe-drivers/windows10-x64").FullName;
             var win11Scoped = bundle.CreateSubdirectory("pe-drivers/windows11-x64").FullName;
             File.WriteAllLines(Path.Combine(bundle.FullName, "pe-driver-scope.txt"),
-                ["10240 common", "22000 win11", "26100 modern", "10240 ../pe-drivers", "bad invalid"]);
+                ["10240 common", "22000 win11_version", "26100 modern", "10240 ../pe-drivers", "bad invalid"]);
 
             Assert.Equal(new[] { common, win10Scoped }, OfflinePackageSearch.GetPortableRoots(drivers.FullName, 19045, "X64"));
             Assert.Equal(new[] { common, win11, win11Scoped }, OfflinePackageSearch.GetPortableRoots(drivers.FullName, 22631, "X64"));

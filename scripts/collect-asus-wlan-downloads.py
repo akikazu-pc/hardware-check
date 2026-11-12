@@ -87,11 +87,14 @@ def main():
     parser.add_argument("models", type=Path)
     parser.add_argument("catalog", type=Path)
     parser.add_argument("output", type=Path)
+    parser.add_argument("--model-list", type=Path, help="Optional CSV containing platform and model columns.")
     parser.add_argument("--refresh", action="store_true", help="Recheck successful pending model/OS queries.")
     args = parser.parse_args()
     catalog = {model_key(row["model"]): row["officialUrl"] for row in read(args.catalog)}
+    selected = {(row["platform"], row["model"]) for row in read(args.model_list)} if args.model_list else None
     rows = [row for row in read(args.models) if row["type"] == "motherboard" and row["brand"] == "ASUS"
-            and row["gap"] == "factory-variant-to-exact-id-and-install"
+            and ((row["platform"], row["model"]) in selected if selected is not None
+                 else row["gap"] == "factory-variant-to-exact-id-and-install")
             and any(row[f"windows{system}X64Evidence"] == "pending" for system in SYSTEMS)]
     previous = defaultdict(list)
     if args.output.is_file():

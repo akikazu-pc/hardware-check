@@ -26,7 +26,7 @@ public static class OfflinePackageSearch
                 if (fields.Length != 2 || !int.TryParse(fields[0], out var minimum) ||
                     minimum < 10240 || minimum > windowsBuild ||
                     fields[1] is "." or ".." ||
-                    fields[1].Any(character => !char.IsAsciiLetterOrDigit(character) && character is not '-' and not '.'))
+                    fields[1].Any(character => !char.IsAsciiLetterOrDigit(character) && character is not '-' and not '.' and not '_'))
                 {
                     continue;
                 }
