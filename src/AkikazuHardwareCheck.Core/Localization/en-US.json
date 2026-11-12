@@ -239,6 +239,7 @@
   "rescue.exportDriver": "Export driver ZIP",
   "rescue.possibleCandidates": "Possible drivers",
   "rescue.catalog": "Model search",
+  "rescue.catalogAllInOne": "All-in-one PC",
   "rescue.catalogBrand": "Brand",
   "rescue.catalogModel": "Model",
   "rescue.catalogPlatform": "Platform or OS",

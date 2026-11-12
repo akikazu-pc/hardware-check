@@ -239,6 +239,7 @@
   "rescue.exportDriver": "匯出驅動程式 ZIP",
   "rescue.possibleCandidates": "可能的驅動程式",
   "rescue.catalog": "型號搜尋",
+  "rescue.catalogAllInOne": "一體式電腦",
   "rescue.catalogBrand": "品牌",
   "rescue.catalogModel": "型號",
   "rescue.catalogPlatform": "平台或系統",

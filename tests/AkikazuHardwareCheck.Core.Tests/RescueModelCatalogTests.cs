@@ -4,6 +4,15 @@ namespace AkikazuHardwareCheck.Core.Tests;
 
 public sealed class RescueModelCatalogTests
 {
+    [Fact]
+    public void FindsAllInOneWithSeparateWindowsEvidence()
+    {
+        var model = Assert.Single(RescueModelCatalog.Search("HP Presence 24"));
+        Assert.Equal("all-in-one", model.Type);
+        Assert.Equal("oem-driver-pack-listed", model.Windows10Evidence);
+        Assert.Equal("pending", model.Windows11Evidence);
+    }
+
     [Theory]
     [InlineData("A620M-HDV/M.2")]
     [InlineData("A620M-HDV/M.2+")]

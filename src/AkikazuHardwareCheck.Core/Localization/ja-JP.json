@@ -239,6 +239,7 @@
   "rescue.exportDriver": "ドライバー ZIP をエクスポート",
   "rescue.possibleCandidates": "ドライバー候補",
   "rescue.catalog": "型番検索",
+  "rescue.catalogAllInOne": "一体型 PC",
   "rescue.catalogBrand": "メーカー",
   "rescue.catalogModel": "型番",
   "rescue.catalogPlatform": "プラットフォームまたは OS",

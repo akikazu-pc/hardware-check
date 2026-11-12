@@ -1,0 +1,2 @@
+brand,model,officialUrl,windows10Evidence,windows11Evidence,modelGranularity,sourceCatalog,windows10DriverPackUrl,windows11DriverPackUrl,urlKind
+HP,Presence 24 All-in-One with Zoom Rooms,https://support.hp.com/gb-en/document/ish_5880723-5880767-16,oem-driver-pack-listed,pending,model,https://hpia.hpcloud.hp.com/downloads/driverpackcatalog/HP_Driverpack_Matrix_x64.html,https://ftp.hp.com/pub/softpaq/sp144501-145000/sp144635.exe,,catalog

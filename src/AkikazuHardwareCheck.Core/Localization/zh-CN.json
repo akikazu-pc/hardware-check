@@ -239,6 +239,7 @@
   "rescue.exportDriver": "导出驱动 ZIP",
   "rescue.possibleCandidates": "可能的驱动",
   "rescue.catalog": "型号搜索",
+  "rescue.catalogAllInOne": "一体机",
   "rescue.catalogBrand": "品牌",
   "rescue.catalogModel": "型号",
   "rescue.catalogPlatform": "平台或系统",

@@ -372,7 +372,7 @@ internal sealed class NetworkRescueView : UserControl
         {
             var qualifier = entry.Type == "laptop-os-record"
                 ? string.Join(" · ", new[] { entry.Platform, entry.Windows }.Where(value => value.Length > 0))
-                : entry.Platform;
+                : entry.Type == "all-in-one" ? _t["rescue.catalogAllInOne"] : entry.Platform;
             var item = new ListViewItem(entry.Brand) { Tag = entry };
             item.SubItems.Add(entry.Model);
             item.SubItems.Add(qualifier);

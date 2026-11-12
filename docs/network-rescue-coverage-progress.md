@@ -1,6 +1,6 @@
 # 统一离线安装包覆盖进度
 
-[逐型号 Wi-Fi 缺口清单](network-rescue-model-gaps.csv)记录当前已发现的 1,228 条主板型号或修订、912 条笔记本系列或型号，以及 167 条戴尔系统与 Windows 组合。三类的统计单位不同，同一台笔记本可出现在多个系统组合。
+[逐型号 Wi-Fi 缺口清单](network-rescue-model-gaps.csv)记录当前已发现的 1,228 条主板型号或修订、912 条笔记本系列或型号、1 条一体机型号，以及 167 条戴尔系统与 Windows 组合。同一台笔记本可出现在多个系统组合。
 
 清单分别记录 `windows10X64Evidence` 和 `windows11X64Evidence`。`oem-package-indexed` 表示原厂包已入索引，`oem-wlan-listed` 表示原厂资料列出无线驱动，`oem-driver-pack-listed` 表示原厂列出该系统的整机部署包，仍需检查包内 WLAN 驱动。`oem-os-upgrade-tested` 表示原厂列出 Windows 11 升级测试，WLAN 驱动仍待核对。`pending` 表示该系统的证据待核。仅预留接口和 ARM64 组合另有标记。原厂下载索引目前有 7 个包覆盖 Windows 10 x64，16 个包覆盖 Windows 11 x64，部分包另有最低构建号要求。[原厂下载索引](network-rescue-driver-index.csv)
 
@@ -23,7 +23,9 @@
 
 更新补充目录后，在仓库根目录运行 `pwsh -File scripts/merge-network-rescue-model-gaps.ps1`。脚本按类型、品牌和型号合并新条目，并输出各品牌的 Windows 10、11 待核数量。
 
-本轮复核确认 376 条新增主板记录的型号与插槽均与源表一致。抽查的 12 条华擎链接与原厂清单一致，其中 4 个旧型号页面未能提取内容。映泰目录及 EVGA 两条资料链接的实时访问仍待确认。惠普 Presence 24 会议一体机已从笔记本目录移除。[惠普产品规格](https://support.hp.com/gb-en/document/ish_5880723-5880767-16)
+本轮复核确认 376 条新增主板记录的型号与插槽均与源表一致。抽查的 12 条华擎链接与原厂清单一致，其中 4 个旧型号页面未能提取内容。映泰目录及 EVGA 两条资料链接的实时访问仍待确认。
+
+一体机从惠普 Presence 24 会议一体机开始录入。Windows 10 x64 已找到原厂整机部署包，包内 WLAN 驱动及 Windows 11 x64 驱动仍待核对。[一体机目录](network-rescue-oem-all-in-ones.csv) · [惠普产品规格](https://support.hp.com/gb-en/document/ish_5880723-5880767-16)
 
 日期为 2026-11-12。统一的断网急救离线包适用于桌面和笔记本，通用包与 OEM 补充包按设备 ID 和系统选取。两类设备分别验收。先核对 AM5、LGA1851 及 2025 年起出货的笔记本，完成后再系统扩展到 AM4、LGA1700 及更旧的笔记本。
 

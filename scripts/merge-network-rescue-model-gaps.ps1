@@ -14,6 +14,7 @@ $supplements = @(
     @{ Type = 'motherboard'; File = 'asrock-motherboard-discovery.csv' }
     @{ Type = 'motherboard'; File = 'additional-motherboard-discovery.csv' }
     @{ Type = 'laptop'; File = 'network-rescue-oem-laptops.csv' }
+    @{ Type = 'all-in-one'; File = 'network-rescue-oem-all-in-ones.csv' }
 )
 
 $keys = @{}
