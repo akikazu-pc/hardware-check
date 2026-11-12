@@ -51,3 +51,24 @@
 - 原生 PE 代码在 [AkikazuNetworkRescue.PE](../src/AkikazuNetworkRescue.PE/)，`PeWizard.h`、`PeUnattended.h` 和 `RescueCli.h` 分别覆盖图形流程、直接部署和命令行。四语言文本来自 Core 的 Localization JSON。
 - 可下载驱动定义在 [wifi-preview-packages.json](../packaging/shared-desktop/wifi-preview-packages.json)。型号和原厂链接见 [型号缺口 CSV](network-rescue-model-gaps.csv)及[原厂下载索引](network-rescue-driver-index.csv)。
 - 本地验证入口为 `scripts/test.ps1`、`scripts/build-network-rescue-pe.cmd` 和 `scripts/publish-store-payload.ps1`。重建两版使用 [publish-network-rescue-bundles.ps1](../scripts/publish-network-rescue-bundles.ps1)，传入 `-IncludeCatalog`、`-VendorSourceDirectory`、`-WlanArchive`、`-PeEthernetPackDirectory` 和 `-SevenZipExecutable`。本地缓存分别在 `artifacts/vendor-wifi`、`artifacts/wlan-library/SDIO_Update/drivers/DP_WLAN-WiFi_26082.7z` 和 `artifacts/network-rescue`。产物覆盖后重新核对 ZIP 与 `.sha256`。
+
+## 2026-11-13 原厂列表批量取证
+
+MSI、Acer、华擎的原厂下载接口拒绝脚本直连。本轮先在浏览器里正常打开原厂页面，在同源下低速调用接口，结果压缩成 JSON 快照，并用浏览器端和本地两边的 SHA-256 核对一致后才落盘（`artifacts/network-rescue-*-api*`，不入库）。下面的脚本只读这些快照，不联网，加 `--apply-oem-evidence` 才回填主表。重复运行均为 0 项变化。
+
+| 脚本 | 证据表 | 回填 |
+| --- | --- | --- |
+| `collect-msi-wlan-downloads.py` | `network-rescue-msi-oem-listing-proof.csv`、`network-rescue-msi-laptop-listing-proof.csv` | 主板 751 格，笔记本 38 格。笔记本须产品族规格页逐字列出精确型号 |
+| `collect-acer-wlan-downloads.py` | `network-rescue-acer-oem-listing-proof.csv` | 263 格，另把 129 个 Win11 升级测试格加强为 WLAN 列出。按文件 `oss` 分系统，`Step3` 须等于精确型号，排除 LED 工具 |
+| `collect-asrock-wlan-downloads.py` | `network-rescue-asrock-oem-listing-proof.csv` | 455 格，另补 146 款产品页规格。读 `Download.html`，PG 型号从 pg.asrock.com 单独采集 |
+
+判定口径与华硕一致：“列出”要求已有出厂无线证据；“未列出”要求该系统有有效的 LAN 列表和音频或芯片组列表，且有出厂无线证据或规格未列 WLAN。Killer 通用包、近似型号、组合系统文件、空列表都保持待核。提交 `e22e373` 的说明写成关闭 300 格，实际是 301 格。
+
+最新待核：主板 Win10 190、Win11 185，笔记本 Win10 397、Win11 291，合计 **1,063**（起点 2,570）。
+
+剩余与下一步：
+- Acer：37 款接口返回空，后来被限流（Failed to fetch），冷却后重查；101 条系列行还要拆成精确 SKU。
+- 华硕主板：59 款规格未列 WLAN，22 款只有目录证据。浏览器页面 HTML 里有 GetPDDrivers 接口地址（带 pdid 和 pdhashedid），可以照同样方式在浏览器里批量取。
+- MSI：Killer 通用包约 17 格，要拆包核对 INF；新款笔记本的原厂驱动列表是空的；12UC 等型号不在规格页上。
+- 华擎：规格页标题不匹配的 36 格，另有 5 格规格未列 WLAN 但下载列表却列出。
+- 惠普、技嘉、映泰、EVGA、联想、戴尔：本轮没碰。
