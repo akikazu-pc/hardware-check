@@ -6,7 +6,8 @@ and most rows carry a SHA-256. The specification is part of the product ``index.
 captured from an ordinary page session and reduced to JSON; this script never contacts ASRock.
 
 Capture directory:
-* pk.json: unique network rows as [name, systems, sha256, download URL].
+* pk.json: unique network rows as [name, systems, sha256, download URL]. Phantom Gaming
+  products are served from pg.asrock.com and are captured into a second directory.
 * models-*.json: model -> [HTTP status, row count, category codes (A audio, C chipset), indexes].
 * specs-*.json: model -> 1 when the exact product page (title naming the model) has a
   "Wireless LAN" specification row without "not included"/"sold separately" wording, 0 when it
@@ -40,15 +41,28 @@ def read(path):
         return list(csv.DictReader(handle))
 
 
-def load_capture(path):
+def load_capture(paths):
+    """Merge capture directories; download indexes resolve against each directory's own pk.json."""
+    pages, specs = {}, {}
+    for path in paths:
+        directory_pages, directory_specs = load_directory(path)
+        pages.update(directory_pages)
+        specs.update(directory_specs)
+    return pages, specs
+
+
+def load_directory(path):
     packages = json.loads((path / "pk.json").read_text(encoding="utf-8"))
     pages, specs = {}, {}
     for part in sorted(path.glob("models-*.json")):
-        pages.update(json.loads(part.read_text(encoding="utf-8")))
+        for model, page in json.loads(part.read_text(encoding="utf-8")).items():
+            if page[0] == 200:
+                page = page[:3] + [[packages[int(index)] for index in page[3].split()]]
+            pages[model] = page
     for part in sorted(path.glob("specs-*.json")):
         for model, listed in json.loads(part.read_text(encoding="utf-8")).items():
             specs[model] = "wlan-listed" if listed == 1 else "wlan-not-listed" if listed == 0 else str(listed)
-    return packages, pages, specs
+    return pages, specs
 
 
 def systems_of(text):
@@ -60,12 +74,11 @@ def support_url(row):
     return f"https://www.asrock.com/mb/{vendor}/{quote(row['model'].replace('/', ''))}/index.asp#Download"
 
 
-def classify(row, packages, page):
+def classify(row, page):
     base = dict(model=row["model"], platform=row["platform"], supportUrl=support_url(row))
     if not page or page[0] != 200:
         return [dict(base, windows=system, status="support-list-unavailable") for system in SYSTEMS]
-    _, count, codes, indexes = page
-    rows = [packages[int(index)] for index in indexes.split()]
+    _, count, codes, rows = page
     rows = [item for item in rows if not EXCLUDED.search(item[0])
             and (not item[3] or urlsplit(item[3]).hostname in DOWNLOAD_HOSTS)]
     wlan = [item for item in rows if WLAN.search(item[0])]
@@ -141,15 +154,16 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("models", type=Path)
     parser.add_argument("output", type=Path)
-    parser.add_argument("--capture", type=Path, required=True)
+    parser.add_argument("--capture", type=Path, action="append", required=True,
+                        help="Capture directory; repeat for pages served from other ASRock hosts")
     parser.add_argument("--apply-oem-evidence", action="store_true")
     args = parser.parse_args()
     models = read(args.models)
-    packages, pages, specs = load_capture(args.capture)
+    pages, specs = load_capture(args.capture)
     spec_updates = apply_specs(models, specs) if args.apply_oem_evidence else 0
     boards = [row for row in models if row["type"] == "motherboard" and row["brand"] == "ASRock"
               and row["model"] in pages]
-    proof = [item for row in boards for item in classify(row, packages, pages[row["model"]])]
+    proof = [item for row in boards for item in classify(row, pages[row["model"]])]
     temporary = args.output.with_suffix(args.output.suffix + ".tmp")
     with temporary.open("w", encoding="utf-8", newline="") as output:
         writer = csv.DictWriter(output, FIELDS)
