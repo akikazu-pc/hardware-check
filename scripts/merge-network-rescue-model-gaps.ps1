@@ -86,6 +86,57 @@ foreach ($supplement in $supplements) {
     }
 }
 
+$specSources = @(
+    @{ Brand = 'ASUS'; File = 'asus-wlan-spec-audit.csv'; Host = '^(?:www|rog)\.asus\.com$' }
+    @{ Brand = 'MSI'; File = 'msi-wlan-datasheet-audit.csv'; Host = '^storage-asset\.msi\.com$' }
+    @{ Brand = 'ASRock'; File = 'asrock-wlan-manual-audit.csv'; Host = '^download\.asrock\.com$' }
+)
+foreach ($specSource in $specSources) {
+    $specAudit = Join-Path $CatalogDirectory $specSource.File
+    if (-not (Test-Path -LiteralPath $specAudit)) { continue }
+
+    $wlanGaps = @{
+        'oem-spec-slot-only' = 'none-factory-wlan'
+        'oem-spec-module' = 'factory-variant-to-exact-id-and-install'
+        'oem-spec-wlan-listed' = 'chip-exact-id-driver-install'
+        'oem-spec-wlan-not-listed' = 'factory-wifi-not-listed-confirmation'
+    }
+    $specPriority = @{
+        'catalog-model' = 0
+        'oem-model-catalog' = 0
+        'oem-spec-wlan-not-listed' = 1
+        'oem-spec-wlan-listed' = 2
+        'oem-spec-module' = 3
+        'oem-spec-slot-only' = 3
+    }
+    foreach ($entry in Import-Csv -LiteralPath $specAudit) {
+        $specUri = $entry.specUrl -as [uri]
+        if ($entry.manufacturer -ne $specSource.Brand -or -not $wlanGaps.ContainsKey($entry.specEvidence) -or
+            !$specUri -or $specUri.Scheme -ne 'https' -or $specUri.Host -notmatch $specSource.Host -or
+            ($entry.specEvidence -eq 'oem-spec-wlan-not-listed' -and $entry.catalogHint -eq 'mentioned')) {
+            continue
+        }
+
+        $row = $keys["motherboard|$($specSource.Brand)|$($entry.model)"]
+        if (!$row -or $row.platform -ne $entry.platform -or !$specPriority.ContainsKey($row.wlanEvidence) -or
+            $specPriority[$entry.specEvidence] -le $specPriority[$row.wlanEvidence] -or
+            ($entry.specEvidence -eq 'oem-spec-slot-only' -and $row.wlanEvidence -eq 'oem-spec-wlan-listed') -or
+            $row.windows10X64Evidence -ne 'pending' -or $row.windows11X64Evidence -ne 'pending') {
+            continue
+        }
+
+        $row.wlanEvidence = $entry.specEvidence
+        $row.module = $entry.modules
+        $row.gap = $wlanGaps[$entry.specEvidence]
+        $row.source = $entry.specUrl
+        if ($entry.specEvidence -eq 'oem-spec-slot-only') {
+            $row.windows10X64Evidence = 'no-factory-wifi'
+            $row.windows11X64Evidence = 'no-factory-wifi'
+        }
+        $changed = $true
+    }
+}
+
 $all = $existing + @($added | Sort-Object type,brand,platform,model)
 $otherTags = 'BrandedDesktop', 'MiniPc', 'WindowsTablet', 'Handheld', 'AllInOne', 'Htpc',
     'SingleBoardComputer', 'WindowsPhone', 'Mac', 'ModifiedChromebook'

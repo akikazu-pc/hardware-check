@@ -27,6 +27,20 @@ public sealed class OnlineDriverCatalogTests
         Assert.Empty(OnlineDriverCatalog.Find(diagnostic));
     }
 
+    [Theory]
+    [InlineData(19045)]
+    [InlineData(26300)]
+    public void OffersDLinkEthernetOnlyForItsRecordedUsbId(int build)
+    {
+        var diagnostic = new NetworkDeviceDiagnostic(2, build, "X64",
+            [new([@"USB\VID_2001&PID_4A00&REV_0100"], null, 28, NetworkCandidateKind.UsbUnidentified)]);
+        Assert.Equal("dlink-dub1312-reva", Assert.Single(OnlineDriverCatalog.Find(diagnostic)).Id);
+        Assert.Empty(OnlineDriverCatalog.Find(diagnostic with
+        {
+            Devices = [new([@"USB\VID_2001&PID_4A01"], null, 28, NetworkCandidateKind.UsbUnidentified)],
+        }));
+    }
+
     [Fact]
     public void OffersKnownUsbPackageForAnUnidentifiedMissingDriver()
     {

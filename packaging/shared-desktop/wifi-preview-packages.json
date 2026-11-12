@@ -3,12 +3,12 @@
   "distribution": "local-build-only",
   "packages": [
     {
-      "id": "asus-b850m-ayw-mtk",
+      "id": "asus-mb-mtk-3501349",
       "version": "3.5.0.1349",
       "source": "https://dlcdnets.asus.com/pub/ASUS/mb/08WIRELESS/DRV_WiFi_MediaTek_SZ-TSD_W11_64_V3501349_20260305R.zip",
       "archiveSha256": "B16FDEAAFF776BFF342AC45C76F53CCFEB2EDBE674ACF87B45860B78BB05DCE8",
       "driverDirectory": ".",
-      "scope": "ASUS B850M AYW GAMING WIFI official MediaTek WLAN package",
+      "scope": "ASUS motherboard OEM WLAN; B850M AYW GAMING WIFI exact IDs; offline matching",
       "archiveLayout": "direct",
       "devicePrefixes": [
         "PCI\\VEN_14C3&DEV_0608&SUBSYS_060814C3",
@@ -88,8 +88,8 @@
         "PCI\\VEN_14C3&DEV_7961&SUBSYS_E0BC17AA"
       ],
       "windows11Only": false,
-      "minimumWindowsBuild": 16299,
-      "adapterName": "MediaTek Wi-Fi"
+      "adapterName": "MediaTek Wi-Fi",
+      "minimumWindowsBuild": 16299
     },
     {
       "id": "rtl8821",
@@ -2216,6 +2216,188 @@
       "minimumWindowsBuild": 22000,
       "adapterName": "Realtek USB Ethernet",
       "targetWindows": "windows11"
+    },
+    {
+      "id": "dlink-dub1312-reva",
+      "version": "1.18.2.0",
+      "source": "https://support.dlink.com/resource/PRODUCTS/DUB-1312/REVA/DUB-1312_REVA_DRIVERS_v1.18.2.0_WIN11_10_8.zip",
+      "archiveSha256": "C13CAA7D34FB461D157D9150CB386C3F4848E65178FC819388E8E5DE4FF8B3EF",
+      "driverDirectory": "DUB-13x2_Win10_8.x_64bit_Driver_v1.18.2.0_WHCK",
+      "archiveLayout": "direct",
+      "scope": "D-Link DUB-1312 Rev A; OEM lists Windows 10/11, x64 INF verified on Windows 11",
+      "devicePrefixes": [
+        "USB\\VID_2001&PID_4A00"
+      ],
+      "windows11Only": false,
+      "adapterName": "D-Link DUB-1312 USB Ethernet"
+    },
+    {
+      "id": "asus-mb-mtk-3601425",
+      "version": "3.6.0.1425",
+      "source": "https://dlcdnets.asus.com/pub/ASUS/mb/08WIRELESS/DRV_WiFi_MediaTek_SZ-TSD_W11_64_V3601425_20260804R.zip",
+      "archiveSha256": "DA92DBB9097B6EB273C633DE4C63382311A06EB71549920BC22D36A7D946D616",
+      "driverDirectory": ".",
+      "scope": "ASUS motherboard OEM WLAN; offline matching",
+      "archiveLayout": "direct",
+      "devicePrefixes": [],
+      "windows11Only": false,
+      "adapterName": "MediaTek MT7902/MT7921/MT7922"
+    },
+    {
+      "id": "asus-mb-rtl8851-134100",
+      "version": "6001.19.134.100",
+      "source": "https://dlcdnets.asus.com/pub/ASUS/mb/08WIRELESS/DRV_WiFi_RTK_8851BE_SZ-TSD_W11_64_V600119134100_20251128R.zip",
+      "archiveSha256": "E2A6D1E627CF88C31380FB89AA16F7610A246627F4A6A9CE88A223BC2FBBB881",
+      "driverDirectory": "Win10X64",
+      "scope": "ASUS motherboard OEM WLAN; offline matching",
+      "archiveLayout": "direct",
+      "devicePrefixes": [],
+      "windows11Only": false,
+      "adapterName": "Realtek RTL8851BE"
+    },
+    {
+      "id": "asus-mb-rtl8851-1380",
+      "version": "6001.19.138.0",
+      "source": "https://dlcdnets.asus.com/pub/ASUS/mb/08WIRELESS/DRV_WiFi_RTK_8851BE_SZ-TSD_W11_64_V6001191380_20260722R.zip",
+      "archiveSha256": "2002CF86831891F4B0E052336AF1561D24FB404573AE4101A16DA0AFE11F711C",
+      "driverDirectory": "Win10X64",
+      "scope": "ASUS motherboard OEM WLAN; offline matching",
+      "archiveLayout": "direct",
+      "devicePrefixes": [],
+      "windows11Only": false,
+      "adapterName": "Realtek RTL8851BE"
+    },
+    {
+      "id": "asus-mb-intel-22190",
+      "version": "22.190.0.4",
+      "source": "https://dlcdnets.asus.com/pub/ASUS/mb/08WIRELESS/DRV_WiFi_Intel_TP_W11_64_V2219004_20230130R.zip",
+      "archiveSha256": "CF7582F89EB04A367816F3C3108F6622EAD1DDAE75112BB5DE35EBF60989D629",
+      "driverDirectory": "UWD/Win64/Drivers",
+      "scope": "ASUS motherboard OEM WLAN; offline matching",
+      "archiveLayout": "direct",
+      "devicePrefixes": [],
+      "windows11Only": false,
+      "adapterName": "Intel Wireless"
+    },
+    {
+      "id": "msi-mb-amd-wlan",
+      "version": "3.05.00.1415",
+      "source": "https://download.msi.com/dvr_exe/mb/amd_wifi_driver.zip",
+      "archiveSha256": "D73229F99F1CC470FBEAEA888896D099FA4BA6A90719262368358F05CAF93DC3",
+      "driverDirectory": "AMD_WIFI_Drivers/drivers",
+      "scope": "MSI OEM WLAN archive verified against WinDriverIndex; offline matching",
+      "archiveLayout": "direct",
+      "devicePrefixes": [],
+      "windows11Only": false,
+      "adapterName": "MediaTek Wi-Fi 6E"
+    },
+    {
+      "id": "msi-mb-intel-2340",
+      "version": "23.40.0.4",
+      "source": "https://download.msi.com/dvr_exe/mb/intel_wifi_driver_W11.zip",
+      "archiveSha256": "F25A17099F31BB78B6024A6F279F8E127D85B4C1196F3C6F3EE541D81D146631",
+      "driverDirectory": "Intel WIFI Driver_23.40.0.4/UWD/Win64/Drivers",
+      "scope": "MSI OEM WLAN archive verified against WinDriverIndex; offline matching",
+      "archiveLayout": "direct",
+      "devicePrefixes": [],
+      "windows11Only": true,
+      "adapterName": "Intel Wi-Fi"
+    },
+    {
+      "id": "msi-mb-intel-2430",
+      "version": "24.30.1.1",
+      "source": "https://download.msi.com/dvr_exe/mb/intel_wifi6e_drivers.zip",
+      "archiveSha256": "CFEB0E579C43DBAAB523426C75121331FD391028C8718F3FD5371D637E4C0C2A",
+      "driverDirectory": "Intel WIFI Driver_24.30.1.1/Drivers",
+      "scope": "MSI OEM WLAN archive verified against WinDriverIndex; offline matching",
+      "archiveLayout": "direct",
+      "devicePrefixes": [],
+      "windows11Only": false,
+      "adapterName": "Intel Wi-Fi 6E"
+    },
+    {
+      "id": "msi-mb-mtk-5977",
+      "version": "5.7.0.5977",
+      "source": "https://download.msi.com/dvr_exe/mb/mediatek_wifi.zip",
+      "archiveSha256": "7DE62A01DCEF154A850E4847C14FEE75FF89CD7353ED89A8819ED25D624E49F6",
+      "driverDirectory": "WIFI",
+      "scope": "MSI OEM WLAN archive verified against WinDriverIndex; offline matching",
+      "archiveLayout": "direct",
+      "devicePrefixes": [],
+      "windows11Only": true,
+      "adapterName": "MediaTek Wi-Fi 7"
+    },
+    {
+      "id": "msi-mb-ncm865",
+      "version": "3.1.0.1430",
+      "source": "https://download.msi.com/dvr_exe/mb/qualcomm_ncm865_wifi.zip",
+      "archiveSha256": "1886145F4FC9C9627BECDC9A18403B9D3D4B9DDC715B024A8CDADE02EFA60FAC",
+      "driverDirectory": "Qualcomm NCM865 WIFI Drivers_3.1.0.1430",
+      "scope": "MSI OEM WLAN archive verified against WinDriverIndex; offline matching",
+      "archiveLayout": "direct",
+      "devicePrefixes": [],
+      "windows11Only": true,
+      "adapterName": "Qualcomm NCM865"
+    },
+    {
+      "id": "msi-mb-rtl8852ce",
+      "version": "6001.16.176.0",
+      "source": "https://download.msi.com/dvr_exe/mb/realtek_wifi_8852ce_drivers.zip",
+      "archiveSha256": "5B636421B18185B205D042A675B2104515004B45CA17FDD91BFAC4A605673CF8",
+      "driverDirectory": "RealtekWIFI/RTWLANE_Driver/Win10X64",
+      "scope": "MSI OEM WLAN archive verified against WinDriverIndex; offline matching",
+      "archiveLayout": "direct",
+      "devicePrefixes": [],
+      "windows11Only": false,
+      "adapterName": "Realtek RTL8852CE"
+    },
+    {
+      "id": "asus-mb-intel-2420",
+      "version": "24.20.0.4",
+      "source": "https://dlcdnets.asus.com/pub/ASUS/mb/08WIRELESS/DRV_WiFi_Intel_All_SZ-TSD_W11_64_V242004_20260309R.zip",
+      "archiveSha256": "5110939D2760126D4F681E407CD17662193A4A7E49CA6F6C791F0A612E537A6F",
+      "driverDirectory": "UWD/Win64/Drivers",
+      "scope": "ASUS OEM WLAN archive; offline matching",
+      "archiveLayout": "direct",
+      "devicePrefixes": [],
+      "windows11Only": false,
+      "adapterName": "Intel Wi-Fi"
+    },
+    {
+      "id": "asrock-mb-rtl8922-eb601",
+      "version": "EB601NF_v6102.24.146.0",
+      "source": "https://download.asrock.com/Drivers/All/WLAN/AzureWave_WLAN(EB601NF_v6102.24.146.0).zip",
+      "archiveSha256": "402A144CA76ADD877C6C1B83B2E46092A1D57D6A4B8B8938689D2BE639E9EC25",
+      "driverDirectory": "AzureWave_WLAN(EB601NF_v6102.24.146.0)/RTWLANE_Driver/Win11",
+      "scope": "ASRock OEM WLAN archive; offline matching",
+      "archiveLayout": "direct",
+      "devicePrefixes": [],
+      "windows11Only": true,
+      "adapterName": "Realtek RTL8922AE"
+    },
+    {
+      "id": "asrock-mb-intel-23170",
+      "version": "23.170.0.1G",
+      "source": "https://download.asrock.com/Drivers/Intel/WLAN/Intel_WLAN(v23.170.0.1G).zip",
+      "archiveSha256": "CF431AC60B3000426DB6B3EC5F5669403B9FC0EE469B1145E091F79644034216",
+      "driverDirectory": "Intel_WLAN(v23.170.0.1G)/Drivers",
+      "scope": "ASRock OEM WLAN archive; offline matching",
+      "archiveLayout": "direct",
+      "devicePrefixes": [],
+      "windows11Only": true,
+      "adapterName": "Intel Wi-Fi"
+    },
+    {
+      "id": "asus-mb-rtl8922-win11",
+      "version": "6102.24.145.100",
+      "source": "https://dlcdnets.asus.com/pub/ASUS/mb/08WIRELESS/DRV_WiFi_RTK_8922AE_SZ-TSD_W11_64_V610224145100_20260804R.zip",
+      "archiveSha256": "519580A8261C3C79644951EEA5C7D32947A126AB6D7EED08814E192B02BFE85E",
+      "driverDirectory": "Win11",
+      "scope": "ASUS Realtek RTL8922AE; offline matching",
+      "archiveLayout": "direct",
+      "devicePrefixes": [],
+      "windows11Only": true,
+      "adapterName": "Realtek RTL8922AE"
     }
   ]
 }

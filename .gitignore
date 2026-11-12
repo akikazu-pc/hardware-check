@@ -1,6 +1,7 @@
 bin/
 obj/
 artifacts/
+scripts/__pycache__/
 *.user
 .vs/
 probe-*.json

@@ -263,7 +263,7 @@ static std::vector<fs::path> DriverDirectories(const fs::path& bundle, DWORD bui
     std::string name;
     // OEM packages share the desktop library. The generated list carries the OEM OS floor.
     while (scope >> minimum >> name) {
-        if (minimum <= build && name.find_first_not_of("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-.") == std::string::npos &&
+        if (minimum <= build && name.find_first_not_of("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._") == std::string::npos &&
             name != "." && name != "..") {
             directories.push_back(bundle / L"driver-packs" / name);
         }

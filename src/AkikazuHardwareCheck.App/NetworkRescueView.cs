@@ -383,21 +383,11 @@ internal sealed class NetworkRescueView : UserControl
         (_modules.FirstOrDefault(module => module.Module == SharedModuleId.NetworkRescue) is { } rescue
             ? Path.Combine(rescue.InstallRoot, "driver-packs") : null);
 
-    private IEnumerable<string> BundledDriverRoots(string root, NetworkDeviceDiagnostic diagnostic)
-    {
-        yield return root;
-        if (_portableDriverDirectory is not null && diagnostic.WindowsBuild >= 10240 &&
-            string.Equals(diagnostic.Architecture, "X64", StringComparison.OrdinalIgnoreCase) &&
-            Path.GetDirectoryName(root) is { } bundle)
-        {
-            var ethernet = Path.Combine(bundle, "pe-drivers",
-                diagnostic.WindowsBuild < 22000 ? "windows10-x64" : "windows11-x64");
-            if (Directory.Exists(ethernet))
-            {
-                yield return ethernet;
-            }
-        }
-    }
+    // The portable bundle limits WLAN folders by build and adds the per-Windows Ethernet set.
+    private IReadOnlyList<string> BundledDriverRoots(string root, NetworkDeviceDiagnostic diagnostic) =>
+        _portableDriverDirectory is null
+            ? [root]
+            : OfflinePackageSearch.GetPortableRoots(root, diagnostic.WindowsBuild, diagnostic.Architecture);
 
     private bool HasOnlineCandidates() => DistributionProfile.Current.Channel != DistributionChannel.Store &&
         _diagnostic is { } diagnostic &&
@@ -461,7 +451,7 @@ internal sealed class NetworkRescueView : UserControl
         var category = SelectedCatalogCategory;
         RescueDeviceTag? tag = category == RescueDeviceCategory.Other && _catalogTag.SelectedIndex > 0
             ? CatalogTags[_catalogTag.SelectedIndex - 1] : null;
-        var results = RescueModelCatalog.Search(_catalogQuery.Text, category, tag);
+        var results = RescueModelCatalog.Search(_catalogQuery.Text, category, tag, out var approximate);
         _catalogResults.BeginUpdate();
         _catalogResults.Items.Clear();
         foreach (var entry in results)
@@ -477,7 +467,8 @@ internal sealed class NetworkRescueView : UserControl
         }
         _catalogResults.EndUpdate();
         _catalogStatus.Text = string.IsNullOrWhiteSpace(_catalogQuery.Text) && category is null ? "" :
-            results.Count == 0 ? _t["rescue.catalogNoResults"] : _t["rescue.catalogResults", results.Count];
+            results.Count == 0 ? _t["rescue.catalogNoResults"] :
+            _t[approximate ? "rescue.catalogApproximateResults" : "rescue.catalogResults", results.Count];
         ShowCatalogDetails();
     }
 
@@ -532,8 +523,8 @@ internal sealed class NetworkRescueView : UserControl
             $"{entry.Brand}  {entry.Model}",
             entry.IsSeries ? _t["rescue.catalogSeries"] : "",
             entry.Platform,
-            entry.Type == "laptop-os-record" ? entry.Windows : "",
-            $"{_t["rescue.wifiModel"]}  {(entry.Module.Length == 0 || entry.Module == "pending" ? _t["rescue.catalogPending"] : entry.Module)}",
+            entry.Type is "laptop" or "laptop-os-record" ? entry.Windows : "",
+            $"{_t[entry.DeviceTag == RescueDeviceTag.NetworkAdapter ? "rescue.adapter" : "rescue.wifiModel"]}  {(entry.Module.Length == 0 || entry.Module == "pending" ? _t["rescue.catalogPending"] : entry.Module)}",
             $"Windows 10 x64  {CatalogEvidence(entry.Windows10Evidence)}",
             $"Windows 11 x64  {CatalogEvidence(entry.Windows11Evidence)}",
         }.Where(value => value.Length > 0));
@@ -543,9 +534,12 @@ internal sealed class NetworkRescueView : UserControl
     {
         "oem-package-indexed" => "rescue.catalogIndexed",
         "oem-wlan-listed" => "rescue.catalogListed",
+        "oem-network-listed" => "rescue.catalogNetworkListed",
         "oem-driver-pack-listed" => "rescue.catalogDeployPack",
         "oem-os-upgrade-tested" => "rescue.catalogOsTested",
         "no-factory-wifi" => "rescue.catalogNoWifi",
+        "oem-wlan-not-supported" => "rescue.catalogWifiNotSupported",
+        "oem-wlan-not-listed" => "rescue.catalogWifiNotListed",
         "outside-x64-record" => "rescue.catalogOutsideX64",
         _ => "rescue.catalogPending",
     }];

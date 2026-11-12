@@ -39,6 +39,10 @@
 - 驱动许可证全文：`licenses/PawnIO-COPYING.txt`。例外允许通过 device IO control 接口通信的独立模块组合分发。
 - 源代码：<https://github.com/namazso/PawnIO>、<https://github.com/namazso/PawnIO.Setup>、<https://github.com/namazso/PawnIO.Modules>。
 
+## WinDriverIndex 型号目录
+
+断网急救的部分主板、笔记本和品牌整机目录来自 [WinDriverIndex](https://windriverindex.tucny.com/) 的 2026-11-02 [公开快照](https://windriverindex.tucny.com/v1/latest/manifest.json)，源数据采用 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)。本站筛选设备范围，保留原厂链接，并转换型号标识、分类和别名以供检索。
+
 ## 程序内查看许可证
 
 下载的是单个程序，许可证全文和本文件也嵌入其中，可在“设置 → 第三方许可”打开。

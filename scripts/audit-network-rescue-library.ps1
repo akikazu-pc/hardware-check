@@ -1,5 +1,8 @@
 [CmdletBinding()]
-param([Parameter(Mandatory)] [string]$DriverDirectory)
+param(
+    [Parameter(Mandatory)] [string]$DriverDirectory,
+    [string]$EvidenceCsv
+)
 
 $ErrorActionPreference = 'Stop'
 $root = Split-Path -Parent $PSScriptRoot
@@ -8,6 +11,9 @@ $core = Join-Path $root 'src/AkikazuHardwareCheck.Core/bin/Release/net10.0-windo
 
 $hardwareIds = [Collections.Generic.HashSet[string]]::new([StringComparer]::OrdinalIgnoreCase)
 $signedIds = [Collections.Generic.HashSet[string]]::new([StringComparer]::OrdinalIgnoreCase)
+$resolvedDrivers = (Resolve-Path -LiteralPath $DriverDirectory).Path
+$evidence = [Collections.Generic.List[object]]::new()
+$windowsBuild = [Environment]::OSVersion.Version.Build
 $infs = @(Get-ChildItem -LiteralPath $DriverDirectory -Recurse -File -Filter '*.inf')
 $matchedInfCount = 0
 $signedInfCount = 0
@@ -41,12 +47,26 @@ foreach ($inf in $infs) {
     if ($signature) { $signedInfCount++ }
     foreach ($match in $matches) {
         [void]$hardwareIds.Add($match.HardwareId)
-        if ($signature) { [void]$signedIds.Add($match.HardwareId) }
+        if ($signature) {
+            [void]$signedIds.Add($match.HardwareId)
+            if ($EvidenceCsv) {
+                $evidence.Add([pscustomobject]@{
+                    windowsBuild = $windowsBuild
+                    inf = [IO.Path]::GetRelativePath($resolvedDrivers, $inf.FullName).Replace('\', '/')
+                    hardwareId = $match.HardwareId
+                    adapterName = $match.AdapterName
+                })
+            }
+        }
     }
 }
 
+if ($EvidenceCsv) {
+    $evidence | Export-Csv -LiteralPath $EvidenceCsv -NoTypeInformation -Encoding utf8
+}
+
 [pscustomobject]@{
-    WindowsBuild = [Environment]::OSVersion.Version.Build
+    WindowsBuild = $windowsBuild
     InfFiles = $infs.Count
     ApplicableMatchingInfs = $matchedInfCount
     SignatureVerifiedInfs = $signedInfCount

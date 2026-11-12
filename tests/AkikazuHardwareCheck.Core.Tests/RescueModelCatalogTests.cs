@@ -4,6 +4,89 @@ namespace AkikazuHardwareCheck.Core.Tests;
 
 public sealed class RescueModelCatalogTests
 {
+    [Theory]
+    [InlineData("NH.U1BAA.001", "pending", "AX1675i")]
+    [InlineData("NX.KYXAA.002", "outside-x64-record", "802.11be")]
+    public void FindsAcerRetailPartNumbersWithTheirSeparatePlatformEvidence(string part, string evidence, string module)
+    {
+        var row = Assert.Single(RescueModelCatalog.Search(part, RescueDeviceCategory.Laptop));
+        Assert.Equal(evidence, row.Windows11Evidence);
+        Assert.Contains(module, row.Module);
+    }
+
+    [Theory]
+    [InlineData("ノートPC 富士通 ＦＭＶＡ４０ＦＷＪ２", "LIFEBOOK AH40/F1")]
+    [InlineData("平板微软 Surface Ｇｏ ４", "Surface Go 4")]
+    [InlineData("華擎Ａ６２０Ｍ－ＨＤＶ／Ｍ．２＋", "A620M-HDV/M.2+")]
+    [InlineData("友讯 DUB-1312", "DUB-1312")]
+    [InlineData("小米笔记本ＴＭ２４２３", "REDMI Book 16 2025(AMD)")]
+    public void SearchesLocalizedNamesAndFullWidthModelCodes(string query, string expected)
+    {
+        var matches = RescueModelCatalog.Search(query, null, null, out var approximate);
+        Assert.Equal(expected, matches[0].Model);
+        Assert.False(approximate);
+    }
+
+    [Theory]
+    [InlineData("華擎 A620M-HVD/M.2+", "A620M-HDV/M.2+")]
+    [InlineData("Surfaec Go 4", "Surface Go 4")]
+    [InlineData("Arhcer T3U Plus V1.60", "Archer T3U Plus V1.60")]
+    public void SuggestsOneTypoWithoutCrossingHardwareRevision(string query, string expected)
+    {
+        var matches = RescueModelCatalog.Search(query, null, null, out var approximate);
+        Assert.Contains(matches, match => match.Model == expected);
+        Assert.True(approximate);
+        Assert.DoesNotContain(matches, match => match.Model is "A620M-HDV/M.2" or "Archer T3U Plus V1");
+    }
+
+    [Fact]
+    public void KeepsDifferentDigitsAndConflictingCategoryOutsideResults()
+    {
+        Assert.Empty(RescueModelCatalog.Search("華擎 A620M-HVD/M.9+"));
+        Assert.Empty(RescueModelCatalog.Search("Windows tablet Surface Go 4", RescueDeviceCategory.Laptop));
+    }
+
+    [Fact]
+    public void WarnsWhenOnlyAPlusInsensitiveResultExists()
+    {
+        var matches = RescueModelCatalog.Search("Surface Go 4+", null, null, out var approximate);
+        Assert.Contains(matches, match => match.Model == "Surface Go 4");
+        Assert.True(approximate);
+    }
+
+    [Fact]
+    public void OffersRelatedRevisionsWhenATypoQueryLeavesTheRevisionUnspecified()
+    {
+        var matches = RescueModelCatalog.Search("Arhcer T3U Plus", null, null, out var approximate);
+        Assert.True(approximate);
+        Assert.Contains(matches, match => match.Model == "Archer T3U Plus V1.60");
+        Assert.Contains(matches, match => match.Model == "Archer T3U Plus V1");
+    }
+
+    [Fact]
+    public void FindsAdditionalDeviceCategoriesWithSeparatePlatformEvidence()
+    {
+        Assert.Equal(20, RescueModelCatalog.Search("单板电脑").Count);
+        Assert.Contains(RescueModelCatalog.Search("HTPC Beebox N3150"), model => model.DeviceTag == RescueDeviceTag.Htpc);
+        var phone = Assert.Single(RescueModelCatalog.Search("Windows 手机 Lumia 950"),
+            model => model.Model == "Lumia 950");
+        Assert.Equal("outside-x64-record", phone.Windows11Evidence);
+    }
+
+    [Theory]
+    [InlineData("TM2423", RescueDeviceCategory.Laptop, null, "REDMI Book 16 2025(AMD)")]
+    [InlineData("FMVA40FWJ2", RescueDeviceCategory.Laptop, null, "LIFEBOOK AH40/F1")]
+    [InlineData("MacBookPro16,1", RescueDeviceCategory.Other, RescueDeviceTag.Mac, "MacBook Pro (16-inch, 2019) (MacBookPro16,1)")]
+    [InlineData("Surface Go 4", RescueDeviceCategory.Other, RescueDeviceTag.WindowsTablet, "Surface Go 4")]
+    [InlineData("Archer T3U Plus V1.60", RescueDeviceCategory.Other, RescueDeviceTag.NetworkAdapter, "Archer T3U Plus V1.60")]
+    public void FindsSupplementalModelsByNameOrOfficialCode(string query, RescueDeviceCategory category,
+        RescueDeviceTag? tag, string expected)
+    {
+        var results = RescueModelCatalog.Search(query, category, tag);
+        Assert.Equal(expected, results[0].Model);
+        Assert.NotNull(results[0].Source);
+    }
+
     [Fact]
     public void FindsAllInOneWithSeparateWindowsEvidence()
     {
