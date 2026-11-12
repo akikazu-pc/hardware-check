@@ -4,6 +4,16 @@ namespace AkikazuHardwareCheck.Core.Tests;
 
 public sealed class RescueModelCatalogTests
 {
+    [Theory]
+    [InlineData("A620M-HDV/M.2")]
+    [InlineData("A620M-HDV/M.2+")]
+    public void ExactModelOutranksTheOtherPunctuationVariant(string model)
+    {
+        var results = RescueModelCatalog.Search($"ASRock {model}");
+        Assert.Equal(model, results[0].Model);
+        Assert.Contains(results, entry => entry.Model != model && entry.Model.StartsWith("A620M-HDV/M.2"));
+    }
+
     [Fact]
     public void FindsAnExactModelWithItsDriverPageAndSeparateWindowsEvidence()
     {

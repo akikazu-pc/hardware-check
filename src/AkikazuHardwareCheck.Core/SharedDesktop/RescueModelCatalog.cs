@@ -23,8 +23,10 @@ public static class RescueModelCatalog
             .Where(row => (row.Brand + row.Name).Contains(key, StringComparison.Ordinal) ||
                 terms.All(term => row.Name.Contains(term, StringComparison.Ordinal) ||
                 row.Brand.Contains(term, StringComparison.Ordinal)))
-            .OrderBy(row => row.Name == key || row.Brand + row.Name == key ? 0 :
-                row.Name.StartsWith(key, StringComparison.Ordinal) ? 1 : 2)
+            .OrderBy(row => row.Model.Model.Equals(query.Trim(), StringComparison.OrdinalIgnoreCase) ||
+                $"{row.Model.Brand} {row.Model.Model}".Equals(query.Trim(), StringComparison.OrdinalIgnoreCase) ? 0 :
+                row.Name == key || row.Brand + row.Name == key ? 1 :
+                row.Name.StartsWith(key, StringComparison.Ordinal) ? 2 : 3)
             .ThenBy(row => row.Model.Model, StringComparer.OrdinalIgnoreCase)
             .Select(row => row.Model)
             .ToArray();

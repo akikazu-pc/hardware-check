@@ -42,7 +42,7 @@ internal sealed class NetworkRescueView : UserControl
     private readonly TabPage _catalogPage = new();
     private readonly TextBox _catalogQuery = new() { Dock = DockStyle.Top };
     private readonly Label _catalogStatus = Ui.Label();
-    private readonly ListBox _catalogResults = new() { Dock = DockStyle.Fill };
+    private readonly ListView _catalogResults = ListViewTable.Create();
     private readonly TextBox _catalogDetails = new() { Dock = DockStyle.Fill, Multiline = true, ReadOnly = true, ScrollBars = ScrollBars.Vertical };
     private readonly LinkLabel _catalogDriverPage = new() { AutoSize = true };
     private readonly LinkLabel _catalogSource = new() { AutoSize = true };
@@ -113,6 +113,13 @@ internal sealed class NetworkRescueView : UserControl
         ListViewTable.EnableSort(_pciDevices);
         ListViewTable.EnableColumnMenu(_pciDevices, _t);
         ListViewTable.EnableCopy(_pciDevices, _t);
+        _catalogResults.MultiSelect = false;
+        _catalogResults.Columns.Add("", 105);
+        _catalogResults.Columns.Add("", 350);
+        _catalogResults.Columns.Add("", 250);
+        ListViewTable.EnableSort(_catalogResults);
+        ListViewTable.EnableColumnMenu(_catalogResults, _t);
+        ListViewTable.EnableCopy(_catalogResults, _t);
 
         _adapters.Columns.Add("", 260);
         _adapters.Columns.Add("", 90);
@@ -156,6 +163,9 @@ internal sealed class NetworkRescueView : UserControl
         _catalogQuery.AccessibleName = _catalogQuery.PlaceholderText;
         _catalogDriverPage.Text = t["rescue.officialDrivers"];
         _catalogSource.Text = t["rescue.catalogSource"];
+        _catalogResults.Columns[0].Text = t["rescue.catalogBrand"];
+        _catalogResults.Columns[1].Text = t["rescue.catalogModel"];
+        _catalogResults.Columns[2].Text = t["rescue.catalogPlatform"];
         SearchCatalog();
         _scan.Text = t["rescue.scan"];
         _export.Text = t["rescue.export"];
@@ -354,22 +364,22 @@ internal sealed class NetworkRescueView : UserControl
 
     private void SearchCatalog()
     {
-        var selected = (_catalogResults.SelectedItem as CatalogResult)?.Entry;
+        var selected = SelectedCatalogEntry;
         var results = RescueModelCatalog.Search(_catalogQuery.Text);
         _catalogResults.BeginUpdate();
         _catalogResults.Items.Clear();
         foreach (var entry in results)
         {
-            var qualifier = entry.Type == "laptop-os-record" ? entry.Windows : entry.Platform;
-            var title = string.Join(" · ", new[] { entry.Brand, entry.Model, qualifier }.Where(value => value.Length > 0));
-            _catalogResults.Items.Add(new CatalogResult(entry, title));
+            var qualifier = entry.Type == "laptop-os-record"
+                ? string.Join(" · ", new[] { entry.Platform, entry.Windows }.Where(value => value.Length > 0))
+                : entry.Platform;
+            var item = new ListViewItem(entry.Brand) { Tag = entry };
+            item.SubItems.Add(entry.Model);
+            item.SubItems.Add(qualifier);
+            _catalogResults.Items.Add(item);
+            item.Selected = entry == selected;
         }
         _catalogResults.EndUpdate();
-        if (selected is not null)
-        {
-            _catalogResults.SelectedItem = _catalogResults.Items.Cast<CatalogResult>()
-                .FirstOrDefault(result => result.Entry == selected);
-        }
         _catalogStatus.Text = string.IsNullOrWhiteSpace(_catalogQuery.Text) ? "" :
             results.Count == 0 ? _t["rescue.catalogNoResults"] : _t["rescue.catalogResults", results.Count];
         ShowCatalogDetails();
@@ -377,7 +387,7 @@ internal sealed class NetworkRescueView : UserControl
 
     private void ShowCatalogDetails()
     {
-        var entry = (_catalogResults.SelectedItem as CatalogResult)?.Entry;
+        var entry = SelectedCatalogEntry;
         _catalogDriverPage.Visible = entry?.DriverPage is not null;
         _catalogSource.Visible = entry?.Source is not null && entry.Source != entry.DriverPage;
         _catalogDetails.Text = entry is null ? "" : string.Join(Environment.NewLine, new[]
@@ -405,16 +415,14 @@ internal sealed class NetworkRescueView : UserControl
 
     private void OpenCatalogPage(bool driverPage)
     {
-        if (_catalogResults.SelectedItem is CatalogResult { Entry: var entry })
+        if (SelectedCatalogEntry is { } entry)
         {
             OpenPage((driverPage ? entry.DriverPage : entry.Source)?.AbsoluteUri);
         }
     }
 
-    private sealed record CatalogResult(RescueCatalogModel Entry, string Title)
-    {
-        public override string ToString() => Title;
-    }
+    private RescueCatalogModel? SelectedCatalogEntry =>
+        _catalogResults.SelectedItems.Count == 1 ? _catalogResults.SelectedItems[0].Tag as RescueCatalogModel : null;
 
     private void ExportDiagnostics()
     {

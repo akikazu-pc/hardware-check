@@ -1,6 +1,6 @@
 # 统一离线安装包覆盖进度
 
-[逐型号 Wi-Fi 缺口清单](network-rescue-model-gaps.csv)记录当前已发现的 1,228 条主板型号或修订、913 条笔记本系列或型号，以及 167 条戴尔系统与 Windows 组合。三类的统计单位不同，同一台笔记本可出现在多个系统组合。
+[逐型号 Wi-Fi 缺口清单](network-rescue-model-gaps.csv)记录当前已发现的 1,228 条主板型号或修订、912 条笔记本系列或型号，以及 167 条戴尔系统与 Windows 组合。三类的统计单位不同，同一台笔记本可出现在多个系统组合。
 
 清单分别记录 `windows10X64Evidence` 和 `windows11X64Evidence`。`oem-package-indexed` 表示原厂包已入索引，`oem-wlan-listed` 表示原厂资料列出无线驱动，`oem-driver-pack-listed` 表示原厂列出该系统的整机部署包，仍需检查包内 WLAN 驱动。`oem-os-upgrade-tested` 表示原厂列出 Windows 11 升级测试，WLAN 驱动仍待核对。`pending` 表示该系统的证据待核。仅预留接口和 ARM64 组合另有标记。原厂下载索引目前有 7 个包覆盖 Windows 10 x64，16 个包覆盖 Windows 11 x64，部分包另有最低构建号要求。[原厂下载索引](network-rescue-driver-index.csv)
 
@@ -13,15 +13,17 @@
 
 主板中 1,112 条还需确认出厂无线状态、模块及驱动，112 条已有模块或驱动候选，仍需把所有出厂变体对应到精确 ID 和断网安装结果。B850M AYW GAMING WIFI-CSM 已确认板载 Wi-Fi，仍缺芯片证据。ROG STRIX B860-G GAMING WIFI 的本机 MT7925 子系统已匹配签名 INF，仍需核对其他出厂配置及断网安装。另有两款已确认仅预留接口。[华硕 B860-G 驱动页](https://www.asus.com/tw/supportonly/rog%20strix%20b860-g%20gaming%20wifi/helpdesk_download/)
 
-笔记本记录包括华硕 82 条 ROG/TUF 系列和 3 条型号证据、联想拯救者 15 条型号证据、Alienware 5 条型号证据、惠普 310 条商务型号、宏碁 398 条系列或型号及微星 100 条系列或型号。戴尔的 167 条系统组合来自 52 个目录型号，含 Windows 11 x64 127 条、Windows 10 x64 39 条及 Windows 11 ARM64 1 条。完整的地区 SKU、出厂网卡组合和实机安装数据仍待采集。
+笔记本记录包括华硕 82 条 ROG/TUF 系列和 3 条型号证据、联想拯救者 15 条型号证据、Alienware 5 条型号证据、惠普 309 条商用笔记本或二合一型号、宏碁 398 条系列或型号及微星 100 条系列或型号。戴尔的 167 条系统组合来自 52 个目录型号，含 Windows 11 x64 127 条、Windows 10 x64 39 条及 Windows 11 ARM64 1 条。完整的地区 SKU、出厂网卡组合和实机安装数据仍待采集。
 
 华擎目录从六份原厂 CPU 支持列表提取 360 条主板型号或修订。另从映泰和 EVGA 原厂资料分别录入 14 条和 2 条。新增的 376 条主板记录都待核对出厂无线状态、模块及 Windows 10、11 驱动。[华擎型号清单](asrock-motherboard-discovery.csv) · [映泰与 EVGA 型号清单](additional-motherboard-discovery.csv)
 
-惠普商务笔记本目录有 247 条 Windows 10 x64 部署包引用和 231 条 Windows 11 x64 部署包引用，其中 168 条列出两种系统。部署包的 WLAN 内容和消费级产品目录仍待核对。[惠普部署包矩阵](https://hpia.hpcloud.hp.com/downloads/driverpackcatalog/HP_Driverpack_Matrix_x64.html)
+惠普商务笔记本目录有 246 条 Windows 10 x64 部署包引用和 231 条 Windows 11 x64 部署包引用，其中 168 条列出两种系统。部署包的 WLAN 内容和消费级产品目录仍待核对。[惠普部署包矩阵](https://hpia.hpcloud.hp.com/downloads/driverpackcatalog/HP_Driverpack_Matrix_x64.html)
 
 宏碁录入 101 条系列和 297 条型号。型号中 293 条见于原厂 Windows 11 升级测试清单，另有 4 条原厂支持页记录。微星从游戏和商务产品列表录入 24 条系列，从原厂第 12 代笔记本清单补录 76 条型号。两家目录的地区 SKU 及每个型号的 Windows 10、11 WLAN 驱动仍待核对。[笔记本补充目录](network-rescue-oem-laptops.csv) · [宏碁笔记本](https://www.acer.com/us-en/laptops) · [微星游戏笔记本](https://us.msi.com/Laptops/Products) · [微星商务笔记本](https://www.msi.com/Business-Productivity/Products)
 
 更新补充目录后，在仓库根目录运行 `pwsh -File scripts/merge-network-rescue-model-gaps.ps1`。脚本按类型、品牌和型号合并新条目，并输出各品牌的 Windows 10、11 待核数量。
+
+本轮复核确认 376 条新增主板记录的型号与插槽均与源表一致。抽查的 12 条华擎链接与原厂清单一致，其中 4 个旧型号页面未能提取内容。映泰目录及 EVGA 两条资料链接的实时访问仍待确认。惠普 Presence 24 会议一体机已从笔记本目录移除。[惠普产品规格](https://support.hp.com/gb-en/document/ish_5880723-5880767-16)
 
 日期为 2026-11-12。统一的断网急救离线包适用于桌面和笔记本，通用包与 OEM 补充包按设备 ID 和系统选取。两类设备分别验收。先核对 AM5、LGA1851 及 2025 年起出货的笔记本，完成后再系统扩展到 AM4、LGA1700 及更旧的笔记本。
 
