@@ -1,7 +1,8 @@
 #include <commctrl.h>
 
 enum HomeControl {
-    HomeTools = 201, HomeLanguage, HomeHelp, HomeHeading, HomeIntro, HomeList, HomeRefresh, HomePrimary, HomeSummary
+    HomeTools = 201, HomeLanguage, HomeHelp, HomeHeading, HomeIntro, HomeList, HomeRefresh, HomePrimary,
+    HomeSummary, HomeNetworkHeading, HomeDriverHeading, HomeNetworkList
 };
 
 struct HomeState {
@@ -10,6 +11,7 @@ struct HomeState {
     int language;
     HFONT font = nullptr;
     HFONT headingFont = nullptr;
+    HFONT sectionFont = nullptr;
 };
 
 static void AddHomeRow(HWND list, const std::wstring& name, const wchar_t* status)
@@ -22,7 +24,7 @@ static void AddHomeRow(HWND list, const std::wstring& name, const wchar_t* statu
     if (index >= 0) ListView_SetItemText(list, index, 1, const_cast<wchar_t*>(status));
 }
 
-static void FillWindowsDevices(HWND list, const PeText& text)
+static void FillNetworkDevices(HWND list, const PeText& text)
 {
     const GUID network = { 0x4d36e972, 0xe325, 0x11ce, { 0xbf, 0xc1, 0x08, 0x00, 0x2b, 0xe1, 0x03, 0x18 } };
     const auto devices = SetupDiGetClassDevsW(&network, nullptr, nullptr, DIGCF_PRESENT);
@@ -54,13 +56,29 @@ static void FillHomeList(HWND window, const HomeState& state)
     const auto list = GetDlgItem(window, HomeList);
     ListView_DeleteAllItems(list);
     if (state.isPe) {
+        const auto adapters = GetDlgItem(window, HomeNetworkList);
+        ListView_DeleteAllItems(adapters);
+        FillNetworkDevices(adapters, text);
+        if (ListView_GetItemCount(adapters) == 0) AddHomeRow(adapters, text.homeNoNetwork, L"");
+
         const auto targets = DiscoverTargets();
-        for (const auto& target : targets) AddHomeRow(list, WindowsLabel(target.root, target.build), text.homeOffline);
+        for (const auto& target : targets) AddHomeRow(list, WindowsLabel(target.root, target.build), text.homeFound);
         SetDlgItemTextW(window, HomeSummary, targets.empty() ? text.noTarget : L"");
     } else {
-        FillWindowsDevices(list, text);
+        FillNetworkDevices(list, text);
         SetDlgItemTextW(window, HomeSummary, ReadDeviceHardwareIds(true).empty() ? text.cliNoMissing : L"");
     }
+}
+
+static void LocalizeList(HWND list, const wchar_t* first, const wchar_t* second)
+{
+    if (!list) return;
+    LVCOLUMNW column{};
+    column.mask = LVCF_TEXT;
+    column.pszText = const_cast<wchar_t*>(first);
+    ListView_SetColumn(list, 0, &column);
+    column.pszText = const_cast<wchar_t*>(second);
+    ListView_SetColumn(list, 1, &column);
 }
 
 static void SetHomeCombo(HWND window, int id, const std::vector<const wchar_t*>& items, int selected)
@@ -77,6 +95,8 @@ static void LocalizeHome(HWND window, HomeState& state)
     if (!state.isPe) SetWindowTextW(window, text.homeTitle);
     SetDlgItemTextW(window, HomeHeading, text.homeTitle);
     SetDlgItemTextW(window, HomeIntro, state.isPe ? text.homePe : text.homeWindows);
+    SetDlgItemTextW(window, HomeNetworkHeading, text.homeNetwork);
+    SetDlgItemTextW(window, HomeDriverHeading, text.homePreparation);
     SetDlgItemTextW(window, HomeRefresh, text.homeScan);
     SetDlgItemTextW(window, HomePrimary, state.isPe ? text.setup : text.homeInstall);
     SetDlgItemTextW(window, IDCANCEL, text.close);
@@ -86,25 +106,26 @@ static void LocalizeHome(HWND window, HomeState& state)
     const auto font = WizardFont(text);
     LOGFONTW heading{};
     const bool haveHeadingFont = font && GetObjectW(font, sizeof heading, &heading) == sizeof heading;
-    heading.lfHeight = MulDiv(heading.lfHeight, 3, 2);
     heading.lfWeight = FW_BOLD;
+    const auto section = haveHeadingFont ? CreateFontIndirectW(&heading) : nullptr;
+    heading.lfHeight = MulDiv(heading.lfHeight, 3, 2);
     const auto large = haveHeadingFont ? CreateFontIndirectW(&heading) : nullptr;
     for (const auto id : { HomeTools, HomeLanguage, HomeHelp, HomeHeading, HomeIntro, HomeList,
-            HomeRefresh, HomePrimary, HomeSummary, static_cast<HomeControl>(IDCANCEL) }) {
-        const auto selected = id == HomeHeading && large ? large : font;
+            HomeNetworkHeading, HomeDriverHeading, HomeNetworkList, HomeRefresh, HomePrimary,
+            HomeSummary, static_cast<HomeControl>(IDCANCEL) }) {
+        auto selected = font;
+        if (id == HomeHeading && large) selected = large;
+        if ((id == HomeNetworkHeading || id == HomeDriverHeading) && section) selected = section;
         if (selected) SendDlgItemMessageW(window, id, WM_SETFONT, reinterpret_cast<WPARAM>(selected), TRUE);
     }
     if (state.font) DeleteObject(state.font);
     if (state.headingFont) DeleteObject(state.headingFont);
+    if (state.sectionFont) DeleteObject(state.sectionFont);
     state.font = font;
     state.headingFont = large;
-    const auto list = GetDlgItem(window, HomeList);
-    LVCOLUMNW column{};
-    column.mask = LVCF_TEXT;
-    column.pszText = const_cast<wchar_t*>(state.isPe ? text.homeOffline : text.homeDevice);
-    ListView_SetColumn(list, 0, &column);
-    column.pszText = const_cast<wchar_t*>(text.homeStatus);
-    ListView_SetColumn(list, 1, &column);
+    state.sectionFont = section;
+    LocalizeList(GetDlgItem(window, HomeList), state.isPe ? text.homeOffline : text.homeDevice, text.homeStatus);
+    LocalizeList(GetDlgItem(window, HomeNetworkList), text.homeDevice, text.homeStatus);
     FillHomeList(window, state);
 }
 
@@ -151,6 +172,29 @@ static void RepairCurrentFromHome(const HomeState& state)
     Notice(text, result < ARRAYSIZE(messages) ? messages[result] : text.failed);
 }
 
+static HWND CreateHomeList(HWND window, int id, RECT bounds, const wchar_t* first, const wchar_t* second)
+{
+    const auto list = ChoiceControl(window, WC_LISTVIEWW, L"", WS_TABSTOP | WS_BORDER |
+        LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_NOSORTHEADER, id, bounds);
+    if (!list) return nullptr;
+    ListView_SetExtendedListViewStyle(list, LVS_EX_FULLROWSELECT | LVS_EX_DOUBLEBUFFER);
+    const auto span = bounds.right - bounds.left;
+    RECT width{ 0, 0, MulDiv(span, 68, 100), 0 };
+    MapDialogRect(window, &width);
+    LVCOLUMNW column{};
+    column.mask = LVCF_WIDTH | LVCF_TEXT | LVCF_FMT;
+    column.fmt = LVCFMT_LEFT;
+    column.cx = width.right;
+    column.pszText = const_cast<wchar_t*>(first);
+    ListView_InsertColumn(list, 0, &column);
+    width.right = MulDiv(span, 28, 100);
+    MapDialogRect(window, &width);
+    column.cx = width.right;
+    column.pszText = const_cast<wchar_t*>(second);
+    ListView_InsertColumn(list, 1, &column);
+    return list;
+}
+
 static INT_PTR CALLBACK SharedHomeDialog(HWND window, UINT message, WPARAM wparam, LPARAM lparam)
 {
     if (message == WM_INITDIALOG) {
@@ -166,37 +210,40 @@ static INT_PTR CALLBACK SharedHomeDialog(HWND window, UINT message, WPARAM wpara
         SendMessageW(tools, CB_SETDROPPEDWIDTH, 330, 0);
         ChoiceControl(window, L"COMBOBOX", L"", dropdown, HomeLanguage, { 99, 8, 190, 88 });
         ChoiceControl(window, L"COMBOBOX", L"", dropdown, HomeHelp, { 195, 8, 268, 75 });
-        ChoiceControl(window, L"STATIC", L"", SS_ETCHEDHORZ, -1, { 10, 29, 362, 31 });
-        ChoiceControl(window, L"STATIC", L"", SS_NOPREFIX, HomeHeading, { 10, 38, 362, 58 });
-        ChoiceControl(window, L"STATIC", L"", SS_NOPREFIX, HomeIntro, { 10, 61, 362, 78 });
+        const int right = state.isPe ? 404 : 362;
+        ChoiceControl(window, L"STATIC", L"", SS_ETCHEDHORZ, -1, { 10, 28, right, 30 });
+        ChoiceControl(window, L"STATIC", L"", SS_NOPREFIX, HomeHeading, { 10, 37, right, 57 });
+        ChoiceControl(window, L"STATIC", L"", SS_NOPREFIX, HomeIntro, { 10, 59, right, 75 });
 
-        const auto list = ChoiceControl(window, WC_LISTVIEWW, L"", WS_TABSTOP | WS_BORDER |
-            LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_NOSORTHEADER, HomeList, { 10, 83, 362, 166 });
-        if (!list) {
+        const auto& text = peText[state.language];
+        HWND list = nullptr;
+        HWND primary = nullptr;
+        if (state.isPe) {
+            ChoiceControl(window, L"STATIC", L"", SS_NOPREFIX, HomeNetworkHeading, { 10, 78, right, 91 });
+            if (!CreateHomeList(window, HomeNetworkList, { 10, 93, right, 144 }, text.homeDevice, text.homeStatus)) {
+                EndDialog(window, 1);
+                return TRUE;
+            }
+            ChoiceControl(window, L"STATIC", L"", SS_ETCHEDHORZ, -1, { 10, 152, right, 154 });
+            ChoiceControl(window, L"STATIC", L"", SS_NOPREFIX, HomeDriverHeading, { 10, 160, right, 174 });
+            primary = ChoiceControl(window, L"BUTTON", L"", WS_TABSTOP | BS_DEFPUSHBUTTON,
+                HomePrimary, { 10, 178, 220, 200 });
+            ChoiceControl(window, L"BUTTON", L"", WS_TABSTOP, HomeRefresh, { 226, 178, 294, 200 });
+            list = CreateHomeList(window, HomeList, { 10, 206, right, 263 }, text.homeOffline, text.homeStatus);
+            ChoiceControl(window, L"STATIC", L"", SS_NOPREFIX, HomeSummary, { 10, 267, 324, 288 });
+            ChoiceControl(window, L"BUTTON", L"", WS_TABSTOP, IDCANCEL, { 334, 270, right, 291 });
+        } else {
+            list = CreateHomeList(window, HomeList, { 10, 83, right, 166 }, text.homeDevice, text.homeStatus);
+            ChoiceControl(window, L"STATIC", L"", SS_NOPREFIX, HomeSummary, { 10, 170, right, 189 });
+            ChoiceControl(window, L"BUTTON", L"", WS_TABSTOP, HomeRefresh, { 10, 195, 76, 216 });
+            primary = ChoiceControl(window, L"BUTTON", L"", WS_TABSTOP | BS_DEFPUSHBUTTON,
+                HomePrimary, { 81, 195, 287, 216 });
+            ChoiceControl(window, L"BUTTON", L"", WS_TABSTOP, IDCANCEL, { 292, 195, right, 216 });
+        }
+        if (!list || !primary) {
             EndDialog(window, 1);
             return TRUE;
         }
-        ListView_SetExtendedListViewStyle(list, LVS_EX_FULLROWSELECT | LVS_EX_DOUBLEBUFFER);
-        RECT width{ 0, 0, 238, 0 };
-        MapDialogRect(window, &width);
-        const auto& text = peText[state.language];
-        LVCOLUMNW column{};
-        column.mask = LVCF_WIDTH | LVCF_TEXT | LVCF_FMT;
-        column.fmt = LVCFMT_LEFT;
-        column.cx = width.right;
-        column.pszText = const_cast<wchar_t*>(state.isPe ? text.homeOffline : text.homeDevice);
-        ListView_InsertColumn(list, 0, &column);
-        width.right = 104;
-        MapDialogRect(window, &width);
-        column.cx = width.right;
-        column.pszText = const_cast<wchar_t*>(text.homeStatus);
-        ListView_InsertColumn(list, 1, &column);
-
-        ChoiceControl(window, L"STATIC", L"", SS_NOPREFIX, HomeSummary, { 10, 170, 362, 189 });
-        ChoiceControl(window, L"BUTTON", L"", WS_TABSTOP, HomeRefresh, { 10, 195, 76, 216 });
-        const auto primary = ChoiceControl(window, L"BUTTON", L"", WS_TABSTOP | BS_DEFPUSHBUTTON,
-            HomePrimary, { 81, 195, 287, 216 });
-        ChoiceControl(window, L"BUTTON", L"", WS_TABSTOP, IDCANCEL, { 292, 195, 362, 216 });
         LocalizeHome(window, state);
         SendMessageW(window, DM_SETDEFID, HomePrimary, 0);
         SetFocus(primary);
@@ -267,7 +314,7 @@ static int RunSharedHome(const fs::path& bundle, bool isPe)
         WORD title;
     };
     const EmptyDialog layout{
-        { WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_MINIMIZEBOX | DS_CENTER, 0, 0, 0, 0, 372, 226 },
+        { WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_MINIMIZEBOX | DS_CENTER, 0, 0, 0, 0, static_cast<short>(isPe ? 414 : 372), static_cast<short>(isPe ? 301 : 226) },
         0, 0, 0
     };
     HomeState state{ bundle, isPe, PreferredLanguage() };
@@ -275,5 +322,6 @@ static int RunSharedHome(const fs::path& bundle, bool isPe)
         SharedHomeDialog, reinterpret_cast<LPARAM>(&state));
     if (state.font) DeleteObject(state.font);
     if (state.headingFont) DeleteObject(state.headingFont);
+    if (state.sectionFont) DeleteObject(state.sectionFont);
     return result < 0 ? 1 : static_cast<int>(result);
 }
