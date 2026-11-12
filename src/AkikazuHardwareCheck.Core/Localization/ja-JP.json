@@ -272,6 +272,7 @@
   "rescue.catalogNetworkListed": "メーカーがネットワークドライバーを掲載",
   "rescue.catalogNoWifi": "出荷時の無線 LAN なし",
   "rescue.catalogWifiNotSupported": "出荷時の無線 LAN はこの OS に非対応",
+  "rescue.catalogWifiNotListed": "この OS のメーカー配布一覧に無線 LAN ドライバーの掲載なし",
   "rescue.catalogOutsideX64": "Windows x64 の検証対象外",
   "rescue.catalogDeployPack": "メーカーの一括ドライバーあり、無線 LAN は確認待ち",
   "rescue.catalogOsTested": "メーカーの OS 更新テスト済み、無線 LAN は確認待ち",

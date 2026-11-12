@@ -397,3 +397,27 @@ D-Link 本轮补入 34 个原厂网卡型号。首批检查 7 个型号的 11 �
 4. **下一轮试验静态拆封装**。华擎 Intel 23.40.0.4_240516 的原厂 ZIP 仅有安装器。试验从内部 CAB 和清单恢复 19 个 WLAN 文件，全程未运行厂商安装器，Win11 Build 26300 验得 3 个签名 INF，补足 8 条逐板候选关联。另一个 Intel 22.70.2.1G ZIP 与快照哈希不符，停止使用该包，未回填候选。 [华擎 23.40.0.4 原包](https://download.asrock.com/Drivers/Intel/WLAN/Intel_WLAN(v23.40.0.4_240516).zip)
 
 合计关闭 **50 个待核格**。主板 Win10 995→966、Win11 983→970。笔记本 Win10 仍为 669，Win11 385→377。候选关联表由 10 增至 252 条。余项集中在逐板原厂关联、精确零售 SKU、出厂硬件 ID 以及实际安装测试，待核尚未清空。主表不会用快照中的缺项、不同哈希的下载或当前系统的一次签名审计代替这些证据。
+
+### 批量扩查与新来源复核
+
+| 路线 | 实测结果 | 结案口径 |
+| --- | --- | --- |
+| 华硕精确型号下载接口 | 220 款待核，实际重新查询 192 款。确认 51 个有 OEM x64 WLAN 列表的系统格，另有 12 个响应虽列下载但缺出厂无线证据，未回填 | 51 个下载列表待核格 |
+| 华硕完整列表复查 | 16 个已有出厂 Wi-Fi 的 Win10 项，15 个返回有效的 LAN 和音频或芯片组列表，但无 WLAN 类目或文件 | 15 个标为 OEM 列表未列，保留系统兼容性未知 |
+| 华擎原厂手册 CDN | 140 个候选中取得 136 份 PDF。确认 16 款仅预留，27 款出厂无线仅 Win11 | 59 个系统格，基于包装清单与型号专属规格 |
+| 技嘉原厂下载页 | 四款型号列出可适用的 x64 WLAN 下载 | 5 个系统格，未提升到签名或实机 |
+| 惠普精确 HPIA 引用 | 47 份 Win11 22H2 x64 CAB 覆盖 57 款待核，产生 96 条型号与包的关联 | 57 个 Win11 下载列表格，保留型号与包的完整关系 |
+
+华硕脚本增加全量待核模式、厂商 x64 文件名范围核对及出厂无线门槛。空响应、只有未解析类目的响应和普通板共用驱动列表都不用于回填。对同一批已核证据再次应用产生 0 项变化。华擎直连 HTML 在本机测试的 4 个地址均未返回有效产品正文，PDF 路线继续用于明确变体。 [华硕逐项证据](network-rescue-asus-oem-listing-proof.csv) · [华擎型号与手册页码](network-rescue-asrock-variant-proof.csv) · [技嘉下载示例](https://www.gigabyte.com/ie/Motherboard/X870E-AORUS-PRO-X3D-ICE/support)
+
+采纳惠普按 SMBIOS SystemID 和 Windows 版本查 HPIA 的方法。第一轮通过 SoftPaq 适用列表找到 30 款，第二轮用 SMBIOS 定位后增补 27 款。每条均检查精确 ProductName、SystemID、活动 WLAN Solution、设备引用和 Windows 11 22H2。另 63 条 HP Win10 待核虽不在 HPIA 的支持配置内，仍缺原厂 WLAN 的独立结论，保持待核。Win11 余 21 条中，20 条也只有 HPIA 配置范围说明。 [HP 原厂矩阵](https://hpia.hpcloud.hp.com/downloads/driverpackcatalog/HP_Driverpack_Matrix_x64.html) · [精确引用与哈希](network-rescue-hp-wlan-reference.csv)
+
+下一轮试验对惠普 SoftPaq 按有效的嵌入归档头与校验值静态提取。抽验 4 个包均符合原厂哈希。`sp165709` 进一步在 Win11 Build 26300 验得 2 个签名网络 INF，关联 19 款 OEM 型号，仍需确认各机型实际安装的网卡。另按已核哈希批查 17 个主板包，11 个验得共 20 个签名 INF，新增 37 条候选关联。4 个包在本机未验得签名 INF，2 个未通过包校验；未用这些结果关闭主表。 [逐板候选证据](network-rescue-board-package-candidates.csv)
+
+这一阶段合计关闭 **187 个待核格**。主板 Win10 966→880、Win11 970→926，笔记本 Win10 仍为 669，Win11 377→320。其余仍需补精确零售 SKU、逐板 OEM 页面、适用的原厂包或实机硬件 ID。HPIA 范围限制、原厂列表缺项、哈希冲突和封装解析失败分别保留证据，避免把这些情况归为已验证驱动。
+
+追加复查 Acer 精确机型时，确认 Aspire A515-41G 的原厂目录列 Windows 10 和 802.11ac。其型号未进入 Acer Win11 升级测试目录，原厂说明未列机型的驱动未随该计划更新。保留 Win11 WLAN 待核。 [原厂产品目录](https://www.acerid.com/content/uploads/downloads/2017/12/Catalogue-Consumer-Q4-2017.pdf) · [Acer Win11 升级目录](https://www.acer.com/gb-en/support/windows/windows-11-compatibility)
+
+继续跑华擎剩余变体，另外 195 个候选手册地址中有 189 个可读。结合 AM4 的原厂产品规格页，再确认 20 款仅预留和 X870E Taichi OCF 无 Win10 出厂无线驱动，额外关闭 41 格。此轮累计关闭 **228 格**，最新待核为主板 Win10 859、Win11 906，笔记本 Win10 669、Win11 320。 [X870E Taichi OCF 手册](https://download.asrock.com/Manual/X870E%20Taichi%20OCF.pdf) · [华擎变体核验](network-rescue-asrock-variant-proof.csv)
+
+华擎后续批次实查 14 个精确快照指向的 OEM ZIP，9 个通过哈希及签名核验，共 18 个签名 INF、43 款板的 50 条候选关系。31 款关联的两个已有包各自完成 INF 字节复核。与此前批次去重后，这一轮追加 27 条，逐板候选表从本阶段开始的 252 增至 316 条。逐板原厂下载页仍未能独立读取，Win11 主表不因候选晋升而关闭。 [逐板候选证据](network-rescue-board-package-candidates.csv)

@@ -482,6 +482,7 @@ internal sealed class NetworkRescueView : UserControl
         "oem-os-upgrade-tested" => "rescue.catalogOsTested",
         "no-factory-wifi" => "rescue.catalogNoWifi",
         "oem-wlan-not-supported" => "rescue.catalogWifiNotSupported",
+        "oem-wlan-not-listed" => "rescue.catalogWifiNotListed",
         "outside-x64-record" => "rescue.catalogOutsideX64",
         _ => "rescue.catalogPending",
     }];
