@@ -559,43 +559,43 @@ TravelMate Spin 311R-31,10,,,,support-list-empty,,,,
 TravelMate Spin 311R-31,11,,,,support-list-empty,,,,
 TravelMate Spin 311RN-31,10,,,,support-list-empty,,,,
 TravelMate Spin 311RN-31,11,,,,support-list-empty,,,,
-TravelMate Spin B118-G2-R,10,,,,support-list-empty,,,,
-TravelMate Spin B118-G2-R,11,,,,support-list-empty,,,,
-TravelMate Spin B118-G2-RN,10,,,,support-list-empty,,,,
-TravelMate Spin B118-G2-RN,11,,,,support-list-empty,,,,
-TravelMate Spin B311R-31,10,,,,support-list-empty,,,,
-TravelMate Spin B311R-31,11,,,,support-list-empty,,,,
-TravelMate Spin B311R-32,10,,,,support-list-empty,,,,
-TravelMate Spin B311R-32,11,,,,support-list-empty,,,,
-TravelMate Spin B311RA-31,10,,,,support-list-empty,,,,
-TravelMate Spin B311RA-31,11,,,,support-list-empty,,,,
+TravelMate Spin B118-G2-R,10,https://www.acer.com/us-en/support/product-support/TMB118-G2-R,TMB118-G2-R,TRAVELMATE SPIN B118-G2-R,oem-wlan-listed,Wireless LAN_Intel_22.10.0.7_W10x64.zip,22.10.0.7,2021/04/15,29
+TravelMate Spin B118-G2-R,11,https://www.acer.com/us-en/support/product-support/TMB118-G2-R,TMB118-G2-R,TRAVELMATE SPIN B118-G2-R,oem-wlan-listed,Wireless LAN_Intel_22.10.0.7_W11x64.zip,22.10.0.7,2023/03/22,16
+TravelMate Spin B118-G2-RN,10,https://www.acer.com/us-en/support/product-support/TMB118-G2-RN,TMB118-G2-RN,TRAVELMATE SPIN B118-G2-RN,oem-wlan-listed,Wireless LAN_Intel_22.10.0.7_W10x64.zip,22.10.0.7,2021/04/15,29
+TravelMate Spin B118-G2-RN,11,https://www.acer.com/us-en/support/product-support/TMB118-G2-RN,TMB118-G2-RN,TRAVELMATE SPIN B118-G2-RN,oem-wlan-listed,Wireless LAN_Intel_22.10.0.7_W11x64.zip,22.10.0.7,2023/03/22,16
+TravelMate Spin B311R-31,10,https://www.acer.com/us-en/support/product-support/TMB311R-31,TMB311R-31,TRAVELMATE SPIN B311R-31,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64_(INT9560).zip,22.0.1.1,2021/02/08,36
+TravelMate Spin B311R-31,11,https://www.acer.com/us-en/support/product-support/TMB311R-31,TMB311R-31,TRAVELMATE SPIN B311R-31,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W11x64_(INT9560).zip,22.0.1.1,2022/07/14,19
+TravelMate Spin B311R-32,10,https://www.acer.com/us-en/support/product-support/TMB311R-32,TMB311R-32,TRAVELMATE SPIN B311R-32,wlan-row-ambiguous,Wifi LED Driver_Acer_1.0.0.0_W10x64.zip,1.0.0.0,2021/03/31,17
+TravelMate Spin B311R-32,11,https://www.acer.com/us-en/support/product-support/TMB311R-32,TMB311R-32,TRAVELMATE SPIN B311R-32,oem-wlan-listed,Wireless LAN_Intel_24.10.0.4_W11x64_(AX201).zip,24.10.0.4,2026/08/31,34
+TravelMate Spin B311RA-31,10,https://www.acer.com/us-en/support/product-support/TMB311RA-31,TMB311RA-31,TRAVELMATE SPIN B311RA-31,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64_(INT9560).zip,22.0.1.1,2021/02/08,36
+TravelMate Spin B311RA-31,11,https://www.acer.com/us-en/support/product-support/TMB311RA-31,TMB311RA-31,TRAVELMATE SPIN B311RA-31,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W11x64_(INT9560).zip,22.0.1.1,2022/07/14,19
 TravelMate Spin B311RA-32,10,,,,support-list-empty,,,,
 TravelMate Spin B311RA-32,11,,,,support-list-empty,,,,
-TravelMate Spin B311RN-31,10,,,,support-list-empty,,,,
-TravelMate Spin B311RN-31,11,,,,support-list-empty,,,,
-TravelMate Spin B311RN-32,10,,,,support-list-empty,,,,
-TravelMate Spin B311RN-32,11,,,,support-list-empty,,,,
-TravelMate Spin B311RNA-31,10,,,,support-list-empty,,,,
-TravelMate Spin B311RNA-31,11,,,,support-list-empty,,,,
-TravelMate Spin B311RNA-32,10,,,,support-list-empty,,,,
-TravelMate Spin B311RNA-32,11,,,,support-list-empty,,,,
-TravelMate Spin P414RN-51,10,,,,support-list-empty,,,,
-TravelMate Spin P414RN-51,11,,,,support-list-empty,,,,
-TravelMate X314-51-M,10,,,,support-list-empty,,,,
-TravelMate X314-51-M,11,,,,support-list-empty,,,,
-TravelMate X314-51-MG,10,,,,support-list-empty,,,,
-TravelMate X314-51-MG,11,,,,support-list-empty,,,,
+TravelMate Spin B311RN-31,10,https://www.acer.com/us-en/support/product-support/TMB311RN-31,TMB311RN-31,TRAVELMATE SPIN B311RN-31,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64_(INT9560).zip,22.0.1.1,2021/02/08,36
+TravelMate Spin B311RN-31,11,https://www.acer.com/us-en/support/product-support/TMB311RN-31,TMB311RN-31,TRAVELMATE SPIN B311RN-31,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W11x64_(INT9560).zip,22.0.1.1,2022/07/14,19
+TravelMate Spin B311RN-32,10,https://www.acer.com/us-en/support/product-support/TMB311RN-32,TMB311RN-32,TRAVELMATE SPIN B311RN-32,wlan-row-ambiguous,Wifi LED Driver_Acer_1.0.0.0_W10x64.zip,1.0.0.0,2021/03/31,17
+TravelMate Spin B311RN-32,11,https://www.acer.com/us-en/support/product-support/TMB311RN-32,TMB311RN-32,TRAVELMATE SPIN B311RN-32,oem-wlan-listed,Wireless LAN_Intel_24.10.0.4_W11x64_(AX201).zip,24.10.0.4,2026/08/31,34
+TravelMate Spin B311RNA-31,10,https://www.acer.com/us-en/support/product-support/TMB311RNA-31,TMB311RNA-31,TRAVELMATE SPIN B311RNA-31,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64_(INT9560).zip,22.0.1.1,2021/02/08,36
+TravelMate Spin B311RNA-31,11,https://www.acer.com/us-en/support/product-support/TMB311RNA-31,TMB311RNA-31,TRAVELMATE SPIN B311RNA-31,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W11x64_(INT9560).zip,22.0.1.1,2022/07/14,19
+TravelMate Spin B311RNA-32,10,https://www.acer.com/us-en/support/product-support/TMB311RNA-32,TMB311RNA-32,TRAVELMATE SPIN B311RNA-32,wlan-row-ambiguous,Wifi LED Driver_Acer_1.0.0.0_W10x64.zip,1.0.0.0,2021/03/31,17
+TravelMate Spin B311RNA-32,11,https://www.acer.com/us-en/support/product-support/TMB311RNA-32,TMB311RNA-32,TRAVELMATE SPIN B311RNA-32,oem-wlan-listed,Wireless LAN_Intel_24.10.0.4_W11x64_(AX201).zip,24.10.0.4,2026/08/31,34
+TravelMate Spin P414RN-51,10,https://www.acer.com/us-en/support/product-support/TMP414RN-51,TMP414RN-51,TRAVELMATE SPIN P414RN-51,oem-wlan-listed,Wireless LAN_Intel_22.160.0.3_W10x64_(AX201).zip,22.160.0.3,2023/08/28,54
+TravelMate Spin P414RN-51,11,https://www.acer.com/us-en/support/product-support/TMP414RN-51,TMP414RN-51,TRAVELMATE SPIN P414RN-51,oem-wlan-listed,Wireless LAN_Intel_22.160.0.3_W11x64_(AX201).zip,22.160.0.3,2022/10/21,45
+TravelMate X314-51-M,10,https://www.acer.com/us-en/support/product-support/TMX314-51-M,TMX314-51-M,TRAVELMATE X314-51-M,oem-wlan-listed,Wireless LAN_Intel_21.0.0.5_W10x64.zip,21.0.0.5,2019/07/22,29
+TravelMate X314-51-M,11,https://www.acer.com/us-en/support/product-support/TMX314-51-M,TMX314-51-M,TRAVELMATE X314-51-M,oem-os-not-listed,,,,0
+TravelMate X314-51-MG,10,https://www.acer.com/us-en/support/product-support/TMX314-51-MG,TMX314-51-MG,TRAVELMATE X314-51-MG,oem-wlan-listed,Wireless LAN_Intel_21.0.0.5_W10x64.zip,21.0.0.5,2019/07/22,29
+TravelMate X314-51-MG,11,https://www.acer.com/us-en/support/product-support/TMX314-51-MG,TMX314-51-MG,TRAVELMATE X314-51-MG,oem-os-not-listed,,,,0
 TravelMate X40-52-M,10,,,,support-list-empty,,,,
 TravelMate X40-52-M,11,,,,support-list-empty,,,,
 TravelMate X40-52-MG,10,,,,support-list-empty,,,,
 TravelMate X40-52-MG,11,,,,support-list-empty,,,,
-TravelMate X40-53,10,,,,support-list-empty,,,,
-TravelMate X40-53,11,,,,support-list-empty,,,,
-TravelMate X40-53G,10,,,,support-list-empty,,,,
-TravelMate X40-53G,11,,,,support-list-empty,,,,
-TravelMate X45-51,10,,,,support-list-empty,,,,
-TravelMate X45-51,11,,,,support-list-empty,,,,
-TravelMate X514-51,10,,,,support-list-empty,,,,
-TravelMate X514-51,11,,,,support-list-empty,,,,
-TravelMate X514-51T,10,,,,support-list-empty,,,,
-TravelMate X514-51T,11,,,,support-list-empty,,,,
+TravelMate X40-53,10,https://www.acer.com/us-en/support/product-support/TMX40-53,TMX40-53,TRAVELMATE X40-53,oem-wlan-listed,Wireless LAN_Intel_22.160.0.3_W10x64_(AX201).zip,22.160.0.3,2023/08/28,57
+TravelMate X40-53,11,https://www.acer.com/us-en/support/product-support/TMX40-53,TMX40-53,TRAVELMATE X40-53,oem-wlan-listed,Wireless LAN_Intel_22.160.0.3_W11x64_(AX201).zip,22.160.0.3,2022/10/21,45
+TravelMate X40-53G,10,https://www.acer.com/us-en/support/product-support/TMX40-53G,TMX40-53G,TRAVELMATE X40-53G,oem-wlan-listed,Wireless LAN_Intel_22.160.0.3_W10x64_(AX201).zip,22.160.0.3,2023/08/28,53
+TravelMate X40-53G,11,https://www.acer.com/us-en/support/product-support/TMX40-53G,TMX40-53G,TRAVELMATE X40-53G,oem-wlan-listed,Wireless LAN_Intel_22.160.0.3_W11x64_(AX201).zip,22.160.0.3,2022/10/21,45
+TravelMate X45-51,10,https://www.acer.com/us-en/support/product-support/TMX45-51,TMX45-51,TRAVELMATE X45-51,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64_(INT9560).zip,22.0.1.1,2021/03/09,31
+TravelMate X45-51,11,https://www.acer.com/us-en/support/product-support/TMX45-51,TMX45-51,TRAVELMATE X45-51,oem-os-not-listed,,,,0
+TravelMate X514-51,10,https://www.acer.com/us-en/support/product-support/TMX514-51,TMX514-51,TRAVELMATE X514-51,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64_(INT9560).zip,22.0.1.1,2021/03/09,31
+TravelMate X514-51,11,https://www.acer.com/us-en/support/product-support/TMX514-51,TMX514-51,TRAVELMATE X514-51,oem-os-not-listed,,,,0
+TravelMate X514-51T,10,https://www.acer.com/us-en/support/product-support/TMX514-51T,TMX514-51T,TRAVELMATE X514-51T,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64_(INT9560).zip,22.0.1.1,2021/03/09,31
+TravelMate X514-51T,11,https://www.acer.com/us-en/support/product-support/TMX514-51T,TMX514-51T,TRAVELMATE X514-51T,oem-os-not-listed,,,,0

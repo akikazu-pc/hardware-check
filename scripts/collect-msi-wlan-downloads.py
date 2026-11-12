@@ -26,6 +26,9 @@ SYSTEMS = ("10", "11")
 WLAN = re.compile(r"wi[- ]?fi|wlan|wireless", re.I)
 BLUETOOTH = re.compile(r"bluetooth", re.I)
 KILLER = re.compile(r"killer", re.I)
+# Killer universal packages whose ZIP was downloaded, matched the OEM SHA-256 and statically shown to
+# contain WLAN INFs for Windows 10/11 x64 (docs/network-rescue-oem-package-inf-proof.csv).
+WLAN_PACKAGE_SHA256 = {"b77be57e07ddd1f3aaa1b552329128a7cb95bd3d3c4f78777477b5c3a1ef84d5"}
 FACTORY_WLAN = {"manual-module-candidate", "oem-spec-wlan-listed", "oem-spec-module"}
 DOWNLOAD_HOSTS = {"download.msi.com"}
 FIELDS = ["model", "platform", "windows", "supportUrl", "status", "title", "version", "downloadUrl",
@@ -86,7 +89,8 @@ def classify(row, capture, candidate_hashes):
         return [dict(base, windows=system, status="title-mismatch", title=entry.get("title") or "")
                 for system in pending]
     network = [item for item in entry.get("net", []) if urlsplit(item[4]).hostname in DOWNLOAD_HOSTS]
-    wlan = [item for item in network if WLAN.search(item[1]) and not BLUETOOTH.search(item[1])]
+    wlan = [item for item in network if (WLAN.search(item[1]) and not BLUETOOTH.search(item[1]))
+            or item[5].lower() in WLAN_PACKAGE_SHA256]
     lan = [item for item in network if item not in wlan and not BLUETOOTH.search(item[1])]
     # Killer universal packages can carry Killer Wi-Fi as well as Ethernet, so they never prove an omission.
     killer = any(KILLER.search(item[1]) for item in lan)
