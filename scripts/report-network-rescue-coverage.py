@@ -77,6 +77,22 @@ def model_evidence(report, models, samples=()):
     return dict(oemDownload=ratio(len(listed), len(expected)), signedPackage=ratio(len(signed), len(expected)))
 
 
+def pending_breakdown(rows):
+    result = {}
+    for kind in ("motherboard", "laptop"):
+        models = [row for row in rows if row["type"] == kind]
+        result[kind] = {}
+        for version in (10, 11):
+            pending = [row for row in models if row[f"windows{version}X64Evidence"] == "pending"]
+            result[kind][f"win{version}"] = dict(
+                pending=ratio(len(pending), len(models)),
+                byBrand=dict(Counter(row["brand"] for row in pending).most_common()),
+                byGap=dict(Counter(row["gap"] or "unspecified" for row in pending).most_common()),
+                seriesOnly=sum(row["wlanEvidence"] in {"product-series", "oem-series-catalog"} for row in pending),
+            )
+    return result
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--state", type=Path, default=DEFAULT_STATE)
@@ -88,7 +104,8 @@ def main():
     for vendor, report in args.evidence:
         evidence_reports[vendor].append(read_json(Path(report)))
     with (ROOT / "docs/network-rescue-model-gaps.csv").open(encoding="utf-8-sig", newline="") as source:
-        boards = [row for row in csv.DictReader(source) if row["type"] == "motherboard"]
+        rows = list(csv.DictReader(source))
+    boards = [row for row in rows if row["type"] == "motherboard"]
     os_evidence = {}
     for version in (10, 11):
         counts = Counter(row[f"windows{version}X64Evidence"] for row in boards)
@@ -110,7 +127,8 @@ def main():
             evidence["byCategory"] = {category: model_evidence(report, [row for row in models if row["deviceCategory"] == category], samples)
                                       for category in sorted({row["deviceCategory"] for row in models})}
         sources[vendor] = evidence
-    print(json.dumps(dict(snapshot=snapshot_coverage(args.state), motherboardX64=os_evidence, oemSources=sources),
+    print(json.dumps(dict(snapshot=snapshot_coverage(args.state), motherboardX64=os_evidence,
+                          pendingVerification=pending_breakdown(rows), oemSources=sources),
                      indent=2, ensure_ascii=False))
 
 
