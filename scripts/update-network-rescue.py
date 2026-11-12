@@ -1,9 +1,10 @@
-"""Check OEM motherboard WLAN metadata and stage changed driver archives locally."""
+"""Check OEM motherboard and laptop WLAN metadata and stage changed driver archives locally."""
 import argparse
 from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor
 import csv
 from datetime import datetime
+from functools import partial
 import hashlib
 from html import unescape
 import json
@@ -15,11 +16,15 @@ from tempfile import TemporaryDirectory
 from urllib.parse import quote, urlencode, urlsplit, urlunsplit
 from zipfile import BadZipFile, ZipFile
 
+from network_rescue_china import HONOR_SUPPORT, load_honor, load_xiaomi
+from network_rescue_japan import load_dynabook, load_panasonic
+
 
 ROOT = Path(__file__).resolve().parent.parent
 BASE = "https://windriverindex.tucny.com/v1/latest"
 SNAPSHOT_FILES = ("boards.json", "families.json", "artefacts.json")
 PLATFORMS = {"AM4", "AM5", "LGA1700", "LGA1851"}
+SNAPSHOT_LAPTOP_VENDORS = {"dell", "hp", "lenovo"}
 OEM_PATHS = {
     "asus": ({"dlcdnets.asus.com", "dlcdnet.asus.com"}, "/pub/asus/mb/"),
     "asrock": ({"download.asrock.com"}, "/drivers/"),
@@ -44,19 +49,27 @@ def atomic_json(path, value):
 
 
 def fetch(url, target, limit, *, referer=None, etag_options=(), seconds=90):
-    result = subprocess.run(["curl", "-fsSL", *(["--referer", referer] if referer else []), *etag_options,
-                             "--proto", "=https", "--proto-redir", "=https", "--max-redirs", "5",
-                             "--max-time", str(seconds), "--speed-limit", "32768", "--speed-time", "30",
-                             "--max-filesize", str(limit), "-w", "%{http_code}",
-                             url, "-o", str(target)], check=True, capture_output=True, timeout=seconds + 5)
+    command = ["curl", "-fsSL", *(["--referer", referer] if referer else []), *etag_options,
+               "--proto", "=https", "--proto-redir", "=https", "--max-redirs", "5",
+               "--max-time", str(seconds), "--speed-limit", "32768", "--speed-time", "30",
+               "--max-filesize", str(limit), "-w", "%{http_code}", url, "-o", str(target)]
+    try:
+        result = subprocess.run(command, check=True, capture_output=True, timeout=seconds + 5)
+    except subprocess.CalledProcessError as error:
+        crashed = error.returncode & 0xFFFFFFFF == 0xC0000005
+        interrupted_metadata = seconds == 90 and error.returncode in {18, 28, 56}
+        if not (crashed or interrupted_metadata):
+            raise
+        # A single interrupted metadata request should not discard the rest of the brand scan.
+        result = subprocess.run(command, check=True, capture_output=True, timeout=seconds + 5)
     return int(result.stdout)
 
 
-def snapshot_data(state, manifest, stats):
+def snapshot_data(state, manifest, stats, names=SNAPSHOT_FILES):
     payloads = {}
     directory = state / "snapshots"
     directory.mkdir(exist_ok=True)
-    for name in SNAPSHOT_FILES:
+    for name in names:
         info = manifest["data"]["files"][name]
         digest, size = info["sha256"].lower(), info["bytes"]
         if not DIGEST.fullmatch(digest) or not 0 < size <= 64 * 1024 * 1024:
@@ -77,6 +90,14 @@ def snapshot_data(state, manifest, stats):
 def motherboard_key(board):
     name = re.sub(r"[^a-z0-9]", "", board["name"].casefold())
     return "|".join((board["vendor"], board["socket"], name, str(board.get("revision") or "").casefold()))
+
+
+def laptop_catalog(data):
+    return {f"{row['vendor']}|{row['vendor_product_id']}": {
+        "model": row["name"], "vendor": row["vendor"], "vendorModelId": row["vendor_product_id"],
+        "sourceId": row["board_id"], "support": row["support_url"], "smbios": row.get("smbios"),
+    } for row in data["boards.json"] if row.get("product_type") == "laptop"
+        and row["vendor"] in SNAPSHOT_LAPTOP_VENDORS and row.get("vendor_product_id")}
 
 
 def normalized_snapshot(data):
@@ -211,9 +232,10 @@ def stage_package(state, item, stats):
     return "verified-candidate", count
 
 
-def refresh(state, known_hashes):
+def refresh(state, known_hashes, *, laptops_only=False):
     state.mkdir(parents=True, exist_ok=True)
     state_file = state / "state.json"
+    report = state / ("last-laptop-run.json" if laptops_only else "last-run.json")
     previous = json.loads(state_file.read_bytes()) if state_file.is_file() else None
     stats = dict(manifestRequests=1, metadataFilesFetched=0, boardReportsRequested=0, driverArchivesFetched=0)
     with TemporaryDirectory(prefix="nr-index-") as scratch:
@@ -226,14 +248,35 @@ def refresh(state, known_hashes):
         if previous and datetime.fromisoformat(generation) < datetime.fromisoformat(previous["generation"]):
             raise ValueError("The source returned an older snapshot")
         changed = not previous or fingerprints != previous["fingerprints"]
-        if not changed and not previous["queue"] and not previous["boardQueue"]:
+        laptop_file = state / "laptops.json"
+        laptop_data = json.loads(laptop_file.read_bytes()) if laptop_file.is_file() else {}
+        laptop_changed = laptop_data.get("fingerprint") != fingerprints["boards.json"]
+        if not laptop_changed and (laptops_only or (not changed and not previous["queue"] and not previous["boardQueue"])):
             result = dict(status="unchanged", generation=generation, newBoards=0, newArchives=0,
-                          remaining=0, boardReportsPending=0, **stats)
-            atomic_json(state / "last-run.json", result)
+                          newLaptops=0, remaining=0, boardReportsPending=0, **stats)
+            atomic_json(report, result)
             return result
 
+        new_laptops = 0
+        if changed and not laptops_only:
+            data = snapshot_data(state, manifest, stats)
+        elif laptop_changed:
+            data = snapshot_data(state, manifest, stats, ("boards.json",))
+        if laptop_changed:
+            laptops = laptop_catalog(data)
+            previous_laptops = laptop_data.get("models", {})
+            new_models = sorted(laptops.keys() - previous_laptops.keys())
+            new_laptops = len(new_models)
+            atomic_json(laptop_file, dict(generation=generation, baseline=not laptop_data,
+                                          fingerprint=fingerprints["boards.json"],
+                                          newModelIds=new_models, models=laptops))
+        if laptops_only:
+            result = dict(status="laptop-catalog", generation=generation, newLaptops=new_laptops,
+                          remaining=0, boardReportsPending=0, **stats)
+            atomic_json(report, result)
+            return result
         if changed:
-            boards, packages = normalized_snapshot(snapshot_data(state, manifest, stats))
+            boards, packages = normalized_snapshot(data)
         else:
             boards, packages = previous["boards"], previous["packages"]
         queue = previous["queue"] if previous else {}
@@ -296,9 +339,9 @@ def refresh(state, known_hashes):
         outcomes.append(outcome)
         atomic_json(state_file, current)
     result = dict(status="baseline-created" if not previous else "processed", generation=generation,
-                  newBoards=len(new_boards), newArchives=len(new_packages), remaining=len(queue),
+                  newBoards=len(new_boards), newLaptops=new_laptops, newArchives=len(new_packages), remaining=len(queue),
                   boardReportsPending=len(board_queue), outcomes=outcomes, **stats)
-    atomic_json(state / "last-run.json", result)
+    atomic_json(report, result)
     return result
 
 
@@ -335,17 +378,19 @@ def nzxt_listings(catalog):
     return boards, listings
 
 
-def refresh_oem(state, known_hashes, vendor, load_catalog, *, referer=None):
+def refresh_oem(state, known_hashes, vendor, load_catalog, *, referer=None, baseline_only=False, backfill=False):
     state.mkdir(exist_ok=True)
     report = state / "last-run.json"
     previous = json.loads(report.read_bytes()) if report.is_file() else {}
     completed = previous.get("packages", {})
-    stats = dict(newBoards=0, newUrls=0, driverArchivesFetched=0, reusedUrls=0, remaining=0)
+    stats = dict(newUrls=0, driverArchivesFetched=0, reusedUrls=0, baselineUrls=0, remaining=0)
     with TemporaryDirectory(dir=state) as scratch:
         scratch = Path(scratch)
         boards, listings, request_count = load_catalog(scratch)
         stats["catalogRequests"] = request_count
-        stats["newBoards"] = len(boards.keys() - previous.get("boards", {}).keys())
+        stats["newLaptops" if baseline_only else "newBoards"] = len(boards.keys() - previous.get("boards", {}).keys())
+        stats["catalogModels"] = len(boards)
+        stats["listedUrls"] = len(listings)
         stats["newUrls"] = len(listings.keys() - completed.keys())
         stats["remaining"] = len(listings)
         for url, candidates in listings.items():
@@ -353,7 +398,19 @@ def refresh_oem(state, known_hashes, vendor, load_catalog, *, referer=None):
             revisions = {(row["label"], row.get("listedRevision")) for row in candidates}
             previous_revisions = {(row["label"], row.get("listedRevision"))
                                   for row in previous_item.get("listings", [])}
-            if previous_item.get("status") not in (None, "retry-pending") and revisions <= previous_revisions:
+            status = previous_item.get("status")
+            if baseline_only and not previous and not backfill:
+                completed[url] = dict(status="baseline-listed", listings=candidates)
+                stats["baselineUrls"] += 1
+                stats["remaining"] -= 1
+                continue
+            baseline_needs_package = False
+            if status == "baseline-listed":
+                prior_models = {(row["model"], row["support"]) for row in previous_item["listings"]}
+                baseline_needs_package = backfill or any((row["model"], row["support"]) not in prior_models
+                                                         for row in candidates)
+            if (status not in (None, "retry-pending") and revisions <= previous_revisions
+                    and not baseline_needs_package):
                 completed[url]["listings"] = candidates
                 stats["reusedUrls"] += 1
                 stats["remaining"] -= 1
@@ -484,6 +541,8 @@ def main():
 
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--state", type=Path, default=ROOT / "artifacts/network-rescue-update")
+    parser.add_argument("--laptops-only", action="store_true", help="Skip motherboard checks and downloads")
+    parser.add_argument("--backfill-laptops", action="store_true", help="Also download unchanged laptop baseline packages")
     args = parser.parse_args()
     with (ROOT / "docs/network-rescue-driver-index.csv").open(encoding="utf-8-sig", newline="") as source:
         known_hashes = {row["sha256"].lower() for row in csv.DictReader(source)}
@@ -494,22 +553,35 @@ def main():
         except OSError as error:
             raise SystemExit(f"Cannot lock the update folder: {error}") from error
         try:
-            result = refresh(args.state, known_hashes)
+            result = refresh(args.state, known_hashes, laptops_only=args.laptops_only)
         except (OSError, ValueError, KeyError, subprocess.SubprocessError) as error:
             result = dict(status="failed", detail=str(error), remaining=1, boardReportsPending=0)
         print(json.dumps({k: v for k, v in result.items() if k != "outcomes"}, ensure_ascii=True), flush=True)
         oem_results = {}
-        for vendor, load_catalog, referer in (
+        motherboard_sources = (
             ("nzxt", load_nzxt, None),
             ("colorful", load_colorful, COLORFUL + "/"),
             ("evga", load_evga, None),
-        ):
+        )
+        laptop_sources = (
+            ("panasonic", partial(load_panasonic, fetch=fetch), None),
+            ("dynabook", partial(load_dynabook, fetch=fetch), None),
+            ("xiaomi", partial(load_xiaomi, fetch=fetch), "https://www.mi.com/"),
+            ("honor", partial(load_honor, fetch=fetch), HONOR_SUPPORT),
+        )
+        sources = [(vendor, loader, referer, True) for vendor, loader, referer in laptop_sources]
+        if not args.laptops_only:
+            sources.extend((vendor, loader, referer, False) for vendor, loader, referer in motherboard_sources)
+        for vendor, load_catalog, referer, laptop in sources:
             try:
-                oem_results[vendor] = refresh_oem(args.state / vendor, known_hashes, vendor, load_catalog, referer=referer)
+                oem_results[vendor] = refresh_oem(args.state / vendor, known_hashes, vendor, load_catalog, referer=referer,
+                                                  baseline_only=laptop, backfill=laptop and args.backfill_laptops)
             except (OSError, ValueError, KeyError, subprocess.SubprocessError) as error:
                 oem_results[vendor] = dict(status="failed", detail=str(error), remaining=1)
             print(json.dumps({vendor: oem_results[vendor]}, ensure_ascii=True), flush=True)
-    print(f"Report: {args.state / 'last-run.json'}")
+    report = "last-laptop-run.json" if args.laptops_only else "last-run.json"
+    print(f"Report: {args.state / report}")
+    print(f"Laptop catalog: {args.state / 'laptops.json'}")
     if result["remaining"] or result["boardReportsPending"] or any(row["remaining"] for row in oem_results.values()):
         raise SystemExit(1)
 

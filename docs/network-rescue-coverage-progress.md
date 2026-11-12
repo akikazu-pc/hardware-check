@@ -299,3 +299,17 @@ python scripts/audit-network-rescue-zip.py <完整版ZIP> <本地缓存目录> <
 - 线上 NZXT 读到 10 个型号和 11 条 WLAN 记录，合并为 10 个下载地址。5 个包验得共 9 个签名网络 INF，3 个包待静态提取，另 2 个包在本机未取得有效签名证据。重复运行复用 10 个地址，下载 0 个包。七彩虹发现 492 个唯一型号，查询 230 个型号的支持记录，18 条 WLAN 记录合并为 3 个已下载的原厂包，3 个均待静态提取。
 - EVGA 官方目录首轮返回 200，重复请求返回 304，节省约 9.2 MiB 目录传输。两次均解析到 3 个主板部件号、7 条最新 WLAN 记录和 4 个唯一地址。
 - 映泰官方目录本次返回 403。铭瑄已核验官方目录及两款 B850 WLAN 条目，待接入批量更新。 [映泰主板目录](https://www.biostar.com.tw/app/en/mb/index.php) · [铭瑄支持](https://www.maxsun.com/pages/support)
+
+### 笔记本与日本、中国本土型号
+
+双击原有更新脚本会同时检查笔记本。只跑笔记本可执行 `python scripts/update-network-rescue.py --laptops-only`。首次扫描本土品牌保存型号与原厂 WLAN 下载基线。此后新地址、原厂条目版本变化或新型号引用尚未下载的地址时下载并验签，也可附加 `--backfill-laptops` 下载既有候选。原厂目录、已列 WLAN 下载、签名 INF 和实机覆盖分别记账。
+
+WinDriverIndex 中 1,296 个笔记本型号标识已生成 `artifacts/network-rescue-update/laptops.json`，包括 Dell 474、联想 441、HP 381。键采用厂商和原厂产品 ID，保留可用的 SMBIOS 标识。该快照分支提供型号目录，型号与 WLAN 驱动的对应关系仍需原厂支持资料核实。笔记本专用模式首次只下载 `boards.json`，再次运行只请求清单。主板模式继续使用同一份缓存数据。 [WinDriverIndex 快照清单](https://windriverindex.tucny.com/v1/latest/manifest.json)
+
+- **日本 Panasonic Let's note**，24 个系列、265 个型号前缀。核查最新 6 个系列的 53 个型号页，74 条 WLAN 记录合并为 8 个 Win11 x64 原厂 EXE 地址。CF-FC7C 样本已实际下载并保存哈希，待静态提取。 [Panasonic 机型支持](https://jp-pc-support.connect.panasonic.com/)
+- **日本 Dynabook**，从 Win11 25H2 兼容性目录收录 915 个完整型号和 149 个原厂通配模式。驱动入口需要确认厂商许可，本轮保存兼容目录。 [Dynabook 兼容机型](https://dynabook.com/assistpc/osup/win11_25h2/target/index_j.htm)
+- **中国小米／REDMI**，81 个型号支持条目，80 个型号列出 WLAN 下载，共 62 个唯一原厂地址。实下载 REDMI Book 14／16 2025 AMD 共用的 ZIP，Windows 验签取得 2 个签名网络 INF。 [小米驱动目录](https://www.mi.com/service/notebook/drivers) · [REDMI Book 16 2025 AMD](https://www.mi.com/service/notebook/drivers/TM2423)
+- **中国荣耀**，8 个系列的 187 个原厂配置代码，其中 133 个列出 WLAN，共 65 个唯一原厂地址。实下载 MagicBook Art 14 2025 原厂 ZIP，里面还有内嵌 ZIP，暂待静态提取。原厂记录未标明系统版本时保留空值。 [荣耀驱动目录](https://www.honor.com/cn/support/downloads/)
+- 富士通 FMV 已查到具体型号的原厂 WLAN 页面和再分发限制。华为已查到按型号查询的官方入口。两家待补批量来源核验。 [富士通驱动说明](https://azby.fmworld.net/app/customer/driversearch/pc/drvdownload?driverNumber=E1033939&mode=0) · [华为驱动目录](https://consumer.huawei.com/cn/support/driver-list/)
+
+笔记本专用模式完整复跑成功。共复用 Panasonic、小米和荣耀 135 个已记录下载条目，下载 0 个驱动包。受控用例核对了首次建立基线、相同条目复用、新型号关联既有地址触发下载、主动补采和原厂版本变化触发重查。
