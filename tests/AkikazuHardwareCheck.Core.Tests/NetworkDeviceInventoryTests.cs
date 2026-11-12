@@ -15,6 +15,22 @@ public sealed class NetworkDeviceInventoryTests
         Assert.Equal(28, device.ProblemCode);
     }
 
+    [Fact]
+    public void AddsActualPciCompatibleDeviceIdsAfterSpecificHardwareIds()
+    {
+        const string specific = @"PCI\VEN_8086&DEV_125C&SUBSYS_88671043&REV_06";
+        const string vendorDevice = @"PCI\VEN_8086&DEV_125C";
+        const string revision = vendorDevice + "&REV_06";
+        string[] compatible = [revision, vendorDevice, vendorDevice, @"PCI\VEN_8086&DEV_125B",
+            @"PCI\VEN_8086&CC_0200", @"PCI\CC_020000"];
+
+        var device = Assert.IsType<NetworkDeviceCandidate>(NetworkDeviceInventory.Classify([specific], compatible, 28));
+
+        Assert.Equal([specific, revision, vendorDevice], device.HardwareIds);
+        Assert.Equal("SUBSYS_88671043", device.SubsystemId);
+        Assert.Equal(NetworkCandidateKind.PciEthernet, device.Kind);
+    }
+
     [Theory]
     [InlineData(@"PCI\CC_0200", 28, true)]
     [InlineData(@"PCI\CC_020000", 28, true)]

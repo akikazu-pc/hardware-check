@@ -48,7 +48,10 @@ public static class NetworkDeviceInventory
         {
             var subsystemId = pciIds.SelectMany(id => id.Split('&'))
                 .FirstOrDefault(segment => segment.StartsWith("SUBSYS_", StringComparison.OrdinalIgnoreCase));
-            return new NetworkDeviceCandidate(pciIds, subsystemId, problemCode,
+            // Windows may put the vendor/device-only ID used by a signed INF in CompatibleID.
+            var matchIds = pciIds.Concat(compatibleIds.Where(id => IsPciCompatibleDeviceId(id, pciIds)))
+                .Distinct(StringComparer.OrdinalIgnoreCase).ToArray();
+            return new NetworkDeviceCandidate(matchIds, subsystemId, problemCode,
                 ethernetProblem ? NetworkCandidateKind.PciEthernet : NetworkCandidateKind.PciController);
         }
 
@@ -75,6 +78,17 @@ public static class NetworkDeviceInventory
     }
 
     public static string Export(NetworkDeviceDiagnostic report) => JsonSerializer.Serialize(report, ExportOptions);
+
+    private static bool IsPciCompatibleDeviceId(string id, string[] hardwareIds)
+    {
+        const int pciChipsetLength = 21; // PCI\VEN_####&DEV_####
+        var chipset = OfflineInfMatcher.ChipsetId(id);
+        return id.StartsWith(@"PCI\VEN_", StringComparison.OrdinalIgnoreCase) && chipset.Length == pciChipsetLength &&
+            (id.Length == chipset.Length ||
+             (id.Length == chipset.Length + 7 && id.AsSpan(chipset.Length).StartsWith("&REV_", StringComparison.OrdinalIgnoreCase))) &&
+            hardwareIds.Any(hardwareId => string.Equals(OfflineInfMatcher.ChipsetId(hardwareId), chipset,
+                StringComparison.OrdinalIgnoreCase));
+    }
 
     private static bool IsUsbProductId(string id) =>
         id.StartsWith(@"USB\VID_", StringComparison.OrdinalIgnoreCase) &&

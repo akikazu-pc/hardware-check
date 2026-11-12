@@ -16,6 +16,7 @@
 #include <fstream>
 #include <iostream>
 #include <string>
+#include <string_view>
 #include <vector>
 
 namespace fs = std::filesystem;
@@ -137,8 +138,29 @@ static std::vector<std::wstring> ReadDeviceHardwareIds(bool missingOnly = false)
         }
         const auto values = ReadDeviceIdProperty(devices, device, SPDRP_HARDWAREID);
         if (values.empty()) continue;
+        std::vector<std::wstring_view> pciChipsets;
+        constexpr size_t pciChipsetLength = 21; // PCI\VEN_####&DEV_####
         for (const wchar_t* id = values.data(); *id; id += wcslen(id) + 1) {
-            if (_wcsnicmp(id, L"PCI\\VEN_", 8) == 0 || _wcsnicmp(id, L"USB\\VID_", 8) == 0) {
+            const std::wstring_view value(id);
+            if (_wcsnicmp(id, L"PCI\\VEN_", 8) == 0) {
+                ids.emplace_back(value);
+                if (value.size() >= pciChipsetLength && _wcsnicmp(id + 12, L"&DEV_", 5) == 0) {
+                    pciChipsets.push_back(value.substr(0, pciChipsetLength));
+                }
+            } else if (_wcsnicmp(id, L"USB\\VID_", 8) == 0) {
+                ids.emplace_back(value);
+            }
+        }
+        if (pciChipsets.empty()) continue;
+        const auto compatible = ReadDeviceIdProperty(devices, device, SPDRP_COMPATIBLEIDS);
+        if (compatible.empty()) continue;
+        for (const wchar_t* id = compatible.data(); *id; id += wcslen(id) + 1) {
+            const auto length = wcslen(id);
+            const bool vendorDeviceId = length == pciChipsetLength ||
+                (length == pciChipsetLength + 7 && _wcsnicmp(id + pciChipsetLength, L"&REV_", 5) == 0);
+            if (vendorDeviceId && std::any_of(pciChipsets.begin(), pciChipsets.end(), [&](std::wstring_view chipset) {
+                return _wcsnicmp(chipset.data(), id, pciChipsetLength) == 0;
+            })) {
                 ids.emplace_back(id);
             }
         }
