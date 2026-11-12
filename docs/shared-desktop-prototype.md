@@ -246,3 +246,9 @@ pwsh -NoProfile -File scripts/publish-network-rescue-bundles.ps1 -IncludeCatalog
 可使用 `-VendorSourceDirectory <缓存目录>` 从本地构建。目录按清单的包 ID 分组，每组包含原始厂商 ZIP。离线目录版保留原始安装包在 ZIP 的 `vendor-installers`，另将 INF 及依赖预解包到 `driver-packs`。安装时只复制后者到断网急救模块，原始安装包可从 U 盘另行查看。脚本只解包，不运行厂商 EXE。厂商归档按 [包清单](../packaging/shared-desktop/wifi-preview-packages.json)逐一校验 SHA-256，能取得的版权声明随驱动保留。
 
 此版本用于本地测试和离线救援准备。各包的再分发条款仍须逐包确认，四平台逐板覆盖仍以证据目录验收。LGA1700 华擎样例的出厂模块仍待核实。LGA1851 的两个 Wi-Fi 7 包由厂商标注为 Windows 11 x64。
+
+### USB 无线网卡候选
+
+扫描继续收录 PCI 无线候选，同时收录 USB 网络设备和缺驱动且设备类未识别的 USB VID/PID。后者在界面和诊断 JSON（schema 2）标记为未识别的 USB 设备，需要由网络类 INF 的明确硬件 ID 给出候选。已识别的 HID 等 USB 类不会列入。安装沿用签名、单设备和缺驱动检查。
+
+离线目录增加 TP-Link Archer T3U Plus V1/V1.6 的官方 Windows 10/11 x64 包。使用包内 `USB\VID_2357&PID_0138` 样例，在当前 Windows 上通过程序的候选匹配及 INF 签名检查。尚无缺驱动 USB 实机安装结果。

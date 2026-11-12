@@ -46,7 +46,7 @@ public static class OfflineDriverInstaller
                 return OfflineInstallResult.PackageRejected;
             }
 
-            var candidates = PciNetworkInventory.Read().Devices;
+            var candidates = NetworkDeviceInventory.Read().Devices;
             var eligible = SelectMissingMatch(OfflineInfMatcher.Match(path, candidates));
             var present = ReadDevices(hardwareId);
             if (eligible is null || !string.Equals(eligible.HardwareId, hardwareId, StringComparison.OrdinalIgnoreCase) ||

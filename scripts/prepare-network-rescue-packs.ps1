@@ -31,16 +31,19 @@ try {
         $inputRoot = Join-Path $staging.FullName $package.id
         $sfxRoot = Join-Path $inputRoot 'sfx'
         $payload = Join-Path $inputRoot 'payload'
-        Expand-Archive -LiteralPath $archive -DestinationPath $sfxRoot
-        New-Item -ItemType Directory -Path $payload | Out-Null
-        $executables = @(Get-ChildItem -LiteralPath $sfxRoot -Filter '*.exe' -File)
-        if ($executables.Count -ne 1) {
-            throw "Expected exactly one self-extracting archive in $fileName."
-        }
-        $sfx = $executables[0].FullName
-        & $tar -xf $sfx -C $payload
-        if ($LASTEXITCODE -ne 0) {
-            throw "Could not unpack $fileName."
+        if ($package.archiveLayout -eq 'direct') {
+            Expand-Archive -LiteralPath $archive -DestinationPath $payload
+        } else {
+            Expand-Archive -LiteralPath $archive -DestinationPath $sfxRoot
+            New-Item -ItemType Directory -Path $payload | Out-Null
+            $executables = @(Get-ChildItem -LiteralPath $sfxRoot -Filter '*.exe' -File)
+            if ($executables.Count -ne 1) {
+                throw "Expected exactly one self-extracting archive in $fileName."
+            }
+            & $tar -xf $executables[0].FullName -C $payload
+            if ($LASTEXITCODE -ne 0) {
+                throw "Could not unpack $fileName."
+            }
         }
 
         $driver = Join-Path $payload $package.driverDirectory

@@ -57,6 +57,15 @@
       "archiveSha256": "1FB90817CA682481197B65D746B5E8328283DBE4DF28A5CAECAA764E918FC589",
       "driverDirectory": "RTWLANE_Driver/Win11",
       "scope": "LGA1851 alternate Realtek Wi-Fi; vendor lists Windows 11 only"
+    },
+    {
+      "id": "archer-t3u-plus",
+      "version": "1030.52.0127.2026",
+      "source": "https://static.tp-link.com/upload/driver/2026/202610/20261026/Archer_T3U_Plus_V1_V1.6_1030.52.0127.2026_forwin10x64win11.zip",
+      "archiveSha256": "8951271F3E1217E8FF2D5BBD6BFAB358D2DFA5F330BDFB682928F305F1960E4F",
+      "driverDirectory": "Archer_T3U_Plus_V1_Setup/plugins/Driver Files/Driver",
+      "archiveLayout": "direct",
+      "scope": "TP-Link Archer T3U Plus V1/V1.6 USB; vendor lists Windows 10/11 x64"
     }
   ]
 }

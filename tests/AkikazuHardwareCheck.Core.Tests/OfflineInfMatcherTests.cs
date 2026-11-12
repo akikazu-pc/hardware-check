@@ -23,6 +23,7 @@ public sealed class OfflineInfMatcherTests
             [Models.NTamd64]
             %Vendor%=Install,PCI\VEN_8086&DEV_2725,PCI\VEN_8086&DEV_1234
             %Vendor%=Install,PCI\VEN_8086&DEV_2725&SUBSYS_00248086
+            %Vendor%=Install,USB\VID_2357&PID_0138
 
             [Models.NTamd64.10.0...99999]
             %Vendor%=Install,PCI\VEN_8086&DEV_5678
@@ -33,7 +34,7 @@ public sealed class OfflineInfMatcherTests
 
         try
         {
-            PciNetworkDevice[] devices =
+            NetworkDeviceCandidate[] devices =
             [
                 new([@"PCI\VEN_8086&DEV_2725&SUBSYS_00248086", @"PCI\VEN_8086&DEV_2725"], "SUBSYS_00248086", 28),
                 new([@"PCI\VEN_8086&DEV_1234"], null, 28),
@@ -53,6 +54,9 @@ public sealed class OfflineInfMatcherTests
             var match = Assert.Single(OfflineInfMatcher.Match(path, devices));
             Assert.Equal(devices[0].HardwareIds[0], match.HardwareId);
             Assert.Equal("Models.NTamd64", match.ModelsSection, ignoreCase: true);
+            var usb = Assert.IsType<NetworkDeviceCandidate>(
+                NetworkDeviceInventory.Classify([@"USB\VID_2357&PID_0138"], [], 28));
+            Assert.Equal(usb, Assert.Single(OfflineInfMatcher.Match(path, [usb])).Device);
             Assert.Equal(match, OfflineDriverInstaller.SelectMissingMatch([match]));
             Assert.Null(OfflineDriverInstaller.SelectMissingMatch([match, match]));
             Assert.Null(OfflineDriverInstaller.SelectMissingMatch(

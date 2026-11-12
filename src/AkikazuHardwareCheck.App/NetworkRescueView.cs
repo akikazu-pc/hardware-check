@@ -28,7 +28,7 @@ internal sealed class NetworkRescueView : UserControl
     private readonly ListView _pciDevices = ListViewTable.Create();
     private readonly TabPage _pciPage = new();
     private readonly TabPage _modulesPage = new();
-    private PciNetworkDiagnostic? _diagnostic;
+    private NetworkDeviceDiagnostic? _diagnostic;
     private string? _scanStatusKey;
     private Translator _t;
 
@@ -54,6 +54,7 @@ internal sealed class NetworkRescueView : UserControl
         _pciDevices.Columns.Add("", 550);
         _pciDevices.Columns.Add("", 150);
         _pciDevices.Columns.Add("SUBSYS", 130);
+        _pciDevices.Columns.Add("", 170);
         ListViewTable.EnableSort(_pciDevices);
         ListViewTable.EnableColumnMenu(_pciDevices, _t);
         ListViewTable.EnableCopy(_pciDevices, _t);
@@ -94,6 +95,7 @@ internal sealed class NetworkRescueView : UserControl
         _searchFolder.Text = t["rescue.searchFolder"];
         _pciDevices.Columns[0].Text = t["rescue.hardwareIds"];
         _pciDevices.Columns[1].Text = t["rescue.problemCode"];
+        _pciDevices.Columns[3].Text = t["rescue.candidateType"];
         ShowDiagnostic();
         _adapters.Columns[0].Text = t["rescue.adapter"];
         _adapters.Columns[1].Text = t["rescue.kind"];
@@ -163,7 +165,7 @@ internal sealed class NetworkRescueView : UserControl
         ShowDiagnostic();
         try
         {
-            _diagnostic = await Task.Run(PciNetworkInventory.Read);
+            _diagnostic = await Task.Run(NetworkDeviceInventory.Read);
             _scanStatusKey = _diagnostic.Devices.Count == 0 ? "rescue.noPci" : null;
         }
         catch (Exception exception) when (exception is System.Management.ManagementException
@@ -191,6 +193,12 @@ internal sealed class NetworkRescueView : UserControl
             var item = new ListViewItem(string.Join(" | ", device.HardwareIds));
             item.SubItems.Add(device.ProblemCode == 28 ? _t["rescue.missingDriver"] : device.ProblemCode?.ToString() ?? "");
             item.SubItems.Add(device.SubsystemId ?? "");
+            item.SubItems.Add(_t[device.Kind switch
+            {
+                NetworkCandidateKind.UsbNetwork => "rescue.usbNetwork",
+                NetworkCandidateKind.UsbUnidentified => "rescue.usbUnknown",
+                _ => "rescue.pciController",
+            }]);
             _pciDevices.Items.Add(item);
         }
     }
@@ -210,7 +218,7 @@ internal sealed class NetworkRescueView : UserControl
 
         try
         {
-            File.WriteAllText(dialog.FileName, PciNetworkInventory.Export(diagnostic));
+            File.WriteAllText(dialog.FileName, NetworkDeviceInventory.Export(diagnostic));
         }
         catch (Exception exception) when (exception is IOException or UnauthorizedAccessException)
         {
@@ -234,7 +242,7 @@ internal sealed class NetworkRescueView : UserControl
         await ReviewInfAsync(dialog.FileName, diagnostic.Devices);
     }
 
-    private async Task ReviewInfAsync(string path, IReadOnlyList<PciNetworkDevice> devices)
+    private async Task ReviewInfAsync(string path, IReadOnlyList<NetworkDeviceCandidate> devices)
     {
         string message;
         try

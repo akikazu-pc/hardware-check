@@ -4,14 +4,14 @@ using System.Text;
 
 namespace AkikazuHardwareCheck.Core.SharedDesktop;
 
-public sealed record OfflineInfMatch(PciNetworkDevice Device, string HardwareId, string ModelsSection);
+public sealed record OfflineInfMatch(NetworkDeviceCandidate Device, string HardwareId, string ModelsSection);
 
 public static class OfflineInfMatcher
 {
     private const int INF_STYLE_WIN4 = 2;
     private static readonly Guid NetworkClass = new("4d36e972-e325-11ce-bfc1-08002be10318");
 
-    public static IReadOnlyList<OfflineInfMatch> Match(string path, IReadOnlyList<PciNetworkDevice> devices)
+    public static IReadOnlyList<OfflineInfMatch> Match(string path, IReadOnlyList<NetworkDeviceCandidate> devices)
     {
         var inf = SetupOpenInfFile(path, null, INF_STYLE_WIN4, out _);
         if (inf == new IntPtr(-1))

@@ -7,7 +7,7 @@ public sealed record OfflinePackageSearchResult(IReadOnlyList<OfflinePackageCand
 
 public static class OfflinePackageSearch
 {
-    public static OfflinePackageSearchResult Find(string root, IReadOnlyList<PciNetworkDevice> devices)
+    public static OfflinePackageSearchResult Find(string root, IReadOnlyList<NetworkDeviceCandidate> devices)
     {
         var options = new EnumerationOptions
         {
