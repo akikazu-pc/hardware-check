@@ -236,3 +236,13 @@ pwsh -NoProfile -File scripts/publish-network-rescue-bundles.ps1 -RealtekVendorZ
 ```
 
 输出位于 `artifacts/network-rescue`。不传入厂商 ZIP 时仅生成精简版。离线预览版随附已准备好的 Realtek 包。两个 ZIP 都包含自包含 x64 主程序、安装入口和独立卸载注册所需文件。目标电脑解压后运行 `Install.cmd`。离线包安装到断网急救模块目录，驱动目录选择器默认打开该位置。精简版再次安装时保留已有驱动目录。安装入口使用按用户安装脚本，MSI 签名、正式完整版和安装实机验收仍在发布阶段处理。
+
+### 汇总现有驱动目录
+
+```powershell
+pwsh -NoProfile -File scripts/publish-network-rescue-bundles.ps1 -IncludeCatalog
+```
+
+可使用 `-VendorSourceDirectory <缓存目录>` 从本地构建。目录按清单的包 ID 分组，每组包含原始厂商 ZIP。离线目录版保留原始安装包在 ZIP 的 `vendor-installers`，另将 INF 及依赖预解包到 `driver-packs`。安装时只复制后者到断网急救模块，原始安装包可从 U 盘另行查看。脚本只解包，不运行厂商 EXE。厂商归档按 [包清单](../packaging/shared-desktop/wifi-preview-packages.json)逐一校验 SHA-256，能取得的版权声明随驱动保留。
+
+此版本用于本地测试和离线救援准备。各包的再分发条款仍须逐包确认，四平台逐板覆盖仍以证据目录验收。LGA1700 华擎样例的出厂模块仍待核实。LGA1851 的两个 Wi-Fi 7 包由厂商标注为 Windows 11 x64。

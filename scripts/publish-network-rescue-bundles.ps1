@@ -1,5 +1,5 @@
 [CmdletBinding()]
-param([string]$RealtekVendorZip)
+param([string]$RealtekVendorZip, [switch]$IncludeCatalog, [string]$VendorSourceDirectory)
 
 $ErrorActionPreference = 'Stop'
 $root = Split-Path -Parent $PSScriptRoot
@@ -33,7 +33,8 @@ if errorlevel 1 pause
 "@ | Set-Content -LiteralPath (Join-Path $staging.FullName 'Install.cmd') -Encoding ascii
 
     $flavors = @('slim')
-    if ($RealtekVendorZip) {
+    if ($IncludeCatalog) { $flavors += 'offline-catalog' }
+    if ($RealtekVendorZip -and -not $IncludeCatalog) {
         $flavors += 'offline-preview'
     }
 
@@ -43,6 +44,10 @@ if errorlevel 1 pause
             New-Item -ItemType Directory -Path $packRoot | Out-Null
             & (Join-Path $PSScriptRoot 'prototype/prepare-realtek-wifi-pack.ps1') -VendorZip $RealtekVendorZip `
                 -OutputDirectory (Join-Path $packRoot 'realtek-8852-wifi-6001.16.172.0')
+        }
+
+        if ($flavor -eq 'offline-catalog') {
+            & (Join-Path $PSScriptRoot 'prepare-network-rescue-packs.ps1') -OutputDirectory $staging.FullName -VendorSourceDirectory $VendorSourceDirectory
         }
 
         $name = "NetworkRescue-$version-$flavor-win-x64.zip"
