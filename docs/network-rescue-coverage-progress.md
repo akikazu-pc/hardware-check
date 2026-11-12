@@ -163,3 +163,19 @@ B550 UD WIFI6E rev. 1.2 的支持页列出适用两个系统的 MediaTek Wi-Fi 6
 待核计数降至 Win10 **1,215** 条、Win11 **1,213** 条。两套系统各有 **1,106** 条共用的主板记录仍需先核对出厂无线状态。型号及修订应按原厂目录批量取得支持页，再按下载地址和 SHA-256 去重，复用已解析的 INF 和签名证据。网页修订冲突、模块变体和出厂实机 ID 需要逐条核对。
 
 完整版打包现从原厂索引取得 B550 MT7902 和 Z790 RTL8851BE 的三份原包，校验 SHA-256 后静态解包。MT7902 放入 Win10 和 Win11 目录，RTL8851BE 的两份包各取其对应系统的驱动目录。普通 Windows 与 WinPE 共用按目标系统选择的补充目录。
+
+
+### 华硕规格批量重跑
+
+先按品牌取得原厂型号清单，再批量查型号专属规格，最后处理缺页、同型号不同修订及冲突证据。每次合并保留已有原厂包和实机证据。核对系统和驱动时，按原厂下载链接和 SHA-256 复用包级结论，再关联型号及 PCB 修订。现有逐修订映射的 30 个系统与包关联只引用 8 个不同包。
+
+本批处理华硕目录 407 条。采集器核对返回路径与页面内型号，要求有 CPU、芯片组和两类接口等规格字段。384 条取得可分类证据，包括 7 条列出具体模块、160 条列出无线规格、66 条明确只提供插槽或模块另售、151 条规格未列 WLAN。其余 23 条规格不完整或含糊。抽查了 H610M-AYW D4、PRIME B650-PLUS 和 TUF GAMING B550M-E WIFI。 [规格审计表](asus-wlan-spec-audit.csv) · [H610M-AYW D4](https://www.asus.com/motherboards-components/motherboards/others/h610m-ayw-d4/techspec/) · [PRIME B650-PLUS 原厂手册](https://dlcdnets.asus.com/pub/ASUS/mb/Socket%20AM5/PRIME_B650-PLUS/E20333_PRIME_B650-PLUS_UM_WEB.pdf?model=PRIME+B650-PLUS) · [TUF GAMING B550M-E WIFI](https://www.asus.com/uk/motherboards-components/motherboards/all-series/tuf-gaming-b550m-e-wifi/techspec/)
+
+合并更新 285 条原来仅有目录证据的主板记录。64 条确认未随板提供 WLAN 模块，从两个系统的待核数中移出。70 条补上出厂无线规格或模块证据，151 条规格未列无线并继续待核。型号总数保持 1,237 条，Win10／Win11 待核分别为 **1,151／1,149** 条。本批没有新增驱动包。
+
+在仓库根目录运行以下命令。默认复用已成功分类的同型号规格，重查未验证的记录；全量刷新时加 `--refresh`。首次执行 407 条，第二次只请求 26 条，并从中补回 3 条。微星抽样请求返回 403，华擎抽样返回验证页，两个品牌需要单独验证可读取的原厂入口。
+
+```powershell
+python scripts/collect-asus-wlan-specs.py docs/asus-motherboard-discovery.csv docs/asus-wlan-spec-audit.csv
+pwsh -File scripts/merge-network-rescue-model-gaps.ps1
+```

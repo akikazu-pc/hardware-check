@@ -86,6 +86,47 @@ foreach ($supplement in $supplements) {
     }
 }
 
+$specAudit = Join-Path $CatalogDirectory 'asus-wlan-spec-audit.csv'
+if (Test-Path -LiteralPath $specAudit) {
+    $wlanGaps = @{
+        'oem-spec-slot-only' = 'none-factory-wlan'
+        'oem-spec-module' = 'factory-variant-to-exact-id-and-install'
+        'oem-spec-wlan-listed' = 'chip-exact-id-driver-install'
+        'oem-spec-wlan-not-listed' = 'factory-wifi-not-listed-confirmation'
+    }
+    $specPriority = @{
+        'catalog-model' = 0
+        'oem-spec-wlan-not-listed' = 1
+        'oem-spec-wlan-listed' = 2
+        'oem-spec-module' = 3
+        'oem-spec-slot-only' = 3
+    }
+    foreach ($entry in Import-Csv -LiteralPath $specAudit) {
+        if ($entry.manufacturer -ne 'ASUS' -or -not $wlanGaps.ContainsKey($entry.specEvidence) -or
+            $entry.specUrl -notmatch '^https://(?:www\.asus\.com|rog\.asus\.com)/') {
+            continue
+        }
+
+        $row = $keys["motherboard|ASUS|$($entry.model)"]
+        if (!$row -or $row.platform -ne $entry.platform -or !$specPriority.ContainsKey($row.wlanEvidence) -or
+            $specPriority[$entry.specEvidence] -le $specPriority[$row.wlanEvidence] -or
+            ($entry.specEvidence -eq 'oem-spec-slot-only' -and $row.wlanEvidence -eq 'oem-spec-wlan-listed') -or
+            $row.windows10X64Evidence -ne 'pending' -or $row.windows11X64Evidence -ne 'pending') {
+            continue
+        }
+
+        $row.wlanEvidence = $entry.specEvidence
+        $row.module = $entry.modules
+        $row.gap = $wlanGaps[$entry.specEvidence]
+        $row.source = $entry.specUrl
+        if ($entry.specEvidence -eq 'oem-spec-slot-only') {
+            $row.windows10X64Evidence = 'no-factory-wifi'
+            $row.windows11X64Evidence = 'no-factory-wifi'
+        }
+        $changed = $true
+    }
+}
+
 $all = $existing + @($added | Sort-Object type,brand,platform,model)
 $otherTags = 'BrandedDesktop', 'MiniPc', 'WindowsTablet', 'Handheld', 'AllInOne', 'Htpc',
     'SingleBoardComputer', 'WindowsPhone', 'Mac', 'ModifiedChromebook'
