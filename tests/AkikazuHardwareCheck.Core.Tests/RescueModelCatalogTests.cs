@@ -5,6 +5,16 @@ namespace AkikazuHardwareCheck.Core.Tests;
 public sealed class RescueModelCatalogTests
 {
     [Theory]
+    [InlineData("NH.U1BAA.001", "pending", "AX1675i")]
+    [InlineData("NX.KYXAA.002", "outside-x64-record", "802.11be")]
+    public void FindsAcerRetailPartNumbersWithTheirSeparatePlatformEvidence(string part, string evidence, string module)
+    {
+        var row = Assert.Single(RescueModelCatalog.Search(part, RescueDeviceCategory.Laptop));
+        Assert.Equal(evidence, row.Windows11Evidence);
+        Assert.Contains(module, row.Module);
+    }
+
+    [Theory]
     [InlineData("ノートPC 富士通 ＦＭＶＡ４０ＦＷＪ２", "LIFEBOOK AH40/F1")]
     [InlineData("平板微软 Surface Ｇｏ ４", "Surface Go 4")]
     [InlineData("華擎Ａ６２０Ｍ－ＨＤＶ／Ｍ．２＋", "A620M-HDV/M.2+")]

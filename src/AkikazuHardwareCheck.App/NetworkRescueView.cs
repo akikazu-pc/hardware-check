@@ -466,7 +466,7 @@ internal sealed class NetworkRescueView : UserControl
             $"{entry.Brand}  {entry.Model}",
             entry.IsSeries ? _t["rescue.catalogSeries"] : "",
             entry.Platform,
-            entry.Type == "laptop-os-record" ? entry.Windows : "",
+            entry.Type is "laptop" or "laptop-os-record" ? entry.Windows : "",
             $"{_t[entry.DeviceTag == RescueDeviceTag.NetworkAdapter ? "rescue.adapter" : "rescue.wifiModel"]}  {(entry.Module.Length == 0 || entry.Module == "pending" ? _t["rescue.catalogPending"] : entry.Module)}",
             $"Windows 10 x64  {CatalogEvidence(entry.Windows10Evidence)}",
             $"Windows 11 x64  {CatalogEvidence(entry.Windows11Evidence)}",
@@ -481,6 +481,7 @@ internal sealed class NetworkRescueView : UserControl
         "oem-driver-pack-listed" => "rescue.catalogDeployPack",
         "oem-os-upgrade-tested" => "rescue.catalogOsTested",
         "no-factory-wifi" => "rescue.catalogNoWifi",
+        "oem-wlan-not-supported" => "rescue.catalogWifiNotSupported",
         "outside-x64-record" => "rescue.catalogOutsideX64",
         _ => "rescue.catalogPending",
     }];
