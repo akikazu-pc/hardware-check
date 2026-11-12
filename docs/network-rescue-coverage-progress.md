@@ -2,6 +2,8 @@
 
 [逐型号 Wi-Fi 缺口清单](network-rescue-model-gaps.csv)记录当前已发现的 852 条主板型号或修订、105 条笔记本系列或型号，以及 167 条戴尔系统与 Windows 组合。三类的统计单位不同，同一台笔记本可出现在多个系统组合。
 
+清单分别记录 `windows10X64Evidence` 和 `windows11X64Evidence`。其中 `oem-package-indexed` 表示已有索引中的原厂包，`oem-wlan-listed` 表示原厂资料列出无线驱动，`pending` 表示该系统仍待核对。仅预留接口和 ARM64 组合另有标记。这些证据均需与实际出厂配置和断网安装结果分别核验。原厂下载索引目前有 7 个包覆盖 Windows 10 x64，16 个包覆盖 Windows 11 x64，部分包另有最低构建号要求。[原厂下载索引](network-rescue-driver-index.csv)
+
 | 主板范围 | 已发现的型号或修订 |
 | --- | ---: |
 | AM4 | 135 |

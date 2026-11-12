@@ -60,4 +60,23 @@ public sealed class OnlineDriverCatalogTests
         Assert.Contains(OnlineDriverCatalog.Find(diagnostic, includeInstalled: true),
             package => package.Id == "asus-rog-b860g-mt7925");
     }
+
+    [Theory]
+    [InlineData(19045, false)]
+    [InlineData(26100, true)]
+    public void KeepsDualSystemPackagesAndFiltersWindows11OnlyOptions(int build, bool windows11)
+    {
+        var diagnostic = new NetworkDeviceDiagnostic(2, build, "X64",
+        [
+            new([@"PCI\VEN_10EC&DEV_B852&SUBSYS_00AB1E26"], null, 28),
+            new([@"PCI\VEN_14C3&DEV_7925&SUBSYS_60001A3B"], null, 28),
+            new([@"PCI\VEN_14C3&DEV_0616&SUBSYS_FFFFFFFF"], null, 28),
+        ]);
+
+        var exact = OnlineDriverCatalog.Find(diagnostic);
+        Assert.Contains(exact, package => package.Id == "asus-prime-b650ma-ax-rtl8852be");
+        Assert.Equal(windows11, exact.Any(package => package.Id == "asus-rog-b860g-mt7925"));
+        Assert.Equal(windows11, OnlineDriverCatalog.FindPossible(diagnostic)
+            .Any(package => package.Id == "asus-tuf-mt7922"));
+    }
 }
