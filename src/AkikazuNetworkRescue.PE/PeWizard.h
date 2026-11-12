@@ -5,6 +5,8 @@
 
 #include "PeStrings.generated.h"
 
+static HWND wizardOwner = nullptr;
+
 struct PeChoice {
     const PeText& text;
     const wchar_t* prompt;
@@ -13,7 +15,6 @@ struct PeChoice {
     HFONT font;
     const wchar_t* button;
     bool safeDefault;
-    int language;
 };
 
 static HWND ChoiceControl(HWND dialog, const wchar_t* type, const wchar_t* title, DWORD style, int id, RECT bounds)
@@ -27,9 +28,6 @@ static HWND ChoiceControl(HWND dialog, const wchar_t* type, const wchar_t* title
 static INT_PTR CALLBACK PeChoiceDialog(HWND dialog, UINT message, WPARAM wparam, LPARAM lparam)
 {
     constexpr int listId = 100;
-    constexpr int languageId = 101;
-    constexpr int toolsId = 102;
-    constexpr int setupId = 103;
     if (message == WM_INITDIALOG) {
         const auto& choice = *reinterpret_cast<const PeChoice*>(lparam);
         SetWindowLongPtrW(dialog, GWLP_USERDATA, choice.safeDefault ? 1 : 0);
@@ -39,33 +37,6 @@ static INT_PTR CALLBACK PeChoiceDialog(HWND dialog, UINT message, WPARAM wparam,
         if (icon) {
             SendMessageW(dialog, WM_SETICON, ICON_SMALL, reinterpret_cast<LPARAM>(icon));
             SendMessageW(dialog, WM_SETICON, ICON_BIG, reinterpret_cast<LPARAM>(icon));
-        }
-        if (choice.language >= 0) {
-            const auto tools = ChoiceControl(dialog, L"COMBOBOX", L"", WS_TABSTOP | WS_VSCROLL |
-                CBS_DROPDOWNLIST | CBS_HASSTRINGS, toolsId, { 8, 8, 224, 68 });
-            for (const auto* option : { choice.text.tools, choice.text.repair }) {
-                SendMessageW(tools, CB_ADDSTRING, 0, reinterpret_cast<LPARAM>(option));
-            }
-            SendMessageW(tools, CB_SETCURSEL, 0, 0);
-            const auto label = ChoiceControl(dialog, L"STATIC", choice.text.language, SS_RIGHT, -1, { 231, 11, 307, 24 });
-            const auto combo = ChoiceControl(dialog, L"COMBOBOX", L"", WS_TABSTOP | WS_VSCROLL |
-                CBS_DROPDOWNLIST | CBS_HASSTRINGS, languageId, { 312, 8, 410, 90 });
-            for (const auto* name : { L"English", L"日本語", L"简体中文", L"繁體中文" }) {
-                SendMessageW(combo, CB_ADDSTRING, 0, reinterpret_cast<LPARAM>(name));
-            }
-            SendMessageW(combo, CB_SETCURSEL, choice.language, 0);
-            ChoiceControl(dialog, L"STATIC", L"", SS_ETCHEDHORZ, -1, { 8, 30, 410, 32 });
-            const auto prompt = ChoiceControl(dialog, L"STATIC", choice.prompt, 0, -1, { 12, 43, 406, 61 });
-            const auto setup = ChoiceControl(dialog, L"BUTTON", choice.text.setup,
-                WS_TABSTOP | BS_DEFPUSHBUTTON, setupId, { 12, 72, 406, 108 });
-            const auto close = ChoiceControl(dialog, L"BUTTON", choice.text.close,
-                WS_TABSTOP | BS_PUSHBUTTON, IDCANCEL, { 354, 134, 410, 151 });
-            for (const auto control : { tools, label, combo, prompt, setup, close }) {
-                if (control && choice.font) SendMessageW(control, WM_SETFONT, reinterpret_cast<WPARAM>(choice.font), TRUE);
-            }
-            SendMessageW(dialog, DM_SETDEFID, setupId, 0);
-            SetFocus(setup);
-            return FALSE;
         }
         const auto prompt = ChoiceControl(dialog, L"STATIC", choice.prompt, 0, -1,
             choice.entries.empty() ? RECT{ 8, 8, 410, 126 } : RECT{ 8, 8, 410, 30 });
@@ -95,19 +66,6 @@ static INT_PTR CALLBACK PeChoiceDialog(HWND dialog, UINT message, WPARAM wparam,
         SetFocus(choice.safeDefault ? cancel : list ? list : primary);
         return FALSE;
     }
-    if (message == WM_COMMAND && LOWORD(wparam) == languageId && HIWORD(wparam) == CBN_SELENDOK) {
-        const auto language = SendDlgItemMessageW(dialog, languageId, CB_GETCURSEL, 0, 0);
-        if (language != CB_ERR) EndDialog(dialog, 101 + language);
-        return TRUE;
-    }
-    if (message == WM_COMMAND && LOWORD(wparam) == toolsId && HIWORD(wparam) == CBN_SELENDOK) {
-        if (SendDlgItemMessageW(dialog, toolsId, CB_GETCURSEL, 0, 0) == 1) EndDialog(dialog, 1);
-        return TRUE;
-    }
-    if (message == WM_COMMAND && LOWORD(wparam) == setupId) {
-        EndDialog(dialog, 2);
-        return TRUE;
-    }
     if (message == WM_CLOSE || (message == WM_COMMAND && LOWORD(wparam) == IDCANCEL)) {
         EndDialog(dialog, 0);
         return TRUE;
@@ -136,7 +94,7 @@ static HFONT WizardFont(const PeText& text)
 }
 
 static int Choose(const PeText& text, const wchar_t* prompt, const std::vector<std::wstring>& entries, int initial = 0,
-    const wchar_t* button = nullptr, bool safeDefault = false, int language = -1)
+    const wchar_t* button = nullptr, bool safeDefault = false)
 {
     struct alignas(DWORD) EmptyDialog {
         DLGTEMPLATE base;
@@ -149,8 +107,8 @@ static int Choose(const PeText& text, const wchar_t* prompt, const std::vector<s
         0, 0, 0
     };
     const auto font = WizardFont(text);
-    const PeChoice choice{ text, prompt, entries, initial, font, button ? button : text.next, safeDefault, language };
-    const auto result = DialogBoxIndirectParamW(GetModuleHandleW(nullptr), &layout.base, nullptr,
+    const PeChoice choice{ text, prompt, entries, initial, font, button ? button : text.next, safeDefault };
+    const auto result = DialogBoxIndirectParamW(GetModuleHandleW(nullptr), &layout.base, wizardOwner,
         PeChoiceDialog, reinterpret_cast<LPARAM>(&choice));
     if (font) DeleteObject(font);
     return result > 0 ? static_cast<int>(result - 1) : -1;
@@ -379,97 +337,90 @@ static int PreferredLanguage()
     return preferred;
 }
 
-static int RunPeWizard(const fs::path& bundle, bool preview)
+static std::vector<DriverMatch> ScanWithProgress(const fs::path& bundle, DWORD build, const PeText& text,
+    bool missingOnly = false)
 {
-    const auto fontFile = bundle / L"pe-fonts/NotoSansCJK-Regular.ttc";
-    AddFontResourceExW(fontFile.c_str(), FR_PRIVATE, nullptr);
-    int language = PreferredLanguage();
-    for (;;) {
-        const auto& text = peText[language];
-        const auto action = Choose(text, text.action, {}, 0, nullptr, false, language);
-        if (action < 0) return 0;
-        if (action >= 100 && action < 104) {
-            language = action - 100;
-            continue;
+    const auto progress = CreateWindowExW(WS_EX_TOOLWINDOW, L"STATIC", text.scan,
+        WS_POPUP | WS_CAPTION | WS_VISIBLE | SS_CENTER | SS_CENTERIMAGE,
+        (GetSystemMetrics(SM_CXSCREEN) - 520) / 2, (GetSystemMetrics(SM_CYSCREEN) - 100) / 2,
+        520, 100, nullptr, nullptr, GetModuleHandleW(nullptr), nullptr);
+    const auto font = WizardFont(text);
+    if (progress) {
+        SetWindowTextW(progress, L"Network Rescue");
+        const auto message = CreateWindowExW(0, L"STATIC", text.scan, WS_CHILD | WS_VISIBLE | SS_CENTER,
+            12, 16, 492, 32, progress, nullptr, GetModuleHandleW(nullptr), nullptr);
+        UpdateWindow(progress);
+        if (message) {
+            if (font) SendMessageW(message, WM_SETFONT, reinterpret_cast<WPARAM>(font), TRUE);
+            UpdateWindow(message);
         }
-        if (preview) continue;
-        const bool setup = action == 1;
-        if (setup && IsSetupRunning()) {
-            Notice(text, text.setupRunning);
-            continue;
-        }
-
-        const auto targets = setup ? std::vector<Target>{} : DiscoverTargets();
-        const auto media = setup ? DiscoverSetupMedia() : std::vector<SetupMedia>{};
-        std::vector<std::wstring> choices;
-        for (const auto& target : targets) choices.push_back(WindowsLabel(target.root, target.build));
-        for (const auto& source : media) choices.push_back(WindowsLabel(source.root, source.build));
-        if (choices.empty()) {
-            Notice(text, setup ? text.noMedia : text.noTarget);
-            continue;
-        }
-        const auto target = Choose(text, setup ? text.media : text.target, choices);
-        if (target < 0) continue;
-        const auto build = setup ? media[target].build : targets[target].build;
-        const auto progress = CreateWindowExW(WS_EX_TOOLWINDOW, L"STATIC", text.scan,
-            WS_POPUP | WS_CAPTION | WS_VISIBLE | SS_CENTER | SS_CENTERIMAGE,
-            (GetSystemMetrics(SM_CXSCREEN) - 520) / 2, (GetSystemMetrics(SM_CYSCREEN) - 100) / 2,
-            520, 100, nullptr, nullptr, GetModuleHandleW(nullptr), nullptr);
-        const auto font = WizardFont(text);
-        if (progress) {
-            SetWindowTextW(progress, L"Network Rescue");
-            const auto message = CreateWindowExW(0, L"STATIC", text.scan, WS_CHILD | WS_VISIBLE | SS_CENTER,
-                12, 16, 492, 32, progress, nullptr, GetModuleHandleW(nullptr), nullptr);
-            UpdateWindow(progress);
-            if (message) {
-                if (font) SendMessageW(message, WM_SETFONT, reinterpret_cast<WPARAM>(font), TRUE);
-                UpdateWindow(message);
-            }
-        }
-        auto matches = ScanDrivers(bundle, build);
-        if (progress) DestroyWindow(progress);
-        if (font) DeleteObject(font);
-        if (matches.empty()) {
-            Notice(text, text.noDriver);
-            continue;
-        }
-        if (setup) {
-            matches.erase(std::remove_if(matches.begin(), matches.end(), [](const DriverMatch& match) {
-                return !IsStandaloneDriver(match.path);
-            }), matches.end());
-            if (matches.empty()) {
-                Notice(text, text.noStandalone);
-                continue;
-            }
-        }
-        std::vector<std::wstring> labels;
-        for (const auto& match : matches) {
-            labels.push_back(match.name + L"  " + match.path.filename().wstring() + L"  [" + match.id + L"]");
-        }
-        const auto driver = Choose(text, text.driver, labels);
-        if (driver < 0) continue;
-        const auto& inf = matches[driver].path;
-        if (!Confirm(text, setup ? text.confirmSetup : text.confirmRepair, choices[target] + L"  " + inf.wstring())) {
-            continue;
-        }
-        if (!VerifyNetworkDriver(inf)) {
-            Notice(text, text.failed);
-            continue;
-        }
-        if (setup) {
-            if (!IsSetupRunning() && IsStandaloneDriver(inf) && StartSetup(media[target], inf)) return 0;
-            Notice(text, text.failed);
-            continue;
-        }
-        const auto& offline = targets[target];
-        if (ReadWindowsBuild(offline.root) != offline.build) {
-            Notice(text, text.failed);
-            continue;
-        }
-        const auto result = RunDism(offline, L"/Add-Driver /Driver:\"" + inf.wstring() + L"\"");
-        const bool added = result == ERROR_SUCCESS || result == ERROR_SUCCESS_REBOOT_REQUIRED;
-        const bool checked = added && RunDism(offline, L"/Get-Drivers") == ERROR_SUCCESS;
-        Notice(text, checked ? text.repairDone : text.failed);
-        return checked ? 0 : 6;
     }
+    auto matches = ScanDrivers(bundle, build, missingOnly);
+    if (progress) DestroyWindow(progress);
+    if (font) DeleteObject(font);
+    return matches;
+}
+
+static int RunPeAction(const fs::path& bundle, const PeText& text, bool setup)
+{
+    if (setup && IsSetupRunning()) {
+        Notice(text, text.setupRunning);
+        return 0;
+    }
+
+    const auto targets = setup ? std::vector<Target>{} : DiscoverTargets();
+    const auto media = setup ? DiscoverSetupMedia() : std::vector<SetupMedia>{};
+    std::vector<std::wstring> choices;
+    for (const auto& target : targets) choices.push_back(WindowsLabel(target.root, target.build));
+    for (const auto& source : media) choices.push_back(WindowsLabel(source.root, source.build));
+    if (choices.empty()) {
+        Notice(text, setup ? text.noMedia : text.noTarget);
+        return 0;
+    }
+    const auto target = Choose(text, setup ? text.media : text.target, choices);
+    if (target < 0) return 0;
+    const auto build = setup ? media[target].build : targets[target].build;
+    auto matches = ScanWithProgress(bundle, build, text);
+    if (matches.empty()) {
+        Notice(text, text.noDriver);
+        return 0;
+    }
+    if (setup) {
+        matches.erase(std::remove_if(matches.begin(), matches.end(), [](const DriverMatch& match) {
+            return !IsStandaloneDriver(match.path);
+        }), matches.end());
+        if (matches.empty()) {
+            Notice(text, text.noStandalone);
+            return 0;
+        }
+    }
+    std::vector<std::wstring> labels;
+    for (const auto& match : matches) {
+        labels.push_back(match.name + L"  " + match.path.filename().wstring() + L"  [" + match.id + L"]");
+    }
+    const auto driver = Choose(text, text.driver, labels);
+    if (driver < 0) return 0;
+    const auto& inf = matches[driver].path;
+    if (!Confirm(text, setup ? text.confirmSetup : text.confirmRepair, choices[target] + L"  " + inf.wstring())) {
+        return 0;
+    }
+    if (!VerifyNetworkDriver(inf)) {
+        Notice(text, text.failed);
+        return 0;
+    }
+    if (setup) {
+        if (!IsSetupRunning() && IsStandaloneDriver(inf) && StartSetup(media[target], inf)) return 0;
+        Notice(text, text.failed);
+        return 0;
+    }
+    const auto& offline = targets[target];
+    if (ReadWindowsBuild(offline.root) != offline.build) {
+        Notice(text, text.failed);
+        return 0;
+    }
+    const auto result = RunDism(offline, L"/Add-Driver /Driver:\"" + inf.wstring() + L"\"");
+    const bool added = result == ERROR_SUCCESS || result == ERROR_SUCCESS_REBOOT_REQUIRED;
+    const bool checked = added && RunDism(offline, L"/Get-Drivers") == ERROR_SUCCESS;
+    Notice(text, checked ? text.repairDone : text.failed);
+    return checked ? 0 : 6;
 }

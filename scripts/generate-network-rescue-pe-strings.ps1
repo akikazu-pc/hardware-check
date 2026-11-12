@@ -8,8 +8,10 @@ $translations = foreach ($language in $languages) {
     Get-Content -LiteralPath $path -Raw | ConvertFrom-Json -AsHashtable
 }
 $prefix = 'rescue.pe.'
+$version = ([xml](Get-Content (Join-Path $root 'Directory.Build.props') -Raw)).Project.PropertyGroup.Version
 $keys = @($translations[0].Keys | Where-Object { $_.StartsWith($prefix) })
 @(
+    'static constexpr wchar_t peVersion[] = L"' + $version + '";'
     'struct PeText {'
     foreach ($key in $keys) { "    const wchar_t* $($key.Substring($prefix.Length));" }
     '};'

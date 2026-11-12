@@ -275,6 +275,7 @@ static std::vector<DriverMatch> ScanDrivers(const fs::path& bundle, DWORD build,
 #include "PeWizard.h"
 
 #include "RescueCli.h"
+#include "SharedHome.h"
 
 int wmain(int argc, wchar_t** argv)
 {
@@ -282,7 +283,6 @@ int wmain(int argc, wchar_t** argv)
     const auto length = GetModuleFileNameW(nullptr, executable, MAX_PATH);
     if (!length || length >= MAX_PATH) return 3;
     const auto bundle = fs::path(executable).parent_path();
-    if (argc == 2 && wcscmp(argv[1], L"--ui-preview") == 0) return RunPeWizard(bundle, true);
     if (argc == 2 && wcscmp(argv[1], L"--list-targets") == 0) {
         const auto targets = DiscoverTargets();
         for (const auto& target : targets) std::wcout << WindowsLabel(target.root, target.build) << L'\n';
@@ -293,7 +293,7 @@ int wmain(int argc, wchar_t** argv)
     const bool isPe = RegOpenKeyExW(HKEY_LOCAL_MACHINE, L"SYSTEM\\CurrentControlSet\\Control\\MiniNT",
         0, KEY_READ, &miniNt) == ERROR_SUCCESS;
     if (isPe) RegCloseKey(miniNt);
-    if (argc == 2 && wcscmp(argv[1], L"--ui") == 0) return isPe ? RunPeWizard(bundle, false) : 1;
+    if (argc == 2 && wcscmp(argv[1], L"--ui") == 0) return RunSharedHome(bundle, isPe);
     const bool keepOpen = argc == 2 && wcscmp(argv[1], L"--cli-window") == 0;
     return StartCli(bundle, isPe, keepOpen);
 }

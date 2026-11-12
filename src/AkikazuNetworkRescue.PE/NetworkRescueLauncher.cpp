@@ -29,12 +29,12 @@ int WINAPI wWinMain(HINSTANCE, HINSTANCE, PWSTR arguments, int)
         FreeConsole();
     }
     const auto directory = std::filesystem::path(executable).parent_path();
-    const auto target = directory / (isPe || cli ? L"PeNetworkRescue.exe" : L"AkikazuHardwareCheck.exe");
-    const auto mode = cli ? L"--cli-window" : isPe ? L"--ui" : L"--portable-rescue";
+    const auto target = directory / L"PeNetworkRescue.exe";
+    const auto mode = cli ? L"--cli-window" : L"--ui";
     auto command = L"\"" + target.wstring() + L"\" " + mode;
     // An interactive shell does not wait for a GUI-subsystem launcher. Give the CLI its
     // own console so both programs cannot compete for the same keyboard input.
-    const DWORD flags = cli ? CREATE_NEW_CONSOLE : isPe ? CREATE_NO_WINDOW : 0;
+    const DWORD flags = cli ? CREATE_NEW_CONSOLE : CREATE_NO_WINDOW;
     STARTUPINFOW startup{};
     startup.cb = sizeof startup;
     PROCESS_INFORMATION process{};
