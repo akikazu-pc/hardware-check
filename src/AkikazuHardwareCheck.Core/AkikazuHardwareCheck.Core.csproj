@@ -6,6 +6,10 @@
     <SelfContained>false</SelfContained>
   </PropertyGroup>
   <ItemGroup>
+    <EmbeddedResource Include="..\..\packaging\shared-desktop\wifi-preview-packages.json" LogicalName="rescue.wifi-preview-packages.json" />
+    <EmbeddedResource Include="..\..\docs\network-rescue-driver-index.csv" LogicalName="rescue.driver-index.csv" />
+    <EmbeddedResource Include="..\..\docs\asus-motherboard-discovery.csv" LogicalName="rescue.asus-board-index.csv" />
+    <EmbeddedResource Include="..\..\docs\network-rescue-model-gaps.csv" LogicalName="rescue.model-gaps.csv" />
     <EmbeddedResource Include="Localization\*.json" LogicalName="i18n.%(Filename).json" />
     <EmbeddedResource Include="Reporting\Resources\*" LogicalName="report.%(Filename)%(Extension)" />
     <EmbeddedResource Include="..\..\third-party\pawnio\PawnIO_setup.exe" LogicalName="pawnio.setup.exe" Condition="'$(DistributionChannel)' != 'Store'" />

@@ -1,0 +1,312 @@
+{
+  "schemaVersion": 1,
+  "distribution": "local-build-only",
+  "packages": [
+    {
+      "id": "rtl8821",
+      "version": "2024.10.138.3",
+      "source": "https://download.gigabyte.com/FileList/Driver/mb_driver_639_realtekwifi_2024.10.138.3.zip",
+      "archiveSha256": "766B5CD8702A31B11B29C582E109F23E8422F37571E11E77CEF1C93698A364AB",
+      "driverDirectory": "RTWLANE_Driver/Win10X64",
+      "scope": "AM4 RTL8821CE; rev. 1.5 subsystem not verified",
+      "devicePrefixes": [
+        "PCI\\VEN_10EC&DEV_C821"
+      ],
+      "windows11Only": false,
+      "adapterName": "Realtek RTL8821CE"
+    },
+    {
+      "id": "intel22",
+      "version": "22.200.0.6",
+      "source": "https://download.gigabyte.com/FileList/Driver/mb_driver_630_dchsetup_22.200.0.6.zip",
+      "archiveSha256": "7AA503DEBBF829A1E7D3FD9A0D9DD8AAA331AE5E63C89AB33BC015061F3DDC47",
+      "driverDirectory": "DCH",
+      "scope": "AM4 older Intel adapters and AM5 AX210 candidate",
+      "devicePrefixes": [
+        "PCI\\VEN_8086&DEV_24FB",
+        "PCI\\VEN_8086&DEV_2526",
+        "PCI\\VEN_8086&DEV_2725",
+        "PCI\\VEN_8086&DEV_7A70"
+      ],
+      "windows11Only": false,
+      "adapterName": "Intel Wireless"
+    },
+    {
+      "id": "intel24",
+      "version": "24.10.0.4",
+      "source": "https://download.gigabyte.com/FileList/Driver/mb_driver_630_dchsetup_24.10.0.4.zip",
+      "archiveSha256": "5B97C6386558C0B99B31B5044B1ED4AE71455AAF3A5AEB4387837FFE3F19ADAB",
+      "driverDirectory": "DCH",
+      "scope": "AM5 AX210 candidate; LGA1700 Intel adapter candidate",
+      "devicePrefixes": [
+        "PCI\\VEN_8086&DEV_2725",
+        "PCI\\VEN_8086&DEV_7A70"
+      ],
+      "windows11Only": false,
+      "adapterName": "Intel Wi-Fi"
+    },
+    {
+      "id": "rz616",
+      "version": "3.3.0.496",
+      "source": "https://download.gigabyte.com/FileList/Driver/mb_driver_644_amdwifi_3.3.0.496.zip",
+      "archiveSha256": "20B761CD3433B570D154B6FB02A4893646CA47BEECFED95CB45634F5D3D0660F",
+      "driverDirectory": "WLAN",
+      "scope": "AM5 RZ616",
+      "devicePrefixes": [
+        "PCI\\VEN_14C3&DEV_7922"
+      ],
+      "windows11Only": false,
+      "adapterName": "AMD RZ616"
+    },
+    {
+      "id": "rtl8852",
+      "version": "6001.16.172.0",
+      "source": "https://download.gigabyte.com/FileList/Driver/mb_driver_674_realtek8852wifi_6001.16.172.0.zip",
+      "archiveSha256": "A6CD81E7792678D6BCB7A9F791C2CBD1972BC653B7A3A4102D0AF342F8038725",
+      "driverDirectory": "RTWLANE_Driver/Win10X64",
+      "scope": "AM5 RTL8852CE",
+      "devicePrefixes": [
+        "PCI\\VEN_10EC&DEV_C852"
+      ],
+      "windows11Only": false,
+      "adapterName": "Realtek RTL8852CE"
+    },
+    {
+      "id": "mt7925",
+      "version": "5.7.0.4669",
+      "source": "https://download.gigabyte.com/FileList/Driver/mb_driver_2682_mtk_5.7.0.4669.zip",
+      "archiveSha256": "8F8C481A079DB0F1628C4491AF4580B3F17249C219C1671DABC53A4626FEB662",
+      "driverDirectory": "WLAN",
+      "scope": "LGA1851 MT7925; vendor lists Windows 11 only",
+      "devicePrefixes": [
+        "PCI\\VEN_14C3&DEV_7925"
+      ],
+      "windows11Only": true,
+      "adapterName": "MediaTek MT7925"
+    },
+    {
+      "id": "rtl8922",
+      "version": "6102.24.143.0",
+      "source": "https://download.gigabyte.com/FileList/Driver/mb_driver_3701_realtek8922wifi_6102.24.143.0_n.zip",
+      "archiveSha256": "1FB90817CA682481197B65D746B5E8328283DBE4DF28A5CAECAA764E918FC589",
+      "driverDirectory": "RTWLANE_Driver/Win11",
+      "scope": "LGA1851 alternate Realtek Wi-Fi; vendor lists Windows 11 only",
+      "devicePrefixes": [
+        "PCI\\VEN_10EC&DEV_8922"
+      ],
+      "windows11Only": true,
+      "adapterName": "Realtek RTL8922AE"
+    },
+    {
+      "id": "archer-t3u-plus",
+      "version": "1030.52.0127.2026",
+      "source": "https://static.tp-link.com/upload/driver/2026/202610/20261026/Archer_T3U_Plus_V1_V1.6_1030.52.0127.2026_forwin10x64win11.zip",
+      "archiveSha256": "8951271F3E1217E8FF2D5BBD6BFAB358D2DFA5F330BDFB682928F305F1960E4F",
+      "driverDirectory": "Archer_T3U_Plus_V1_Setup/plugins/Driver Files/Driver",
+      "archiveLayout": "direct",
+      "scope": "TP-Link Archer T3U Plus V1/V1.6 USB; vendor lists Windows 10/11 x64",
+      "devicePrefixes": [
+        "USB\\VID_2357&PID_0138"
+      ],
+      "windows11Only": false,
+      "adapterName": "TP-Link Archer T3U Plus"
+    },
+    {
+      "id": "qualcomm-wifi7",
+      "version": "3.1.0.1571",
+      "source": "https://download.gigabyte.com/FileList/Driver/mb_driver_2686_qualcomm_3.1.0.1571.zip?v=178bb71655f20275bdc06eafb817aea6",
+      "archiveSha256": "EB846CDE735A836C17D25A298363C05C283800970EE8DF2D2496A389BD04DD16",
+      "driverDirectory": "WLAN",
+      "scope": "GIGABYTE X870E AORUS MASTER Qualcomm Wi-Fi 7; vendor lists Windows 11 x64 only",
+      "devicePrefixes": [
+        "PCI\\VEN_17CB&DEV_1107"
+      ],
+      "windows11Only": true,
+      "adapterName": "Qualcomm Wi-Fi 7"
+    },
+    {
+      "id": "asus-tuf-mt7922",
+      "version": "3.5.2.1376",
+      "source": "https://dlcdnets.asus.com/pub/ASUS/GamingNB/Image/Driver/Networking/48971/WirelessLan_ROG_MediaTek_B_V3.5.2.1376Sub1_48971.exe",
+      "archiveSha256": "06B4975ACFC599B9A10C983203BC80DC20496B67322417D73F7ACAF0149C61B0",
+      "driverDirectory": "WLAN",
+      "scope": "ASUS TUF A16 FA608WM MediaTek",
+      "archiveLayout": "embedded-7z",
+      "archiveOffset": 4283408,
+      "devicePrefixes": [
+        "PCI\\VEN_14C3&DEV_0616&SUBSYS_061614C3",
+        "PCI\\VEN_14C3&DEV_0616&SUBSYS_51421A3B",
+        "PCI\\VEN_14C3&DEV_0616&SUBSYS_59171A3B",
+        "PCI\\VEN_14C3&DEV_0616&SUBSYS_C61614C3",
+        "PCI\\VEN_14C3&DEV_0616&SUBSYS_D61614C3",
+        "PCI\\VEN_14C3&DEV_0616&SUBSYS_E0CD105B",
+        "PCI\\VEN_14C3&DEV_0616&SUBSYS_E0DE105B",
+        "PCI\\VEN_14C3&DEV_0616&SUBSYS_E0DF105B",
+        "PCI\\VEN_14C3&DEV_0616&SUBSYS_E61614C3",
+        "PCI\\VEN_14C3&DEV_7902&SUBSYS_004117F9",
+        "PCI\\VEN_14C3&DEV_7902&SUBSYS_1EDE14C3",
+        "PCI\\VEN_14C3&DEV_7902&SUBSYS_55201A3B",
+        "PCI\\VEN_14C3&DEV_7902&SUBSYS_55211A3B",
+        "PCI\\VEN_14C3&DEV_7902&SUBSYS_60401A3B",
+        "PCI\\VEN_14C3&DEV_7902&SUBSYS_60411A3B",
+        "PCI\\VEN_14C3&DEV_7902&SUBSYS_790214C3",
+        "PCI\\VEN_14C3&DEV_7920&SUBSYS_64701A3B",
+        "PCI\\VEN_14C3&DEV_7920&SUBSYS_64711A3B",
+        "PCI\\VEN_14C3&DEV_7920&SUBSYS_792014C3",
+        "PCI\\VEN_14C3&DEV_7920&SUBSYS_8DD3103C",
+        "PCI\\VEN_14C3&DEV_7920&SUBSYS_E02017AA",
+        "PCI\\VEN_14C3&DEV_7920&SUBSYS_E120105B",
+        "PCI\\VEN_14C3&DEV_7922&SUBSYS_51401A3B",
+        "PCI\\VEN_14C3&DEV_7922&SUBSYS_53001A3B",
+        "PCI\\VEN_14C3&DEV_7922&SUBSYS_53011A3B",
+        "PCI\\VEN_14C3&DEV_7922&SUBSYS_59101A3B",
+        "PCI\\VEN_14C3&DEV_7922&SUBSYS_59111A3B",
+        "PCI\\VEN_14C3&DEV_7922&SUBSYS_792214C3"
+      ],
+      "windows11Only": true,
+      "minimumWindowsBuild": 26100,
+      "adapterName": "MediaTek MT7922"
+    },
+    {
+      "id": "asus-tuf-rtl8852ce",
+      "version": "6001.16.174.103",
+      "source": "https://dlcdnets.asus.com/pub/ASUS/GamingNB/Image/Driver/Networking/49948/WirelessLan_ROG_Realtek_B_V6001.16.174.103Sub1_49948.exe",
+      "archiveSha256": "2524AF05DF7771DE28B5940F0D583FAEB329B0C185515077C3D80D1A7770E17C",
+      "driverDirectory": "WLAN",
+      "scope": "ASUS TUF A16 FA608WM Realtek",
+      "archiveLayout": "embedded-7z",
+      "archiveOffset": 4283632,
+      "devicePrefixes": [
+        "PCI\\VEN_10EC&DEV_C852&SUBSYS_00B51E26",
+        "PCI\\VEN_10EC&DEV_C852&SUBSYS_54001A3B",
+        "PCI\\VEN_10EC&DEV_C852&SUBSYS_56001A3B",
+        "PCI\\VEN_10EC&DEV_C852&SUBSYS_56011A3B",
+        "PCI\\VEN_10EC&DEV_C852&SUBSYS_56021A3B",
+        "PCI\\VEN_10EC&DEV_C852&SUBSYS_56031A3B",
+        "PCI\\VEN_10EC&DEV_C852&SUBSYS_585217AA",
+        "PCI\\VEN_10EC&DEV_C852&SUBSYS_88E5103C",
+        "PCI\\VEN_10EC&DEV_C852&SUBSYS_C3261D31",
+        "PCI\\VEN_10EC&DEV_C852&SUBSYS_C80110EC",
+        "PCI\\VEN_10EC&DEV_C852&SUBSYS_C80210EC",
+        "PCI\\VEN_10EC&DEV_C852&SUBSYS_C80310EC",
+        "PCI\\VEN_10EC&DEV_C852&SUBSYS_C81211AD",
+        "PCI\\VEN_10EC&DEV_C852&SUBSYS_C85210EC",
+        "PCI\\VEN_10EC&DEV_C852&SUBSYS_C88510EC",
+        "PCI\\VEN_10EC&DEV_C852&SUBSYS_C88610EC",
+        "PCI\\VEN_10EC&DEV_C852&SUBSYS_C88710EC",
+        "PCI\\VEN_10EC&DEV_C852&SUBSYS_E110105B"
+      ],
+      "windows11Only": true,
+      "minimumWindowsBuild": 26100,
+      "adapterName": "Realtek RTL8852CE"
+    },
+    {
+      "id": "asus-rog-be200",
+      "version": "24.50.0.4",
+      "source": "https://dlcdnets.asus.com/pub/ASUS/GamingNB/Image/Driver/Networking/50258/WirelessLan_DCH_ROG_Intel_J_V24.50.0.4Sub1_50258.exe",
+      "archiveSha256": "01D16F731FDD3724BC8F1513EE25BC4510E4074B9E1D2991BD66EF1286687904",
+      "driverDirectory": "WLAN",
+      "scope": "ASUS ROG Strix G16 G615LR Intel BE200",
+      "archiveLayout": "embedded-7z",
+      "archiveOffset": 4283128,
+      "devicePrefixes": [
+        "PCI\\VEN_8086&DEV_272B&SUBSYS_00F08086",
+        "PCI\\VEN_8086&DEV_272B&SUBSYS_00F48086",
+        "PCI\\VEN_8086&DEV_272B&SUBSYS_02F48086",
+        "PCI\\VEN_8086&DEV_272B&SUBSYS_40F08086",
+        "PCI\\VEN_8086&DEV_272B&SUBSYS_42F48086",
+        "PCI\\VEN_8086&DEV_272B&SUBSYS_60F08086",
+        "PCI\\VEN_8086&DEV_272B&SUBSYS_60F48086",
+        "PCI\\VEN_8086&DEV_272B&SUBSYS_E0F48086"
+      ],
+      "windows11Only": true,
+      "minimumWindowsBuild": 26100,
+      "adapterName": "Intel BE200"
+    },
+    {
+      "id": "dell-mtk-7ty65",
+      "version": "5.7.0.5115",
+      "source": "https://downloads.dell.com/FOLDER14017724M/3/MediaTek-MT7920-MT7921-MT7922-MT7925-Wi-Fi-UWD-Driver_7TY65_WIN64_5.7.0.5115_A21.EXE",
+      "archiveSha256": "25E73E696A6DEEDB7C578236427B89D680885D41694FA49449779E45A2093212",
+      "driverDirectory": "16299/Drivers/Drivers",
+      "scope": "Dell 7TY65 MT7925 reference subsystem and certified Alienware 16 Aurora AC16250 configurations",
+      "archiveLayout": "embedded-7z",
+      "archiveOffset": 9899520,
+      "devicePrefixes": [
+        "PCI\\VEN_14C3&DEV_7925&SUBSYS_792514C3",
+        "PCI\\VEN_14C3&DEV_7925&SUBSYS_E123105B"
+      ],
+      "windows11Only": true,
+      "minimumWindowsBuild": 22000,
+      "adapterName": "MediaTek MT7925"
+    },
+    {
+      "id": "lenovo-legion-ds575356",
+      "version": "DS575356",
+      "source": "https://download.lenovo.com/consumer/mobiles/00y5057fke8zgwh0.exe",
+      "archiveSha256": "C00976927F879F444D692B4747ED7B2FDB30CC052628E2E3C3634E8B869C8891",
+      "driverDirectory": "code$GetExtractPath$/Source",
+      "scope": "Legion 5 16IAX10, Legion Pro 5 16IAX10 and 16IAX10H",
+      "archiveLayout": "inno",
+      "windows11Only": true,
+      "devicePrefixes": [
+        "PCI\\VEN_14C3&DEV_7925&SUBSYS_E02517AA",
+        "PCI\\VEN_14C3&DEV_7925&SUBSYS_E0FF17AA",
+        "PCI\\VEN_14C3&DEV_7927&SUBSYS_E0E417AA",
+        "PCI\\VEN_10EC&DEV_B852&SUBSYS_485317AA",
+        "PCI\\VEN_10EC&DEV_B852&SUBSYS_B85317AA",
+        "PCI\\VEN_10EC&DEV_8922&SUBSYS_492217AA",
+        "PCI\\VEN_10EC&DEV_8922&SUBSYS_492317AA"
+      ],
+      "adapterName": "MediaTek / Realtek Wi-Fi"
+    },
+    {
+      "id": "asus-prime-b650ma-ax-rtl8852be",
+      "version": "6001.15.161.0",
+      "source": "https://dlcdnets.asus.com/pub/ASUS/mb/08WIRELESS/DRV_WiFi_RTK_8852BE_SZ-TSD1_W11_64_V6001151610_20251128R.zip",
+      "archiveSha256": "AF01C1F3ACA8BFA39154BF6133D0AB8EBDAC920DF4662A0750F4F0E4C6CFBAB8",
+      "driverDirectory": "Win10X64",
+      "scope": "ASUS PRIME B650M-A AX official Realtek RTL8852BE driver",
+      "archiveLayout": "direct",
+      "devicePrefixes": [
+        "PCI\\VEN_10EC&DEV_B852&SUBSYS_00AB1E26",
+        "PCI\\VEN_10EC&DEV_B852&SUBSYS_24781057",
+        "PCI\\VEN_10EC&DEV_B852&SUBSYS_485317AA",
+        "PCI\\VEN_10EC&DEV_B852&SUBSYS_54701A3B",
+        "PCI\\VEN_10EC&DEV_B852&SUBSYS_54711A3B",
+        "PCI\\VEN_10EC&DEV_B852&SUBSYS_54721A3B",
+        "PCI\\VEN_10EC&DEV_B852&SUBSYS_54731A3B",
+        "PCI\\VEN_10EC&DEV_B852&SUBSYS_54801A3B",
+        "PCI\\VEN_10EC&DEV_B852&SUBSYS_88E3103C",
+        "PCI\\VEN_10EC&DEV_B852&SUBSYS_B05210EC",
+        "PCI\\VEN_10EC&DEV_B852&SUBSYS_B15210EC",
+        "PCI\\VEN_10EC&DEV_B852&SUBSYS_B25210EC",
+        "PCI\\VEN_10EC&DEV_B852&SUBSYS_B81111AD",
+        "PCI\\VEN_10EC&DEV_B852&SUBSYS_B85210EC",
+        "PCI\\VEN_10EC&DEV_B852&SUBSYS_B85317AA",
+        "PCI\\VEN_10EC&DEV_B852&SUBSYS_B88510EC",
+        "PCI\\VEN_10EC&DEV_B852&SUBSYS_B88610EC",
+        "PCI\\VEN_10EC&DEV_B852&SUBSYS_B88710EC",
+        "PCI\\VEN_10EC&DEV_B852&SUBSYS_C8261D3E",
+        "PCI\\VEN_10EC&DEV_B852&SUBSYS_E111105B",
+        "PCI\\VEN_10EC&DEV_B852&SUBSYS_E113105B"
+      ],
+      "windows11Only": false,
+      "adapterName": "Realtek RTL8852BE"
+    },
+    {
+      "id": "asus-rog-b860g-mt7925",
+      "version": "5.7.0.6054",
+      "source": "https://dlcdnets.asus.com/pub/ASUS/mb/08WIRELESS/DRV_WiFi_MTK_MT7925_27_SZ-TSD_W11_64_V5706054_20260804R.zip",
+      "archiveSha256": "33242227D82842F098FFAE6F5806B64384F719597CA8EA609F4BD74471AEF8C7",
+      "driverDirectory": ".",
+      "scope": "ASUS ROG STRIX B860-G GAMING WIFI",
+      "archiveLayout": "direct",
+      "devicePrefixes": [
+        "PCI\\VEN_14C3&DEV_7925&SUBSYS_60001A3B"
+      ],
+      "windows11Only": true,
+      "adapterName": "MediaTek MT7925"
+    }
+  ]
+}

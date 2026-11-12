@@ -1,10 +1,13 @@
 using System.Drawing.Imaging;
+using System.Globalization;
 using System.Runtime.InteropServices;
 using AkikazuHardwareCheck.App;
 using AkikazuHardwareCheck.Core.Configuration;
 using AkikazuHardwareCheck.Core.Localization;
 using AkikazuHardwareCheck.Core.Models;
 using AkikazuHardwareCheck.Core.Monitoring;
+using AkikazuHardwareCheck.Core.SharedDesktop;
+using Microsoft.Win32;
 
 namespace AkikazuHardwareCheck.App.SmokeTests;
 
@@ -24,6 +27,16 @@ internal static class Program
         if (args is ["--screenshot", var folder])
         {
             return CaptureWindows(folder);
+        }
+
+        if (args is ["--autostart-check"])
+        {
+            return CheckAutostart();
+        }
+
+        if (args is ["--tray-check"])
+        {
+            return CheckTray();
         }
 
         var failures = new List<string>();
@@ -60,6 +73,50 @@ internal static class Program
             failures.Add($"MainForm: {exception}");
         }
 
+        try
+        {
+            if (DistributionProfile.Current.Channel == DistributionChannel.Website)
+            {
+                using var dual = new MainForm(false, Startup(SharedModuleId.NetworkRescue, includeHardware: true));
+                _ = dual.Handle;
+                if (dual.ActiveModule != SharedModuleId.NetworkRescue || !dual.IsModuleNavigationVisible || dual.IsHardwarePageVisible || !dual.IsRescuePageVisible)
+                {
+                    failures.Add("Shared shell: the dual install did not open on the rescue page with navigation.");
+                }
+
+                dual.SetActiveModule(SharedModuleId.HardwareCheck);
+                if (dual.ActiveModule != SharedModuleId.HardwareCheck || !dual.IsHardwarePageVisible || dual.IsRescuePageVisible)
+                {
+                    failures.Add("Shared shell: navigation did not switch to the hardware page.");
+                }
+
+                using var rescueOnly = new MainForm(false, Startup(SharedModuleId.NetworkRescue, includeHardware: false));
+                _ = rescueOnly.Handle;
+                if (rescueOnly.ActiveModule != SharedModuleId.NetworkRescue || rescueOnly.IsModuleNavigationVisible || !rescueOnly.IsRescuePageVisible || rescueOnly.IsHardwarePageVisible)
+                {
+                    failures.Add("Shared shell: a rescue-only install did not show exactly the rescue page.");
+                }
+            }
+            else
+            {
+                var modules = Startup(SharedModuleId.NetworkRescue, includeHardware: true).Modules;
+                var requested = SharedDesktopStartupPolicy.Resolve(
+                    ["--module", SharedModuleIds.NETWORK_RESCUE],
+                    modules,
+                    storeChannel: true);
+                using var store = new MainForm(false, requested);
+                _ = store.Handle;
+                if (store.ActiveModule != SharedModuleId.HardwareCheck || store.IsModuleNavigationVisible || store.IsRescuePageVisible)
+                {
+                    failures.Add("Store shell: the rescue module leaked into the Store build.");
+                }
+            }
+        }
+        catch (Exception exception)
+        {
+            failures.Add($"Shared shell: {exception}");
+        }
+
         if (failures.Count == 0)
         {
             Console.WriteLine("Smoke test passed: every window was created in every language.");
@@ -73,6 +130,168 @@ internal static class Program
 
         return 1;
     }
+
+    private static int CheckAutostart()
+    {
+        if (DistributionProfile.Current.Channel != DistributionChannel.Website)
+        {
+            Console.Error.WriteLine("Autostart check requires the Website build.");
+            return 1;
+        }
+
+        using var key = Registry.CurrentUser.CreateSubKey(StartupRegistration.RUN_KEY, writable: true);
+        var original = key.GetValue(StartupRegistration.VALUE_NAME) as string;
+        try
+        {
+            StartupRegistration.Set(false);
+            if (key.GetValue(StartupRegistration.VALUE_NAME) is not null)
+            {
+                Console.Error.WriteLine("Autostart check failed: disabling did not remove the Run value.");
+                return 1;
+            }
+
+            StartupRegistration.Set(true);
+            if (key.GetValue(StartupRegistration.VALUE_NAME) is not string written
+                || !written.Contains("--tray", StringComparison.OrdinalIgnoreCase)
+                || !StartupRegistration.IsEnabled())
+            {
+                Console.Error.WriteLine("Autostart check failed: enabling did not write a --tray Run value.");
+                return 1;
+            }
+
+            StartupRegistration.Set(false);
+            if (key.GetValue(StartupRegistration.VALUE_NAME) is not null || StartupRegistration.IsEnabled())
+            {
+                Console.Error.WriteLine("Autostart check failed: disabling left the Run value behind.");
+                return 1;
+            }
+
+            Console.WriteLine("Autostart check passed: enable writes --tray, disable removes it.");
+            return 0;
+        }
+        catch (Exception exception)
+        {
+            Console.Error.WriteLine($"Autostart check failed: {exception}");
+            return 1;
+        }
+        finally
+        {
+            try
+            {
+                if (original is null)
+                {
+                    key.DeleteValue(StartupRegistration.VALUE_NAME, throwOnMissingValue: false);
+                }
+                else
+                {
+                    key.SetValue(StartupRegistration.VALUE_NAME, original, RegistryValueKind.String);
+                }
+            }
+            catch (Exception exception) when (exception is UnauthorizedAccessException or IOException)
+            {
+                Console.Error.WriteLine($"Autostart restore warning: {exception.Message}");
+            }
+        }
+    }
+
+    private static int CheckTray()
+    {
+        try
+        {
+            using var main = new MainForm(false, Startup(SharedModuleId.NetworkRescue, includeHardware: true));
+            main.StartPosition = FormStartPosition.Manual;
+            main.Location = Point.Empty;
+            main.TopMost = true;
+            main.Show();
+            main.BringToFront();
+            Pump(1500);
+
+            var field = typeof(MainForm).GetField("_trayIcon", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+            if (field?.GetValue(main) is not NotifyIcon icon || !icon.Visible)
+            {
+                Console.Error.WriteLine("Tray check failed: the main window did not create a visible NotifyIcon.");
+                return 1;
+            }
+
+            if (!TryGetNotifyIconIdentity(icon, out var window, out var id))
+            {
+                Console.Error.WriteLine("Tray check failed: NotifyIcon identity could not be read.");
+                return 1;
+            }
+
+            var identifier = new NOTIFYICONIDENTIFIER
+            {
+                cbSize = (uint)Marshal.SizeOf<NOTIFYICONIDENTIFIER>(),
+                hWnd = window,
+                uID = id,
+                guidItem = Guid.Empty,
+            };
+            var result = Shell_NotifyIconGetRect(ref identifier, out var rect);
+            if (result != 0 || rect.Right <= rect.Left || rect.Bottom <= rect.Top)
+            {
+                Console.Error.WriteLine($"Tray check failed: Shell_NotifyIconGetRect returned 0x{result:X} for rect {rect.Left},{rect.Top},{rect.Right},{rect.Bottom}.");
+                return 1;
+            }
+
+            Console.WriteLine($"Tray check passed: id={id} rect={rect.Left},{rect.Top},{rect.Right},{rect.Bottom} (actual notification-area registration).");
+            return 0;
+        }
+        catch (Exception exception)
+        {
+            Console.Error.WriteLine($"Tray check failed: {exception}");
+            return 1;
+        }
+    }
+
+    private static bool TryGetNotifyIconIdentity(NotifyIcon icon, out IntPtr window, out uint id)
+    {
+        window = IntPtr.Zero;
+        id = 0;
+        var type = typeof(NotifyIcon);
+        var windowField = type.GetField("window", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)
+            ?? type.GetFields(System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)
+                .FirstOrDefault(field => field.FieldType.Name.Contains("NativeWindow", StringComparison.Ordinal));
+        var idField = type.GetField("id", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)
+            ?? type.GetFields(System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)
+                .FirstOrDefault(field => field.FieldType == typeof(int) || field.FieldType == typeof(uint));
+        var windowObject = windowField?.GetValue(icon);
+        var rawId = idField?.GetValue(icon);
+        if (windowObject is null || rawId is null)
+        {
+            return false;
+        }
+
+        var handleProperty = windowObject.GetType().GetProperty("Handle", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Instance);
+        if (handleProperty?.GetValue(windowObject) is not IntPtr handle || handle == IntPtr.Zero)
+        {
+            return false;
+        }
+
+        window = handle;
+        id = Convert.ToUInt32(rawId, CultureInfo.InvariantCulture);
+        return id != 0;
+    }
+
+    [StructLayout(LayoutKind.Sequential)]
+    private struct NOTIFYICONIDENTIFIER
+    {
+        public uint cbSize;
+        public IntPtr hWnd;
+        public uint uID;
+        public Guid guidItem;
+    }
+
+    [StructLayout(LayoutKind.Sequential)]
+    private struct NativeRect
+    {
+        public int Left;
+        public int Top;
+        public int Right;
+        public int Bottom;
+    }
+
+    [DllImport("shell32.dll")]
+    private static extern int Shell_NotifyIconGetRect(ref NOTIFYICONIDENTIFIER identifier, out NativeRect iconLocation);
 
     private static int CaptureWindows(string folder)
     {
@@ -109,6 +328,17 @@ internal static class Program
             }
 
             Capture(main, Path.Combine(folder, "main.png"));
+        }
+
+        using (var shared = new MainForm(false, Startup(SharedModuleId.NetworkRescue, includeHardware: true)))
+        {
+            shared.StartPosition = FormStartPosition.Manual;
+            shared.Location = Point.Empty;
+            shared.TopMost = true;
+            shared.Show();
+            shared.BringToFront();
+            Pump(1500);
+            Capture(shared, Path.Combine(folder, "shared-rescue.png"));
         }
 
         using (var settings = new SettingsForm(t, new AppSettings(), font))
@@ -192,6 +422,42 @@ internal static class Program
     private static HardwareInventory MinimalHardware() => new(
         new ProbeEnvironment(null, WindowsActivation.Unknown, false, false),
         [], [], null, null, [], [], []);
+
+    private static SharedDesktopStartup Startup(SharedModuleId active, bool includeHardware)
+    {
+        var hardware = new InstalledModule(
+            SharedModuleId.HardwareCheck,
+            "0.2.0",
+            1,
+            "0.2.0",
+            @"C:\ProgramData\Akikazu\HardwareCheck",
+            Environment.ProcessPath ?? "AkikazuHardwareCheck.exe",
+            $"--module {SharedModuleIds.HARDWARE_CHECK}",
+            SharedDesktopContract.INSTALL_IDENTITY_HARDWARE,
+            SharedDesktopContract.UNINSTALL_KEY_HARDWARE);
+        var rescue = new InstalledModule(
+            SharedModuleId.NetworkRescue,
+            "0.1.0",
+            1,
+            "0.2.0",
+            @"C:\ProgramData\Akikazu\NetworkRescue",
+            Environment.ProcessPath ?? "AkikazuHardwareCheck.exe",
+            "--module network-rescue",
+            SharedDesktopContract.INSTALL_IDENTITY_RESCUE,
+            SharedDesktopContract.UNINSTALL_KEY_RESCUE);
+        var modules = includeHardware ? new[] { hardware, rescue } : new[] { rescue };
+        var available = includeHardware
+            ? new[] { SharedModuleId.HardwareCheck, SharedModuleId.NetworkRescue }
+            : new[] { SharedModuleId.NetworkRescue };
+        return new SharedDesktopStartup(
+            active,
+            includeHardware ? SharedModuleId.HardwareCheck : SharedModuleId.NetworkRescue,
+            active,
+            false,
+            true,
+            available,
+            modules);
+    }
 
     private static void Pump(int milliseconds)
     {

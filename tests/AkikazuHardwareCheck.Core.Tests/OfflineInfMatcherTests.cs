@@ -1,0 +1,84 @@
+using AkikazuHardwareCheck.Core.SharedDesktop;
+
+namespace AkikazuHardwareCheck.Core.Tests;
+
+public sealed class OfflineInfMatcherTests
+{
+    [Fact]
+    public void UsesCurrentModelsSectionAndPrefersMostSpecificHardwareId()
+    {
+        var directory = Directory.CreateTempSubdirectory();
+        var path = Path.Combine(directory.CreateSubdirectory("vendor").FullName, "wifi.inf");
+        File.WriteAllText(path, """
+            [Version]
+            Signature="$Windows NT$"
+            Class=Net
+            ClassGuid={4d36e972-e325-11ce-bfc1-08002be10318}
+            DriverVer=10/16/2025,6001.16.172.0
+            Provider=%Vendor%
+
+            [Manufacturer]
+            %Vendor%=Models,NTamd64,NTamd64.10.0...99999
+
+            [Models.NTamd64]
+            %Vendor%=Install,PCI\VEN_8086&DEV_2725,PCI\VEN_8086&DEV_1234
+            %Vendor%=Install,PCI\VEN_8086&DEV_2725&SUBSYS_00248086
+            %Vendor%=Install,USB\VID_2357&PID_0138
+
+            [Models.NTamd64.10.0...99999]
+            %Vendor%=Install,PCI\VEN_8086&DEV_5678
+
+            [Strings]
+            Vendor="Test"
+            """);
+
+        try
+        {
+            NetworkDeviceCandidate[] devices =
+            [
+                new([@"PCI\VEN_8086&DEV_2725&SUBSYS_00248086", @"PCI\VEN_8086&DEV_2725"], "SUBSYS_00248086", 28),
+                new([@"PCI\VEN_8086&DEV_1234"], null, 28),
+                new([@"PCI\VEN_8086&DEV_5678"], null, 28),
+            ];
+
+            var alternate = directory.CreateSubdirectory("alternate").FullName;
+            File.WriteAllText(Path.Combine(alternate, "bad.inf"), "invalid");
+            File.WriteAllText(Path.Combine(alternate, "generic.inf"), File.ReadAllText(path)
+                .Replace(@"%Vendor%=Install,PCI\VEN_8086&DEV_2725&SUBSYS_00248086", ""));
+            var search = OfflinePackageSearch.Find(directory.FullName, devices);
+            var expected = new[] { path, Path.Combine(alternate, "generic.inf") };
+            Assert.Equal(expected, search.Candidates.Select(candidate => candidate.InfPath));
+            Assert.Equal(1, search.UnreadableInfCount);
+
+            var combined = OfflinePackageSearch.Find([Path.GetDirectoryName(path)!, alternate], devices, includePossible: true);
+            Assert.Equal(expected, combined.Candidates.Select(candidate => candidate.InfPath));
+            Assert.Equal(1, combined.UnreadableInfCount);
+
+            var unmatched = new NetworkDeviceCandidate([@"PCI\VEN_8086&DEV_2725&SUBSYS_FFFFFFFF"], null, 28);
+            Assert.Empty(OfflinePackageSearch.Find(directory.FullName, [unmatched]).Candidates);
+            var possible = OfflinePackageSearch.Find(directory.FullName, [unmatched], includePossible: true).Candidates;
+            Assert.NotEmpty(possible);
+            Assert.All(possible, candidate => Assert.True(candidate.IsPossible));
+            Assert.Empty(OfflineInfMatcher.Match(path, [unmatched]));
+            Assert.All(OfflinePackageSearch.Find(directory.FullName, devices, includePossible: true).Candidates,
+                candidate => Assert.False(candidate.IsPossible));
+
+            Assert.Equal("6001.16.172.0", OfflineInfMatcher.ReadDriverVersion(path));
+            Assert.Null(OfflineDriverInstaller.Verify(path));
+            var match = Assert.Single(OfflineInfMatcher.Match(path, devices));
+            Assert.Equal(devices[0].HardwareIds[0], match.HardwareId);
+            Assert.Equal("Models.NTamd64", match.ModelsSection, ignoreCase: true);
+            var usb = Assert.IsType<NetworkDeviceCandidate>(
+                NetworkDeviceInventory.Classify([@"USB\VID_2357&PID_0138"], [], 28));
+            Assert.Equal(usb, Assert.Single(OfflineInfMatcher.Match(path, [usb])).Device);
+            Assert.Equal(match, OfflineDriverInstaller.SelectMissingMatch([match]));
+            Assert.Null(OfflineDriverInstaller.SelectMissingMatch([match, match]));
+            Assert.Null(OfflineDriverInstaller.SelectMissingMatch(
+                [match with { Device = match.Device with { ProblemCode = 0 } }]));
+        }
+        finally
+        {
+            directory.Delete(recursive: true);
+        }
+    }
+}

@@ -1,0 +1,30 @@
+{
+  "SchemaVersion": 1,
+  "HostInterfaceVersion": 1,
+  "ShortcutFolder": "秋和PC",
+  "Publisher": "株式会社秋和",
+  "URLInfoAbout": "https://www.akikazu.co.jp/",
+  "Modules": [
+    {
+      "Id": "hardware-check",
+      "DisplayName": "秋和PC 硬件测试工具",
+      "InstallIdentity": "Akikazu.HardwareCheck",
+      "UninstallKey": "Akikazu.HardwareCheck",
+      "UpgradeCode": "{D54F7C1E-7906-4A86-98CC-4494BD398F5B}",
+      "ShortcutName": "秋和PC 硬件测试工具",
+      "EntryArguments": "--module hardware-check",
+      "PayloadExecutable": "AkikazuHardwareCheck.exe"
+    },
+    {
+      "Id": "network-rescue",
+      "DisplayName": "断网急救",
+      "InstallIdentity": "Akikazu.NetworkRescue",
+      "UninstallKey": "Akikazu.NetworkRescue",
+      "UpgradeCode": "{66B08D82-E82C-423C-9252-2B2A73E9AB01}",
+      "ShortcutName": "断网急救",
+      "DefaultVersion": "0.1.0",
+      "EntryArguments": "--module network-rescue",
+      "PayloadExecutable": "AkikazuHardwareCheck.exe"
+    }
+  ]
+}
