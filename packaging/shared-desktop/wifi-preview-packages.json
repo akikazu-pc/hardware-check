@@ -12,7 +12,8 @@
       "devicePrefixes": [
         "PCI\\VEN_10EC&DEV_C821"
       ],
-      "windows11Only": false
+      "windows11Only": false,
+      "adapterName": "Realtek RTL8821CE"
     },
     {
       "id": "intel22",
@@ -27,7 +28,8 @@
         "PCI\\VEN_8086&DEV_2725",
         "PCI\\VEN_8086&DEV_7A70"
       ],
-      "windows11Only": false
+      "windows11Only": false,
+      "adapterName": "Intel Wireless"
     },
     {
       "id": "intel24",
@@ -40,7 +42,8 @@
         "PCI\\VEN_8086&DEV_2725",
         "PCI\\VEN_8086&DEV_7A70"
       ],
-      "windows11Only": false
+      "windows11Only": false,
+      "adapterName": "Intel Wi-Fi"
     },
     {
       "id": "rz616",
@@ -52,7 +55,8 @@
       "devicePrefixes": [
         "PCI\\VEN_14C3&DEV_7922"
       ],
-      "windows11Only": false
+      "windows11Only": false,
+      "adapterName": "AMD RZ616"
     },
     {
       "id": "rtl8852",
@@ -64,7 +68,8 @@
       "devicePrefixes": [
         "PCI\\VEN_10EC&DEV_C852"
       ],
-      "windows11Only": false
+      "windows11Only": false,
+      "adapterName": "Realtek RTL8852CE"
     },
     {
       "id": "mt7925",
@@ -76,7 +81,8 @@
       "devicePrefixes": [
         "PCI\\VEN_14C3&DEV_7925"
       ],
-      "windows11Only": true
+      "windows11Only": true,
+      "adapterName": "MediaTek MT7925"
     },
     {
       "id": "rtl8922",
@@ -88,7 +94,8 @@
       "devicePrefixes": [
         "PCI\\VEN_10EC&DEV_8922"
       ],
-      "windows11Only": true
+      "windows11Only": true,
+      "adapterName": "Realtek RTL8922AE"
     },
     {
       "id": "archer-t3u-plus",
@@ -101,7 +108,8 @@
       "devicePrefixes": [
         "USB\\VID_2357&PID_0138"
       ],
-      "windows11Only": false
+      "windows11Only": false,
+      "adapterName": "TP-Link Archer T3U Plus"
     },
     {
       "id": "qualcomm-wifi7",
@@ -113,7 +121,8 @@
       "devicePrefixes": [
         "PCI\\VEN_17CB&DEV_1107"
       ],
-      "windows11Only": true
+      "windows11Only": true,
+      "adapterName": "Qualcomm Wi-Fi 7"
     },
     {
       "id": "asus-tuf-mt7922",
@@ -155,7 +164,8 @@
         "PCI\\VEN_14C3&DEV_7922&SUBSYS_792214C3"
       ],
       "windows11Only": true,
-      "minimumWindowsBuild": 26100
+      "minimumWindowsBuild": 26100,
+      "adapterName": "MediaTek MT7922"
     },
     {
       "id": "asus-tuf-rtl8852ce",
@@ -187,7 +197,8 @@
         "PCI\\VEN_10EC&DEV_C852&SUBSYS_E110105B"
       ],
       "windows11Only": true,
-      "minimumWindowsBuild": 26100
+      "minimumWindowsBuild": 26100,
+      "adapterName": "Realtek RTL8852CE"
     },
     {
       "id": "asus-rog-be200",
@@ -209,7 +220,8 @@
         "PCI\\VEN_8086&DEV_272B&SUBSYS_E0F48086"
       ],
       "windows11Only": true,
-      "minimumWindowsBuild": 26100
+      "minimumWindowsBuild": 26100,
+      "adapterName": "Intel BE200"
     },
     {
       "id": "dell-mtk-7ty65",
@@ -225,7 +237,8 @@
         "PCI\\VEN_14C3&DEV_7925&SUBSYS_E123105B"
       ],
       "windows11Only": true,
-      "minimumWindowsBuild": 22000
+      "minimumWindowsBuild": 22000,
+      "adapterName": "MediaTek MT7925"
     },
     {
       "id": "lenovo-legion-ds575356",
@@ -244,7 +257,8 @@
         "PCI\\VEN_10EC&DEV_B852&SUBSYS_B85317AA",
         "PCI\\VEN_10EC&DEV_8922&SUBSYS_492217AA",
         "PCI\\VEN_10EC&DEV_8922&SUBSYS_492317AA"
-      ]
+      ],
+      "adapterName": "MediaTek / Realtek Wi-Fi"
     },
     {
       "id": "asus-prime-b650ma-ax-rtl8852be",
@@ -277,7 +291,22 @@
         "PCI\\VEN_10EC&DEV_B852&SUBSYS_E111105B",
         "PCI\\VEN_10EC&DEV_B852&SUBSYS_E113105B"
       ],
-      "windows11Only": false
+      "windows11Only": false,
+      "adapterName": "Realtek RTL8852BE"
+    },
+    {
+      "id": "asus-rog-b860g-mt7925",
+      "version": "5.7.0.6054",
+      "source": "https://dlcdnets.asus.com/pub/ASUS/mb/08WIRELESS/DRV_WiFi_MTK_MT7925_27_SZ-TSD_W11_64_V5706054_20260804R.zip",
+      "archiveSha256": "33242227D82842F098FFAE6F5806B64384F719597CA8EA609F4BD74471AEF8C7",
+      "driverDirectory": ".",
+      "scope": "ASUS ROG STRIX B860-G GAMING WIFI",
+      "archiveLayout": "direct",
+      "devicePrefixes": [
+        "PCI\\VEN_14C3&DEV_7925&SUBSYS_60001A3B"
+      ],
+      "windows11Only": true,
+      "adapterName": "MediaTek MT7925"
     }
   ]
 }

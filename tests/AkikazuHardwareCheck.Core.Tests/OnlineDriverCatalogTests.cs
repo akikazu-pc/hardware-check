@@ -49,4 +49,15 @@ public sealed class OnlineDriverCatalogTests
 
         Assert.Equal(expected, OnlineDriverCatalog.FindPossible(diagnostic).Any(package => package.Id == "asus-tuf-mt7922"));
     }
+
+    [Fact]
+    public void FindsTheInstalledAdapterForDownloadOnly()
+    {
+        var diagnostic = new NetworkDeviceDiagnostic(2, 26300, "X64",
+            [new([@"PCI\VEN_14C3&DEV_7925&SUBSYS_60001A3B"], "SUBSYS_60001A3B", 0)]);
+
+        Assert.Empty(OnlineDriverCatalog.Find(diagnostic));
+        Assert.Contains(OnlineDriverCatalog.Find(diagnostic, includeInstalled: true),
+            package => package.Id == "asus-rog-b860g-mt7925");
+    }
 }

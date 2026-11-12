@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AkikazuHardwareCheck.Core.SharedDesktop;
 
-public sealed record OfflineInfMatch(NetworkDeviceCandidate Device, string HardwareId, string ModelsSection);
+public sealed record OfflineInfMatch(NetworkDeviceCandidate Device, string HardwareId, string ModelsSection, string? AdapterName = null);
 
 public static class OfflineInfMatcher
 {
@@ -32,7 +32,7 @@ public static class OfflineInfMatcher
                 return [];
             }
 
-            var modelIds = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+            var modelIds = new Dictionary<string, (string Section, string? Name)>(StringComparer.OrdinalIgnoreCase);
             do
             {
                 var section = new StringBuilder(4096);
@@ -50,9 +50,9 @@ public static class OfflineInfMatcher
                 var found = false;
                 foreach (var hardwareId in device.HardwareIds)
                 {
-                    if (modelIds.TryGetValue(hardwareId, out var section))
+                    if (modelIds.TryGetValue(hardwareId, out var model))
                     {
-                        matches.Add(new OfflineInfMatch(device, hardwareId, section));
+                        matches.Add(new OfflineInfMatch(device, hardwareId, model.Section, model.Name));
                         found = true;
                         break;
                     }
@@ -61,11 +61,11 @@ public static class OfflineInfMatcher
                 {
                     var chipsets = device.HardwareIds.Select(ChipsetId).ToHashSet(StringComparer.OrdinalIgnoreCase);
                     chipsets.Remove("");
-                    foreach (var (id, section) in modelIds)
+                    foreach (var (id, model) in modelIds)
                     {
                         if (chipsets.Contains(ChipsetId(id)))
                         {
-                            possible.Add(new OfflineInfMatch(device, id, section));
+                            possible.Add(new OfflineInfMatch(device, id, model.Section, model.Name));
                         }
                     }
                 }
@@ -112,7 +112,8 @@ public static class OfflineInfMatcher
         }
     }
 
-    private static void ReadModels(IntPtr inf, string section, Dictionary<string, string> modelIds)
+    private static void ReadModels(IntPtr inf, string section,
+        Dictionary<string, (string Section, string? Name)> modelIds)
     {
         if (!SetupFindFirstLine(inf, section, null, out var model))
         {
@@ -125,7 +126,7 @@ public static class OfflineInfMatcher
             // Later fields are compatible IDs and are intentionally excluded from this preview.
             if (ReadField(ref model, 2) is { } id)
             {
-                modelIds.TryAdd(id, section);
+                modelIds.TryAdd(id, (section, ReadField(ref model, 0)));
             }
         }
         while (MoveNext(ref model));

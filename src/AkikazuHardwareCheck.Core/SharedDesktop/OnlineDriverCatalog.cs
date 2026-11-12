@@ -7,21 +7,22 @@ namespace AkikazuHardwareCheck.Core.SharedDesktop;
 
 public sealed record OnlineDriverPackage(string Id, string Version, string Source, string ArchiveSha256,
     string DriverDirectory, string? ArchiveLayout, string[] DevicePrefixes, bool Windows11Only, int ArchiveOffset = 0,
-    int MinimumWindowsBuild = 0, string? Scope = null);
+    int MinimumWindowsBuild = 0, string? Scope = null, string? AdapterName = null);
 
 public static class OnlineDriverCatalog
 {
     private static readonly HttpClient Client = new() { Timeout = TimeSpan.FromMinutes(2) };
     private static readonly Lazy<OnlineDriverPackage[]> Packages = new(ReadEmbeddedIndex);
 
-    public static IReadOnlyList<OnlineDriverPackage> Find(NetworkDeviceDiagnostic diagnostic) =>
-        Find(diagnostic, MatchesPrefix);
+    public static IReadOnlyList<OnlineDriverPackage> Find(NetworkDeviceDiagnostic diagnostic, bool includeInstalled = false) =>
+        Find(diagnostic, MatchesPrefix, includeInstalled);
 
-    public static IReadOnlyList<OnlineDriverPackage> FindPossible(NetworkDeviceDiagnostic diagnostic) =>
+    public static IReadOnlyList<OnlineDriverPackage> FindPossible(NetworkDeviceDiagnostic diagnostic, bool includeInstalled = false) =>
         Find(diagnostic, (id, prefix) => MatchesPrefix(id, OfflineInfMatcher.ChipsetId(prefix)) &&
-            !MatchesPrefix(id, prefix)).Except(Find(diagnostic)).ToArray();
+            !MatchesPrefix(id, prefix), includeInstalled).Except(Find(diagnostic, includeInstalled)).ToArray();
 
-    private static IReadOnlyList<OnlineDriverPackage> Find(NetworkDeviceDiagnostic diagnostic, Func<string, string, bool> matches)
+    private static IReadOnlyList<OnlineDriverPackage> Find(NetworkDeviceDiagnostic diagnostic, Func<string, string, bool> matches,
+        bool includeInstalled)
     {
         if (!string.Equals(diagnostic.Architecture, "X64", StringComparison.OrdinalIgnoreCase))
         {
@@ -30,7 +31,7 @@ public static class OnlineDriverCatalog
 
         return Packages.Value.Where(package => (!package.Windows11Only || diagnostic.WindowsBuild >= 22000) &&
             diagnostic.WindowsBuild >= package.MinimumWindowsBuild &&
-            diagnostic.Devices.Any(device => device.ProblemCode == 28 &&
+            diagnostic.Devices.Any(device => (includeInstalled || device.ProblemCode == 28) &&
                 device.HardwareIds.Any(id => package.DevicePrefixes.Any(prefix => matches(id, prefix))))).ToArray();
     }
 
