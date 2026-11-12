@@ -1,8 +1,20 @@
 [CmdletBinding()]
-param([string]$RealtekVendorZip, [switch]$IncludeCatalog, [string]$VendorSourceDirectory)
+param(
+    [string]$RealtekVendorZip,
+    [switch]$IncludeCatalog,
+    [string]$VendorSourceDirectory,
+    [string]$WlanArchive
+)
 
 $ErrorActionPreference = 'Stop'
 $root = Split-Path -Parent $PSScriptRoot
+if ($WlanArchive) {
+    if (-not $IncludeCatalog) {
+        throw 'Use -IncludeCatalog with -WlanArchive.'
+    }
+    $WlanArchive = (Resolve-Path -LiteralPath $WlanArchive).Path
+}
+
 if ($RealtekVendorZip) {
     $RealtekVendorZip = (Resolve-Path -LiteralPath $RealtekVendorZip).Path
 }
@@ -33,7 +45,9 @@ if errorlevel 1 pause
 "@ | Set-Content -LiteralPath (Join-Path $staging.FullName 'Install.cmd') -Encoding ascii
 
     $flavors = @('slim')
-    if ($IncludeCatalog) { $flavors += 'offline-catalog' }
+    if ($IncludeCatalog) {
+        $flavors += $(if ($WlanArchive) { 'offline-wlan-library' } else { 'offline-catalog' })
+    }
     if ($RealtekVendorZip -and -not $IncludeCatalog) {
         $flavors += 'offline-preview'
     }
@@ -46,13 +60,17 @@ if errorlevel 1 pause
                 -OutputDirectory (Join-Path $packRoot 'realtek-8852-wifi-6001.16.172.0')
         }
 
-        if ($flavor -eq 'offline-catalog') {
+        if ($flavor -in 'offline-catalog', 'offline-wlan-library') {
             & (Join-Path $PSScriptRoot 'prepare-network-rescue-packs.ps1') -OutputDirectory $staging.FullName -VendorSourceDirectory $VendorSourceDirectory
+        }
+
+        if ($flavor -eq 'offline-wlan-library') {
+            & (Join-Path $PSScriptRoot 'prepare-sdio-wlan-library.ps1') -Archive $WlanArchive -OutputDirectory $staging.FullName
         }
 
         $name = "NetworkRescue-$version-$flavor-win-x64.zip"
         $archive = Join-Path $output $name
-        Compress-Archive -Path (Join-Path $staging.FullName '*') -DestinationPath $archive -Force
+        Compress-Archive -Path (Join-Path $staging.FullName '*') -DestinationPath $archive -CompressionLevel Fastest -Force
         $hash = (Get-FileHash -LiteralPath $archive -Algorithm SHA256).Hash
         Set-Content -LiteralPath "$archive.sha256" -Value "$hash  $name" -Encoding ascii
         Write-Output "Output: $archive"

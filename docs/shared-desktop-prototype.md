@@ -252,3 +252,17 @@ pwsh -NoProfile -File scripts/publish-network-rescue-bundles.ps1 -IncludeCatalog
 扫描继续收录 PCI 无线候选，同时收录 USB 网络设备和缺驱动且设备类未识别的 USB VID/PID。后者在界面和诊断 JSON（schema 2）标记为未识别的 USB 设备，需要由网络类 INF 的明确硬件 ID 给出候选。已识别的 HID 等 USB 类不会列入。安装沿用签名、单设备和缺驱动检查。
 
 离线目录增加 TP-Link Archer T3U Plus V1/V1.6 的官方 Windows 10/11 x64 包。使用包内 `USB\VID_2357&PID_0138` 样例，在当前 Windows 上通过程序的候选匹配及 INF 签名检查。尚无缺驱动 USB 实机安装结果。
+
+### 扩展 WLAN 驱动库和主板目录
+
+从 [SDIO 官方种子](https://www.glenn.delahoy.com/snappy-driver-installer-origin/)仅下载 WLAN/Wi-Fi 压缩包。当前固定快照为 `DP_WLAN-WiFi_26082.7z`，约 681 MiB，含 1,634 个 INF。构建会校验归档 SHA-256，保留原始归档并解包到驱动搜索目录。安装和搜索使用断网急救自身功能。第三方驱动的再分发条款按各包处理，本构建用于本地救援。
+
+```powershell
+pwsh -NoProfile -File scripts/publish-network-rescue-bundles.ps1 -IncludeCatalog -WlanArchive <本地WLAN归档>
+```
+
+可用 `scripts/audit-network-rescue-library.ps1 -DriverDirectory <已解包的driver-packs>` 检查当前 Windows 构建能解析的网络类 INF 和通过签名验证的硬件 ID。该脚本从文件提取字面 ID，再通过应用的 SetupAPI 匹配检查。结果是一份当前构建上的证据下界。它不会安装驱动，不能替代板载模块映射或缺驱动实机测试。
+
+[华硕型号发现快照](asus-motherboard-discovery.csv)采集于 2026-11-12，来自[华硕全球产品目录](https://www.asus.com/motherboards-components/motherboards/all-series/filter?Series=All-series)的四个插槽过滤结果。AM4 35 条、AM5 140 条、LGA1700 176 条、LGA1851 56 条。174 条目录卡片提及 Wi-Fi。未提及的条目保持 unknown，下一步需查产品规格、区域修订、出厂模块和实际硬件 ID。该目录未覆盖其他品牌、所有历史型号或区域变体。
+
+本次在 Windows 构建 26300 检查 1,651 个 INF，其中 669 个匹配当前系统的网络设备 ID，582 个 INF 通过签名检查。签名有效的 ID 去重后有 4,566 个 PCI ID、1,228 个 USB ID。一个网卡可能有多个 ID，同一芯片也可能有多个 SUBSYS。该数字不代表网卡或主板型号数。实际安装及联网、Windows 10 审计和其余品牌目录仍待核对。大型 ZIP 超过 FAT32 单文件大小限制，U 盘可使用 exFAT 或 NTFS。
