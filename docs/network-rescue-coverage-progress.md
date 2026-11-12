@@ -2,7 +2,7 @@
 
 [逐型号 Wi-Fi 缺口清单](network-rescue-model-gaps.csv)记录当前已发现的 1,237 条主板型号或修订、912 条笔记本系列或型号、1 条一体机型号，以及 167 条戴尔系统与 Windows 组合。同一台笔记本可出现在多个系统组合。
 
-清单分别记录 `windows10X64Evidence` 和 `windows11X64Evidence`。`oem-package-indexed` 表示原厂包已入索引，`oem-wlan-listed` 表示原厂资料列出无线驱动，`oem-driver-pack-listed` 表示原厂列出该系统的整机部署包，仍需检查包内 WLAN 驱动。`oem-os-upgrade-tested` 表示原厂列出 Windows 11 升级测试，WLAN 驱动仍待核对。`pending` 表示该系统的证据待核。仅预留接口和 ARM64 组合另有标记。原厂下载索引目前有 9 个包标注支持 Windows 10 x64，18 个包标注支持 Windows 11 x64，部分包另有最低构建号要求。[原厂下载索引](network-rescue-driver-index.csv)
+清单分别记录 `windows10X64Evidence` 和 `windows11X64Evidence`。`oem-package-indexed` 表示原厂包已入索引，`oem-wlan-listed` 表示原厂资料列出无线驱动，`oem-driver-pack-listed` 表示原厂列出该系统的整机部署包，仍需检查包内 WLAN 驱动。`oem-os-upgrade-tested` 表示原厂列出 Windows 11 升级测试，WLAN 驱动仍待核对。`pending` 表示该系统的证据待核。`oem-wlan-not-supported` 表示原厂明确说明该系统没有该出厂无线模块的驱动。仅预留接口和 ARM64 组合另有标记。原厂下载索引目前有 9 个包标注支持 Windows 10 x64，18 个包标注支持 Windows 11 x64，部分包另有最低构建号要求。[原厂下载索引](network-rescue-driver-index.csv)
 
 | 主板范围 | 已发现的型号或修订 |
 | --- | ---: |
@@ -177,5 +177,20 @@ B550 UD WIFI6E rev. 1.2 的支持页列出适用两个系统的 MediaTek Wi-Fi 6
 
 ```powershell
 python scripts/collect-asus-wlan-specs.py docs/asus-motherboard-discovery.csv docs/asus-wlan-spec-audit.csv
+pwsh -File scripts/merge-network-rescue-model-gaps.ps1
+```
+
+
+### 微星规格书与华擎手册补查
+
+微星地区规格页直连仍返回 403，改用官方静态规格书，核对 PDF 内的型号后解析无线栏。批量处理 409 条，34 条规格书给出具体模块，216 条给出无线规格，132 条未列无线，27 条未取到可分类证据。主表回填微星 381 条，其中 33 条新增模块字段。规格书未列无线的条目仍待核。 [微星规格书审计](msi-wlan-datasheet-audit.csv) · [微星 AX200 样例](https://storage-asset.msi.com/datasheet/mb/global/MPG-B550-GAMING-CARBON-WIFI.pdf)
+
+华擎手册直连初轮可用，扩大批次后连续返回 403。初轮结果未在刷新时保留。本轮只合并能独立复核的型号证据，采集器已修正为下载失败时保留已有成功记录。共补齐 9 条华擎无线证据。其中 X870E Taichi、X870E Taichi Lite、X870E Nova WiFi、B650 Rock WiFi 7、B850 Steel Legend WiFi 的原厂规格明确说明随板无线模块无 Win10 驱动，Win11 驱动包和实机 SUBSYS 仍待核。 [华擎手册审计](asrock-wlan-manual-audit.csv) · [X870E Taichi](https://www.asrock.com/mb/AMD/X870E%20Taichi/index.asp) · [B850 Steel Legend WiFi](https://asrock.com/mb/AMD/B850%20Steel%20Legend%20WiFi/index.asp)
+
+主表共回填 390 条。主板总数为 1,237，Win10 待核降至 **1,146**，Win11 待核仍为 **1,149**。未新增驱动包或重建完整版 ZIP。华硕剩余 23 条以美国、英国地区规格页重查，仍缺足够证据。
+
+```powershell
+python scripts/collect-oem-wlan-documents.py --brand MSI docs/msi-motherboard-discovery.csv docs/msi-wlan-datasheet-audit.csv
+python scripts/collect-oem-wlan-documents.py --brand ASRock --workers 2 --limit 137 docs/asrock-motherboard-discovery.csv docs/asrock-wlan-manual-audit.csv
 pwsh -File scripts/merge-network-rescue-model-gaps.ps1
 ```

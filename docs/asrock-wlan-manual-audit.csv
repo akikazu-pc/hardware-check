@@ -1,0 +1,139 @@
+platform,manufacturer,model,catalogHint,specUrl,specEvidence,modules,pages,detail
+AM4,ASRock,A520M-ITX/ac,model-name-hint,https://download.asrock.com/Manual/A520M-ITXac.pdf,oem-spec-wlan-listed,,8,
+AM4,ASRock,A520M/ac,model-name-hint,https://download.asrock.com/Manual/A520Mac.pdf,unverified,,,pdf-unavailable
+AM4,ASRock,B450M/ac,model-name-hint,https://download.asrock.com/Manual/B450Mac.pdf,unverified,,,pdf-unavailable
+AM4,ASRock,B450M/ac R2.0,model-name-hint,https://download.asrock.com/Manual/B450Mac%20R2.0.pdf,unverified,,,pdf-unavailable
+AM4,ASRock,B550 Phantom Gaming 4/ac,model-name-hint,https://download.asrock.com/Manual/B550%20Phantom%20Gaming%204ac.pdf,unverified,,,pdf-unavailable
+AM4,ASRock,B550 Phantom Gaming-ITX/ax,model-name-hint,https://download.asrock.com/Manual/B550%20Phantom%20Gaming-ITXax.pdf,unverified,,,pdf-unavailable
+AM4,ASRock,B550 Rock WiFi,model-name-hint,https://download.asrock.com/Manual/B550%20Rock%20WiFi.pdf,unverified,,,pdf-unavailable
+AM4,ASRock,B550M Pro-A WiFi 6E,model-name-hint,https://download.asrock.com/Manual/B550M%20Pro-A%20WiFi%206E.pdf,unverified,,,pdf-unavailable
+AM4,ASRock,B550M WiFi,model-name-hint,https://download.asrock.com/Manual/B550M%20WiFi.pdf,unverified,,,pdf-unavailable
+AM4,ASRock,B550M WiFi SE,model-name-hint,https://download.asrock.com/Manual/B550M%20WiFi%20SE.pdf,unverified,,,pdf-unavailable
+AM4,ASRock,B550M-ITX/ac,model-name-hint,https://download.asrock.com/Manual/B550M-ITXac.pdf,unverified,,,pdf-unavailable
+AM4,ASRock,B550M/ac,model-name-hint,https://download.asrock.com/Manual/B550Mac.pdf,unverified,,,pdf-unavailable
+AM4,ASRock,Fatal1ty AB350 Gaming-ITX/ac,model-name-hint,https://download.asrock.com/Manual/Fatal1ty%20AB350%20Gaming-ITXac.pdf,unverified,,,pdf-unavailable
+AM4,ASRock,Fatal1ty B450 Gaming-ITX/ac,model-name-hint,https://download.asrock.com/Manual/Fatal1ty%20B450%20Gaming-ITXac.pdf,unverified,,,pdf-unavailable
+AM4,ASRock,Fatal1ty X370 Gaming-ITX/ac,model-name-hint,https://download.asrock.com/Manual/Fatal1ty%20X370%20Gaming-ITXac.pdf,unverified,,,pdf-unavailable
+AM4,ASRock,Fatal1ty X470 Gaming-ITX/ac,model-name-hint,https://download.asrock.com/Manual/Fatal1ty%20X470%20Gaming-ITXac.pdf,unverified,,,pdf-unavailable
+AM4,ASRock,X370 Killer SLI/ac,model-name-hint,https://download.asrock.com/Manual/X370%20Killer%20SLIac.pdf,unverified,,,pdf-unavailable
+AM4,ASRock,X470 Master SLI/ac,model-name-hint,https://download.asrock.com/Manual/X470%20Master%20SLIac.pdf,unverified,,,pdf-unavailable
+AM4,ASRock,X570 Extreme4 WiFi ax,model-name-hint,https://download.asrock.com/Manual/X570%20Extreme4%20WiFi%20ax.pdf,unverified,,,pdf-unavailable
+AM4,ASRock,X570 Phantom Gaming 4 WiFi ax,model-name-hint,https://download.asrock.com/Manual/X570%20Phantom%20Gaming%204%20WiFi%20ax.pdf,unverified,,,pdf-unavailable
+AM4,ASRock,X570 Steel Legend WiFi ax,model-name-hint,https://download.asrock.com/Manual/X570%20Steel%20Legend%20WiFi%20ax.pdf,unverified,,,pdf-unavailable
+AM5,ASRock,A620AI WiFi,model-name-hint,https://download.asrock.com/Manual/A620AI%20WiFi.pdf,unverified,,,pdf-unavailable
+AM5,ASRock,A620AM Pro RS WiFi,model-name-hint,https://download.asrock.com/Manual/A620AM%20Pro%20RS%20WiFi.pdf,unverified,,,pdf-unavailable
+AM5,ASRock,A620AM Pro-A WiFi,model-name-hint,https://download.asrock.com/Manual/A620AM%20Pro-A%20WiFi.pdf,unverified,,,pdf-unavailable
+AM5,ASRock,A620AM-X WiFi,model-name-hint,https://download.asrock.com/Manual/A620AM-X%20WiFi.pdf,unverified,,,pdf-unavailable
+AM5,ASRock,A620I Lightning WiFi,model-name-hint,https://download.asrock.com/Manual/A620I%20Lightning%20WiFi.pdf,unverified,,,pdf-unavailable
+AM5,ASRock,A620M Pro RS WiFi,model-name-hint,https://download.asrock.com/Manual/A620M%20Pro%20RS%20WiFi.pdf,unverified,,,pdf-unavailable
+AM5,ASRock,B650 PG Lightning WiFi,model-name-hint,https://download.asrock.com/Manual/B650%20PG%20Lightning%20WiFi.pdf,unverified,,,pdf-unavailable
+AM5,ASRock,B650 Pro RS WiFi,model-name-hint,https://download.asrock.com/Manual/B650%20Pro%20RS%20WiFi.pdf,unverified,,,pdf-unavailable
+AM5,ASRock,B650 Rock WiFi 7,model-name-hint,https://download.asrock.com/Manual/B650%20Rock%20WiFi%207.pdf,unverified,,,pdf-unavailable
+AM5,ASRock,B650 Steel Legend WiFi,model-name-hint,https://download.asrock.com/Manual/B650%20Steel%20Legend%20WiFi.pdf,oem-spec-wlan-listed,,7,
+AM5,ASRock,B650E PG Riptide WiFi,model-name-hint,https://download.asrock.com/Manual/B650E%20PG%20Riptide%20WiFi.pdf,unverified,,,pdf-unavailable
+AM5,ASRock,B650E PG-ITX WiFi,model-name-hint,https://download.asrock.com/Manual/B650E%20PG-ITX%20WiFi.pdf,unverified,,,pdf-unavailable
+AM5,ASRock,B650E Steel Legend WiFi,model-name-hint,https://download.asrock.com/Manual/B650E%20Steel%20Legend%20WiFi.pdf,oem-spec-wlan-listed,,7,
+AM5,ASRock,B650I Lightning WiFi,model-name-hint,https://download.asrock.com/Manual/B650I%20Lightning%20WiFi.pdf,unverified,,,pdf-unavailable
+AM5,ASRock,B650M PG Lightning WiFi,model-name-hint,https://download.asrock.com/Manual/B650M%20PG%20Lightning%20WiFi.pdf,unverified,,,pdf-unavailable
+AM5,ASRock,B650M PG Riptide WiFi,model-name-hint,https://download.asrock.com/Manual/B650M%20PG%20Riptide%20WiFi.pdf,unverified,,,pdf-unavailable
+AM5,ASRock,B650M PG Riptide WiFi White,model-name-hint,https://download.asrock.com/Manual/B650M%20PG%20Riptide%20WiFi%20White.pdf,unverified,,,pdf-unavailable
+AM5,ASRock,B650M Pro RS WiFi,model-name-hint,https://download.asrock.com/Manual/B650M%20Pro%20RS.pdf,oem-spec-wlan-listed,,7,
+AM5,ASRock,B650M Pro X3D WiFi,model-name-hint,https://download.asrock.com/Manual/B650M%20Pro%20X3D%20WiFi.pdf,unverified,,,pdf-unavailable
+AM5,ASRock,B650M Pro-A Gen5 WiFi 6E,model-name-hint,https://download.asrock.com/Manual/B650M%20Pro-A%20Gen5%20WiFi%206E.pdf,unverified,,,pdf-unavailable
+AM5,ASRock,B650M-H/M.2+ WiFi,model-name-hint,https://download.asrock.com/Manual/B650M-HM.2%2B%20WiFi.pdf,unverified,,,pdf-unavailable
+AM5,ASRock,B850 Challenger WiFi,model-name-hint,https://download.asrock.com/Manual/B850%20Challenger%20WiFi.pdf,unverified,,,pdf-unavailable
+AM5,ASRock,B850 Challenger WiFi White,model-name-hint,https://download.asrock.com/Manual/B850%20Challenger%20WiFi%20White.pdf,unverified,,,pdf-unavailable
+AM5,ASRock,B850 LiveMixer WiFi,model-name-hint,https://download.asrock.com/Manual/B850%20LiveMixer%20WiFi.pdf,unverified,,,pdf-unavailable
+AM5,ASRock,B850 Pro RS WiFi,model-name-hint,https://download.asrock.com/Manual/B850%20Pro%20RS%20WiFi.pdf,unverified,,,pdf-unavailable
+AM5,ASRock,B850 Pro-A WiFi,model-name-hint,https://download.asrock.com/Manual/B850%20Pro-A%20WiFi.pdf,unverified,,,pdf-unavailable
+AM5,ASRock,B850 Riptide WiFi,model-name-hint,https://download.asrock.com/Manual/B850%20Riptide%20WiFi.pdf,unverified,,,pdf-unavailable
+AM5,ASRock,B850 Rock WiFi 7,model-name-hint,https://download.asrock.com/Manual/B850%20Rock%20WiFi%207.pdf,unverified,,,pdf-unavailable
+AM5,ASRock,B850 Steel Legend WiFi,model-name-hint,https://download.asrock.com/Manual/B850%20Steel%20Legend%20WiFi.pdf,unverified,,,pdf-unavailable
+AM5,ASRock,B850I Lightning WiFi,model-name-hint,https://download.asrock.com/Manual/B850I%20Lightning%20WiFi.pdf,unverified,,,pdf-unavailable
+AM5,ASRock,B850M Challenger WiFi,model-name-hint,https://download.asrock.com/Manual/B850M%20Challenger%20WiFi.pdf,unverified,,,pdf-unavailable
+AM5,ASRock,B850M Challenger WiFi White,model-name-hint,https://download.asrock.com/Manual/B850M%20Challenger%20WiFi%20White.pdf,unverified,,,pdf-unavailable
+AM5,ASRock,B850M Pro Plus WiFi,model-name-hint,https://download.asrock.com/Manual/B850M%20Pro%20Plus%20WiFi.pdf,unverified,,,pdf-unavailable
+AM5,ASRock,B850M Pro RS WiFi,model-name-hint,https://download.asrock.com/Manual/B850M%20Pro%20RS%20WiFi.pdf,unverified,,,pdf-unavailable
+AM5,ASRock,B850M Pro RS WiFi White,model-name-hint,https://download.asrock.com/Manual/B850M%20Pro%20RS%20WiFi%20White.pdf,unverified,,,pdf-unavailable
+AM5,ASRock,B850M Pro-A WiFi,model-name-hint,https://download.asrock.com/Manual/B850M%20Pro-A%20WiFi.pdf,unverified,,,pdf-unavailable
+AM5,ASRock,B850M Riptide WiFi,model-name-hint,https://download.asrock.com/Manual/B850M%20Riptide%20WiFi.pdf,unverified,,,pdf-unavailable
+AM5,ASRock,B850M Rock WiFi,model-name-hint,https://download.asrock.com/Manual/B850M%20Rock%20WiFi.pdf,unverified,,,pdf-unavailable
+AM5,ASRock,B850M Steel Legend WiFi,model-name-hint,https://download.asrock.com/Manual/B850M%20Steel%20Legend%20WiFi.pdf,unverified,,,pdf-unavailable
+AM5,ASRock,B850M-X WiFi,model-name-hint,https://download.asrock.com/Manual/B850M-X%20WiFi.pdf,unverified,,,pdf-unavailable
+AM5,ASRock,B850M-X WiFi R2.0,model-name-hint,https://download.asrock.com/Manual/B850M-X%20WiFi%20R2.0.pdf,unverified,,,pdf-unavailable
+AM5,ASRock,X870 Challenger WiFi,model-name-hint,https://download.asrock.com/Manual/X870%20Challenger%20WiFi.pdf,unverified,,,pdf-unavailable
+AM5,ASRock,X870 Challenger WiFi White,model-name-hint,https://download.asrock.com/Manual/X870%20Challenger%20WiFi%20White.pdf,unverified,,,pdf-unavailable
+AM5,ASRock,X870 LiveMixer WiFi,model-name-hint,https://download.asrock.com/Manual/X870%20LiveMixer%20WiFi.pdf,unverified,,,pdf-unavailable
+AM5,ASRock,X870 Nova WiFi,model-name-hint,https://download.asrock.com/Manual/X870%20Nova%20WiFi.pdf,unverified,,,pdf-unavailable
+AM5,ASRock,X870 Pro RS WiFi,model-name-hint,https://download.asrock.com/Manual/X870%20Pro%20RS%20WiFi.pdf,unverified,,,pdf-unavailable
+AM5,ASRock,X870 Pro-A WiFi,model-name-hint,https://download.asrock.com/Manual/X870%20Pro-A%20WiFi.pdf,unverified,,,pdf-unavailable
+AM5,ASRock,X870 Riptide WiFi,model-name-hint,https://download.asrock.com/Manual/X870%20Riptide%20WiFi.pdf,unverified,,,pdf-unavailable
+AM5,ASRock,X870 Steel Legend WiFi,model-name-hint,https://download.asrock.com/Manual/X870%20Steel%20Legend%20WiFi.pdf,unverified,,,pdf-unavailable
+AM5,ASRock,X870E Challenger WiFi,model-name-hint,https://download.asrock.com/Manual/X870E%20Challenger%20WiFi.pdf,unverified,,,pdf-unavailable
+AM5,ASRock,X870E Challenger WiFi White,model-name-hint,https://download.asrock.com/Manual/X870E%20Challenger%20WiFi%20White.pdf,unverified,,,pdf-unavailable
+AM5,ASRock,X870E Nova WiFi,model-name-hint,https://download.asrock.com/Manual/X870E%20Nova%20WiFi.pdf,unverified,,,pdf-unavailable
+LGA1700,ASRock,B660M Pro RS/ax,model-name-hint,https://download.asrock.com/Manual/B660M%20Pro%20RSax.pdf,unverified,,,pdf-unavailable
+LGA1700,ASRock,B660M-ITX/ac,model-name-hint,https://download.asrock.com/Manual/B660M-ITXac.pdf,unverified,,,pdf-unavailable
+LGA1700,ASRock,B760 Pro RS WiFi,model-name-hint,https://download.asrock.com/Manual/B760%20Pro%20RS%20WiFi.pdf,unverified,,,pdf-unavailable
+LGA1700,ASRock,B760 Pro RS WiFi White,model-name-hint,https://download.asrock.com/Manual/B760%20Pro%20RS%20WiFi%20White.pdf,unverified,,,pdf-unavailable
+LGA1700,ASRock,B760 Pro RS/D4 WiFi,model-name-hint,https://download.asrock.com/Manual/B760%20Pro%20RSD4%20WiFi.pdf,unverified,,,pdf-unavailable
+LGA1700,ASRock,B760 Pro RS/D4 WiFi White,model-name-hint,https://download.asrock.com/Manual/B760%20Pro%20RSD4%20WiFi%20White.pdf,unverified,,,pdf-unavailable
+LGA1700,ASRock,B760I Lightning WiFi,model-name-hint,https://download.asrock.com/Manual/B760I%20Lightning%20WiFi.pdf,unverified,,,pdf-unavailable
+LGA1700,ASRock,B760M PG Lightning WiFi,model-name-hint,https://download.asrock.com/Manual/B760M%20PG%20Lightning%20WiFi.pdf,unverified,,,pdf-unavailable
+LGA1700,ASRock,B760M PG Riptide WiFi,model-name-hint,https://download.asrock.com/Manual/B760M%20PG%20Riptide%20WiFi.pdf,unverified,,,pdf-unavailable
+LGA1700,ASRock,B760M Pro RS WiFi White,model-name-hint,https://download.asrock.com/Manual/B760M%20Pro%20RS%20WiFi%20White.pdf,unverified,,,pdf-unavailable
+LGA1700,ASRock,B760M Pro RS/D4 Gen5 WiFi,model-name-hint,https://download.asrock.com/Manual/B760M%20Pro%20RSD4%20Gen5%20WiFi.pdf,unverified,,,pdf-unavailable
+LGA1700,ASRock,B760M Pro RS/D4 WiFi,model-name-hint,https://download.asrock.com/Manual/B760M%20Pro%20RSD4%20WiFi.pdf,unverified,,,pdf-unavailable
+LGA1700,ASRock,B760M Pro-A/D4 Gen5 WiFi,model-name-hint,https://download.asrock.com/Manual/B760M%20Pro-AD4%20Gen5%20WiFi.pdf,unverified,,,pdf-unavailable
+LGA1700,ASRock,B760M Steel Legend WiFi,model-name-hint,https://download.asrock.com/Manual/B760M%20Steel%20Legend%20WiFi.pdf,unverified,,,pdf-unavailable
+LGA1700,ASRock,B760M-ITX Gen5 WiFi,model-name-hint,https://download.asrock.com/Manual/B760M-ITX%20Gen5%20WiFi.pdf,unverified,,,pdf-unavailable
+LGA1700,ASRock,B760M-ITX/D4 WiFi,model-name-hint,https://download.asrock.com/Manual/B760M-ITXD4%20WiFi.pdf,unverified,,,pdf-unavailable
+LGA1700,ASRock,H610M-ITX/ac,model-name-hint,https://download.asrock.com/Manual/H610M-ITXac.pdf,unverified,,,pdf-unavailable
+LGA1700,ASRock,H610M-X D5 Gen5 WiFi,model-name-hint,https://download.asrock.com/Manual/H610M-X%20D5%20Gen5%20WiFi.pdf,unverified,,,pdf-unavailable
+LGA1700,ASRock,H610M/ac,model-name-hint,https://download.asrock.com/Manual/H610Mac.pdf,unverified,,,pdf-unavailable
+LGA1700,ASRock,H670M-ITX/ax,model-name-hint,https://download.asrock.com/Manual/H670M-ITXax.pdf,unverified,,,pdf-unavailable
+LGA1700,ASRock,H670M-ITX/ax R2.0,model-name-hint,https://download.asrock.com/Manual/H670M-ITXax%20R2.0.pdf,unverified,,,pdf-unavailable
+LGA1700,ASRock,Z690 Extreme WiFi 6E,model-name-hint,https://download.asrock.com/Manual/Z690%20Extreme%20WiFi%206E.pdf,unverified,,,pdf-unavailable
+LGA1700,ASRock,Z690 Steel Legend WiFi 6E,model-name-hint,https://download.asrock.com/Manual/Z690%20Steel%20Legend%20WiFi%206E.pdf,unverified,,,pdf-unavailable
+LGA1700,ASRock,Z690 Steel Legend WiFi 6E/D5,model-name-hint,https://download.asrock.com/Manual/Z690%20Steel%20Legend%20WiFi%206ED5.pdf,unverified,,,pdf-unavailable
+LGA1700,ASRock,Z690M-ITX/ax,model-name-hint,https://download.asrock.com/Manual/Z690M-ITXax.pdf,unverified,,,pdf-unavailable
+LGA1700,ASRock,Z790 Lightning WiFi,model-name-hint,https://download.asrock.com/Manual/Z790%20Lightning%20WiFi.pdf,unverified,,,pdf-unavailable
+LGA1700,ASRock,Z790 Nova WiFi,model-name-hint,https://download.asrock.com/Manual/Z790%20Nova%20WiFi.pdf,unverified,,,pdf-unavailable
+LGA1700,ASRock,Z790 Pro RS WiFi,model-name-hint,https://download.asrock.com/Manual/Z790%20Pro%20RS%20WiFi.pdf,unverified,,,pdf-unavailable
+LGA1700,ASRock,Z790 Riptide WiFi,model-name-hint,https://download.asrock.com/Manual/Z790%20Riptide%20WiFi.pdf,unverified,,,pdf-unavailable
+LGA1700,ASRock,Z790 Steel Legend WiFi,model-name-hint,https://download.asrock.com/Manual/Z790%20Steel%20Legend%20WiFi.pdf,unverified,,,pdf-unavailable
+LGA1700,ASRock,Z790I Lightning WiFi,model-name-hint,https://download.asrock.com/Manual/Z790I%20Lightning%20WiFi.pdf,unverified,,,pdf-unavailable
+LGA1700,ASRock,Z790M-ITX WiFi,model-name-hint,https://download.asrock.com/Manual/Z790M-ITX%20WiFi.pdf,unverified,,,pdf-unavailable
+LGA1851,ASRock,B860 Challenger WiFi,model-name-hint,https://download.asrock.com/Manual/B860%20Challenger%20WiFi.pdf,unverified,,,pdf-unavailable
+LGA1851,ASRock,B860 Challenger WiFi White,model-name-hint,https://download.asrock.com/Manual/B860%20Challenger%20WiFi%20White.pdf,unverified,,,pdf-unavailable
+LGA1851,ASRock,B860 Lightning WiFi,model-name-hint,https://download.asrock.com/Manual/B860%20Lightning%20WiFi.pdf,unverified,,,pdf-unavailable
+LGA1851,ASRock,B860 LiveMixer WiFi,model-name-hint,https://download.asrock.com/Manual/B860%20LiveMixer%20WiFi.pdf,unverified,,,pdf-unavailable
+LGA1851,ASRock,B860 Pro RS WiFi,model-name-hint,https://download.asrock.com/Manual/B860%20Pro%20RS%20WiFi.pdf,unverified,,,pdf-unavailable
+LGA1851,ASRock,B860 Pro-A WiFi,model-name-hint,https://download.asrock.com/Manual/B860%20Pro-A%20WiFi.pdf,unverified,,,pdf-unavailable
+LGA1851,ASRock,B860 Rock WiFi 7,model-name-hint,https://download.asrock.com/Manual/B860%20Rock%20WiFi%207.pdf,unverified,,,pdf-unavailable
+LGA1851,ASRock,B860 Steel Legend WiFi,model-name-hint,https://download.asrock.com/Manual/B860%20Steel%20Legend%20WiFi.pdf,unverified,,,pdf-unavailable
+LGA1851,ASRock,B860I Lightning WiFi,model-name-hint,https://download.asrock.com/Manual/B860I%20Lightning%20WiFi.pdf,unverified,,,pdf-unavailable
+LGA1851,ASRock,B860I WiFi,model-name-hint,https://download.asrock.com/Manual/B860I%20WiFi.pdf,unverified,,,pdf-unavailable
+LGA1851,ASRock,B860M Challenger WiFi,model-name-hint,https://download.asrock.com/Manual/B860M%20Challenger%20WiFi.pdf,unverified,,,pdf-unavailable
+LGA1851,ASRock,B860M Challenger WiFi White,model-name-hint,https://download.asrock.com/Manual/B860M%20Challenger%20WiFi%20White.pdf,unverified,,,pdf-unavailable
+LGA1851,ASRock,B860M Lightning WiFi,model-name-hint,https://download.asrock.com/Manual/B860M%20Lightning%20WiFi.pdf,unverified,,,pdf-unavailable
+LGA1851,ASRock,B860M LiveMixer WiFi,model-name-hint,https://download.asrock.com/Manual/B860M%20LiveMixer%20WiFi.pdf,unverified,,,pdf-unavailable
+LGA1851,ASRock,B860M Pro RS WiFi,model-name-hint,https://download.asrock.com/Manual/B860M%20Pro%20RS%20WiFi.pdf,unverified,,,pdf-unavailable
+LGA1851,ASRock,B860M Pro-A WiFi,model-name-hint,https://download.asrock.com/Manual/B860M%20Pro-A%20WiFi.pdf,unverified,,,pdf-unavailable
+LGA1851,ASRock,B860M Rock WiFi,model-name-hint,https://download.asrock.com/Manual/B860M%20Rock%20WiFi.pdf,unverified,,,pdf-unavailable
+LGA1851,ASRock,B860M Steel Legend WiFi,model-name-hint,https://download.asrock.com/Manual/B860M%20Steel%20Legend%20WiFi.pdf,unverified,,,pdf-unavailable
+LGA1851,ASRock,B860M-X Gen5 WiFi,model-name-hint,https://download.asrock.com/Manual/B860M-X%20Gen5%20WiFi.pdf,unverified,,,pdf-unavailable
+LGA1851,ASRock,B860M-X WiFi,model-name-hint,https://download.asrock.com/Manual/B860M-X%20WiFi.pdf,unverified,,,pdf-unavailable
+LGA1851,ASRock,H810M-X Gen5 WiFi,model-name-hint,https://download.asrock.com/Manual/H810M-X%20Gen5%20WiFi.pdf,unverified,,,pdf-unavailable
+LGA1851,ASRock,H810M-X WiFi,model-name-hint,https://download.asrock.com/Manual/H810M-X%20WiFi.pdf,unverified,,,pdf-unavailable
+LGA1851,ASRock,Z890 Lightning WiFi,model-name-hint,https://download.asrock.com/Manual/Z890%20Lightning%20WiFi.pdf,unverified,,,pdf-unavailable
+LGA1851,ASRock,Z890 LiveMixer WiFi,model-name-hint,https://download.asrock.com/Manual/Z890%20LiveMixer%20WiFi.pdf,unverified,,,pdf-unavailable
+LGA1851,ASRock,Z890 Nova WiFi,model-name-hint,https://download.asrock.com/Manual/Z890%20Nova%20WiFi.pdf,unverified,,,pdf-unavailable
+LGA1851,ASRock,Z890 Pro RS WiFi,model-name-hint,https://download.asrock.com/Manual/Z890%20Pro%20RS%20WiFi.pdf,unverified,,,pdf-unavailable
+LGA1851,ASRock,Z890 Pro RS WiFi White,model-name-hint,https://download.asrock.com/Manual/Z890%20Pro%20RS%20WiFi%20White.pdf,unverified,,,pdf-unavailable
+LGA1851,ASRock,Z890 Pro-A WiFi,model-name-hint,https://download.asrock.com/Manual/Z890%20Pro-A%20WiFi.pdf,unverified,,,pdf-unavailable
+LGA1851,ASRock,Z890 Riptide WiFi,model-name-hint,https://download.asrock.com/Manual/Z890%20Riptide%20WiFi.pdf,unverified,,,pdf-unavailable
+LGA1851,ASRock,Z890 Steel Legend WiFi,model-name-hint,https://download.asrock.com/Manual/Z890%20Steel%20Legend%20WiFi.pdf,unverified,,,pdf-unavailable
+LGA1851,ASRock,Z890I Nova WiFi,model-name-hint,https://download.asrock.com/Manual/Z890I%20Nova%20WiFi.pdf,unverified,,,pdf-unavailable
+LGA1851,ASRock,Z890M Riptide WiFi,model-name-hint,https://download.asrock.com/Manual/Z890M%20Riptide%20WiFi.pdf,unverified,,,pdf-unavailable
+AM5,ASRock,X870E Taichi,pending,https://download.asrock.com/Manual/X870E%20Taichi.pdf,oem-spec-wlan-listed,,7,
