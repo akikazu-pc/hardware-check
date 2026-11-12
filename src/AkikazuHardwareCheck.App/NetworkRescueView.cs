@@ -39,6 +39,13 @@ internal sealed class NetworkRescueView : UserControl
     private readonly ListView _pciDevices = ListViewTable.Create();
     private readonly TabPage _pciPage = new();
     private readonly TabPage _modulesPage = new();
+    private readonly TabPage _catalogPage = new();
+    private readonly TextBox _catalogQuery = new() { Dock = DockStyle.Top };
+    private readonly Label _catalogStatus = Ui.Label();
+    private readonly ListBox _catalogResults = new() { Dock = DockStyle.Fill };
+    private readonly TextBox _catalogDetails = new() { Dock = DockStyle.Fill, Multiline = true, ReadOnly = true, ScrollBars = ScrollBars.Vertical };
+    private readonly LinkLabel _catalogDriverPage = new() { AutoSize = true };
+    private readonly LinkLabel _catalogSource = new() { AutoSize = true };
     private NetworkDeviceDiagnostic? _diagnostic;
     private string? _scanStatusKey;
     private Translator _t;
@@ -77,6 +84,10 @@ internal sealed class NetworkRescueView : UserControl
             }
         };
         _modelLink.LinkClicked += (_, _) => OpenOfficialPage();
+        _catalogQuery.TextChanged += (_, _) => SearchCatalog();
+        _catalogResults.SelectedIndexChanged += (_, _) => ShowCatalogDetails();
+        _catalogDriverPage.LinkClicked += (_, _) => OpenCatalogPage(driverPage: true);
+        _catalogSource.LinkClicked += (_, _) => OpenCatalogPage(driverPage: false);
         _adapterLink.LinkClicked += async (_, _) =>
         {
             if (_bundledWifiNames.Length > 0)
@@ -140,6 +151,12 @@ internal sealed class NetworkRescueView : UserControl
         _refresh.Text = t["rescue.refresh"];
         _modulesPage.Text = t["rescue.modules"];
         _pciPage.Text = t["rescue.pci"];
+        _catalogPage.Text = t["rescue.catalog"];
+        _catalogQuery.PlaceholderText = t["rescue.searchModel"];
+        _catalogQuery.AccessibleName = _catalogQuery.PlaceholderText;
+        _catalogDriverPage.Text = t["rescue.officialDrivers"];
+        _catalogSource.Text = t["rescue.catalogSource"];
+        SearchCatalog();
         _scan.Text = t["rescue.scan"];
         _export.Text = t["rescue.export"];
         _preview.Text = t["rescue.previewInf"];
@@ -171,7 +188,7 @@ internal sealed class NetworkRescueView : UserControl
 
         var status = LocalNetworkStatus.Read();
         _installedWifi = string.Join(" / ", status.Adapters.Where(adapter => adapter.Kind == LocalNetworkKind.Wireless)
-            .Select(adapter => adapter.Name).Distinct());
+            .Select(adapter => adapter.Description ?? adapter.Name).Distinct());
         UpdateDriverLinks();
         _adapters.BeginUpdate();
         _adapters.Items.Clear();
@@ -317,7 +334,12 @@ internal sealed class NetworkRescueView : UserControl
 
     private void OpenOfficialPage()
     {
-        if (_model?.OfficialPage is { } page)
+        OpenPage(_model?.OfficialPage);
+    }
+
+    private void OpenPage(string? page)
+    {
+        if (page is not null)
         {
             try
             {
@@ -328,6 +350,70 @@ internal sealed class NetworkRescueView : UserControl
                 ShowInstallResult("rescue.onlineFailed");
             }
         }
+    }
+
+    private void SearchCatalog()
+    {
+        var selected = (_catalogResults.SelectedItem as CatalogResult)?.Entry;
+        var results = RescueModelCatalog.Search(_catalogQuery.Text);
+        _catalogResults.BeginUpdate();
+        _catalogResults.Items.Clear();
+        foreach (var entry in results)
+        {
+            var qualifier = entry.Type == "laptop-os-record" ? entry.Windows : entry.Platform;
+            var title = string.Join(" · ", new[] { entry.Brand, entry.Model, qualifier }.Where(value => value.Length > 0));
+            _catalogResults.Items.Add(new CatalogResult(entry, title));
+        }
+        _catalogResults.EndUpdate();
+        if (selected is not null)
+        {
+            _catalogResults.SelectedItem = _catalogResults.Items.Cast<CatalogResult>()
+                .FirstOrDefault(result => result.Entry == selected);
+        }
+        _catalogStatus.Text = string.IsNullOrWhiteSpace(_catalogQuery.Text) ? "" :
+            results.Count == 0 ? _t["rescue.catalogNoResults"] : _t["rescue.catalogResults", results.Count];
+        ShowCatalogDetails();
+    }
+
+    private void ShowCatalogDetails()
+    {
+        var entry = (_catalogResults.SelectedItem as CatalogResult)?.Entry;
+        _catalogDriverPage.Visible = entry?.DriverPage is not null;
+        _catalogSource.Visible = entry?.Source is not null && entry.Source != entry.DriverPage;
+        _catalogDetails.Text = entry is null ? "" : string.Join(Environment.NewLine, new[]
+        {
+            $"{entry.Brand}  {entry.Model}",
+            entry.IsSeries ? _t["rescue.catalogSeries"] : "",
+            entry.Platform,
+            entry.Type == "laptop-os-record" ? entry.Windows : "",
+            $"{_t["rescue.wifiModel"]}  {(entry.Module.Length == 0 || entry.Module == "pending" ? _t["rescue.catalogPending"] : entry.Module)}",
+            $"Windows 10 x64  {CatalogEvidence(entry.Windows10Evidence)}",
+            $"Windows 11 x64  {CatalogEvidence(entry.Windows11Evidence)}",
+        }.Where(value => value.Length > 0));
+    }
+
+    private string CatalogEvidence(string evidence) => _t[evidence switch
+    {
+        "oem-package-indexed" => "rescue.catalogIndexed",
+        "oem-wlan-listed" => "rescue.catalogListed",
+        "oem-driver-pack-listed" => "rescue.catalogDeployPack",
+        "oem-os-upgrade-tested" => "rescue.catalogOsTested",
+        "no-factory-wifi" => "rescue.catalogNoWifi",
+        "outside-x64-record" => "rescue.catalogOutsideX64",
+        _ => "rescue.catalogPending",
+    }];
+
+    private void OpenCatalogPage(bool driverPage)
+    {
+        if (_catalogResults.SelectedItem is CatalogResult { Entry: var entry })
+        {
+            OpenPage((driverPage ? entry.DriverPage : entry.Source)?.AbsoluteUri);
+        }
+    }
+
+    private sealed record CatalogResult(RescueCatalogModel Entry, string Title)
+    {
+        public override string ToString() => Title;
     }
 
     private void ExportDiagnostics()
@@ -924,12 +1010,42 @@ internal sealed class NetworkRescueView : UserControl
         _pciPage.Controls.Add(scanLayout);
         _modulesPage.Controls.Add(_moduleList);
         tabs.TabPages.Add(_pciPage);
+        _catalogPage.Controls.Add(BuildCatalogLayout());
+        tabs.TabPages.Add(_catalogPage);
+        tabs.SelectedIndexChanged += (_, _) =>
+        {
+            var browsing = tabs.SelectedTab == _catalogPage;
+            root.SuspendLayout();
+            _networkHeading.Visible = _adapters.Visible = !browsing;
+            root.RowStyles[3].SizeType = browsing ? SizeType.Absolute : SizeType.Percent;
+            root.RowStyles[3].Height = browsing ? 0 : 40;
+            root.ResumeLayout(performLayout: true);
+        };
         if (_portableDriverDirectory is null)
         {
             tabs.TabPages.Add(_modulesPage);
         }
         root.Controls.Add(tabs, 0, 4);
         return root;
+    }
+
+    private Control BuildCatalogLayout()
+    {
+        var layout = new TableLayoutPanel { Dock = DockStyle.Fill, ColumnCount = 1, RowCount = 5, Padding = new Padding(Ui.SPACING) };
+        layout.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+        layout.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+        layout.RowStyles.Add(new RowStyle(SizeType.Percent, 60));
+        layout.RowStyles.Add(new RowStyle(SizeType.Percent, 40));
+        layout.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+        var links = new FlowLayoutPanel { Dock = DockStyle.Fill, AutoSize = true };
+        links.Controls.Add(_catalogDriverPage);
+        links.Controls.Add(_catalogSource);
+        layout.Controls.Add(_catalogQuery, 0, 0);
+        layout.Controls.Add(_catalogStatus, 0, 1);
+        layout.Controls.Add(_catalogResults, 0, 2);
+        layout.Controls.Add(_catalogDetails, 0, 3);
+        layout.Controls.Add(links, 0, 4);
+        return layout;
     }
 
     private void FitNote()

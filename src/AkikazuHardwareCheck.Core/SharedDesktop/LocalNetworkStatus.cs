@@ -16,7 +16,8 @@ public sealed record LocalNetworkAdapter(
     LocalNetworkKind Kind,
     bool IsUp,
     long SpeedBitsPerSecond,
-    bool HasGateway);
+    bool HasGateway,
+    string? Description = null);
 
 /// <summary>
 /// Local-only network facts for the rescue page. It enumerates adapters and gateways and never sends a packet, so it
@@ -64,7 +65,8 @@ public sealed record LocalNetworkStatus(bool IsNetworkAvailable, IReadOnlyList<L
                 NetworkCollector.IsWirelessCard(adapter.Description) ? LocalNetworkKind.Wireless : LocalNetworkKind.Wired,
                 isUp,
                 adapter.Speed,
-                hasGateway));
+                hasGateway,
+                adapter.Description));
         }
 
         return new LocalNetworkStatus(
