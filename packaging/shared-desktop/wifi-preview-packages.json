@@ -66,6 +66,14 @@
       "driverDirectory": "Archer_T3U_Plus_V1_Setup/plugins/Driver Files/Driver",
       "archiveLayout": "direct",
       "scope": "TP-Link Archer T3U Plus V1/V1.6 USB; vendor lists Windows 10/11 x64"
+    },
+    {
+      "id": "qualcomm-wifi7",
+      "version": "3.1.0.1571",
+      "source": "https://download.gigabyte.com/FileList/Driver/mb_driver_2686_qualcomm_3.1.0.1571.zip?v=178bb71655f20275bdc06eafb817aea6",
+      "archiveSha256": "EB846CDE735A836C17D25A298363C05C283800970EE8DF2D2496A389BD04DD16",
+      "driverDirectory": "WLAN",
+      "scope": "GIGABYTE X870E AORUS MASTER Qualcomm Wi-Fi 7; vendor lists Windows 11 x64 only"
     }
   ]
 }

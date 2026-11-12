@@ -1,0 +1,6 @@
+"platform","manufacturer","model","wlan","evidence","source","exactIds","install"
+"LGA1851","MSI","MAG Z890 TOMAHAWK WIFI","Intel Killer BE1750x","oem-spec-module","https://www.msi.com/Motherboard/MAG-Z890-TOMAHAWK-WIFI/Specification","pending","pending"
+"AM5","GIGABYTE","X870E AORUS MASTER","Qualcomm Wi-Fi 7; official package 3.1.0.1571","oem-driver-list","https://www.gigabyte.com/Motherboard/X870E-AORUS-MASTER/Support/sp","pending","pending"
+"AM5","GIGABYTE","B850M AORUS ELITE WIFI7 ICE-P","Realtek RTL8922AE","oem-manual-module","https://download.gigabyte.com/FileList/Manual/mb_manual_b850m-aorus-elite-wifi7-ice-p_1102_e.pdf","pending","pending"
+"LGA1851","GIGABYTE","Z890 EAGLE WIFI7 rev. 1.0","MediaTek MT7925; Windows 11","oem-manual-module","https://download.gigabyte.com/FileList/Manual/mb_manual_z890-eagle-series_1002_j.pdf","pending","pending"
+"LGA1851","GIGABYTE","Z890 EAGLE WIFI7 rev. 1.1","Realtek RTL8922AE; Windows 11","oem-manual-module","https://download.gigabyte.com/FileList/Manual/mb_manual_z890-eagle-series_1002_j.pdf","pending","pending"
