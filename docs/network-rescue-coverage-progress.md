@@ -1,17 +1,17 @@
 # 统一离线安装包覆盖进度
 
-[逐型号 Wi-Fi 缺口清单](network-rescue-model-gaps.csv)记录当前已发现的 1,228 条主板型号或修订、912 条笔记本系列或型号、1 条一体机型号，以及 167 条戴尔系统与 Windows 组合。同一台笔记本可出现在多个系统组合。
+[逐型号 Wi-Fi 缺口清单](network-rescue-model-gaps.csv)记录当前已发现的 1,234 条主板型号或修订、912 条笔记本系列或型号、1 条一体机型号，以及 167 条戴尔系统与 Windows 组合。同一台笔记本可出现在多个系统组合。
 
 清单分别记录 `windows10X64Evidence` 和 `windows11X64Evidence`。`oem-package-indexed` 表示原厂包已入索引，`oem-wlan-listed` 表示原厂资料列出无线驱动，`oem-driver-pack-listed` 表示原厂列出该系统的整机部署包，仍需检查包内 WLAN 驱动。`oem-os-upgrade-tested` 表示原厂列出 Windows 11 升级测试，WLAN 驱动仍待核对。`pending` 表示该系统的证据待核。仅预留接口和 ARM64 组合另有标记。原厂下载索引目前有 7 个包覆盖 Windows 10 x64，16 个包覆盖 Windows 11 x64，部分包另有最低构建号要求。[原厂下载索引](network-rescue-driver-index.csv)
 
 | 主板范围 | 已发现的型号或修订 |
 | --- | ---: |
-| AM4 | 246 |
-| AM5 | 363 |
-| LGA1700 | 437 |
-| LGA1851 | 182 |
+| AM4 | 249 |
+| AM5 | 364 |
+| LGA1700 | 438 |
+| LGA1851 | 183 |
 
-主板中 1,112 条还需确认出厂无线状态、模块及驱动，112 条已有模块或驱动候选，仍需把所有出厂变体对应到精确 ID 和断网安装结果。B850M AYW GAMING WIFI-CSM 已确认板载 Wi-Fi，仍缺芯片证据。ROG STRIX B860-G GAMING WIFI 的本机 MT7925 子系统已匹配签名 INF，仍需核对其他出厂配置及断网安装。另有两款已确认仅预留接口。[华硕 B860-G 驱动页](https://www.asus.com/tw/supportonly/rog%20strix%20b860-g%20gaming%20wifi/helpdesk_download/)
+主板中 1,112 条还需确认出厂无线状态、模块及驱动，118 条已有模块或驱动候选，仍需把所有出厂变体对应到精确 ID 和断网安装结果。B850M AYW GAMING WIFI-CSM 已确认板载 Wi-Fi，仍缺芯片证据。ROG STRIX B860-G GAMING WIFI 的本机 MT7925 子系统已匹配签名 INF，仍需核对其他出厂配置及断网安装。另有两款已确认仅预留接口。[华硕 B860-G 驱动页](https://www.asus.com/tw/supportonly/rog%20strix%20b860-g%20gaming%20wifi/helpdesk_download/)
 
 笔记本记录包括华硕 82 条 ROG/TUF 系列和 3 条型号证据、联想拯救者 15 条型号证据、Alienware 5 条型号证据、惠普 309 条商用笔记本或二合一型号、宏碁 398 条系列或型号及微星 100 条系列或型号。戴尔的 167 条系统组合来自 52 个目录型号，含 Windows 11 x64 127 条、Windows 10 x64 39 条及 Windows 11 ARM64 1 条。完整的地区 SKU、出厂网卡组合和实机安装数据仍待采集。
 
@@ -84,7 +84,7 @@ Alienware 16 Aurora AC16250（0D35）的三个 Ubuntu 认证配置均列出 MT79
 
 ### 离线归档审计与下一批型号
 
-原 6.28 GiB ZIP 的 12,405 个文件均可完整读取并通过 CRC 校验。按内容 SHA-256 分组后有 7,170 份唯一内容，5,235 个重复副本。重复副本占原始文件约 2.94 GiB，在 ZIP 中约占 1.69 GiB。另有约 0.99 GiB 为已解包驱动对应的原始下载归档。固实 7z 成品为 1.95 GiB，减少 68.96%。全部 12,373 个驱动文件的路径、大小和 CRC 与原 ZIP 一致。索引记录 14 个已收录的原厂包。[驱动下载索引](network-rescue-driver-index.csv)
+原 6.28 GiB ZIP 的 12,405 个文件均可完整读取并通过 CRC 校验。按内容 SHA-256 分组后有 7,170 份唯一内容，5,235 个重复副本。重复副本占原始文件约 2.94 GiB，在 ZIP 中约占 1.69 GiB。另有约 0.99 GiB 为已解包驱动对应的原始下载归档。固实 7z 成品为 1.95 GiB，减少 68.96%。全部 12,373 个驱动文件的路径、大小和 CRC 与原 ZIP 一致。这次历史归档审计时，索引记录 14 个已收录的原厂包。[驱动下载索引](network-rescue-driver-index.csv)
 
 Windows 11 构建 26300 的最新库审计覆盖 1,666 个 INF。其中 682 个匹配当前系统的网络设备 ID，595 个通过签名检查。去重后签名有效的 ID 有 4,566 个 PCI ID 和 1,228 个 USB ID。其余 INF 仍需按系统、架构及驱动组件用途核对。
 
@@ -94,6 +94,8 @@ Windows 11 构建 26300 的最新库审计覆盖 1,666 个 INF。其中 682 个�
 
 复查 B850M AYW GAMING WIFI-CSM 的华硕全球、南非及沙特支持页。页面可打开，华硕型号查询接口返回空下载地址。用普通版的原厂 MediaTek 3.5.0.1349 ZIP 做候选比对，归档 SHA-256 与华硕公布值一致，`mtkwl6ex.inf` 通过签名校验。Windows 11 构建 26300 匹配了 75 个精确子系统 ID，涉及 MT7902、MT7920、MT7921、MT7922、RZ608 和 RZ616。普通版 INF 可用于核对实机硬件 ID，CSM 出厂模块仍需独立证据。[CSM 支持页](https://www.asus.com/motherboards-components/motherboards/csm/b850m-ayw-gaming-wifi-csm/helpdesk_download/?model2Name=B850M-AYW-GAMING-WIFI-CSM) · [普通版支持页](https://www.asus.com/motherboards-components/motherboards/others/b850m-ayw-gaming-wifi/helpdesk_download/?model2Name=B850M-AYW-GAMING-WIFI) · [华硕原厂 ZIP](https://dlcdnets.asus.com/pub/ASUS/mb/08WIRELESS/DRV_WiFi_MediaTek_SZ-TSD_W11_64_V3501349_20260305R.zip)
 
+
+逐型号缺口清单已补入 6 条技嘉原厂包索引记录，覆盖 AM4、AM5、LGA1700 和 LGA1851。其中 5 条有 Windows 10/11 x64 的原厂包，Z890 AORUS ELITE WIFI7 的两种候选驱动包标注 Windows 11 x64。出厂网卡 SUBSYS 与断网安装仍待核对。
 
 ## 有线联网救援
 
@@ -107,3 +109,5 @@ Windows 11 构建 26300 的最新库审计覆盖 1,666 个 INF。其中 682 个�
 | Windows 11 x64 | [11.29.50.0202](https://download.gigabyte.com/FileList/Driver/mb_driver_654_w11_11.29.50.0202.zip) | `07013117E12AB44C0AFADC2D898ED4904121E56C3579DF33CE7E3F687F43AE1F` | `mbdriver/WIN11/64` | 8 份有效 |
 
 当前离线完整版随包提供按系统分开的有线驱动目录。普通 Windows 的「安装驱动」入口和 WinPE 入口都按目标 Windows 10/11 x64 选择对应目录。对应主板的实机断网安装和联网恢复待验。上述样本单独计入有线驱动记录。
+
+同源重建的本地完整版 ZIP（5.33 GiB）和 7z（1.56 GiB）已通过逐文件 SHA-256 校验。两份归档均含 WinPE 入口和 1,676 个 INF，其中 Windows 10 有线目录 1 个、Windows 11 有线目录 8 个。
