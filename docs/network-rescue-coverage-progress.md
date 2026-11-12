@@ -1,5 +1,7 @@
 # 统一离线安装包覆盖进度
 
+继续维护时参见[采集与核验交接](network-rescue-handoff.md)。
+
 [逐型号 Wi-Fi 缺口清单](network-rescue-model-gaps.csv)记录当前已发现的 1,237 条主板型号或修订、912 条笔记本系列或型号、1 条一体机型号，以及 167 条戴尔系统与 Windows 组合。同一台笔记本可出现在多个系统组合。
 
 清单分别记录 `windows10X64Evidence` 和 `windows11X64Evidence`。`oem-package-indexed` 表示原厂包已入索引，`oem-wlan-listed` 表示原厂资料列出无线驱动，`oem-driver-pack-listed` 表示原厂列出该系统的整机部署包，仍需检查包内 WLAN 驱动。`oem-os-upgrade-tested` 表示原厂列出 Windows 11 升级测试，WLAN 驱动仍待核对。`pending` 表示该系统的证据待核。`oem-wlan-not-supported` 表示原厂明确说明该系统没有该出厂无线模块的驱动。仅预留接口和 ARM64 组合另有标记。原厂下载索引目前有 19 个包标注支持 Windows 10 x64，33 个包标注支持 Windows 11 x64，部分包另有最低构建号要求。[原厂下载索引](network-rescue-driver-index.csv)
