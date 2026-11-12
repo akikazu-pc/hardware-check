@@ -125,13 +125,14 @@ def apply_oem_evidence(path, audit):
         rows, fields = list(reader), reader.fieldnames
     updates = defaultdict(int)
     for row in rows:
-        if row["type"] != "motherboard" or row["brand"] != "ASUS" or row["wlanEvidence"] not in {
-            "manual-module-candidate", "oem-spec-wlan-listed", "oem-spec-module"
-        }:
+        if row["type"] != "motherboard" or row["brand"] != "ASUS":
             continue
+        factory_wlan = row["wlanEvidence"] in {"manual-module-candidate", "oem-spec-wlan-listed", "oem-spec-module"}
         for system in SYSTEMS:
             field = f"windows{system}X64Evidence"
-            if row[field] == "pending" and (status := confirmed.get((row["platform"], row["model"], system))):
+            status = confirmed.get((row["platform"], row["model"], system))
+            two_omissions = status == "oem-wlan-not-listed" and row["wlanEvidence"] == "oem-spec-wlan-not-listed"
+            if row[field] == "pending" and status and (factory_wlan or two_omissions):
                 row[field] = status
                 updates[f"{system}:{status}"] += 1
     if updates:
@@ -153,7 +154,7 @@ def main():
     parser.add_argument("output", type=Path)
     parser.add_argument("--model-list", type=Path, help="Optional CSV containing platform and model columns.")
     parser.add_argument("--all-pending", action="store_true", help="Query every pending ASUS model and system in the catalog")
-    parser.add_argument("--apply-oem-evidence", action="store_true", help="Record checked OEM listing evidence for confirmed factory Wi-Fi")
+    parser.add_argument("--apply-oem-evidence", action="store_true", help="Record checked OEM listing evidence with matching factory specifications")
     parser.add_argument("--refresh", action="store_true", help="Recheck successful pending model/OS queries.")
     args = parser.parse_args()
     catalog = {model_key(row["model"]): row["officialUrl"] for row in read(args.catalog)}

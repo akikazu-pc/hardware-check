@@ -27,7 +27,7 @@ def clean(value):
 
 
 def model_key(value):
-    return re.sub(r"[^A-Z0-9]", "", value.upper())
+    return re.sub(r"[^A-Z0-9+]", "", value.upper())
 
 
 def inspect(row):
