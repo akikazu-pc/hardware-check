@@ -270,6 +270,15 @@ internal sealed class NetworkRescueView : UserControl
         }
 
         using var folder = new FolderBrowserDialog { Description = _t["rescue.selectFolder"], ShowNewFolderButton = false };
+        if (_modules.FirstOrDefault(module => module.Module == SharedModuleId.NetworkRescue) is { } rescue)
+        {
+            var bundledPacks = Path.Combine(rescue.InstallRoot, "driver-packs");
+            if (Directory.Exists(bundledPacks))
+            {
+                folder.SelectedPath = bundledPacks;
+            }
+        }
+
         if (folder.ShowDialog(this) != DialogResult.OK)
         {
             return;

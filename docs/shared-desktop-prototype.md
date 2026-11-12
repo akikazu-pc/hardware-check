@@ -226,3 +226,13 @@ powershell -NoProfile -File scripts/prototype/prepare-realtek-wifi-pack.ps1 -Ven
 ```
 
 准备脚本固定 ZIP 和 INF 的 SHA-256，保留完整的驱动子目录和版权声明。它不执行安装，也不生成正式离线安装器。
+
+## 可安装的 ZIP 预览
+
+在安装了 .NET 10 SDK 的构建机上，使用运行于 .NET 10 的 PowerShell 运行：
+
+```powershell
+pwsh -NoProfile -File scripts/publish-network-rescue-bundles.ps1 -RealtekVendorZip <官方下载ZIP>
+```
+
+输出位于 `artifacts/network-rescue`。不传入厂商 ZIP 时仅生成精简版。离线预览版随附已准备好的 Realtek 包。两个 ZIP 都包含自包含 x64 主程序、安装入口和独立卸载注册所需文件。目标电脑解压后运行 `Install.cmd`。离线包安装到断网急救模块目录，驱动目录选择器默认打开该位置。精简版再次安装时保留已有驱动目录。安装入口使用按用户安装脚本，MSI 签名、正式完整版和安装实机验收仍在发布阶段处理。
