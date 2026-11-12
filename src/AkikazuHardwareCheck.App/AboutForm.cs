@@ -12,7 +12,7 @@ internal sealed class AboutForm : Form
     private const string WEBSITE = "https://www.akikazu.co.jp/";
     public const string REPOSITORY = "https://github.com/akikazu-pc/hardware-check";
 
-    public AboutForm(Translator t, Font font)
+    public AboutForm(Translator t, Font font, string? productName = null)
     {
         Font = font;
         Icon = Ui.AppIcon;
@@ -25,7 +25,7 @@ internal sealed class AboutForm : Form
         AutoSizeMode = AutoSizeMode.GrowAndShrink;
 
         var title = Ui.Label(isBold: true);
-        title.Text = t["ui.appName"];
+        title.Text = productName ?? t["ui.appName"];
 
         var table = new TableLayoutPanel { AutoSize = true, ColumnCount = 2, Padding = new Padding(Ui.SPACING * 2) };
         table.Controls.Add(title);

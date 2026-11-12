@@ -50,3 +50,11 @@
 | Mono.Posix.NETStandard | 包内没有许可证文本，只有链接，该链接指向 Mono 项目的 `LICENSE` 文件。文件说明运行时和类库总体为 MIT，但没有点名这个包 | 采用 Mono 总体许可证并保留链接；介意时向 Mono 项目确认 |
 | PawnIO 再分发 | 依据安装程序自身的再分发声明；GPL 驱动的二进制分发已附许可证全文和源码地址 | 公开下载前请法律审阅 |
 | LGPL-2.1 义务 | 已附许可证全文和源码地址。LibreHardwareMonitorLib 0.9.6 嵌入模块对应的确切版本未核实，单文件发布也会影响替换模块的便利性 | 公开下载前请法律审阅，并确定嵌入模块对应的源码版本 |
+
+
+## Noto Sans CJK
+
+The full offline Network Rescue ZIP includes the unmodified Noto Sans CJK Regular font collection
+from [Noto Sans CJK Sans2.004](https://github.com/notofonts/noto-cjk/releases/tag/Sans2.004)
+for the WinPE wizard. It is distributed under the SIL Open Font License 1.1.
+The font license is included alongside the collection in `pe-fonts/NotoSansCJK-OFL.txt`.

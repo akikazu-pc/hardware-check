@@ -287,10 +287,17 @@ pwsh -NoProfile -File scripts/publish-network-rescue-bundles.ps1 -IncludeCatalog
 
 ## 离线完整版在 Windows 与 WinPE 中使用
 
-将同一个离线完整版 ZIP 解压到 U 盘，两种环境都运行 `Run-Network-Rescue.cmd`。启动脚本自动检测 WinPE。在普通 Windows 打开急救窗口，在 x64 WinPE 进入键盘操作的修复入口。PE 入口为原生 x64 控制台程序，运行时不依赖 WMI、PowerShell 或 .NET。PE 控制台提示目前为英文。
+将同一个离线完整版 ZIP 解压到 U 盘，两种环境都运行 `Run-Network-Rescue.cmd`。启动脚本自动检测 WinPE。在普通 Windows 打开急救窗口，在 x64 WinPE 进入键盘操作的修复入口。PE 入口为原生 x64 图形向导，运行时不依赖 WMI、PowerShell 或 .NET。普通 Windows 和 PE 的顶部工具栏都支持日语、简体中文、繁体中文和英语。需要英文控制台时，在 PE 运行 `Run-Network-Rescue.cmd --cli`。
 
-PE 入口列出可访问的固定磁盘分区中识别出的 Windows 10/11 x64 系统。它用内核版本区分系统和匹配 INF 最低构建号，启用包更新的 Windows 可能显示较早的基线内核构建号。若找不到预期分区，先检查 PE 是否能读取磁盘，或在具备相应组件的 PE 中解锁 BitLocker。
+在 PE 的「工具」中选择「修复已有 Windows」，工具列出可访问的固定磁盘分区中的 Windows 10/11 x64 系统。它用内核版本区分系统和匹配 INF 最低构建号，启用包更新的 Windows 可能显示较早的基线内核构建号。若找不到预期分区，先检查 PE 是否能读取磁盘，或在具备相应组件的 PE 中解锁 BitLocker。
 
 选择目标后，程序自动读取本机 PCI/USB 硬件 ID，共用完整版的 SDIO WLAN 库和原厂驱动目录。按目标系统构建号筛选原厂包，按目标系统选择随包提供的有线补充目录。只列出目标系统适用的网络类签名 INF 精确匹配项。按 Y 确认后调用系统 DISM 写入选中的离线 Windows，并列出目标驱动存储。重启进入该 Windows 后验证驱动绑定和联网。
 
-生成完整版需要 MSVC x64 和 Windows SDK，打包脚本自动构建 PE 入口。可选的 `-PeEthernetPackDirectory` 指向两份已验证的 Windows 10/11 Realtek 有线 ZIP 及对应 SHA-256 文件的目录。真实 WinPE 启动、离线 DISM 写入、重启后的实际联网和全新安装流程需分别验收。
+生成完整版需要 MSVC x64 和 Windows SDK，打包脚本自动构建 PE 入口。可选的 `-PeEthernetPackDirectory` 指向两份已验证的 Windows 10/11 Realtek 有线 ZIP 及对应 SHA-256 文件的目录。Windows 11 的 PE 离线写入已在隔离虚拟机验收。Windows 10 目标和实体网卡重启联网仍待验收。
+
+
+### 全新安装时准备联网驱动
+
+从独立 x64 WinPE 启动离线完整版，选择「安装 Windows 并准备联网驱动」。工具检查本机网卡及所连接的 Windows 安装介质，根据安装映像中的版本与架构筛选签名驱动。选择后生成只包含驱动路径的应答文件并启动微软安装器，用户在安装器里选择目标磁盘。安装期间保留介质连接。首版全新安装入口支持单 INF 驱动包。包含多个 INF 的目录保留在现有系统修复或首次联网页补装流程中。
+
+便携 Windows 窗口顶部的「工具」收纳刷新、诊断导出、INF 预览和手动选择目录。「帮助」沿用 Hardware Check 的指南链接和关于窗口。PE 离线包内置 Noto Sans CJK 字体，英文 PE 也能显示日语、简体中文和繁体中文。

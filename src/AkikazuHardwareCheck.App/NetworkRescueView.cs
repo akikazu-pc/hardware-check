@@ -6,27 +6,28 @@ using AkikazuHardwareCheck.Core.SharedDesktop;
 
 namespace AkikazuHardwareCheck.App;
 
-/// <summary>
-/// The rescue module's page. It reports local adapter and module facts only; it sends no packets, so it remains
-/// useful when the internet is down. Driver installation and rollback are deliberately not part of this prototype.
-/// </summary>
 internal sealed class NetworkRescueView : UserControl
 {
     private const float HEADING_FONT_SIZE = 12f;
 
     private readonly IReadOnlyList<InstalledModule> _modules;
     private readonly string? _portableDriverDirectory;
+    private readonly ToolStrip _toolbar = new() { GripStyle = ToolStripGripStyle.Hidden, TabStop = true };
+    private readonly ToolStripDropDownButton _tools = new();
+    private readonly ToolStripDropDownButton _help = new();
+    private readonly ToolStripMenuItem _guide = new();
+    private readonly ToolStripMenuItem _about = new();
     private readonly Label _heading = Ui.Label(isBold: true);
     private readonly Label _note = Ui.Label();
     private readonly Label _networkHeading = Ui.Label(isBold: true);
-    private readonly Button _refresh = Ui.Button();
+    private readonly ToolStripMenuItem _refresh = new();
     private readonly ListView _adapters = ListViewTable.Create();
     private readonly ListView _moduleList = ListViewTable.Create();
     private readonly Button _scan = Ui.Button();
-    private readonly Button _export = Ui.Button();
-    private readonly Button _preview = Ui.Button();
-    private readonly Button _searchFolder = Ui.Button();
-    private readonly Button _online = Ui.Button();
+    private readonly ToolStripMenuItem _export = new();
+    private readonly ToolStripMenuItem _preview = new();
+    private readonly ToolStripMenuItem _searchFolder = new();
+    private readonly ToolStripMenuItem _online = new();
     private readonly Button _install = Ui.Button();
     private readonly LinkLabel _modelLink = new() { AutoSize = true };
     private readonly LinkLabel _adapterLink = new() { AutoSize = true };
@@ -144,7 +145,14 @@ internal sealed class NetworkRescueView : UserControl
         _moduleList.Columns.Add("", 120);
         _moduleList.Columns.Add("", 120);
 
+        _tools.DropDownItems.AddRange([_refresh, _export, _preview, _searchFolder]);
+        if (_portableDriverDirectory is null && DistributionProfile.Current.Channel != DistributionChannel.Store)
+        {
+            _tools.DropDownItems.Add(_online);
+        }
+        _toolbar.Items.Add(_tools);
         Controls.Add(BuildLayout());
+        Controls.Add(_toolbar);
         ListViewTable.EnableSort(_adapters);
         ListViewTable.EnableSort(_moduleList);
         ListViewTable.EnableColumnMenu(_adapters, _t);
@@ -162,6 +170,18 @@ internal sealed class NetworkRescueView : UserControl
         };
     }
 
+    public void AddPortableMenus(ToolStripDropDownButton language)
+    {
+        _guide.Click += (_, _) => AboutForm.OpenExternal($"{AboutForm.REPOSITORY}#readme");
+        _about.Click += (_, _) =>
+        {
+            using var dialog = new AboutForm(_t, Font, _t["module.rescue"]);
+            dialog.ShowDialog(this);
+        };
+        _help.DropDownItems.AddRange([_guide, _about]);
+        _toolbar.Items.AddRange([language, _help]);
+    }
+
     public void ApplyLanguage(Translator t)
     {
         _t = t;
@@ -169,6 +189,10 @@ internal sealed class NetworkRescueView : UserControl
         _heading.Text = t["rescue.heading"];
         _note.Text = t["rescue.note"];
         _networkHeading.Text = t["rescue.network"];
+        _tools.Text = t["rescue.pe.tools"];
+        _help.Text = t["ui.menuHelp"];
+        _guide.Text = t["ui.guide"];
+        _about.Text = t["ui.about"];
         _refresh.Text = t["rescue.refresh"];
         _modulesPage.Text = t["rescue.modules"];
         _pciPage.Text = t["rescue.pci"];
@@ -1048,15 +1072,8 @@ internal sealed class NetworkRescueView : UserControl
         root.RowStyles.Add(new RowStyle(SizeType.Percent, 40));
         root.RowStyles.Add(new RowStyle(SizeType.Percent, 60));
 
-        var headingRow = new TableLayoutPanel { Dock = DockStyle.Top, AutoSize = true, ColumnCount = 2, Margin = new Padding(0) };
-        headingRow.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100));
-        headingRow.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize));
         _heading.Anchor = AnchorStyles.Left;
-        _refresh.Anchor = AnchorStyles.Right;
-        _refresh.Margin = new Padding(0, 0, 0, Ui.SPACING);
-        headingRow.Controls.Add(_heading, 0, 0);
-        headingRow.Controls.Add(_refresh, 1, 0);
-        root.Controls.Add(headingRow, 0, 0);
+        root.Controls.Add(_heading, 0, 0);
 
         _note.Dock = DockStyle.Top;
         _note.Margin = new Padding(0, 0, 0, Ui.SPACING);
@@ -1076,13 +1093,6 @@ internal sealed class NetworkRescueView : UserControl
         scanLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 100));
         var actions = new FlowLayoutPanel { Dock = DockStyle.Fill, AutoSize = true };
         actions.Controls.Add(_scan);
-        actions.Controls.Add(_export);
-        actions.Controls.Add(_preview);
-        actions.Controls.Add(_searchFolder);
-        if (_portableDriverDirectory is null && DistributionProfile.Current.Channel != DistributionChannel.Store)
-        {
-            actions.Controls.Add(_online);
-        }
         var deviceSummary = new TableLayoutPanel { Dock = DockStyle.Top, AutoSize = true, ColumnCount = 2, RowCount = 2 };
         deviceSummary.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize));
         deviceSummary.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100));

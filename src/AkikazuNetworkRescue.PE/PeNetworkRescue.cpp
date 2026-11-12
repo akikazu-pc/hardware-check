@@ -4,6 +4,7 @@
 #include <windows.h>
 #include <setupapi.h>
 
+#include <algorithm>
 #include <array>
 #include <filesystem>
 #include <fstream>
@@ -128,7 +129,8 @@ static std::wstring InfField(INFCONTEXT& context, DWORD index)
     return SetupGetStringFieldW(&context, index, value, ARRAYSIZE(value), nullptr) ? value : L"";
 }
 
-static std::wstring MatchNetworkInf(const fs::path& path, DWORD build, const std::vector<std::wstring>& ids)
+static std::wstring MatchNetworkInf(const fs::path& path, DWORD build, const std::vector<std::wstring>& ids,
+    std::wstring& name)
 {
     const auto inf = SetupOpenInfFileW(path.c_str(), nullptr, INF_STYLE_WIN4, nullptr);
     if (inf == INVALID_HANDLE_VALUE) {
@@ -159,6 +161,7 @@ static std::wstring MatchNetworkInf(const fs::path& path, DWORD build, const std
                 for (const auto& id : ids) {
                     if (_wcsicmp(model.c_str(), id.c_str()) == 0) {
                         matched = id;
+                        name = InfField(line, 0);
                         break;
                     }
                 }
@@ -222,6 +225,41 @@ static std::vector<fs::path> DriverDirectories(const fs::path& bundle, DWORD bui
     return directories;
 }
 
+struct DriverMatch {
+    fs::path path;
+    std::wstring id;
+    std::wstring name;
+};
+
+static std::vector<DriverMatch> ScanDrivers(const fs::path& bundle, DWORD build)
+{
+    const auto ids = ReadDeviceHardwareIds();
+    std::vector<DriverMatch> candidates;
+    if (ids.empty()) {
+        return candidates;
+    }
+    for (const auto& directory : DriverDirectories(bundle, build)) {
+        std::error_code error;
+        if (!fs::exists(directory, error)) {
+            continue;
+        }
+        for (fs::recursive_directory_iterator it(directory, fs::directory_options::skip_permission_denied, error), end;
+            !error && it != end; it.increment(error)) {
+            if (!it->is_regular_file(error) || _wcsicmp(it->path().extension().c_str(), L".inf") != 0) {
+                continue;
+            }
+            std::wstring name;
+            auto id = MatchNetworkInf(it->path(), build, ids, name);
+            if (!id.empty() && VerifyNetworkDriver(it->path())) {
+                candidates.push_back({ it->path(), std::move(id), std::move(name) });
+            }
+        }
+    }
+    return candidates;
+}
+
+#include "PeWizard.h"
+
 static size_t ReadSelection(size_t maximum)
 {
     std::wstring answer;
@@ -233,6 +271,16 @@ static size_t ReadSelection(size_t maximum)
 
 int wmain(int argc, wchar_t** argv)
 {
+    wchar_t executable[MAX_PATH]{};
+    const auto length = GetModuleFileNameW(nullptr, executable, MAX_PATH);
+    if (!length || length >= MAX_PATH) {
+        return 3;
+    }
+    const auto bundle = fs::path(executable).parent_path();
+    if (argc == 2 && wcscmp(argv[1], L"--ui-preview") == 0) {
+        return RunPeWizard(bundle, true);
+    }
+
     const auto targets = DiscoverTargets();
     for (size_t i = 0; i < targets.size(); ++i) {
         std::wcout << i + 1 << L". " << targets[i].root.c_str() << L" Windows "
@@ -249,6 +297,9 @@ int wmain(int argc, wchar_t** argv)
         return 1;
     }
     RegCloseKey(miniNt);
+    if (argc == 2 && wcscmp(argv[1], L"--ui") == 0) {
+        return RunPeWizard(bundle, false);
+    }
     if (targets.empty()) {
         std::wcerr << L"No accessible offline Windows 10/11 x64 installation found. Unlock locked volumes first.\n";
         return 2;
@@ -260,36 +311,9 @@ int wmain(int argc, wchar_t** argv)
     }
     const auto& target = targets[selection - 1];
 
-    wchar_t executable[MAX_PATH]{};
-    if (!GetModuleFileNameW(nullptr, executable, MAX_PATH)) {
-        return 3;
-    }
-    const auto directories = DriverDirectories(fs::path(executable).parent_path(), target.build);
-    const auto ids = ReadDeviceHardwareIds();
-    std::vector<fs::path> candidates;
-    bool incomplete = false;
-    for (const auto& directory : directories) {
-        std::error_code error;
-        if (!fs::exists(directory, error)) {
-            incomplete |= static_cast<bool>(error);
-            continue;
-        }
-        std::wcout << L"Scanning " << directory.c_str() << L'\n';
-        for (fs::recursive_directory_iterator it(directory, fs::directory_options::skip_permission_denied, error), end;
-            !error && it != end; it.increment(error)) {
-            if (!it->is_regular_file(error) || _wcsicmp(it->path().extension().c_str(), L".inf") != 0) {
-                continue;
-            }
-            const auto match = MatchNetworkInf(it->path(), target.build, ids);
-            if (!match.empty() && VerifyNetworkDriver(it->path())) {
-                candidates.push_back(it->path());
-                std::wcout << candidates.size() << L". " << it->path().c_str() << L" [" << match << L"]\n";
-            }
-        }
-        incomplete |= static_cast<bool>(error);
-    }
-    if (incomplete) {
-        std::wcerr << L"Some driver folders could not be read.\n";
+    const auto candidates = ScanDrivers(bundle, target.build);
+    for (size_t i = 0; i < candidates.size(); ++i) {
+        std::wcout << i + 1 << L". " << candidates[i].path.c_str() << L" [" << candidates[i].id << L"]\n";
     }
     if (candidates.empty()) {
         std::wcerr << L"No verified exact driver match. Check the extracted driver folders.\n";
@@ -301,7 +325,7 @@ int wmain(int argc, wchar_t** argv)
     if (!driver) {
         return 0;
     }
-    const auto& inf = candidates[driver - 1];
+    const auto& inf = candidates[driver - 1].path;
     std::wcout << L"Stage " << inf.c_str() << L" in " << target.root.c_str()
         << L" Windows kernel build " << target.build << L"? [y/N] ";
     std::wstring confirmation;

@@ -7,5 +7,10 @@ start "" "%~dp0AkikazuHardwareCheck.exe" --portable-rescue
 exit /b %errorlevel%
 
 :pe
+if /i "%~1"=="--cli" goto cli
+"%~dp0PeNetworkRescue.exe" --ui
+exit /b %errorlevel%
+
+:cli
 "%~dp0PeNetworkRescue.exe"
 exit /b %errorlevel%

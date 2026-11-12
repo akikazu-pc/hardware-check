@@ -12,5 +12,9 @@ call "%PE_VS%\VC\Auxiliary\Build\vcvars64.bat"
 if errorlevel 1 exit /b 1
 set "PE_OUT=%REPO%\artifacts\network-rescue-pe"
 if not exist "%PE_OUT%" mkdir "%PE_OUT%"
-cl /nologo /std:c++17 /EHsc /W4 /WX /O2 /MT /utf-8 /D_WIN32_WINNT=0x0A00 /DNTDDI_VERSION=0x0A000002 /Fo"%PE_OUT%\PeNetworkRescue.obj" /Fe"%PE_OUT%\PeNetworkRescue.exe" "%REPO%\src\AkikazuNetworkRescue.PE\PeNetworkRescue.cpp" setupapi.lib version.lib advapi32.lib
+pwsh -NoProfile -File "%REPO%\scripts\generate-network-rescue-pe-strings.ps1" -Destination "%PE_OUT%\PeStrings.generated.h"
+if errorlevel 1 exit /b 1
+rc /nologo /fo"%PE_OUT%\PeNetworkRescue.res" /I"%REPO%\src\AkikazuHardwareCheck.App" "%REPO%\src\AkikazuNetworkRescue.PE\PeNetworkRescue.rc"
+if errorlevel 1 exit /b 1
+cl /nologo /std:c++17 /EHsc /W4 /WX /O2 /MT /utf-8 /I"%PE_OUT%" /D_WIN32_WINNT=0x0A00 /DNTDDI_VERSION=0x0A000002 /Fo"%PE_OUT%\PeNetworkRescue.obj" /Fe"%PE_OUT%\PeNetworkRescue.exe" "%REPO%\src\AkikazuNetworkRescue.PE\PeNetworkRescue.cpp" "%PE_OUT%\PeNetworkRescue.res" setupapi.lib version.lib advapi32.lib user32.lib gdi32.lib
 exit /b %errorlevel%
