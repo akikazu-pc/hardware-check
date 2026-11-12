@@ -149,15 +149,6 @@ static int RunCli(const fs::path& bundle, bool isPe, int language)
         std::wcout << text.noDriver << L'\n';
         return 4;
     }
-    if (setup) {
-        matches.erase(std::remove_if(matches.begin(), matches.end(), [](const DriverMatch& match) {
-            return !IsStandaloneDriver(match.path);
-        }), matches.end());
-        if (matches.empty()) {
-            std::wcout << text.noStandalone << L'\n';
-            return 4;
-        }
-    }
 
     std::vector<std::wstring> labels;
     for (const auto& match : matches) {
@@ -173,7 +164,12 @@ static int RunCli(const fs::path& bundle, bool isPe, int language)
         return 5;
     }
     if (setup) {
-        if (!IsSetupRunning() && IsStandaloneDriver(match.path) && StartSetup(media[selected - 1], match.path)) return 0;
+        const auto result = StartSetup(media[selected - 1], match.path);
+        if (result == SetupStart::Started) return 0;
+        if (result == SetupStart::DriverPreparationFailed) {
+            std::wcout << text.setupDriverPreparationFailed << L'\n';
+            return 6;
+        }
     } else if (isPe) {
         const auto& target = targets[selected - 1];
         if (ReadWindowsBuild(target.root) == target.build) {

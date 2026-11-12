@@ -260,7 +260,7 @@
   "rescue.pe.noTarget": "找不到可存取的離線 Windows。請檢查磁碟或在 PE 中解除鎖定。",
   "rescue.pe.noMedia": "請插入可讀取的 Windows 10 或 11 x64 安裝媒體後再試。",
   "rescue.pe.noDriver": "找不到相符的已簽署驅動程式。請檢查驅動程式資料夾後再試。",
-  "rescue.pe.noStandalone": "全新安裝需要已驗證的單一 INF 驅動程式套件。其他套件可在首次開機的連網頁面補裝。",
+  "rescue.pe.setupDriverPreparationFailed": "無法為 Windows 安裝程式準備所選驅動程式。請選擇獨立套件，或在首次開機的連網頁面補裝。",
   "rescue.pe.scan": "正在搜尋離線驅動程式庫…",
   "rescue.pe.confirmRepair": "要將此驅動程式寫入所選的 Windows 嗎？",
   "rescue.pe.confirmSetup": "要帶著此驅動程式啟動 Windows 安裝嗎？請保持驅動程式媒體連接，並在 Windows 安裝程式中選擇安裝磁碟。",

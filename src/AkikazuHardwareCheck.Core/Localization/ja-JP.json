@@ -260,7 +260,7 @@
   "rescue.pe.noTarget": "アクセス可能なオフライン Windows が見つかりません。ディスクを確認するか、PE でロックを解除してください。",
   "rescue.pe.noMedia": "読み取り可能な Windows 10 または 11 x64 のインストール メディアを接続してください。",
   "rescue.pe.noDriver": "一致する署名済みドライバーが見つかりません。ドライバー フォルダーを確認してください。",
-  "rescue.pe.noStandalone": "セットアップには検証済みの単一 INF パッケージが必要です。他のパッケージは初回起動時のネットワーク画面から追加してください。",
+  "rescue.pe.setupDriverPreparationFailed": "選択したドライバーを Windows セットアップ用に準備できませんでした。単体で使用できるパッケージを選択するか、初回起動時のネットワーク画面で追加してください。",
   "rescue.pe.scan": "オフライン ドライバーを検索しています…",
   "rescue.pe.confirmRepair": "選択した Windows にこのドライバーを追加しますか？",
   "rescue.pe.confirmSetup": "このドライバーで Windows セットアップを開きますか？ ドライバー メディアを接続したまま、セットアップでインストール先を選んでください。",

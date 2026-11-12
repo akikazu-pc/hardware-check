@@ -253,20 +253,73 @@ static bool IsSetupRunning()
     return running;
 }
 
-static bool IsStandaloneDriver(const fs::path& inf)
+static bool CanIsolateSetupInf(const fs::path& path, const std::vector<fs::path>& otherInfs)
 {
-    size_t count = 0;
-    std::error_code error;
-    for (fs::recursive_directory_iterator it(inf.parent_path(), error), end;
-        !error && it != end; it.increment(error)) {
-        if (it->is_symlink(error)) {
-            return false;
+    const auto inf = SetupOpenInfFileW(path.c_str(), nullptr, INF_STYLE_WIN4, nullptr);
+    if (inf == INVALID_HANDLE_VALUE) return false;
+    bool isolated = true;
+    for (UINT index = 0; isolated; ++index) {
+        wchar_t section[1024]{};
+        if (!SetupEnumInfSectionsW(inf, index, section, ARRAYSIZE(section), nullptr)) {
+            isolated = GetLastError() == ERROR_NO_MORE_ITEMS;
+            break;
         }
-        if (it->is_regular_file(error) && _wcsicmp(it->path().extension().c_str(), L".inf") == 0 && ++count > 1) {
-            return false;
+        INFCONTEXT line{};
+        if (SetupFindFirstLineW(inf, section, L"CopyINF", &line)) {
+            isolated = false;
+            break;
+        }
+        if (!SetupFindFirstLineW(inf, section, L"Include", &line)) continue;
+        do {
+            for (DWORD field = 1; field <= SetupGetFieldCount(&line); ++field) {
+                const auto include = fs::path(InfField(line, field)).filename();
+                if (include.empty() || std::any_of(otherInfs.begin(), otherInfs.end(), [&include](const auto& other) {
+                    return _wcsicmp(include.c_str(), other.filename().c_str()) == 0;
+                })) {
+                    isolated = false;
+                    break;
+                }
+            }
+        } while (isolated && SetupFindNextMatchLineW(&line, L"Include", &line));
+    }
+    SetupCloseInfFile(inf);
+    return isolated;
+}
+
+static fs::path PrepareSetupDriver(const fs::path& inf, const fs::path& workspace)
+{
+    const auto source = inf.parent_path();
+    std::vector<fs::path> files;
+    std::vector<fs::path> otherInfs;
+    bool foundSelected = false;
+    std::error_code error;
+    for (fs::recursive_directory_iterator it(source, error), end; !error && it != end; it.increment(error)) {
+        const auto attributes = GetFileAttributesW(it->path().c_str());
+        if (attributes == INVALID_FILE_ATTRIBUTES || (attributes & FILE_ATTRIBUTE_REPARSE_POINT)) return {};
+        if (attributes & FILE_ATTRIBUTE_DIRECTORY) continue;
+        const auto& path = it->path();
+        if (_wcsicmp(path.extension().c_str(), L".inf") == 0) {
+            if (_wcsicmp(path.c_str(), inf.c_str()) != 0) {
+                otherInfs.push_back(path);
+                continue;
+            }
+            foundSelected = true;
+        }
+        files.push_back(path);
+    }
+    if (error || !foundSelected) return {};
+    if (otherInfs.empty()) return source;
+    if (!CanIsolateSetupInf(inf, otherInfs)) return {};
+
+    const auto stage = workspace / L"driver";
+    for (const auto& path : files) {
+        const auto destination = stage / path.lexically_relative(source);
+        fs::create_directories(destination.parent_path(), error);
+        if (error || !fs::copy_file(path, destination, fs::copy_options::none, error)) {
+            return {};
         }
     }
-    return !error && count == 1;
+    return VerifyNetworkDriver(stage / inf.filename()) ? stage : fs::path{};
 }
 
 static std::wstring XmlEscape(std::wstring_view value)
@@ -283,15 +336,8 @@ static std::wstring XmlEscape(std::wstring_view value)
     return result;
 }
 
-static bool StartSetup(const SetupMedia& media, const fs::path& inf)
+static bool WriteSetupAnswer(const fs::path& answer, const fs::path& driver)
 {
-    wchar_t temp[MAX_PATH]{};
-    const auto length = GetTempPathW(MAX_PATH, temp);
-    if (!length || length >= MAX_PATH) {
-        return false;
-    }
-    const auto answer = fs::path(temp) / (L"NetworkRescue-" + std::to_wstring(GetCurrentProcessId()) +
-        L"-" + std::to_wstring(GetTickCount64()) + L".xml");
     const auto xml = std::wstring(
         L"\uFEFF<?xml version=\"1.0\" encoding=\"utf-16\"?>"
         L"<unattend xmlns=\"urn:schemas-microsoft-com:unattend\" xmlns:wcm=\"http://schemas.microsoft.com/WMIConfig/2002/State\">"
@@ -299,7 +345,7 @@ static bool StartSetup(const SetupMedia& media, const fs::path& inf)
         L"<component name=\"Microsoft-Windows-PnpCustomizationsNonWinPE\" processorArchitecture=\"amd64\" "
         L"publicKeyToken=\"31bf3856ad364e35\" language=\"neutral\" versionScope=\"nonSxS\">"
         L"<DriverPaths><PathAndCredentials wcm:action=\"add\" wcm:keyValue=\"1\"><Path>") +
-        XmlEscape(inf.parent_path().wstring()) +
+        XmlEscape(driver.wstring()) +
         L"</Path></PathAndCredentials></DriverPaths></component></settings></unattend>";
     const auto file = CreateFileW(answer.c_str(), GENERIC_WRITE, 0, nullptr, CREATE_NEW, FILE_ATTRIBUTE_NORMAL, nullptr);
     if (file == INVALID_HANDLE_VALUE) {
@@ -309,20 +355,53 @@ static bool StartSetup(const SetupMedia& media, const fs::path& inf)
     DWORD written = 0;
     const bool saved = WriteFile(file, xml.data(), bytes, &written, nullptr) && written == bytes;
     CloseHandle(file);
+    return saved;
+}
 
+enum class SetupStart { Started, DriverPreparationFailed, LaunchFailed };
+
+static SetupStart StartSetup(const SetupMedia& media, const fs::path& inf)
+{
+    if (IsSetupRunning()) return SetupStart::LaunchFailed;
+    wchar_t temp[MAX_PATH]{};
+    const auto length = GetTempPathW(MAX_PATH, temp);
+    if (!length || length >= MAX_PATH) {
+        return SetupStart::LaunchFailed;
+    }
+    const auto workspace = fs::path(temp) / (L"NetworkRescue-" + std::to_wstring(GetCurrentProcessId()) +
+        L"-" + std::to_wstring(GetTickCount64()));
+    std::error_code error;
+    if (!fs::create_directory(workspace, error)) return SetupStart::LaunchFailed;
+    const auto driver = PrepareSetupDriver(inf, workspace);
+    if (driver.empty()) {
+        fs::remove_all(workspace, error);
+        return SetupStart::DriverPreparationFailed;
+    }
     const auto setup = media.root / L"setup.exe";
-    auto command = L"\"" + setup.wstring() + L"\" /unattend:\"" + answer.wstring() + L"\"";
+    const auto hostBuild = ReadWindowsFileBuild(media.root / L"sources/setuphost.exe");
+    const auto setupBuild = hostBuild ? hostBuild : ReadWindowsFileBuild(setup);
+    auto command = L"\"" + setup.wstring() + L"\"";
+    if (setupBuild >= 26100) {
+        command += L" /InstallDrivers \"" + driver.wstring() + L"\"";
+    } else {
+        const auto answer = workspace / L"unattend.xml";
+        if (!WriteSetupAnswer(answer, driver)) {
+            fs::remove_all(workspace, error);
+            return SetupStart::LaunchFailed;
+        }
+        command += L" /unattend:\"" + answer.wstring() + L"\"";
+    }
     STARTUPINFOW startup{};
     startup.cb = sizeof startup;
     PROCESS_INFORMATION process{};
-    if (!saved || !CreateProcessW(setup.c_str(), command.data(), nullptr, nullptr, FALSE, 0, nullptr,
+    if (!CreateProcessW(setup.c_str(), command.data(), nullptr, nullptr, FALSE, 0, nullptr,
             media.root.c_str(), &startup, &process)) {
-        DeleteFileW(answer.c_str());
-        return false;
+        fs::remove_all(workspace, error);
+        return SetupStart::LaunchFailed;
     }
     CloseHandle(process.hThread);
     CloseHandle(process.hProcess);
-    return true;
+    return SetupStart::Started;
 }
 
 static int PreferredLanguage()
@@ -385,15 +464,6 @@ static int RunPeAction(const fs::path& bundle, const PeText& text, bool setup)
         Notice(text, text.noDriver);
         return 0;
     }
-    if (setup) {
-        matches.erase(std::remove_if(matches.begin(), matches.end(), [](const DriverMatch& match) {
-            return !IsStandaloneDriver(match.path);
-        }), matches.end());
-        if (matches.empty()) {
-            Notice(text, text.noStandalone);
-            return 0;
-        }
-    }
     std::vector<std::wstring> labels;
     for (const auto& match : matches) {
         labels.push_back(match.name + L"  " + match.path.filename().wstring() + L"  [" + match.id + L"]");
@@ -409,9 +479,10 @@ static int RunPeAction(const fs::path& bundle, const PeText& text, bool setup)
         return 0;
     }
     if (setup) {
-        if (!IsSetupRunning() && IsStandaloneDriver(inf) && StartSetup(media[target], inf)) return 0;
-        Notice(text, text.failed);
-        return 0;
+        const auto result = StartSetup(media[target], inf);
+        if (result == SetupStart::Started) return 0;
+        Notice(text, result == SetupStart::DriverPreparationFailed ? text.setupDriverPreparationFailed : text.failed);
+        return 6;
     }
     const auto& offline = targets[target];
     if (ReadWindowsBuild(offline.root) != offline.build) {

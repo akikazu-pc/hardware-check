@@ -32,6 +32,27 @@ static bool HasRegistryHiveHeader(const fs::path& path)
     return file.read(header.data(), header.size()) && header == std::array<char, 4>{ 'r', 'e', 'g', 'f' };
 }
 
+static DWORD ReadWindowsFileBuild(const fs::path& file)
+{
+    const auto size = GetFileVersionInfoSizeW(file.c_str(), nullptr);
+    std::vector<BYTE> buffer(size);
+    if (size == 0 || !GetFileVersionInfoW(file.c_str(), 0, size, buffer.data())) {
+        return 0;
+    }
+    void* value = nullptr;
+    UINT length = 0;
+    if (!VerQueryValueW(buffer.data(), L"\\", &value, &length) || length < sizeof(VS_FIXEDFILEINFO)) {
+        return 0;
+    }
+    const auto& version = *static_cast<VS_FIXEDFILEINFO*>(value);
+    // Windows Setup PE can report 6.2 in the kernel's file version while
+    // preserving 10.0 in the product version and the correct file build.
+    const auto windows10Version = MAKELONG(0, 10);
+    return version.dwSignature == VS_FFI_SIGNATURE &&
+        (version.dwProductVersionMS == windows10Version || version.dwFileVersionMS == windows10Version)
+        ? HIWORD(version.dwFileVersionLS) : 0;
+}
+
 static DWORD ReadWindowsBuild(const fs::path& root)
 {
     const auto config = root / L"Windows/System32/config";
@@ -52,23 +73,7 @@ static DWORD ReadWindowsBuild(const fs::path& root)
         return 0;
     }
 
-    const auto size = GetFileVersionInfoSizeW(kernel.c_str(), nullptr);
-    std::vector<BYTE> buffer(size);
-    if (size == 0 || !GetFileVersionInfoW(kernel.c_str(), 0, size, buffer.data())) {
-        return 0;
-    }
-    void* value = nullptr;
-    UINT length = 0;
-    if (!VerQueryValueW(buffer.data(), L"\\", &value, &length) || length < sizeof(VS_FIXEDFILEINFO)) {
-        return 0;
-    }
-    const auto& version = *static_cast<VS_FIXEDFILEINFO*>(value);
-    // The Windows Setup PE can report 6.2 in the kernel's file version while
-    // preserving 10.0 in its product version and the correct build in FileVersionLS.
-    const auto windows10Version = MAKELONG(0, 10);
-    return version.dwSignature == VS_FFI_SIGNATURE &&
-        (version.dwProductVersionMS == windows10Version || version.dwFileVersionMS == windows10Version)
-        ? HIWORD(version.dwFileVersionLS) : 0;
+    return ReadWindowsFileBuild(kernel);
 }
 
 static std::vector<Target> DiscoverTargets()
