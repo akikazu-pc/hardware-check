@@ -356,3 +356,11 @@ v0.1.0 退出后，重启仍留下 `PawnIO` 服务和驱动包。复现确认：
 - 来宾以合成 RTL8156 硬件 ID 触发驱动选择。验收覆盖新系统驱动存储，实体 USB 网卡绑定和联网仍待验证。
 - 另一台启用虚拟 TPM 的空盘来宾用实验室专用应答文件指定安装映像和唯一的空白虚拟磁盘，再通过 `/InstallDrivers` 提供同一个已隔离 INF。从执行启动命令到自动重启进入首次设置，全程没有键盘或鼠标操作。首次设置中独立核对驱动存储，仍只列出 `oem0.inf`（`rtu56cx22x64sta.inf`）。
 - 第三台空盘来宾增加首次设置的地区和实验室临时本地账户配置。执行启动命令后无键鼠操作，安装、重启和首次设置自动完成，最终进入 Windows 登录前的锁屏。通过 PowerShell Direct 核对，同一个 INF 是驱动存储中唯一的第三方网络驱动。实验环境使用虚拟 TPM 和 Secure Boot，验证范围为 Windows 11 Enterprise LTSC Evaluation 24H2。
+
+
+## 无虚拟 TPM 的无人值守部署
+
+- 在两台未接入虚拟交换机的 Hyper-V 第 2 代空盘来宾中关闭虚拟 TPM，保留 Secure Boot。实验脚本从 WinPE 用 DISM 直接应用官方 Windows 11 Enterprise LTSC Evaluation 24H2 x64 映像，用 BCDBoot 创建 UEFI 引导，跳过 Windows Setup 硬件检查流程。
+- 从执行部署命令到重启、完成首次设置并进入 `user` 桌面，两台均无需键鼠。锁屏后仅按 Enter 即可用同一账户登录，无需密码。
+- 80 GiB 虚拟磁盘中，扣除 EFI 和 MSR 分区后，C 盘为 79.73 GiB。400 GiB 虚拟磁盘的 C 盘为 300 GiB，脚本保留剩余空间。实验未创建单独的恢复分区。
+- 两台在新系统中执行 `pnputil /enum-drivers /class Net`，均列出预先注入的 Realtek USB 有线驱动 `oem0.inf`（`rtu56cx22x64sta.inf`，版本 1156.19.20.603，微软签名）。此轮使用预先选定的驱动，验证到驱动入库。实体设备识别、驱动绑定和联网待验。
