@@ -278,7 +278,7 @@ python scripts/audit-network-rescue-zip.py <完整版ZIP> <本地缓存目录> <
 
 ## 双击检查新主板与新版驱动
 
-在 Windows 上双击 `scripts/update-network-rescue.cmd`，也可运行 `python scripts/update-network-rescue.py`。需要 Python 3.11 或更新版本、`curl` 和 PowerShell 7。默认保存到 `artifacts/network-rescue-update/`，同一目录只允许一个更新进程。
+在 Windows 上双击 `scripts/update-network-rescue.cmd`，也可运行 `python scripts/update-network-rescue.py`。需要 Python 3.11 或更新版本、支持 ETag 参数的 `curl` 和 PowerShell 7。默认保存到 `artifacts/network-rescue-update/`，同一目录只允许一个更新进程。
 
 1. 首次运行用 WinDriverIndex 的主板、驱动家族和包元数据建立基线。之后先比较三份数据的 SHA-256，仅下载变化或缺失的数据文件。无变化且没有待重试项时结束。
 2. 主板按厂商、插槽、规范化型号和 revision 比较。范围为 ASUS、ASRock、技嘉和 MSI 的 AM4、AM5、LGA1700、LGA1851。新型号才查询单板报告，核对快照、厂商和型号，按厂商、无线家族、版本、日期查找唯一包。多个哈希对应同一组键时不自动关联。
@@ -288,3 +288,14 @@ python scripts/audit-network-rescue-zip.py <完整版ZIP> <本地缓存目录> <
 现有签名缓存继续用于本地成品复查，发行仍以 `--fresh` 的验签为准。线上首次读取了清单与三份数据，三份数据合计约 14.5 MiB。重复运行只请求清单一次，下载了 0 份元数据和 0 个驱动包。这次线上快照没有变化。 [WinDriverIndex 快照清单](https://windriverindex.tucny.com/v1/latest/manifest.json)
 
 下一轮优化将原来每条 WLAN 报告扫描一遍包列表改成构建一次组合键索引。若有 `P` 个包和 `Q` 条需匹配的报告行，匹配由 `O(P×Q)` 降为平均 `O(P+Q)`，保留唯一匹配规则。受控增量测试模拟一块新板、同地址换包和首次哈希失败。三个元数据文件中只下载两份变化文件，重试时下载零份元数据，真实 ASUS ZIP 通过验签并留下 1 个签名网络 INF。尚无线上批量新板数据可衡量索引带来的实际耗时变化。
+
+### 新增品牌与重复下载优化
+
+- **NZXT** 从官方主板下载目录一次读取型号和 WLAN 下载表。官方表格未明确标注 Windows 版本时，记录包和型号的候选关系，系统范围继续通过 INF 核实。 [NZXT 主板下载目录](https://support.nzxt.com/hc/en-us/sections/39003384521627-Motherboards)
+- **七彩虹** 读取官方七个主板系列。按目标芯片组或明确无线名称筛选优先查询支持页的型号，再核对驱动类别、WLAN 标题、Win10/11 64 位和官方 CDN。型号名未命中筛选条件的仍保留在目录。 [七彩虹主板支持样例](https://www.colorful.cn/Home/GetProductDownload?mid=84&id=36280e3a-e942-4b36-80ce-befe5b3758f5)
+- **EVGA** 读取官方目录中的 Z690、Z790、X570 主板部件号，选取 Win10 64 位和 Win11 的最新 WLAN 条目。按 ETag 请求目录，服务器返回 304 时复用本地目录。 [EVGA 下载中心](https://www.evga.com/support/drivers/index.html)
+- 各品牌分别写入 `nzxt/last-run.json`、`colorful/last-run.json` 和 `evga/last-run.json`。一个下载地址可关联多块主板，下载完成后记录本地 SHA-256。官方列表未提供独立的发布者哈希。下次相同地址且驱动条目未变化时复用已处理结果，地址或条目版本变化时重新处理。地址与条目信息均不变的原地换包仍待增加 CDN 版本检查。
+- 映射基准用现有快照的 145 个候选包和 195 次查询。9 轮中位数从 2.169 毫秒降至 0.032 毫秒，两种算法的候选列表一致，单条查询有建索引开销。新一轮验证共用 URL 和变更重查，受控测试三次运行的包下载次数为 1、0、1。
+- 线上 NZXT 读到 10 个型号和 11 条 WLAN 记录，合并为 10 个下载地址。5 个包验得共 9 个签名网络 INF，3 个包待静态提取，另 2 个包在本机未取得有效签名证据。重复运行复用 10 个地址，下载 0 个包。七彩虹发现 492 个唯一型号，查询 230 个型号的支持记录，18 条 WLAN 记录合并为 3 个已下载的原厂包，3 个均待静态提取。
+- EVGA 官方目录首轮返回 200，重复请求返回 304，节省约 9.2 MiB 目录传输。两次均解析到 3 个主板部件号、7 条最新 WLAN 记录和 4 个唯一地址。
+- 映泰官方目录本次返回 403。铭瑄已核验官方目录及两款 B850 WLAN 条目，待接入批量更新。 [映泰主板目录](https://www.biostar.com.tw/app/en/mb/index.php) · [铭瑄支持](https://www.maxsun.com/pages/support)

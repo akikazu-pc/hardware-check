@@ -1,16 +1,18 @@
 """Check OEM motherboard WLAN metadata and stage changed driver archives locally."""
 import argparse
 from collections import defaultdict
+from concurrent.futures import ThreadPoolExecutor
 import csv
 from datetime import datetime
 import hashlib
+from html import unescape
 import json
 from pathlib import Path
 import re
 import shutil
 import subprocess
 from tempfile import TemporaryDirectory
-from urllib.parse import urlsplit
+from urllib.parse import quote, urlencode, urlsplit, urlunsplit
 from zipfile import BadZipFile, ZipFile
 
 
@@ -41,10 +43,13 @@ def atomic_json(path, value):
         temporary.replace(path)
 
 
-def fetch(url, target, limit):
-    subprocess.run(["curl", "-fsSL", "--proto", "=https", "--proto-redir", "=https",
-                    "--max-time", "90", "--max-filesize", str(limit), url, "-o", str(target)],
-                   check=True, capture_output=True, timeout=95)
+def fetch(url, target, limit, *, referer=None, etag_options=(), seconds=90):
+    result = subprocess.run(["curl", "-fsSL", *(["--referer", referer] if referer else []), *etag_options,
+                             "--proto", "=https", "--proto-redir", "=https", "--max-redirs", "5",
+                             "--max-time", str(seconds), "--speed-limit", "32768", "--speed-time", "30",
+                             "--max-filesize", str(limit), "-w", "%{http_code}",
+                             url, "-o", str(target)], check=True, capture_output=True, timeout=seconds + 5)
+    return int(result.stdout)
 
 
 def snapshot_data(state, manifest, stats):
@@ -297,6 +302,183 @@ def refresh(state, known_hashes):
     return result
 
 
+NZXT_CATALOG = "https://support.nzxt.com/api/v2/help_center/en-us/sections/39003384521627/articles.json"
+
+
+def nzxt_listings(catalog):
+    if catalog.get("next_page"):
+        raise ValueError("NZXT motherboard catalog now requires pagination")
+    boards = {}
+    listings = defaultdict(list)
+    for article in catalog["articles"]:
+        match = re.fullmatch(r"(N[0-9]+ [A-Z][A-Z0-9]+) Downloads", article["title"])
+        if not match:
+            continue
+        model = match[1]
+        support = f"https://support.nzxt.com/hc/en-us/articles/{int(article['id'])}"
+        boards[model] = support
+        for row in re.findall(r"<tr\b[^>]*>(.*?)</tr>", article["body"], re.I | re.S):
+            cells = re.findall(r"<td\b[^>]*>(.*?)</td>", row, re.I | re.S)
+            if len(cells) < 2:
+                continue
+            label = unescape(re.sub(r"<[^>]+>", " ", cells[0]))
+            if not re.search(r"\b(?:wi[- ]?fi|wlan|wireless(?: lan)?)\s+driver\b", label, re.I):
+                continue
+            for link in re.findall(r'href="([^"]+)"', cells[1], re.I):
+                url = unescape(link)
+                parsed = urlsplit(url)
+                if (parsed.scheme == "https" and parsed.netloc == "cdn-g.nzxt.com"
+                        and parsed.path.startswith("/dl/") and parsed.path.lower().endswith((".zip", ".exe"))):
+                    listings[url].append(dict(model=model, support=support, label=" ".join(label.split())))
+    if not boards or not listings:
+        raise ValueError("No NZXT motherboard WLAN listings were parsed")
+    return boards, listings
+
+
+def refresh_oem(state, known_hashes, vendor, load_catalog, *, referer=None):
+    state.mkdir(exist_ok=True)
+    report = state / "last-run.json"
+    previous = json.loads(report.read_bytes()) if report.is_file() else {}
+    completed = previous.get("packages", {})
+    stats = dict(newBoards=0, newUrls=0, driverArchivesFetched=0, reusedUrls=0, remaining=0)
+    with TemporaryDirectory(dir=state) as scratch:
+        scratch = Path(scratch)
+        boards, listings, request_count = load_catalog(scratch)
+        stats["catalogRequests"] = request_count
+        stats["newBoards"] = len(boards.keys() - previous.get("boards", {}).keys())
+        stats["newUrls"] = len(listings.keys() - completed.keys())
+        stats["remaining"] = len(listings)
+        for url, candidates in listings.items():
+            previous_item = completed.get(url, {})
+            revisions = {(row["label"], row.get("listedRevision")) for row in candidates}
+            previous_revisions = {(row["label"], row.get("listedRevision"))
+                                  for row in previous_item.get("listings", [])}
+            if previous_item.get("status") not in (None, "retry-pending") and revisions <= previous_revisions:
+                completed[url]["listings"] = candidates
+                stats["reusedUrls"] += 1
+                stats["remaining"] -= 1
+                continue
+            try:
+                path = scratch / "original"
+                fetch(url, path, MAX_ARCHIVE, referer=referer, seconds=600)
+                stats["driverArchivesFetched"] += 1
+                size = path.stat().st_size
+                if not 0 < size <= MAX_ARCHIVE:
+                    raise ValueError("OEM archive size outside allowed range")
+                digest = sha256(path)
+                item = dict(vendor=vendor, url=url, sha256=digest, size=size,
+                            hashSource="computed-from-oem-download", listings=candidates)
+                if digest in known_hashes:
+                    status, count = "already-indexed", 0
+                else:
+                    originals = state / "originals"
+                    originals.mkdir(exist_ok=True)
+                    original = originals / f"{digest}.archive"
+                    path.replace(original)
+                    status, count = stage_package(state, item, stats)
+                completed[url] = dict(item, status=status, signedInfCount=count)
+            except (OSError, RuntimeError, ValueError, subprocess.SubprocessError) as error:
+                completed[url] = dict(status="retry-pending", listings=candidates, detail=str(error))
+            stats["remaining"] -= completed[url]["status"] != "retry-pending"
+            atomic_json(report, dict(boards=boards, packages=completed, **stats))
+    atomic_json(report, dict(boards=boards, packages=completed, **stats))
+    return stats
+
+
+def load_nzxt(scratch):
+    path = scratch / "nzxt.json"
+    fetch(NZXT_CATALOG, path, 4 * 1024 * 1024)
+    return (*nzxt_listings(json.loads(path.read_bytes())), 1)
+
+
+EVGA_CATALOG = "https://www.evga.com/support/drivers/data.json"
+EVGA_SUPPORT = "https://www.evga.com/support/drivers/index.html"
+
+
+def load_evga(scratch):
+    path = scratch / "evga.json"
+    cache = scratch.parent / "catalog.json"
+    etag = scratch.parent / "catalog.etag"
+    received_etag = scratch / "catalog.etag"
+    options = ["--etag-save", str(received_etag)]
+    if cache.is_file() and etag.is_file():
+        options += ["--etag-compare", str(etag)]
+    status = fetch(EVGA_CATALOG, path, 64 * 1024 * 1024, etag_options=options)
+    if status == 304:
+        path = cache
+    boards = {}
+    listings = defaultdict(list)
+    for row in json.loads(path.read_bytes())["motherboard"]:
+        if row["family"] not in {"Intel Z690", "Intel Z790", "AMD X570"}:
+            continue
+        model = row["partNumber"]
+        boards[model] = dict(model=model, support=EVGA_SUPPORT, family=row["family"])
+        if row["latest"] != "1" or row["os"] not in {"Windows 10 64bit", "Windows 11"}:
+            continue
+        if not re.search(r"\b(?:wi[- ]?fi|wlan|wireless)\b", row["type"], re.I):
+            continue
+        download = row["download"]
+        if not re.fullmatch(r"/filesCdn/driver/[A-Za-z0-9_./%() -]+\.(?:zip|exe)", download, re.I):
+            continue
+        url = "https://www.evga.com" + quote(download, safe="/%")
+        listings[url].append(dict(boards[model], label=row["type"], listedWindows=row["os"],
+                                  listedRevision=f"{row['version']} / {row['releaseDate']}"))
+    if not boards or not listings:
+        raise ValueError("No EVGA motherboard WLAN listings were parsed")
+    if status != 304:
+        etag.unlink(missing_ok=True)
+        path.replace(cache)
+        if received_etag.is_file():
+            received_etag.replace(etag)
+    return boards, listings, 1
+
+
+COLORFUL = "https://www.colorful.cn"
+COLORFUL_ID = re.compile(r"(?:[0-9]+|[a-f0-9-]{36})")
+
+
+def load_colorful(scratch):
+    def request(endpoint, key, **params):
+        path = scratch / f"{key}.json"
+        query = "?" + urlencode(params) if params else ""
+        fetch(f"{COLORFUL}/Home/{endpoint}{query}", path, 4 * 1024 * 1024)
+        return json.loads(path.read_bytes())
+
+    classes = request("GetProductClassList", "classes")
+    series = sorted({row["id"] for row in classes if row["parent_id"] == "84"
+                     and COLORFUL_ID.fullmatch(row["id"])})
+    if not series:
+        raise ValueError("No Colorful motherboard series found")
+    with ThreadPoolExecutor(max_workers=4) as executor:
+        catalog = executor.map(lambda key: request("GetProduct", key, modelid=84, attrId=key), series)
+        boards = {row["id"]: dict(model=row["name"], support=f"{COLORFUL}/home/DownLoadInfo?id={row['id']}&mid=84")
+                  for rows in catalog for row in rows if COLORFUL_ID.fullmatch(row["id"])}
+        if not boards:
+            raise ValueError("No Colorful motherboard models found")
+        # A wireless card can be factory fitted even when the product name omits Wi-Fi.
+        chipset = re.compile(r"(?<![A-Z0-9])(?:A320|A520|A620|B350|B450|B550|B650E?|B840|B850|"
+                             r"X370|X470|X570|X670E?|X870E?|H610|H670|H770|H810|"
+                             r"B660|B760|B860|Z690|Z790|Z890)", re.I)
+        wifi_ids = [key for key, board in boards.items()
+                    if chipset.search(board["model"]) or re.search(r"wifi|wlan|wireless", board["model"], re.I)]
+        reports = executor.map(lambda key: request("GetProductDownload", f"board-{key}", mid=84, id=key), wifi_ids)
+        listings = defaultdict(list)
+        for key, rows in zip(wifi_ids, reports):
+            for row in rows:
+                if (row["files"], row["systemnum"]) != ("2898", "2897") or row["system"] not in ("2894", "3477"):
+                    continue
+                if not re.search(r"wi[- ]?fi|wlan|wireless|无线|無線", row["title"], re.I):
+                    continue
+                parsed = urlsplit(row["fileurl"])
+                if (parsed.scheme != "https" or parsed.netloc != "download.colorful.cn"
+                        or not parsed.path.lower().endswith((".zip", ".exe"))):
+                    continue
+                url = urlunsplit(parsed._replace(path=quote(parsed.path, safe="/%")))
+                listings[url].append(dict(boards[key], label=row["title"], listedRevision=row["edit_time"],
+                                          listedWindows={"2894": "10", "3477": "11"}[row["system"]]))
+    return boards, listings, 1 + len(series) + len(wifi_ids)
+
+
 def main():
     import msvcrt
 
@@ -311,10 +493,24 @@ def main():
             msvcrt.locking(lock.fileno(), msvcrt.LK_NBLCK, 1)
         except OSError as error:
             raise SystemExit(f"Cannot lock the update folder: {error}") from error
-        result = refresh(args.state, known_hashes)
-    print(json.dumps({k: v for k, v in result.items() if k != "outcomes"}, ensure_ascii=True))
+        try:
+            result = refresh(args.state, known_hashes)
+        except (OSError, ValueError, KeyError, subprocess.SubprocessError) as error:
+            result = dict(status="failed", detail=str(error), remaining=1, boardReportsPending=0)
+        print(json.dumps({k: v for k, v in result.items() if k != "outcomes"}, ensure_ascii=True), flush=True)
+        oem_results = {}
+        for vendor, load_catalog, referer in (
+            ("nzxt", load_nzxt, None),
+            ("colorful", load_colorful, COLORFUL + "/"),
+            ("evga", load_evga, None),
+        ):
+            try:
+                oem_results[vendor] = refresh_oem(args.state / vendor, known_hashes, vendor, load_catalog, referer=referer)
+            except (OSError, ValueError, KeyError, subprocess.SubprocessError) as error:
+                oem_results[vendor] = dict(status="failed", detail=str(error), remaining=1)
+            print(json.dumps({vendor: oem_results[vendor]}, ensure_ascii=True), flush=True)
     print(f"Report: {args.state / 'last-run.json'}")
-    if result["remaining"] or result["boardReportsPending"]:
+    if result["remaining"] or result["boardReportsPending"] or any(row["remaining"] for row in oem_results.values()):
         raise SystemExit(1)
 
 
