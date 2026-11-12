@@ -258,7 +258,7 @@ pwsh -NoProfile -File scripts/publish-network-rescue-bundles.ps1 -IncludeCatalog
 从 [SDIO 官方种子](https://www.glenn.delahoy.com/snappy-driver-installer-origin/)仅下载 WLAN/Wi-Fi 压缩包。固定快照 `DP_WLAN-WiFi_26082.7z` 含 1,634 个 INF。构建校验归档 SHA-256，并将驱动文件解包到驱动搜索目录。完整版输出 ZIP，逐文件核对相对路径和 SHA-256，原始下载包的链接和哈希可从索引查询。
 
 ```powershell
-pwsh -NoProfile -File scripts/publish-network-rescue-bundles.ps1 -IncludeCatalog -WlanArchive <本地WLAN归档> -PeEthernetPackDirectory <有线驱动ZIP及其SHA-256所在目录>
+pwsh -NoProfile -File scripts/publish-network-rescue-bundles.ps1 -IncludeCatalog -WlanArchive <本地WLAN归档> -PeEthernetPackDirectory <有线驱动ZIP及其SHA-256所在目录> -SevenZipExecutable <完整版7z.exe>
 ```
 
 可用 `scripts/audit-network-rescue-library.ps1 -DriverDirectory <已解包的driver-packs>` 检查当前 Windows 构建能解析的网络类 INF 和通过签名验证的硬件 ID。该脚本从文件提取字面 ID，再通过应用的 SetupAPI 匹配检查。结果是一份当前构建上的证据下界。它不会安装驱动，不能替代板载模块映射或缺驱动实机测试。
@@ -293,4 +293,4 @@ PE 入口列出可访问的固定磁盘分区中识别出的 Windows 10/11 x64 �
 
 选择目标后，程序自动读取本机 PCI/USB 硬件 ID，共用完整版的 SDIO WLAN 库和原厂驱动目录。按目标系统构建号筛选原厂包，按目标系统选择随包提供的有线补充目录。只列出目标系统适用的网络类签名 INF 精确匹配项。按 Y 确认后调用系统 DISM 写入选中的离线 Windows，并列出目标驱动存储。重启进入该 Windows 后验证驱动绑定和联网。
 
-生成完整版需要 MSVC x64 和 Windows SDK，打包脚本自动构建 PE 入口。完整版需要两份 Windows 10/11 Realtek 有线 ZIP 及对应的 SHA-256 文件。真实 WinPE 启动、离线 DISM 写入、重启后的实际联网和全新安装流程需分别验收。
+生成完整版需要 MSVC x64 和 Windows SDK，打包脚本自动构建 PE 入口。完整版需要两份 Windows 10/11 Realtek 有线 ZIP 及对应的 SHA-256 文件，以及用于静态解包原厂 NSIS 驱动的完整版 `7z.exe`。完整版输出 ZIP。真实 WinPE 启动、离线 DISM 写入、重启后的实际联网和全新安装流程需分别验收。

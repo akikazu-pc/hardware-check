@@ -152,3 +152,14 @@ B550 UD WIFI6E rev. 1.2 的支持页列出适用两个系统的 MediaTek Wi-Fi 6
 - **A520I AC rev. 1.5**。技嘉规格和该修订手册确认 AzureWave AW-CB304NF（Realtek RTL8821CE）。复查了 2024.10.138.3 原厂 ZIP，SHA-256 与已有索引一致。Win11 Build 26300 匹配了 40 个 RTL8821CE 的精确子系统 ID，其中 11 个子系统厂商为 AzureWave。下载项仍明确标注仅适用于 rev. 1.4。两套系统的 rev. 1.5 驱动匹配仍待实机 ID 或原厂说明确认。 [原厂规格](https://www.gigabyte.com/eu/Motherboard/A520I-AC-rev-15/sp) · [原厂下载页](https://www.gigabyte.com/eu/Motherboard/A520I-AC-rev-15/support)
 
 本次更新了原厂包索引与型号证据，B550 的系统状态从原厂列出提升为包已入索引。两条记录的 `pending` 计数因此维持 Win10 1,218 条、Win11 1,216 条。完整版 ZIP 尚未重建。
+
+
+### 待核清单清理与完整版收录
+
+主板表的 `pending` 表示该主板记录在对应 Windows 版本的原厂 WLAN 证据仍待核实。可能缺出厂无线状态、具体模块、适用包或修订限制。已有原厂包证据的记录仍可能缺实机 SUBSYS、驱动绑定和联网结果，这些缺口保留在 `gap` 和逐修订映射的字段中。
+
+已核对 X870 GAMING X WIFI7 rev. 1.0／1.1 的原厂手册和支持页，两条关联现有 MT7925／RTL8922AE 包，Win10 标记为原厂下载页未列 WLAN 包。B860 DS3H WIFI6E rev. 1.0 的 AX211 已关联现有 Win10/11 Intel 包，rev. 1.1 仍待核对对应修订的下载项。Z790 D WIFI rev. 1.0 的原厂手册无线认证表确认 RTL8851BE，已补入模块证据。 [X870 支持页](https://www.gigabyte.com/eu/Motherboard/X870-GAMING-X-WIFI7-rev-1x/support) · [B860 支持页](https://www.gigabyte.com/us/Motherboard/B860-DS3H-WIFI6E-rev-10/support) · [Z790 手册](https://download.gigabyte.com/FileList/Manual/mb_manual_z790-d_series_1005_e.pdf?v=5374f4d5a8cf166aca24724729b39334)
+
+待核计数降至 Win10 **1,215** 条、Win11 **1,213** 条。两套系统各有 **1,106** 条共用的主板记录仍需先核对出厂无线状态。型号及修订应按原厂目录批量取得支持页，再按下载地址和 SHA-256 去重，复用已解析的 INF 和签名证据。网页修订冲突、模块变体和出厂实机 ID 需要逐条核对。
+
+完整版打包现从原厂索引取得 B550 MT7902 和 Z790 RTL8851BE 的三份原包，校验 SHA-256 后静态解包。MT7902 放入 Win10 和 Win11 目录，RTL8851BE 的两份包各取其对应系统的驱动目录。普通 Windows 与 WinPE 共用按目标系统选择的补充目录。

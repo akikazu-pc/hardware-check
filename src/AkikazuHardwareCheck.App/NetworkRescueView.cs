@@ -604,11 +604,11 @@ internal sealed class NetworkRescueView : UserControl
                 string.Equals(diagnostic.Architecture, "X64", StringComparison.OrdinalIgnoreCase) &&
                 Path.GetDirectoryName(root) is { } bundle)
             {
-                var ethernet = Path.Combine(bundle, "pe-drivers",
+                var systemDrivers = Path.Combine(bundle, "pe-drivers",
                     diagnostic.WindowsBuild < 22000 ? "windows10-x64" : "windows11-x64");
-                if (Directory.Exists(ethernet))
+                if (Directory.Exists(systemDrivers))
                 {
-                    roots.Add(ethernet);
+                    roots.Add(systemDrivers);
                 }
             }
             result = await Task.Run(() => OfflinePackageSearch.Find(roots, diagnostic.Devices, includePossible: true));

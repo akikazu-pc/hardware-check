@@ -4,7 +4,8 @@ param(
     [switch]$IncludeCatalog,
     [string]$VendorSourceDirectory,
     [string]$WlanArchive,
-    [string]$PeEthernetPackDirectory
+    [string]$PeEthernetPackDirectory,
+    [string]$SevenZipExecutable
 )
 
 $ErrorActionPreference = 'Stop'
@@ -16,6 +17,10 @@ if ($WlanArchive) {
     if (-not $PeEthernetPackDirectory) {
         throw 'Use -PeEthernetPackDirectory with -WlanArchive to include both Ethernet packs.'
     }
+    if (-not $SevenZipExecutable) {
+        throw 'Use -SevenZipExecutable with -WlanArchive to extract the OEM NSIS driver.'
+    }
+    $SevenZipExecutable = (Resolve-Path -LiteralPath $SevenZipExecutable).Path
     $WlanArchive = (Resolve-Path -LiteralPath $WlanArchive).Path
 }
 
@@ -117,6 +122,48 @@ start "" "%~dp0AkikazuHardwareCheck.exe" --portable-rescue
                 Expand-Archive -LiteralPath $pack -DestinationPath $ethernetRoot
                 if (-not (Get-ChildItem -LiteralPath $ethernetRoot -Recurse -File -Filter '*.inf' | Select-Object -First 1)) {
                     throw "PE Ethernet package for Windows $os contains no INF."
+                }
+            }
+
+            $scopedWlan = @(
+                @{ Id = 'mt7902-b550-rev12'; Systems = 10, 11; Directory = 'mbdriver/WLAN' }
+                @{ Id = 'rtl8851be-z790-win10'; Systems = 10; Directory = 'RTWLANE_Driver/Win10X64' }
+                @{ Id = 'rtl8851be-z790-win11'; Systems = 11; Directory = 'RTWLANE_Driver/Win11' }
+            )
+            $driverIndex = Import-Csv -LiteralPath (Join-Path $root 'docs/network-rescue-driver-index.csv')
+            foreach ($driver in $scopedWlan) {
+                $package = @($driverIndex | Where-Object packageId -eq $driver.Id)
+                if ($package.Count -ne 1) { throw "Expected one index entry for $($driver.Id)." }
+                $package = $package[0]
+                $fileName = [IO.Path]::GetFileName(([uri]$package.downloadUrl).LocalPath)
+                $inputRoot = Join-Path $staging.FullName $driver.Id
+                New-Item -ItemType Directory -Path $inputRoot | Out-Null
+                $vendorZip = Join-Path $inputRoot $fileName
+                if ($VendorSourceDirectory) {
+                    $vendorZip = Join-Path (Join-Path $VendorSourceDirectory $driver.Id) $fileName
+                } else {
+                    Invoke-WebRequest -Uri $package.downloadUrl -OutFile $vendorZip
+                }
+                if ((Get-FileHash -LiteralPath $vendorZip).Hash -ne $package.sha256) {
+                    throw "OEM WLAN package hash mismatch: $fileName"
+                }
+
+                $outer = Join-Path $inputRoot 'outer'
+                Expand-Archive -LiteralPath $vendorZip -DestinationPath $outer
+                $installers = @(Get-ChildItem -LiteralPath $outer -File -Filter '*.exe')
+                if ($installers.Count -ne 1) { throw "Expected one installer in $fileName." }
+                $payload = Join-Path $inputRoot 'payload'
+                & $SevenZipExecutable x -y -bso0 -bsp0 "-o$payload" $installers[0].FullName
+                if ($LASTEXITCODE -ne 0) { throw "Unable to extract $fileName ($LASTEXITCODE)." }
+                $driverSource = Join-Path $payload $driver.Directory
+                if (-not (Get-ChildItem -LiteralPath $driverSource -Recurse -File -Filter '*.inf' | Select-Object -First 1)) {
+                    throw "No extracted INF files in $fileName."
+                }
+                foreach ($os in $driver.Systems) {
+                    $destination = Join-Path $bundleRoot "pe-drivers/windows$os-x64/$($driver.Id)"
+                    Copy-Item -LiteralPath $driverSource -Destination $destination -Recurse
+                    Get-ChildItem -LiteralPath $payload -File | Where-Object Name -Match 'copyright|license|eula' |
+                        Copy-Item -Destination $destination
                 }
             }
         }
