@@ -258,7 +258,7 @@ pwsh -NoProfile -File scripts/publish-network-rescue-bundles.ps1 -IncludeCatalog
 从 [SDIO 官方种子](https://www.glenn.delahoy.com/snappy-driver-installer-origin/)仅下载 WLAN/Wi-Fi 压缩包。固定快照 `DP_WLAN-WiFi_26082.7z` 含 1,634 个 INF。构建校验归档 SHA-256，并将驱动文件解包到驱动搜索目录。完整版使用 ZIP 保存相对路径，原始下载包的链接和哈希可从索引查询。
 
 ```powershell
-pwsh -NoProfile -File scripts/publish-network-rescue-bundles.ps1 -IncludeCatalog -WlanArchive <本地WLAN归档>
+pwsh -NoProfile -File scripts/publish-network-rescue-bundles.ps1 -IncludeCatalog -WlanArchive <本地WLAN归档> -PeEthernetPackDirectory <有线驱动ZIP及其SHA-256所在目录>
 ```
 
 可用 `scripts/audit-network-rescue-library.ps1 -DriverDirectory <已解包的driver-packs>` 检查当前 Windows 构建能解析的网络类 INF 和通过签名验证的硬件 ID。该脚本从文件提取字面 ID，再通过应用的 SetupAPI 匹配检查。结果是一份当前构建上的证据下界。它不会安装驱动，不能替代板载模块映射或缺驱动实机测试。
@@ -285,12 +285,12 @@ pwsh -NoProfile -File scripts/publish-network-rescue-bundles.ps1 -IncludeCatalog
 
 两版都覆盖桌面和笔记本。在线安装版沿用与硬件测试的双装联动。旧的 `offline-wlan-library` 安装 ZIP 记录保留供追踪，当前离线交付以免安装完整版为准。
 
-## WinPE 修复已有的 Windows
+## 离线完整版在 Windows 与 WinPE 中使用
 
-使用 Visual Studio Build Tools 的 MSVC x64 和 Windows SDK 运行 `scripts/build-network-rescue-pe.cmd`。产物位于 `artifacts/network-rescue-pe/PeNetworkRescue.exe`。这是单独的原生 x64 控制台入口，键盘操作，运行时不依赖 WMI、PowerShell 或 .NET。首个预览的控制台提示为英文。
+将同一个离线完整版 ZIP 解压到 U 盘，两种环境都运行 `Run-Network-Rescue.cmd`。启动脚本自动检测 WinPE。在普通 Windows 打开急救窗口，在 x64 WinPE 进入键盘操作的修复入口。PE 入口为原生 x64 控制台程序，运行时不依赖 WMI、PowerShell 或 .NET。PE 控制台提示目前为英文。
 
-在 Windows 中先解压预览 ZIP 到 U 盘。启动 x64 WinPE 后，在命令提示符运行 U 盘里的 `PeNetworkRescue.exe`。程序会列出可访问的固定磁盘分区中识别出的 Windows 10/11 x64 系统。通过内核版本区分系统和匹配 INF 的最低构建号，启用包更新的 Windows 可能显示较早的基线内核构建号。若找不到预期分区，先检查 PE 是否能读取磁盘，或在具备相应组件的 PE 中解锁 BitLocker。
+PE 入口列出可访问的固定磁盘分区中识别出的 Windows 10/11 x64 系统。它用内核版本区分系统和匹配 INF 最低构建号，启用包更新的 Windows 可能显示较早的基线内核构建号。若找不到预期分区，先检查 PE 是否能读取磁盘，或在具备相应组件的 PE 中解锁 BitLocker。
 
-输入目标序号后，程序自动读取当前机器的 PCI/USB 硬件 ID，在相邻的 `pe-drivers/windows10-x64` 或 `pe-drivers/windows11-x64` 目录查找网络类签名 INF。用户选择精确匹配项并按 Y 确认后，调用系统 DISM 写入选中的离线 Windows 并列出其驱动存储。请保留完整的 INF、CAT、SYS 和依赖文件；每个驱动只放到原厂支持的系统目录。工具在非 PE 系统只允许通过 `--list-targets` 读取目标列表。
+选择目标后，程序自动读取本机 PCI/USB 硬件 ID，共用完整版的 SDIO WLAN 库和原厂驱动目录。按目标系统构建号筛选原厂包，按目标系统选择随包提供的有线补充目录。只列出目标系统适用的网络类签名 INF 精确匹配项。按 Y 确认后调用系统 DISM 写入选中的离线 Windows，并列出目标驱动存储。重启进入该 Windows 后验证驱动绑定和联网。
 
-首批本地预览包包括技嘉 B550M DS3H AC R2 Rev. 1.2 的两份 Realtek 有线补充包，以及华硕 PRIME B650M-A AX 的 RTL8852BE Wi-Fi 样本，来源见 [驱动证据和索引](network-rescue-coverage-progress.md)。可把已验证适用目标系统的 Wi-Fi 签名驱动放进对应目录。当前验证覆盖编译、只读目标发现和普通 Windows 写入保护。真实 WinPE 启动、离线 DISM 写入、重启后的实际驱动绑定与联网，以及新安装的 Setup 应答文件流程仍待验证或实现。
+生成完整版需要 MSVC x64 和 Windows SDK，打包脚本自动构建 PE 入口。可选的 `-PeEthernetPackDirectory` 指向两份已验证的 Windows 10/11 Realtek 有线 ZIP 及对应 SHA-256 文件的目录。真实 WinPE 启动、离线 DISM 写入、重启后的实际联网和全新安装流程需分别验收。

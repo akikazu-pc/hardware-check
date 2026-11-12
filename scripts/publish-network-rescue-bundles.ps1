@@ -3,7 +3,8 @@ param(
     [string]$RealtekVendorZip,
     [switch]$IncludeCatalog,
     [string]$VendorSourceDirectory,
-    [string]$WlanArchive
+    [string]$WlanArchive,
+    [string]$PeEthernetPackDirectory
 )
 
 $ErrorActionPreference = 'Stop'
@@ -13,6 +14,19 @@ if ($WlanArchive) {
         throw 'Use -IncludeCatalog with -WlanArchive.'
     }
     $WlanArchive = (Resolve-Path -LiteralPath $WlanArchive).Path
+}
+
+if ($PeEthernetPackDirectory) {
+    if (-not $WlanArchive) {
+        throw 'Use -PeEthernetPackDirectory with -WlanArchive.'
+    }
+    $PeEthernetPackDirectory = (Resolve-Path -LiteralPath $PeEthernetPackDirectory).Path
+}
+if ($WlanArchive) {
+    & (Join-Path $PSScriptRoot 'build-network-rescue-pe.cmd')
+    if ($LASTEXITCODE -ne 0) {
+        throw "Native PE helper build failed ($LASTEXITCODE)."
+    }
 }
 
 if ($RealtekVendorZip) {
@@ -77,6 +91,29 @@ start "" "%~dp0AkikazuHardwareCheck.exe" --portable-rescue
 
         if ($flavor -eq 'offline-full-portable') {
             & (Join-Path $PSScriptRoot 'prepare-sdio-wlan-library.ps1') -Archive $WlanArchive -OutputDirectory $bundleRoot
+            Copy-Item -LiteralPath (Join-Path $root 'artifacts/network-rescue-pe/PeNetworkRescue.exe') -Destination $bundleRoot
+            Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'prototype/Run-Network-Rescue.cmd') -Destination $bundleRoot -Force
+            $packages = (Get-Content -LiteralPath (Join-Path $bundleRoot 'wifi-preview-packages.json') -Raw | ConvertFrom-Json).packages
+            $peScope = @(
+                '10240 sdio-wlan-wifi-26082'
+                foreach ($package in $packages) {
+                    $floor = if ($package.windows11Only) { 22000 } else { 10240 }
+                    $minimum = [Math]::Max($floor, [int]$package.minimumWindowsBuild)
+                    "$minimum $($package.id)-$($package.version)"
+                }
+            )
+            Set-Content -LiteralPath (Join-Path $bundleRoot 'pe-driver-scope.txt') -Value $peScope -Encoding ascii
+
+            if ($PeEthernetPackDirectory) {
+                foreach ($os in 10, 11) {
+                    $pack = Join-Path $PeEthernetPackDirectory "NetworkRescue-Realtek-Ethernet-Windows$os-x64.zip"
+                    $recorded = ((Get-Content -LiteralPath "$pack.sha256" -Raw).Trim() -split '\s+')[0]
+                    if ((Get-FileHash -LiteralPath $pack).Hash -ne $recorded) {
+                        throw "PE Ethernet package hash mismatch: $pack"
+                    }
+                    Expand-Archive -LiteralPath $pack -DestinationPath (Join-Path $bundleRoot "pe-drivers/windows$os-x64")
+                }
+            }
         }
 
         Copy-Item -LiteralPath (Join-Path $root 'docs/network-rescue-driver-index.csv') -Destination $bundleRoot

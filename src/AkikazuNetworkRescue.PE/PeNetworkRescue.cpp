@@ -201,6 +201,23 @@ static DWORD RunDism(const Target& target, const std::wstring& arguments)
     return code;
 }
 
+static std::vector<fs::path> DriverDirectories(const fs::path& bundle, DWORD build)
+{
+    const auto scopedDrivers = bundle / L"pe-drivers" / (build < 22000 ? L"windows10-x64" : L"windows11-x64");
+    std::vector<fs::path> directories{ scopedDrivers };
+    std::ifstream scope(bundle / L"pe-driver-scope.txt");
+    DWORD minimum = 0;
+    std::string name;
+    // OEM packages share the desktop library. The generated list carries the OEM OS floor.
+    while (scope >> minimum >> name) {
+        if (minimum <= build && name.find_first_not_of("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-.") == std::string::npos &&
+            name != "." && name != "..") {
+            directories.push_back(bundle / L"driver-packs" / name);
+        }
+    }
+    return directories;
+}
+
 static size_t ReadSelection(size_t maximum)
 {
     std::wstring answer;
@@ -243,25 +260,35 @@ int wmain(int argc, wchar_t** argv)
     if (!GetModuleFileNameW(nullptr, executable, MAX_PATH)) {
         return 3;
     }
-    const auto directory = fs::path(executable).parent_path() / L"pe-drivers" /
-        (target.build < 22000 ? L"windows10-x64" : L"windows11-x64");
-    std::wcout << L"Scanning " << directory.c_str() << L'\n';
+    const auto directories = DriverDirectories(fs::path(executable).parent_path(), target.build);
     const auto ids = ReadDeviceHardwareIds();
     std::vector<fs::path> candidates;
-    std::error_code error;
-    for (fs::recursive_directory_iterator it(directory, fs::directory_options::skip_permission_denied, error), end;
-        !error && it != end; it.increment(error)) {
-        if (!it->is_regular_file(error) || _wcsicmp(it->path().extension().c_str(), L".inf") != 0) {
+    bool incomplete = false;
+    for (const auto& directory : directories) {
+        std::error_code error;
+        if (!fs::exists(directory, error)) {
+            incomplete |= static_cast<bool>(error);
             continue;
         }
-        const auto match = MatchNetworkInf(it->path(), target.build, ids);
-        if (!match.empty() && VerifyNetworkDriver(it->path())) {
-            candidates.push_back(it->path());
-            std::wcout << candidates.size() << L". " << it->path().c_str() << L" [" << match << L"]\n";
+        std::wcout << L"Scanning " << directory.c_str() << L'\n';
+        for (fs::recursive_directory_iterator it(directory, fs::directory_options::skip_permission_denied, error), end;
+            !error && it != end; it.increment(error)) {
+            if (!it->is_regular_file(error) || _wcsicmp(it->path().extension().c_str(), L".inf") != 0) {
+                continue;
+            }
+            const auto match = MatchNetworkInf(it->path(), target.build, ids);
+            if (!match.empty() && VerifyNetworkDriver(it->path())) {
+                candidates.push_back(it->path());
+                std::wcout << candidates.size() << L". " << it->path().c_str() << L" [" << match << L"]\n";
+            }
         }
+        incomplete |= static_cast<bool>(error);
     }
-    if (error || candidates.empty()) {
-        std::wcerr << L"No verified exact driver match. Check the target-specific driver folder.\n";
+    if (incomplete) {
+        std::wcerr << L"Some driver folders could not be read.\n";
+    }
+    if (candidates.empty()) {
+        std::wcerr << L"No verified exact driver match. Check the extracted driver folders.\n";
         return 4;
     }
 
