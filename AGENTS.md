@@ -21,6 +21,8 @@
 - “只读”“只检查”“先分析”“先不改”只允许调查和报告；不得编辑、暂存、提交、同步、部署或执行外部写操作。诊断不自动授权修复。
 - 完成用户授权的修改并通过验证后自动 commit；用户明确要求不提交时除外。未经明确授权不得 push 或发布 Release。
 - push、GitHub Release、Microsoft Store 提交、网站部署和真实外部同步分别授权，不得互相推定。
+- 默认单分支：所有会话和智能体直接在当前 `main` 工作树按单主题 commit，不新建本地/远端分支、worktree 或 PR 分支；用户明确要求或 Dependabot 等工具自动创建的除外。
+- 确需隔离验证时优先用临时 detached worktree，不建分支，用完立即 `git worktree remove`；不得为并行、实验或审查另开长期分支。
 - 开始和提交前检查分支、HEAD、`git status`、文件归属与目标 diff；不 stash、不切换分支、不改写历史，不覆盖或夹带其他会话的修改。HEAD 意外变化或归属不明时暂停。
 - 状态异常但没有内容 diff 时检查 `git diff --summary` 和 `git update-index --refresh`；不得把索引、时间戳或换行噪声当作修改。
 - 只暂存本任务文件，确认验证对象与最终暂存内容一致；commit 后立即检查提交内容和 `git status --short`。
