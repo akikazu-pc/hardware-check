@@ -6,27 +6,31 @@ using AkikazuHardwareCheck.Core.SharedDesktop;
 
 namespace AkikazuHardwareCheck.App;
 
-/// <summary>
-/// The rescue module's page. It reports local adapter and module facts only; it sends no packets, so it remains
-/// useful when the internet is down. Driver installation and rollback are deliberately not part of this prototype.
-/// </summary>
 internal sealed class NetworkRescueView : UserControl
 {
     private const float HEADING_FONT_SIZE = 12f;
 
     private readonly IReadOnlyList<InstalledModule> _modules;
     private readonly string? _portableDriverDirectory;
+    private readonly ToolStrip _toolbar = new() { GripStyle = ToolStripGripStyle.Hidden, TabStop = true };
+    private readonly ToolStripDropDownButton _tools = new();
+    private readonly ToolStripDropDownButton _help = new();
+    private readonly ToolStripMenuItem _guide = new();
+    private readonly ToolStripMenuItem _about = new();
     private readonly Label _heading = Ui.Label(isBold: true);
     private readonly Label _note = Ui.Label();
     private readonly Label _networkHeading = Ui.Label(isBold: true);
-    private readonly Button _refresh = Ui.Button();
+    private readonly Label _connectionStatus = Ui.Label();
+    private readonly LinkLabel _retestConnection = new() { AutoSize = true };
+    private readonly LinkLabel _networkSettings = new() { AutoSize = true };
+    private readonly ToolStripMenuItem _refresh = new();
     private readonly ListView _adapters = ListViewTable.Create();
     private readonly ListView _moduleList = ListViewTable.Create();
     private readonly Button _scan = Ui.Button();
-    private readonly Button _export = Ui.Button();
-    private readonly Button _preview = Ui.Button();
-    private readonly Button _searchFolder = Ui.Button();
-    private readonly Button _online = Ui.Button();
+    private readonly ToolStripMenuItem _export = new();
+    private readonly ToolStripMenuItem _preview = new();
+    private readonly ToolStripMenuItem _searchFolder = new();
+    private readonly ToolStripMenuItem _online = new();
     private readonly Button _install = Ui.Button();
     private readonly LinkLabel _modelLink = new() { AutoSize = true };
     private readonly LinkLabel _adapterLink = new() { AutoSize = true };
@@ -34,7 +38,7 @@ internal sealed class NetworkRescueView : UserControl
     private readonly Label _adapterCaption = Ui.Label();
     private RescueModelSupport? _model;
     private string? _installedWifi;
-    private string[] _bundledWifiNames = [];
+    private string[] _bundledAdapterNames = [];
     private readonly Label _scanStatus = Ui.Label();
     private readonly ListView _pciDevices = ListViewTable.Create();
     private readonly TabPage _pciPage = new();
@@ -67,6 +71,8 @@ internal sealed class NetworkRescueView : UserControl
         _heading.Font = new Font(Font.FontFamily, HEADING_FONT_SIZE, FontStyle.Bold);
         _note.ForeColor = Ui.MutedTextColor;
         _refresh.Click += (_, _) => RefreshStatus();
+        _retestConnection.LinkClicked += (_, _) => RefreshStatus();
+        _networkSettings.LinkClicked += (_, _) => OpenPage("ms-settings:network-status", "rescue.networkSettingsFailed");
         _scan.Click += async (_, _) => await ScanAsync();
         _export.Click += (_, _) => ExportDiagnostics();
         _preview.Click += async (_, _) => await PreviewInfAsync();
@@ -76,7 +82,7 @@ internal sealed class NetworkRescueView : UserControl
         {
             if (Directory.Exists(BundledDriverDirectory))
             {
-                await SearchFolderAsync(useBundled: true);
+                await SearchFolderAsync(useBundled: true, forRepair: true);
             }
             else if (HasOnlineCandidates())
             {
@@ -84,7 +90,7 @@ internal sealed class NetworkRescueView : UserControl
             }
             else
             {
-                await SearchFolderAsync();
+                await SearchFolderAsync(forRepair: true);
             }
         };
         _modelLink.LinkClicked += (_, _) => OpenOfficialPage();
@@ -104,7 +110,7 @@ internal sealed class NetworkRescueView : UserControl
         _catalogSource.LinkClicked += (_, _) => OpenCatalogPage(driverPage: false);
         _adapterLink.LinkClicked += async (_, _) =>
         {
-            if (_bundledWifiNames.Length > 0)
+            if (_bundledAdapterNames.Length > 0)
             {
                 await SearchFolderAsync(useBundled: true, exportOnly: true);
             }
@@ -144,7 +150,14 @@ internal sealed class NetworkRescueView : UserControl
         _moduleList.Columns.Add("", 120);
         _moduleList.Columns.Add("", 120);
 
+        _tools.DropDownItems.AddRange([_refresh, _export, _preview, _searchFolder]);
+        if (DistributionProfile.Current.Channel != DistributionChannel.Store)
+        {
+            _tools.DropDownItems.Add(_online);
+        }
+        _toolbar.Items.Add(_tools);
         Controls.Add(BuildLayout());
+        Controls.Add(_toolbar);
         ListViewTable.EnableSort(_adapters);
         ListViewTable.EnableSort(_moduleList);
         ListViewTable.EnableColumnMenu(_adapters, _t);
@@ -162,6 +175,18 @@ internal sealed class NetworkRescueView : UserControl
         };
     }
 
+    public void AddPortableMenus(ToolStripDropDownButton language)
+    {
+        _guide.Click += (_, _) => AboutForm.OpenExternal($"{AboutForm.REPOSITORY}#readme");
+        _about.Click += (_, _) =>
+        {
+            using var dialog = new AboutForm(_t, Font, _t["module.rescue"]);
+            dialog.ShowDialog(this);
+        };
+        _help.DropDownItems.AddRange([_guide, _about]);
+        _toolbar.Items.AddRange([language, _help]);
+    }
+
     public void ApplyLanguage(Translator t)
     {
         _t = t;
@@ -169,6 +194,12 @@ internal sealed class NetworkRescueView : UserControl
         _heading.Text = t["rescue.heading"];
         _note.Text = t["rescue.note"];
         _networkHeading.Text = t["rescue.network"];
+        _retestConnection.Text = t["rescue.retestConnection"];
+        _networkSettings.Text = t["rescue.openNetworkSettings"];
+        _tools.Text = t["rescue.pe.tools"];
+        _help.Text = t["ui.menuHelp"];
+        _guide.Text = t["ui.guide"];
+        _about.Text = t["ui.about"];
         _refresh.Text = t["rescue.refresh"];
         _modulesPage.Text = t["rescue.modules"];
         _pciPage.Text = t["rescue.pci"];
@@ -222,6 +253,7 @@ internal sealed class NetworkRescueView : UserControl
         }
 
         var status = LocalNetworkStatus.Read();
+        _connectionStatus.Text = ConnectionMessage(status.RecoveryStage);
         _installedWifi = string.Join(" / ", status.Adapters.Where(adapter => adapter.Kind == LocalNetworkKind.Wireless)
             .Select(adapter => adapter.Description ?? adapter.Name).Distinct());
         UpdateDriverLinks();
@@ -262,6 +294,18 @@ internal sealed class NetworkRescueView : UserControl
         _moduleList.EndUpdate();
     }
 
+    private string ConnectionMessage(NetworkRecoveryStage stage) => _t[stage switch
+    {
+        NetworkRecoveryStage.NoAdapter => "rescue.connectionNoAdapter",
+        NetworkRecoveryStage.Disconnected => "rescue.connectionDisconnected",
+        NetworkRecoveryStage.NoUsableAddress => "rescue.connectionNoAddress",
+        NetworkRecoveryStage.NoGateway => "rescue.connectionNoGateway",
+        NetworkRecoveryStage.LocalOnly => "rescue.connectionLocalOnly",
+        NetworkRecoveryStage.SignInMayBeRequired => "rescue.connectionSignIn",
+        NetworkRecoveryStage.InternetReported => "rescue.connectionInternet",
+        _ => "rescue.connectionUnknown",
+    }];
+
     private async Task ScanAsync()
     {
         _scan.Enabled = false;
@@ -270,24 +314,31 @@ internal sealed class NetworkRescueView : UserControl
         _searchFolder.Enabled = false;
         _online.Enabled = false;
         _diagnostic = null;
-        _bundledWifiNames = [];
+        _bundledAdapterNames = [];
         _scanStatusKey = "rescue.scanning";
         ShowDiagnostic();
         try
         {
-            _diagnostic = await Task.Run(NetworkDeviceInventory.Read);
+            var diagnostic = await Task.Run(NetworkDeviceInventory.Read);
+            _diagnostic = diagnostic;
             _model = await Task.Run(RescueModelSupport.Read);
             if (BundledDriverDirectory is { } directory && Directory.Exists(directory))
             {
-                var devices = _diagnostic.Devices;
+                var devices = diagnostic.Devices;
                 if (devices.Count > 0)
                 {
-                    _bundledWifiNames = await Task.Run(() => OfflinePackageSearch.Find(directory, devices).Candidates
+                    _bundledAdapterNames = await Task.Run(() => OfflinePackageSearch.Find(
+                            BundledDriverRoots(directory, diagnostic), devices, includePossible: false).Candidates
                         .SelectMany(candidate => candidate.Matches).Select(match => match.AdapterName)
                         .OfType<string>().Where(name => !string.IsNullOrWhiteSpace(name)).Distinct().ToArray());
                 }
             }
-            _scanStatusKey = _diagnostic.Devices.Count == 0 ? "rescue.noPci" : null;
+            _scanStatusKey = _diagnostic.Devices.Any(device => device.ProblemCode == 28 &&
+                    device.Kind != NetworkCandidateKind.UsbUnidentified) ? "rescue.recoveryMissingDriver"
+                : _diagnostic.Devices.Any(device => device.ProblemCode is > 0 and not 28) ? "rescue.recoveryDeviceProblem"
+                : _diagnostic.Devices.Any(device => device.Kind == NetworkCandidateKind.UsbUnidentified)
+                    ? "rescue.recoveryUnknownUsb"
+                    : "rescue.recoveryNoMissingDriver";
         }
         catch (Exception exception) when (exception is System.Management.ManagementException
             or System.Runtime.InteropServices.COMException or UnauthorizedAccessException or IOException)
@@ -302,6 +353,7 @@ internal sealed class NetworkRescueView : UserControl
             _preview.Enabled = _diagnostic?.Devices.Count > 0;
             _searchFolder.Enabled = _preview.Enabled;
             _online.Enabled = _diagnostic?.Devices.Any(device => device.ProblemCode == 28) == true;
+            RefreshStatus();
             ShowDiagnostic();
         }
     }
@@ -331,6 +383,12 @@ internal sealed class NetworkRescueView : UserControl
         (_modules.FirstOrDefault(module => module.Module == SharedModuleId.NetworkRescue) is { } rescue
             ? Path.Combine(rescue.InstallRoot, "driver-packs") : null);
 
+    // The portable bundle limits WLAN folders by build and adds the per-Windows Ethernet set.
+    private IReadOnlyList<string> BundledDriverRoots(string root, NetworkDeviceDiagnostic diagnostic) =>
+        _portableDriverDirectory is null
+            ? [root]
+            : OfflinePackageSearch.GetPortableRoots(root, diagnostic.WindowsBuild, diagnostic.Architecture);
+
     private bool HasOnlineCandidates() => DistributionProfile.Current.Channel != DistributionChannel.Store &&
         _diagnostic is { } diagnostic &&
         (OnlineDriverCatalog.Find(diagnostic).Count > 0 || OnlineDriverCatalog.FindPossible(diagnostic).Count > 0);
@@ -346,15 +404,14 @@ internal sealed class NetworkRescueView : UserControl
             _modelLink.Links.Add(0, _modelLink.Text.Length);
         }
         _modelCaption.Visible = _modelLink.Visible = _model is not null;
-        _adapterCaption.Text = _t["rescue.wifiModel"];
+        _adapterCaption.Text = _t["rescue.adapter"];
         var packages = _diagnostic is { } diagnostic
             ? OnlineDriverCatalog.Find(diagnostic, includeInstalled: true)
                 .Concat(OnlineDriverCatalog.FindPossible(diagnostic, includeInstalled: true))
             : [];
         var names = string.Join(" / ", packages.Select(package => package.AdapterName ?? package.Id).Distinct());
-        var localNames = string.Join(" / ", _bundledWifiNames);
-        _adapterLink.Text = !string.IsNullOrEmpty(_installedWifi) ? _installedWifi :
-            localNames.Length > 0 ? localNames : names;
+        var localNames = string.Join(" / ", _bundledAdapterNames);
+        _adapterLink.Text = localNames.Length > 0 ? localNames : names.Length > 0 ? names : _installedWifi;
         _adapterLink.Links.Clear();
         _adapterLink.LinkArea = new LinkArea(0, 0);
         if (DistributionProfile.Current.Channel != DistributionChannel.Store &&
@@ -373,7 +430,7 @@ internal sealed class NetworkRescueView : UserControl
         OpenPage(_model?.OfficialPage);
     }
 
-    private void OpenPage(string? page)
+    private void OpenPage(string? page, string failureKey = "rescue.onlineFailed")
     {
         if (page is not null)
         {
@@ -383,7 +440,7 @@ internal sealed class NetworkRescueView : UserControl
             }
             catch (System.ComponentModel.Win32Exception)
             {
-                ShowInstallResult("rescue.onlineFailed");
+                ShowInstallResult(failureKey);
             }
         }
     }
@@ -543,18 +600,28 @@ internal sealed class NetworkRescueView : UserControl
         try
         {
             var matches = OfflineInfMatcher.Match(path, devices);
-            if (OfflineDriverInstaller.SelectMissingMatch(matches) is { } eligible &&
-                DistributionProfile.Current.Channel != DistributionChannel.Store)
+            if (DistributionProfile.Current.Channel != DistributionChannel.Store)
             {
-                await ConfirmInstallAsync(path, eligible);
-                return;
+                var eligible = OfflineDriverInstaller.FindInstallableMatches(matches, devices);
+                if (eligible.Length > 0)
+                {
+                    var selected = eligible.Length == 1 ? eligible[0] : SelectInstallTarget(path, eligible);
+                    if (selected is not null)
+                    {
+                        await ConfirmInstallAsync(path, selected);
+                    }
+                    return;
+                }
             }
 
             message = matches.Count == 0
                 ? _t["rescue.infNoMatch"]
                 : string.Join(Environment.NewLine,
                     matches.Select(match => $"{match.HardwareId} [{match.ModelsSection}]").Distinct())
-                    + Environment.NewLine + Environment.NewLine + _t["rescue.infPreviewNote"];
+                    + Environment.NewLine + Environment.NewLine
+                    + _t[matches.Any(match => match.Device.ProblemCode == 28) &&
+                        DistributionProfile.Current.Channel != DistributionChannel.Store
+                        ? "rescue.installTargetAmbiguous" : "rescue.infPreviewNote"];
         }
         catch (System.ComponentModel.Win32Exception)
         {
@@ -565,9 +632,36 @@ internal sealed class NetworkRescueView : UserControl
             MessageBoxButtons.OK, MessageBoxIcon.Information);
     }
 
-    private async Task SearchFolderAsync(bool useBundled = false, bool exportOnly = false)
+    private OfflineInfMatch? SelectInstallTarget(string path, OfflineInfMatch[] matches)
+    {
+        var page = new TaskDialogPage
+        {
+            Caption = _t["rescue.heading"],
+            Heading = _t["rescue.selectInstallTarget"],
+            Text = Path.GetFileName(path),
+            AllowCancel = true,
+            DefaultButton = TaskDialogButton.Cancel,
+        };
+        var targets = new Dictionary<TaskDialogButton, OfflineInfMatch>();
+        foreach (var match in matches)
+        {
+            var label = match.AdapterName ?? match.HardwareId;
+            var button = new TaskDialogCommandLinkButton(label, label == match.HardwareId ? "" : match.HardwareId);
+            page.Buttons.Add(button);
+            targets.Add(button, match);
+        }
+        page.Buttons.Add(TaskDialogButton.Cancel);
+        return targets.GetValueOrDefault(TaskDialog.ShowDialog(this, page));
+    }
+
+    private async Task SearchFolderAsync(bool useBundled = false, bool exportOnly = false, bool forRepair = false)
     {
         if (_diagnostic is not { Devices.Count: > 0 } diagnostic)
+        {
+            return;
+        }
+        IReadOnlyList<NetworkDeviceCandidate> devices = forRepair ? MissingDriverDevices(diagnostic) : diagnostic.Devices;
+        if (devices.Count == 0)
         {
             return;
         }
@@ -594,7 +688,14 @@ internal sealed class NetworkRescueView : UserControl
         var root = useBundled ? BundledDriverDirectory : folder.SelectedPath;
         if (root is null || !Directory.Exists(root))
         {
-            ShowInstallResult("rescue.folderReadFailed");
+            if (useBundled && forRepair)
+            {
+                await OfferOtherDriverSourcesAsync(_t["rescue.folderReadFailed"]);
+            }
+            else
+            {
+                ShowInstallResult("rescue.folderReadFailed");
+            }
             return;
         }
         _scan.Enabled = _preview.Enabled = _searchFolder.Enabled = _online.Enabled = false;
@@ -603,10 +704,8 @@ internal sealed class NetworkRescueView : UserControl
         OfflinePackageSearchResult? result = null;
         try
         {
-            IReadOnlyList<string> roots = useBundled && _portableDriverDirectory is not null
-                ? OfflinePackageSearch.GetPortableRoots(root, diagnostic.WindowsBuild, diagnostic.Architecture)
-                : [root];
-            result = await Task.Run(() => OfflinePackageSearch.Find(roots, diagnostic.Devices, includePossible: true));
+            var roots = useBundled ? BundledDriverRoots(root, diagnostic) : [root];
+            result = await Task.Run(() => OfflinePackageSearch.Find(roots, devices, includePossible: true));
             _scanStatusKey = null;
         }
         catch (Exception exception) when (exception is IOException or UnauthorizedAccessException)
@@ -624,14 +723,26 @@ internal sealed class NetworkRescueView : UserControl
         _scanStatus.Text = _scanStatusKey is { } status ? _t[status] : "";
         if (result is null)
         {
+            if (useBundled && forRepair)
+            {
+                await OfferOtherDriverSourcesAsync(_t["rescue.folderReadFailed"]);
+            }
             return;
         }
 
         var skipped = result.UnreadableInfCount > 0 ? _t["rescue.unreadableInfs", result.UnreadableInfCount] : "";
         if (result.Candidates.Count == 0)
         {
-            MessageBox.Show(this, string.Join(Environment.NewLine, new[] { _t["rescue.infNoMatch"], skipped }
-                .Where(text => text.Length > 0)), _t["rescue.driverCandidates"], MessageBoxButtons.OK, MessageBoxIcon.Information);
+            var message = string.IsNullOrEmpty(skipped) ? _t["rescue.infNoMatch"] :
+                _t["rescue.infNoMatch"] + Environment.NewLine + skipped;
+            if (useBundled && forRepair)
+            {
+                await OfferOtherDriverSourcesAsync(message);
+            }
+            else
+            {
+                MessageBox.Show(this, message, _t["rescue.driverCandidates"], MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
             return;
         }
 
@@ -656,6 +767,38 @@ internal sealed class NetworkRescueView : UserControl
         }
     }
 
+    private async Task OfferOtherDriverSourcesAsync(string details)
+    {
+        var local = new TaskDialogCommandLinkButton(_t["rescue.recoveryChooseFolder"]);
+        var online = new TaskDialogCommandLinkButton(_t["rescue.recoveryTryDownload"]);
+        var page = new TaskDialogPage
+        {
+            Caption = _t["rescue.heading"],
+            Heading = _t["rescue.recoveryOtherSources"],
+            Text = details,
+            AllowCancel = true,
+            DefaultButton = TaskDialogButton.Cancel,
+        };
+        page.Buttons.Add(local);
+        if (HasOnlineCandidates())
+        {
+            page.Buttons.Add(online);
+        }
+        page.Buttons.Add(TaskDialogButton.Cancel);
+        var selected = TaskDialog.ShowDialog(this, page);
+        if (selected == local)
+        {
+            await SearchFolderAsync(forRepair: true);
+        }
+        else if (selected == online)
+        {
+            await DownloadDriverAsync();
+        }
+    }
+
+    private static NetworkDeviceCandidate[] MissingDriverDevices(NetworkDeviceDiagnostic diagnostic) =>
+        diagnostic.Devices.Where(device => device.ProblemCode == 28).ToArray();
+
     private async Task DownloadDriverAsync(bool downloadOnly = false)
     {
         if (_diagnostic is not { } diagnostic)
@@ -665,6 +808,7 @@ internal sealed class NetworkRescueView : UserControl
 
         var packages = OnlineDriverCatalog.Find(diagnostic, includeInstalled: downloadOnly);
         var possible = OnlineDriverCatalog.FindPossible(diagnostic, includeInstalled: downloadOnly);
+        IReadOnlyList<NetworkDeviceCandidate> devices = downloadOnly ? diagnostic.Devices : MissingDriverDevices(diagnostic);
         if (packages.Count == 0 && possible.Count == 0)
         {
             ShowInstallResult("rescue.onlineNoMatch");
@@ -700,7 +844,7 @@ internal sealed class NetworkRescueView : UserControl
                 using var timeout = new CancellationTokenSource(TimeSpan.FromMinutes(3));
                 var root = workspace.FullName;
                 driverDirectory = await Task.Run(() => OnlineDriverCatalog.DownloadAsync(selected, root, timeout.Token));
-                result = await Task.Run(() => OfflinePackageSearch.Find(driverDirectory, diagnostic.Devices, includePossible: true));
+                result = await Task.Run(() => OfflinePackageSearch.Find(driverDirectory, devices, includePossible: true));
                 _scanStatusKey = null;
             }
             catch (Exception exception) when (exception is IOException or UnauthorizedAccessException or HttpRequestException
@@ -1025,43 +1169,46 @@ internal sealed class NetworkRescueView : UserControl
             await ScanAsync();
             if (!IsDisposed)
             {
-                ShowInstallResult(resultKey);
+                var connection = resultKey == "rescue.bound" ? _connectionStatus.Text : null;
+                ShowInstallResult(resultKey, connection);
             }
         }
     }
 
-    private void ShowInstallResult(string key) => MessageBox.Show(this, _t[key], _t["rescue.heading"],
+    private void ShowInstallResult(string key, string? detail = null) => MessageBox.Show(this,
+        detail is null ? _t[key] : _t[key] + Environment.NewLine + Environment.NewLine + detail, _t["rescue.heading"],
         MessageBoxButtons.OK, MessageBoxIcon.Information);
 
     private Control BuildLayout()
     {
-        var root = new TableLayoutPanel { Dock = DockStyle.Fill, ColumnCount = 1, RowCount = 5, Margin = new Padding(0) };
+        var root = new TableLayoutPanel { Dock = DockStyle.Fill, ColumnCount = 1, RowCount = 6, Margin = new Padding(0) };
         root.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100));
+        root.RowStyles.Add(new RowStyle(SizeType.AutoSize));
         root.RowStyles.Add(new RowStyle(SizeType.AutoSize));
         root.RowStyles.Add(new RowStyle(SizeType.AutoSize));
         root.RowStyles.Add(new RowStyle(SizeType.AutoSize));
         root.RowStyles.Add(new RowStyle(SizeType.Percent, 40));
         root.RowStyles.Add(new RowStyle(SizeType.Percent, 60));
 
-        var headingRow = new TableLayoutPanel { Dock = DockStyle.Top, AutoSize = true, ColumnCount = 2, Margin = new Padding(0) };
-        headingRow.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100));
-        headingRow.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize));
         _heading.Anchor = AnchorStyles.Left;
-        _refresh.Anchor = AnchorStyles.Right;
-        _refresh.Margin = new Padding(0, 0, 0, Ui.SPACING);
-        headingRow.Controls.Add(_heading, 0, 0);
-        headingRow.Controls.Add(_refresh, 1, 0);
-        root.Controls.Add(headingRow, 0, 0);
+        root.Controls.Add(_heading, 0, 0);
 
         _note.Dock = DockStyle.Top;
         _note.Margin = new Padding(0, 0, 0, Ui.SPACING);
         root.Controls.Add(_note, 0, 1);
 
-        _networkHeading.Margin = new Padding(0, Ui.SPACING, 0, Ui.SPACING / 2);
-        root.Controls.Add(_networkHeading, 0, 2);
+        var networkActions = new FlowLayoutPanel
+        {
+            Dock = DockStyle.Top,
+            AutoSize = true,
+            Margin = new Padding(0, Ui.SPACING, 0, 0),
+        };
+        networkActions.Controls.AddRange([_networkHeading, _retestConnection, _networkSettings]);
+        root.Controls.Add(networkActions, 0, 2);
+        root.Controls.Add(_connectionStatus, 0, 3);
 
         _adapters.Margin = new Padding(0, 0, 0, Ui.SPACING);
-        root.Controls.Add(_adapters, 0, 3);
+        root.Controls.Add(_adapters, 0, 4);
 
         var tabs = new TabControl { Dock = DockStyle.Fill };
         var scanLayout = new TableLayoutPanel { Dock = DockStyle.Fill, ColumnCount = 1, RowCount = 4 };
@@ -1071,13 +1218,6 @@ internal sealed class NetworkRescueView : UserControl
         scanLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 100));
         var actions = new FlowLayoutPanel { Dock = DockStyle.Fill, AutoSize = true };
         actions.Controls.Add(_scan);
-        actions.Controls.Add(_export);
-        actions.Controls.Add(_preview);
-        actions.Controls.Add(_searchFolder);
-        if (_portableDriverDirectory is null && DistributionProfile.Current.Channel != DistributionChannel.Store)
-        {
-            actions.Controls.Add(_online);
-        }
         var deviceSummary = new TableLayoutPanel { Dock = DockStyle.Top, AutoSize = true, ColumnCount = 2, RowCount = 2 };
         deviceSummary.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize));
         deviceSummary.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100));
@@ -1101,16 +1241,16 @@ internal sealed class NetworkRescueView : UserControl
         {
             var browsing = tabs.SelectedTab == _catalogPage;
             root.SuspendLayout();
-            _networkHeading.Visible = _adapters.Visible = !browsing;
-            root.RowStyles[3].SizeType = browsing ? SizeType.Absolute : SizeType.Percent;
-            root.RowStyles[3].Height = browsing ? 0 : 40;
+            networkActions.Visible = _connectionStatus.Visible = _adapters.Visible = !browsing;
+            root.RowStyles[4].SizeType = browsing ? SizeType.Absolute : SizeType.Percent;
+            root.RowStyles[4].Height = browsing ? 0 : 40;
             root.ResumeLayout(performLayout: true);
         };
         if (_portableDriverDirectory is null)
         {
             tabs.TabPages.Add(_modulesPage);
         }
-        root.Controls.Add(tabs, 0, 4);
+        root.Controls.Add(tabs, 0, 5);
         return root;
     }
 
@@ -1143,6 +1283,7 @@ internal sealed class NetworkRescueView : UserControl
     {
         var width = Math.Max(LogicalToDeviceUnits(240), ClientSize.Width - Padding.Horizontal);
         _note.MaximumSize = new Size(width, 0);
+        _connectionStatus.MaximumSize = _scanStatus.MaximumSize = new Size(width, 0);
         _modelLink.MaximumSize = _adapterLink.MaximumSize = new Size(Math.Max(150, width - 170), 0);
     }
 }

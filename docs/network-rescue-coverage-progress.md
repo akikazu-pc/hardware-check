@@ -1,10 +1,10 @@
 # 统一离线安装包覆盖进度
 
-继续维护时参见[采集与核验交接](network-rescue-handoff.md)。
+继续维护时参见[采集与核验交接](network-rescue-catalog-handoff.md)和[断网急救开发交接](network-rescue-handoff.md)。
 
 [逐型号 Wi-Fi 缺口清单](network-rescue-model-gaps.csv)记录当前已发现的 1,237 条主板型号或修订、912 条笔记本系列或型号、1 条一体机型号，以及 167 条戴尔系统与 Windows 组合。同一台笔记本可出现在多个系统组合。
 
-清单分别记录 `windows10X64Evidence` 和 `windows11X64Evidence`。`oem-package-indexed` 表示原厂包已入索引，`oem-wlan-listed` 表示原厂资料列出无线驱动，`oem-driver-pack-listed` 表示原厂列出该系统的整机部署包，仍需检查包内 WLAN 驱动。`oem-os-upgrade-tested` 表示原厂列出 Windows 11 升级测试，WLAN 驱动仍待核对。`pending` 表示该系统的证据待核。`oem-wlan-not-supported` 表示原厂明确说明该系统没有该出厂无线模块的驱动。仅预留接口和 ARM64 组合另有标记。原厂下载索引目前有 19 个包标注支持 Windows 10 x64，33 个包标注支持 Windows 11 x64，部分包另有最低构建号要求。[原厂下载索引](network-rescue-driver-index.csv)
+清单分别记录 `windows10X64Evidence` 和 `windows11X64Evidence`。`oem-package-indexed` 表示原厂包已入索引，`oem-wlan-listed` 表示原厂资料列出无线驱动，`oem-driver-pack-listed` 表示原厂列出该系统的整机部署包，仍需检查包内 WLAN 驱动。`oem-os-upgrade-tested` 表示原厂列出 Windows 11 升级测试，WLAN 驱动仍待核对。`pending` 表示该系统的证据待核。`oem-wlan-not-supported` 表示原厂明确说明该系统没有该出厂无线模块的驱动。仅预留接口和 ARM64 组合另有标记。原厂下载索引目前有 23 个包标注支持 Windows 10 x64，38 个包标注支持 Windows 11 x64，部分包另有最低构建号要求。[原厂下载索引](network-rescue-driver-index.csv)
 
 | 主板范围 | 已发现的型号或修订 |
 | --- | ---: |
@@ -99,6 +99,12 @@ Windows 11 构建 26300 的最新库审计覆盖 1,666 个 INF。其中 682 个�
 
 逐型号缺口清单已补入 6 条技嘉原厂包索引记录，覆盖 AM4、AM5、LGA1700 和 LGA1851。其中 5 条有 Windows 10/11 x64 的原厂包，Z890 AORUS ELITE WIFI7 的两种候选驱动包标注 Windows 11 x64。出厂网卡 SUBSYS 与断网安装仍待核对。
 
+### B850M AYW GAMING WIFI 普通版驱动入库
+
+华硕普通版支持页将 MediaTek 3.5.0.1349 标注为 Windows 10/11 x64。已核对原厂 ZIP 的 SHA-256 和 mtkwl6ex.inf 的签名。INF 使用 16299 构建起的 x64 型号节。Windows 11 构建 26300 的 SetupAPI 验证了 75 个精确 PCI 子系统 ID，其中 47 个此前未在在线包目录中出现，5 个属于 MT7902。两种发行包使用同一索引。已用应用实际下载并重新校验 ZIP 与签名 INF，目录测试覆盖构建 19045、26100 及低于门槛的 16298。Windows 10 实际安装待验。[华硕普通版驱动页](https://www.asus.com/motherboards-components/motherboards/others/b850m-ayw-gaming-wifi/helpdesk_download?model2Name=B850M-AYW-GAMING-WIFI)
+
+精确 CSM SKU 的华硕支持 ID 为 32852，普通版与 -E CSM 的 ID 分别为 32839 和 38840。CSM 规格列出 1×1 Wi-Fi 6 和 Realtek 2.5GbE，未标明无线芯片。跨地区查询的 CSM 下载入口仍无驱动数据。逐型号索引只为普通版列出上述包，CSM 记录仍待实机硬件 ID 确认。[CSM 规格](https://www.asus.com/motherboards-components/motherboards/csm/b850m-ayw-gaming-wifi-csm/techspec/) · [华硕型号映射](https://odinapi.asus.com/recent-data/apiv2/ModelMapping?SystemCode=asus&WebsiteCode=global&Model1WebPath=b850m-ayw-gaming-wifi-csm&Model2WebPath=B850M-AYW-GAMING-WIFI-CSM&siteID=www&sitelang=)
+
 ## 有线联网救援
 
 设备扫描会识别缺驱动（Code 28）的 PCI 有线网卡，按实际硬件 ID 搜索本地网络类 INF。已具备驱动的 PCI 有线网卡仍显示在网络状态区。救援安装沿用硬件 ID 精确匹配和签名校验。
@@ -114,6 +120,17 @@ Windows 11 构建 26300 的最新库审计覆盖 1,666 个 INF。其中 682 个�
 
 本地完整版 ZIP 已通过逐文件 SHA-256 校验，含 WinPE 入口和 1,676 个 INF，其中 Windows 10 有线目录 1 个、Windows 11 有线目录 8 个。
 
+### Intel PCIe 与 Realtek USB 有线补充
+
+| 来源 | 系统 | 已核对的签名 INF |
+| --- | --- | --- |
+| [技嘉 B760M D3H Rev. 1.x 驱动页](https://www.gigabyte.com/eu/Motherboard/B760M-D3H-rev-1x/support)的 Intel I225/I226 有线包 | Windows 10 x64，构建 17763 起；Windows 11 x64 | `e2f.inf` 1.1.4.38、`e2fn.inf` 2.1.5.7 |
+| 同一技嘉页面的 Intel Gigabit Ethernet 包 | Windows 10 x64，构建 17763 起；Windows 11 x64 | `e1d.inf` 12.19.2.61、`e1dn.inf` 20.0.3.9 |
+| [华硕 USB-C2500 V2 驱动页](https://www.asus.com/networking-iot-servers/wired-solutions/wired-adapters/usb-c2500-v2/helpdesk_download?model2Name=USB-C2500-V2)的 1001 版 USB 有线包 | Windows 10 x64、Windows 11 x64 | Windows 10 的 `rtump64x64sta.INF`，Windows 11 的六份 `rtu*cx22x64sta.INF` |
+
+四份原厂 ZIP 形成六条按系统区分的候选记录。下载直链、SHA-256、版本及系统范围见 [驱动索引](network-rescue-driver-index.csv)。型号列记录原厂页面及对应驱动系列。设备实际适用性以安装时读取的硬件 ID、系统构建和签名 INF 为准。
+
+Windows 11 已通过应用实际下载、校验并匹配 Intel I226、I219 与 RTL8156 三个硬件 ID 样本。Windows 10 核对了 INF、CAT 签名和目录选择规则，实体网卡安装与联网待验证。Intel 通用下载页要求接受许可，本轮使用技嘉提供的 OEM 来源。本轮生成本地测试包。
 
 ## 2026-11-12 开源型号与原厂驱动核查
 

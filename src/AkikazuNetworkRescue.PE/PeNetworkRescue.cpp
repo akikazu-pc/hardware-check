@@ -3,12 +3,20 @@
 #define USE_SP_ALTPLATFORM_INFO_V3 1
 #include <windows.h>
 #include <setupapi.h>
+#include <cfgmgr32.h>
+#include <cfg.h>
+#include <bcrypt.h>
+#include <shellapi.h>
+#include <fcntl.h>
+#include <io.h>
 
+#include <algorithm>
 #include <array>
 #include <filesystem>
 #include <fstream>
 #include <iostream>
 #include <string>
+#include <string_view>
 #include <vector>
 
 namespace fs = std::filesystem;
@@ -23,6 +31,27 @@ static bool HasRegistryHiveHeader(const fs::path& path)
     std::ifstream file(path, std::ios::binary);
     std::array<char, 4> header{};
     return file.read(header.data(), header.size()) && header == std::array<char, 4>{ 'r', 'e', 'g', 'f' };
+}
+
+static DWORD ReadWindowsFileBuild(const fs::path& file)
+{
+    const auto size = GetFileVersionInfoSizeW(file.c_str(), nullptr);
+    std::vector<BYTE> buffer(size);
+    if (size == 0 || !GetFileVersionInfoW(file.c_str(), 0, size, buffer.data())) {
+        return 0;
+    }
+    void* value = nullptr;
+    UINT length = 0;
+    if (!VerQueryValueW(buffer.data(), L"\\", &value, &length) || length < sizeof(VS_FIXEDFILEINFO)) {
+        return 0;
+    }
+    const auto& version = *static_cast<VS_FIXEDFILEINFO*>(value);
+    // Windows Setup PE can report 6.2 in the kernel's file version while
+    // preserving 10.0 in the product version and the correct file build.
+    const auto windows10Version = MAKELONG(0, 10);
+    return version.dwSignature == VS_FFI_SIGNATURE &&
+        (version.dwProductVersionMS == windows10Version || version.dwFileVersionMS == windows10Version)
+        ? HIWORD(version.dwFileVersionLS) : 0;
 }
 
 static DWORD ReadWindowsBuild(const fs::path& root)
@@ -45,23 +74,7 @@ static DWORD ReadWindowsBuild(const fs::path& root)
         return 0;
     }
 
-    const auto size = GetFileVersionInfoSizeW(kernel.c_str(), nullptr);
-    std::vector<BYTE> buffer(size);
-    if (size == 0 || !GetFileVersionInfoW(kernel.c_str(), 0, size, buffer.data())) {
-        return 0;
-    }
-    void* value = nullptr;
-    UINT length = 0;
-    if (!VerQueryValueW(buffer.data(), L"\\", &value, &length) || length < sizeof(VS_FIXEDFILEINFO)) {
-        return 0;
-    }
-    const auto& version = *static_cast<VS_FIXEDFILEINFO*>(value);
-    // The Windows Setup PE can report 6.2 in the kernel's file version while
-    // preserving 10.0 in its product version and the correct build in FileVersionLS.
-    const auto windows10Version = MAKELONG(0, 10);
-    return version.dwSignature == VS_FFI_SIGNATURE &&
-        (version.dwProductVersionMS == windows10Version || version.dwFileVersionMS == windows10Version)
-        ? HIWORD(version.dwFileVersionLS) : 0;
+    return ReadWindowsFileBuild(kernel);
 }
 
 static std::vector<Target> DiscoverTargets()
@@ -87,7 +100,21 @@ static std::vector<Target> DiscoverTargets()
     return targets;
 }
 
-static std::vector<std::wstring> ReadDeviceHardwareIds()
+static std::vector<wchar_t> ReadDeviceIdProperty(HDEVINFO devices, SP_DEVINFO_DATA& device, DWORD property)
+{
+    DWORD size = 0;
+    SetupDiGetDeviceRegistryPropertyW(devices, &device, property, nullptr, nullptr, 0, &size);
+    if (!size || size > 65536) return {};
+    std::vector<wchar_t> values(size / sizeof(wchar_t) + 2);
+    DWORD type = 0;
+    if (!SetupDiGetDeviceRegistryPropertyW(devices, &device, property, &type,
+            reinterpret_cast<PBYTE>(values.data()), size, nullptr) || type != REG_MULTI_SZ) {
+        return {};
+    }
+    return values;
+}
+
+static std::vector<std::wstring> ReadDeviceHardwareIds(bool missingOnly = false)
 {
     std::vector<std::wstring> ids;
     const auto devices = SetupDiGetClassDevsW(nullptr, nullptr, nullptr, DIGCF_ALLCLASSES | DIGCF_PRESENT);
@@ -101,19 +128,39 @@ static std::vector<std::wstring> ReadDeviceHardwareIds()
         if (!SetupDiEnumDeviceInfo(devices, index, &device)) {
             break;
         }
-        DWORD size = 0;
-        SetupDiGetDeviceRegistryPropertyW(devices, &device, SPDRP_HARDWAREID, nullptr, nullptr, 0, &size);
-        if (!size || size > 65536) {
-            continue;
+        if (missingOnly) {
+            ULONG status = 0;
+            ULONG problem = 0;
+            if (CM_Get_DevNode_Status(&status, &problem, device.DevInst, 0) != CR_SUCCESS ||
+                !(status & DN_HAS_PROBLEM) || problem != CM_PROB_FAILED_INSTALL) {
+                continue;
+            }
         }
-        std::vector<wchar_t> values(size / sizeof(wchar_t) + 2);
-        DWORD type = 0;
-        if (!SetupDiGetDeviceRegistryPropertyW(devices, &device, SPDRP_HARDWAREID, &type,
-                reinterpret_cast<PBYTE>(values.data()), size, nullptr) || type != REG_MULTI_SZ) {
-            continue;
-        }
+        const auto values = ReadDeviceIdProperty(devices, device, SPDRP_HARDWAREID);
+        if (values.empty()) continue;
+        std::vector<std::wstring_view> pciChipsets;
+        constexpr size_t pciChipsetLength = 21; // PCI\VEN_####&DEV_####
         for (const wchar_t* id = values.data(); *id; id += wcslen(id) + 1) {
-            if (_wcsnicmp(id, L"PCI\\VEN_", 8) == 0 || _wcsnicmp(id, L"USB\\VID_", 8) == 0) {
+            const std::wstring_view value(id);
+            if (_wcsnicmp(id, L"PCI\\VEN_", 8) == 0) {
+                ids.emplace_back(value);
+                if (value.size() >= pciChipsetLength && _wcsnicmp(id + 12, L"&DEV_", 5) == 0) {
+                    pciChipsets.push_back(value.substr(0, pciChipsetLength));
+                }
+            } else if (_wcsnicmp(id, L"USB\\VID_", 8) == 0) {
+                ids.emplace_back(value);
+            }
+        }
+        if (pciChipsets.empty()) continue;
+        const auto compatible = ReadDeviceIdProperty(devices, device, SPDRP_COMPATIBLEIDS);
+        if (compatible.empty()) continue;
+        for (const wchar_t* id = compatible.data(); *id; id += wcslen(id) + 1) {
+            const auto length = wcslen(id);
+            const bool vendorDeviceId = length == pciChipsetLength ||
+                (length == pciChipsetLength + 7 && _wcsnicmp(id + pciChipsetLength, L"&REV_", 5) == 0);
+            if (vendorDeviceId && std::any_of(pciChipsets.begin(), pciChipsets.end(), [&](std::wstring_view chipset) {
+                return _wcsnicmp(chipset.data(), id, pciChipsetLength) == 0;
+            })) {
                 ids.emplace_back(id);
             }
         }
@@ -128,7 +175,8 @@ static std::wstring InfField(INFCONTEXT& context, DWORD index)
     return SetupGetStringFieldW(&context, index, value, ARRAYSIZE(value), nullptr) ? value : L"";
 }
 
-static std::wstring MatchNetworkInf(const fs::path& path, DWORD build, const std::vector<std::wstring>& ids)
+static std::wstring MatchNetworkInf(const fs::path& path, DWORD build, const std::vector<std::wstring>& ids,
+    std::wstring& name)
 {
     const auto inf = SetupOpenInfFileW(path.c_str(), nullptr, INF_STYLE_WIN4, nullptr);
     if (inf == INVALID_HANDLE_VALUE) {
@@ -159,6 +207,7 @@ static std::wstring MatchNetworkInf(const fs::path& path, DWORD build, const std
                 for (const auto& id : ids) {
                     if (_wcsicmp(model.c_str(), id.c_str()) == 0) {
                         matched = id;
+                        name = InfField(line, 0);
                         break;
                     }
                 }
@@ -222,104 +271,61 @@ static std::vector<fs::path> DriverDirectories(const fs::path& bundle, DWORD bui
     return directories;
 }
 
-static size_t ReadSelection(size_t maximum)
-{
-    std::wstring answer;
-    std::getline(std::wcin, answer);
-    wchar_t* end = nullptr;
-    const auto value = wcstoul(answer.c_str(), &end, 10);
-    return end != answer.c_str() && *end == L'\0' && value <= maximum ? value : 0;
-}
+struct DriverMatch {
+    fs::path path;
+    std::wstring id;
+    std::wstring name;
+};
 
-int wmain(int argc, wchar_t** argv)
+static std::vector<DriverMatch> ScanDrivers(const fs::path& bundle, DWORD build, bool missingOnly = false)
 {
-    const auto targets = DiscoverTargets();
-    for (size_t i = 0; i < targets.size(); ++i) {
-        std::wcout << i + 1 << L". " << targets[i].root.c_str() << L" Windows "
-            << (targets[i].build < 22000 ? 10 : 11) << L" x64, kernel build " << targets[i].build << L'\n';
+    const auto ids = ReadDeviceHardwareIds(missingOnly);
+    std::vector<DriverMatch> candidates;
+    if (ids.empty()) {
+        return candidates;
     }
-    if (argc == 2 && wcscmp(argv[1], L"--list-targets") == 0) {
-        std::wcout << L"Offline Windows installations: " << targets.size() << L'\n';
-        return 0;
-    }
-    HKEY miniNt{};
-    if (RegOpenKeyExW(HKEY_LOCAL_MACHINE, L"SYSTEM\\CurrentControlSet\\Control\\MiniNT",
-            0, KEY_READ, &miniNt) != ERROR_SUCCESS) {
-        std::wcerr << L"Start this repair tool from WinPE.\n";
-        return 1;
-    }
-    RegCloseKey(miniNt);
-    if (targets.empty()) {
-        std::wcerr << L"No accessible offline Windows 10/11 x64 installation found. Unlock locked volumes first.\n";
-        return 2;
-    }
-    std::wcout << L"Select target Windows (0 to cancel): ";
-    const auto selection = ReadSelection(targets.size());
-    if (!selection) {
-        return 0;
-    }
-    const auto& target = targets[selection - 1];
-
-    wchar_t executable[MAX_PATH]{};
-    if (!GetModuleFileNameW(nullptr, executable, MAX_PATH)) {
-        return 3;
-    }
-    const auto directories = DriverDirectories(fs::path(executable).parent_path(), target.build);
-    const auto ids = ReadDeviceHardwareIds();
-    std::vector<fs::path> candidates;
-    bool incomplete = false;
-    for (const auto& directory : directories) {
+    for (const auto& directory : DriverDirectories(bundle, build)) {
         std::error_code error;
         if (!fs::exists(directory, error)) {
-            incomplete |= static_cast<bool>(error);
             continue;
         }
-        std::wcout << L"Scanning " << directory.c_str() << L'\n';
         for (fs::recursive_directory_iterator it(directory, fs::directory_options::skip_permission_denied, error), end;
             !error && it != end; it.increment(error)) {
             if (!it->is_regular_file(error) || _wcsicmp(it->path().extension().c_str(), L".inf") != 0) {
                 continue;
             }
-            const auto match = MatchNetworkInf(it->path(), target.build, ids);
-            if (!match.empty() && VerifyNetworkDriver(it->path())) {
-                candidates.push_back(it->path());
-                std::wcout << candidates.size() << L". " << it->path().c_str() << L" [" << match << L"]\n";
+            std::wstring name;
+            auto id = MatchNetworkInf(it->path(), build, ids, name);
+            if (!id.empty() && VerifyNetworkDriver(it->path())) {
+                candidates.push_back({ it->path(), std::move(id), std::move(name) });
             }
         }
-        incomplete |= static_cast<bool>(error);
     }
-    if (incomplete) {
-        std::wcerr << L"Some driver folders could not be read.\n";
-    }
-    if (candidates.empty()) {
-        std::wcerr << L"No verified exact driver match. Check the extracted driver folders.\n";
-        return 4;
-    }
+    return candidates;
+}
 
-    std::wcout << L"Select driver (0 to cancel): ";
-    const auto driver = ReadSelection(candidates.size());
-    if (!driver) {
+#include "PeWizard.h"
+
+#include "RescueCli.h"
+#include "SharedHome.h"
+
+int wmain(int argc, wchar_t** argv)
+{
+    wchar_t executable[MAX_PATH]{};
+    const auto length = GetModuleFileNameW(nullptr, executable, MAX_PATH);
+    if (!length || length >= MAX_PATH) return 3;
+    const auto bundle = fs::path(executable).parent_path();
+    if (argc == 2 && wcscmp(argv[1], L"--list-targets") == 0) {
+        const auto targets = DiscoverTargets();
+        for (const auto& target : targets) std::wcout << WindowsLabel(target.root, target.build) << L'\n';
+        std::wcout << L"Offline Windows installations: " << targets.size() << L'\n';
         return 0;
     }
-    const auto& inf = candidates[driver - 1];
-    std::wcout << L"Stage " << inf.c_str() << L" in " << target.root.c_str()
-        << L" Windows kernel build " << target.build << L"? [y/N] ";
-    std::wstring confirmation;
-    std::getline(std::wcin, confirmation);
-    if (confirmation != L"y" && confirmation != L"Y") {
-        return 0;
-    }
-    if (ReadWindowsBuild(target.root) != target.build || !VerifyNetworkDriver(inf)) {
-        std::wcerr << L"The target or driver changed. Restart the scan.\n";
-        return 5;
-    }
-    const auto result = RunDism(target, L"/Add-Driver /Driver:\"" + inf.wstring() + L"\"");
-    std::wcout << L"DISM exit code: " << result << L'\n';
-    if (result == ERROR_SUCCESS || result == ERROR_SUCCESS_REBOOT_REQUIRED) {
-        const auto inventory = RunDism(target, L"/Get-Drivers");
-        std::wcout << L"DISM driver inventory exit code: " << inventory
-            << L"\nRestart into the target Windows and verify the device and connection.\n";
-        return inventory == ERROR_SUCCESS ? 0 : 7;
-    }
-    return 6;
+    HKEY miniNt{};
+    const bool isPe = RegOpenKeyExW(HKEY_LOCAL_MACHINE, L"SYSTEM\\CurrentControlSet\\Control\\MiniNT",
+        0, KEY_READ, &miniNt) == ERROR_SUCCESS;
+    if (isPe) RegCloseKey(miniNt);
+    if (argc == 2 && wcscmp(argv[1], L"--ui") == 0) return RunSharedHome(bundle, isPe);
+    const bool keepOpen = argc == 2 && wcscmp(argv[1], L"--cli-window") == 0;
+    return StartCli(bundle, isPe, keepOpen);
 }

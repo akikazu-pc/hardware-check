@@ -82,6 +82,9 @@ try {
             } else {
                 Expand-Archive -LiteralPath $archive -DestinationPath $sfxRoot
                 $executables = @(Get-ChildItem -LiteralPath $sfxRoot -Filter '*.exe' -File)
+                if ($executables.Count -eq 0) {
+                    $executables = @(Get-ChildItem -LiteralPath $sfxRoot -Filter '*.exe' -File -Recurse)
+                }
                 if ($executables.Count -ne 1) {
                     throw "Expected exactly one self-extracting archive in $fileName."
                 }
@@ -94,7 +97,14 @@ try {
         }
 
         $driver = Join-Path $payload $package.driverDirectory
-        $packageRoot = Join-Path $drivers ($package.id + '-' + $package.version)
+        $destination = switch ($package.targetWindows) {
+            'windows10' { Join-Path $OutputDirectory 'pe-drivers/windows10-x64' }
+            'windows11' { Join-Path $OutputDirectory 'pe-drivers/windows11-x64' }
+            $null { $drivers }
+            default { throw "Invalid target Windows in $fileName." }
+        }
+        New-Item -ItemType Directory -Path $destination -Force | Out-Null
+        $packageRoot = Join-Path $destination ($package.id + '-' + $package.version)
         if (-not (Get-ChildItem -LiteralPath $driver -Filter '*.inf' -Recurse -File | Select-Object -First 1)) {
             throw "No extracted INF files in $fileName."
         }

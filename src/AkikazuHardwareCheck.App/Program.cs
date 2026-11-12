@@ -45,9 +45,10 @@ internal static class Program
             return;
         }
 
-        if (args is ["--portable-rescue"] && DistributionProfile.Current.Channel != DistributionChannel.Store)
+        if (args is ["--portable-rescue", ..] && args.Length <= 2 &&
+            DistributionProfile.Current.Channel != DistributionChannel.Store)
         {
-            RunPortableRescue();
+            RunPortableRescue(args.Length == 2 ? AppLanguage.Parse(args[1]) : null);
             return;
         }
 
@@ -131,7 +132,7 @@ internal static class Program
         }
     }
 
-    private static void RunPortableRescue()
+    private static void RunPortableRescue(string? languageOverride)
     {
         ApplicationConfiguration.Initialize();
         InstallCrashGuard();
@@ -142,7 +143,8 @@ internal static class Program
             return;
         }
 
-        var translator = Translator.Load(AppLanguage.FromCulture(CultureInfo.CurrentUICulture.Name));
+        var currentLanguage = languageOverride ?? AppLanguage.FromCulture(CultureInfo.CurrentUICulture.Name);
+        var translator = Translator.Load(currentLanguage);
         using var window = new Form
         {
             Text = translator[SharedModuleId.NetworkRescue.DisplayNameKey()],
@@ -150,7 +152,27 @@ internal static class Program
             StartPosition = FormStartPosition.CenterScreen,
             ClientSize = new Size(1100, 720),
         };
-        window.Controls.Add(new NetworkRescueView(translator, [], Path.Combine(AppContext.BaseDirectory, "driver-packs")));
+        var languages = new ToolStripDropDownButton(translator["rescue.pe.language"]);
+        var rescue = new NetworkRescueView(translator, [], Path.Combine(AppContext.BaseDirectory, "driver-packs"));
+        string[] languageLabels = ["日本語", "简体中文", "繁體中文", "English"];
+        foreach (var (language, label) in AppLanguage.Supported.Zip(languageLabels))
+        {
+            var item = new ToolStripMenuItem(label) { Checked = language == currentLanguage };
+            item.Click += (_, _) =>
+            {
+                var selected = Translator.Load(language);
+                window.Text = selected[SharedModuleId.NetworkRescue.DisplayNameKey()];
+                languages.Text = selected["rescue.pe.language"];
+                foreach (ToolStripMenuItem option in languages.DropDownItems)
+                {
+                    option.Checked = option == item;
+                }
+                rescue.ApplyLanguage(selected);
+            };
+            languages.DropDownItems.Add(item);
+        }
+        rescue.AddPortableMenus(languages);
+        window.Controls.Add(rescue);
         Application.Run(window);
     }
 

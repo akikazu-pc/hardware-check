@@ -5,6 +5,29 @@ namespace AkikazuHardwareCheck.Core.Tests;
 public sealed class OnlineDriverCatalogTests
 {
     [Theory]
+    [InlineData(19045, @"PCI\VEN_8086&DEV_125C", "intel-ethernet-25g-w10")]
+    [InlineData(26100, @"PCI\VEN_8086&DEV_125C", "intel-ethernet-25g-w11")]
+    [InlineData(19045, @"PCI\VEN_8086&DEV_15B8", "intel-ethernet-gbe-w10")]
+    [InlineData(26100, @"PCI\VEN_8086&DEV_15B8", "intel-ethernet-gbe-w11")]
+    [InlineData(19045, @"USB\VID_0BDA&PID_8156", "asus-usb-ethernet-w10")]
+    [InlineData(26100, @"USB\VID_0BDA&PID_8156", "asus-usb-ethernet-w11")]
+    public void OffersOnlyTheEthernetPackageForTheSelectedWindowsFamily(int build, string id, string expected)
+    {
+        var diagnostic = new NetworkDeviceDiagnostic(2, build, "X64", [new([id], null, 28)]);
+
+        var package = Assert.Single(OnlineDriverCatalog.Find(diagnostic));
+        Assert.Equal(expected, package.Id);
+    }
+
+    [Fact]
+    public void RejectsTheIntelEthernetPackageBelowItsMinimumWindows10Build()
+    {
+        var diagnostic = new NetworkDeviceDiagnostic(2, 17134, "X64", [new([@"PCI\VEN_8086&DEV_125C"], null, 28)]);
+
+        Assert.Empty(OnlineDriverCatalog.Find(diagnostic));
+    }
+
+    [Theory]
     [InlineData(19045)]
     [InlineData(26300)]
     public void OffersDLinkEthernetOnlyForItsRecordedUsbId(int build)

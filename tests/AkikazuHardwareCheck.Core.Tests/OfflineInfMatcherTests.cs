@@ -98,14 +98,33 @@ public sealed class OfflineInfMatcherTests
             var usb = Assert.IsType<NetworkDeviceCandidate>(
                 NetworkDeviceInventory.Classify([@"USB\VID_2357&PID_0138"], [], 28));
             Assert.Equal(usb, Assert.Single(OfflineInfMatcher.Match(path, [usb])).Device);
-            Assert.Equal(match, OfflineDriverInstaller.SelectMissingMatch([match]));
-            Assert.Null(OfflineDriverInstaller.SelectMissingMatch([match, match]));
+            Assert.Equal(match, OfflineDriverInstaller.SelectMissingMatch([match], match.HardwareId));
+            Assert.Null(OfflineDriverInstaller.SelectMissingMatch([match, match], match.HardwareId));
             Assert.Null(OfflineDriverInstaller.SelectMissingMatch(
-                [match with { Device = match.Device with { ProblemCode = 0 } }]));
+                [match with { Device = match.Device with { ProblemCode = 0 } }], match.HardwareId));
         }
         finally
         {
             directory.Delete(recursive: true);
         }
+    }
+
+    [Fact]
+    public void SelectsOneMissingAdapterEvenWhenTheInfMatchesAnotherAdapter()
+    {
+        const string firstId = @"PCI\VEN_8086&DEV_125C";
+        const string secondId = @"PCI\VEN_8086&DEV_15F3";
+        var first = new NetworkDeviceCandidate([firstId], null, 28, NetworkCandidateKind.PciEthernet);
+        var second = new NetworkDeviceCandidate([secondId], null, 28, NetworkCandidateKind.PciEthernet);
+        var firstMatch = new OfflineInfMatch(first, firstId, "Models");
+        var secondMatch = new OfflineInfMatch(second, secondId, "Models");
+        var working = second with { ProblemCode = 0 };
+        var workingMatch = secondMatch with { Device = working };
+
+        Assert.Equal(firstMatch, OfflineDriverInstaller.SelectMissingMatch([firstMatch, workingMatch], firstId.ToLowerInvariant()));
+        Assert.Equal(secondMatch, OfflineDriverInstaller.SelectMissingMatch([firstMatch, secondMatch], secondId));
+        Assert.Equal([firstMatch, secondMatch], OfflineDriverInstaller.FindInstallableMatches([firstMatch, secondMatch], [first, second]));
+        Assert.Equal([firstMatch], OfflineDriverInstaller.FindInstallableMatches([firstMatch, workingMatch], [first, working]));
+        Assert.Empty(OfflineDriverInstaller.FindInstallableMatches([firstMatch], [first, working with { HardwareIds = [secondId, firstId] }]));
     }
 }
