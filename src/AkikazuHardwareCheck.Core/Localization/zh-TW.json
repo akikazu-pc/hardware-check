@@ -352,6 +352,8 @@
   "rescue.infMatches": "{0} 的候選比對結果",
   "rescue.infReadFailed": "無法讀取 INF。",
   "rescue.infPreviewNote": "僅供預覽。仍需驗證驅動程式套件簽章及相依項目。",
+  "rescue.selectInstallTarget": "請選擇要修復的網路介面卡",
+  "rescue.installTargetAmbiguous": "符合的硬體 ID 由多個裝置共用。請選擇能更精確比對的驅動程式，或在裝置管理員中修復目標裝置。",
   "rescue.installConfirm": "為缺少驅動程式的裝置安裝此驅動程式？",
   "rescue.signer": "簽署者",
   "rescue.bound": "驅動程式已繫結。請查看下方的連線狀態。",

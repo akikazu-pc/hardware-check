@@ -47,9 +47,9 @@ public static class OfflineDriverInstaller
             }
 
             var candidates = NetworkDeviceInventory.Read().Devices;
-            var eligible = SelectMissingMatch(OfflineInfMatcher.Match(path, candidates));
+            var eligible = SelectMissingMatch(OfflineInfMatcher.Match(path, candidates), hardwareId);
             var present = ReadDevices(hardwareId);
-            if (eligible is null || !string.Equals(eligible.HardwareId, hardwareId, StringComparison.OrdinalIgnoreCase) ||
+            if (eligible is null ||
                 present is not [{ InstanceId: { Length: > 0 } instanceId, ProblemCode: 28, Service: null or "" }])
             {
                 return OfflineInstallResult.NoEligibleDevice;
@@ -86,8 +86,18 @@ public static class OfflineDriverInstaller
         }
     }
 
-    public static OfflineInfMatch? SelectMissingMatch(IReadOnlyList<OfflineInfMatch> matches) =>
-        matches is [{ Device.ProblemCode: 28 } match] ? match : null;
+    public static OfflineInfMatch? SelectMissingMatch(IReadOnlyList<OfflineInfMatch> matches, string hardwareId)
+    {
+        var selected = matches.Where(match =>
+            string.Equals(match.HardwareId, hardwareId, StringComparison.OrdinalIgnoreCase)).Take(2).ToArray();
+        return selected is [{ Device.ProblemCode: 28 } match] ? match : null;
+    }
+
+    public static OfflineInfMatch[] FindInstallableMatches(IReadOnlyList<OfflineInfMatch> matches,
+        IReadOnlyList<NetworkDeviceCandidate> devices) =>
+        matches.Where(match => match.Device.ProblemCode == 28 &&
+            devices.Count(device => device.HardwareIds.Contains(match.HardwareId, StringComparer.OrdinalIgnoreCase)) == 1)
+            .ToArray();
 
     private static OfflineDriverIdentity? VerifyOpenInf(string path, Stream inf)
     {

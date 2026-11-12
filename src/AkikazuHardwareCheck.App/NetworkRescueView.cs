@@ -606,18 +606,28 @@ internal sealed class NetworkRescueView : UserControl
         try
         {
             var matches = OfflineInfMatcher.Match(path, devices);
-            if (OfflineDriverInstaller.SelectMissingMatch(matches) is { } eligible &&
-                DistributionProfile.Current.Channel != DistributionChannel.Store)
+            if (DistributionProfile.Current.Channel != DistributionChannel.Store)
             {
-                await ConfirmInstallAsync(path, eligible);
-                return;
+                var eligible = OfflineDriverInstaller.FindInstallableMatches(matches, devices);
+                if (eligible.Length > 0)
+                {
+                    var selected = eligible.Length == 1 ? eligible[0] : SelectInstallTarget(path, eligible);
+                    if (selected is not null)
+                    {
+                        await ConfirmInstallAsync(path, selected);
+                    }
+                    return;
+                }
             }
 
             message = matches.Count == 0
                 ? _t["rescue.infNoMatch"]
                 : string.Join(Environment.NewLine,
                     matches.Select(match => $"{match.HardwareId} [{match.ModelsSection}]").Distinct())
-                    + Environment.NewLine + Environment.NewLine + _t["rescue.infPreviewNote"];
+                    + Environment.NewLine + Environment.NewLine
+                    + _t[matches.Any(match => match.Device.ProblemCode == 28) &&
+                        DistributionProfile.Current.Channel != DistributionChannel.Store
+                        ? "rescue.installTargetAmbiguous" : "rescue.infPreviewNote"];
         }
         catch (System.ComponentModel.Win32Exception)
         {
@@ -626,6 +636,28 @@ internal sealed class NetworkRescueView : UserControl
 
         MessageBox.Show(this, message, _t["rescue.infMatches", Path.GetFileName(path)],
             MessageBoxButtons.OK, MessageBoxIcon.Information);
+    }
+
+    private OfflineInfMatch? SelectInstallTarget(string path, OfflineInfMatch[] matches)
+    {
+        var page = new TaskDialogPage
+        {
+            Caption = _t["rescue.heading"],
+            Heading = _t["rescue.selectInstallTarget"],
+            Text = Path.GetFileName(path),
+            AllowCancel = true,
+            DefaultButton = TaskDialogButton.Cancel,
+        };
+        var targets = new Dictionary<TaskDialogButton, OfflineInfMatch>();
+        foreach (var match in matches)
+        {
+            var label = match.AdapterName ?? match.HardwareId;
+            var button = new TaskDialogCommandLinkButton(label, label == match.HardwareId ? "" : match.HardwareId);
+            page.Buttons.Add(button);
+            targets.Add(button, match);
+        }
+        page.Buttons.Add(TaskDialogButton.Cancel);
+        return targets.GetValueOrDefault(TaskDialog.ShowDialog(this, page));
     }
 
     private async Task SearchFolderAsync(bool useBundled = false, bool exportOnly = false, bool forRepair = false)
@@ -737,7 +769,7 @@ internal sealed class NetworkRescueView : UserControl
                 return;
             }
 
-            await ReviewInfAsync(selected.InfPath, devices);
+            await ReviewInfAsync(selected.InfPath, diagnostic.Devices);
         }
     }
 
@@ -862,7 +894,7 @@ internal sealed class NetworkRescueView : UserControl
                     return;
                 }
 
-                await ReviewInfAsync(candidate.InfPath, devices);
+                await ReviewInfAsync(candidate.InfPath, diagnostic.Devices);
             }
         }
         finally

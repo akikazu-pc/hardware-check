@@ -352,6 +352,8 @@
   "rescue.infMatches": "{0} 的候选匹配",
   "rescue.infReadFailed": "无法读取 INF。",
   "rescue.infPreviewNote": "仅预览。驱动包签名和依赖仍需验证。",
+  "rescue.selectInstallTarget": "请选择要修复的网卡",
+  "rescue.installTargetAmbiguous": "匹配的硬件 ID 由多个设备共用。请选择能更精确匹配的驱动，或在设备管理器中修复目标设备。",
   "rescue.installConfirm": "为缺少驱动的设备安装此驱动？",
   "rescue.signer": "签名者",
   "rescue.bound": "驱动已绑定。请查看下方的连接状态。",

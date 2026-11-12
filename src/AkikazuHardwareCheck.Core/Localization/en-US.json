@@ -352,6 +352,8 @@
   "rescue.infMatches": "Candidate matches for {0}",
   "rescue.infReadFailed": "The INF could not be read.",
   "rescue.infPreviewNote": "Preview only. Package signature and dependencies still need verification.",
+  "rescue.selectInstallTarget": "Choose the adapter to repair",
+  "rescue.installTargetAmbiguous": "The matching hardware ID is shared by multiple devices. Choose a driver with a more specific match or repair the intended device in Device Manager.",
   "rescue.installConfirm": "Install this driver for the device missing a driver?",
   "rescue.signer": "Signer",
   "rescue.bound": "Driver bound. Check the connection status below.",

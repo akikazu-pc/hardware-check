@@ -352,6 +352,8 @@
   "rescue.infMatches": "{0} の一致候補",
   "rescue.infReadFailed": "INF を読み取れませんでした。",
   "rescue.infPreviewNote": "プレビューです。パッケージの署名と依存関係は未確認です。",
+  "rescue.selectInstallTarget": "修復するネットワーク アダプターを選択",
+  "rescue.installTargetAmbiguous": "一致したハードウェア ID を複数のデバイスが共有しています。より具体的な ID に一致するドライバーを選ぶか、デバイス マネージャーで対象を修復してください。",
   "rescue.installConfirm": "ドライバーがないデバイスにこのドライバーをインストールしますか？",
   "rescue.signer": "署名者",
   "rescue.bound": "ドライバーが適用されました。以下の接続状態を確認してください。",
