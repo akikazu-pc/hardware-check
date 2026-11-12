@@ -10,7 +10,7 @@ internal sealed class AboutForm : Form
 {
     private const string EMAIL = "timkayhou@akikazupc.com";
     private const string WEBSITE = "https://www.akikazu.co.jp/";
-    public const string REPOSITORY = "https://github.com/AkiCust-PC/hardware-check";
+    public const string REPOSITORY = "https://github.com/akikazu-pc/hardware-check";
 
     public AboutForm(Translator t, Font font)
     {
