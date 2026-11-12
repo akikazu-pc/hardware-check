@@ -475,6 +475,18 @@
       "devicePrefixes": [],
       "windows11Only": true,
       "adapterName": "Intel Wi-Fi"
+    },
+    {
+      "id": "asus-mb-rtl8922-win11",
+      "version": "6102.24.145.100",
+      "source": "https://dlcdnets.asus.com/pub/ASUS/mb/08WIRELESS/DRV_WiFi_RTK_8922AE_SZ-TSD_W11_64_V610224145100_20260804R.zip",
+      "archiveSha256": "519580A8261C3C79644951EEA5C7D32947A126AB6D7EED08814E192B02BFE85E",
+      "driverDirectory": "Win11",
+      "scope": "ASUS Realtek RTL8922AE; offline matching",
+      "archiveLayout": "direct",
+      "devicePrefixes": [],
+      "windows11Only": true,
+      "adapterName": "Realtek RTL8922AE"
     }
   ]
 }

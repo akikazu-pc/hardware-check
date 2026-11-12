@@ -129,6 +129,7 @@ start "" "%~dp0AkikazuHardwareCheck.exe" --portable-rescue
                 @{ Id = 'mt7902-b550-rev12'; Systems = 10, 11; Directory = 'mbdriver/WLAN' }
                 @{ Id = 'rtl8851be-z790-win10'; Systems = 10; Directory = 'RTWLANE_Driver/Win10X64' }
                 @{ Id = 'rtl8851be-z790-win11'; Systems = 11; Directory = 'RTWLANE_Driver/Win11' }
+                @{ Id = 'asus-mb-rtl8922-win10'; Systems = 10; Directory = 'Win10X64'; Direct = $true }
             )
             $driverIndex = Import-Csv -LiteralPath (Join-Path $root 'docs/network-rescue-driver-index.csv')
             foreach ($driver in $scopedWlan) {
@@ -150,11 +151,14 @@ start "" "%~dp0AkikazuHardwareCheck.exe" --portable-rescue
 
                 $outer = Join-Path $inputRoot 'outer'
                 Expand-Archive -LiteralPath $vendorZip -DestinationPath $outer
-                $installers = @(Get-ChildItem -LiteralPath $outer -File -Filter '*.exe')
-                if ($installers.Count -ne 1) { throw "Expected one installer in $fileName." }
-                $payload = Join-Path $inputRoot 'payload'
-                & $SevenZipExecutable x -y -bso0 -bsp0 "-o$payload" $installers[0].FullName
-                if ($LASTEXITCODE -ne 0) { throw "Unable to extract $fileName ($LASTEXITCODE)." }
+                $payload = $outer
+                if (-not $driver.Direct) {
+                    $installers = @(Get-ChildItem -LiteralPath $outer -File -Filter '*.exe')
+                    if ($installers.Count -ne 1) { throw "Expected one installer in $fileName." }
+                    $payload = Join-Path $inputRoot 'payload'
+                    & $SevenZipExecutable x -y -bso0 -bsp0 "-o$payload" $installers[0].FullName
+                    if ($LASTEXITCODE -ne 0) { throw "Unable to extract $fileName ($LASTEXITCODE)." }
+                }
                 $driverSource = Join-Path $payload $driver.Directory
                 if (-not (Get-ChildItem -LiteralPath $driverSource -Recurse -File -Filter '*.inf' | Select-Object -First 1)) {
                     throw "No extracted INF files in $fileName."

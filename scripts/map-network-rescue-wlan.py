@@ -69,6 +69,47 @@ def candidate_package(inf, names):
     return ""
 
 
+
+def rank_packages(downloads, package_by_id, missing, limit):
+    indexed_hashes = {item["sha256"].upper() for item in package_by_id.values()}
+    coverage = defaultdict(lambda: defaultdict(set))
+    metadata = {}
+    for item in downloads:
+        digest = item["sha256"].upper()
+        key = item["model"], item["platform"], item["windows"]
+        if (item["status"] != "oem-wlan-listed" or digest in indexed_hashes or
+                not re.fullmatch(r"[A-F0-9]{64}", digest) or key not in missing):
+            continue
+        # A name in an OEM title is a planning hint. The final map still requires signed INF evidence.
+        modules = module_keys(item["title"]) & missing[key]
+        if modules:
+            coverage[digest][key].update(modules)
+            metadata.setdefault(digest, item)
+
+    remaining = list(coverage)
+    result = []
+    for rank in range(1, limit + 1):
+        if not remaining:
+            break
+        def score(digest):
+            candidates = coverage[digest]
+            complete = sum(bool(missing[key]) and missing[key] <= modules for key, modules in candidates.items())
+            covered = sum(len(missing[key] & modules) for key, modules in candidates.items())
+            return complete, covered
+        digest = max(remaining, key=score)
+        complete, covered = score(digest)
+        if not covered:
+            break
+        remaining.remove(digest)
+        item = metadata[digest]
+        result.append(dict(rank=rank, version=item["version"], officialListings=len(coverage[digest]),
+                           expectedCompleteModelOs=complete, missingModulesCovered=covered,
+                           sha256=digest, downloadUrl=item["downloadUrl"]))
+        for key, modules in coverage[digest].items():
+            missing[key].difference_update(modules)
+    return result
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--models", type=Path, required=True)
@@ -77,7 +118,12 @@ def main():
     parser.add_argument("--signed-inf", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--apply", action="store_true", help="Advance fully mapped model/OS records to OEM package indexed.")
+    parser.add_argument("--include-listed", action="store_true", help="Recheck model/OS rows with OEM listing evidence.")
+    parser.add_argument("--rank-output", type=Path, help="Rank new archives by missing variants named in official titles.")
+    parser.add_argument("--rank-limit", type=int, default=2)
     args = parser.parse_args()
+    if args.rank_limit < 1:
+        parser.error("--rank-limit must be positive")
 
     model_fields, models = read(args.models)
     _, packages = read(args.packages)
@@ -116,10 +162,12 @@ def main():
 
     output = []
     updated = defaultdict(int)
+    missing = defaultdict(set)
+    eligible = {"pending", "oem-wlan-listed"} if args.include_listed else {"pending"}
     for row in models:
         if row["type"] != "motherboard" or row["gap"] != "factory-variant-to-exact-id-and-install":
             continue
-        pending = [os for os in SYSTEMS if row[f"windows{os}X64Evidence"] == "pending"]
+        pending = [os for os in SYSTEMS if row[f"windows{os}X64Evidence"] in eligible]
         if not pending:
             continue
         modules = module_keys(row["module"])
@@ -136,6 +184,8 @@ def main():
                 exact[os] = sorted(package_ids.intersection(allowed))
                 sources.update(allowed[pkg] for pkg in exact[os])
                 all_mapped[os] &= bool(exact[os])
+                if row["brand"] == "ASUS" and not exact[os]:
+                    missing[row["model"], row["platform"], os].add(module)
             preferred = set(exact.get("10", []) + exact.get("11", []))
             selected = next((item for item in matches if item[0] in preferred), matches[0] if matches else ("", "", ""))
             output.append(dict(
@@ -153,9 +203,13 @@ def main():
                     row[f"windows{os}X64Evidence"] = "oem-package-indexed"
 
     write(args.output, FIELDS, output)
+    if args.rank_output:
+        fields = ["rank", "version", "officialListings", "expectedCompleteModelOs", "missingModulesCovered",
+                  "sha256", "downloadUrl"]
+        write(args.rank_output, fields, rank_packages(downloads, package_by_id, missing, args.rank_limit))
     if args.apply and updated:
         write(args.models, model_fields, models)
-    print(f"{len(output)} module rows. Fully mapped pending model/OS records: {dict(updated)}")
+    print(f"{len(output)} module rows. Fully mapped eligible model/OS records: {dict(updated)}")
 
 
 if __name__ == "__main__":

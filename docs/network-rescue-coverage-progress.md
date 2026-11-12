@@ -2,7 +2,7 @@
 
 [逐型号 Wi-Fi 缺口清单](network-rescue-model-gaps.csv)记录当前已发现的 1,237 条主板型号或修订、912 条笔记本系列或型号、1 条一体机型号，以及 167 条戴尔系统与 Windows 组合。同一台笔记本可出现在多个系统组合。
 
-清单分别记录 `windows10X64Evidence` 和 `windows11X64Evidence`。`oem-package-indexed` 表示原厂包已入索引，`oem-wlan-listed` 表示原厂资料列出无线驱动，`oem-driver-pack-listed` 表示原厂列出该系统的整机部署包，仍需检查包内 WLAN 驱动。`oem-os-upgrade-tested` 表示原厂列出 Windows 11 升级测试，WLAN 驱动仍待核对。`pending` 表示该系统的证据待核。`oem-wlan-not-supported` 表示原厂明确说明该系统没有该出厂无线模块的驱动。仅预留接口和 ARM64 组合另有标记。原厂下载索引目前有 18 个包标注支持 Windows 10 x64，32 个包标注支持 Windows 11 x64，部分包另有最低构建号要求。[原厂下载索引](network-rescue-driver-index.csv)
+清单分别记录 `windows10X64Evidence` 和 `windows11X64Evidence`。`oem-package-indexed` 表示原厂包已入索引，`oem-wlan-listed` 表示原厂资料列出无线驱动，`oem-driver-pack-listed` 表示原厂列出该系统的整机部署包，仍需检查包内 WLAN 驱动。`oem-os-upgrade-tested` 表示原厂列出 Windows 11 升级测试，WLAN 驱动仍待核对。`pending` 表示该系统的证据待核。`oem-wlan-not-supported` 表示原厂明确说明该系统没有该出厂无线模块的驱动。仅预留接口和 ARM64 组合另有标记。原厂下载索引目前有 19 个包标注支持 Windows 10 x64，33 个包标注支持 Windows 11 x64，部分包另有最低构建号要求。[原厂下载索引](network-rescue-driver-index.csv)
 
 | 主板范围 | 已发现的型号或修订 |
 | --- | ---: |
@@ -244,3 +244,14 @@ pwsh -File scripts/merge-network-rescue-model-gaps.ps1
 从现有 ZIP 提取华硕原厂驱动目录，在 Win11 Build 26300 上确认 16 个签名 PCI INF。Win10 回填 28 条、Win11 回填 38 条，待核分别降至 **1,023／1,008**。回填使用 `oem-wlan-listed`，后续仍需确认各出厂模块变体。原先记录了多模块的型号，本轮尚无一条能把所有已知模块同时关联到适用原厂包。未下载新驱动或重建 ZIP。
 
 用 `scripts/audit-network-rescue-library.ps1 -EvidenceCsv` 导出成品内签名 INF，再用 `scripts/reconcile-asus-bundled-wlan.py` 输出待核条目的原厂包证据。审阅后用 `--apply` 回填。本轮只将具备出厂无线规格或模块证据、原厂下载 SHA-256 一致、且包内有签名 PCI INF 的条目提升为原厂列出。
+
+
+### 先复用原厂包，再按缺失网卡变体选包
+
+上一轮的复用优先法已纳入流程。该对照样本的 66 条原厂证据全来自 46 条有复用线索的主板，另外 32 条未命中。先查复用线索在这一样本中可以少查约 41% 的主板，而且无需新增归档或重打包。该比例作为本轮样本结果保留，其他厂商与平台仍需单独测量。
+
+本轮先用当前 ZIP 的签名 INF 计算每个主板与系统组合尚缺哪些已知出厂模块，再根据原厂下载项名称中明确写出的网卡型号安排下载。原厂标题只用于排队，最终使用同型号的下载证据和成品签名 INF 确认。两包预算下，按原厂下载项出现次数选出的两包均面向 Win11，合计只涉及 13 条不同记录。按缺失模块选出的 Win11、Win10 RTL8922AE 包共出现在 22 条不同原厂记录中，验签后补齐全部已知模块的有 **17 条**。另外 5 条 Win10 记录仍缺随板 MediaTek 变体的适用包。 [变体选包结果](network-rescue-wlan-variant-priority.csv) · [逐型号模块验收](network-rescue-wlan-variant-audit.csv)
+
+成品使用 Win10 对应的 `netrtwlane701.inf` 和 Win11 对应的 `netrtwlane711.inf`。两包原档与华硕发布的 SHA-256 一致。回填 Win10 4 条、Win11 13 条。其中 8 条 Win11 原先已有下载页证据，本轮提升为所有已知变体均有原厂包。待核降至 **Win10 1,019／Win11 1,003**。本轮签名与匹配审计在 Win11 Build 26300 执行，仍需在目标 Win10/11 实机确认出厂 SUBSYS、驱动绑定和恢复联网。
+
+继续使用 `scripts/map-network-rescue-wlan.py --include-listed --rank-output` 生成下一批候选。先按原厂 SHA-256 下载，再从成品提取签名 INF 并用 `--apply` 回填完整变体证据。
