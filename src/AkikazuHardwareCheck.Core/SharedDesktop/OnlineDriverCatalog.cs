@@ -7,7 +7,7 @@ namespace AkikazuHardwareCheck.Core.SharedDesktop;
 
 public sealed record OnlineDriverPackage(string Id, string Version, string Source, string ArchiveSha256,
     string DriverDirectory, string? ArchiveLayout, string[] DevicePrefixes, bool Windows11Only, int ArchiveOffset = 0,
-    int MinimumWindowsBuild = 0, string? Scope = null, string? AdapterName = null);
+    int MinimumWindowsBuild = 0, string? Scope = null, string? AdapterName = null, string? TargetWindows = null);
 
 public static class OnlineDriverCatalog
 {
@@ -29,7 +29,9 @@ public static class OnlineDriverCatalog
             return [];
         }
 
+        var targetWindows = diagnostic.WindowsBuild < 22000 ? "windows10" : "windows11";
         return Packages.Value.Where(package => (!package.Windows11Only || diagnostic.WindowsBuild >= 22000) &&
+            (package.TargetWindows is null || package.TargetWindows == targetWindows) &&
             diagnostic.WindowsBuild >= package.MinimumWindowsBuild &&
             diagnostic.Devices.Any(device => (includeInstalled || device.ProblemCode == 28) &&
                 device.HardwareIds.Any(id => package.DevicePrefixes.Any(prefix => matches(id, prefix))))).ToArray();
@@ -81,6 +83,10 @@ public static class OnlineDriverCatalog
             if (package.ArchiveLayout != "direct")
             {
                 var wrappers = Directory.GetFiles(payload, "*.exe");
+                if (wrappers.Length == 0)
+                {
+                    wrappers = Directory.GetFiles(payload, "*.exe", SearchOption.AllDirectories);
+                }
                 if (wrappers.Length != 1)
                 {
                     throw new InvalidDataException("The expected vendor archive wrapper was not found.");

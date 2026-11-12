@@ -92,11 +92,39 @@ start "" "%~dp0AkikazuHardwareCheck.exe" --portable-rescue
         if ($flavor -eq 'offline-full-portable') {
             & (Join-Path $PSScriptRoot 'prepare-sdio-wlan-library.ps1') -Archive $WlanArchive -OutputDirectory $bundleRoot
             Copy-Item -LiteralPath (Join-Path $root 'artifacts/network-rescue-pe/PeNetworkRescue.exe') -Destination $bundleRoot
+            Copy-Item -LiteralPath (Join-Path $root 'artifacts/network-rescue-pe/NetworkRescue.exe') -Destination $bundleRoot
+            $fontCache = Join-Path $root 'artifacts/network-rescue-pe/fonts'
+            New-Item -ItemType Directory -Path $fontCache -Force | Out-Null
+            $fontSource = 'https://raw.githubusercontent.com/notofonts/noto-cjk/Sans2.004'
+            $fontFiles = @(
+                @{
+                    Name = 'NotoSansCJK-Regular.ttc'
+                    Path = 'Sans/OTC/NotoSansCJK-Regular.ttc'
+                    Hash = 'B76B0433203017CA80401B2EE0DD69350349871C4B19D504C34DBDD80541690A'
+                },
+                @{
+                    Name = 'NotoSansCJK-OFL.txt'
+                    Path = 'LICENSE'
+                    Hash = '6A73F9541C2DE74158C0E7CF6B0A58EF774F5A780BF191F2D7EC9CC53EFE2BF2'
+                }
+            )
+            $peFonts = New-Item -ItemType Directory -Path (Join-Path $bundleRoot 'pe-fonts')
+            foreach ($fontFile in $fontFiles) {
+                $cached = Join-Path $fontCache $fontFile.Name
+                if (-not (Test-Path -LiteralPath $cached)) {
+                    Invoke-WebRequest -Uri "$fontSource/$($fontFile.Path)" -OutFile $cached
+                }
+                if ((Get-FileHash -LiteralPath $cached).Hash -ne $fontFile.Hash) {
+                    throw "PE font hash mismatch: $($fontFile.Name)"
+                }
+                Copy-Item -LiteralPath $cached -Destination $peFonts.FullName
+            }
             Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'prototype/Run-Network-Rescue.cmd') -Destination $bundleRoot -Force
             $packages = (Get-Content -LiteralPath (Join-Path $bundleRoot 'wifi-preview-packages.json') -Raw | ConvertFrom-Json).packages
             $peScope = @(
                 '10240 sdio-wlan-wifi-26082'
                 foreach ($package in $packages) {
+                    if ($package.targetWindows) { continue }
                     $floor = if ($package.windows11Only) { 22000 } else { 10240 }
                     $minimum = [Math]::Max($floor, [int]$package.minimumWindowsBuild)
                     "$minimum $($package.id)-$($package.version)"
