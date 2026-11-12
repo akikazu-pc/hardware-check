@@ -47,6 +47,8 @@ static INT_PTR CALLBACK PeChoiceDialog(HWND dialog, UINT message, WPARAM wparam,
         if (!choice.entries.empty()) {
             list = ChoiceControl(dialog, L"LISTBOX", L"", WS_TABSTOP | WS_BORDER | WS_VSCROLL |
                 WS_HSCROLL | LBS_NOTIFY | LBS_NOINTEGRALHEIGHT, listId, { 8, 32, 410, 126 });
+        }
+        if (list || choice.safeDefault) {
             cancel = ChoiceControl(dialog, L"BUTTON", choice.text.cancel,
                 WS_TABSTOP | (choice.safeDefault ? BS_DEFPUSHBUTTON : BS_PUSHBUTTON), IDCANCEL, { 354, 134, 410, 151 });
         }
@@ -130,10 +132,27 @@ static std::wstring WindowsLabel(const fs::path& root, DWORD build)
         L" x64  (" + std::to_wstring(build) + L")";
 }
 
+struct SetupImage {
+    unsigned long index;
+    std::wstring name;
+    std::wstring locale;
+};
+
 struct SetupMedia {
     fs::path root;
+    fs::path image;
     DWORD build;
+    std::vector<SetupImage> editions;
 };
+
+static std::wstring ImageValue(std::wstring_view entry, const std::wstring& name)
+{
+    const auto begin = entry.find(L"<" + name + L">");
+    if (begin == std::wstring_view::npos) return {};
+    const auto value = begin + name.size() + 2;
+    const auto end = entry.find(L"</" + name + L">", value);
+    return end == std::wstring_view::npos ? std::wstring{} : std::wstring(entry.substr(value, end - value));
+}
 
 template<class Function> static Function WimApi(HMODULE library, const char* name)
 {
@@ -144,7 +163,7 @@ template<class Function> static Function WimApi(HMODULE library, const char* nam
     return result;
 }
 
-static DWORD ReadImageBuild(const fs::path& path)
+static DWORD ReadImageBuild(const fs::path& path, std::vector<SetupImage>& editions)
 {
     const auto library = LoadLibraryExW(L"wimgapi.dll", nullptr, LOAD_LIBRARY_SEARCH_SYSTEM32);
     if (!library) {
@@ -183,6 +202,23 @@ static DWORD ReadImageBuild(const fs::path& path)
                         result = 0;
                         break;
                     }
+                    const auto indexTag = entry.find(L" INDEX=\"");
+                    if (indexTag == std::wstring_view::npos) {
+                        result = 0;
+                        break;
+                    }
+                    const auto indexText = std::wstring(entry.substr(indexTag + 8));
+                    wchar_t* indexEnd = nullptr;
+                    const auto index = wcstoul(indexText.c_str(), &indexEnd, 10);
+                    if (!index || *indexEnd != L'"') {
+                        result = 0;
+                        break;
+                    }
+                    auto name = ImageValue(entry, L"DISPLAYNAME");
+                    if (name.empty()) name = ImageValue(entry, L"NAME");
+                    auto locale = ImageValue(entry, L"DEFAULT");
+                    if (!IsValidLocaleName(locale.c_str()) || locale.empty()) locale.clear();
+                    editions.push_back({ index, std::move(name), std::move(locale) });
                     result = build;
                     start = end + 8;
                 }
@@ -220,9 +256,10 @@ static std::vector<SetupMedia> DiscoverSetupMedia()
         for (const auto* file : { L"install.wim", L"install.esd", L"install.swm" }) {
             const auto image = root / L"sources" / file;
             if (fs::is_regular_file(image, error)) {
-                const auto build = ReadImageBuild(image);
+                std::vector<SetupImage> editions;
+                const auto build = ReadImageBuild(image, editions);
                 if (build) {
-                    result.push_back({ root, build });
+                    result.push_back({ root, image, build, std::move(editions) });
                 }
                 break;
             }
@@ -404,6 +441,8 @@ static SetupStart StartSetup(const SetupMedia& media, const fs::path& inf)
     return SetupStart::Started;
 }
 
+#include "PeUnattended.h"
+
 static int PreferredLanguage()
 {
     const LANGID uiLanguage = GetUserDefaultUILanguage();
@@ -458,6 +497,17 @@ static int RunPeAction(const fs::path& bundle, const PeText& text, bool setup)
     }
     const auto target = Choose(text, setup ? text.media : text.target, choices);
     if (target < 0) return 0;
+    std::optional<DeploymentSelection> deployment;
+    if (setup && SupportsUnattended(media[target])) {
+        const auto mode = Choose(text, text.deployMode, { text.deploySetup, text.deployUnattended });
+        if (mode < 0) return 0;
+        if (mode == 1) {
+            deployment = ChooseDeployment(media[target], text,
+                [&](const wchar_t* prompt, const std::vector<std::wstring>& entries) { return Choose(text, prompt, entries); },
+                [&](const wchar_t* message) { Notice(text, message); });
+            if (!deployment) return 0;
+        }
+    }
     const auto build = setup ? media[target].build : targets[target].build;
     auto matches = ScanWithProgress(bundle, build, text);
     if (matches.empty()) {
@@ -468,9 +518,15 @@ static int RunPeAction(const fs::path& bundle, const PeText& text, bool setup)
     for (const auto& match : matches) {
         labels.push_back(match.name + L"  " + match.path.filename().wstring() + L"  [" + match.id + L"]");
     }
-    const auto driver = Choose(text, text.driver, labels);
+    const auto driver = deployment && labels.size() == 1 ? 0 : Choose(text, text.driver, labels);
     if (driver < 0) return 0;
     const auto& inf = matches[driver].path;
+    if (deployment) {
+        const auto confirmation = std::wstring(text.deployConfirm) + L"\n\n" +
+            DeploymentDetails(media[target], *deployment, inf);
+        if (Choose(text, confirmation.c_str(), {}, 0, text.confirm, true) < 0) return 0;
+        return DeployWithUi(media[target], *deployment, inf, text);
+    }
     if (!Confirm(text, setup ? text.confirmSetup : text.confirmRepair, choices[target] + L"  " + inf.wstring())) {
         return 0;
     }

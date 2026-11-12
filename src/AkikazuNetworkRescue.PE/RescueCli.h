@@ -106,6 +106,7 @@ static int RunCli(const fs::path& bundle, bool isPe, int language)
     const auto targets = isPe ? DiscoverTargets() : std::vector<Target>{};
     const auto media = isPe && !IsSetupRunning() ? DiscoverSetupMedia() : std::vector<SetupMedia>{};
     bool setup = false;
+    std::optional<DeploymentSelection> deployment;
     DWORD build = 0;
     size_t selected = 0;
 
@@ -130,6 +131,18 @@ static int RunCli(const fs::path& bundle, bool isPe, int language)
         selected = ChooseCli(text, setup ? text.media : text.target, choices);
         if (!selected) return 0;
         build = setup ? media[selected - 1].build : targets[selected - 1].build;
+        if (setup && SupportsUnattended(media[selected - 1])) {
+            const auto mode = ChooseCli(text, text.deployMode, { text.deploySetup, text.deployUnattended });
+            if (!mode) return 0;
+            if (mode == 2) {
+                deployment = ChooseDeployment(media[selected - 1], text,
+                    [&](const wchar_t* prompt, const std::vector<std::wstring>& entries) {
+                        return static_cast<int>(ChooseCli(text, prompt, entries, false)) - 1;
+                    },
+                    [&](const wchar_t* message) { std::wcout << message << L'\n'; });
+                if (!deployment) return 0;
+            }
+        }
     } else {
         std::wcout << text.cliCurrent << L'\n';
         build = CurrentWindowsBuild();
@@ -157,6 +170,17 @@ static int RunCli(const fs::path& bundle, bool isPe, int language)
     const auto driver = ChooseCli(text, text.driver, labels);
     if (!driver) return 0;
     const auto& match = matches[driver - 1];
+    if (deployment) {
+        const auto& source = media[selected - 1];
+        std::wcout << DeploymentDetails(source, *deployment, match.path) << L'\n';
+        if (!ChooseCli(text, text.deployConfirm, { text.confirm }, false)) return 0;
+        const wchar_t* step = text.deployPreparing;
+        const auto code = RunUnattended(source, *deployment, match.path, text,
+            [](const wchar_t* message) { std::wcout << message << L'\n' << std::flush; }, step);
+        if (code == ERROR_SUCCESS) return 0;
+        std::wcout << DeploymentFailure(text, step, code) << L'\n';
+        return 6;
+    }
     const auto* confirmation = setup ? text.confirmSetup : isPe ? text.confirmRepair : text.cliConfirmCurrent;
     if (!ChooseCli(text, confirmation, { text.confirm }, false)) return 0;
     if (!VerifyNetworkDriver(match.path)) {
