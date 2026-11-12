@@ -297,6 +297,8 @@ pwsh -NoProfile -File scripts/publish-network-rescue-bundles.ps1 -IncludeCatalog
 
 在 PE 的「工具」中选择「修复已有 Windows」，工具列出可访问的固定磁盘分区中的 Windows 10/11 x64 系统。它用内核版本区分系统和匹配 INF 最低构建号，启用包更新的 Windows 可能显示较早的基线内核构建号。若找不到预期分区，先检查 PE 是否能读取磁盘，或在具备相应组件的 PE 中解锁 BitLocker。
 
+PE 首页按网络设备类或 PCI 网络控制器 ID 识别网卡，可显示尚未归入网络设备类的 PCI 网卡。状态区分驱动运行、驱动未启动、缺驱动、设备错误和未知状态，所显示的是 PE 内的设备状态。
+
 选择目标后，程序自动读取本机 PCI/USB 硬件 ID，共用完整版的 SDIO WLAN 库和原厂驱动目录。按目标系统构建号筛选原厂包，按目标系统选择随包提供的有线补充目录。只列出目标系统适用的网络类签名 INF 精确匹配项。按 Y 确认后调用系统 DISM 写入选中的离线 Windows，并列出目标驱动存储。重启进入该 Windows 后验证驱动绑定和联网。
 
 生成完整版需要 MSVC x64 和 Windows SDK，打包脚本自动构建 PE 入口。原厂包清单中按 Windows 版本指定的驱动会放到对应的有线目录。可选的 `-PeEthernetPackDirectory` 还可提供两份已验证的 Windows 10/11 Realtek PCIe 有线 ZIP 及对应 SHA-256 文件。Windows 11 的 PE 离线写入已在隔离虚拟机验收。Windows 10 目标和实体网卡重启联网仍待验收。

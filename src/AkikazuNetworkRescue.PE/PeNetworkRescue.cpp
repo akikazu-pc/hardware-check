@@ -99,6 +99,20 @@ static std::vector<Target> DiscoverTargets()
     return targets;
 }
 
+static std::vector<wchar_t> ReadDeviceIdProperty(HDEVINFO devices, SP_DEVINFO_DATA& device, DWORD property)
+{
+    DWORD size = 0;
+    SetupDiGetDeviceRegistryPropertyW(devices, &device, property, nullptr, nullptr, 0, &size);
+    if (!size || size > 65536) return {};
+    std::vector<wchar_t> values(size / sizeof(wchar_t) + 2);
+    DWORD type = 0;
+    if (!SetupDiGetDeviceRegistryPropertyW(devices, &device, property, &type,
+            reinterpret_cast<PBYTE>(values.data()), size, nullptr) || type != REG_MULTI_SZ) {
+        return {};
+    }
+    return values;
+}
+
 static std::vector<std::wstring> ReadDeviceHardwareIds(bool missingOnly = false)
 {
     std::vector<std::wstring> ids;
@@ -121,17 +135,8 @@ static std::vector<std::wstring> ReadDeviceHardwareIds(bool missingOnly = false)
                 continue;
             }
         }
-        DWORD size = 0;
-        SetupDiGetDeviceRegistryPropertyW(devices, &device, SPDRP_HARDWAREID, nullptr, nullptr, 0, &size);
-        if (!size || size > 65536) {
-            continue;
-        }
-        std::vector<wchar_t> values(size / sizeof(wchar_t) + 2);
-        DWORD type = 0;
-        if (!SetupDiGetDeviceRegistryPropertyW(devices, &device, SPDRP_HARDWAREID, &type,
-                reinterpret_cast<PBYTE>(values.data()), size, nullptr) || type != REG_MULTI_SZ) {
-            continue;
-        }
+        const auto values = ReadDeviceIdProperty(devices, device, SPDRP_HARDWAREID);
+        if (values.empty()) continue;
         for (const wchar_t* id = values.data(); *id; id += wcslen(id) + 1) {
             if (_wcsnicmp(id, L"PCI\\VEN_", 8) == 0 || _wcsnicmp(id, L"USB\\VID_", 8) == 0) {
                 ids.emplace_back(id);

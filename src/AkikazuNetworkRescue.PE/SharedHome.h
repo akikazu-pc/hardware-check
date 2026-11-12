@@ -31,15 +31,33 @@ static void AddHomeRow(HWND list, const std::wstring& name, const wchar_t* statu
     if (index >= 0) ListView_SetItemText(list, index, 1, const_cast<wchar_t*>(status));
 }
 
+static bool IsPciNetworkDevice(HDEVINFO devices, SP_DEVINFO_DATA& device)
+{
+    for (const auto property : { SPDRP_COMPATIBLEIDS, SPDRP_HARDWAREID }) {
+        const auto values = ReadDeviceIdProperty(devices, device, property);
+        if (values.empty()) continue;
+        for (const auto* id = values.data(); *id; id += wcslen(id) + 1) {
+            if (_wcsnicmp(id, L"PCI\\", 4) != 0) continue;
+            for (const auto* part = id + 4; part; ) {
+                if (_wcsnicmp(part, L"CC_0200", 7) == 0 || _wcsnicmp(part, L"CC_0280", 7) == 0) return true;
+                const auto next = wcschr(part, L'&');
+                part = next ? next + 1 : nullptr;
+            }
+        }
+    }
+    return false;
+}
+
 static void FillNetworkDevices(HWND list, const PeText& text)
 {
     const GUID network = { 0x4d36e972, 0xe325, 0x11ce, { 0xbf, 0xc1, 0x08, 0x00, 0x2b, 0xe1, 0x03, 0x18 } };
-    const auto devices = SetupDiGetClassDevsW(&network, nullptr, nullptr, DIGCF_PRESENT);
+    const auto devices = SetupDiGetClassDevsW(nullptr, nullptr, nullptr, DIGCF_ALLCLASSES | DIGCF_PRESENT);
     if (devices == INVALID_HANDLE_VALUE) return;
     for (DWORD index = 0;; ++index) {
         SP_DEVINFO_DATA device{};
         device.cbSize = sizeof device;
         if (!SetupDiEnumDeviceInfo(devices, index, &device)) break;
+        if (!IsEqualGUID(device.ClassGuid, network) && !IsPciNetworkDevice(devices, device)) continue;
         wchar_t name[256]{};
         if (!SetupDiGetDeviceRegistryPropertyW(devices, &device, SPDRP_FRIENDLYNAME, nullptr,
                 reinterpret_cast<PBYTE>(name), sizeof name, nullptr) &&
@@ -50,9 +68,14 @@ static void FillNetworkDevices(HWND list, const PeText& text)
         ULONG status = 0;
         ULONG problem = 0;
         const auto state = CM_Get_DevNode_Status(&status, &problem, device.DevInst, 0);
-        const auto* label = state != CR_SUCCESS ? L"" : problem == CM_PROB_FAILED_INSTALL ? text.homeMissing :
-            problem == 0 ? text.homeReady : L"";
-        AddHomeRow(list, name, label);
+        std::wstring label = text.homeUnknown;
+        if (state == CR_SUCCESS) {
+            if (problem == CM_PROB_FAILED_INSTALL) label = text.homeMissing;
+            else if (problem != 0) label = std::wstring(text.homeProblem) + L" (" + std::to_wstring(problem) + L")";
+            else if ((status & DN_STARTED) && (status & DN_DRIVER_LOADED)) label = text.homeReady;
+            else label = text.homeNotStarted;
+        }
+        AddHomeRow(list, name, label.c_str());
     }
     SetupDiDestroyDeviceInfoList(devices);
 }
