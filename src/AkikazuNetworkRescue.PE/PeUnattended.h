@@ -394,7 +394,8 @@ static std::optional<DeploymentSelection> ChooseDeployment(const SetupMedia& med
     for (const auto& image : media.editions) {
         if (image.locale.empty()) continue;
         editions.push_back(image);
-        labels.push_back(EditionLabel(image));
+        // Choice lists number their entries already; the image index stays in the confirmation details.
+        labels.push_back(image.name + L" [" + image.locale + L"]");
     }
     const auto edition = editions.size() == 1 ? 0 : choose(text.deployEdition, labels);
     if (edition < 0) return {};
