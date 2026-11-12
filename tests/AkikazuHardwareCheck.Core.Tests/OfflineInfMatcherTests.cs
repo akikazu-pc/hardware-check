@@ -7,7 +7,8 @@ public sealed class OfflineInfMatcherTests
     [Fact]
     public void UsesCurrentModelsSectionAndPrefersMostSpecificHardwareId()
     {
-        var path = Path.Combine(Path.GetTempPath(), Guid.NewGuid() + ".inf");
+        var directory = Directory.CreateTempSubdirectory();
+        var path = Path.Combine(directory.CreateSubdirectory("vendor").FullName, "wifi.inf");
         File.WriteAllText(path, """
             [Version]
             Signature="$Windows NT$"
@@ -38,6 +39,14 @@ public sealed class OfflineInfMatcherTests
                 new([@"PCI\VEN_8086&DEV_5678"], null, 28),
             ];
 
+            File.WriteAllText(Path.Combine(directory.FullName, "bad.inf"), "invalid");
+            File.WriteAllText(Path.Combine(directory.FullName, "generic.inf"), File.ReadAllText(path)
+                .Replace(@"%Vendor%=Install,PCI\VEN_8086&DEV_2725&SUBSYS_00248086", ""));
+            var search = OfflinePackageSearch.Find(directory.FullName, devices);
+            Assert.Equal([path, Path.Combine(directory.FullName, "generic.inf")],
+                search.Candidates.Select(candidate => candidate.InfPath));
+            Assert.Equal(1, search.UnreadableInfCount);
+
             Assert.Null(OfflineDriverInstaller.Verify(path));
             var match = Assert.Single(OfflineInfMatcher.Match(path, devices));
             Assert.Equal(devices[0].HardwareIds[0], match.HardwareId);
@@ -49,7 +58,7 @@ public sealed class OfflineInfMatcherTests
         }
         finally
         {
-            File.Delete(path);
+            directory.Delete(recursive: true);
         }
     }
 }

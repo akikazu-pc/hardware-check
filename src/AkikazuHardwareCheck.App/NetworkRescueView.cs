@@ -23,6 +23,7 @@ internal sealed class NetworkRescueView : UserControl
     private readonly Button _scan = Ui.Button();
     private readonly Button _export = Ui.Button();
     private readonly Button _preview = Ui.Button();
+    private readonly Button _searchFolder = Ui.Button();
     private readonly Label _scanStatus = Ui.Label();
     private readonly ListView _pciDevices = ListViewTable.Create();
     private readonly TabPage _pciPage = new();
@@ -46,7 +47,9 @@ internal sealed class NetworkRescueView : UserControl
         _scan.Click += async (_, _) => await ScanAsync();
         _export.Click += (_, _) => ExportDiagnostics();
         _preview.Click += async (_, _) => await PreviewInfAsync();
+        _searchFolder.Click += async (_, _) => await SearchFolderAsync();
         _preview.Enabled = false;
+        _searchFolder.Enabled = false;
         _export.Enabled = false;
         _pciDevices.Columns.Add("", 550);
         _pciDevices.Columns.Add("", 150);
@@ -88,6 +91,7 @@ internal sealed class NetworkRescueView : UserControl
         _scan.Text = t["rescue.scan"];
         _export.Text = t["rescue.export"];
         _preview.Text = t["rescue.previewInf"];
+        _searchFolder.Text = t["rescue.searchFolder"];
         _pciDevices.Columns[0].Text = t["rescue.hardwareIds"];
         _pciDevices.Columns[1].Text = t["rescue.problemCode"];
         ShowDiagnostic();
@@ -153,6 +157,7 @@ internal sealed class NetworkRescueView : UserControl
         _scan.Enabled = false;
         _export.Enabled = false;
         _preview.Enabled = false;
+        _searchFolder.Enabled = false;
         _diagnostic = null;
         _scanStatusKey = "rescue.scanning";
         ShowDiagnostic();
@@ -172,6 +177,7 @@ internal sealed class NetworkRescueView : UserControl
             _scan.Enabled = true;
             _export.Enabled = _diagnostic is not null;
             _preview.Enabled = _diagnostic?.Devices.Count > 0;
+            _searchFolder.Enabled = _preview.Enabled;
             ShowDiagnostic();
         }
     }
@@ -225,14 +231,19 @@ internal sealed class NetworkRescueView : UserControl
             return;
         }
 
+        await ReviewInfAsync(dialog.FileName, diagnostic.Devices);
+    }
+
+    private async Task ReviewInfAsync(string path, IReadOnlyList<PciNetworkDevice> devices)
+    {
         string message;
         try
         {
-            var matches = OfflineInfMatcher.Match(dialog.FileName, diagnostic.Devices);
+            var matches = OfflineInfMatcher.Match(path, devices);
             if (OfflineDriverInstaller.SelectMissingMatch(matches) is { } eligible &&
                 DistributionProfile.Current.Channel != DistributionChannel.Store)
             {
-                await ConfirmInstallAsync(dialog.FileName, eligible);
+                await ConfirmInstallAsync(path, eligible);
                 return;
             }
 
@@ -247,8 +258,108 @@ internal sealed class NetworkRescueView : UserControl
             message = _t["rescue.infReadFailed"];
         }
 
-        MessageBox.Show(this, message, _t["rescue.infMatches", Path.GetFileName(dialog.FileName)],
+        MessageBox.Show(this, message, _t["rescue.infMatches", Path.GetFileName(path)],
             MessageBoxButtons.OK, MessageBoxIcon.Information);
+    }
+
+    private async Task SearchFolderAsync()
+    {
+        if (_diagnostic is not { Devices.Count: > 0 } diagnostic)
+        {
+            return;
+        }
+
+        using var folder = new FolderBrowserDialog { Description = _t["rescue.selectFolder"], ShowNewFolderButton = false };
+        if (folder.ShowDialog(this) != DialogResult.OK)
+        {
+            return;
+        }
+
+        var root = folder.SelectedPath;
+        _scan.Enabled = _preview.Enabled = _searchFolder.Enabled = false;
+        _scanStatusKey = "rescue.searchingFolder";
+        _scanStatus.Text = _t[_scanStatusKey];
+        OfflinePackageSearchResult? result = null;
+        try
+        {
+            result = await Task.Run(() => OfflinePackageSearch.Find(root, diagnostic.Devices));
+            _scanStatusKey = null;
+        }
+        catch (Exception exception) when (exception is IOException or UnauthorizedAccessException)
+        {
+            _scanStatusKey = "rescue.folderReadFailed";
+        }
+
+        if (IsDisposed)
+        {
+            return;
+        }
+
+        _scan.Enabled = _preview.Enabled = _searchFolder.Enabled = true;
+        _scanStatus.Text = _scanStatusKey is { } status ? _t[status] : "";
+        if (result is null)
+        {
+            return;
+        }
+
+        var skipped = result.UnreadableInfCount > 0 ? _t["rescue.unreadableInfs", result.UnreadableInfCount] : "";
+        if (result.Candidates.Count == 0)
+        {
+            MessageBox.Show(this, string.Join(Environment.NewLine, new[] { _t["rescue.infNoMatch"], skipped }
+                .Where(text => text.Length > 0)), _t["rescue.driverCandidates"], MessageBoxButtons.OK, MessageBoxIcon.Information);
+            return;
+        }
+
+        if (SelectCandidate(root, result.Candidates, skipped) is { } selected)
+        {
+            await ReviewInfAsync(selected.InfPath, diagnostic.Devices);
+        }
+    }
+
+    private OfflinePackageCandidate? SelectCandidate(string root, IReadOnlyList<OfflinePackageCandidate> candidates, string skipped)
+    {
+        using var dialog = new Form
+        {
+            Text = _t["rescue.driverCandidates"],
+            StartPosition = FormStartPosition.CenterParent,
+            ClientSize = new Size(740, 360),
+            MinimizeBox = false,
+            ShowInTaskbar = false,
+        };
+        var list = ListViewTable.Create();
+        list.MultiSelect = false;
+        list.Columns.Add(_t["rescue.infPath"], 320);
+        list.Columns.Add(_t["rescue.hardwareIds"], 380);
+        foreach (var candidate in candidates)
+        {
+            var row = new ListViewItem(Path.GetRelativePath(root, candidate.InfPath)) { Tag = candidate };
+            row.SubItems.Add(string.Join(" | ", candidate.Matches.Select(match => match.HardwareId).Distinct()));
+            list.Items.Add(row);
+        }
+
+        ListViewTable.EnableSort(list);
+        ListViewTable.EnableColumnMenu(list, _t);
+        ListViewTable.EnableCopy(list, _t);
+        var review = Ui.Button();
+        review.Text = _t["rescue.reviewInf"];
+        review.DialogResult = DialogResult.OK;
+        review.Enabled = false;
+        list.SelectedIndexChanged += (_, _) => review.Enabled = list.SelectedItems.Count == 1;
+        var footer = new FlowLayoutPanel { Dock = DockStyle.Bottom, AutoSize = true };
+        footer.Controls.Add(review);
+        if (skipped.Length > 0)
+        {
+            var note = Ui.Label();
+            note.Text = skipped;
+            footer.Controls.Add(note);
+        }
+
+        dialog.Controls.Add(list);
+        dialog.Controls.Add(footer);
+        dialog.AcceptButton = review;
+        return dialog.ShowDialog(this) == DialogResult.OK && list.SelectedItems.Count == 1
+            ? (OfflinePackageCandidate?)list.SelectedItems[0].Tag
+            : null;
     }
 
     private async Task ConfirmInstallAsync(string path, OfflineInfMatch match)
@@ -282,6 +393,7 @@ internal sealed class NetworkRescueView : UserControl
 
         _scan.Enabled = false;
         _preview.Enabled = false;
+        _searchFolder.Enabled = false;
         _export.Enabled = false;
         string resultKey;
         try
@@ -367,6 +479,7 @@ internal sealed class NetworkRescueView : UserControl
         actions.Controls.Add(_scan);
         actions.Controls.Add(_export);
         actions.Controls.Add(_preview);
+        actions.Controls.Add(_searchFolder);
         scanLayout.Controls.Add(actions, 0, 0);
         scanLayout.Controls.Add(_scanStatus, 0, 1);
         scanLayout.Controls.Add(_pciDevices, 0, 2);
