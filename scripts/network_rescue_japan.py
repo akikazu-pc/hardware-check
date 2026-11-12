@@ -13,6 +13,7 @@ PANASONIC_API = f"{PANASONIC}/ccm/pc_support/api/products"
 PANASONIC_FILES = "dl-pc-support.connect.panasonic.com"
 PANASONIC_DETAIL_SERIES = 6
 DYNABOOK_CATALOG = "https://dynabook.com/assistpc/osup/win11_25h2/target/"
+FUJITSU_CATALOG = "https://azby.fmworld.net/support/win/11/info/"
 PAGE_LIMIT = 2 * 1024 * 1024
 HTML_ROW = re.compile(r"<tr\b[^>]*>(.*?)</tr>", re.I | re.S)
 HTML_CELL = re.compile(r"<td\b[^>]*>(.*?)</td>", re.I | re.S)
@@ -135,3 +136,31 @@ def load_dynabook(scratch, fetch):
     if not boards:
         raise ValueError("No Dynabook laptop models found")
     return boards, {}, 2
+
+
+def load_fujitsu(scratch, fetch):
+    """Read FMV's consumer Windows 11 upgrade list and its exact retail model codes."""
+    path = scratch / "fujitsu.html"
+    fetch(FUJITSU_CATALOG, path, PAGE_LIMIT)
+    models = {}
+    for row in HTML_ROW.findall(path.read_text(encoding="utf-8")):
+        title = re.search(r"<th\b[^>]*>(.*?)</th>", row, re.I | re.S)
+        cells = HTML_CELL.findall(row)
+        if not title or len(cells) != 1:
+            continue
+        name = _text(title[1])
+        codes = [code.strip() for code in _text(cells[0]).split("、")]
+        if not re.match(r"(?:LIFEBOOK|ESPRIMO|FMV Lite|arrows Tab)\b", name, re.I):
+            continue
+        exact_codes = [code for code in codes if re.fullmatch(r"FMV[A-Z0-9-]+", code)]
+        if not exact_codes:
+            continue
+        product_type = "laptop" if name.startswith(("LIFEBOOK", "FMV Lite")) else "desktop"
+        tags = ["windows-tablet"] if name.casefold().startswith("arrows tab") else ["branded-desktop"]
+        model = models.setdefault(name, dict(model=name, support=FUJITSU_CATALOG, market="JP",
+                                            productType=product_type, deviceTags=tags if product_type != "laptop" else [],
+                                            evidence="oem-os-upgrade-catalog", modelAliases=[]))
+        model["modelAliases"] = sorted(set(model["modelAliases"]) | set(exact_codes))
+    if not models:
+        raise ValueError("No Fujitsu FMV retail model codes were parsed")
+    return models, {}, 1

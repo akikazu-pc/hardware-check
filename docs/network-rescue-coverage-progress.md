@@ -348,3 +348,15 @@ D-Link 本轮补入 34 个原厂网卡型号。首批检查 7 个型号的 11 �
 同为 5 个包的预算，按源顺序选包涉及 11 条不同修订，按尚无验签包的修订数逐次选包涉及 34 条。两组都实下载，前者有 2 条修订关联到签名 INF 包，后者有 3 条。本轮采纳该排序用于限量补采，可执行 `python scripts/update-network-rescue.py --devices-only --backfill-devices --device-backfill-limit 5`。新版本和失败重试仍按正常更新流程处理。
 
 下一轮试验先检查 ZIP 目录。两个真实 TP-Link 包直接可见的 `.inf` 只有 `autorun.inf`，跳过无效验签并标记待静态提取，旧记录可用已保存的原档重分类。用 `python scripts/report-network-rescue-coverage.py` 复算固定快照与主表。另存的设备批次可用 `--device-state`，实下载样本可用 `--evidence 品牌 报告路径` 加入，要求原厂 URL、型号身份与条目版本相符。签名比例记录当前 Windows 环境的包证据，实机绑定、出厂硬件 ID 和恢复联网仍待验证。
+
+### 将原厂目录接入应用检索
+
+型号补充目录现随应用嵌入。导出 **6,660 条源记录**，含主板 2,483、笔记本 3,061、其他设备 1,116。与既有主表合并后，应用返回 7,406 条可检索记录，按主板 2,651、笔记本 3,761、其他设备 994 分组。营销名称和原厂型号代码同时可查，同名机型有不同支持页时保留可区分的产品标识。实测 6,660/6,660 条源记录均能通过应用检索接口查到，并逐条验证 7,323 次非通配别名查询。这个 100% 以本次接入源记录为分母，全球常规民用设备仍缺完整分母。
+
+新增日本富士通 FMV 民用升级目录。一次请求收录 221 个商品名及 710 个不同的零售型号代码。验证 `FMVA40FWJ2` 可查到 `LIFEBOOK AH40/F1`。该来源记录 Windows 11 升级目录与型号，网卡包仍需逐型号核对。 [富士通 FMV 原厂目录](https://azby.fmworld.net/support/win/11/info/)
+
+采纳只在加载时规范化品牌、型号和别名。用同一旧目录和固定 1,440 次搜索做七轮对照，中位数从 740.2 毫秒降到 179.6 毫秒，约快 4.12 倍。计时未包含首次加载和界面绘制。下一轮试验用 OEM 产品代码和 SMBIOS 别名扩展检索，并保留 `+`、独立网卡修订及同名机型的支持页区别。
+
+驱动继续按包核验。另下载 6 个 TP-Link 原厂 ZIP，5 个包在 Windows 11 Build 26300 验得 16 个签名网络 INF，关联 7 条新核修订。UE302C 的包仍待静态提取。D-Link DUB-1312 Rev A 已按 `USB\VID_2001&PID_4A00` 接入在线下载和本地离线构建清单。实测应用从原厂下载、校验 SHA-256、解出驱动并匹配该 ID。另生成仅含此包的本地 ZIP，重新提取验得 1 个签名 INF。Win10 原厂列出，目标 Win10 与实机联网仍待验证。 [TP-Link Archer T3U 支持](https://www.tp-link.com/us/support/download/archer-t3u/v1/) · [D-Link DUB-1312 支持](https://support.dlink.com/ProductInfo.aspx?m=DUB-1312)
+
+先用更新脚本刷新来源，再运行 `python scripts/export-network-rescue-search.py` 重建嵌入目录。设备来源另存于其他状态目录时，传入 `--device-state`。仓库测试覆盖原厂代码、硬件修订、分类和 D-Link 精确硬件 ID。

@@ -3,6 +3,18 @@
   "distribution": "local-build-only",
   "packages": [
     {
+      "id": "dlink-dub1312-reva",
+      "version": "1.18.2.0",
+      "source": "https://support.dlink.com/resource/PRODUCTS/DUB-1312/REVA/DUB-1312_REVA_DRIVERS_v1.18.2.0_WIN11_10_8.zip",
+      "archiveSha256": "C13CAA7D34FB461D157D9150CB386C3F4848E65178FC819388E8E5DE4FF8B3EF",
+      "driverDirectory": "DUB-13x2_Win10_8.x_64bit_Driver_v1.18.2.0_WHCK",
+      "archiveLayout": "direct",
+      "scope": "D-Link DUB-1312 Rev A; OEM lists Windows 10/11, x64 INF verified on Windows 11",
+      "devicePrefixes": ["USB\\VID_2001&PID_4A00"],
+      "windows11Only": false,
+      "adapterName": "D-Link DUB-1312 USB Ethernet"
+    },
+    {
       "id": "rtl8821",
       "version": "2024.10.138.3",
       "source": "https://download.gigabyte.com/FileList/Driver/mb_driver_639_realtekwifi_2024.10.138.3.zip",

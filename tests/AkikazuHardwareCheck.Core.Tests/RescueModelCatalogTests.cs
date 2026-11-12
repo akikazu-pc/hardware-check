@@ -4,6 +4,20 @@ namespace AkikazuHardwareCheck.Core.Tests;
 
 public sealed class RescueModelCatalogTests
 {
+    [Theory]
+    [InlineData("TM2423", RescueDeviceCategory.Laptop, null, "REDMI Book 16 2025(AMD)")]
+    [InlineData("FMVA40FWJ2", RescueDeviceCategory.Laptop, null, "LIFEBOOK AH40/F1")]
+    [InlineData("MacBookPro16,1", RescueDeviceCategory.Other, RescueDeviceTag.Mac, "MacBook Pro (16-inch, 2019) (MacBookPro16,1)")]
+    [InlineData("Surface Go 4", RescueDeviceCategory.Other, RescueDeviceTag.WindowsTablet, "Surface Go 4")]
+    [InlineData("Archer T3U Plus V1.60", RescueDeviceCategory.Other, RescueDeviceTag.NetworkAdapter, "Archer T3U Plus V1.60")]
+    public void FindsSupplementalModelsByNameOrOfficialCode(string query, RescueDeviceCategory category,
+        RescueDeviceTag? tag, string expected)
+    {
+        var results = RescueModelCatalog.Search(query, category, tag);
+        Assert.Equal(expected, results[0].Model);
+        Assert.NotNull(results[0].Source);
+    }
+
     [Fact]
     public void FindsAllInOneWithSeparateWindowsEvidence()
     {
