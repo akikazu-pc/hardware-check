@@ -20,8 +20,10 @@ public sealed class NetworkDeviceInventoryTests
     [InlineData(@"PCI\CC_020000", 28, true)]
     [InlineData(@"PCI\VEN_10EC&DEV_8168&CC_020000", 28, true)]
     [InlineData(@"PCI\CC_020000", 0, false)]
+    [InlineData(@"PCI\CC_020000", 10, true)]
+    [InlineData(@"PCI\CC_020000", 22, true)]
     [InlineData(@"PCI\CC_010000", 28, false)]
-    public void FindsEthernetControllersMissingDrivers(string compatibleId, int code, bool expected)
+    public void FindsEthernetControllersWithDeviceProblems(string compatibleId, int code, bool expected)
     {
         string[] ids = [@"PCI\VEN_10EC&DEV_8168&SUBSYS_E0001458", @"PCI\VEN_10EC&DEV_8168"];
         var device = NetworkDeviceInventory.Classify(ids, [compatibleId], code);

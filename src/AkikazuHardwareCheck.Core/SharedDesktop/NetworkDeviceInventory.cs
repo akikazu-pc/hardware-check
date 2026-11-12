@@ -43,13 +43,13 @@ public static class NetworkDeviceInventory
     {
         var pciIds = hardwareIds.Where(id => id.StartsWith(@"PCI\VEN_", StringComparison.OrdinalIgnoreCase)).ToArray();
         var deviceIds = hardwareIds.Concat(compatibleIds);
-        var missingEthernet = problemCode == 28 && deviceIds.Any(id => HasPciClass(id, "CC_0200"));
-        if (pciIds.Length > 0 && (missingEthernet || deviceIds.Any(id => HasPciClass(id, "CC_0280"))))
+        var ethernetProblem = problemCode > 0 && deviceIds.Any(id => HasPciClass(id, "CC_0200"));
+        if (pciIds.Length > 0 && (ethernetProblem || deviceIds.Any(id => HasPciClass(id, "CC_0280"))))
         {
             var subsystemId = pciIds.SelectMany(id => id.Split('&'))
                 .FirstOrDefault(segment => segment.StartsWith("SUBSYS_", StringComparison.OrdinalIgnoreCase));
             return new NetworkDeviceCandidate(pciIds, subsystemId, problemCode,
-                missingEthernet ? NetworkCandidateKind.PciEthernet : NetworkCandidateKind.PciController);
+                ethernetProblem ? NetworkCandidateKind.PciEthernet : NetworkCandidateKind.PciController);
         }
 
         var usbIds = hardwareIds.Where(IsUsbProductId).ToArray();
