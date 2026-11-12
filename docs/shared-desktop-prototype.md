@@ -270,7 +270,7 @@ pwsh -NoProfile -File scripts/publish-network-rescue-bundles.ps1 -IncludeCatalog
 ## 当前交付方式
 
 - 在线安装版 `NetworkRescue-<version>-online-install-win-x64.zip` 解包后运行 `Install.cmd`。包内不含驱动本体。扫描到缺驱动设备后，可从内置目录查询官方来源，选择并确认下载。ZIP 通过 SHA-256 校验后解包，随后用本机 Windows 的硬件 ID 和签名流程确认安装。目录是随程序发布的固定快照，暂不提供全量联网索引、驱动升级或回退。
-- 离线完整版 `NetworkRescue-<version>-offline-full-portable-win-x64.zip` 解包后运行 `Run-Network-Rescue.cmd`。主程序直接使用随附运行时与同目录 `driver-packs`。关闭窗口即退出。安装 Wi-Fi 驱动需要管理员确认。
+- 离线完整版 `NetworkRescue-<version>-offline-full-portable-win-x64.zip` 解包后双击 `NetworkRescue.exe`。主程序直接使用随附运行时与同目录 `driver-packs`。关闭窗口即退出。安装 Wi-Fi 驱动需要管理员确认。
 - 完整版为未加密 ZIP，可用 Windows 文件资源管理器的「全部解压缩」。打包脚本检查 SDIO 和原厂 INF 都已进入暂存目录，逐项比对 ZIP 与暂存文件的路径、长度和 SHA-256。验证通过后才替换成品并记录 SHA-256。更新主程序时重新运行打包脚本。
 
 两版均包含[原厂驱动下载索引](network-rescue-driver-index.csv)，可按型号查找官网支持页、下载直链、版本和 SHA-256。在驱动候选列表选中一项后，点击「导出驱动 ZIP」可带走该 INF 所在的签名驱动目录及子目录，保留相对路径供另一台电脑解压使用。
@@ -287,7 +287,7 @@ pwsh -NoProfile -File scripts/publish-network-rescue-bundles.ps1 -IncludeCatalog
 
 ## 离线完整版在 Windows 与 WinPE 中使用
 
-将同一个离线完整版 ZIP 解压到 U 盘，两种环境都运行 `Run-Network-Rescue.cmd`。启动脚本自动检测 WinPE。在普通 Windows 打开急救窗口，在 x64 WinPE 进入键盘操作的修复入口。PE 入口为原生 x64 图形向导，运行时不依赖 WMI、PowerShell 或 .NET。普通 Windows 和 PE 的顶部工具栏都支持日语、简体中文、繁体中文和英语。需要英文控制台时，在 PE 运行 `Run-Network-Rescue.cmd --cli`。
+将同一个离线完整版 ZIP 解压到 U 盘，两种环境都双击 `NetworkRescue.exe`。启动器自动检测 WinPE。在普通 Windows 打开急救窗口，在 x64 WinPE 进入键盘操作的修复入口。PE 入口为原生 x64 图形向导，运行时不依赖 WMI、PowerShell 或 .NET。普通 Windows 和 PE 的顶部工具栏都支持日语、简体中文、繁体中文和英语。需要英文控制台时，在 PE 运行 `Run-Network-Rescue.cmd --cli`。
 
 在 PE 的「工具」中选择「修复已有 Windows」，工具列出可访问的固定磁盘分区中的 Windows 10/11 x64 系统。它用内核版本区分系统和匹配 INF 最低构建号，启用包更新的 Windows 可能显示较早的基线内核构建号。若找不到预期分区，先检查 PE 是否能读取磁盘，或在具备相应组件的 PE 中解锁 BitLocker。
 

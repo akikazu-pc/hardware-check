@@ -92,6 +92,7 @@ start "" "%~dp0AkikazuHardwareCheck.exe" --portable-rescue
         if ($flavor -eq 'offline-full-portable') {
             & (Join-Path $PSScriptRoot 'prepare-sdio-wlan-library.ps1') -Archive $WlanArchive -OutputDirectory $bundleRoot
             Copy-Item -LiteralPath (Join-Path $root 'artifacts/network-rescue-pe/PeNetworkRescue.exe') -Destination $bundleRoot
+            Copy-Item -LiteralPath (Join-Path $root 'artifacts/network-rescue-pe/NetworkRescue.exe') -Destination $bundleRoot
             $fontCache = Join-Path $root 'artifacts/network-rescue-pe/fonts'
             New-Item -ItemType Directory -Path $fontCache -Force | Out-Null
             $fontSource = 'https://raw.githubusercontent.com/notofonts/noto-cjk/Sans2.004'

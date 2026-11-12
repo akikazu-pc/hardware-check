@@ -17,4 +17,6 @@ if errorlevel 1 exit /b 1
 rc /nologo /fo"%PE_OUT%\PeNetworkRescue.res" /I"%REPO%\src\AkikazuHardwareCheck.App" "%REPO%\src\AkikazuNetworkRescue.PE\PeNetworkRescue.rc"
 if errorlevel 1 exit /b 1
 cl /nologo /std:c++17 /EHsc /W4 /WX /O2 /MT /utf-8 /I"%PE_OUT%" /D_WIN32_WINNT=0x0A00 /DNTDDI_VERSION=0x0A000002 /Fo"%PE_OUT%\PeNetworkRescue.obj" /Fe"%PE_OUT%\PeNetworkRescue.exe" "%REPO%\src\AkikazuNetworkRescue.PE\PeNetworkRescue.cpp" "%PE_OUT%\PeNetworkRescue.res" setupapi.lib version.lib advapi32.lib user32.lib gdi32.lib
+if errorlevel 1 exit /b 1
+cl /nologo /std:c++17 /EHsc /W4 /WX /O2 /MT /utf-8 /Fo"%PE_OUT%\NetworkRescueLauncher.obj" /Fe"%PE_OUT%\NetworkRescue.exe" "%REPO%\src\AkikazuNetworkRescue.PE\NetworkRescueLauncher.cpp" "%PE_OUT%\PeNetworkRescue.res" advapi32.lib user32.lib /link /SUBSYSTEM:WINDOWS
 exit /b %errorlevel%
