@@ -56,7 +56,11 @@ static DWORD ReadWindowsBuild(const fs::path& root)
         return 0;
     }
     const auto& version = *static_cast<VS_FIXEDFILEINFO*>(value);
-    return version.dwSignature == VS_FFI_SIGNATURE && version.dwFileVersionMS == MAKELONG(0, 10)
+    // The Windows Setup PE can report 6.2 in the kernel's file version while
+    // preserving 10.0 in its product version and the correct build in FileVersionLS.
+    const auto windows10Version = MAKELONG(0, 10);
+    return version.dwSignature == VS_FFI_SIGNATURE &&
+        (version.dwProductVersionMS == windows10Version || version.dwFileVersionMS == windows10Version)
         ? HIWORD(version.dwFileVersionLS) : 0;
 }
 
