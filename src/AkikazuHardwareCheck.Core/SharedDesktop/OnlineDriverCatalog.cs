@@ -6,14 +6,22 @@ using System.Text.Json;
 namespace AkikazuHardwareCheck.Core.SharedDesktop;
 
 public sealed record OnlineDriverPackage(string Id, string Version, string Source, string ArchiveSha256,
-    string DriverDirectory, string? ArchiveLayout, string[] DevicePrefixes, bool Windows11Only, int ArchiveOffset = 0, int MinimumWindowsBuild = 0);
+    string DriverDirectory, string? ArchiveLayout, string[] DevicePrefixes, bool Windows11Only, int ArchiveOffset = 0,
+    int MinimumWindowsBuild = 0, string? Scope = null);
 
 public static class OnlineDriverCatalog
 {
     private static readonly HttpClient Client = new() { Timeout = TimeSpan.FromMinutes(2) };
     private static readonly Lazy<OnlineDriverPackage[]> Packages = new(ReadEmbeddedIndex);
 
-    public static IReadOnlyList<OnlineDriverPackage> Find(NetworkDeviceDiagnostic diagnostic)
+    public static IReadOnlyList<OnlineDriverPackage> Find(NetworkDeviceDiagnostic diagnostic) =>
+        Find(diagnostic, MatchesPrefix);
+
+    public static IReadOnlyList<OnlineDriverPackage> FindPossible(NetworkDeviceDiagnostic diagnostic) =>
+        Find(diagnostic, (id, prefix) => MatchesPrefix(id, OfflineInfMatcher.ChipsetId(prefix)) &&
+            !MatchesPrefix(id, prefix)).Except(Find(diagnostic)).ToArray();
+
+    private static IReadOnlyList<OnlineDriverPackage> Find(NetworkDeviceDiagnostic diagnostic, Func<string, string, bool> matches)
     {
         if (!string.Equals(diagnostic.Architecture, "X64", StringComparison.OrdinalIgnoreCase))
         {
@@ -23,7 +31,7 @@ public static class OnlineDriverCatalog
         return Packages.Value.Where(package => (!package.Windows11Only || diagnostic.WindowsBuild >= 22000) &&
             diagnostic.WindowsBuild >= package.MinimumWindowsBuild &&
             diagnostic.Devices.Any(device => device.ProblemCode == 28 &&
-                device.HardwareIds.Any(id => package.DevicePrefixes.Any(prefix => MatchesPrefix(id, prefix))))).ToArray();
+                device.HardwareIds.Any(id => package.DevicePrefixes.Any(prefix => matches(id, prefix))))).ToArray();
     }
 
     public static async Task<string> DownloadAsync(OnlineDriverPackage package, string workspace, CancellationToken cancellationToken)

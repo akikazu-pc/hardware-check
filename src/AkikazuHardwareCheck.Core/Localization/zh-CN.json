@@ -237,6 +237,8 @@
   "rescue.scan": "扫描网卡候选",
   "rescue.export": "导出诊断清单",
   "rescue.exportDriver": "导出驱动 ZIP",
+  "rescue.possibleCandidates": "可能的驱动",
+  "rescue.possibleNote": "芯片 ID 一致，子系统尚未确认。请比对网卡型号及下列 ID。安装仍须通过 INF 和签名检查。",
   "rescue.pci": "网络设备候选",
   "rescue.hardwareIds": "硬件 ID",
   "rescue.problemCode": "设备问题码",

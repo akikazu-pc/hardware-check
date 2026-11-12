@@ -36,4 +36,17 @@ public sealed class OnlineDriverCatalogTests
 
         Assert.Equal(expected, OnlineDriverCatalog.Find(diagnostic).Any(package => package.Id == "asus-tuf-mt7922"));
     }
+
+    [Theory]
+    [InlineData(26100, @"PCI\VEN_14C3&DEV_0616&SUBSYS_FFFFFFFF", true)]
+    [InlineData(26100, @"PCI\VEN_14C3&DEV_0616", true)]
+    [InlineData(26100, @"PCI\VEN_14C3&DEV_0616&SUBSYS_061614C3", false)]
+    [InlineData(26100, @"PCI\VEN_14C3&DEV_0617&SUBSYS_FFFFFFFF", false)]
+    [InlineData(26000, @"PCI\VEN_14C3&DEV_0616&SUBSYS_FFFFFFFF", false)]
+    public void ListsUnconfirmedSubsystemsOnlyForTheSameSupportedChipset(int build, string hardwareId, bool expected)
+    {
+        var diagnostic = new NetworkDeviceDiagnostic(2, build, "X64", [new([hardwareId], null, 28)]);
+
+        Assert.Equal(expected, OnlineDriverCatalog.FindPossible(diagnostic).Any(package => package.Id == "asus-tuf-mt7922"));
+    }
 }

@@ -11,7 +11,11 @@ public static class OfflineInfMatcher
     private const int INF_STYLE_WIN4 = 2;
     private static readonly Guid NetworkClass = new("4d36e972-e325-11ce-bfc1-08002be10318");
 
-    public static IReadOnlyList<OfflineInfMatch> Match(string path, IReadOnlyList<NetworkDeviceCandidate> devices)
+    public static IReadOnlyList<OfflineInfMatch> Match(string path, IReadOnlyList<NetworkDeviceCandidate> devices) =>
+        Match(path, devices, null);
+
+    internal static IReadOnlyList<OfflineInfMatch> Match(string path, IReadOnlyList<NetworkDeviceCandidate> devices,
+        List<OfflineInfMatch>? possible)
     {
         var inf = SetupOpenInfFile(path, null, INF_STYLE_WIN4, out _);
         if (inf == new IntPtr(-1))
@@ -43,12 +47,26 @@ public static class OfflineInfMatcher
             var matches = new List<OfflineInfMatch>();
             foreach (var device in devices)
             {
+                var found = false;
                 foreach (var hardwareId in device.HardwareIds)
                 {
                     if (modelIds.TryGetValue(hardwareId, out var section))
                     {
                         matches.Add(new OfflineInfMatch(device, hardwareId, section));
+                        found = true;
                         break;
+                    }
+                }
+                if (!found && possible is not null)
+                {
+                    var chipsets = device.HardwareIds.Select(ChipsetId).ToHashSet(StringComparer.OrdinalIgnoreCase);
+                    chipsets.Remove("");
+                    foreach (var (id, section) in modelIds)
+                    {
+                        if (chipsets.Contains(ChipsetId(id)))
+                        {
+                            possible.Add(new OfflineInfMatch(device, id, section));
+                        }
                     }
                 }
             }
@@ -59,6 +77,21 @@ public static class OfflineInfMatcher
         {
             SetupCloseInfFile(inf);
         }
+    }
+
+    internal static string ChipsetId(string id)
+    {
+        var first = id.IndexOf('&');
+        if (first < 0 || !(id.StartsWith(@"PCI\VEN_", StringComparison.OrdinalIgnoreCase) &&
+            id.AsSpan(first).StartsWith("&DEV_", StringComparison.OrdinalIgnoreCase)) &&
+            !(id.StartsWith(@"USB\VID_", StringComparison.OrdinalIgnoreCase) &&
+            id.AsSpan(first).StartsWith("&PID_", StringComparison.OrdinalIgnoreCase)))
+        {
+            return "";
+        }
+
+        var separator = id.IndexOf('&', first + 1);
+        return separator < 0 ? id : id[..separator];
     }
 
     public static string? ReadDriverVersion(string path)

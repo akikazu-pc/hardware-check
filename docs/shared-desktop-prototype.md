@@ -274,4 +274,6 @@ pwsh -NoProfile -File scripts/publish-network-rescue-bundles.ps1 -IncludeCatalog
 
 两版均包含[原厂驱动下载索引](network-rescue-driver-index.csv)，可按型号查找官网支持页、下载直链、版本和 SHA-256。在驱动候选列表选中一项后，点击「导出驱动 ZIP」可带走该 INF 所在的签名驱动目录及子目录，保留相对路径供另一台电脑解压使用。
 
+当芯片 ID 一致且子系统匹配待确认时，在线目录和离线文件夹扫描会显示「可能的驱动」，供用户比对本机 ID 和候选 ID。用户可以手动选择在线下载或导出已验证签名的候选文件。安装仍要求当前设备的实际 ID 与适用的签名 INF 匹配。
+
 两版都覆盖桌面和笔记本。在线安装版沿用与硬件测试的双装联动。旧的 `offline-wlan-library` 安装 ZIP 记录保留供追踪，当前离线交付以免安装完整版为准。

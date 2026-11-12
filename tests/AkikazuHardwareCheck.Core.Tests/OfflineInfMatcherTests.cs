@@ -49,6 +49,15 @@ public sealed class OfflineInfMatcherTests
                 search.Candidates.Select(candidate => candidate.InfPath));
             Assert.Equal(1, search.UnreadableInfCount);
 
+            var unmatched = new NetworkDeviceCandidate([@"PCI\VEN_8086&DEV_2725&SUBSYS_FFFFFFFF"], null, 28);
+            Assert.Empty(OfflinePackageSearch.Find(directory.FullName, [unmatched]).Candidates);
+            var possible = OfflinePackageSearch.Find(directory.FullName, [unmatched], includePossible: true).Candidates;
+            Assert.NotEmpty(possible);
+            Assert.All(possible, candidate => Assert.True(candidate.IsPossible));
+            Assert.Empty(OfflineInfMatcher.Match(path, [unmatched]));
+            Assert.All(OfflinePackageSearch.Find(directory.FullName, devices, includePossible: true).Candidates,
+                candidate => Assert.False(candidate.IsPossible));
+
             Assert.Equal("6001.16.172.0", OfflineInfMatcher.ReadDriverVersion(path));
             Assert.Null(OfflineDriverInstaller.Verify(path));
             var match = Assert.Single(OfflineInfMatcher.Match(path, devices));

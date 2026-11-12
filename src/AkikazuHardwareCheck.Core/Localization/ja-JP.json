@@ -237,6 +237,8 @@
   "rescue.scan": "ネットワーク候補をスキャン",
   "rescue.export": "診断情報をエクスポート",
   "rescue.exportDriver": "ドライバー ZIP をエクスポート",
+  "rescue.possibleCandidates": "ドライバー候補",
+  "rescue.possibleNote": "チップ ID が一致します。アダプターの型番と以下のサブシステム ID を確認してください。インストールには INF と署名の検証が必要です。",
   "rescue.pci": "ネットワーク デバイス候補",
   "rescue.hardwareIds": "ハードウェア ID",
   "rescue.problemCode": "デバイスの問題コード",

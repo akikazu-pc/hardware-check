@@ -4,18 +4,19 @@
 
 | 统计范围 | 分母 | 已核对 | 比例 |
 | --- | ---: | ---: | ---: |
+| 华硕 AM5 / LGA1851 已知样本的板载 Wi-Fi 状态 | 101 | 99 条有板载 Wi-Fi，2 条仅有预留接口 | 100% |
 | 华硕 AM5 / LGA1851 已发现的 Wi-Fi 主板样本 | 99 | 98 条有原厂手册或型号专属下载页的模块候选 | 98.99% |
-| 戴尔近期笔记本，Windows 11 x64 系统 ID 组合 | 127 | 125 条 OEM 元数据列出 WLAN INF | 98.43% |
+| 戴尔近期笔记本，Windows 11 x64 系统 ID 组合 | 127 | 125 条有 OEM 元数据，2 条有该型号的原厂部署包公告 | 100% |
 | 戴尔近期笔记本，Windows 10 x64 系统 ID 组合 | 39 | 39 条 OEM 元数据列出 WLAN INF | 100% |
 | HP sp173191 文档的具体 PCI SUBSYS，在 Windows 11 构建 26300 | 23 | 23 条被离线库的签名 INF 匹配 | 100% |
 
 华硕统计只包括已发现且明确提到 Wi-Fi 的型号。手册中有多个出厂模块的，仍待核对每种实卡硬件 ID。台式机证据见 [华硕样本](asus-recent-wireless-module-evidence.csv)和[目录](asus-motherboard-discovery.csv)。
 
-戴尔统计来自 2026-11-09 的 [Dell Driver Pack Catalog](https://downloads.dell.com/catalog/DriverPackCatalog.cab)，覆盖 52 个近期型号。不同 system ID 和 Windows 构成独立记录。Windows 11 x64 有两条 OEM 目录指向的元数据未列相同系统 ID，已标为待补。另有一条 ARM64 OEM 元数据记录，不计入 x64。见[逐条索引](dell-recent-laptop-wlan-discovery.csv)。驱动元数据只证明厂商包列有 WLAN INF。
+戴尔统计以 2026-11-09 的 [Dell Driver Pack Catalog](https://downloads.dell.com/catalog/DriverPackCatalog.cab) 为分母，覆盖 52 个近期型号。不同系统 ID 和 Windows 组合分别统计。Windows 11 x64 中，P514265（0EFB）和 MB18250（0E87）的 XML 未列相同系统 ID，已分别用同一部署包编号 5D0VR A01、J0TYF A06 的型号专属公告确认 WLAN 驱动 5MPG4、KGD8K。另有一条 ARM64 记录。具体出厂 SUBSYS、签名 INF 和实机安装仍需核对。[逐条索引](dell-recent-laptop-wlan-discovery.csv)
 
 HP 从[官方 SoftPaq](https://ftp.ext.hp.com/pub/softpaq/sp173001-173500/sp173191.html)提取了 23 个带 SUBSYS 的 PCI ID，再用应用的 SetupAPI 匹配和 INF 签名校验核对。硬件 ID 按缺驱动样例传给程序，未对本机安装驱动。一次 Windows 11 审计不能代表 Windows 10 或实机联网。
 
-总体百分比分母尚未冻结。上述新型号缺少完整的断网实机安装与联网记录。继续补齐戴尔两条元数据缺口、华硕的出厂子系统 ID，以及技嘉、微星、华擎等新平台型号。后续按实际网卡变体分别验证 Windows 10/11。
+总体百分比分母尚未冻结。上述新型号缺少完整的断网实机安装与联网记录。继续补齐华硕和戴尔的出厂子系统 ID，以及技嘉、微星、华擎等新平台型号。后续按实际网卡变体分别验证 Windows 10/11。
 
 ## 优先系列覆盖
 
@@ -54,6 +55,8 @@ Alienware 16 Aurora AC16250（0D35）的三个 Ubuntu 认证配置均列出 MT79
 
 原 6.28 GiB ZIP 的 12,405 个文件均可完整读取并通过 CRC 校验。按内容 SHA-256 分组后有 7,170 份唯一内容，5,235 个重复副本。重复副本占原始文件约 2.94 GiB，在 ZIP 中约占 1.69 GiB。另有约 0.99 GiB 为已解包驱动对应的原始下载归档。固实 7z 成品为 1.95 GiB，减少 68.96%。全部 12,373 个驱动文件的路径、大小和 CRC 与原 ZIP 一致。索引记录 14 个已收录的原厂包。[驱动下载索引](network-rescue-driver-index.csv)
 
-Windows 11 构建 26300 的库审计覆盖 1,665 个 INF。其中 681 个匹配当前系统的网络设备 ID，594 个通过签名检查。去重后签名有效的 ID 有 4,566 个 PCI ID 和 1,228 个 USB ID。其余 INF 仍需按系统、架构及驱动组件用途核对。
+Windows 11 构建 26300 的最新库审计覆盖 1,666 个 INF。其中 682 个匹配当前系统的网络设备 ID，595 个通过签名检查。去重后签名有效的 ID 有 4,566 个 PCI ID 和 1,228 个 USB ID。其余 INF 仍需按系统、架构及驱动组件用途核对。
 
-华硕 PRIME B650M-A AX 的型号专属驱动页列出 Realtek RTL8852BE，适用于 Windows 10/11 x64。原厂 ZIP 的 SHA-256 和包内 INF 签名已核对。INF 中有 21 个 RTL8852BE 子系统 ID，整机出厂 ID 与实机安装仍待查。华硕样本现有 98/99 条模块候选证据，另有两条明确为预留接口。最后一个模块资料缺口为 B850M AYW GAMING WIFI-CSM。[PRIME B650M-A AX 下载页](https://www.asus.com/us/supportonly/prime%20b650m-a%20ax/helpdesk_download/) · [原厂 ZIP](https://dlcdnets.asus.com/pub/ASUS/mb/08WIRELESS/DRV_WiFi_RTK_8852BE_SZ-TSD1_W11_64_V6001151610_20251128R.zip)
+华硕 PRIME B650M-A AX 的型号专属驱动页列出 Realtek RTL8852BE，适用于 Windows 10/11 x64。原厂 ZIP 的 SHA-256、包内 INF 签名及 21 个 RTL8852BE 子系统 ID 的 Windows 11 匹配已核对，并纳入两版。整机出厂 ID 与实机安装仍待查。[PRIME B650M-A AX 下载页](https://www.asus.com/us/supportonly/prime%20b650m-a%20ax/helpdesk_download/) · [原厂 ZIP](https://dlcdnets.asus.com/pub/ASUS/mb/08WIRELESS/DRV_WiFi_RTK_8852BE_SZ-TSD1_W11_64_V6001151610_20251128R.zip)
+
+华硕的 B850M AYW GAMING WIFI-CSM 官方规格明确列出板载 Wi-Fi 模块。已知样本的无线状态达到 101/101，其中 99 条有板载 Wi-Fi，两条仅预留接口。具体模块候选为 98/99，缺口是该 CSM 型号的芯片。普通版的 MediaTek 驱动和 -E CSM 版的 Realtek 驱动各对应自己的型号。[华硕 CSM 型号规格](https://www.asus.com/product-compare?LevelId=Motherboards-Components-Motherboards&ProductID=31128%2C28588)

@@ -312,7 +312,7 @@ internal sealed class NetworkRescueView : UserControl
         OfflinePackageSearchResult? result = null;
         try
         {
-            result = await Task.Run(() => OfflinePackageSearch.Find(root, diagnostic.Devices));
+            result = await Task.Run(() => OfflinePackageSearch.Find(root, diagnostic.Devices, includePossible: true));
             _scanStatusKey = null;
         }
         catch (Exception exception) when (exception is IOException or UnauthorizedAccessException)
@@ -343,6 +343,12 @@ internal sealed class NetworkRescueView : UserControl
 
         if (SelectCandidate(root, result.Candidates, skipped) is { } selected)
         {
+            if (selected.IsPossible)
+            {
+                ShowInstallResult("rescue.possibleNote");
+                return;
+            }
+
             await ReviewInfAsync(selected.InfPath, diagnostic.Devices);
         }
     }
@@ -355,13 +361,16 @@ internal sealed class NetworkRescueView : UserControl
         }
 
         var packages = OnlineDriverCatalog.Find(diagnostic);
-        if (packages.Count == 0)
+        var possible = OnlineDriverCatalog.FindPossible(diagnostic);
+        if (packages.Count == 0 && possible.Count == 0)
         {
             ShowInstallResult("rescue.onlineNoMatch");
             return;
         }
 
-        var selected = packages.Count == 1 ? packages[0] : SelectOnlinePackage(packages);
+        var selected = packages.Count == 1 && possible.Count == 0
+            ? packages[0]
+            : SelectOnlinePackage(packages, possible, diagnostic);
         if (selected is null)
         {
             return;
@@ -388,7 +397,7 @@ internal sealed class NetworkRescueView : UserControl
                 using var timeout = new CancellationTokenSource(TimeSpan.FromMinutes(3));
                 var root = workspace.FullName;
                 driverDirectory = await Task.Run(() => OnlineDriverCatalog.DownloadAsync(selected, root, timeout.Token));
-                result = await Task.Run(() => OfflinePackageSearch.Find(driverDirectory, diagnostic.Devices));
+                result = await Task.Run(() => OfflinePackageSearch.Find(driverDirectory, diagnostic.Devices, includePossible: true));
                 _scanStatusKey = null;
             }
             catch (Exception exception) when (exception is IOException or UnauthorizedAccessException or HttpRequestException
@@ -418,6 +427,12 @@ internal sealed class NetworkRescueView : UserControl
             var candidate = SelectCandidate(driverDirectory, result.Candidates, "");
             if (candidate is not null)
             {
+                if (candidate.IsPossible)
+                {
+                    ShowInstallResult("rescue.possibleNote");
+                    return;
+                }
+
                 await ReviewInfAsync(candidate.InfPath, diagnostic.Devices);
             }
         }
@@ -434,20 +449,26 @@ internal sealed class NetworkRescueView : UserControl
         }
     }
 
-    private OnlineDriverPackage? SelectOnlinePackage(IReadOnlyList<OnlineDriverPackage> packages)
+    private OnlineDriverPackage? SelectOnlinePackage(IReadOnlyList<OnlineDriverPackage> matches,
+        IReadOnlyList<OnlineDriverPackage> possible, NetworkDeviceDiagnostic diagnostic)
     {
+        var packages = matches.Concat(possible).ToArray();
         using var dialog = new Form
         {
-            Text = _t["rescue.onlineCandidates"],
+            Text = _t[matches.Count == 0 ? "rescue.possibleCandidates" : "rescue.onlineCandidates"],
             StartPosition = FormStartPosition.CenterParent,
-            ClientSize = new Size(570, 280),
+            ClientSize = new Size(740, 330),
             MinimizeBox = false,
             ShowInTaskbar = false,
         };
         var list = new ListBox { Dock = DockStyle.Fill };
-        foreach (var package in packages)
+        foreach (var package in matches)
         {
             list.Items.Add(PackageLabel(package));
+        }
+        foreach (var package in possible)
+        {
+            list.Items.Add($"[{_t["rescue.possibleCandidates"]}] {PackageLabel(package)}");
         }
 
         var select = Ui.Button();
@@ -457,7 +478,33 @@ internal sealed class NetworkRescueView : UserControl
         list.SelectedIndexChanged += (_, _) => select.Enabled = list.SelectedIndex >= 0;
         var footer = new FlowLayoutPanel { Dock = DockStyle.Bottom, AutoSize = true };
         footer.Controls.Add(select);
+        var details = new TextBox
+        {
+            Dock = DockStyle.Bottom,
+            Height = 105,
+            Multiline = true,
+            ReadOnly = true,
+            ScrollBars = ScrollBars.Vertical,
+        };
+        details.Text = possible.Count > 0 ? _t["rescue.possibleNote"] : "";
+        list.SelectedIndexChanged += (_, _) =>
+        {
+            if (list.SelectedIndex >= 0)
+            {
+                var package = packages[list.SelectedIndex];
+                var detected = diagnostic.Devices.Where(device => device.ProblemCode == 28)
+                    .SelectMany(device => device.HardwareIds.Take(1));
+                details.Lines = new[]
+                {
+                    possible.Contains(package) ? _t["rescue.possibleNote"] : "",
+                    $"{_t["rescue.hardwareIds"]}  {string.Join(" | ", detected)}",
+                    package.Scope ?? "",
+                    package.Source,
+                }.Concat(package.DevicePrefixes).ToArray();
+            }
+        };
         dialog.Controls.Add(list);
+        dialog.Controls.Add(details);
         dialog.Controls.Add(footer);
         dialog.AcceptButton = select;
         return dialog.ShowDialog(this) == DialogResult.OK && list.SelectedIndex >= 0
@@ -483,8 +530,11 @@ internal sealed class NetworkRescueView : UserControl
         list.Columns.Add(_t["rescue.hardwareIds"], 380);
         foreach (var candidate in candidates)
         {
-            var row = new ListViewItem(Path.GetRelativePath(root, candidate.InfPath)) { Tag = candidate };
-            row.SubItems.Add(string.Join(" | ", candidate.Matches.Select(match => match.HardwareId).Distinct()));
+            var path = Path.GetRelativePath(root, candidate.InfPath);
+            var row = new ListViewItem(candidate.IsPossible ? $"[{_t["rescue.possibleCandidates"]}] {path}" : path) { Tag = candidate };
+            row.SubItems.Add(string.Join(" | ", candidate.Matches.Select(match => candidate.IsPossible
+                ? $"{match.Device.HardwareIds.FirstOrDefault()} → {match.HardwareId}"
+                : match.HardwareId).Distinct()));
             list.Items.Add(row);
         }
 
@@ -513,10 +563,11 @@ internal sealed class NetworkRescueView : UserControl
         var footer = new FlowLayoutPanel { Dock = DockStyle.Bottom, AutoSize = true };
         footer.Controls.Add(review);
         footer.Controls.Add(export);
-        if (skipped.Length > 0)
+        if (skipped.Length > 0 || candidates.Any(candidate => candidate.IsPossible))
         {
             var note = Ui.Label();
-            note.Text = skipped;
+            note.Text = string.Join(Environment.NewLine, new[] { candidates.Any(candidate => candidate.IsPossible)
+                ? _t["rescue.possibleNote"] : "", skipped }.Where(value => value.Length > 0));
             footer.Controls.Add(note);
         }
 

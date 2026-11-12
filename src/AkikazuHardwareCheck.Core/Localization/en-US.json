@@ -237,6 +237,8 @@
   "rescue.scan": "Scan network candidates",
   "rescue.export": "Export diagnostics",
   "rescue.exportDriver": "Export driver ZIP",
+  "rescue.possibleCandidates": "Possible drivers",
+  "rescue.possibleNote": "The chipset ID matches. Check the adapter model and subsystem IDs below. Installation still requires INF and signature validation.",
   "rescue.pci": "Network device candidates",
   "rescue.hardwareIds": "Hardware IDs",
   "rescue.problemCode": "Device problem code",
