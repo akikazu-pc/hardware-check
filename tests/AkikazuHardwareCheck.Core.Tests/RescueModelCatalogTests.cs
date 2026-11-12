@@ -140,8 +140,9 @@ public sealed class RescueModelCatalogTests
         Assert.Contains(boards, model => model.Model == "A320M Pro4 R2.0");
         var board = Assert.Single(boards, model => model.Model == "A320M Pro4");
         Assert.Equal("#Download", board.DriverPage?.Fragment);
-        Assert.Equal("pending", board.Windows10Evidence);
-        Assert.Equal("pending", board.Windows11Evidence);
+        // The specification and both Windows download lists omit WLAN; that is not a Wi-Fi driver.
+        Assert.Equal("oem-wlan-not-listed", board.Windows10Evidence);
+        Assert.Equal("oem-wlan-not-listed", board.Windows11Evidence);
 
         var notebook = Assert.Single(RescueModelCatalog.Search("HP Dragonfly 13.5 inch G4 Notebook PC"));
         Assert.Equal("hpia.hpcloud.hp.com", notebook.Source?.Host);
