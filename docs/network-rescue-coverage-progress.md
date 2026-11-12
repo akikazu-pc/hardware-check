@@ -2,7 +2,7 @@
 
 [逐型号 Wi-Fi 缺口清单](network-rescue-model-gaps.csv)记录当前已发现的 1,228 条主板型号或修订、912 条笔记本系列或型号、1 条一体机型号，以及 167 条戴尔系统与 Windows 组合。同一台笔记本可出现在多个系统组合。
 
-清单分别记录 `windows10X64Evidence` 和 `windows11X64Evidence`。`oem-package-indexed` 表示原厂包已入索引，`oem-wlan-listed` 表示原厂资料列出无线驱动，`oem-driver-pack-listed` 表示原厂列出该系统的整机部署包，仍需检查包内 WLAN 驱动。`oem-os-upgrade-tested` 表示原厂列出 Windows 11 升级测试，WLAN 驱动仍待核对。`pending` 表示该系统的证据待核。仅预留接口和 ARM64 组合另有标记。原厂下载索引目前有 7 个包覆盖 Windows 10 x64，16 个包覆盖 Windows 11 x64，部分包另有最低构建号要求。[原厂下载索引](network-rescue-driver-index.csv)
+清单分别记录 `windows10X64Evidence` 和 `windows11X64Evidence`。`oem-package-indexed` 表示原厂包已入索引，`oem-wlan-listed` 表示原厂资料列出无线驱动，`oem-driver-pack-listed` 表示原厂列出该系统的整机部署包，仍需检查包内 WLAN 驱动。`oem-os-upgrade-tested` 表示原厂列出 Windows 11 升级测试，WLAN 驱动仍待核对。`pending` 表示该系统的证据待核。仅预留接口和 ARM64 组合另有标记。原厂下载索引目前有 11 个包覆盖 Windows 10 x64，20 个包覆盖 Windows 11 x64，部分包另有最低构建号要求。[原厂下载索引](network-rescue-driver-index.csv)
 
 | 主板范围 | 已发现的型号或修订 |
 | --- | ---: |
@@ -94,6 +94,12 @@ Windows 11 构建 26300 的最新库审计覆盖 1,666 个 INF。其中 682 个�
 
 复查 B850M AYW GAMING WIFI-CSM 的华硕全球、南非及沙特支持页。页面可打开，华硕型号查询接口返回空下载地址。用普通版的原厂 MediaTek 3.5.0.1349 ZIP 做候选比对，归档 SHA-256 与华硕公布值一致，`mtkwl6ex.inf` 通过签名校验。Windows 11 构建 26300 匹配了 75 个精确子系统 ID，涉及 MT7902、MT7920、MT7921、MT7922、RZ608 和 RZ616。普通版 INF 可用于核对实机硬件 ID，CSM 出厂模块仍需独立证据。[CSM 支持页](https://www.asus.com/motherboards-components/motherboards/csm/b850m-ayw-gaming-wifi-csm/helpdesk_download/?model2Name=B850M-AYW-GAMING-WIFI-CSM) · [普通版支持页](https://www.asus.com/motherboards-components/motherboards/others/b850m-ayw-gaming-wifi/helpdesk_download/?model2Name=B850M-AYW-GAMING-WIFI) · [华硕原厂 ZIP](https://dlcdnets.asus.com/pub/ASUS/mb/08WIRELESS/DRV_WiFi_MediaTek_SZ-TSD_W11_64_V3501349_20260305R.zip)
 
+
+### B850M AYW GAMING WIFI 普通版驱动入库
+
+华硕普通版支持页将 MediaTek 3.5.0.1349 标注为 Windows 10/11 x64。已核对原厂 ZIP 的 SHA-256 和 mtkwl6ex.inf 的签名。INF 使用 16299 构建起的 x64 型号节。Windows 11 构建 26300 的 SetupAPI 验证了 75 个精确 PCI 子系统 ID，其中 47 个此前未在在线包目录中出现，5 个属于 MT7902。两种发行包使用同一索引。已用应用实际下载并重新校验 ZIP 与签名 INF，目录测试覆盖构建 19045、26100 及低于门槛的 16298。Windows 10 实际安装待验。[华硕普通版驱动页](https://www.asus.com/motherboards-components/motherboards/others/b850m-ayw-gaming-wifi/helpdesk_download?model2Name=B850M-AYW-GAMING-WIFI)
+
+精确 CSM SKU 的华硕支持 ID 为 32852，普通版与 -E CSM 的 ID 分别为 32839 和 38840。CSM 规格列出 1×1 Wi-Fi 6 和 Realtek 2.5GbE，未标明无线芯片。跨地区查询的 CSM 下载入口仍无驱动数据。逐型号索引只为普通版列出上述包，CSM 记录仍待实机硬件 ID 确认。[CSM 规格](https://www.asus.com/motherboards-components/motherboards/csm/b850m-ayw-gaming-wifi-csm/techspec/) · [华硕型号映射](https://odinapi.asus.com/recent-data/apiv2/ModelMapping?SystemCode=asus&WebsiteCode=global&Model1WebPath=b850m-ayw-gaming-wifi-csm&Model2WebPath=B850M-AYW-GAMING-WIFI-CSM&siteID=www&sitelang=)
 
 ## 有线联网救援
 
