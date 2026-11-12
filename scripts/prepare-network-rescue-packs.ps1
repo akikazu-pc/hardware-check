@@ -34,13 +34,34 @@ try {
         if ($package.archiveLayout -eq 'direct') {
             Expand-Archive -LiteralPath $archive -DestinationPath $payload
         } else {
-            Expand-Archive -LiteralPath $archive -DestinationPath $sfxRoot
             New-Item -ItemType Directory -Path $payload | Out-Null
-            $executables = @(Get-ChildItem -LiteralPath $sfxRoot -Filter '*.exe' -File)
-            if ($executables.Count -ne 1) {
-                throw "Expected exactly one self-extracting archive in $fileName."
+            if ($package.archiveLayout -eq 'embedded-7z') {
+                $archiveToExtract = Join-Path $inputRoot 'payload.7z'
+                $inputArchive = [IO.File]::OpenRead($archive)
+                try {
+                    $offset = [int]$package.archiveOffset
+                    if ($offset -le 0 -or $offset -ge $inputArchive.Length) {
+                        throw "Invalid embedded archive offset in $fileName."
+                    }
+                    $inputArchive.Position = $offset
+                    $embeddedArchive = [IO.File]::Create($archiveToExtract)
+                    try {
+                        $inputArchive.CopyTo($embeddedArchive)
+                    } finally {
+                        $embeddedArchive.Dispose()
+                    }
+                } finally {
+                    $inputArchive.Dispose()
+                }
+            } else {
+                Expand-Archive -LiteralPath $archive -DestinationPath $sfxRoot
+                $executables = @(Get-ChildItem -LiteralPath $sfxRoot -Filter '*.exe' -File)
+                if ($executables.Count -ne 1) {
+                    throw "Expected exactly one self-extracting archive in $fileName."
+                }
+                $archiveToExtract = $executables[0].FullName
             }
-            & $tar -xf $executables[0].FullName -C $payload
+            & $tar -xf $archiveToExtract -C $payload
             if ($LASTEXITCODE -ne 0) {
                 throw "Could not unpack $fileName."
             }

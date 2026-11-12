@@ -6,7 +6,7 @@ using System.Text.Json;
 namespace AkikazuHardwareCheck.Core.SharedDesktop;
 
 public sealed record OnlineDriverPackage(string Id, string Version, string Source, string ArchiveSha256,
-    string DriverDirectory, string? ArchiveLayout, string[] DevicePrefixes, bool Windows11Only);
+    string DriverDirectory, string? ArchiveLayout, string[] DevicePrefixes, bool Windows11Only, int ArchiveOffset = 0, int MinimumWindowsBuild = 0);
 
 public static class OnlineDriverCatalog
 {
@@ -21,6 +21,7 @@ public static class OnlineDriverCatalog
         }
 
         return Packages.Value.Where(package => (!package.Windows11Only || diagnostic.WindowsBuild >= 22000) &&
+            diagnostic.WindowsBuild >= package.MinimumWindowsBuild &&
             diagnostic.Devices.Any(device => device.ProblemCode == 28 &&
                 device.HardwareIds.Any(id => package.DevicePrefixes.Any(prefix => MatchesPrefix(id, prefix))))).ToArray();
     }
@@ -50,34 +51,72 @@ public static class OnlineDriverCatalog
             }
         }
 
-        var extracted = Path.Combine(root, "extracted");
-        ZipFile.ExtractToDirectory(archive, extracted);
-        var payload = extracted;
-        if (package.ArchiveLayout != "direct")
+        var payload = Path.Combine(root, "extracted");
+        if (package.ArchiveLayout == "embedded-7z")
         {
-            var wrappers = Directory.GetFiles(extracted, "*.exe");
-            if (wrappers.Length != 1)
+            var embedded = Path.Combine(root, "payload.7z");
+            await using (var input = File.OpenRead(archive))
             {
-                throw new InvalidDataException("The expected vendor archive wrapper was not found.");
+                if (package.ArchiveOffset <= 0 || package.ArchiveOffset >= input.Length)
+                {
+                    throw new InvalidDataException("The embedded archive offset is invalid.");
+                }
+
+                input.Position = package.ArchiveOffset;
+                await using var output = File.Create(embedded);
+                await input.CopyToAsync(output, cancellationToken).ConfigureAwait(false);
             }
 
-            payload = Directory.CreateDirectory(Path.Combine(root, "payload")).FullName;
-            var start = new ProcessStartInfo(Path.Combine(Environment.SystemDirectory, "tar.exe"))
+            await ExtractArchiveAsync(embedded, payload, cancellationToken).ConfigureAwait(false);
+        }
+        else
+        {
+            ZipFile.ExtractToDirectory(archive, payload);
+            if (package.ArchiveLayout != "direct")
             {
-                UseShellExecute = false,
-                CreateNoWindow = true,
-                ArgumentList = { "-xf", wrappers[0], "-C", payload },
-            };
-            using var extract = Process.Start(start) ?? throw new IOException("Could not launch archive extraction.");
-            await extract.WaitForExitAsync(cancellationToken).ConfigureAwait(false);
-            if (extract.ExitCode != 0)
-            {
-                throw new InvalidDataException("The vendor archive could not be extracted.");
+                var wrappers = Directory.GetFiles(payload, "*.exe");
+                if (wrappers.Length != 1)
+                {
+                    throw new InvalidDataException("The expected vendor archive wrapper was not found.");
+                }
+
+                payload = Path.Combine(root, "payload");
+                await ExtractArchiveAsync(wrappers[0], payload, cancellationToken).ConfigureAwait(false);
             }
         }
 
         var driver = Path.Combine(payload, package.DriverDirectory);
         return Directory.Exists(driver) ? driver : throw new InvalidDataException("The expected driver folder was not found.");
+    }
+
+    private static async Task ExtractArchiveAsync(string archive, string destination, CancellationToken cancellationToken)
+    {
+        Directory.CreateDirectory(destination);
+        cancellationToken.ThrowIfCancellationRequested();
+        var start = new ProcessStartInfo(Path.Combine(Environment.SystemDirectory, "tar.exe"))
+        {
+            UseShellExecute = false,
+            CreateNoWindow = true,
+            ArgumentList = { "-xf", archive, "-C", destination },
+        };
+        using var extract = Process.Start(start) ?? throw new IOException("Could not launch archive extraction.");
+        using var cancel = cancellationToken.Register(() =>
+        {
+            try
+            {
+                extract.Kill();
+            }
+            catch (InvalidOperationException)
+            {
+                // The extractor already exited.
+            }
+        });
+        await extract.WaitForExitAsync().ConfigureAwait(false);
+        cancellationToken.ThrowIfCancellationRequested();
+        if (extract.ExitCode != 0)
+        {
+            throw new InvalidDataException("The vendor archive could not be extracted.");
+        }
     }
 
     private static bool MatchesPrefix(string id, string prefix) =>

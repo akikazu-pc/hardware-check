@@ -37,3 +37,11 @@ HP 从[官方 SoftPaq](https://ftp.ext.hp.com/pub/softpaq/sp173001-173500/sp1731
 技嘉发现清单从 14 增至 24 条。新核对 5 个主板型号的 9 条模块配置，其中 B860 GAMING X WIFI6E、B860 DS3H WIFI6E、X870 GAMING X WIFI7、B860M A PRO WIFI7 各有两个模块修订。Dell 2026 年日本发布的 16X Aurora 与两款 Area-51 对应已有的 AC16251、AA16250、AA18250 型号代码。新增 Alienware 15 DA15260 及 MediaTek MT7920 模块证据。联想新增 3 款第 11 代 Legion 5 的 PSREF 资料，15IAX11 的 Wi-Fi 6E 配置列有 Killer AX1675i，Wi-Fi 7 配置模块仍待核对。另两款 PSREF 列出 Wi-Fi 世代，未确认芯片。
 
 本批记录模块、厂商手册和目录证据。实际 SUBSYS、Windows 10/11 签名 INF 对应及实机联网尚待补验。
+
+### 华硕与戴尔原厂包接入
+
+华硕 TUF Gaming A16 FA608WM 新增 MediaTek 和 Realtek 两包。ROG Strix G16 G615LR 新增 Intel BE200 包。共 54 个精确 PCI/SUBSYS 条目通过 Windows 11 x64 构建 26300 的 INF 匹配和签名检查。在线目录按华硕支持范围从 Windows 11 24H2（26100）提供这些候选。来源为 [TUF FA608WM](https://www.asus.com/laptops/for-gaming/tuf-gaming/asus-tuf-gaming-a16-2025/helpdesk_download/?model2Name=FA608WM)和 [ROG G615LR](https://www.asus.com/supportonly/g615lr/helpdesk_download/)。
+
+戴尔 7TY65 包加入在线目录和离线完整版。在线入口限 Windows 11 x64 的 MT7925 参考子系统 PCI\VEN_14C3&DEV_7925&SUBSYS_792514C3。Alienware 16 Aurora AC16250 和 16X Aurora AC16251 的原厂手册列有 MT7925B22M。不同整机出厂批次的 SUBSYS 和实机联网结果仍待核验。[戴尔 7TY65 驱动及兼容列表](https://www.dell.com/support/home/en-us/drivers/driversdetails?driverid=7ty65)
+
+打包和在线安装均先核对原包 SHA-256，再静态解出嵌入的 7z。离线文件夹扫描使用当前 Windows 的 INF 适用性和设备硬件 ID。上述结果仍需断网实机安装及联网验证。
