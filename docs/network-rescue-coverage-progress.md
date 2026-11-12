@@ -275,3 +275,16 @@ pwsh -File scripts/merge-network-rescue-model-gaps.ps1
 ```powershell
 python scripts/audit-network-rescue-zip.py <完整版ZIP> <本地缓存目录> <签名证据CSV>
 ```
+
+## 双击检查新主板与新版驱动
+
+在 Windows 上双击 `scripts/update-network-rescue.cmd`，也可运行 `python scripts/update-network-rescue.py`。需要 Python 3.11 或更新版本、`curl` 和 PowerShell 7。默认保存到 `artifacts/network-rescue-update/`，同一目录只允许一个更新进程。
+
+1. 首次运行用 WinDriverIndex 的主板、驱动家族和包元数据建立基线。之后先比较三份数据的 SHA-256，仅下载变化或缺失的数据文件。无变化且没有待重试项时结束。
+2. 主板按厂商、插槽、规范化型号和 revision 比较。范围为 ASUS、ASRock、技嘉和 MSI 的 AM4、AM5、LGA1700、LGA1851。新型号才查询单板报告，核对快照、厂商和型号，按厂商、无线家族、版本、日期查找唯一包。多个哈希对应同一组键时不自动关联。
+3. 仅处理带哈希的 Win10/11 64 位非 beta WLAN 原厂包。以 SHA-256 去重，识别同一原厂地址换包，并复用索引中已经收录的包。下载后校验哈希，直接 ZIP 中的网络 INF/CAT 使用现有脚本验签。EXE 或内嵌归档保留原件，标记为待静态提取。
+4. `last-run.json` 记录当次结果，`last-delta.json` 记录最近一次快照差异，`state.json` 保存主板候选对应关系和重试队列。通过验签的候选放在 `verified/`。单板报告关联和签名证据供型号、系统及硬件 ID 核对。运行脚本不安装驱动，发行 ZIP 仍需按发行流程验收与生成。
+
+现有签名缓存继续用于本地成品复查，发行仍以 `--fresh` 的验签为准。线上首次读取了清单与三份数据，三份数据合计约 14.5 MiB。重复运行只请求清单一次，下载了 0 份元数据和 0 个驱动包。这次线上快照没有变化。 [WinDriverIndex 快照清单](https://windriverindex.tucny.com/v1/latest/manifest.json)
+
+下一轮优化将原来每条 WLAN 报告扫描一遍包列表改成构建一次组合键索引。若有 `P` 个包和 `Q` 条需匹配的报告行，匹配由 `O(P×Q)` 降为平均 `O(P+Q)`，保留唯一匹配规则。受控增量测试模拟一块新板、同地址换包和首次哈希失败。三个元数据文件中只下载两份变化文件，重试时下载零份元数据，真实 ASUS ZIP 通过验签并留下 1 个签名网络 INF。尚无线上批量新板数据可衡量索引带来的实际耗时变化。
