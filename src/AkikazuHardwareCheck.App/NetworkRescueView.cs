@@ -599,18 +599,9 @@ internal sealed class NetworkRescueView : UserControl
         OfflinePackageSearchResult? result = null;
         try
         {
-            var roots = new List<string> { root };
-            if (useBundled && _portableDriverDirectory is not null && diagnostic.WindowsBuild >= 10240 &&
-                string.Equals(diagnostic.Architecture, "X64", StringComparison.OrdinalIgnoreCase) &&
-                Path.GetDirectoryName(root) is { } bundle)
-            {
-                var systemDrivers = Path.Combine(bundle, "pe-drivers",
-                    diagnostic.WindowsBuild < 22000 ? "windows10-x64" : "windows11-x64");
-                if (Directory.Exists(systemDrivers))
-                {
-                    roots.Add(systemDrivers);
-                }
-            }
+            IReadOnlyList<string> roots = useBundled && _portableDriverDirectory is not null
+                ? OfflinePackageSearch.GetPortableRoots(root, diagnostic.WindowsBuild, diagnostic.Architecture)
+                : [root];
             result = await Task.Run(() => OfflinePackageSearch.Find(roots, diagnostic.Devices, includePossible: true));
             _scanStatusKey = null;
         }

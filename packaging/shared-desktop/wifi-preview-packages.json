@@ -367,6 +367,78 @@
       "devicePrefixes": [],
       "windows11Only": false,
       "adapterName": "Intel Wireless"
+    },
+    {
+      "id": "msi-mb-amd-wlan",
+      "version": "3.05.00.1415",
+      "source": "https://download.msi.com/dvr_exe/mb/amd_wifi_driver.zip",
+      "archiveSha256": "D73229F99F1CC470FBEAEA888896D099FA4BA6A90719262368358F05CAF93DC3",
+      "driverDirectory": "AMD_WIFI_Drivers/drivers",
+      "scope": "MSI OEM WLAN archive verified against WinDriverIndex; offline matching",
+      "archiveLayout": "direct",
+      "devicePrefixes": [],
+      "windows11Only": false,
+      "adapterName": "MediaTek Wi-Fi 6E"
+    },
+    {
+      "id": "msi-mb-intel-2340",
+      "version": "23.40.0.4",
+      "source": "https://download.msi.com/dvr_exe/mb/intel_wifi_driver_W11.zip",
+      "archiveSha256": "F25A17099F31BB78B6024A6F279F8E127D85B4C1196F3C6F3EE541D81D146631",
+      "driverDirectory": "Intel WIFI Driver_23.40.0.4/UWD/Win64/Drivers",
+      "scope": "MSI OEM WLAN archive verified against WinDriverIndex; offline matching",
+      "archiveLayout": "direct",
+      "devicePrefixes": [],
+      "windows11Only": true,
+      "adapterName": "Intel Wi-Fi"
+    },
+    {
+      "id": "msi-mb-intel-2430",
+      "version": "24.30.1.1",
+      "source": "https://download.msi.com/dvr_exe/mb/intel_wifi6e_drivers.zip",
+      "archiveSha256": "CFEB0E579C43DBAAB523426C75121331FD391028C8718F3FD5371D637E4C0C2A",
+      "driverDirectory": "Intel WIFI Driver_24.30.1.1/Drivers",
+      "scope": "MSI OEM WLAN archive verified against WinDriverIndex; offline matching",
+      "archiveLayout": "direct",
+      "devicePrefixes": [],
+      "windows11Only": false,
+      "adapterName": "Intel Wi-Fi 6E"
+    },
+    {
+      "id": "msi-mb-mtk-5977",
+      "version": "5.7.0.5977",
+      "source": "https://download.msi.com/dvr_exe/mb/mediatek_wifi.zip",
+      "archiveSha256": "7DE62A01DCEF154A850E4847C14FEE75FF89CD7353ED89A8819ED25D624E49F6",
+      "driverDirectory": "WIFI",
+      "scope": "MSI OEM WLAN archive verified against WinDriverIndex; offline matching",
+      "archiveLayout": "direct",
+      "devicePrefixes": [],
+      "windows11Only": true,
+      "adapterName": "MediaTek Wi-Fi 7"
+    },
+    {
+      "id": "msi-mb-ncm865",
+      "version": "3.1.0.1430",
+      "source": "https://download.msi.com/dvr_exe/mb/qualcomm_ncm865_wifi.zip",
+      "archiveSha256": "1886145F4FC9C9627BECDC9A18403B9D3D4B9DDC715B024A8CDADE02EFA60FAC",
+      "driverDirectory": "Qualcomm NCM865 WIFI Drivers_3.1.0.1430",
+      "scope": "MSI OEM WLAN archive verified against WinDriverIndex; offline matching",
+      "archiveLayout": "direct",
+      "devicePrefixes": [],
+      "windows11Only": true,
+      "adapterName": "Qualcomm NCM865"
+    },
+    {
+      "id": "msi-mb-rtl8852ce",
+      "version": "6001.16.176.0",
+      "source": "https://download.msi.com/dvr_exe/mb/realtek_wifi_8852ce_drivers.zip",
+      "archiveSha256": "5B636421B18185B205D042A675B2104515004B45CA17FDD91BFAC4A605673CF8",
+      "driverDirectory": "RealtekWIFI/RTWLANE_Driver/Win10X64",
+      "scope": "MSI OEM WLAN archive verified against WinDriverIndex; offline matching",
+      "archiveLayout": "direct",
+      "devicePrefixes": [],
+      "windows11Only": false,
+      "adapterName": "Realtek RTL8852CE"
     }
   ]
 }

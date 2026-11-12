@@ -4,6 +4,7 @@ from concurrent.futures import ThreadPoolExecutor
 import csv
 from pathlib import Path
 import re
+import subprocess
 from urllib.parse import quote
 from urllib.request import Request, urlopen
 
@@ -42,12 +43,18 @@ def fetch(row):
         urls = [f"https://storage-asset.msi.com/datasheet/mb/{region}/{slug}.pdf" for region in ("global", "jp")]
     for url in urls:
         try:
-            request = Request(url, headers={"User-Agent": "Mozilla/5.0"})
-            with urlopen(request, timeout=12) as response:
-                payload = response.read(24 * 1024 * 1024 + 1)
+            if row["manufacturer"] == "ASRock":
+                payload = subprocess.run(
+                    ["curl", "-fsSL", "--max-time", "20", "--max-filesize", str(24 * 1024 * 1024), url],
+                    check=True, capture_output=True, timeout=22,
+                ).stdout
+            else:
+                request = Request(url, headers={"User-Agent": "Mozilla/5.0"})
+                with urlopen(request, timeout=12) as response:
+                    payload = response.read(24 * 1024 * 1024 + 1)
             if payload.startswith(b"%PDF-") and len(payload) <= 24 * 1024 * 1024:
                 return row, url, payload
-        except OSError:
+        except (OSError, subprocess.SubprocessError):
             continue
     return row, urls[0], b""
 
@@ -147,7 +154,9 @@ def main():
             if result["detail"] == "pdf-unavailable" and result_key in cached:
                 continue
             cached[result_key] = result
+    selected = {key(row) for row in rows}
     results = [cached[key(row)] for row in rows]
+    results.extend(row for item, row in cached.items() if item not in selected)
     print(f"Fetched {len(pending)} of {len(rows)} documents.")
     with args.output.open("w", encoding="utf-8", newline="") as destination:
         writer = csv.DictWriter(destination, fieldnames=list(results[0]))

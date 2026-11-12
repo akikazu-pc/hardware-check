@@ -2,7 +2,7 @@
 
 [逐型号 Wi-Fi 缺口清单](network-rescue-model-gaps.csv)记录当前已发现的 1,237 条主板型号或修订、912 条笔记本系列或型号、1 条一体机型号，以及 167 条戴尔系统与 Windows 组合。同一台笔记本可出现在多个系统组合。
 
-清单分别记录 `windows10X64Evidence` 和 `windows11X64Evidence`。`oem-package-indexed` 表示原厂包已入索引，`oem-wlan-listed` 表示原厂资料列出无线驱动，`oem-driver-pack-listed` 表示原厂列出该系统的整机部署包，仍需检查包内 WLAN 驱动。`oem-os-upgrade-tested` 表示原厂列出 Windows 11 升级测试，WLAN 驱动仍待核对。`pending` 表示该系统的证据待核。`oem-wlan-not-supported` 表示原厂明确说明该系统没有该出厂无线模块的驱动。仅预留接口和 ARM64 组合另有标记。原厂下载索引目前有 14 个包标注支持 Windows 10 x64，23 个包标注支持 Windows 11 x64，部分包另有最低构建号要求。[原厂下载索引](network-rescue-driver-index.csv)
+清单分别记录 `windows10X64Evidence` 和 `windows11X64Evidence`。`oem-package-indexed` 表示原厂包已入索引，`oem-wlan-listed` 表示原厂资料列出无线驱动，`oem-driver-pack-listed` 表示原厂列出该系统的整机部署包，仍需检查包内 WLAN 驱动。`oem-os-upgrade-tested` 表示原厂列出 Windows 11 升级测试，WLAN 驱动仍待核对。`pending` 表示该系统的证据待核。`oem-wlan-not-supported` 表示原厂明确说明该系统没有该出厂无线模块的驱动。仅预留接口和 ARM64 组合另有标记。原厂下载索引目前有 17 个包标注支持 Windows 10 x64，29 个包标注支持 Windows 11 x64，部分包另有最低构建号要求。[原厂下载索引](network-rescue-driver-index.csv)
 
 | 主板范围 | 已发现的型号或修订 |
 | --- | ---: |
@@ -205,3 +205,14 @@ pwsh -File scripts/merge-network-rescue-model-gaps.ps1
 仅在当前记录的所有已知模块都能同时对应到原厂列出的适用包和 ZIP 内签名 INF 时，更新该系统的主表状态。Win10 回填 65 条、Win11 回填 73 条，共涉及 73 条主板记录。待核降至 Win10 **1,081**、Win11 **1,076**。Win10 的原厂支持状态根据原厂接口及包索引填写，仍未在 Win10 环境实测签名匹配或联网。微星和技嘉本轮的 43 条已有模块记录补到 INF 候选阶段，其型号专属包证据仍待补齐。
 
 采集器 `scripts/collect-asus-wlan-downloads.py` 复用成功的查询。解压完整版 ZIP 的 `driver-packs` 和 `pe-drivers` 后，用 `scripts/audit-network-rescue-library.ps1 -EvidenceCsv` 导出签名 INF 证据。再用 `scripts/map-network-rescue-wlan.py` 生成本批候选表。核对结果后加 `--apply` 可回填主表，后续批次使用新的输出路径保存快照。
+
+
+### 跨厂商快照、驱动复用与第二轮验证
+
+本轮验证了微星支持 JSON、技嘉下载中心 JSON 和华擎静态下载表。前两个接口在本机返回 403，华擎下载表返回验证页。改用 WinDriverIndex 的静态数据先建立队列。校验板型目录、驱动族和原厂包表的快照 SHA-256，再按品牌、插槽、完整型号及修订关联逐板记录。原厂包候选同时要求厂商、驱动族、版本和发布日期一致，且只能匹配到一个归档。相同 SHA-256 只下载和验证一次。同版快照用本地缓存重新计算 1,071 条候选记录耗时约 0.37 秒，输出 SHA-256 一致。 [WinDriverIndex 设计](https://github.com/dtucny/WinDriverIndex/blob/main/doc/spec.md) · [快照清单](https://windriverindex.tucny.com/v1/latest/manifest.json)
+
+该批为 426 条主板找到 485 条唯一包线索，涉及 66 个不同下载地址。58 条主板已有线索与原 ZIP 中原厂归档的 SHA-256 一致。本轮按复用数选择 6 个微星归档，全部从微星 CDN 下载并匹配快照 SHA-256。六包在本地 ZIP 内的驱动目录通过 Win11 Build 26300 匹配及签名检查，共 9 个签名 INF，关联 222 条主板的 239 条第三方候选线索。第三方快照未提供 PCB 和出厂 SUBSYS 对应，主表不会据此认定单板原厂包或实机覆盖。候选表改编自 [WinDriverIndex by dtucny](https://windriverindex.tucny.com)，按 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) 使用。 [快照关联审计](network-rescue-windriverindex-audit.csv) · [原厂包索引](network-rescue-driver-index.csv)
+
+华擎手册改用 curl 读取官方 PDF，恢复 97 条先前缺少的无线规格证据。另回查技嘉原厂下载项及原厂手册，把 B860M C、B850M AORUS ELITE WIFI7 ICE-P、Z890 EAGLE WIFI7 rev. 1.0 与 rev. 1.1 共四条关联到 ZIP 中已有的 Win11 签名驱动。原厂无线下载栏未列 Win10 WLAN 包。主板待核降至 Win10 **1,077**、Win11 **1,072**。 [技嘉修订映射](network-rescue-motherboard-driver-matches.csv) · [华擎手册审计](asrock-wlan-manual-audit.csv)
+
+普通 Windows 便携版与 WinPE 现在共用完整版的最低构建号列表。只标注 Win11 的 OEM 包从 Windows 10 自动扫描入口排除。旧版无列表的便携包继续使用原目录扫描。已通过 Windows 10、Windows 11 及 Win11 24H2 最低构建号的目录选择回归测试。仍需实机验证出厂网卡 ID、驱动绑定和断网恢复。
