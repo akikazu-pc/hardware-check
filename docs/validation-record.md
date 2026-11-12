@@ -386,14 +386,14 @@ v0.1.0 退出后，重启仍留下 `PawnIO` 服务和驱动包。复现确认：
 
 | 场景 | 方式 | 自动选择的签名 INF | 结果 |
 | --- | --- | --- | --- |
-| Windows 11 Home 26300 | PE 无人值守新装，I226-V | `e2fn.inf` 2.1.5.7 | 入库为 `oem0.inf`，离线进入许可页 |
+| Windows 11 Home 26300 | PE 无人值守新装，I226-V | `e2fn.inf` 2.1.5.7 | 入库为 `oem0.inf`，用户确认许可后离线进入 `user` 桌面 |
 | Windows 11 Pro 26300 | PE 无人值守新装，RTL8168 | `rt68cx21x64.inf` 1168.029.50.0202 | 同上 |
 | Windows 10 Pro 22H2（19045.2965） | PE 无人值守新装，I226-V | `e2f.inf` 1.1.4.38 | 同上 |
 | Windows 10 Home 22H2 | PE 无人值守新装，RTL8168 | `rt640x64.inf` 10.79.50.1003 | 同上 |
 | 已有 Windows 10 Pro | PE 修复，RTL8168 | `rt640x64.inf` 10.79.50.1003 | DISM 写入为 `oem3.inf` |
 | 运行中的 Windows 11 LTSC 24H2 | 命令行修复，I226-V | `e2fn.inf` 2.1.5.7 | 修复前返回 `NoEligibleDevice`，修复后驱动安装到设备并启用 `e2fnexpress` 服务，报告「绑定未确认」 |
 
-- 四次新装均为 GPT：EFI 260 MiB、MSR 16 MiB、C 盘 98.73 GiB、恢复分区 1 GiB，Windows RE 已注册，应答文件已写入。四台均在无网络时进入日语微软许可页。许可需用户本人确认，此后的首次设置和 Home 版本地账户登录仍待验证（Unverified）。
+- 四次新装均为 GPT：EFI 260 MiB、MSR 16 MiB、C 盘 98.73 GiB、恢复分区 1 GiB，Windows RE 已注册，应答文件已写入。四台均在无网络时进入日语微软许可页。许可需用户本人确认。Windows 11 Home 确认许可后无其他页面，离线自动进入日语桌面；`UnattendGC` 日志记录创建 `user`，用户目录已生成。其余三台的首次设置仍待验证（Unverified）。
 - 修复的缺陷：运行中 Windows 的安装器只按硬件 ID 查找设备，而 `e2fn.inf` 匹配的 `PCI\VEN_8086&DEV_125C` 是 Windows 报告的兼容 ID，因此 I226-V 无法安装。已改为同时比对兼容 ID，与 `UpdateDriverForPlugAndPlayDevices` 一致，仍要求恰好一台问题码 28 的设备。另修正命令行版本列表重复编号。
 - 合成设备无真实硬件，驱动加载后为问题码 31，所以结果是「绑定未确认」。实体网卡的绑定、地址、DNS 和 HTTPS 仍需按[实机验收](network-rescue-field-test.md)执行。
 - Windows 11 26300 和 Windows 10 22H2 映像自带 Realtek `rt640x64.inf`，常见 RTL8168 系列可能无需额外驱动即可联网。
