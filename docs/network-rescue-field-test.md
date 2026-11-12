@@ -49,6 +49,7 @@ powershell -ExecutionPolicy Bypass -File .\collect-network-rescue-evidence.ps1 -
 
 ## 需重点观察
 
+- 虚拟机已用合成缺驱动设备验证四种新装、PE 修复和运行中安装的流程，见[验证记录](validation-record.md#2026-11-13-hyper-v-消费版断网部署与修复)。矩阵结果仍只记录实体网卡。
 - Windows 11 Home 的首次设置要求联网。NEW 场景需确认无人值守本地账户能否在 Home 版完成，以及进入桌面后能否用驱动恢复联网。
 - Windows 10 22H2 与 Windows 11 使用不同的 INF 适用范围。同一驱动包在 Windows 10 上若被拒绝，记录 INF 的 `TargetOSVersion` 和程序提示。
 - Wi-Fi 绑定后还需手动连接无线网络。记录从安装完成到 HTTPS 成功的操作步骤，但不记录网络名。

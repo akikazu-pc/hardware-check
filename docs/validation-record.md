@@ -378,3 +378,22 @@ v0.1.0 退出后，重启仍留下 `PawnIO` 服务和驱动包。复现确认：
 - 在 ROG STRIX B860-G GAMING WIFI 的 Windows 11 构建 26300 上读取两块实体网卡。MediaTek MT7925（`PCI\VEN_14C3&DEV_7925&SUBSYS_60001A3B`）精确匹配已索引华硕包的签名 `mtkwecx.inf`。现有驱动 5.7.0.4669 正常加载，经 WLAN 完成 TCP 443 测试，华硕官网 HTTPS 返回 200。
 - Intel I226-V（`PCI\VEN_8086&DEV_125C&SUBSYS_88671043&REV_06`）的签名 `e2fn.inf` 使用 Windows 实际报告的兼容 ID `PCI\VEN_8086&DEV_125C`。Windows 和原生 PE 的扫描均补读同芯片的具体兼容 ID，保留硬件 ID 优先顺序并排除设备类 ID。用两块实卡复核签名 INF 匹配。I226-V 的现有驱动 2.1.5.7 已加载，当时未接网线。
 - 此轮对宿主只读，未重装或停用网卡驱动。缺驱动后的实际安装、驱动绑定和断网恢复仍需在独立实机验收。
+
+## 2026-11-13 Hyper-V 消费版断网部署与修复
+
+- 环境：本机 Hyper-V 第 2 代来宾，开启 Secure Boot，无虚拟 TPM，不接网卡。介质为微软官网的 Windows 11 26300 与 Windows 10 22H2 日语多版本 ISO，SHA-256 与官网公布值一致。PE 程序由 `main` 构建，有线驱动取自本地离线完整版 ZIP。
+- 缺驱动网卡用实验专用的根枚举设备模拟：硬件 ID 和兼容 ID 与实体 I226-V 或 RTL8168 相同，未装驱动，问题码 28。此方式不能验证真实硬件加载和联网。
+
+| 场景 | 方式 | 自动选择的签名 INF | 结果 |
+| --- | --- | --- | --- |
+| Windows 11 Home 26300 | PE 无人值守新装，I226-V | `e2fn.inf` 2.1.5.7 | 入库为 `oem0.inf`，离线进入许可页 |
+| Windows 11 Pro 26300 | PE 无人值守新装，RTL8168 | `rt68cx21x64.inf` 1168.029.50.0202 | 同上 |
+| Windows 10 Pro 22H2（19045.2965） | PE 无人值守新装，I226-V | `e2f.inf` 1.1.4.38 | 同上 |
+| Windows 10 Home 22H2 | PE 无人值守新装，RTL8168 | `rt640x64.inf` 10.79.50.1003 | 同上 |
+| 已有 Windows 10 Pro | PE 修复，RTL8168 | `rt640x64.inf` 10.79.50.1003 | DISM 写入为 `oem3.inf` |
+| 运行中的 Windows 11 LTSC 24H2 | 命令行修复，I226-V | `e2fn.inf` 2.1.5.7 | 修复前返回 `NoEligibleDevice`，修复后驱动安装到设备并启用 `e2fnexpress` 服务，报告「绑定未确认」 |
+
+- 四次新装均为 GPT：EFI 260 MiB、MSR 16 MiB、C 盘 98.73 GiB、恢复分区 1 GiB，Windows RE 已注册，应答文件已写入。四台均在无网络时进入日语微软许可页。许可需用户本人确认，此后的首次设置和 Home 版本地账户登录仍待验证（Unverified）。
+- 修复的缺陷：运行中 Windows 的安装器只按硬件 ID 查找设备，而 `e2fn.inf` 匹配的 `PCI\VEN_8086&DEV_125C` 是 Windows 报告的兼容 ID，因此 I226-V 无法安装。已改为同时比对兼容 ID，与 `UpdateDriverForPlugAndPlayDevices` 一致，仍要求恰好一台问题码 28 的设备。另修正命令行版本列表重复编号。
+- 合成设备无真实硬件，驱动加载后为问题码 31，所以结果是「绑定未确认」。实体网卡的绑定、地址、DNS 和 HTTPS 仍需按[实机验收](network-rescue-field-test.md)执行。
+- Windows 11 26300 和 Windows 10 22H2 映像自带 Realtek `rt640x64.inf`，常见 RTL8168 系列可能无需额外驱动即可联网。
