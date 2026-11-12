@@ -1,17 +1,17 @@
 # 统一离线安装包覆盖进度
 
-[逐型号 Wi-Fi 缺口清单](network-rescue-model-gaps.csv)记录当前已发现的 1,234 条主板型号或修订、912 条笔记本系列或型号、1 条一体机型号，以及 167 条戴尔系统与 Windows 组合。同一台笔记本可出现在多个系统组合。
+[逐型号 Wi-Fi 缺口清单](network-rescue-model-gaps.csv)记录当前已发现的 1,237 条主板型号或修订、912 条笔记本系列或型号、1 条一体机型号，以及 167 条戴尔系统与 Windows 组合。同一台笔记本可出现在多个系统组合。
 
-清单分别记录 `windows10X64Evidence` 和 `windows11X64Evidence`。`oem-package-indexed` 表示原厂包已入索引，`oem-wlan-listed` 表示原厂资料列出无线驱动，`oem-driver-pack-listed` 表示原厂列出该系统的整机部署包，仍需检查包内 WLAN 驱动。`oem-os-upgrade-tested` 表示原厂列出 Windows 11 升级测试，WLAN 驱动仍待核对。`pending` 表示该系统的证据待核。仅预留接口和 ARM64 组合另有标记。原厂下载索引目前有 7 个包覆盖 Windows 10 x64，16 个包覆盖 Windows 11 x64，部分包另有最低构建号要求。[原厂下载索引](network-rescue-driver-index.csv)
+清单分别记录 `windows10X64Evidence` 和 `windows11X64Evidence`。`oem-package-indexed` 表示原厂包已入索引，`oem-wlan-listed` 表示原厂资料列出无线驱动，`oem-driver-pack-listed` 表示原厂列出该系统的整机部署包，仍需检查包内 WLAN 驱动。`oem-os-upgrade-tested` 表示原厂列出 Windows 11 升级测试，WLAN 驱动仍待核对。`pending` 表示该系统的证据待核。仅预留接口和 ARM64 组合另有标记。原厂下载索引目前有 8 个包标注支持 Windows 10 x64，17 个包标注支持 Windows 11 x64，部分包另有最低构建号要求。[原厂下载索引](network-rescue-driver-index.csv)
 
 | 主板范围 | 已发现的型号或修订 |
 | --- | ---: |
 | AM4 | 249 |
-| AM5 | 364 |
+| AM5 | 367 |
 | LGA1700 | 438 |
 | LGA1851 | 183 |
 
-主板中 1,112 条还需确认出厂无线状态、模块及驱动，118 条已有模块或驱动候选，仍需把所有出厂变体对应到精确 ID 和断网安装结果。B850M AYW GAMING WIFI-CSM 已确认板载 Wi-Fi，仍缺芯片证据。ROG STRIX B860-G GAMING WIFI 的本机 MT7925 子系统已匹配签名 INF，仍需核对其他出厂配置及断网安装。另有两款已确认仅预留接口。[华硕 B860-G 驱动页](https://www.asus.com/tw/supportonly/rog%20strix%20b860-g%20gaming%20wifi/helpdesk_download/)
+上一轮统计中，主板有 1,112 条还需确认出厂无线状态、模块及驱动，118 条已有模块或驱动候选，仍需把所有出厂变体对应到精确 ID 和断网安装结果。B850M AYW GAMING WIFI-CSM 已确认板载 Wi-Fi，仍缺芯片证据。ROG STRIX B860-G GAMING WIFI 的本机 MT7925 子系统已匹配签名 INF，仍需核对其他出厂配置及断网安装。另有两款已确认仅预留接口。[华硕 B860-G 驱动页](https://www.asus.com/tw/supportonly/rog%20strix%20b860-g%20gaming%20wifi/helpdesk_download/)
 
 笔记本记录包括华硕 82 条 ROG/TUF 系列和 3 条型号证据、联想拯救者 15 条型号证据、Alienware 5 条型号证据、惠普 309 条商用笔记本或二合一型号、宏碁 398 条系列或型号及微星 100 条系列或型号。戴尔的 167 条系统组合来自 52 个目录型号，含 Windows 11 x64 127 条、Windows 10 x64 39 条及 Windows 11 ARM64 1 条。完整的地区 SKU、出厂网卡组合和实机安装数据仍待采集。
 
@@ -111,3 +111,34 @@ Windows 11 构建 26300 的最新库审计覆盖 1,666 个 INF。其中 682 个�
 当前离线完整版随包提供按系统分开的有线驱动目录。普通 Windows 的「安装驱动」入口和 WinPE 入口都按目标 Windows 10/11 x64 选择对应目录。对应主板的实机断网安装和联网恢复待验。上述样本单独计入有线驱动记录。
 
 本地完整版 ZIP 已通过逐文件 SHA-256 校验，含 WinPE 入口和 1,676 个 INF，其中 Windows 10 有线目录 1 个、Windows 11 有线目录 8 个。
+
+
+## 2026-11-12 开源型号与原厂驱动核查
+
+读取 Linux Hardware Project 的 DMI Desktop 数据快照，涵盖华硕、技嘉、华擎、微星、映泰和 EVGA 六个厂商目录。以 DMI 型号中的芯片组标记推定四个平台，按品牌、平台和规范化型号与主表比对。去重后有 375 条未直接匹配的型号线索，其中技嘉 196 条、华硕 129 条、映泰 23 条、华擎 22 条、EVGA 3 条、微星 2 条。DMI 字符串可能包含别名、整机标识和已知型号的其他写法。逐条使用候选表中的固定快照链接回溯，资料来自按 CC BY 4.0 发布的 Linux Hardware Project DMI 数据。 [DMI 快照](https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c) · [数据许可](https://github.com/linuxhw/DMI/blob/57b21bc6fdd863380e99c228c22aafcd1509528c/LICENSE) · [候选表](network-rescue-dmi-candidates.csv)
+
+用原厂资料确认并补入 B650 AERO G rev. 1.0、B650 EAGLE AX rev. 1.0/1.1、B650 AORUS ELITE AX V2 rev. 1.0/1.1 三条新记录。技嘉 9 条主表记录已关联到 12 条 PCB 修订或修订组与原厂包的对应关系。B650 AORUS ELITE AX 的 rev. 1.0、1.1、1.2 分别对应 AMD RZ616、Intel AX210、Realtek RTL8852CE。B860 GAMING X WIFI6E 的 rev. 1.0、1.1 分别对应 Intel AX211、Realtek RTL8852CE。每条映射均附支持页和适用系统包 ID。 [逐修订包映射](network-rescue-motherboard-driver-matches.csv) · [原厂包索引](network-rescue-driver-index.csv)
+
+本地保存了 5 个原厂 ZIP，合计约 64.4 MiB。全部静态解包，在 Windows 11 Build 26300 上通过应用的 INF 匹配与签名检查。各包的 ID 数独立统计，同一 ID 可以出现于多个包。原始文件位于 `artifacts/network-rescue-driver-research`，下载地址和 SHA-256 见原厂包索引。RTL8851BE 的两个包新增到索引，本轮未重建完整版 ZIP。
+
+| 原厂包 | 原厂标注 | 通过签名的网络 INF | 匹配的 PCI ID |
+| --- | --- | ---: | ---: |
+| Intel 24.10.0.4 | Win10/11 x64 | 2 | 835 |
+| Realtek 8852 6001.16.172.0 | Win10/11 x64 | 1 | 18 |
+| AMD 3.3.0.496 | Win10/11 x64 | 1 | 26 |
+| Realtek 8851 6001.19.119.0 | Win10 x64 | 2 | 18 |
+| Realtek 8851 6101.19.134.1 | Win11 x64 | 2 | 20 |
+
+Z790 D WIFI rev. 1.0 的下载页按系统列出 Realtek 8851 驱动。解包后在 INF 中确认 RTL8851BE（`PCI\VEN_10EC&DEV_B851`）是包内候选，主板实机 SUBSYS 尚未确认。Win10 包也在当前 Win11 开发机上做了静态匹配和签名检查，Win10 上的适用性以厂商标注为依据，仍待 Win10 实机验证。 [Z790 下载页](https://www.gigabyte.com/de/Motherboard/Z790-D-WIFI-rev-10/support)
+
+B550 UD WIFI6E rev. 1.2 的支持页列出适用两个系统的 MediaTek Wi-Fi 6E 包。抓到的旧版 3.05.00.1349 下载链接返回 404，新版 3.5.0.1392 的直接链接未取得，因此只记录下载页证据。A520I AC rev. 1.5 的支持页把 Realtek WLAN 包标为仅适用于 rev. 1.4，保留待核。MSI MAG Z890 TOMAHAWK WIFI 的官方规格只列 Win11 x64，Win10 更新为厂商未列支持，Win11 驱动包匹配仍待核。 [B550 支持页](https://www.gigabyte.com/ca/Motherboard/B550-UD-WIFI6E-rev-12/support) · [A520I 支持页](https://www.gigabyte.com/Motherboard/A520I-AC-rev-15/support) · [微星规格](https://www.msi.com/Motherboard/MAG-Z890-TOMAHAWK-WIFI/Specification)
+
+| 平台 | 主板记录 | Win10 x64 待核 | Win11 x64 待核 |
+| --- | ---: | ---: | ---: |
+| AM4 | 249 | 245 | 245 |
+| AM5 | 367 | 359 | 358 |
+| LGA1700 | 438 | 436 | 436 |
+| LGA1851 | 183 | 178 | 177 |
+| 合计 | 1,237 | 1,218 | 1,216 |
+
+上述待核数字按主表中 `pending` 字段计数。只有厂商页面证据或原厂包索引的条目仍需完成实机验证。375 条开源型号线索中还有 372 条未完成原厂型号核对。下一批优先核查已有明确型号支持页的待核记录，再用已验证型号补充开源线索。所有新增映射仍需获取出厂网卡 SUBSYS，按目标 Windows 测试离线安装、重启后的驱动绑定和联网。
