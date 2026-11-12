@@ -3,7 +3,7 @@
 enum HomeControl {
     HomeHeading = 201, HomeIntro, HomeList, HomeRefresh, HomePrimary,
     HomeSummary, HomeNetworkHeading, HomeDriverHeading, HomeNetworkList,
-    HomeRepair, HomeGuide, HomeAbout, HomeTools, HomeLanguage, HomeHelp
+    HomeRepair, HomeGuide, HomeAbout, HomeTools, HomeLanguage, HomeHelp, HomeToolbar
 };
 
 struct HomeState {
@@ -88,14 +88,53 @@ static void LocalizeList(HWND list, const wchar_t* first, const wchar_t* second)
     ListView_SetColumn(list, 1, &column);
 }
 
-static void SetHomeDropDown(HWND window, int id, std::initializer_list<const wchar_t*> labels)
+static LRESULT CALLBACK HomeToolbarKeys(HWND toolbar, UINT message, WPARAM wparam, LPARAM lparam,
+    UINT_PTR, DWORD_PTR)
 {
-    const auto combo = GetDlgItem(window, id);
-    SendMessageW(combo, CB_RESETCONTENT, 0, 0);
-    for (const auto* label : labels) {
-        SendMessageW(combo, CB_ADDSTRING, 0, reinterpret_cast<LPARAM>(label));
+    if (message == WM_GETDLGCODE) {
+        return DLGC_WANTARROWS | (wparam == VK_RETURN ? DLGC_WANTMESSAGE : 0);
     }
-    SendMessageW(combo, CB_SETCURSEL, 0, 0);
+    if (message == WM_SETFOCUS && SendMessageW(toolbar, TB_GETHOTITEM, 0, 0) < 0) {
+        SendMessageW(toolbar, TB_SETHOTITEM, 0, 0);
+    }
+    if (message == WM_KEYDOWN) {
+        const auto index = std::max<LRESULT>(0, SendMessageW(toolbar, TB_GETHOTITEM, 0, 0));
+        if (wparam == VK_LEFT || wparam == VK_RIGHT) {
+            const auto count = SendMessageW(toolbar, TB_BUTTONCOUNT, 0, 0);
+            if (count > 0) SendMessageW(toolbar, TB_SETHOTITEM, (index + count + (wparam == VK_LEFT ? -1 : 1)) % count, 0);
+            return 0;
+        }
+        if (wparam == VK_RETURN || wparam == VK_SPACE || wparam == VK_DOWN || wparam == VK_F4) {
+            TBBUTTON button{};
+            if (SendMessageW(toolbar, TB_GETBUTTON, index, reinterpret_cast<LPARAM>(&button))) {
+                PostMessageW(GetParent(toolbar), WM_COMMAND, button.idCommand, reinterpret_cast<LPARAM>(toolbar));
+            }
+            return 0;
+        }
+    }
+    return DefSubclassProc(toolbar, message, wparam, lparam);
+}
+
+static void LocalizeHomeToolbar(HWND toolbar, const PeText& text, HFONT font)
+{
+    std::wstring help = text.homeHelp;
+    if (const auto suffix = help.find(L"(&"); suffix != std::wstring::npos) help.resize(suffix);
+    else if (!help.empty() && help.front() == L'&') help.erase(0, 1);
+
+    const auto hot = SendMessageW(toolbar, TB_GETHOTITEM, 0, 0);
+    while (SendMessageW(toolbar, TB_BUTTONCOUNT, 0, 0) > 0) {
+        if (!SendMessageW(toolbar, TB_DELETEBUTTON, 0, 0)) break;
+    }
+    SendMessageW(toolbar, WM_SETFONT, reinterpret_cast<WPARAM>(font), FALSE);
+    const TBBUTTON buttons[] = {
+        { I_IMAGENONE, HomeTools, TBSTATE_ENABLED, BTNS_AUTOSIZE | BTNS_WHOLEDROPDOWN, {}, 0, reinterpret_cast<INT_PTR>(text.tools) },
+        { I_IMAGENONE, HomeLanguage, TBSTATE_ENABLED, BTNS_AUTOSIZE | BTNS_WHOLEDROPDOWN, {}, 0, reinterpret_cast<INT_PTR>(text.language) },
+        { I_IMAGENONE, HomeHelp, TBSTATE_ENABLED, BTNS_AUTOSIZE | BTNS_WHOLEDROPDOWN, {}, 0, reinterpret_cast<INT_PTR>(help.c_str()) }
+    };
+    SendMessageW(toolbar, TB_ADDBUTTONSW, ARRAYSIZE(buttons), reinterpret_cast<LPARAM>(buttons));
+    SendMessageW(toolbar, TB_AUTOSIZE, 0, 0);
+    if (hot >= 0) SendMessageW(toolbar, TB_SETHOTITEM, hot, 0);
+    InvalidateRect(toolbar, nullptr, TRUE);
 }
 
 static void LocalizeHome(HWND window, HomeState& state)
@@ -109,20 +148,15 @@ static void LocalizeHome(HWND window, HomeState& state)
     SetDlgItemTextW(window, HomeRefresh, text.homeScan);
     SetDlgItemTextW(window, HomePrimary, state.isPe ? text.setup : text.homeInstall);
     SetDlgItemTextW(window, IDCANCEL, text.close);
-    std::wstring help = text.homeHelp;
-    const auto accelerator = help.find(L'&');
-    if (accelerator != std::wstring::npos) help.erase(accelerator, 1);
-    SetHomeDropDown(window, HomeTools, { text.tools, text.homeScan, state.isPe ? text.repair : text.homeAdvanced });
-    SetHomeDropDown(window, HomeLanguage, { text.language, L"日本語", L"简体中文", L"繁體中文", L"English" });
-    SetHomeDropDown(window, HomeHelp, { help.c_str(), text.homeGuide, text.homeAbout });
     const auto font = WizardFont(text);
+    LocalizeHomeToolbar(GetDlgItem(window, HomeToolbar), text, font);
     LOGFONTW heading{};
     const bool haveHeadingFont = font && GetObjectW(font, sizeof heading, &heading) == sizeof heading;
     heading.lfWeight = FW_BOLD;
     const auto section = haveHeadingFont ? CreateFontIndirectW(&heading) : nullptr;
     heading.lfHeight = MulDiv(heading.lfHeight, 3, 2);
     const auto large = haveHeadingFont ? CreateFontIndirectW(&heading) : nullptr;
-    for (const auto id : { HomeTools, HomeLanguage, HomeHelp, HomeHeading, HomeIntro, HomeList,
+    for (const auto id : { HomeHeading, HomeIntro, HomeList,
             HomeNetworkHeading, HomeDriverHeading, HomeNetworkList, HomeRefresh, HomePrimary,
             HomeSummary, static_cast<HomeControl>(IDCANCEL) }) {
         auto selected = font;
@@ -219,11 +253,14 @@ static INT_PTR CALLBACK SharedHomeDialog(HWND window, UINT message, WPARAM wpara
         SendMessageW(window, WM_SETICON, ICON_BIG, reinterpret_cast<LPARAM>(largeIcon));
 
         const int right = state.isPe ? 404 : 362;
-        constexpr auto dropdown = WS_TABSTOP | WS_VSCROLL | CBS_DROPDOWNLIST | CBS_HASSTRINGS;
-        const auto tools = ChoiceControl(window, L"COMBOBOX", L"", dropdown, HomeTools, { 10, 5, 76, 78 });
-        SendMessageW(tools, CB_SETDROPPEDWIDTH, 330, 0);
-        ChoiceControl(window, L"COMBOBOX", L"", dropdown, HomeLanguage, { 80, 5, 155, 90 });
-        ChoiceControl(window, L"COMBOBOX", L"", dropdown, HomeHelp, { 159, 5, 225, 78 });
+        const auto toolbar = ChoiceControl(window, TOOLBARCLASSNAMEW, L"",
+            WS_TABSTOP | TBSTYLE_FLAT | TBSTYLE_LIST | CCS_NOPARENTALIGN | CCS_NOMOVEY | CCS_NODIVIDER,
+            HomeToolbar, { 10, 5, right, 25 });
+        if (!toolbar || !SetWindowSubclass(toolbar, HomeToolbarKeys, 1, 0)) {
+            EndDialog(window, 1);
+            return TRUE;
+        }
+        SendMessageW(toolbar, TB_BUTTONSTRUCTSIZE, sizeof(TBBUTTON), 0);
         ChoiceControl(window, L"STATIC", L"", SS_ETCHEDHORZ, -1, { 10, 26, right, 28 });
         ChoiceControl(window, L"STATIC", L"", SS_NOPREFIX, HomeHeading, { 10, 36, right, 56 });
         ChoiceControl(window, L"STATIC", L"", SS_NOPREFIX, HomeIntro, { 10, 57, right, 74 });
@@ -264,34 +301,45 @@ static INT_PTR CALLBACK SharedHomeDialog(HWND window, UINT message, WPARAM wpara
         EndDialog(window, 0);
         return TRUE;
     }
-    constexpr UINT selectedMenu = WM_APP + 1;
-    if (message != WM_COMMAND && message != selectedMenu) return FALSE;
+    if (message == WM_NOTIFY) {
+        const auto* notification = reinterpret_cast<const NMTOOLBARW*>(lparam);
+        if (notification->hdr.idFrom == HomeToolbar && notification->hdr.code == TBN_DROPDOWN) {
+            PostMessageW(window, WM_COMMAND, notification->iItem, reinterpret_cast<LPARAM>(notification->hdr.hwndFrom));
+            SetWindowLongPtrW(window, DWLP_MSGRESULT, TBDDRET_DEFAULT);
+            return TRUE;
+        }
+    }
+    if (message != WM_COMMAND) return FALSE;
     auto* state = reinterpret_cast<HomeState*>(GetWindowLongPtrW(window, GWLP_USERDATA));
     if (!state) return FALSE;
     int control = LOWORD(wparam);
+    const auto& text = peText[state->language];
     if (control == HomeTools || control == HomeLanguage || control == HomeHelp) {
-        if (message == WM_COMMAND && HIWORD(wparam) == CBN_SELENDOK) {
-            const auto selection = SendDlgItemMessageW(window, control, CB_GETCURSEL, 0, 0);
-            if (selection > 0) PostMessageW(window, selectedMenu, control, selection);
-        }
-        if (message != selectedMenu) return TRUE;
-        SendDlgItemMessageW(window, control, CB_SETCURSEL, 0, 0);
+        wizardOwner = window;
         if (control == HomeLanguage) {
             constexpr int languages[] = { 1, 2, 3, 0 };
-            if (lparam > 0 && lparam <= ARRAYSIZE(languages)) {
-                state->language = languages[lparam - 1];
+            const auto current = std::find(std::begin(languages), std::end(languages), state->language) - std::begin(languages);
+            const auto selection = Choose(text, text.language, { L"日本語", L"简体中文", L"繁體中文", L"English" }, static_cast<int>(current));
+            wizardOwner = nullptr;
+            if (selection >= 0 && selection < static_cast<int>(ARRAYSIZE(languages))) {
+                state->language = languages[selection];
                 LocalizeHome(window, *state);
             }
             return TRUE;
         }
-        if (control == HomeTools) control = lparam == 1 ? HomeRefresh : HomeRepair;
-        else control = lparam == 1 ? HomeGuide : HomeAbout;
+        const bool tools = control == HomeTools;
+        const auto selection = tools
+            ? Choose(text, text.tools, { text.homeScan, state->isPe ? text.repair : text.homeAdvanced })
+            : Choose(text, text.homeGuide, { text.homeGuide, text.homeAbout });
+        wizardOwner = nullptr;
+        if (selection < 0) return TRUE;
+        if (tools) control = selection == 0 ? HomeRefresh : HomeRepair;
+        else control = selection == 0 ? HomeGuide : HomeAbout;
     }
     if (control == HomeRefresh) {
         FillHomeList(window, *state);
         return TRUE;
     }
-    const auto& text = peText[state->language];
     if (control == HomePrimary || control == HomeRepair || control == HomeGuide || control == HomeAbout) {
         wizardOwner = window;
         if (control == HomePrimary) {
@@ -314,7 +362,7 @@ static INT_PTR CALLBACK SharedHomeDialog(HWND window, UINT message, WPARAM wpara
 
 static int RunSharedHome(const fs::path& bundle, bool isPe)
 {
-    const INITCOMMONCONTROLSEX controls{ sizeof controls, ICC_LISTVIEW_CLASSES };
+    const INITCOMMONCONTROLSEX controls{ sizeof controls, ICC_LISTVIEW_CLASSES | ICC_BAR_CLASSES };
     if (!InitCommonControlsEx(&controls)) return 1;
     const auto font = bundle / L"pe-fonts/NotoSansCJK-Regular.ttc";
     AddFontResourceExW(font.c_str(), FR_PRIVATE, nullptr);
