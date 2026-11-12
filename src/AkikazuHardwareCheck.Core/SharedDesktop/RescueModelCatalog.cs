@@ -9,17 +9,18 @@ public static class RescueModelCatalog
 {
     private static readonly Lazy<RescueCatalogModel[]> Models = new(ReadModels);
 
-    public static IReadOnlyList<RescueCatalogModel> Search(string query)
+    public static IReadOnlyList<RescueCatalogModel> Search(string query, bool allInOnesOnly = false)
     {
         var key = Normalize(query);
-        if (key.Length < 2)
+        if (key.Length < 2 && !allInOnesOnly)
         {
             return [];
         }
 
         var terms = query.Split((char[]?)null, StringSplitOptions.RemoveEmptyEntries)
             .Select(Normalize).Where(term => term.Length > 0).ToArray();
-        return Models.Value.Select(model => (Model: model, Name: Normalize(model.Model), Brand: Normalize(model.Brand)))
+        return Models.Value.Where(model => !allInOnesOnly || model.Type == "all-in-one")
+            .Select(model => (Model: model, Name: Normalize(model.Model), Brand: Normalize(model.Brand)))
             .Where(row => (row.Brand + row.Name).Contains(key, StringComparison.Ordinal) ||
                 terms.All(term => row.Name.Contains(term, StringComparison.Ordinal) ||
                 row.Brand.Contains(term, StringComparison.Ordinal)))

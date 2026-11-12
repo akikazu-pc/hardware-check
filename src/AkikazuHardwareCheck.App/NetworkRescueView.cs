@@ -41,6 +41,7 @@ internal sealed class NetworkRescueView : UserControl
     private readonly TabPage _modulesPage = new();
     private readonly TabPage _catalogPage = new();
     private readonly TextBox _catalogQuery = new() { Dock = DockStyle.Top };
+    private readonly CheckBox _catalogAllInOnes = new() { AutoSize = true };
     private readonly Label _catalogStatus = Ui.Label();
     private readonly ListView _catalogResults = ListViewTable.Create();
     private readonly TextBox _catalogDetails = new() { Dock = DockStyle.Fill, Multiline = true, ReadOnly = true, ScrollBars = ScrollBars.Vertical };
@@ -85,6 +86,7 @@ internal sealed class NetworkRescueView : UserControl
         };
         _modelLink.LinkClicked += (_, _) => OpenOfficialPage();
         _catalogQuery.TextChanged += (_, _) => SearchCatalog();
+        _catalogAllInOnes.CheckedChanged += (_, _) => SearchCatalog();
         _catalogResults.SelectedIndexChanged += (_, _) => ShowCatalogDetails();
         _catalogDriverPage.LinkClicked += (_, _) => OpenCatalogPage(driverPage: true);
         _catalogSource.LinkClicked += (_, _) => OpenCatalogPage(driverPage: false);
@@ -161,6 +163,7 @@ internal sealed class NetworkRescueView : UserControl
         _catalogPage.Text = t["rescue.catalog"];
         _catalogQuery.PlaceholderText = t["rescue.searchModel"];
         _catalogQuery.AccessibleName = _catalogQuery.PlaceholderText;
+        _catalogAllInOnes.Text = t["rescue.catalogAllInOne"];
         _catalogDriverPage.Text = t["rescue.officialDrivers"];
         _catalogSource.Text = t["rescue.catalogSource"];
         _catalogResults.Columns[0].Text = t["rescue.catalogBrand"];
@@ -365,7 +368,7 @@ internal sealed class NetworkRescueView : UserControl
     private void SearchCatalog()
     {
         var selected = SelectedCatalogEntry;
-        var results = RescueModelCatalog.Search(_catalogQuery.Text);
+        var results = RescueModelCatalog.Search(_catalogQuery.Text, _catalogAllInOnes.Checked);
         _catalogResults.BeginUpdate();
         _catalogResults.Items.Clear();
         foreach (var entry in results)
@@ -380,7 +383,7 @@ internal sealed class NetworkRescueView : UserControl
             item.Selected = entry == selected;
         }
         _catalogResults.EndUpdate();
-        _catalogStatus.Text = string.IsNullOrWhiteSpace(_catalogQuery.Text) ? "" :
+        _catalogStatus.Text = string.IsNullOrWhiteSpace(_catalogQuery.Text) && !_catalogAllInOnes.Checked ? "" :
             results.Count == 0 ? _t["rescue.catalogNoResults"] : _t["rescue.catalogResults", results.Count];
         ShowCatalogDetails();
     }
@@ -1048,7 +1051,12 @@ internal sealed class NetworkRescueView : UserControl
         var links = new FlowLayoutPanel { Dock = DockStyle.Fill, AutoSize = true };
         links.Controls.Add(_catalogDriverPage);
         links.Controls.Add(_catalogSource);
-        layout.Controls.Add(_catalogQuery, 0, 0);
+        var search = new TableLayoutPanel { Dock = DockStyle.Top, AutoSize = true, ColumnCount = 2 };
+        search.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100));
+        search.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize));
+        search.Controls.Add(_catalogQuery, 0, 0);
+        search.Controls.Add(_catalogAllInOnes, 1, 0);
+        layout.Controls.Add(search, 0, 0);
         layout.Controls.Add(_catalogStatus, 0, 1);
         layout.Controls.Add(_catalogResults, 0, 2);
         layout.Controls.Add(_catalogDetails, 0, 3);

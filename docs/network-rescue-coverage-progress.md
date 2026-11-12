@@ -27,6 +27,8 @@
 
 一体机从惠普 Presence 24 会议一体机开始录入。Windows 10 x64 已找到原厂整机部署包，包内 WLAN 驱动及 Windows 11 x64 驱动仍待核对。[一体机目录](network-rescue-oem-all-in-ones.csv) · [惠普产品规格](https://support.hp.com/gb-en/document/ish_5880723-5880767-16)
 
+长期目录覆盖目标包括可安装 Windows 的设备。后续补录一体机、品牌台式机、迷你电脑、工作站和 Intel Mac。Intel Mac 按 Apple 型号标识收录，记录 Boot Camp 驱动包和网卡硬件 ID。覆盖记录注明 Windows 版本、x64 或 ARM64 架构，以及原生安装或虚拟机环境。[Apple Boot Camp 驱动说明](https://support.apple.com/en-gb/102465)
+
 日期为 2026-11-12。统一的断网急救离线包适用于桌面和笔记本，通用包与 OEM 补充包按设备 ID 和系统选取。两类设备分别验收。先核对 AM5、LGA1851 及 2025 年起出货的笔记本，完成后再系统扩展到 AM4、LGA1700 及更旧的笔记本。
 
 | 统计范围 | 分母 | 已核对 | 比例 |

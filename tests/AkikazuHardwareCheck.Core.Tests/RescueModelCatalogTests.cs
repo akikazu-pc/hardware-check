@@ -11,6 +11,8 @@ public sealed class RescueModelCatalogTests
         Assert.Equal("all-in-one", model.Type);
         Assert.Equal("oem-driver-pack-listed", model.Windows10Evidence);
         Assert.Equal("pending", model.Windows11Evidence);
+        Assert.Contains(model, RescueModelCatalog.Search("", allInOnesOnly: true));
+        Assert.Empty(RescueModelCatalog.Search("A320M", allInOnesOnly: true));
     }
 
     [Theory]
