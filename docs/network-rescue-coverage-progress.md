@@ -107,3 +107,15 @@ Windows 11 构建 26300 的最新库审计覆盖 1,666 个 INF。其中 682 个�
 | Windows 11 x64 | [11.29.50.0202](https://download.gigabyte.com/FileList/Driver/mb_driver_654_w11_11.29.50.0202.zip) | `07013117E12AB44C0AFADC2D898ED4904121E56C3579DF33CE7E3F687F43AE1F` | `mbdriver/WIN11/64` | 8 份有效 |
 
 当前离线完整版随包提供按系统分开的有线驱动目录。普通 Windows 的「安装驱动」入口和 WinPE 入口都按目标 Windows 10/11 x64 选择对应目录。对应主板的实机断网安装和联网恢复待验。上述样本单独计入有线驱动记录。
+
+### Intel PCIe 与 Realtek USB 有线补充
+
+| 来源 | 系统 | 已核对的签名 INF |
+| --- | --- | --- |
+| [技嘉 B760M D3H Rev. 1.x 驱动页](https://www.gigabyte.com/eu/Motherboard/B760M-D3H-rev-1x/support)的 Intel I225/I226 有线包 | Windows 10 x64，构建 17763 起；Windows 11 x64 | `e2f.inf` 1.1.4.38、`e2fn.inf` 2.1.5.7 |
+| 同一技嘉页面的 Intel Gigabit Ethernet 包 | Windows 10 x64，构建 17763 起；Windows 11 x64 | `e1d.inf` 12.19.2.61、`e1dn.inf` 20.0.3.9 |
+| [华硕 USB-C2500 V2 驱动页](https://www.asus.com/networking-iot-servers/wired-solutions/wired-adapters/usb-c2500-v2/helpdesk_download?model2Name=USB-C2500-V2)的 1001 版 USB 有线包 | Windows 10 x64、Windows 11 x64 | Windows 10 的 `rtump64x64sta.INF`，Windows 11 的六份 `rtu*cx22x64sta.INF` |
+
+四份原厂 ZIP 形成六条按系统区分的候选记录。下载直链、SHA-256、版本及系统范围见 [驱动索引](network-rescue-driver-index.csv)。型号列记录原厂页面及对应驱动系列。设备实际适用性以安装时读取的硬件 ID、系统构建和签名 INF 为准。
+
+Windows 11 已通过应用实际下载、校验并匹配 Intel I226、I219 与 RTL8156 三个硬件 ID 样本。Windows 10 核对了 INF、CAT 签名和目录选择规则，实体网卡安装与联网待验证。Intel 通用下载页要求接受许可，本轮使用技嘉提供的 OEM 来源。本轮生成本地测试包。

@@ -297,7 +297,7 @@ pwsh -NoProfile -File scripts/publish-network-rescue-bundles.ps1 -IncludeCatalog
 
 选择目标后，程序自动读取本机 PCI/USB 硬件 ID，共用完整版的 SDIO WLAN 库和原厂驱动目录。按目标系统构建号筛选原厂包，按目标系统选择随包提供的有线补充目录。只列出目标系统适用的网络类签名 INF 精确匹配项。按 Y 确认后调用系统 DISM 写入选中的离线 Windows，并列出目标驱动存储。重启进入该 Windows 后验证驱动绑定和联网。
 
-生成完整版需要 MSVC x64 和 Windows SDK，打包脚本自动构建 PE 入口。可选的 `-PeEthernetPackDirectory` 指向两份已验证的 Windows 10/11 Realtek 有线 ZIP 及对应 SHA-256 文件的目录。Windows 11 的 PE 离线写入已在隔离虚拟机验收。Windows 10 目标和实体网卡重启联网仍待验收。
+生成完整版需要 MSVC x64 和 Windows SDK，打包脚本自动构建 PE 入口。原厂包清单中按 Windows 版本指定的驱动会放到对应的有线目录。可选的 `-PeEthernetPackDirectory` 还可提供两份已验证的 Windows 10/11 Realtek PCIe 有线 ZIP 及对应 SHA-256 文件。Windows 11 的 PE 离线写入已在隔离虚拟机验收。Windows 10 目标和实体网卡重启联网仍待验收。
 
 
 ### 全新安装时准备联网驱动

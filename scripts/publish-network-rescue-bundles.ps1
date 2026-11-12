@@ -124,6 +124,7 @@ start "" "%~dp0AkikazuHardwareCheck.exe" --portable-rescue
             $peScope = @(
                 '10240 sdio-wlan-wifi-26082'
                 foreach ($package in $packages) {
+                    if ($package.targetWindows) { continue }
                     $floor = if ($package.windows11Only) { 22000 } else { 10240 }
                     $minimum = [Math]::Max($floor, [int]$package.minimumWindowsBuild)
                     "$minimum $($package.id)-$($package.version)"
