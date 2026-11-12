@@ -325,3 +325,26 @@ WinDriverIndex 中 1,296 个笔记本型号标识已生成 `artifacts/network-re
 - **TP-Link 独立网卡**，美国支持站覆盖 89 个产品、214 条型号修订，含 USB 无线 101、USB 有线 30、PCIe 无线 64、PCI／PCIe 有线 19。实测 60 个原厂下载地址、118 条修订与下载地址的关联。TX401 原厂 ZIP 实下载验得 2 个签名网络 INF。Archer TX20U Plus 样本 ZIP 内含安装程序，待静态提取。 [TP-Link 下载中心](https://www.tp-link.com/us/support/download/) · [TX401 V2.60 支持页](https://www.tp-link.com/us/support/download/tx401/v2.60/)
 
 沿用上轮验证过的按地址复用方法。其他设备模式从空缓存只读取一份 `boards.json`，重复运行下载 0 份快照数据，笔记本模式也能直接复用该文件。TP-Link 直接复用 89 个型号页已显示的默认修订，实跑 215 次目录请求，较逐条重查的 304 次少 29.3%。完整复跑复用 60 个已记录下载地址，未下载驱动包。另用不同 URL 指向同一真实驱动 ZIP 做受控测试，两个地址各下载一次，匹配同一 SHA-256 后 Windows 验签从 2 次减为 1 次，两个型号关联和每条记录的 2 个签名 INF 证据均保留。该优化仅复用本次运行中同字节包的验签结果。
+
+### 固定分母与缺口补录
+
+本轮以 2026-11-02 WinDriverIndex 快照中四厂商、四插槽的主板，以及 Dell、HP、联想的笔记本和品牌整机为统一样本。共 3,996 条原厂产品记录。主板 1,978 条，占 49.50%；笔记本 1,296 条，占 32.43%；品牌整机 722 条，占 18.07%。样本按产品记录计数，独立网卡、区域品牌、Apple、Surface 和掌机另按各自原厂目录计数。当前无可核实的全球 Windows 装机型号与无线变体分母。 [WinDriverIndex 快照](https://windriverindex.tucny.com/v1/latest/manifest.json)
+
+样本目录从 3,994/3,996 增至 3,996/3,996。保留型号名里的 `+` 后，华擎 A620M-HDV/M.2 和 A620M-HDV/M.2+ 分别入库。在线迁移只查询了两块板的报告，复用了全部快照数据。两款原厂规格均注明 Wi-Fi 模块不随板附送。已回填主表，Win10 待核由 1,019 降到 1,017，Win11 由 1,003 降到 1,001。主表 1,237 条内，Win10 OEM WLAN 列出或入索引 140 条，占 11.32%，Win11 有 168 条，占 13.58%。各系统均有 68 条确认无出厂 Wi-Fi。 [A620M-HDV/M.2 规格](https://asrock.com/mb/amd/A620M-HDVM.2/) · [A620M-HDV/M.2+ 规格](https://asrock.com/MB/AMD/A620M-HDVM.2%2B/index.nl.asp)
+
+| 原厂样本 | OEM 下载关联 | 本机有签名 INF 的样本关联 |
+| --- | ---: | ---: |
+| TP-Link 美国站 USB 无线 | 47/101（46.53%） | 4/101（3.96%） |
+| TP-Link 美国站 PCIe 无线 | 45/64（70.31%） | 3/64（4.69%） |
+| TP-Link 美国站 USB 有线 | 14/30（46.67%） | 2/30（6.67%） |
+| TP-Link 美国站 PCI／PCIe 有线 | 4/19（21.05%） | 2/19（10.53%） |
+| D-Link 美国／加拿大站 | 3/34（8.82%） | 1/34（2.94%） |
+| 小米／REDMI | 80/81（98.77%） | 2/81（2.47%） |
+| 荣耀 | 133/187（71.12%） | 本轮未验得 |
+| Panasonic | 52/265（19.62%），已查页 52/53 | 本轮未验得 |
+
+D-Link 本轮补入 34 个原厂网卡型号。首批检查 7 个型号的 11 个修订，保存 3 个原厂地址并实际下载，DUB-1312 Rev A 验得 1 个签名网络 INF。TP-Link 另抽查 3 个 USB Wi-Fi 包，Archer T3U Plus 和 T4U Plus 的包各验得 2 个签名网络 INF，合计补入 4 条修订关联。TP-Link 整体为 110/214（51.40%）有下载关联，11/214（5.14%）有本机签名包样本。其余目录型号继续核查，已列出的包也需核对目标系统和实机。 [D-Link 原厂目录](https://support.dlink.com/allpro.aspx) · [DUB-1312 支持页](https://support.dlink.com/ProductInfo.aspx?m=DUB-1312) · [TP-Link 下载中心](https://www.tp-link.com/us/support/download/)
+
+同为 5 个包的预算，按源顺序选包涉及 11 条不同修订，按尚无验签包的修订数逐次选包涉及 34 条。两组都实下载，前者有 2 条修订关联到签名 INF 包，后者有 3 条。本轮采纳该排序用于限量补采，可执行 `python scripts/update-network-rescue.py --devices-only --backfill-devices --device-backfill-limit 5`。新版本和失败重试仍按正常更新流程处理。
+
+下一轮试验先检查 ZIP 目录。两个真实 TP-Link 包直接可见的 `.inf` 只有 `autorun.inf`，跳过无效验签并标记待静态提取，旧记录可用已保存的原档重分类。用 `python scripts/report-network-rescue-coverage.py` 复算固定快照与主表。另存的设备批次可用 `--device-state`，实下载样本可用 `--evidence 品牌 报告路径` 加入，要求原厂 URL、型号身份与条目版本相符。签名比例记录当前 Windows 环境的包证据，实机绑定、出厂硬件 ID 和恢复联网仍待验证。

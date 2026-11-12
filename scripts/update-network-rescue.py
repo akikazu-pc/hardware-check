@@ -19,12 +19,14 @@ from zipfile import BadZipFile, ZipFile
 from network_rescue_adapters import load_tplink
 from network_rescue_apple import load_apple
 from network_rescue_china import HONOR_SUPPORT, load_honor, load_xiaomi
+from network_rescue_extra import load_dlink
 from network_rescue_japan import load_dynabook, load_panasonic
 
 
 ROOT = Path(__file__).resolve().parent.parent
 BASE = "https://windriverindex.tucny.com/v1/latest"
 SNAPSHOT_FILES = ("boards.json", "families.json", "artefacts.json")
+MOTHERBOARD_KEY_VERSION = 2
 REPORT_FILES = {"all": "last-run.json", "laptops": "last-laptop-run.json", "devices": "last-device-run.json"}
 PLATFORMS = {"AM4", "AM5", "LGA1700", "LGA1851"}
 SNAPSHOT_SYSTEM_VENDORS = {"dell", "hp", "lenovo"}
@@ -91,7 +93,7 @@ def snapshot_data(state, manifest, stats, names=SNAPSHOT_FILES):
 
 
 def motherboard_key(board):
-    name = re.sub(r"[^a-z0-9]", "", board["name"].casefold())
+    name = re.sub(r"[^a-z0-9+]", "", board["name"].casefold())
     return "|".join((board["vendor"], board["socket"], name, str(board.get("revision") or "").casefold()))
 
 
@@ -180,10 +182,15 @@ def board_packages(board, generation, package_lookup, scratch):
     return sorted(set(matches))
 
 
+def has_direct_driver_inf(entries):
+    return any(not entry.is_dir() and entry.filename.casefold().endswith(".inf")
+               and entry.filename.rsplit("/", 1)[-1].casefold() != "autorun.inf" for entry in entries)
+
+
 def extract_direct_zip(archive, target):
     with ZipFile(archive) as source:
         files = [entry for entry in source.infolist() if not entry.is_dir()]
-        if not any(entry.filename.lower().endswith(".inf") for entry in files):
+        if not has_direct_driver_inf(files):
             return False
         if sum(entry.file_size for entry in files) > MAX_EXTRACTED:
             raise ValueError("Uncompressed ZIP exceeds the extraction limit")
@@ -267,6 +274,8 @@ def refresh(state, known_hashes, *, scope="all"):
         if previous and datetime.fromisoformat(generation) < datetime.fromisoformat(previous["generation"]):
             raise ValueError("The source returned an older snapshot")
         changed = not previous or fingerprints != previous["fingerprints"]
+        rekey_boards = previous is not None and previous.get("motherboardKeyVersion") != MOTHERBOARD_KEY_VERSION
+        motherboard_changed = changed or rekey_boards
         pending_catalogs = []
         counts = dict(newLaptops=0, newDevices=0)
         for product_type, filename, count_field in (("laptop", "laptops", "newLaptops"),
@@ -277,7 +286,7 @@ def refresh(state, known_hashes, *, scope="all"):
             cached = json.loads(path.read_bytes()) if path.is_file() else {}
             if cached.get("fingerprint") != fingerprints["boards.json"]:
                 pending_catalogs.append((product_type, path, cached, count_field))
-        if changed and scope == "all":
+        if motherboard_changed and scope == "all":
             data = snapshot_data(state, manifest, stats)
         elif pending_catalogs:
             data = snapshot_data(state, manifest, stats, ("boards.json",))
@@ -287,12 +296,12 @@ def refresh(state, known_hashes, *, scope="all"):
             counts[count_field] = len(new_models)
             atomic_json(path, dict(generation=generation, baseline=not cached, fingerprint=fingerprints["boards.json"],
                                    newModelIds=new_models, models=models))
-        if scope != "all" or (not changed and not previous["queue"] and not previous["boardQueue"]):
+        if scope != "all" or (not motherboard_changed and not previous["queue"] and not previous["boardQueue"]):
             result = dict(status="catalog-updated" if pending_catalogs else "unchanged", generation=generation,
                           newBoards=0, newArchives=0, remaining=0, boardReportsPending=0, **counts, **stats)
             atomic_json(report, result)
             return result
-        if changed:
+        if motherboard_changed:
             boards, packages = normalized_snapshot(data)
         else:
             boards, packages = previous["boards"], previous["packages"]
@@ -301,6 +310,10 @@ def refresh(state, known_hashes, *, scope="all"):
         completed = previous["completed"] if previous else {}
         board_matches = previous.get("boardMatches", {}) if previous else {}
         old_boards = previous["boards"] if previous else {}
+        if rekey_boards:
+            old_boards = {motherboard_key(board): board for board in old_boards.values()}
+            board_queue = {motherboard_key(board): board for board in board_queue.values()}
+            board_matches = {motherboard_key(match["board"]): match for match in board_matches.values()}
         old_packages = previous["packages"] if previous else {}
         new_boards = {key: row for key, row in boards.items() if key not in old_boards} if previous else {}
         new_packages = {key: row for key, row in packages.items() if key not in old_packages} if previous else {}
@@ -334,10 +347,11 @@ def refresh(state, known_hashes, *, scope="all"):
             del board_queue[key]
 
     current = dict(generation=generation, fingerprints=fingerprints, boards=boards, packages=packages,
+                   motherboardKeyVersion=MOTHERBOARD_KEY_VERSION,
                    queue=queue, boardQueue=board_queue, boardMatches=board_matches, completed=completed)
     # Persist discovered work before attempting driver downloads so interruption can be retried.
     atomic_json(state_file, current)
-    if changed:
+    if motherboard_changed:
         atomic_json(state / "last-delta.json", dict(generation=generation, newBoards=list(new_boards.values()),
                                                   newArchives=list(new_packages.values())))
     outcomes = []
@@ -395,7 +409,24 @@ def nzxt_listings(catalog):
     return boards, listings
 
 
-def refresh_oem(state, known_hashes, vendor, load_catalog, *, referer=None, catalog_kind=None, backfill=False):
+def rank_baseline_packages(listings, completed, limit):
+    def identities(rows):
+        return {(row["model"], row["support"]) for row in rows}
+
+    covered = {key for url, rows in listings.items() if completed.get(url, {}).get("status") == "verified-candidate"
+               for key in identities(rows)}
+    candidates = {url: identities(rows) for url, rows in listings.items()
+                  if completed.get(url, {}).get("status") in (None, "baseline-listed")}
+    selected = []
+    while candidates and len(selected) < limit:
+        url = max(candidates, key=lambda item: len(candidates[item] - covered))
+        covered.update(candidates.pop(url))
+        selected.append(url)
+    return selected
+
+
+def refresh_oem(state, known_hashes, vendor, load_catalog, *, referer=None, catalog_kind=None, backfill=False,
+                backfill_limit=None):
     state.mkdir(exist_ok=True)
     report = state / "last-run.json"
     previous = json.loads(report.read_bytes()) if report.is_file() else {}
@@ -412,13 +443,18 @@ def refresh_oem(state, known_hashes, vendor, load_catalog, *, referer=None, cata
         stats["listedUrls"] = len(listings)
         stats["newUrls"] = len(listings.keys() - completed.keys())
         stats["remaining"] = len(listings)
-        for url, candidates in listings.items():
+        report_data = dict(boards=boards, packages=completed, activeUrls=list(listings))
+        selected = rank_baseline_packages(listings, completed, backfill_limit) if backfill and backfill_limit else []
+        limited_backfill = backfill and backfill_limit is not None
+        for url in dict.fromkeys([*selected, *listings]):
+            candidates = listings[url]
             previous_item = completed.get(url, {})
             revisions = {(row["label"], row.get("listedRevision")) for row in candidates}
             previous_revisions = {(row["label"], row.get("listedRevision"))
                                   for row in previous_item.get("listings", [])}
             status = previous_item.get("status")
-            if catalog_kind and not previous and not backfill:
+            backfill_url = backfill and (not limited_backfill or url in selected)
+            if catalog_kind and not previous and not backfill_url:
                 completed[url] = dict(status="baseline-listed", listings=candidates)
                 stats["baselineUrls"] += 1
                 stats["remaining"] -= 1
@@ -426,11 +462,21 @@ def refresh_oem(state, known_hashes, vendor, load_catalog, *, referer=None, cata
             baseline_needs_package = False
             if status == "baseline-listed":
                 prior_models = {(row["model"], row["support"]) for row in previous_item["listings"]}
-                baseline_needs_package = backfill or any((row["model"], row["support"]) not in prior_models
+                baseline_needs_package = backfill_url or any((row["model"], row["support"]) not in prior_models
                                                          for row in candidates)
             if (status not in (None, "retry-pending") and revisions <= previous_revisions
                     and not baseline_needs_package):
                 completed[url]["listings"] = candidates
+                if status == "no-signed-inf-on-this-windows" and not previous_item.get("archiveLayoutChecked"):
+                    archive = state / "originals" / f"{previous_item['sha256']}.archive"
+                    if archive.is_file():
+                        try:
+                            with ZipFile(archive) as source:
+                                if not has_direct_driver_inf(source.infolist()):
+                                    previous_item["status"] = "needs-static-extraction"
+                            previous_item["archiveLayoutChecked"] = True
+                        except BadZipFile:
+                            pass
                 stats["reusedUrls"] += 1
                 stats["remaining"] -= 1
                 continue
@@ -456,12 +502,12 @@ def refresh_oem(state, known_hashes, vendor, load_catalog, *, referer=None, cata
                     path.replace(original)
                     status, count = stage_package(state, item, stats)
                     archive_results[digest] = status, count
-                completed[url] = dict(item, status=status, signedInfCount=count)
+                completed[url] = dict(item, status=status, signedInfCount=count, archiveLayoutChecked=True)
             except (OSError, RuntimeError, ValueError, subprocess.SubprocessError) as error:
                 completed[url] = dict(status="retry-pending", listings=candidates, detail=str(error))
             stats["remaining"] -= completed[url]["status"] != "retry-pending"
-            atomic_json(report, dict(boards=boards, packages=completed, **stats))
-    atomic_json(report, dict(boards=boards, packages=completed, **stats))
+            atomic_json(report, dict(report_data, **stats))
+    atomic_json(report, dict(report_data, **stats))
     return stats
 
 
@@ -609,7 +655,12 @@ def main():
     parser.set_defaults(scope="all")
     parser.add_argument("--backfill-laptops", action="store_true", help="Also download unchanged laptop baseline packages")
     parser.add_argument("--backfill-devices", action="store_true", help="Also download unchanged device baseline packages")
+    parser.add_argument("--device-backfill-limit", type=int, metavar="N",
+                        help="Prioritize up to N optional baseline downloads per device source")
     args = parser.parse_args()
+    if args.device_backfill_limit is not None and (args.device_backfill_limit < 1 or not args.backfill_devices
+                                                   or args.scope == "laptops"):
+        parser.error("--device-backfill-limit requires --backfill-devices and N >= 1")
     with (ROOT / "docs/network-rescue-driver-index.csv").open(encoding="utf-8-sig", newline="") as source:
         known_hashes = {row["sha256"].lower() for row in csv.DictReader(source)}
     args.state.mkdir(parents=True, exist_ok=True)
@@ -640,6 +691,7 @@ def main():
             ("microsoft-surface", load_surface, None),
             ("asus-rog-handhelds", load_rog_handhelds, None),
             ("tplink", partial(load_tplink, fetch=fetch), None),
+            ("dlink", partial(load_dlink, fetch=fetch), None),
         )
         for kind, sources, backfill in (("devices", device_sources, args.backfill_devices),
                                        ("laptops", laptop_sources, args.backfill_laptops),
@@ -649,7 +701,8 @@ def main():
             for vendor, load_catalog, referer in sources:
                 try:
                     oem_results[vendor] = refresh_oem(args.state / vendor, known_hashes, vendor, load_catalog,
-                                                      referer=referer, catalog_kind=kind, backfill=backfill)
+                                                      referer=referer, catalog_kind=kind, backfill=backfill,
+                                                      backfill_limit=args.device_backfill_limit if kind == "devices" else None)
                 except (OSError, ValueError, KeyError, subprocess.SubprocessError) as error:
                     oem_results[vendor] = dict(status="failed", detail=str(error), remaining=1)
                 print(json.dumps({vendor: oem_results[vendor]}, ensure_ascii=True), flush=True)
