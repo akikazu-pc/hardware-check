@@ -473,3 +473,11 @@ D-Link 本轮补入 34 个原厂网卡型号。首批检查 7 个型号的 11 �
 第二轮把判定改得更细：规格摘要按「specifications summary」定位后 4 页，只有规格页里出现无线字样才记为「原厂规格列出」；其余若只命中 ASUS 的「Notices for non Wi-Fi model」，记为原厂明示的无 Wi-Fi 型号。结果 5 款（PRIME B840M-A、B850-PLUS、Pro WS B850M-ACE SE、B760M-A D4、H610M-F D4 R3.0）手册明写非 Wi-Fi 型号，但原厂下载页同时列出 Wi-Fi 驱动，两处来源冲突，保留待核；12 款只有系列手册或 CSM 变体，取不到精确型号手册。把 PRIME B760M-A D4 的出厂无线状态从「只有目录」改为「规格未列 WLAN」。同一批判定复跑为 0 项变化。
 
 成本对比：32 份手册约 40 MB，2 线程、每次 0.8 秒间隔共约 3 分钟；同一批证据复跑为 0 项变化。手册一次给出型号、页数和模块三项证据，但只能结「无出厂无线」一侧；有无线字样的手册仍需逐页区分规格行与法规页。华硕下载采集脚本同时加 0.6 秒节流、HTTP 451／429 重试和 `--workers`／`--pause`，本轮 660 次请求未再触发限流。
+
+### 2026-11-13 逐 SKU OS 复核与联想 PSREF
+
+华硕笔记本的系列级快照把整个系列记成同一份 OS 列表，SKU 自己页面没有该系统时只会得到「无驱动列表」并保留待核。新增[逐 SKU OS 复核](../scripts/verify-asus-sku-os.py)：对每个待核 SKU 重查 `GetPDOS`，只有 OEM 的 OS 列表缺少该系统才记为「原厂未列」。18 个待核 SKU 中 11 个自身列表不含 Windows 10（9 款 GA402、FA608UH／WM），另有 2 个系列行因全部 SKU 一致而关闭，共补结 13 格。
+
+联想改用 [PSREF 规格表](../scripts/collect-lenovo-psref.py)：`psref.lenovo.com` 可读，15 款待核 Legion 中 14 款取得规格 PDF，受支持系统全部只有 Windows 11。与型号下载页 WLAN 包元数据 `OperatingSystemKeys=["Windows 11 (64-bit)"]` 一致后关闭 8 个 Win10 格；1 款（Legion Pro 7 16ADR10H）取不到 PSREF 路径，其余 7 款缺独立下载列表。证据见[PSREF 表](network-rescue-lenovo-psref-proof.csv)和[逐 SKU OS 表](network-rescue-asus-sku-os-proof.csv)。
+
+成本：PSREF 15 份 PDF 约 1 分钟，SKU 复核 18 页约 40 秒，同一批证据复跑结果一致。本轮待核 700→**679**（主板 79／79，笔记本 Win10 300、Win11 221）。
