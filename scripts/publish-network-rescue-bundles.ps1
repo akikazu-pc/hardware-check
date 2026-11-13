@@ -98,6 +98,21 @@ start "" "%~dp0AkikazuHardwareCheck.exe" --portable-rescue
         }
 
         if ($flavor -eq 'offline-full-portable') {
+            # Older Windows 10 builds can crash in CoreCLR before managed startup when the host opts into CET.
+            # Separate intermediates keep the single-file host from being reused by the regular Website publish.
+            $offlinePublish = Join-Path $staging.FullName 'offline-publish'
+            $appProject = Join-Path $root 'src/AkikazuHardwareCheck.App/AkikazuHardwareCheck.App.csproj'
+            dotnet publish $appProject -c Release --self-contained true -o $offlinePublish --nologo `
+                --artifacts-path (Join-Path $staging.FullName 'offline-build') `
+                -p:DistributionChannel=Website -p:DebugType=None -p:CETCompat=false
+            if ($LASTEXITCODE -ne 0) {
+                throw "Offline Network Rescue publish failed ($LASTEXITCODE)."
+            }
+            $appName = 'AkikazuHardwareCheck.exe'
+            Copy-Item -LiteralPath (Join-Path $offlinePublish $appName) -Destination $bundleRoot -Force
+            $appHash = (Get-FileHash -LiteralPath (Join-Path $bundleRoot $appName) -Algorithm SHA256).Hash
+            Set-Content -LiteralPath (Join-Path $bundleRoot 'SHA256.txt') -Value "$appHash  $appName" -Encoding ascii
+
             & (Join-Path $PSScriptRoot 'prepare-sdio-wlan-library.ps1') -Archive $WlanArchive -OutputDirectory $bundleRoot
             Copy-Item -LiteralPath (Join-Path $root 'artifacts/network-rescue-pe/PeNetworkRescue.exe') -Destination $bundleRoot
             Copy-Item -LiteralPath (Join-Path $root 'artifacts/network-rescue-pe/NetworkRescue.exe') -Destination $bundleRoot
@@ -201,7 +216,8 @@ start "" "%~dp0AkikazuHardwareCheck.exe" --portable-rescue
         }
 
         Copy-Item -LiteralPath (Join-Path $root 'docs/network-rescue-driver-index.csv') -Destination $bundleRoot
-        $name = "NetworkRescue-$version-$flavor-win-x64.zip"
+        $extension = if ($flavor -eq 'offline-full-portable') { 'esd' } else { 'zip' }
+        $name = "NetworkRescue-$version-$flavor-win-x64.$extension"
         $archive = Join-Path $output $name
         if ($flavor -eq 'offline-full-portable') {
             $driverRoot = Join-Path $bundleRoot 'driver-packs'
@@ -212,39 +228,42 @@ start "" "%~dp0AkikazuHardwareCheck.exe" --portable-rescue
                 throw 'The full bundle must contain both the WLAN library and OEM driver packs.'
             }
 
-            Add-Type -AssemblyName System.IO.Compression.FileSystem
-            $temporaryArchive = Join-Path $staging.FullName 'portable.zip'
-            [IO.Compression.ZipFile]::CreateFromDirectory(
-                $bundleRoot, $temporaryArchive, [IO.Compression.CompressionLevel]::Fastest, $false)
-            $expectedFiles = [Collections.Generic.Dictionary[string, IO.FileInfo]]::new([StringComparer]::Ordinal)
-            foreach ($file in Get-ChildItem -LiteralPath $bundleRoot -Recurse -File) {
-                $expectedFiles.Add($file.FullName.Substring($bundleRoot.Length + 1).Replace('\', '/'), $file)
+            $dism = Join-Path ([Environment]::SystemDirectory) 'dism.exe'
+            $capture = Join-Path $staging.FullName 'offline.wim'
+            $temporaryArchive = Join-Path $staging.FullName 'offline.esd'
+            & $dism /Capture-Image "/ImageFile:$capture" "/CaptureDir:$bundleRoot" /Name:NetworkRescue /Compress:fast /CheckIntegrity
+            if ($LASTEXITCODE -ne 0) {
+                throw "DISM capture failed ($LASTEXITCODE). Run the full offline build from an elevated shell."
+            }
+            & $dism /Export-Image "/SourceImageFile:$capture" /SourceIndex:1 "/DestinationImageFile:$temporaryArchive" /Compress:recovery /CheckIntegrity
+            if ($LASTEXITCODE -ne 0) {
+                throw "DISM ESD export failed ($LASTEXITCODE)."
             }
 
-            $zip = [IO.Compression.ZipFile]::OpenRead($temporaryArchive)
-            try {
-                foreach ($entry in $zip.Entries) {
-                    if ($entry.FullName.EndsWith('/') -and $entry.Length -eq 0) { continue }
-                    $file = $null
-                    if (-not $expectedFiles.TryGetValue($entry.FullName, [ref]$file) -or
-                        $entry.Length -ne $file.Length) {
-                        throw "Unexpected ZIP entry: $($entry.FullName)"
-                    }
-                    $stream = $entry.Open()
-                    try {
-                        if ((Get-FileHash -InputStream $stream).Hash -ne (Get-FileHash -LiteralPath $file.FullName).Hash) {
-                            throw "ZIP entry content differs from the staged file: $($entry.FullName)"
-                        }
-                    } finally {
-                        $stream.Dispose()
-                    }
-                    [void]$expectedFiles.Remove($entry.FullName)
+            $GITHUB_ASSET_LIMIT_BYTES = 2GB
+            if ((Get-Item -LiteralPath $temporaryArchive).Length -ge $GITHUB_ASSET_LIMIT_BYTES) {
+                throw 'The full offline archive must be smaller than 2 GiB.'
+            }
+
+            $verificationRoot = Join-Path $staging.FullName 'verify-offline'
+            New-Item -ItemType Directory -Path $verificationRoot | Out-Null
+            & $dism /Apply-Image "/ImageFile:$temporaryArchive" /Index:1 "/ApplyDir:$verificationRoot" /CheckIntegrity
+            if ($LASTEXITCODE -ne 0) {
+                throw "DISM ESD verification failed ($LASTEXITCODE)."
+            }
+
+            $expectedFiles = @(Get-ChildItem -LiteralPath $bundleRoot -Recurse -File -Force)
+            $actualCount = @(Get-ChildItem -LiteralPath $verificationRoot -Recurse -File -Force).Count
+            if ($actualCount -ne $expectedFiles.Count) {
+                throw "The ESD restored $actualCount files, expected $($expectedFiles.Count)."
+            }
+            foreach ($file in $expectedFiles) {
+                $relative = [IO.Path]::GetRelativePath($bundleRoot, $file.FullName)
+                $extracted = Join-Path $verificationRoot $relative
+                if (!(Test-Path -LiteralPath $extracted -PathType Leaf) -or
+                    (Get-FileHash -LiteralPath $extracted).Hash -ne (Get-FileHash -LiteralPath $file.FullName).Hash) {
+                    throw "Restored file differs from the staged file: $relative"
                 }
-                if ($expectedFiles.Count -ne 0) {
-                    throw "The ZIP is missing $($expectedFiles.Count) staged files."
-                }
-            } finally {
-                $zip.Dispose()
             }
             Move-Item -LiteralPath $temporaryArchive -Destination $archive -Force
         } else {

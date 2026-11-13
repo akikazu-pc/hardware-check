@@ -255,7 +255,7 @@ pwsh -NoProfile -File scripts/publish-network-rescue-bundles.ps1 -IncludeCatalog
 
 ### 扩展 WLAN 驱动库和主板目录
 
-从 [SDIO 官方种子](https://www.glenn.delahoy.com/snappy-driver-installer-origin/)仅下载 WLAN/Wi-Fi 压缩包。固定快照 `DP_WLAN-WiFi_26082.7z` 含 1,634 个 INF。构建校验归档 SHA-256，并将驱动文件解包到驱动搜索目录。完整版输出 ZIP，逐文件核对相对路径和 SHA-256，原始下载包的链接和哈希可从索引查询。
+从 [SDIO 官方种子](https://www.glenn.delahoy.com/snappy-driver-installer-origin/)仅下载 WLAN/Wi-Fi 压缩包。固定快照 `DP_WLAN-WiFi_26082.7z` 含 1,634 个 INF。构建校验归档 SHA-256，并将驱动文件解包到驱动搜索目录。原始下载包的链接和哈希可从索引查询。
 
 ```powershell
 pwsh -NoProfile -File scripts/publish-network-rescue-bundles.ps1 -IncludeCatalog -WlanArchive <本地WLAN归档> -PeEthernetPackDirectory <有线驱动ZIP及其SHA-256所在目录> -SevenZipExecutable <完整版7z.exe>
@@ -270,8 +270,15 @@ pwsh -NoProfile -File scripts/publish-network-rescue-bundles.ps1 -IncludeCatalog
 ## 当前交付方式
 
 - 在线安装版 `NetworkRescue-<version>-online-install-win-x64.zip` 解包后运行 `Install.cmd`。包内不含驱动本体。扫描到缺驱动设备后，可从内置目录查询官方来源，选择并确认下载。ZIP 通过 SHA-256 校验后解包，随后用本机 Windows 的硬件 ID 和签名流程确认安装。目录是随程序发布的固定快照，暂不提供全量联网索引、驱动升级或回退。
-- 离线完整版 `NetworkRescue-<version>-offline-full-portable-win-x64.zip` 解包后双击 `NetworkRescue.exe`。主程序直接使用随附运行时与同目录 `driver-packs`。关闭窗口即退出。安装 Wi-Fi 驱动需要管理员确认。
-- 完整版为未加密 ZIP，可用 Windows 文件资源管理器的「全部解压缩」。打包脚本检查 SDIO 和原厂 INF 都已进入暂存目录，逐项比对 ZIP 与暂存文件的路径、长度和 SHA-256。验证通过后才替换成品并记录 SHA-256。更新主程序时重新运行打包脚本。
+- 离线完整版为单个 `NetworkRescue-<version>-offline-full-portable-win-x64.esd`。在管理员终端中创建一个空目录，用 Windows 自带的 DISM 还原，再双击该目录里的 `NetworkRescue.exe`。主程序使用随附运行时和同目录的 `driver-packs`。安装 Wi-Fi 驱动需要管理员确认。
+- 完整版需在管理员终端构建。打包脚本检查 SDIO 和原厂 INF，验证 ESD 小于 2 GiB，逐文件核对还原路径和 SHA-256。完整版的应用宿主关闭 CET 兼容标志，以便在受影响的旧版 Windows 10 上启动。
+
+```powershell
+New-Item -ItemType Directory -Path .\NetworkRescue
+dism.exe /Apply-Image /ImageFile:"NetworkRescue-<version>-offline-full-portable-win-x64.esd" /Index:1 /ApplyDir:NetworkRescue /CheckIntegrity
+```
+
+本地验证使用保留 v0.2.1 完整驱动库的 ESD，大小为 1,260,880,368 字节。Win10 22H2（19045.2965）和 Win11 24H2（26100.1742，LTSC 评估版）均在断网虚拟机中用系统 DISM 还原，12,876 个文件的路径和 SHA-256 与暂存目录一致，随后从资源管理器打开了 Network Rescue。Win10 原版在同一来宾上以 CoreCLR 错误 `0x80131506` 退出。
 
 两版均包含[原厂驱动下载索引](network-rescue-driver-index.csv)，可按型号查找官网支持页、下载直链、版本和 SHA-256。在驱动候选列表选中一项后，点击「导出驱动 ZIP」可带走该 INF 所在的签名驱动目录及子目录，保留相对路径供另一台电脑解压使用。
 
@@ -301,7 +308,7 @@ PE 首页按网络设备类或 PCI 网络控制器 ID 识别网卡，可显示�
 
 选择目标后，程序自动读取本机 PCI/USB 硬件 ID，共用完整版的 SDIO WLAN 库和原厂驱动目录。按目标系统构建号筛选原厂包，按目标系统选择随包提供的有线补充目录。只列出目标系统适用的网络类签名 INF 精确匹配项。按 Y 确认后调用系统 DISM 写入选中的离线 Windows，并列出目标驱动存储。重启进入该 Windows 后验证驱动绑定和联网。
 
-生成完整版需要 MSVC x64 和 Windows SDK，打包脚本自动构建 PE 入口。完整版需要 `-PeEthernetPackDirectory` 提供的两份 Windows 10/11 Realtek PCIe 有线 ZIP 及对应 SHA-256 文件，以及 `-SevenZipExecutable` 指定的完整版 `7z.exe`，用于静态解包原厂 NSIS 驱动。原厂包清单中按 Windows 版本指定的驱动会放到对应的有线目录。完整版输出 ZIP。Windows 11 的 PE 离线写入已在隔离虚拟机验收。Windows 10 目标和实体网卡重启联网仍待验收。
+生成完整版需要 MSVC x64 和 Windows SDK，打包脚本自动构建 PE 入口。完整版需要 `-PeEthernetPackDirectory` 提供的两份 Windows 10/11 Realtek PCIe 有线 ZIP 及对应 SHA-256 文件，以及 `-SevenZipExecutable` 指定的完整版 `7z.exe`，用于静态解包原厂 NSIS 驱动。原厂包清单中按 Windows 版本指定的驱动会放到对应的有线目录。完整版输出 ESD。Windows 11 的 PE 离线写入已在隔离虚拟机验收。Windows 10 目标和实体网卡重启联网仍待验收。
 
 
 ### 全新安装时准备联网驱动
