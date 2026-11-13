@@ -103,7 +103,10 @@ public sealed class RescueModelCatalogTests
     [Fact]
     public void FindsAdditionalDeviceCategoriesWithSeparatePlatformEvidence()
     {
-        Assert.Equal(20, RescueModelCatalog.Search("单板电脑").Count);
+        var boards = RescueModelCatalog.Search("单板电脑");
+        Assert.Equal(21, boards.Count);
+        Assert.Contains(boards, model => model.Brand == "DFI" && model.Model == "AL051" &&
+            model.DeviceTag == RescueDeviceTag.SingleBoardComputer);
         Assert.Contains(RescueModelCatalog.Search("HTPC Beebox N3150"), model => model.DeviceTag == RescueDeviceTag.Htpc);
         var phone = Assert.Single(RescueModelCatalog.Search("Windows 手机 Lumia 950"),
             model => model.Model == "Lumia 950");
