@@ -158,37 +158,59 @@ static int RunCli(const fs::path& bundle, bool isPe, int language)
 
     std::wcout << text.scan << L'\n';
     auto matches = ScanDrivers(bundle, build, !isPe);
+    std::vector<const DriverMatch*> chosen;
     if (matches.empty()) {
-        std::wcout << text.noDriver << L'\n';
-        return 4;
+        if (!deployment && !setup) {
+            std::wcout << text.noDriver << L'\n';
+            return 4;
+        }
+        if (!ChooseCli(text, text.continueWithoutDriver, { text.confirm }, false)) return 0;
+    } else {
+        std::vector<std::wstring> labels;
+        for (const auto& match : matches) {
+            labels.push_back(match.name + L"  " + match.path.filename().wstring() + L" [" + match.id + L"]");
+        }
+        const bool installAll = (isPe || deployment || setup) && matches.size() > 1;
+        if (installAll) {
+            labels.push_back(std::wstring(text.installAll) + L" (" + std::to_wstring(matches.size()) + L")");
+        }
+        const auto driver = ChooseCli(text, text.driver, labels);
+        if (!driver) return 0;
+        if (installAll && driver == static_cast<int>(matches.size()) + 1) {
+            for (const auto& match : matches) chosen.push_back(&match);
+        } else {
+            chosen.push_back(&matches[driver - 1]);
+        }
     }
-
-    std::vector<std::wstring> labels;
-    for (const auto& match : matches) {
-        labels.push_back(match.name + L"  " + match.path.filename().wstring() + L" [" + match.id + L"]");
-    }
-    const auto driver = ChooseCli(text, text.driver, labels);
-    if (!driver) return 0;
-    const auto& match = matches[driver - 1];
+    const auto driverPaths = [&] {
+        std::vector<fs::path> paths;
+        for (const auto* match : chosen) paths.push_back(match->path);
+        return paths;
+    };
     if (deployment) {
         const auto& source = media[selected - 1];
-        std::wcout << DeploymentDetails(source, *deployment, { match.path }) << L'\n';
+        const auto paths = driverPaths();
+        std::wcout << DeploymentDetails(source, *deployment, paths) << L'\n';
         if (!ChooseCli(text, text.deployConfirm, { text.confirm }, false)) return 0;
         const wchar_t* step = text.deployPreparing;
-        const auto code = RunUnattended(source, *deployment, { match.path }, text,
+        const auto code = RunUnattended(source, *deployment, paths, text,
             [](const wchar_t* message) { std::wcout << message << L'\n' << std::flush; }, step);
         if (code == ERROR_SUCCESS) return 0;
         std::wcout << DeploymentFailure(text, step, code) << L'\n';
         return 6;
     }
-    const auto* confirmation = setup ? text.confirmSetup : isPe ? text.confirmRepair : text.cliConfirmCurrent;
-    if (!ChooseCli(text, confirmation, { text.confirm }, false)) return 0;
-    if (!VerifyNetworkDriver(match.path)) {
-        std::wcout << text.failed << L'\n';
-        return 5;
+    if (!chosen.empty()) {
+        const auto* confirmation = setup ? text.confirmSetup : isPe ? text.confirmRepair : text.cliConfirmCurrent;
+        if (!ChooseCli(text, confirmation, { text.confirm }, false)) return 0;
+    }
+    for (const auto* match : chosen) {
+        if (!VerifyNetworkDriver(match->path)) {
+            std::wcout << text.failed << L'\n';
+            return 5;
+        }
     }
     if (setup) {
-        const auto result = StartSetup(media[selected - 1], { match.path });
+        const auto result = StartSetup(media[selected - 1], driverPaths());
         if (result == SetupStart::Started) return 0;
         if (result == SetupStart::DriverPreparationFailed) {
             std::wcout << text.setupDriverPreparationFailed << L'\n';
@@ -197,15 +219,21 @@ static int RunCli(const fs::path& bundle, bool isPe, int language)
     } else if (isPe) {
         const auto& target = targets[selected - 1];
         if (ReadWindowsBuild(target.root) == target.build) {
-            const auto result = RunDism(target, L"/Add-Driver /Driver:\"" + match.path.wstring() + L"\"");
-            if ((result == ERROR_SUCCESS || result == ERROR_SUCCESS_REBOOT_REQUIRED) &&
-                RunDism(target, L"/Get-Drivers") == ERROR_SUCCESS) {
+            bool added = true;
+            for (const auto* match : chosen) {
+                const auto result = RunDism(target, L"/Add-Driver /Driver:\"" + match->path.wstring() + L"\"");
+                if (result != ERROR_SUCCESS && result != ERROR_SUCCESS_REBOOT_REQUIRED) {
+                    added = false;
+                    break;
+                }
+            }
+            if (added && RunDism(target, L"/Get-Drivers") == ERROR_SUCCESS) {
                 std::wcout << text.repairDone << L'\n';
                 return 0;
             }
         }
     } else {
-        const auto result = InstallCurrentDriver(bundle, match);
+        const auto result = InstallCurrentDriver(bundle, *chosen[0]);
         const wchar_t* messages[] = { text.cliBound, text.cliRestart, text.cliUnconfirmed };
         if (result < ARRAYSIZE(messages)) {
             std::wcout << messages[result] << L'\n';
