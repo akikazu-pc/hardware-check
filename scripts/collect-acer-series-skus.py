@@ -111,7 +111,7 @@ def query_family(acer, series, codes):
     results, proof = {}, []
     for code in codes:
         warm, response = acer.bridge_query(code)
-        if response.get("status") != 200:
+        if response.get("status") != 200 or "payload" not in response:
             results[code] = {"10": "api-error", "11": "api-error"}
             continue
         evidence = acer.classify(response["payload"], code)

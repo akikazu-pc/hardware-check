@@ -44,7 +44,9 @@ async function fetchOne(url, body) {
   try {
     const response = await fetch(url, options);
     const body = Buffer.from(await response.arrayBuffer());
-    const file = join(CACHE, `${createHash("sha1").update(url).digest("hex")}.bin`);
+    // The key must cover the body: every session POST shares one endpoint URL, and keying by URL
+    // alone let concurrent workers overwrite each other's cached response.
+    const file = join(CACHE, `${createHash("sha1").update(url + "\n" + (body ?? "")).digest("hex")}.bin`);
     await writeFile(file, body);
     return { url, status: response.status, file, bytes: body.length };
   } catch (error) {
@@ -86,7 +88,9 @@ async function fetchWithSession(warmUrl, url, body) {
       });
       const payload = Buffer.from(await response.arrayBuffer());
       if (response.status !== 403 || attempt === 1) {
-        const file = join(CACHE, `${createHash("sha1").update(url).digest("hex")}.bin`);
+        // The key must cover the body: every session POST shares one endpoint URL, and keying by URL
+    // alone let concurrent workers overwrite each other's cached response.
+    const file = join(CACHE, `${createHash("sha1").update(url + "\n" + (body ?? "")).digest("hex")}.bin`);
         await writeFile(file, payload);
         return {
           url,
