@@ -504,3 +504,11 @@ Acer 与 MSI 的驱动数据都能取到，方法是先用 Node 传输桥拿页�
 - **MSI**：`/api/v1/product/support/os?product=<slug>&type=driver` 给可选系统，`panel?…&os=<系统>` 给该系统驱动表。108 款待核型号全部命中，笔记本的「Wireless LAN Driver」带版本和 `download.msi.com` 链接，两轮共关闭 124 格。主板的通用 Wi-Fi 驱动包（AMD／Intel WIFI Drivers）出现在无 Wi-Fi 型号上，与规格未列 WLAN 冲突，只有原厂 OS 选择器缺系统的 5 格和两处都未列的 2 格关闭。证据见 [MSI 证据](network-rescue-msi-oem-listing-proof.csv)。
 
 本轮合计关闭 **152 格**：待核 679→**527**（主板 74／74，笔记本 Win10 221、Win11 158）。MSI 复跑收尾时另有 11 个主板格的原厂页面确实列出 `Intel WIFI Driver`，但型号用的是通用 Wi-Fi 驱动包、规格未列 WLAN，按工厂配置规则挂起并记录在 `specGated`，不计入已核实。Acer 仍有 95 行系列名待拆 SKU，HP 84 格、ASRock 41 格、BIOSTAR 24 格、Gigabyte 14 格仍受站点或证据口径限制。
+
+### 2026-11-13 Acer sitemap 系列拆解
+
+Acer 的 96 个系列行只有营销名，无法直接查询。`https://www.acer.com/sitemap_usen.xml` 列出了 2,039 个精确型号页（如 `/support/product-support/A515-58GM`）。先拿系列名做模糊查询，接口回一个代表型号（例如「Aspire 18 AI」→ `A18-I71M`，描述 `Aspire A18-I71M`），按连字符前的型号族前缀统计 sitemap 中同族型号页：96 个系列里 90 个取到代表型号，73 个族的型号页多于一个。
+
+其中 **15 个系列在美国站只有一个型号页**，映射无歧义：逐一查询该型号的驱动列表，Win10 均无任何文件（`oem-os-not-listed`），Win11 均列出 Wireless LAN 驱动（`oem-wlan-listed`），两个系统各 15 格、共 **30 格**关闭。证据见 [系列证据](network-rescue-acer-series-proof.csv)，其余 81 个系列的候选型号见[系列型号清单](network-rescue-acer-series-skus.csv)。
+
+MSI 另按规格页「Intel Wi-Fi 6E 模块预装」与驱动面板关闭 MAG B660 TOMAHAWK EVA 的 2 格；其余 12 款无 Wi-Fi 主板的通用 Wi-Fi 驱动包继续按工厂规格门禁挂起。本轮合计关闭 **32 格**：待核 527→**495**（主板 73／73，笔记本 Win10 206、Win11 143）。
