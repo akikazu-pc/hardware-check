@@ -45,12 +45,12 @@ python scripts/collect-windriverindex-wlan.py docs/network-rescue-model-gaps.csv
 
 ## 当前待核与接手顺序
 
-截至 `c11d5ef`（2026-11-13）。主板 Win10／Win11 各 67 条，笔记本 Win10 183 条、Win11 119 条；戴尔系统 ID 组合另有 Win10 127、Win11 39 条。
+截至 `c0827b8`（2026-11-13）。主板 Win10／Win11 各 63 条，笔记本 Win10 183 条、Win11 119 条；戴尔系统 ID 组合另有 Win10 127、Win11 39 条。
 
 | 范围 | 待核 | 最大缺口 |
 | --- | ---: | --- |
-| 主板 Win10 x64 | 67 | ASUS 20、ASRock 13 |
-| 主板 Win11 x64 | 67 | ASRock 16、ASUS 19 |
+| 主板 Win10 x64 | 63 | ASUS 16、ASRock 13 |
+| 主板 Win11 x64 | 63 | ASRock 16、ASUS 15 |
 | 笔记本 Win10 x64 | 183 | Acer 83、HP 63 |
 | 笔记本 Win11 x64 | 119 | Acer 58、HP 21 |
 
