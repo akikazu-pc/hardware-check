@@ -7,6 +7,7 @@
 - GitHub 仓库为 [akikazu-pc/hardware-check](https://github.com/akikazu-pc/hardware-check)。远端 `main` 已合并至 [`ee26ee4`](https://github.com/akikazu-pc/hardware-check/commit/ee26ee4ddf2cb887c9a20c04bb4af472de6b8b42)，`proto/shared-desktop` 已删除。合并后相对该分支最后提交 `2f446fd` 的树差异只有 `AGENTS.md`。
 - `1fb8dcc` 接入 PE 空盘部署，`9c55511` 收录 B850M 普通版无线驱动，`2f446fd` 修复 I226-V 兼容 ID 漏匹配。本地 `main` 的补库提交已与远端 `1347ce8` 合并到 `eebb252`，按包 ID 和行键合并索引，重复的华硕 MediaTek 3.5.0.1349 包统一为 `asus-mb-mtk-3501349`。补库流程见[采集与核验交接](network-rescue-catalog-handoff.md)。之后直接在 `main` 上开发。
 - [合并后 GitHub Actions](https://github.com/akikazu-pc/hardware-check/actions/runs/43266106438)已通过。以下安装包是本地产物。本次合并尚未制作新 GitHub Release、提交商店或部署网站。
+- 2026-11-13 结束时本地 `main` 为 `62ccca5`，比远端 `1347ce8` 多 45 个提交，均未 push，远端 CI 为 Unverified。其中 `38d4e71` 修复运行中 Windows 无法为 I226-V 安装驱动，`62ab531` 修正 PE 命令行版本列表重复编号，`e692526`、`bfed381`、`62ccca5` 记录虚拟机验收；其余为补库会话的提交。
 
 ## 使用方式和交付包
 
@@ -19,7 +20,7 @@
 - PE 可发现已有离线 Windows 并写入网络驱动，也可为微软安装器准备选定驱动。无人值守新装从独立 x64 UEFI WinPE 启动，确认版本和空盘后直接应用映像，绕过 Windows Setup 硬件检查。要求 PE 能看到至少 64 GiB 的空盘。C 盘最多 300 GiB，较小的盘扣除启动和恢复分区后使用剩余空间。默认创建空密码本地管理员 `user`。首次出现微软许可页时由用户确认。
 - 操作细节见[产品原型说明](shared-desktop-prototype.md#当前交付方式)和 [PE 安装流程](shared-desktop-prototype.md#无人值守安装验证)。
 
-本机原开发工作树 `hardware-check-shared-desktop` 的 `artifacts/network-rescue/` 下保留以下 ZIP 及同名 `.sha256`。工作树处于分离 HEAD `2f446fd`。
+本机原开发工作树 `hardware-check-shared-desktop` 的 `artifacts/network-rescue/` 下保留以下 ZIP 及同名 `.sha256`。工作树处于分离 HEAD `2f446fd`。这两个 ZIP 早于合并和 `38d4e71`，不含本地补库的驱动包和运行中安装的修复，发布前须从当前 `main` 重建。
 
 | 文件 | 字节数 | SHA-256 |
 | --- | ---: | --- |
@@ -35,15 +36,29 @@
 | 有分区磁盘保护 | 差分盘包含已有 Windows，GUI 和 CLI 均未将其列为无人值守目标。该 Windows 仍可由离线修复功能发现。 |
 | 驱动与实体联网基线 | 虚拟机用合成 RTL8156 ID 验证签名驱动入库。ROG STRIX B860-G GAMING WIFI 实卡的 MT7925 和 I226-V 均匹配签名 INF，现有 Wi-Fi 访问 HTTPS 成功。I226-V 当时未接网线。宿主驱动未重装或停用。 |
 | 型号与索引 | B850M AYW GAMING WIFI 普通版包已进入两版，核验 75 个精确 PCI 子系统 ID，其中 47 个首次进入在线索引。B850M AYW GAMING WIFI-CSM 已确认板载 Wi-Fi，仍缺实际芯片和精确 INF 对应。 |
+| 消费版断网新装 | 微软官网 Windows 11 26300 与 Windows 10 22H2 日语 ISO，四台无网卡来宾分别部署 Home、Pro，合成 I226-V 或 RTL8168 缺驱动设备。自动选择分系统的签名 INF 并入库，用户确认许可后均离线进入 `user` 桌面。 |
+| PE 修复已有 Windows 10 | DISM 写入 `rt640x64.inf` 10.79.50.1003，驱动库可见。 |
+| 运行中 Windows 安装 | Windows 11 LTSC 24H2 来宾中，合成 I226-V 问题码 28 被识别并匹配 `e2fn.inf`。修复前返回 `NoEligibleDevice`，修复后驱动装到设备并启用 `e2fnexpress`，因无真实硬件报告「绑定未确认」。 |
+| 当前构建 | `62ab531` 的 565 项核心测试和原生 PE 构建通过。 |
 
-详细结果见[验证记录](validation-record.md#离线完整版的无人值守入口)、[型号覆盖进度](network-rescue-coverage-progress.md)和[原厂下载索引](network-rescue-driver-index.csv)。三台部署测试虚拟机均已关机。
+详细结果见[验证记录](validation-record.md#2026-11-13-hyper-v-消费版断网部署与修复)、[型号覆盖进度](network-rescue-coverage-progress.md)和[原厂下载索引](network-rescue-driver-index.csv)。全部测试虚拟机均已关机。
 
 ## 下一阶段验收
 
-1. **实机断网恢复。** 在可隔离的实体机器上分别测试 Wi-Fi 和有线。以缺驱动、无法联网为起点，依次记录硬件 ID、INF 签名、安装结果、驱动绑定、地址和网关、DNS 与 HTTPS。记录系统构建、INF 版本和重启要求。补测 Windows 10 x64 与 Windows 11 Home／Pro x64，分别覆盖正在运行的 Windows、PE 修复已有系统、全新安装后首次联网。步骤、场景矩阵和只读采集脚本见[实机验收](network-rescue-field-test.md)。
+1. **实机断网恢复。** 虚拟机已覆盖流程、驱动选择、入库和离线首次设置，剩下必须用实体网卡验证的部分：驱动加载后问题码为 0、`adapter.status` 为 `Up`、取得地址和网关、DNS 与 HTTPS 成功。在可隔离的实体机器上分别测试 Wi-Fi 和有线，覆盖 Windows 10 x64 与 Windows 11 Home／Pro x64 的正在运行的 Windows、PE 修复已有系统和全新安装后首次联网。Wi-Fi 绑定后还要手动连接无线网络。先用当前 `main` 重建 ZIP，实体 I226-V 在运行中 Windows 的安装依赖 `38d4e71`。步骤、场景矩阵和只读采集脚本见[实机验收](network-rescue-field-test.md)。
 2. **重点型号补库。** 先完成 AM5、LGA1851 以及较新的 Legion／ROG／TUF／Alienware，再扩到 AM4、LGA1700 和旧设备。按型号、修订和地区 SKU 对照原厂页面、硬件 ID、适用系统及签名 INF。B850M CSM 需要从该型号实卡取得 `VEN/DEV/SUBSYS` 或清晰模块标签。型号发现、候选包、精确 INF、实机安装和联网应分别计数。
 3. **PE 兜底。** 当前一次注入一个签名 INF，无匹配时停止。待补多网卡驱动、确认使用系统自带驱动继续、缺存储驱动时加载，以及中断后续装。验证多盘、不同存储控制器和固件启动顺序。保留对目标盘身份和空白状态的确认。
-4. **后续交付。** 在线版待做驱动升级检查与回退。Microsoft Store 当前只有 Hardware Check 负载，断网急救配置工具及跨版本联动仍待实现。GitHub Release、商店和网站各按对应交付流程处理。
+4. **后续交付。** 在线版待做驱动升级检查与回退。Microsoft Store 当前只有 Hardware Check 负载，断网急救配置工具及跨版本联动仍待实现。GitHub Release、商店和网站各按对应交付流程处理，push 与发布须分别获得授权。
+5. **已知小问题。** PE 列出 Windows 10 22H2 介质时显示 WIM 头中的构建号 19041，映像实际为 19045。Windows 11 26300 与 Windows 10 22H2 映像自带 Realtek `rt640x64.inf`，常见 RTL8168 可能无需额外驱动；实机记录时注明是否由系统自带驱动联网。
+
+## 虚拟机实验环境
+
+- 本机只有 Hyper-V。Windows 客户端不支持 DDA 或 USB 直通，虚拟机无法验证真实网卡加载与联网。
+- 实验目录在 `hardware-check-shared-desktop/artifacts/pe-hyperv-validation/`：`consumer-media/` 有官网 ISO 和实验数据 ISO（`lab-bin3.iso` 为最新），`consumer-lab/` 有 `NR-*` 来宾，`consumer-lab/tools/` 有脚本和结果。
+- `tools/Lab.psm1` 负责建来宾、建 LABOUT 日志盘、经 Hyper-V 键盘输入和截图。来宾从 `matched-setup-pe.iso` 启动后，键入 `for %d in (D E F G H I J K) do @if exist %d:\lab.cmd call %d:\lab.cmd`。`lab.cmd` 读取 LABOUT 盘的 `case.cmd` 和 `fixture-ids.txt`，把选项编号经管道交给 `PeNetworkRescue.exe`，日志写回 LABOUT。
+- `tools/fixture/MissingNicFixture.exe` 创建根枚举的缺驱动网卡（问题码 28），仅用于实验来宾。`Inspect-OsDisk.ps1` 只读挂载系统盘核对分区、驱动库和首次设置日志。挂载 VHDX 需要管理员权限，本机经 `Invoke-Elevated.ps1` 执行。
+- 来宾 `user` 为空密码，PowerShell Direct 不接受。`NR-W11LTSC-OS` 是旧 LTSC 盘的副本，实验账户已临时设密码，仅用于运行中安装测试。微软许可页须由用户本人确认。
+- 本机没有 PowerShell 7，`build-network-rescue-pe.cmd` 中的文本生成需要 `pwsh`。本轮用同等逻辑的 Python 生成 `PeStrings.generated.h`，图标沿用旧产物。
 
 ## 代码和构建入口
 
