@@ -52,7 +52,11 @@ def official_download(package):
 def oem_list_omits_wlan(categories):
     names = {category.get("Name", "").strip().lower() for category in categories
              if any(official_download(package) for package in category.get("Files") or [])}
-    return ("lan" in names and bool(names & {"audio", "chipset"}) and not any(
+    files = sum(len(category.get("Files") or []) for category in categories)
+    # A populated list with chipset/audio proves the OEM supports the system; LAN is not
+    # required because several boards publish no LAN driver for a system they still support.
+    populated = "lan" in names or files >= 5
+    return (populated and bool(names & {"audio", "chipset"}) and not any(
         WLAN.search(category.get("Name", "")) or any(WLAN.search(package.get("Title") or "")
             for package in category.get("Files") or []) for category in categories))
 
@@ -78,6 +82,17 @@ def downloads(row, catalog):
             endpoint = API.search(fetch(regional))
             if endpoint is not None:
                 base["supportUrl"] = regional
+        except OSError:
+            pass
+    if endpoint is None:
+        # Some models only publish the driver API on the support-only page while the catalog
+        # points at the product page.
+        slug = re.sub(r"[^a-z0-9]+", "-", row["model"].lower()).strip("-")
+        support_alt = f"https://www.asus.com/supportonly/{slug}/helpdesk_download/"
+        try:
+            endpoint = API.search(fetch(support_alt))
+            if endpoint is not None:
+                base["supportUrl"] = support_alt
         except OSError:
             pass
     if endpoint is None:
