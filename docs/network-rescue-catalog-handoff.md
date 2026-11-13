@@ -11,6 +11,7 @@
 | 华硕笔记本系列拆分 SKU | [ASUS 笔记本 SKU 脚本](../scripts/collect-asus-laptop-skus.py) | 从系列支持页的型号选择器或 ROG `GetPDCPUName` 取得精确 SKU，再逐 SKU 查询 `GetPDOS`／`GetPDDrivers`（45 = Win10、52 = Win11，均 x64）。系列行只在全部 SKU 结论一致时关闭。ROG 页面用浏览器会话快照 `--rog-capture`；`--apply-oem-evidence` 才写主表，重复运行为 0 项变化。 |
 | 逐板候选与 SHA-256 批次 | [逐板采集脚本](../scripts/collect-windriverindex-wlan.py) | 校验快照文件和逐板报告的代次、型号、厂商。以厂商、无线家族、版本、日期匹配唯一归档。`--package-plan` 按有效 SHA-256 分组，并按涉及型号数排序。输出供下载与验证，脚本不回填主表。 |
 | 静态 ZIP 签名审计 | [库审计](../scripts/audit-network-rescue-library.ps1)、[ZIP 审计](../scripts/audit-network-rescue-zip.py) | 更新器检查直接 ZIP 中可见的驱动 INF，跳过只有 `autorun.inf` 的安装封装。签名审计记录 Windows 构建、INF 路径和硬件 ID。ZIP 审计复用内容未变的包，发行验收使用 `--fresh`。 |
+| OEM 页面传输桥 | [Node 桥](../scripts/oem-http.mjs) | 本机 curl、PowerShell 和 Python 在 Acer 卡 TLS 重协商，在 MSI、Gigabyte、Dell 被 Akamai 返回 403。Node 的 fetch 可通过，桥只负责取回原始字节并缓存到 `artifacts/oem-cache/`，解析和判定仍由 Python 脚本完成。`--post <url> <json>` 用于 JSON 接口。 |
 | 待核统计和应用检索导出 | [覆盖统计](../scripts/report-network-rescue-coverage.py)、[目录导出](../scripts/export-network-rescue-search.py) | 分系统、厂商、缺口和系列层级统计。导出更新器来源为[嵌入检索目录](network-rescue-search-models.csv)，应用构建后可搜索。双击更新本身只更新本地目录。 |
 
 ## 仍需单独核验的策略

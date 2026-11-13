@@ -481,3 +481,9 @@ D-Link 本轮补入 34 个原厂网卡型号。首批检查 7 个型号的 11 �
 联想改用 [PSREF 规格表](../scripts/collect-lenovo-psref.py)：`psref.lenovo.com` 可读，15 款待核 Legion 中 14 款取得规格 PDF，受支持系统全部只有 Windows 11。与型号下载页 WLAN 包元数据 `OperatingSystemKeys=["Windows 11 (64-bit)"]` 一致后关闭 8 个 Win10 格；1 款（Legion Pro 7 16ADR10H）取不到 PSREF 路径，其余 7 款缺独立下载列表。证据见[PSREF 表](network-rescue-lenovo-psref-proof.csv)和[逐 SKU OS 表](network-rescue-asus-sku-os-proof.csv)。
 
 成本：PSREF 15 份 PDF 约 1 分钟，SKU 复核 18 页约 40 秒，同一批证据复跑结果一致。本轮待核 700→**679**（主板 79／79，笔记本 Win10 300、Win11 221）。
+
+### 2026-11-13 传输桥与联想下载页 OS 列表
+
+本机 curl、PowerShell 和 Python 在 Acer 卡在 TLS 重协商，在 MSI、Gigabyte、Dell 被 Akamai 返回 403；WordPress 式的「站点不可读」结论其实来自客户端指纹。新增 [Node 传输桥](../scripts/oem-http.mjs)：只负责取回原始字节并缓存，解析与判定仍在 Python 里，现有采集脚本可复用同一桥。实测 Acer、MSI、Gigabyte、Dell、EVGA、联想 `support.lenovo.com` 均返回 200；Gigabyte 与 Acer 的数据接口仍需会话 Cookie，Biostar 仍 403。
+
+联想方面，型号下载页内嵌 `"OSs":[{"Value":"Windows 11 (64-bit)"}]` 就是原厂 OS 选择器。7 款仍待核的 Legion 中 4 款取到该列表且只列 Windows 11，关闭 4 个 Win10 格；3 款的列表为空（型号页存在但无驱动记录），保持待核。此前 8 格用的是 PSREF 加驱动包元数据，两种口径一致。证据见[联想 OS 列表](network-rescue-lenovo-os-list-proof.csv)。
