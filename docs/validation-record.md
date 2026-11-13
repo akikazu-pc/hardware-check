@@ -430,3 +430,10 @@ v0.1.0 退出后，重启仍留下 `PawnIO` 服务和驱动包。复现确认：
 - CLI 列出两个驱动和全装项，确认后返回 0，Windows Setup 语言页启动。
 - `NetworkRescue-setup.log` 记录两个隔离暂存目录（`driver-0\driver`、`driver-1\driver`）和命令 `"F:\setup.exe" /InstallDrivers "X:\windows\TEMP\...\drivers"`，确认 24H2 分支把两个驱动放入同一父目录。
 - 未完成 Setup 安装流程；Setup 实际安装两个驱动和首次联网仍需后续验证。
+
+## 2026-11-13 PE 图形界面 Setup 多驱动
+
+- 在 `NR-NODRV-01` 来宾（PE 启动、Windows 11 26300 媒体、两个合成网卡）用键盘导航验证图形界面：主页「Install Windows with network drivers」→ 选择安装介质 → Installation method「Windows Setup」→ 驱动列表。
+- 驱动列表显示两个驱动和「Install all matched drivers (2)」；选择全装后确认页列出 `rt25cx21x64.inf` 和 `rt68cx21x64.inf` 两个 INF。
+- 确认按钮不是默认按钮（回车走取消，属安全默认）；按 Tab 把焦点移到 Confirm 后空格确认，Windows Setup 语言页启动。
+- 覆盖图形界面的介质选择、安装方式、驱动列表、全装选项和确认；未完成 Setup 实际安装，图形界面的修复分支仍待验证。
