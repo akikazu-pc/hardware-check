@@ -59,7 +59,7 @@
 - `tools/Lab.psm1` 负责建来宾、建 LABOUT 日志盘、经 Hyper-V 键盘输入和截图。来宾从 `matched-setup-pe.iso` 启动后，键入 `for %d in (D E F G H I J K) do @if exist %d:\lab.cmd call %d:\lab.cmd`。`lab.cmd` 读取 LABOUT 盘的 `case.cmd` 和 `fixture-ids.txt`，把选项编号经管道交给 `PeNetworkRescue.exe`，日志写回 LABOUT。
 - `tools/fixture/MissingNicFixture.exe` 创建根枚举的缺驱动网卡（问题码 28），仅用于实验来宾。`Inspect-OsDisk.ps1` 只读挂载系统盘核对分区、驱动库和首次设置日志。挂载 VHDX 需要管理员权限，本机经 `Invoke-Elevated.ps1` 执行。
 - 来宾 `user` 为空密码，PowerShell Direct 不接受。`NR-W11LTSC-OS` 是旧 LTSC 盘的副本，实验账户已临时设密码，仅用于运行中安装测试。微软许可页须由用户本人确认。
-- 本机没有 PowerShell 7，`build-network-rescue-pe.cmd` 中的文本生成需要 `pwsh`。本轮用同等逻辑的 Python 生成 `PeStrings.generated.h`，图标沿用旧产物。
+- 本机默认只有 Windows PowerShell 5.1。已在 `artifacts/tools/pwsh-7.6.0` 放置便携 PowerShell 7.6.0（.NET 10）；构建前把该目录加入 `PATH`，`build-network-rescue-pe.cmd` 的文本/图标生成和 `assert-distribution.ps1` 的 .NET 10 程序集断言都依赖它。此前用 Python 生成 `PeStrings.generated.h` 的替代做法不再需要。
 
 ## 代码和构建入口
 
