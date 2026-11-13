@@ -25,3 +25,7 @@ TMP216-41,11,oem-wlan-listed,EU record: 62 Win11 files and 3 WLAN file(s),de-de
 TMP216-41,10,oem-os-not-listed,EU record has only Win11 files,de-de
 TMP413-51,11,oem-wlan-listed,EU record: 31 Win11 files and 1 WLAN file(s),de-de
 TMP413-51,10,oem-os-not-listed,EU record has only Win11 files,de-de
+A15-51M,11,oem-wlan-listed,"EU record: 40 Win11 files, 4 WLAN files (US Aspire page labels A15-51M as Acer Aspire Intel)",de-de
+A15-51M,10,oem-os-not-listed,EU record has only Win11 files,de-de
+A15-41M,11,oem-wlan-listed,"EU record: 34 Win11 files, 2 WLAN files (US Aspire page labels A15-41M as Acer Aspire AMD)",de-de
+A15-41M,10,oem-os-not-listed,EU record has only Win11 files,de-de

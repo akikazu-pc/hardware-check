@@ -894,3 +894,16 @@ Lenovo 待核 7→1 格（16ADR10H 的 Win10）。本轮合计关闭 **6 格**�
 - **Pro WS 665-ACE**：驱动页确认只有 LAN（Intel I225/I226），仍缺规格/手册，维持待核。
 
 本轮合计关闭 **6 格**：待核 38→**32**。
+
+### 2026-11-13 Acer 支持页 URL 规律与 Aspire 系列拆分
+
+用户给出的 Acer 支持页给出两条关键规律：
+
+- 支持页 URL 为 `/{locale}/support/product-support/{品牌}_{型号}`，空格换下划线（如 `Aspire_A314-22`、`TravelMate_P40-41-G2`），页面 `data-model` 带完整前缀。
+- 页面驱动表由 `POST /{locale}/DynamicContent/GetDriversAndManuals` 加载，body `{ModelName, Local}`；**locale 用 `en-us`／`de-de` 这类带连字符的码**，`Local:"us-en"` 会返回空。接口有机器人防护，连续请求会返回 `hits:null`，EU 站点最稳定。
+
+美国 Aspire 页面的图片命名给出了系列对应码：**Acer Aspire Intel → A15-51M**、**Acer Aspire AMD → A15-41M**。两者欧服记录均为 Win11 only 且含无线驱动（4／2 个 WLAN 文件）→ 拆为 SKU 行，Win11 列出、Win10 未列系统。
+
+ASUS 侧规律：`rog.asus.com/{locale}/laptops/{category}/{series-slug}/spec/` 列出精确 SKU（如 G513RW-R76R3070T、G713PV-R98R4060T）；支持页 `asus.com/{locale}/supportonly/{code}/helpdesk_download/` 的 GetPDOS/GetPDDrivers 给系统与驱动。G513IR／G713IR／G733QSA 的日服 Win11 列表同样只有触控板/Hotfix/工具，无网络类目。
+
+本轮合计关闭 **4 格**：待核 32→**28**。
