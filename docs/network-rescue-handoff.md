@@ -20,12 +20,12 @@
 - PE 可发现已有离线 Windows 并写入网络驱动，也可为微软安装器准备选定驱动。无人值守新装从独立 x64 UEFI WinPE 启动，确认版本和空盘后直接应用映像，绕过 Windows Setup 硬件检查。要求 PE 能看到至少 64 GiB 的空盘。C 盘最多 300 GiB，较小的盘扣除启动和恢复分区后使用剩余空间。默认创建空密码本地管理员 `user`。首次出现微软许可页时由用户确认。
 - 操作细节见[产品原型说明](shared-desktop-prototype.md#当前交付方式)和 [PE 安装流程](shared-desktop-prototype.md#无人值守安装验证)。
 
-本机原开发工作树 `hardware-check-shared-desktop` 的 `artifacts/network-rescue/` 下保留以下 ZIP 及同名 `.sha256`。工作树处于分离 HEAD `2f446fd`。这两个 ZIP 早于合并和 `38d4e71`，不含本地补库的驱动包和运行中安装的修复，发布前须从当前 `main` 重建。
+本机原开发工作树 `hardware-check-shared-desktop` 的 `artifacts/network-rescue/` 仍保留旧版 ZIP（早于合并和 `38d4e71`，大小 5,764,476,552 和 53,719,554）。当前 `main` 工作树的 `artifacts/network-rescue/` 已从本轮代码重建两版，包含补库驱动、`38d4e71` 的运行中安装修复和新增的 4 个华硕笔记本 WLAN 包；实体验收前以这一版为准。构建使用便携 PowerShell 7.6.0（`artifacts/tools/pwsh-7.6.0`）和完整版 `7z.exe`；7za 无法解开 Gigabyte 的 NSIS 安装包。
 
 | 文件 | 字节数 | SHA-256 |
 | --- | ---: | --- |
-| `NetworkRescue-0.2.0-offline-full-portable-win-x64.zip` | 5,764,476,552 | `0F3F43E90BFED9C5BD54D1D6F45F620C806441A6427E8E970CAAD3BD2D8FAF0B` |
-| `NetworkRescue-0.2.0-online-install-win-x64.zip` | 53,719,554 | `37C138DFD894838B25954D5B5385BE4AA5FBCC9753D5B39809F01A048F6FBB72` |
+| `NetworkRescue-0.2.0-offline-full-portable-win-x64.zip` | 6,220,413,183 | `67AC9FEBD96D667D5F51E6A3A3D329731E2561F81D4382558AC8CFA4049D3324` |
+| `NetworkRescue-0.2.0-online-install-win-x64.zip` | 53,838,958 | `7DD2B13985725CCE733F84049CE967718D283B21FEF82EA2543C1ECA1352BF48` |
 
 ## 已有验证
 
