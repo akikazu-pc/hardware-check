@@ -466,7 +466,7 @@ D-Link 本轮补入 34 个原厂网卡型号。首批检查 7 个型号的 11 �
 
 新增按精确型号读原厂手册的规格核验（[脚本](../scripts/collect-asus-motherboard-specs.py)）。手册必须是文件名含该型号的英文用户手册（`_UM_` 或 `_EM_`）；系列手册和快速安装指南不参与判断，避免把 WIFI 兄弟型号的模块算到普通版上。手册全文没有 Wireless／WLAN／802.11 字样才记为原厂完整规格未列 WLAN。
 
-32 款待核里，14 款手册无任何无线字样（[证据](network-rescue-asus-mb-spec-proof.csv)）；8 款只在 BIOS 或法规页提到无线，保留待核；10 款没有精确型号手册，集中在 CSM 变体和 Pro WS 665-ACE、Pro H610M-C-CSM。与原厂下载列表证据合并（手册和下载列表两处都不列 WLAN）后关闭 28 格：主板 Win10 93→79、Win11 93→79，合计 728→700。
+32 款待核里，14 款手册无任何无线字样（[证据](network-rescue-asus-mb-spec-proof.csv)）；细化判定后另有 5 款只有「Notices for non Wi-Fi model」，但下载页同时列出 Wi-Fi 驱动，按冲突保留待核；12 款取不到精确型号手册，集中在 CSM 变体和 TUF 系列手册。与原厂下载列表证据合并（手册和下载列表两处都不列 WLAN）后关闭 28 格：主板 Win10 93→79、Win11 93→79，合计 728→700。
 
 第二轮把判定改得更细：规格摘要按「specifications summary」定位后 4 页，只有规格页里出现无线字样才记为「原厂规格列出」；其余若只命中 ASUS 的「Notices for non Wi-Fi model」，记为原厂明示的无 Wi-Fi 型号。结果 5 款（PRIME B840M-A、B850-PLUS、Pro WS B850M-ACE SE、B760M-A D4、H610M-F D4 R3.0）手册明写非 Wi-Fi 型号，但原厂下载页同时列出 Wi-Fi 驱动，两处来源冲突，保留待核；12 款只有系列手册或 CSM 变体，取不到精确型号手册。把 PRIME B760M-A D4 的出厂无线状态从「只有目录」改为「规格未列 WLAN」。同一批判定复跑为 0 项变化。
 
