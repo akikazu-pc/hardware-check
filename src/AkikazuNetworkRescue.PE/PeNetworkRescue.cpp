@@ -309,12 +309,40 @@ static std::vector<DriverMatch> ScanDrivers(const fs::path& bundle, DWORD build,
 #include "RescueCli.h"
 #include "SharedHome.h"
 
+// Loads signed storage INFs from a user-provided folder so a missing controller driver can expose the target disk.
+static void LoadStorageDrivers(const fs::path& bundle)
+{
+    std::error_code error;
+    const auto folder = bundle / L"storage-drivers";
+    if (!fs::is_directory(folder, error)) return;
+    wchar_t system[MAX_PATH]{};
+    if (!GetSystemDirectoryW(system, MAX_PATH)) return;
+    const auto drvload = fs::path(system) / L"drvload.exe";
+    if (!fs::is_regular_file(drvload, error)) return;
+    for (fs::recursive_directory_iterator it(folder, fs::directory_options::skip_permission_denied, error), end;
+        !error && it != end; it.increment(error)) {
+        if (!it->is_regular_file(error) || _wcsicmp(it->path().extension().c_str(), L".inf") != 0) continue;
+        std::wstring command = L"\"" + drvload.wstring() + L"\" \"" + it->path().wstring() + L"\"";
+        STARTUPINFOW startup{};
+        startup.cb = sizeof startup;
+        PROCESS_INFORMATION process{};
+        if (!CreateProcessW(drvload.c_str(), command.data(), nullptr, nullptr, FALSE, CREATE_NO_WINDOW, nullptr,
+                nullptr, &startup, &process)) {
+            continue;
+        }
+        WaitForSingleObject(process.hProcess, 30000);
+        CloseHandle(process.hThread);
+        CloseHandle(process.hProcess);
+    }
+}
+
 int wmain(int argc, wchar_t** argv)
 {
     wchar_t executable[MAX_PATH]{};
     const auto length = GetModuleFileNameW(nullptr, executable, MAX_PATH);
     if (!length || length >= MAX_PATH) return 3;
     const auto bundle = fs::path(executable).parent_path();
+    LoadStorageDrivers(bundle);
     if (argc == 2 && wcscmp(argv[1], L"--list-targets") == 0) {
         const auto targets = DiscoverTargets();
         for (const auto& target : targets) std::wcout << WindowsLabel(target.root, target.build) << L'\n';
