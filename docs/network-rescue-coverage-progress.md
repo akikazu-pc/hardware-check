@@ -980,3 +980,11 @@ Acer 的三个 Win10 候选 ZIP 也已核对 `Netwtw08.INF` 版本。AX201、Kil
 - **A314-22S、A315-23S、A315-35S**：A315-23S 的 Acer 产品表列出系列无线选项；A315-35S 维修资料确认有可拆 WLAN 模块，未给出精确 S 的无线料号；A314-22S 仍只有兼容性和共用机型资料。[A315-23S 产品表](https://www.jarcomputers.com/images/custom/docs/asA315-23_A315_23G_A315-23S%28Lotus_DA%29_ps_v4-1630461876.pdf) · [A315-35S 维修资料](https://www.manualslib.fr/manual/564079/acer-aspire-1-a115-32.html)
 - **A514-54S、A515-56S**：ENERGY STAR 分别将两款列入 N20C4 和 N20C5。Acer 的欧盟声明在对应型号前缀下列出 Intel AX201NGW 和 Qualcomm NFA344A，未给出具体零售配置的网卡对应关系。[A514-54 系列声明](https://www.manualowl.com/m/Acer%20Computers/Aspire-S40-53/Manual/632190) · [A515-56 系列声明](https://www.manualowl.com/m/Acer%20Computers/Aspire-S50-53/Manual/632192)
 - **A515-44S、A515-45S**：零件表的共用拆解图列 Lite-On Qualcomm NFA344A（`NC.23611.030`），同系列清单还列 Intel AX200（`KE.11X0N.003`）。精确型号的 Acer 驱动查询均无结果，现有零件表没有对应到具体 S 型号的出厂配置。[Acer 零件表](https://room-parts.com.ua/content/files/spisok-vsx-zapchastin-vstanovlenix-u-noutbuc-acer-aspire-a515-44-a515-45-a515-46-9712824.pdf)
+
+### X40-52-M／MG、CN516-72 与 SF314-44G 精确型号复查
+
+- **X40-52-M、X40-52-MG**：Acer 兼容性清单列出两个型号，SCCM 清单没有对应部署包。第三方维修索引并列了这两个型号与 X314-51-M，但所附原理图仅确认 X314-51-M。仍缺两个精确型号的出厂 WLAN 料号或完整 PCI ID。[Acer 兼容性清单](https://www.acer.com/us-en/support/windows/windows-11-compatibility.html) · [Acer SCCM 清单](https://community.acer.com/en/en/kb/articles/15378-microsoft-system-center-configuration-manager-sccm)
+- **CN516-72**：法国升级名单在 CN516-72G 后列 CN516-72P，马来西亚兼容表同一位置写 CN516-72。两份表的差异支持漏写 P 的判断，仍缺 Acer 的明确别名映射或无后缀实机记录。[法国升级名单](https://community.acer.com/fr/kb/articles/14314-liste-des-ordinateurs-portables-acer-eligibles-pour-la-mise-a-niveau-de-windows-11) · [马来西亚兼容表](https://www.acer.com/my-en/support/windows/windows-11-compatibility)
+- **SF314-44G**：配件商将 MediaTek MT7921／MT7921LE（Acer 料号 `KE.11X0M.001`）及 Realtek RTL8852BE 列为替换选项。仍缺该型号的出厂 WLAN 配置或实机完整 PCI ID。[配件清单](https://rozetka.com.ua/471820624/p471820624/)
+
+四个 Win10 格继续待核。主表总计待核 19 格，本轮未下载或收录驱动。
