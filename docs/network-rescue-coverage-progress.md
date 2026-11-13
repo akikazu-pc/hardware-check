@@ -605,3 +605,14 @@ MSI 的笔记本系列页 OS 选择器常常为空，区域 SKU 藏在系列 ban
 - **BIOSTAR**：`http`、裸域名与不同 UA 均返回 403，24 格继续阻塞。
 
 本轮合计关闭 **1 格**（一体机）：主板 57／57，笔记本 Win10 67、Win11 40；待核 221，另有戴尔系统 ID 组合 166 格。
+
+### 2026-11-13 戴尔驱动包清单与 System 块
+
+戴尔的 `laptop-os-record` 行是「型号 × SystemID × 系统」组合。用两份原厂文件逐条核对：
+
+- **Driver Pack Catalog**（`downloads.dell.com/catalog/DriverPackCatalog.cab`，内层其实是 `DriverPackManifest` XML）给出每个 SystemID 的驱动包及其 `SupportedOperatingSystems`。88 个待核组合的 SystemID 只有 Windows 11 包 → Win10 格关闭为 `oem-os-not-listed`。
+- **Win10 驱动包 XML**（`downloads.dell.com/<folder>/<pack>.xml`）的每个 `<System SystemID=...>` 块声明 `<OS Name="Windows10" Arch="x64">`，并在 `DeviceDescription` 中列出驱动；匹配 Wi-Fi/WLAN 且排除 WWAN/GNSS/Bluetooth 后，78 个组合的 Win10 包都含 Wi-Fi 驱动（Intel BE2xx/AX4xx 或 MediaTek MT792x UWD）→ 关闭为 `oem-wlan-listed`。同一包可覆盖多个 SystemID，按 System 块逐一取证。
+
+脚本 [collect-dell-pack-os.py](../scripts/collect-dell-pack-os.py) 先在 CSV 副本上验证：待核 166、可关闭 166。证据见[戴尔 System 证据](network-rescue-dell-os-record-proof.csv)。**戴尔系统 ID 组合清零**，总待核 221 全部为主表型号。
+
+本轮合计关闭 **166 格**：总待核 387→**221**（主板 57／57，笔记本 Win10 67、Win11 40）。
