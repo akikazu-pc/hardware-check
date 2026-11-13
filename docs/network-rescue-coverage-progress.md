@@ -1007,3 +1007,9 @@ Acer 的三个 Win10 候选 ZIP 也已核对 `Netwtw08.INF` 版本。AX201、Kil
 
 - Acer 爱尔兰商店将订货号 `NX.C6BEK.002` 明确标为 `CN516-72P`。美国驱动查询对 `CN516-72P` 返回一条精确记录，对无后缀型号及带系列名前缀的写法均返回零条。用已知 G／P 订货号查询同一接口也返回零条，因此该接口不能用订货号建立别名映射。[Acer 官方商店](https://store.acer.com/en-ie/conceptd-5-pro-laptop-cn516-72p-black-nx-c6bek-002) · [Acer CN516-72P 支持页](https://www.acer.com/us-en/support/product-support/CN516-72P)
 - Acer 法国站的兼容表在 `CN516-72G` 后写 `CN516-72`，法国 Acer 社区的升级名单在对应位置写 `CN516-72P`。N20C9 欧盟符合性声明和用户手册只列 G／P 两种后缀。资料支持清单可能漏写 P，公开实机探针未找到无后缀型号的完整 PCI ID。Win10 格保留待核。[法国站兼容表](https://www.acer.com/fr-fr/support/windows/windows-11-compatibility.html) · [法国社区升级名单](https://community.acer.com/fr/fr/kb/articles/14314-liste-des-ordinateurs-portables-acer-eligibles-pour-la-mise-a-niveau-de-windows-11) · [N20C9 声明与手册](https://www.helpowl.com/p/Acer%20Computers/ConceptD%20CN516-72P/342297)
+
+### SF314-44G 出厂网卡复查
+
+Acer 为 SF314-44 发布的 CE 声明列 N21H1、`SF314-44**********` 和 MediaTek MT7922。声明未单列 SF314-44G，也未给出适用于该精确型号的订货料号或 WLAN 物料。Acer 台湾兼容表明确列出 SF314-44G，美国及台湾精确驱动查询未返回记录。[Acer CE 声明](https://global-download.acer.com/GDFiles/Document/CE%20DoC/CE%20DoC_Acer_1.0_A_A.pdf?acerid=637892104939241451) · [Acer 台湾兼容表](https://www.acer.com/tw-zh/support/windows/windows-11-compatibility.html)
+
+维修资料把 SF314-44G 与 SFX14-41G 同时关联到 Compal LA-L201P 和 LA-L202P，另有资料在 SFX14-42G 上也记录 LA-L202P。板号无法定位精确机型的出厂网卡。公开实机索引未找到可归属 SF314-44G 的完整 PCI ID，Win10 x64 格继续待核。[LA-L202P 板号索引](https://www.laptopserviz.bg/index.php/bgview/boardview/compal-boardview/acer-swift-3-sf314-44g-sfx14-41g-compal-la-l202p-gn20-gh4fz-rev1-0-boardview.html) · [SFX14-42G 板号记录](https://vinafix.com/threads/sfx14-42g-la-l202p.45142/)
