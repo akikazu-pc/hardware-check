@@ -25141,3 +25141,78 @@ Marvell,FastLinQ Ethernet 10Gb 4-port SFP+ QL41134HLCU Adapter,model,pending,htt
 QLogic,4x10GbE QL41134HLCU 10GbE NIC (SR-IOV),model,pending,https://jp.drvhub.net/devices/network/qlogic/4x10gbe-ql41134hlcu-10gbe-nic-sr-iov,Marvell,QL41134HLCU,Other,NetworkAdapter,https://www.marvell.com/support/downloads.html?legacy=true
 QLogic,2x25GE QL41262HMCU CNA,model,pending,https://jp.drvhub.net/devices/network/qlogic/2x25ge-ql41262hmcu-cna,Marvell,QL41262HMCU,Other,NetworkAdapter,https://www.marvell.com/products/fibre-channel-adapters-and-controllers/ul-statements.html
 ZyXEL,GN680-T Gigabit PCI Adapter,model,pending,https://jp.drvhub.net/devices/network/zyxel/gn680-t-gigabit-pci-adapter,ZyXEL,GN680-T,Other,NetworkAdapter,https://static.us.zyxel.com/pdf/2016/zyxel_EOL_list_12_2016.pdf
+Sony,SVJ20213CXW,model,pending,https://jp.drvhub.net/laptops/sony/svj20213cxw,Sony,SVJ20213CXW,Other,AllInOne,https://www.sony.com/electronics/support/tablet-pc-svj-series/svj20213cxw/downloads
+Sony,SVJ20215CDW,model,pending,https://jp.drvhub.net/laptops/sony/svj20215cdw,Sony,SVJ20215CDW,Other,AllInOne,https://www.sony.com/electronics/support/tablet-pc-svj-series/svj20215cdw
+Sony,SVJ20215CLB,model,pending,https://jp.drvhub.net/laptops/sony/svj20215clb,Sony,SVJ20215CLB,Other,AllInOne,https://www.sony.com/electronics/support/tablet-pc-svj-series/svj20215clb
+Sony,SVJ20215CXB,model,pending,https://jp.drvhub.net/laptops/sony/svj20215cxb,Sony,SVJ20215CXB,Other,AllInOne,https://www.sony.com/electronics/support/svj-series-svj2021-series/svj20215cxb
+Sony,SVJ20215CXW,model,pending,https://jp.drvhub.net/laptops/sony/svj20215cxw,Sony,SVJ20215CXW,Other,AllInOne,https://www.sony.com/electronics/support/tablet-pc-svj-series/svj20215cxw
+Sony,SVJ20217CXW,model,pending,https://jp.drvhub.net/laptops/sony/svj20217cxw,Sony,SVJ20217CXW,Other,AllInOne,https://www.sony.com/electronics/support/tablet-pc-svj-series/svj20217cxw
+Sony,SVJ202190X,model,pending,https://jp.drvhub.net/laptops/sony/svj202190x,Sony,SVJ202190X,Other,AllInOne,https://www.sony.com/electronics/support/svj-series-svj2021-series/svj202190x
+Sony,SVJ2021BPXW,model,pending,https://jp.drvhub.net/laptops/sony/svj2021bpxw,Sony,SVJ2021BPXW,Other,AllInOne,https://www.sony.com/electronics/support/tablet-pc-svj-series/svj2021bpxw
+Sony,SVJ20225CLB,model,pending,https://jp.drvhub.net/laptops/sony/svj20225clb,Sony,SVJ20225CLB,Other,AllInOne,https://www.sony.com/electronics/support/tablet-pc-svj-series/svj20225clb
+Sony,SVJ2022A4E,model,pending,https://jp.drvhub.net/laptops/sony/svj2022a4e,Sony,SVJ2022A4E,Other,AllInOne,https://www.sony.co.uk/electronics/support/svj-series-svj2022-series/svj2022a4e/faqs
+Sony,SVJ2022B4E,model,pending,https://jp.drvhub.net/laptops/sony/svj2022b4e,Sony,SVJ2022B4E,Other,AllInOne,https://www.sony.co.uk/electronics/support/tablet-pc-svj-series/svj2022b4e
+Sony,SVJ2022C4E,model,pending,https://jp.drvhub.net/laptops/sony/svj2022c4e,Sony,SVJ2022C4E,Other,AllInOne,https://www.sony.co.uk/electronics/support/tablet-pc-svj-series/svj2022c4e
+Sony,SVJ2022C5E,model,pending,https://jp.drvhub.net/laptops/sony/svj2022c5e,Sony,SVJ2022C5E,Other,AllInOne,https://www.sony.co.uk/electronics/support/tablet-pc-svj-series/svj2022c5e/downloads
+Sony,SVJ20235CLB,model,pending,https://jp.drvhub.net/laptops/sony/svj20235clb,Sony,SVJ20235CLB,Other,AllInOne,https://www.sony.com/electronics/support/tablet-pc-svj-series/svj20235clb
+Sony,SVJ20235CXB,model,pending,https://jp.drvhub.net/laptops/sony/svj20235cxb,Sony,SVJ20235CXB,Other,AllInOne,https://www.sony.com/electronics/support/svj-series-svj2023-series/svj20235cxb
+Sony,SVJ20236CXW,model,pending,https://jp.drvhub.net/laptops/sony/svj20236cxw,Sony,SVJ20236CXW,Other,AllInOne,https://www.sony.com/electronics/support/tablet-pc-svj-series/svj20236cxw/articles/00022263
+Sony,SVJ20237CXW,model,pending,https://jp.drvhub.net/laptops/sony/svj20237cxw,Sony,SVJ20237CXW,Other,AllInOne,https://www.sony.com/electronics/support/tablet-pc-svj-series/svj20237cxw/articles/00026587
+Dell,Adamo 13,model,pending,https://jp.drvhub.net/laptops/dell/adamo-13,Dell,Adamo 13,Laptop,,https://www.dell.com/support/product-details/en-in/product/adamo-13/resources/manuals
+Dell,Adamo XPS,model,pending,https://jp.drvhub.net/laptops/dell/adamo-xps,Dell,Adamo XPS,Laptop,,https://www.dell.com/support/product-details/en-us/product/adamo-xps/resources/manuals
+Dell,G3 3500,model,pending,https://jp.drvhub.net/laptops/dell/g3-3500,Dell,G3 15 3500,Laptop,,https://www.dell.com/support/product-details/de-de/product/g-series-15-3500-laptop/resources/manuals
+Dell,G3 3579,model,pending,https://jp.drvhub.net/laptops/dell/g3-3579,Dell,G3 15 3579,Laptop,,https://www.dell.com/support/product-details/en-us/product/g-series-15-3579-laptop/resources/manuals
+Dell,G3 3590,model,pending,https://jp.drvhub.net/laptops/dell/g3-3590,Dell,G3 15 3590,Laptop,,https://www.dell.com/support/product-details/da-dk/product/g-series-15-3590-laptop/resources/manuals
+Dell,G3 3779,model,pending,https://jp.drvhub.net/laptops/dell/g3-3779,Dell,G3 17 3779,Laptop,,https://www.dell.com/support/product-details/en-id/product/g-series-17-3779-laptop/resources/manuals
+Dell,G5 5500,model,pending,https://jp.drvhub.net/laptops/dell/g5-5500,Dell,G5 15 5500,Laptop,,https://www.dell.com/support/product-details/en-my/product/g-series-15-5500-laptop/resources/manuals
+Dell,G5 5587,model,pending,https://jp.drvhub.net/laptops/dell/g5-5587,Dell,G5 15 5587,Laptop,,https://www.dell.com/support/product-details/de-ch/product/g-series-15-5587-laptop/resources/manuals
+Dell,G5 5590,model,pending,https://jp.drvhub.net/laptops/dell/g5-5590,Dell,G5 15 5590,Laptop,,https://www.dell.com/support/product-details/de-de/product/g-series-15-5590-laptop/resources/manuals
+Dell,G5 5505,model,pending,https://jp.drvhub.net/laptops/dell/g5-5505,Dell,G5 SE 5505,Laptop,,https://www.dell.com/support/product-details/en-au/product/g-series-15-5505-laptop/resources/manuals
+Dell,G7 7500,model,pending,https://jp.drvhub.net/laptops/dell/g7-7500,Dell,G7 15 7500,Laptop,,https://www.dell.com/support/product-details/de-de/product/g-series-15-7500-laptop/resources/manuals
+Dell,G7 7588,model,pending,https://jp.drvhub.net/laptops/dell/g7-7588,Dell,G7 15 7588,Laptop,,https://www.dell.com/support/product-details/en-us/product/g-series-15-7588-laptop/resources/manuals
+Dell,G7 7590,model,pending,https://jp.drvhub.net/laptops/dell/g7-7590,Dell,G7 15 7590,Laptop,,https://www.dell.com/support/product-details/de-ch/product/g-series-15-7590-laptop/resources/manuals
+Dell,G7 7700,model,pending,https://jp.drvhub.net/laptops/dell/g7-7700,Dell,G7 17 7700,Laptop,,https://www.dell.com/support/product-details/en-us/product/g-series-17-7700-laptop/resources/manuals
+Dell,G7 7790,model,pending,https://jp.drvhub.net/laptops/dell/g7-7790,Dell,G7 17 7790,Laptop,,https://www.dell.com/support/product-details/en-us/product/g-series-17-7790-laptop/resources/manuals
+Dell,Studio 1435,model,pending,https://jp.drvhub.net/laptops/dell/studio-1435,Dell,Studio 1435,Laptop,,https://www.dell.com/support/product-details/en-bg/product/studio-1435/resources/manuals
+Dell,Studio 1440,model,pending,https://jp.drvhub.net/laptops/dell/studio-1440,Dell,Studio 1440,Laptop,,https://www.dell.com/support/product-details/en-ph/product/studio-1440/resources/manuals
+Dell,Studio 1450,model,pending,https://jp.drvhub.net/laptops/dell/studio-1450,Dell,Studio 1450,Laptop,,https://www.dell.com/support/product-details/en-us/product/studio-1450/resources/manuals
+Dell,Studio 1458,model,pending,https://jp.drvhub.net/laptops/dell/studio-1458,Dell,Studio 1458,Laptop,,https://www.dell.com/support/product-details/de-de/product/studio-1458/resources/manuals
+Dell,Studio 1535,model,pending,https://jp.drvhub.net/laptops/dell/studio-1535,Dell,Studio 1535,Laptop,,https://www.dell.com/support/product-details/es-es/product/studio-1535/resources/manuals
+Dell,Studio 1536,model,pending,https://jp.drvhub.net/laptops/dell/studio-1536,Dell,Studio 1536,Laptop,,https://www.dell.com/support/product-details/ja-jp/product/studio-1536/resources/manuals
+Dell,Studio 1537,model,pending,https://jp.drvhub.net/laptops/dell/studio-1537,Dell,Studio 1537,Laptop,,https://www.dell.com/support/product-details/en-us/product/studio-1537/resources/manuals
+Dell,Studio 1555,model,pending,https://jp.drvhub.net/laptops/dell/studio-1555,Dell,Studio 1555,Laptop,,https://www.dell.com/support/product-details/da-dk/product/studio-1555/resources/manuals
+Dell,Studio 1557,model,pending,https://jp.drvhub.net/laptops/dell/studio-1557,Dell,Studio 1557,Laptop,,https://www.dell.com/support/product-details/de-de/product/studio-1557/resources/manuals
+Dell,Studio 1558,model,pending,https://jp.drvhub.net/laptops/dell/studio-1558,Dell,Studio 1558,Laptop,,https://www.dell.com/support/product-details/en-us/product/studio-1558/resources/manuals
+Dell,Studio 1569,model,pending,https://jp.drvhub.net/laptops/dell/studio-1569,Dell,Studio 1569,Laptop,,https://www.dell.com/support/product-details/de-de/product/studio-1569/resources/manuals
+Dell,Studio 1735,model,pending,https://jp.drvhub.net/laptops/dell/studio-1735,Dell,Studio 1735,Laptop,,https://www.dell.com/support/product-details/en-us/product/studio-1735/resources/manuals
+Dell,Studio 1737,model,pending,https://jp.drvhub.net/laptops/dell/studio-1737,Dell,Studio 1737,Laptop,,https://www.dell.com/support/product-details/en-us/product/studio-1737/resources/manuals
+Dell,Studio 1745,model,pending,https://jp.drvhub.net/laptops/dell/studio-1745,Dell,Studio 1745,Laptop,,https://www.dell.com/support/product-details/en-us/product/studio-1745/resources/manuals
+Dell,Studio 1747,model,pending,https://jp.drvhub.net/laptops/dell/studio-1747,Dell,Studio 1747,Laptop,,https://www.dell.com/support/product-details/es-es/product/studio-1747/resources/manuals
+Dell,Studio 1749,model,pending,https://jp.drvhub.net/laptops/dell/studio-1749,Dell,Studio 1749,Laptop,,https://www.dell.com/support/product-details/es-es/product/studio-1749/resources/manuals
+Dell,Studio XPS 1645,model,pending,https://jp.drvhub.net/laptops/dell/studio-xps-1645,Dell,Studio XPS 1645,Laptop,,https://www.dell.com/support/product-details/en-us/product/studio-xps-1645/resources/manuals
+Dell,Studio XPS 1647,model,pending,https://jp.drvhub.net/laptops/dell/studio-xps-1647,Dell,Studio XPS 1647,Laptop,,https://www.dell.com/support/product-details/en-us/product/studio-xps-1647/resources/manuals
+Dell,Studio XPS 1340,model,pending,https://jp.drvhub.net/laptops/dell/studio-xps-1340,Dell,Studio XPS M1340,Laptop,,https://www.dell.com/support/product-details/en-us/product/studio-xps-13/resources/articles
+Dell,Studio XPS 1640,model,pending,https://jp.drvhub.net/laptops/dell/studio-xps-1640,Dell,Studio XPS M1640,Laptop,,https://www.dell.com/support/product-details/de-de/product/studio-xps-16/resources/manuals
+HP,15 PAVILION 15-EG2073CL,model,pending,https://jp.drvhub.net/laptops/hp/15-pavilion-15-eg2073cl,HP,Pavilion 15-eg2073cl,Laptop,,https://support.hp.com/us-en/product/troubleshooting/hp-pavilion-laptop-pc-15-eg2000/model/2101006353?sku=644Y9UA
+Sony,SVD11215CLB,model,pending,https://jp.drvhub.net/laptops/sony/svd11215clb,Sony,SVD11215CLB,Laptop,,https://www.sony.ca/en/electronics/support/svd-series-svd1121-series/svd11215cdb/downloads/W0008060
+Sony,SVD1121APJB,model,pending,https://jp.drvhub.net/laptops/sony/svd1121apjb,Sony,SVD1121APJB,Laptop,,https://support.sony.jp/electronics/support/laptop-pc-svd-series
+Sony,SVD11225CYB,model,pending,https://jp.drvhub.net/laptops/sony/svd11225cyb,Sony,SVD11225CYB,Laptop,,https://www.sony.com/electronics/support/laptop-pc-svd-series/svd11225cyb
+Sony,SVD112290X,model,pending,https://jp.drvhub.net/laptops/sony/svd112290x,Sony,SVD112290X,Laptop,,https://www.sony.com/electronics/support/svd-series-svd1122-series/svd112290x
+Sony,SVD13215CDB,model,pending,https://jp.drvhub.net/laptops/sony/svd13215cdb,Sony,SVD13215CDB,Laptop,,https://www.sony.com/electronics/support/laptop-pc-svd-series/svd13215cdb
+Sony,SVD13215PXW,model,pending,https://jp.drvhub.net/laptops/sony/svd13215pxw,Sony,SVD13215PXW,Laptop,,https://www.sony.com/electronics/support/laptop-pc-svd-series/svd13215pxw/downloads
+Sony,SVD1321C5E,model,pending,https://jp.drvhub.net/laptops/sony/svd1321c5e,Sony,SVD1321C5E,Laptop,,https://www.sony.co.uk/electronics/support/laptop-pc-svd-series/svd1321c5e/downloads
+Sony,SVD13223CXB,model,pending,https://jp.drvhub.net/laptops/sony/svd13223cxb,Sony,SVD13223CXB,Laptop,,https://www.sony.com/electronics/support/svd-series-svd1322-series/svd13223cxb
+Sony,SVD13225CLW,model,pending,https://jp.drvhub.net/laptops/sony/svd13225clw,Sony,SVD13225CLW,Laptop,,https://www.sony.com/electronics/support/laptop-pc-svd-series/svd13225clw
+Sony,SVD13225PXW,model,pending,https://jp.drvhub.net/laptops/sony/svd13225pxw,Sony,SVD13225PXW,Laptop,,https://www.sony.com/electronics/support/laptop-pc-svd-series/svd13225pxw
+Sony,SVD1322BPXB,model,pending,https://jp.drvhub.net/laptops/sony/svd1322bpxb,Sony,SVD1322BPXB,Laptop,,https://www.sony.com/electronics/support/product/svd1322bpxb/downloads
+Sony,SVD1322C5E,model,pending,https://jp.drvhub.net/laptops/sony/svd1322c5e,Sony,SVD1322C5E,Laptop,,https://www.sony.co.uk/electronics/support/laptop-pc-svd-series/svd1322c5e
+Sony,SVD13233CXW,model,pending,https://jp.drvhub.net/laptops/sony/svd13233cxw,Sony,SVD13233CXW,Laptop,,https://www.sony.com/electronics/support/laptop-pc-svd-series/svd13233cxw
+Sony,SVD13237CLB,model,pending,https://jp.drvhub.net/laptops/sony/svd13237clb,Sony,SVD13237CLB,Laptop,,https://www.sony.com/electronics/support/laptop-pc-svd-series/svd13237clb/downloads
+Sony,SVZ1311AGJB,model,pending,https://jp.drvhub.net/laptops/sony/svz1311agjb,Sony,SVZ1311AGJB,Laptop,,https://www.sony.jp/vaio/products/VZ11/
+Sony,SVZ1311AJ,model,pending,https://jp.drvhub.net/laptops/sony/svz1311aj,Sony,SVZ1311AJ,Laptop,,https://www.sony.jp/vaio/products/VZ11/
+Sony,SVZ1311C5E,model,pending,https://jp.drvhub.net/laptops/sony/svz1311c5e,Sony,SVZ1311C5E,Laptop,,https://www.sony.co.uk/electronics/support/laptop-pc-svz-series/svz1311c5e/specifications
+Broadcom,NX-E PCIe 10Gb 2-Port Base-T Ethernet Adapter,model,pending,https://jp.drvhub.net/devices/network/broadcom/nx-e-pcie-10gb-2-port-base-t-ethernet-adapter,Broadcom,7ZT7A00496,Other,NetworkAdapter,https://lenovopress.lenovo.com/lp0931-thinksystem-network-adapters-renamed
+Broadcom,NX-E ML2 10Gb 2-Port Base-T Ethernet Adapter,model,pending,https://jp.drvhub.net/devices/network/broadcom/nx-e-ml2-10gb-2-port-base-t-ethernet-adapter,Broadcom,7ZT7A00497,Other,NetworkAdapter,https://lenovopress.lenovo.com/lp0931-thinksystem-network-adapters-renamed
+Broadcom,NX-E PCIe 25Gb 1-Port SFP28 Ethernet Adapter,model,pending,https://jp.drvhub.net/devices/network/broadcom/nx-e-pcie-25gb-1-port-sfp28-ethernet-adapter,Broadcom,7ZT7A00505,Other,NetworkAdapter,https://lenovopress.lenovo.com/lp0931-thinksystem-network-adapters-renamed
+Intel,Ethernet Network Adapter XXV710-DA2 for OCP 3.0,model,pending,https://jp.drvhub.net/devices/network/intel/ethernet-network-adapter-xxv710-da2-for-ocp-3-0,Intel,XXV710DA2OCPV3L,Other,NetworkAdapter,https://cdrdv2-public.intel.com/791585/Kinney%20Flat%20K90103%20XXV710DA2OCPV3L%20CMS%20DoC_Ref_78920_Rev_1.pdf
+Mellanox,ConnectX-4 Lx ML2 1x25GbE SFP28 Adapter,model,pending,https://jp.drvhub.net/devices/network/mellanox/connectx-4-lx-ml2-1x25gbe-sfp28-adapter,Mellanox,00MN990,Other,NetworkAdapter,https://lenovopress.lenovo.com/lp0931-thinksystem-network-adapters-renamed
