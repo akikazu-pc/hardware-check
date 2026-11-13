@@ -411,6 +411,7 @@
   "rescue.onlineFailed": "無法下載或驗證此套件。",
   "rescue.onlineSelect": "選擇套件",
   "rescue.onlineUpdate": "可升級",
+  "rescue.onlineRollback": "可回復",
   "rescue.note": "只讀取本機網路介面，不連線網際網路。連結速率是網路卡速率，不是電信商頻寬。",
   "rescue.present": "有",
   "rescue.refresh": "重新整理",

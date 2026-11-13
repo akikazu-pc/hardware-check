@@ -40,6 +40,25 @@ public static class OnlineDriverCatalog
                 device.HardwareIds.Any(id => package.DevicePrefixes.Any(prefix => MatchesPrefix(id, prefix))))).ToArray();
     }
 
+    /// <summary>Packages older than the driver already bound to an installed adapter, for a manual rollback.</summary>
+    public static IReadOnlyList<OnlineDriverPackage> FindOlder(NetworkDeviceDiagnostic diagnostic)
+    {
+        if (!string.Equals(diagnostic.Architecture, "X64", StringComparison.OrdinalIgnoreCase))
+        {
+            return [];
+        }
+
+        var targetWindows = diagnostic.WindowsBuild < 22000 ? "windows10" : "windows11";
+        return Packages.Value.Where(package =>
+            (!package.Windows11Only || diagnostic.WindowsBuild >= 22000) &&
+            (package.TargetWindows is null || package.TargetWindows == targetWindows) &&
+            diagnostic.WindowsBuild >= package.MinimumWindowsBuild &&
+            diagnostic.Devices.Any(device => device.ProblemCode == 0 &&
+                !string.IsNullOrWhiteSpace(device.DriverVersion) &&
+                DriverVersion.IsNewer(device.DriverVersion, package.Version) &&
+                device.HardwareIds.Any(id => package.DevicePrefixes.Any(prefix => MatchesPrefix(id, prefix))))).ToArray();
+    }
+
     private static IReadOnlyList<OnlineDriverPackage> Find(NetworkDeviceDiagnostic diagnostic, Func<string, string, bool> matches,
         bool includeInstalled)
     {

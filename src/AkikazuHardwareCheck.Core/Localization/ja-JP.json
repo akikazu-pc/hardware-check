@@ -411,6 +411,7 @@
   "rescue.onlineFailed": "ダウンロードまたは検証に失敗しました。",
   "rescue.onlineSelect": "パッケージを選択",
   "rescue.onlineUpdate": "更新あり",
+  "rescue.onlineRollback": "ロールバック可能",
   "rescue.note": "ローカルのネットワークインターフェースだけを読み取り、インターネットには接続しません。リンク速度はアダプターの速度で、回線事業者の帯域幅ではありません。",
   "rescue.present": "あり",
   "rescue.refresh": "更新",

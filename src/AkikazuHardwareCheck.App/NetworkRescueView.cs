@@ -811,6 +811,9 @@ internal sealed class NetworkRescueView : UserControl
         HashSet<string> updateIds = downloadOnly
             ? OnlineDriverCatalog.FindUpdates(diagnostic).Select(package => package.Id).ToHashSet(StringComparer.Ordinal)
             : [];
+        HashSet<string> rollbackIds = downloadOnly
+            ? OnlineDriverCatalog.FindOlder(diagnostic).Select(package => package.Id).ToHashSet(StringComparer.Ordinal)
+            : [];
         IReadOnlyList<NetworkDeviceCandidate> devices = downloadOnly ? diagnostic.Devices : MissingDriverDevices(diagnostic);
         if (packages.Count == 0 && possible.Count == 0)
         {
@@ -820,14 +823,14 @@ internal sealed class NetworkRescueView : UserControl
 
         var selected = packages.Count == 1 && possible.Count == 0
             ? packages[0]
-            : SelectOnlinePackage(packages, possible, diagnostic, updateIds);
+            : SelectOnlinePackage(packages, possible, diagnostic, updateIds, rollbackIds);
         if (selected is null)
         {
             return;
         }
 
         var prompt = string.Join(Environment.NewLine, _t["rescue.onlineConfirm"],
-            PackageLabel(selected, updateIds.Contains(selected.Id)), selected.Source);
+            PackageLabel(selected, updateIds.Contains(selected.Id), rollbackIds.Contains(selected.Id)), selected.Source);
         if (MessageBox.Show(this, prompt, _t["rescue.onlineCandidates"], MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) != DialogResult.Yes)
         {
@@ -909,7 +912,8 @@ internal sealed class NetworkRescueView : UserControl
     }
 
     private OnlineDriverPackage? SelectOnlinePackage(IReadOnlyList<OnlineDriverPackage> matches,
-        IReadOnlyList<OnlineDriverPackage> possible, NetworkDeviceDiagnostic diagnostic, IReadOnlySet<string> updates)
+        IReadOnlyList<OnlineDriverPackage> possible, NetworkDeviceDiagnostic diagnostic, IReadOnlySet<string> updates,
+        IReadOnlySet<string> rollbacks)
     {
         var packages = matches.Concat(possible).ToArray();
         using var dialog = new Form
@@ -923,11 +927,12 @@ internal sealed class NetworkRescueView : UserControl
         var list = new ListBox { Dock = DockStyle.Fill };
         foreach (var package in matches)
         {
-            list.Items.Add(PackageLabel(package, updates.Contains(package.Id)));
+            list.Items.Add(PackageLabel(package, updates.Contains(package.Id), rollbacks.Contains(package.Id)));
         }
         foreach (var package in possible)
         {
-            list.Items.Add($"[{_t["rescue.possibleCandidates"]}] {PackageLabel(package, updates.Contains(package.Id))}");
+            list.Items.Add($"[{_t["rescue.possibleCandidates"]}] " +
+                PackageLabel(package, updates.Contains(package.Id), rollbacks.Contains(package.Id)));
         }
 
         var select = Ui.Button();
@@ -971,8 +976,13 @@ internal sealed class NetworkRescueView : UserControl
             : null;
     }
 
-    private string PackageLabel(OnlineDriverPackage package, bool update) =>
-        $"{package.Id} {package.Version}" + (update ? $"  [{_t["rescue.onlineUpdate"]}]" : "");
+    private string PackageLabel(OnlineDriverPackage package, bool update, bool rollback)
+    {
+        var label = $"{package.Id} {package.Version}";
+        if (update) label += $"  [{_t["rescue.onlineUpdate"]}]";
+        else if (rollback) label += $"  [{_t["rescue.onlineRollback"]}]";
+        return label;
+    }
 
     private OfflinePackageCandidate? SelectCandidate(string root, IReadOnlyList<OfflinePackageCandidate> candidates, string skipped)
     {

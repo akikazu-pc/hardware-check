@@ -151,4 +151,24 @@ public sealed class OnlineDriverCatalogTests
             Devices = [diagnostic.Devices[0] with { ProblemCode = 28 }],
         }));
     }
+
+    [Fact]
+    public void FindsOlderCatalogPackageForABoundAdapter()
+    {
+        var diagnostic = new NetworkDeviceDiagnostic(2, 26300, "X64",
+        [
+            new([@"PCI\VEN_14C3&DEV_0616&SUBSYS_00000000"], null, 0, NetworkCandidateKind.PciController, "9.9.9.9"),
+        ]);
+
+        Assert.Contains(OnlineDriverCatalog.FindOlder(diagnostic), package => package.Id == "asus-rog-mtk-3421046");
+        Assert.Empty(OnlineDriverCatalog.FindOlder(diagnostic with { WindowsBuild = 19045 }));
+        Assert.Empty(OnlineDriverCatalog.FindOlder(diagnostic with
+        {
+            Devices = [diagnostic.Devices[0] with { DriverVersion = "1.0.0.0" }],
+        }));
+        Assert.Empty(OnlineDriverCatalog.FindOlder(diagnostic with
+        {
+            Devices = [diagnostic.Devices[0] with { ProblemCode = 28 }],
+        }));
+    }
 }
