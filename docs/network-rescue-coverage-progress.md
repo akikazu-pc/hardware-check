@@ -964,3 +964,11 @@ Acer 的三个 Win10 候选 ZIP 也已核对 `Netwtw08.INF` 版本。AX201、Kil
 - **其他待核**：公开 DMI 索引可见带 B 的 B311R-31／B311RN-31，欠缺无 B 拼法的实机对应。FCC 的 SP513-55NA 送审资料增加了 MT7921 配置线索。Acer 商店确认 CN516-72G／72P 的 AX1650i，原厂驱动的 INF 和签名已核对，无后缀 CN516-72 仍缺型号对应。SF314-44G、X40-52-M／MG、Aspire S 变体和 Pro WS 665-ACE WLAN 保留待核。[SP513-55NA FCC 附件](https://fccid.io/HLZAI7921W/User-Manual/User-manual-5262930) · [CN516-72G 原厂规格](https://store.acer.com/en-us/conceptd-5-laptop-cn516-72g-787y) · [CN516-72P 原厂规格](https://store.acer.com/en-ie/conceptd-5-pro-laptop-cn516-72p-black-nx-c6bek-002)
 
 离线完整版 ZIP 已逐文件验证。成品内 Win10 B311RA-32 的 INF、CAT、SYS 已与 SCCM 同哈希记录复核。ZIP SHA-256 为 `48e4c65ccfdc1f1dbb7b901f512b8079cf29b7bfd63563e360c7d4eca4d3055f`。
+
+### 311R-31、311RN-31 与 SP513-55NA 复查
+
+待核维持 **19 格**。本轮新增的是部件与 INF 的对应证据。
+
+- **311R-31、311RN-31**：Acer 的维修指南封面同时列出 `TM311R-31`、`TM311RN-31`、`TMB311R-31`、`TMB311RN-31`。指南表 6-3 将对应 Intel Wireless-AC 9560 的 `KE.11A0N.010` 标为示例料号，实际配置另核。Acer 兼容清单分别列出带 B 和不带 B 的写法。另有学校采购文件以 `311RN-31` 订购 Win10 Pro Education 设备，文件未给 Acer 料号或网卡 ID。仍缺 Acer 的正式别名对应或无 B 实机记录。[Acer 维修指南](https://global-download.acer.com/GDFiles/Document/Lifecycle%20Ext.%20Guide/Lifecycle%20Ext.%20Guide_Acer_1.0_A_A.pdf?acerid=637532774176924186) · [Acer 兼容清单](https://www.acer.com/id-id/support/windows/windows-11-compatibility.html) · [学校采购记录](https://www.colegiourdaneta.com/content/uploads/2021/01/Proyecto-1x1-2020-21.pdf)
+- **9560 Win10 x64 候选**：下载并静态提取 Acer 为 `TMB311-31R/TMB311-31RN` 列出的 SCCM CAB。CAB SHA-256 `5885492638863b332ffc40d3ac1e7cc3f775b6ccde11dd97c263eee228f42c4e`，含 `Netwtw08.INF` 21.50.1.1，CAT 签名有效。该 INF 的 156 条 9560 完整 PCI 子系统 ID 均在带 B 型号的 Acer 22.0.1.1 ZIP 中出现。这加强了两份包的对应，仍需确认精确实机或正式别名。[Acer SCCM 表](https://community.acer.com/en/en/kb/articles/15378-microsoft-system-center-configuration-manager-sccm) · [CAB](https://global-download.acer.com/SupportFiles/Files/Support/SCCM/TMB311-31_Windows10_All.cab)
+- **SP513-55NA**：精确型号的备件目录出现 Intel WLAN，商品图片料号 `KE.11X0N.021` 对应 Killer AX1650i。备件可用性与 FCC 送审配置均无法确认零售出厂网卡，仍缺可对应精确型号的 PCI ID 或出厂物料记录。[精确型号备件目录](https://dev.ipc-computer.de/acer/notebook/spin-serie/spin-5-sp513-55na/) · [料号资料](https://www.acerparts.ca/product/ke-11x0n-021/)
