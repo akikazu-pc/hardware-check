@@ -423,3 +423,10 @@ v0.1.0 退出后，重启仍留下 `PawnIO` 服务和驱动包。复现确认：
 - 实验数据 ISO 根目录加入 `storage-drivers/`，放入已签名的 `rt640x64.inf`、`.cat` 和 `.sys`；实验脚本增加 probe 模式，只运行 `PeNetworkRescue.exe --list-targets` 后输出 `pnputil /enum-drivers`。
 - PE 启动并运行 probe 后：`NetworkRescue-storage.log` 记录 `rt640x64.inf 0`（drvload 退出码 0）；`pnputil /enum-drivers` 的 `Original Name` 列出 `rt640x64.inf`，确认启动时的 `storage-drivers` 加载生效。
 - 本轮用已签名网络 INF 作代理，未构造真实缺存储控制器的磁盘场景；因此“加载后磁盘可见”仍需在真实存储设备上验证。
+
+## 2026-11-13 PE Setup 多驱动暂存验证
+
+- 在 `NR-NODRV-01` 来宾（PE 启动，挂载 Windows 11 26300 媒体和实验数据 ISO）用两个合成网卡（RTL8125、RTL8168）走 Setup 分支，选择「Install all matched drivers (2)」。
+- CLI 列出两个驱动和全装项，确认后返回 0，Windows Setup 语言页启动。
+- `NetworkRescue-setup.log` 记录两个隔离暂存目录（`driver-0\driver`、`driver-1\driver`）和命令 `"F:\setup.exe" /InstallDrivers "X:\windows\TEMP\...\drivers"`，确认 24H2 分支把两个驱动放入同一父目录。
+- 未完成 Setup 安装流程；Setup 实际安装两个驱动和首次联网仍需后续验证。
