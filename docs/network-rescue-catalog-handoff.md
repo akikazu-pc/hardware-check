@@ -49,10 +49,10 @@ python scripts/collect-windriverindex-wlan.py docs/network-rescue-model-gaps.csv
 
 | 范围 | 待核 | 最大缺口 |
 | --- | ---: | --- |
-| 主板 Win10 x64 | 57 | ASUS 14、ASRock 9 |
-| 主板 Win11 x64 | 57 | ASRock 12、ASUS 13 |
+| 主板 Win10 x64 | 55 | ASUS 12、ASRock 9 |
+| 主板 Win11 x64 | 56 | ASRock 12、ASUS 12 |
 | 笔记本 Win10 x64 | 64 | Acer 49、ASUS 7 |
-| 笔记本 Win11 x64 | 40 | Acer 20、ASUS 13 |
+| 笔记本 Win11 x64 | 39 | Acer 20、ASUS 12 |
 
 1. Acer 笔记本现有 106／82 条待核；15 个系列已按单型号族关闭，其余 81 个系列用[系列型号清单](network-rescue-acer-series-skus.csv)逐 SKU 查询，要求该系列全部型号结论一致后才关闭。
 2. 联想余 Win10 7／Win11 4，华硕笔记本余 10；MSI 笔记本 85／77 与 HP 63／21：MSI 的 Killer 通用包要拆包核对 INF，新款笔记本的原厂驱动列表为空；HP 用 HPIA 精确引用，只有矩阵范围说明的 Win10 条目继续保留原厂证据缺口。

@@ -626,3 +626,13 @@ MSI 的笔记本系列页 OS 选择器常常为空，区域 SKU 藏在系列 ban
 华硕笔记本余 7 格是空 OS 列表（FA608PPI／PMI）或无网络类目（G513IR／G713IR／G733QSA 的 Win11、FA608UH）。
 
 本轮合计关闭 **3 格**：待核 221→**218**（主板 57／57，笔记本 Win10 64、Win11 40）。
+
+### 2026-11-13 华硕区域支持页
+
+部分型号在全局支持页取不到 `GetPDOS`／`GetPDDrivers`，但区域页（`/tw/supportonly/<model>/helpdesk_download/`）可用，且返回的是同一套原厂数据：
+
+- **ROG MAXIMUS Z890 HERO**：Win10 与 Win11 都列出「Intel Wi-Fi Driver V24.20.0.4 for Windows10, Windows11 64-bit」，两格关闭并把出厂无线证据升为规格列出。
+- **ROG STRIX B860-G GAMING WIFI**：Win11 列 MediaTek MT7925/7927 驱动，Win10 没有任何无线类目 → Win10 关闭为原厂未列。
+- **TUF Gaming A16 FA608UH**：Win11 的「網路驅動程式」类目里有 Realtek／MediaTek 無線區域網驱动（V6001.16.174.103、V3.6.2.1434），Win11 关闭。注意类别名是中文，英文类别名匹配会漏。
+
+按此路线复跑后 `collect-asus-wlan-downloads.py` 仍未接入区域页，后续如需可加 `--region`。本轮合计关闭 **4 格**：待核 218→**214**。
