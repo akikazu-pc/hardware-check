@@ -45,13 +45,13 @@ python scripts/collect-windriverindex-wlan.py docs/network-rescue-model-gaps.csv
 
 ## 当前待核与接手顺序
 
-截至 `a5be020`（2026-11-13）。主板 Win10／Win11 各 74 条，笔记本 Win10 226 条、Win11 160 条；戴尔系统 ID 组合另有 Win10 127、Win11 39 条。
+截至 `15b4a80`（2026-11-13）。主板 Win10／Win11 各 74 条，笔记本 Win10 221 条、Win11 160 条；戴尔系统 ID 组合另有 Win10 127、Win11 39 条。
 
 | 范围 | 待核 | 最大缺口 |
 | --- | ---: | --- |
 | 主板 Win10 x64 | 74 | ASRock 19、ASUS 20 |
 | 主板 Win11 x64 | 74 | ASRock 22、ASUS 19 |
-| 笔记本 Win10 x64 | 226 | Acer 121、HP 63 |
+| 笔记本 Win10 x64 | 221 | Acer 121、HP 63 |
 | 笔记本 Win11 x64 | 160 | Acer 97、HP 21 |
 
 1. Acer 笔记本现有 121／97 条待核，其中 101 条仍只有系列名；逐型号接口已打通，下一步先把系列拆成精确 SKU 再查询。

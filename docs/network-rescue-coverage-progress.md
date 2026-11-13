@@ -495,3 +495,12 @@ MSI 的规格页和驱动接口在 Node 传输桥下均可读：`Specification` 
 其余 MSI 主板仍有「通用 Wi-Fi 驱动包（如 AMD／Intel WIFI Drivers）与规格未列 WLAN」的冲突：无 Wi-Fi 型号的下载面板也会列出通用 Wi-Fi 驱动，按现有口径保持待核。联想另有 4 款型号的下载页 OS 列表只列 Windows 11，关闭 4 个 Win10 格。
 
 本轮合计关闭 12 格：待核 679→**667**（主板 75／75，笔记本 Win10 296、Win11 221）。
+
+### 2026-11-13 Acer 与 MSI 逐型号接口
+
+Acer 与 MSI 的驱动数据都能取到，方法是先用 Node 传输桥拿页面 Cookie，再按页面自己的接口重放：
+
+- **Acer**：`GET /us-en/support/product-support/<code>` 取 Akamai Cookie，等约 2.5 秒后 `POST /us-en/DynamicContent/GetDriversAndManuals`，body 为 `{"ModelName":"<code>","Local":"en-us"}`。`Local` 必须是 `en-us`（由 `/us-en/` 推导），提前 POST 会被 403。34 个精确 SKU 全部命中：9 格列出 Wireless LAN 驱动（含 MT7921LE、AX201 等文件名与版本），5 格原厂 OS 列表只有 Windows 11。95 行只有系列名的记录仍无法定位精确 SKU，190 格保持待核。证据见 [Acer 证据](network-rescue-acer-oem-listing-proof.csv)。
+- **MSI**：`/api/v1/product/support/os?product=<slug>&type=driver` 给可选系统，`panel?…&os=<系统>` 给该系统驱动表。108 款待核型号全部命中，笔记本的「Wireless LAN Driver」带版本和 `download.msi.com` 链接，两轮共关闭 124 格。主板的通用 Wi-Fi 驱动包（AMD／Intel WIFI Drivers）出现在无 Wi-Fi 型号上，与规格未列 WLAN 冲突，只有原厂 OS 选择器缺系统的 5 格和两处都未列的 2 格关闭。证据见 [MSI 证据](network-rescue-msi-oem-listing-proof.csv)。
+
+本轮合计关闭 **150 格**：待核 679→**529**（主板 74／74，笔记本 Win10 221、Win11 160）。Acer 仍有 95 行系列名待拆 SKU，HP 84 格、ASRock 41 格、BIOSTAR 24 格、Gigabyte 14 格仍受站点或证据口径限制。
