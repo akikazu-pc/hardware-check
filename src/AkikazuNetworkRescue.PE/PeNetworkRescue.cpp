@@ -319,6 +319,12 @@ static void LoadStorageDrivers(const fs::path& bundle)
     if (!GetSystemDirectoryW(system, MAX_PATH)) return;
     const auto drvload = fs::path(system) / L"drvload.exe";
     if (!fs::is_regular_file(drvload, error)) return;
+    wchar_t temp[MAX_PATH]{};
+    const auto tempLength = GetTempPathW(MAX_PATH, temp);
+    std::ofstream log;
+    if (tempLength && tempLength < MAX_PATH) {
+        log.open(fs::path(temp) / L"NetworkRescue-storage.log", std::ios::binary | std::ios::trunc);
+    }
     for (fs::recursive_directory_iterator it(folder, fs::directory_options::skip_permission_denied, error), end;
         !error && it != end; it.increment(error)) {
         if (!it->is_regular_file(error) || _wcsicmp(it->path().extension().c_str(), L".inf") != 0) continue;
@@ -326,13 +332,23 @@ static void LoadStorageDrivers(const fs::path& bundle)
         STARTUPINFOW startup{};
         startup.cb = sizeof startup;
         PROCESS_INFORMATION process{};
+        DWORD code = ERROR_GEN_FAILURE;
         if (!CreateProcessW(drvload.c_str(), command.data(), nullptr, nullptr, FALSE, CREATE_NO_WINDOW, nullptr,
                 nullptr, &startup, &process)) {
+            if (log) {
+                const auto line = it->path().filename().wstring() + L" " + std::to_wstring(GetLastError()) + L"\r\n";
+                log.write(reinterpret_cast<const char*>(line.data()), static_cast<std::streamsize>(line.size() * sizeof(wchar_t)));
+            }
             continue;
         }
         WaitForSingleObject(process.hProcess, 30000);
+        GetExitCodeProcess(process.hProcess, &code);
         CloseHandle(process.hThread);
         CloseHandle(process.hProcess);
+        if (log) {
+            const auto line = it->path().filename().wstring() + L" " + std::to_wstring(code) + L"\r\n";
+            log.write(reinterpret_cast<const char*>(line.data()), static_cast<std::streamsize>(line.size() * sizeof(wchar_t)));
+        }
     }
 }
 
