@@ -152,7 +152,7 @@ public sealed class RescueModelCatalogTests
     }
 
     [Fact]
-    public void ExposesAcerUpgradeEvidenceAndMsiModelsWithoutInferringWifiCompatibility()
+    public void ExposesAcerUpgradeAndMsiExactModelListingEvidence()
     {
         // The Windows 11 upgrade list alone does not establish a WLAN driver for another system.
         var acer = Assert.Single(RescueModelCatalog.Search("Acer A314-22S"), model => model.Model == "Aspire A314-22S");
@@ -163,11 +163,11 @@ public sealed class RescueModelCatalogTests
         Assert.Equal("oem-wlan-listed", listed.Windows10Evidence);
         Assert.Equal("oem-os-upgrade-tested", listed.Windows11Evidence);
 
-        // A family support page is not applied to a variant its specification does not list.
+        // The exact sub-product support page lists an Intel WLAN driver for both systems.
         var msi = Assert.Single(RescueModelCatalog.Search("MSI Katana GF66 12UC"), model => model.Model == "Katana GF66 12UC");
         Assert.False(msi.IsSeries);
-        Assert.Equal("pending", msi.Windows10Evidence);
-        Assert.Equal("pending", msi.Windows11Evidence);
+        Assert.Equal("oem-wlan-listed", msi.Windows10Evidence);
+        Assert.Equal("oem-wlan-listed", msi.Windows11Evidence);
 
         var creator = Assert.Single(RescueModelCatalog.Search("MSI Creator M16 A12UC"));
         Assert.Equal("oem-wlan-listed", creator.Windows10Evidence);
