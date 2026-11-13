@@ -1,4 +1,4 @@
-# 发布清单
+﻿# 发布清单
 
 全部完成前不要公开下载。
 
@@ -38,7 +38,7 @@
 
 - [x] 确认 `Directory.Build.props` 的版本号（0.2.1）
 - [ ] 确认 GitHub Actions 的构建、单元测试和窗口冒烟测试全绿
-- [x] 运行 `scripts/publish.ps1`，确认体积没有异常增长（v0.2.1 实测：程序 53.1 MB，压缩包 47.8 MB，SHA-256 `673272932A46C2D74283AFB52B87BFEA3E9850DA20EC908CCAE19A92615DBF4E`）
+- [x] 运行 `scripts/publish.ps1`，确认体积没有异常增长（v0.2.1 实测：程序 53.1 MB，压缩包 47.8 MB，SHA-256 `1717317BBE222D078F9D54FA3651130CB049AB7D2F364FB16514DE259C56C6F6`）
 - [ ] 在仓库 `akikazu-pc/hardware-check` 的 GitHub Release 上传 `AkikazuHardwareCheck-win-x64.zip`（需要单独授权）
 - [ ] 在网站仓库的 `app/data/tools/hardware-check-release.json` 填入 `url`、`sha256`、`version`。`url` 为 `https://github.com/<owner>/<repo>/releases/latest/download/AkikazuHardwareCheck-win-x64.zip`，`sha256` 取 zip 的值。`url` 为空时网站下载按钮保持禁用
 - [ ] 每次发新版都同步上述 `sha256` 和 `version`：`latest` 链接会自动指向新版，网页上的版本和校验值不会
