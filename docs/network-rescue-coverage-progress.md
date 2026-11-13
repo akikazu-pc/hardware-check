@@ -802,3 +802,15 @@ BIOSTAR 的 `export/spec_export.php?S_ID=...` 返回的其实是 **PDF 字节**�
 - Win10：15 个驱动（Audio、Chipset、LAN、SATA、USB、VGA、Tools），无 WLAN；出厂 Wi-Fi 模块已确认 → `oem-wlan-not-listed`。
 
 3 个型号行（含 rev 1.0/1.1）共 6 格关闭：待核 90→**84**。
+
+### 2026-11-13 ASRock 规格页、MSI 面板与非官方来源
+
+- **ASRock Z790 PG SONIC**：`Specification.us.asp` 渲染出完整规格（Killer 2.5G LAN、无 Wireless 行），配合下载页的通用 Intel/MediaTek WLAN 驱动 → 两系统按硬件配置记 `oem-wlan-not-listed`（2 格）。
+- **MSI B550M GAMING PLUS WIFI6E (Rev 1)**：`/api/v1/product/support/panel` 返回 `AMD WIFI Drivers 3.05.00.1415`（os = Win10 64,Win11 64）→ 两系统 `oem-wlan-listed`（2 格）。
+- **MSI MEG X570 GODLIKE**：面板只有 `Killer Network Universal Drivers` 通用包（Setup.exe 加壳，无法静态确认 AX1650/系统覆盖），维持待核。
+- **MSI PRO H610M-S WIFI DDR4 II**：搜索能定位产品页，但驱动面板 OS 选择器为空，维持待核。
+- **非官方来源尝试**：Softpedia 直连 403、阅读器返回空；Wayback 对本机持续 429（EVGA 产品页、Dell 驱动页无快照可用）；Memento 聚合器不可用。EVGA 产品页已被官方下线，暂只能靠手册。
+
+Dell Alienware 与 Lenovo 需要登录态浏览器：见[浏览器抓取指引](network-rescue-browser-capture-guide.md)。
+
+本轮合计关闭 **10 格**：待核 90→**80**。

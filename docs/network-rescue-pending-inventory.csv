@@ -1,6 +1,4 @@
 brand,type,platform,model,windows,wlanEvidence,reason,detail,source
-ASRock,motherboard,LGA1700,Z790 PG SONIC,10,oem-model-catalog,factory-vs-listing,下载页列通用 WLAN 驱动，规格无出厂无线,https://www.asrock.com/mb/Intel/Z790%20PG%20SONIC/index.asp#Download
-ASRock,motherboard,LGA1700,Z790 PG SONIC,11,oem-model-catalog,factory-vs-listing,下载页列通用 WLAN 驱动，规格无出厂无线,https://www.asrock.com/mb/Intel/Z790%20PG%20SONIC/index.asp#Download
 ASUS,laptop,,ASUS TUF Gaming A16 (2025) FA608PMI,10,oem-driver-list,no-network-category,驱动列表无网络类目或过短,https://www.asus.com/supportonly/fa608pmi/helpdesk_download/
 ASUS,laptop,,ASUS TUF Gaming A16 (2025) FA608PMI,11,oem-driver-list,no-network-category,驱动列表无网络类目或过短,https://www.asus.com/supportonly/fa608pmi/helpdesk_download/
 ASUS,laptop,,ASUS TUF Gaming A16 (2025) FA608PPI,10,oem-driver-list,no-network-category,驱动列表无网络类目或过短,https://www.asus.com/supportonly/fa608ppi/helpdesk_download/
@@ -77,8 +75,6 @@ Lenovo,laptop,Legion,Legion Pro 7 16ADR10H,10,oem-wlan-driver-families,os-list-e
 Lenovo,laptop,Legion,Legion Pro 7 16ADR10H,11,oem-wlan-driver-families,os-list-empty,OS 列表空或驱动 API 403,https://pcsupport.lenovo.com/fi/fi/product_security/ps500812
 Lenovo,laptop,Legion,Legion Pro 7 16AFR10H,10,oem-wlan-driver-families,os-list-empty,OS 列表空或驱动 API 403,https://pcsupport.lenovo.com/fi/fi/product_security/ps500812
 Lenovo,laptop,Legion,Legion Pro 7 16AFR10H,11,oem-wlan-driver-families,os-list-empty,OS 列表空或驱动 API 403,https://pcsupport.lenovo.com/fi/fi/product_security/ps500812
-MSI,motherboard,AM4,B550M GAMING PLUS WIFI6E (Rev 1),10,catalog-model,factory-vs-listing,规格无 WLAN，面板列通用 Wi-Fi 驱动,https://www.msi.com/support/motherboard/cpu-support
-MSI,motherboard,AM4,B550M GAMING PLUS WIFI6E (Rev 1),11,catalog-model,factory-vs-listing,规格无 WLAN，面板列通用 Wi-Fi 驱动,https://www.msi.com/support/motherboard/cpu-support
 MSI,motherboard,AM4,MEG X570 GODLIKE,10,oem-spec-wlan-listed,factory-vs-listing,规格无 WLAN，面板列通用 Wi-Fi 驱动,https://storage-asset.msi.com/datasheet/mb/global/MEG-X570-GODLIKE.pdf
 MSI,motherboard,AM4,MEG X570 GODLIKE,11,oem-spec-wlan-listed,factory-vs-listing,规格无 WLAN，面板列通用 Wi-Fi 驱动,https://storage-asset.msi.com/datasheet/mb/global/MEG-X570-GODLIKE.pdf
 MSI,motherboard,LGA1700,PRO H610M-S WIFI DDR4 II,10,oem-spec-wlan-listed,factory-vs-listing,规格无 WLAN，面板列通用 Wi-Fi 驱动,https://storage-asset.msi.com/datasheet/mb/global/PRO-H610M-S-WIFI-DDR4-II.pdf
