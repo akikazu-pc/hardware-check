@@ -583,3 +583,9 @@ MSI 的笔记本系列页 OS 选择器常常为空，区域 SKU 藏在系列 ban
 脚本 [collect-hp-pack-os.py](../scripts/collect-hp-pack-os.py) 复用 Node 传输桥读取 CVA，先在 CSV 副本上验证：候选 63、可关闭 63、只改目标格。证据见[驱动包证据](network-rescue-hp-pack-os-proof.csv)。惠普剩余 Win11 21 格是 2017–2019 机型没有任何 Win11 包，仍缺原厂系统支持声明。
 
 本轮合计关闭 **63 格**：待核 314→**251**（主板 60／60，笔记本 Win10 70、Win11 61）。
+
+### 2026-11-13 惠普镜像规则收尾
+
+同一套「目录 + 包声明」规则镜像后也适用于旧机型：21 个 Win11 待核型号（2017–2019）在 HP 驱动包目录里只有 Windows 10 条目，其驱动包的 CVA 只声明 `WT64_*`（WT64 = Windows 10 x64）；其中 6 款的某个包没有 CVA OS 段，改用该包发布说明的 `OPERATING SYSTEM(S)`（仅 Windows 10）和 `HARDWARE PRODUCT MODEL(S)`（含精确型号）核对。21 格全部关闭，惠普笔记本待核清零。
+
+本轮合计关闭 **21 格**：待核 251→**230**（主板 60／60，笔记本 Win10 70、Win11 40）。
