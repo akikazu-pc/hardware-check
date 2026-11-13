@@ -1,0 +1,4 @@
+model,windows,status,evidence
+ASUS TUF Gaming A15 (2022) FA507RW,10,oem-os-not-listed,GetPDOS 45 selected; driver categories 0; Win11 7 categories/32 files
+ROG Strix G15 G513IR,10,oem-wlan-not-listed,"Win10 list has LAN/Audio/Chipset, no WLAN file; Win11 3 files"
+ASUS TUF Gaming A15 (2022),10,oem-os-not-listed,all recorded SKUs report the same
