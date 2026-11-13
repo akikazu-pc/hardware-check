@@ -710,3 +710,30 @@ BIOSTAR 的 `export/spec_export.php?S_ID=...` 返回的其实是 **PDF 字节**�
 - **PRIME B550M-K/CSM** Win11 只有 2 个软件文件，仍不满足有效列表，保持待核。
 
 采集脚本同时增加了 `supportonly` 页回退（目录指向产品页、产品页没有驱动接口时）。本轮合计关闭 **2 格**：待核 208→**206**。
+
+### 2026-11-13 收尾核验与剩余缺口总结
+
+**最终待核 206 格**（起点 2,570，累计关闭 2,364）：
+
+| 类别 | 格数 | 缺口原因 |
+| --- | --- | --- |
+| 主板 Win10 / Win11 | 50 / 53 | ASUS 9/9、MSI 12/12、ASRock 9/12、BIOSTAR 10/10、GIGABYTE 8/6、EVGA 2/2 |
+| 笔记本 Win10 / Win11 | 64 / 39 | Acer 49/20、ASUS 6/12、Dell 5/3、Lenovo 3/4 |
+
+**每种缺口的准确原因**（逐格见 [剩余缺口清单](network-rescue-pending-inventory.csv)）：
+
+- `factory-vs-listing` 61：下载列表列出通用 Wi-Fi 驱动、规格写明无出厂无线，按现行口径两边都不能单独成立。
+- `mixed-family` 45：Acer 系列跨代，族内 SKU 结论不一致或为短列表，系列格无法单一结论。
+- `no-listing-exact-model` 24：Acer 精确型号在支持库 0 命中（US/TW 均试过）。
+- `site-403` 20：BIOSTAR 全站 403，规格 PDF（实为 PDF 字节）与下载列表都取不到。
+- `no-network-category` 19：ASUS 笔记本该系统驱动列表无网络类目或只有 2–3 个文件。
+- `api-403` 14：Gigabyte Akamai 拦截下载 API（区域域名与完整浏览器头均无效）。
+- `consumer-api-403` 8：Alienware 不在 Dell 驱动包目录与 SDP 目录，支持页 API 被拦。
+- `os-list-empty` 7：Lenovo 产品页 OS 列表为空或驱动 API 403。
+- `no-per-model-list` 4：EVGA 无逐型号驱动列表（手册可读）。
+- `support-api-empty` 2：ASUS B850M AYW CSM 只暴露 GetPDOS（FAIL）与 GetSupportTab。
+- `no-factory-proof` 2：ASUS Pro WS 665-ACE 规格表只发布一行。
+
+**方法写回**：`collect-hp-pack-os.py`、`collect-dell-pack-os.py`、`collect-asus-wlan-downloads.py`（区域页/支持页回退、中文类目、有效列表放宽）、`collect-acer-series-skus.py`（ARM64 与空列表排除）。
+
+**验证**：HP／Dell 脚本对当前表复跑均为 0 待核；CSV 2,658 行 13 列、型号无空值、状态值仅 10 种；待核清单与主表 206 行一一对应。
