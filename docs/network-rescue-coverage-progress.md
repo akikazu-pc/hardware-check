@@ -696,3 +696,17 @@ BIOSTAR 的 `export/spec_export.php?S_ID=...` 返回的其实是 **PDF 字节**�
 - **Pro WS 665-ACE**：`GetPDOS`／`GetPDDrivers`（`product.asmx`）可用，两系统列表只有 LAN、Chipset、VGA、SATA，没有 WLAN；但 techspec 只发布了「News & Updates: Socket AM5」一行，没有完整规格表，缺出厂无线状态，保持待核。
 
 本轮合计关闭 **2 格**：待核 210→**208**（主板 52／53，笔记本 Win10 64、Win11 39）。
+
+### 2026-11-13 华硕有效列表判定放宽
+
+原判定要求「有 LAN 类目 + 音频或芯片组」才算有效列表。实际不少主板对某个系统不发布 LAN 驱动但仍支持该系统，于是把「有效列表」放宽为：
+
+- 含 LAN 类目，**或** 至少 5 个文件且含音频或芯片组类目；
+- 且全表没有 WLAN 文件（类目名或文件名匹配，含中文）。
+
+据此关闭：
+- **Pro WS B850M-ACE SE** Win10：列表 7 类 13 个文件（芯片组、显卡、USB、SATA 等），无 WLAN；规格未列 WLAN → `oem-wlan-not-listed`。
+- **ProArt B850-CREATOR WIFI NEO** Win10：列表 6 类 8 个文件（芯片组、蓝牙等），无 WLAN；出厂模块已确认 → `oem-wlan-not-listed`。
+- **PRIME B550M-K/CSM** Win11 只有 2 个软件文件，仍不满足有效列表，保持待核。
+
+采集脚本同时增加了 `supportonly` 页回退（目录指向产品页、产品页没有驱动接口时）。本轮合计关闭 **2 格**：待核 208→**206**。

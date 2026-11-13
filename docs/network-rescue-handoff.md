@@ -78,9 +78,9 @@ MSI、Acer、华擎的原厂下载接口拒绝脚本直连。本轮先在浏览�
 | `collect-acer-wlan-downloads.py` | `network-rescue-acer-oem-listing-proof.csv` | 263 格，另把 129 个 Win11 升级测试格加强为 WLAN 列出。按文件 `oss` 分系统，`Step3` 须等于精确型号，排除 LED 工具 |
 | `collect-asrock-wlan-downloads.py` | `network-rescue-asrock-oem-listing-proof.csv` | 455 格，另补 146 款产品页规格。读 `Download.html`，PG 型号从 pg.asrock.com 单独采集 |
 
-判定口径与华硕一致：“列出”要求已有出厂无线证据；“未列出”要求该系统有有效的 LAN 列表和音频或芯片组列表，且有出厂无线证据或规格未列 WLAN。Killer 通用包、近似型号、组合系统文件、空列表都保持待核。提交 `e22e373` 的说明写成关闭 300 格，实际是 301 格。
+判定口径与华硕一致：“列出”要求已有出厂无线证据；“未列出”要求该系统的驱动列表是有效的（含 LAN 类目，或至少 5 个文件且含音频或芯片组），且全表无 WLAN 文件，并有出厂无线证据或规格未列 WLAN。Killer 通用包、近似型号、组合系统文件、空列表都保持待核。提交 `e22e373` 的说明写成关闭 300 格，实际是 301 格。
 
-最新待核：主板 Win10 52、Win11 53，笔记本 Win10 64、Win11 39，合计 **208**（起点 2,570）。一体机和戴尔系统 ID 组合已清零。戴尔系统 ID 组合 166 格已全部关闭（88 格原厂无 Win10 驱动包，78 格 Win10 包内含 Wi-Fi 驱动）。
+最新待核：主板 Win10 50、Win11 53，笔记本 Win10 64、Win11 39，合计 **206**（起点 2,570）。一体机和戴尔系统 ID 组合已清零。戴尔系统 ID 组合 166 格已全部关闭（88 格原厂无 Win10 驱动包，78 格 Win10 包内含 Wi-Fi 驱动）。
 
 剩余与下一步：
 - Acer：仍有 49／20 格待核。族级扫描已按修正后的缓存键重跑；把驱动列表只有 ARM64 文件（或完全没有列表）的 SKU 记为「x64 范围外」后，62 个系列的 x64 结论一致（116 格），本轮新增关闭 15 个系列 30 格。原厂 sitemap 提供 2,039 个精确型号页；96 个系列行里 15 个系列的美国站型号族只有一个型号页，逐页查询后两系统各关闭（Win10 原厂未列、Win11 列出 Wireless LAN）。其余 73 个多型号系列共 611 个 SKU 已逐一查询，24 个系列因全族结论一致而关闭（47 格），其余因族内结论不一致保持待核（[族级证据](network-rescue-acer-series-family-proof.csv)）。37 款接口返回空，后来被限流（Failed to fetch），冷却后重查；101 条系列行还要拆成精确 SKU。本机 `www.acer.com` 卡在 TLS 重协商，`curl`、Python 和 headless Edge 都超时，只有 `global-download.acer.com` 可读，需换网络或浏览器会话再采。
