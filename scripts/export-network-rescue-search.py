@@ -102,21 +102,25 @@ def driverhub_rows(existing):
     with (ROOT / "docs/network-rescue-model-gaps.csv").open(encoding="utf-8-sig", newline="") as stream:
         occupied.update(model_key(row["brand"], row["model"]) for row in csv.DictReader(stream))
     groups = defaultdict(list)
+    model_groups = defaultdict(set)
     with (ROOT / "docs/network-rescue-driverhub-model-candidates.csv").open(
         encoding="utf-8-sig", newline=""
     ) as stream:
         for entry in csv.DictReader(stream):
             if entry["granularity"] == "model":
-                groups[model_key(entry["catalogBrand"], entry["comparisonModel"])].append(entry)
+                key = model_key(entry["catalogBrand"], entry["comparisonModel"])
+                groups[key].append(entry)
+                model_groups[model_key(entry["catalogBrand"], entry["model"])].add(key)
     for key, entries in groups.items():
-        aliases = dict.fromkeys(entry[field] for entry in entries for field in ("model", "comparisonModel"))
         brand = entries[0]["catalogBrand"]
+        aliases = dict.fromkeys(entry[field] for entry in entries for field in ("model", "comparisonModel")
+                                if field == "comparisonModel" or len(model_groups[model_key(brand, entry[field])]) == 1)
         keys = {model_key(brand, label) for label in aliases}
         if key in occupied or not keys.isdisjoint(occupied):
             continue
         occupied.update(keys)
         entry = next((row for row in entries if row["brand"].casefold() == brand.casefold()), entries[0])
-        model = entry["model"]
+        model = entry["model"] if entry["model"] in aliases else entry["comparisonModel"]
         category = entry["category"]
         kind = {"Laptop": "laptop", "DiyDesktop": "motherboard", "Other": "device"}[category]
         yield (kind, brand, model, "", "", "third-party-model-candidate", "",

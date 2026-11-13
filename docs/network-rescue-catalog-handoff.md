@@ -45,6 +45,8 @@ python scripts/collect-windriverindex-wlan.py docs/network-rescue-model-gaps.csv
 
 [DriverHub 型号候选表](network-rescue-driverhub-model-candidates.csv)保留日本站的原始品牌、型番、来源和待核状态。目录导出按比对品牌和型番合并多来源，保留一条可检索记录，其余原始来源仍可在候选表查到。现有型号和别名优先。系列代次仅留在候选表中。候选的 Windows 10 与 Windows 11 证据均为待核。
 
+厂商证据保存在 `manufacturerEvidence` 列。一个原始标签对应多个具体型号时，来源表仍保留该标签，检索目录使用各自的比对型番。
+
 ## 当前待核与接手顺序
 
 截至 `9c1f0c0`（2026-11-13）。主板 Win10／Win11 各 61 条，笔记本 Win10 183 条、Win11 119 条；戴尔系统 ID 组合已清零。
