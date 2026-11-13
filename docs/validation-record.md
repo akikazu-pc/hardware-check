@@ -403,3 +403,10 @@ v0.1.0 退出后，重启仍留下 `PawnIO` 服务和驱动包。复现确认：
 - 用 `main` 重建的 PE 替换实验数据 ISO 中的 `PeNetworkRescue.exe` 和 `NetworkRescue.exe`，在 `NR-W10P-REPAIR` 来宾（Windows 10 22H2，映像 19045.2965）跑一次 CLI 修复回归。合成 RTL8168 设备（问题码 28）匹配 `rt640x64.inf` 10.79.50.1003；DISM 写入 `oem3.inf`，`Get-Drivers` 列出该包，输出 `Driver added`，退出码 0。覆盖 PE 启动、夹具注册、单个 INF 选择、确认、DISM 写入和驱动库复查，未覆盖实体网卡绑定。
 - 在 `NR-W11LTSC-OS` 来宾（Windows 11 26100.1742）用两个合成设备（RTL8125、RTL8168）复测。CLI 列出两个驱动和「Install all matched drivers (2)」；选择该项后，DISM 连续写入 `rt25cx21x64.inf` 和 `rt68cx21x64.inf` 两个包，`Get-Drivers` 复查通过，退出码 0。此轮覆盖 CLI 的多驱动选择与 DISM 循环；图形界面和 Setup 的多驱动仍未验证。
 - 实验夹具 `MultiNicFixture.exe` 按 `@file` 读取硬件 ID 建根枚举设备，ISO 为 lab-bin6；两轮来宾均已关机，未改宿主驱动。目标 Windows 显示 19041、DISM 报告 19045.2965，复现交接中的构建号显示问题。
+
+## 2026-11-13 PE 无匹配驱动的无人值守部署
+
+- 新建第 2 代 Hyper-V 来宾 `NR-NODRV-01`（不接网络、Secure Boot、无虚拟 TPM），80 GiB 空盘，挂载独立 PE ISO、Windows 11 26300 日语多版本 ISO 和实验数据 ISO。本轮不注册任何缺驱动网卡。
+- CLI 选择无人值守部署和映像后扫描不到匹配的签名网络驱动；确认「不添加驱动继续」后，DISM 应用映像、写入应答文件、设置 UEFI 引导和恢复分区，自动重启进入日语微软许可页。
+- 只读挂载系统盘核对：EFI 260 MiB、MSR 16 MiB、C 盘 78.73 GiB、恢复分区 1 GiB；应答文件和 `ReAgent.xml` 存在；`Windows\INF\oem*.inf` 为空，确认本次未写入第三方网络驱动，驱动库中的 `rt640x64`、`rtu*` 目录来自映像自带。许可页未代为确认，首次设置完成和驱动绑定不在本轮范围。
+- 同一入口在 Setup 模式无匹配驱动时会直接启动无驱动的 Windows Setup（本轮在输入错位时观察到语言页）；Setup 路径的完整安装未执行。
