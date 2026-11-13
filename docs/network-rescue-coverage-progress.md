@@ -769,3 +769,14 @@ BIOSTAR 的 `export/spec_export.php?S_ID=...` 返回的其实是 **PDF 字节**�
 - **Dell**：Edge 无头抓包只拿到 11 个 URL（Akamai 拦截），未发现驱动 XHR 端点。
 
 本轮无新增关闭：待核 **171**（缺口清单已刷新到 171 行）。
+
+### 2026-11-13 Acer 区域库扫描与收尾分工
+
+`DynamicContent/GetDriversAndManuals` 的区域库记录不同：美服 0 命中的型号在欧服可能有记录。用带会话的 POST 扫了 14 个常用区域，5 个型号有数据：
+
+- **A114-61／A114-61L／SP714-61NA**：Win10 只有 Acer 的 Windows Update 占位条目（`Driver_Acer_1.0_W10x64.zip`，描述「can be updated via Windows Updates」）→ 记 `oem-os-not-listed`。
+- **SF314-510／P50-41**：欧服列出 `Wireless LAN_Intel_22.40.0.7_W10x64_(AX201)`／`22.0.1.1_W10x64_(AX200)` → 记 `oem-wlan-listed`。
+
+其余 19 个精确型号在追加的 25 个区域库中仍为 0 命中，按「接口空响应不算已核实」保持待核。新增 [collect-acer-locale-listings.py](../scripts/collect-acer-locale-listings.py)（区域库扫描 + 占位判定 + `--apply`）与 [audit-network-rescue.py](../scripts/audit-network-rescue.py)（每轮复跑：校验、重建清单、对比快照输出关闭/新增格数）。
+
+收尾分工见 [network-rescue-remaining-actions.md](network-rescue-remaining-actions.md)：约 52 格属通用驱动记账口径、约 58 格属系列级行处理方式，需你决定；其余约 56 格由我继续找来源。本轮合计关闭 **5 格**：待核 171→**166**。

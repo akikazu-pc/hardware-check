@@ -1,0 +1,6 @@
+model,windows,status,evidence,locale
+Aspire A114-61,10,oem-os-not-listed,Win10 driver section is only the Windows Update stub (Driver_Acer_1.0_W10x64.zip),de-de
+Aspire A114-61L,10,oem-os-not-listed,Win10 driver section is only the Windows Update stub (Driver_Acer_1.0_W10x64.zip),de-de
+Spin SP714-61NA,10,oem-os-not-listed,Win10 driver section is only the Windows Update stub (Driver_Acer_1.0_W10x64.zip),de-de
+Swift SF314-510,10,oem-wlan-listed,Wireless LAN_Intel_22.40.0.7_W10x64_(AX201).zip in the EMEA driver list,de-de
+TravelMate P50-41,10,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64_(AX200).zip in the EMEA driver list,de-de
