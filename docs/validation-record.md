@@ -417,3 +417,9 @@ v0.1.0 退出后，重启仍留下 `PawnIO` 服务和驱动包。复现确认：
 - 重启 PE 后目标发现为 0；磁盘列表以「Retry interrupted deployment (this disk will be erased)」显示同一块 Disk 0（按界面语言显示）。确认后 DiskPart 先 `clean` 再重建 EFI／MSR／Windows／Recovery，随后完成映像应用、应答文件、UEFI 引导和恢复分区，自动重启进入日语许可页。
 - 只读核对：EFI 260 MiB、MSR 16 MiB、C 盘 78.73 GiB、恢复分区 1 GiB；应答文件和 `ReAgent.xml` 存在；`Windows\INF\oem*.inf` 为空（本轮未选驱动）。许可页未代为确认。
 - 重试仅在同一磁盘身份与标记（Windows 分区根目录 `NetworkRescueDeployment` 或 `Windows\Panther\Unattend\Unattend.xml`）匹配时出现；空白盘路径不变。首轮曾把标记误检为 `Windows\NetworkRescueDeployment`，修正后复测通过。
+
+## 2026-11-13 PE storage-drivers 启动加载
+
+- 实验数据 ISO 根目录加入 `storage-drivers/`，放入已签名的 `rt640x64.inf`、`.cat` 和 `.sys`；实验脚本增加 probe 模式，只运行 `PeNetworkRescue.exe --list-targets` 后输出 `pnputil /enum-drivers`。
+- PE 启动并运行 probe 后：`NetworkRescue-storage.log` 记录 `rt640x64.inf 0`（drvload 退出码 0）；`pnputil /enum-drivers` 的 `Original Name` 列出 `rt640x64.inf`，确认启动时的 `storage-drivers` 加载生效。
+- 本轮用已签名网络 INF 作代理，未构造真实缺存储控制器的磁盘场景；因此“加载后磁盘可见”仍需在真实存储设备上验证。
