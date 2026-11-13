@@ -1,6 +1,7 @@
 #include <windows.h>
 #include <tlhelp32.h>
 #include <cstring>
+#include <fstream>
 #include <string_view>
 
 #include "PeStrings.generated.h"
@@ -461,6 +462,20 @@ static SetupStart StartSetup(const SetupMedia& media, const std::vector<fs::path
             return SetupStart::LaunchFailed;
         }
         command += L" /unattend:\"" + answer.wstring() + L"\"";
+    }
+    // Record the staged drivers and the Setup command line for field diagnosis.
+    wchar_t logPath[MAX_PATH]{};
+    const auto logLength = GetTempPathW(MAX_PATH, logPath);
+    if (logLength && logLength < MAX_PATH) {
+        std::ofstream log(fs::path(logPath) / L"NetworkRescue-setup.log", std::ios::binary | std::ios::trunc);
+        for (const auto& driver : drivers) {
+            const auto driverLine = L"driver " + driver.wstring() + L"\r\n";
+            log.write(reinterpret_cast<const char*>(driverLine.data()),
+                static_cast<std::streamsize>(driverLine.size() * sizeof(wchar_t)));
+        }
+        const auto commandLine = L"command " + command + L"\r\n";
+        log.write(reinterpret_cast<const char*>(commandLine.data()),
+            static_cast<std::streamsize>(commandLine.size() * sizeof(wchar_t)));
     }
     STARTUPINFOW startup{};
     startup.cb = sizeof startup;
