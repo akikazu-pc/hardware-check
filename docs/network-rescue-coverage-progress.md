@@ -658,3 +658,23 @@ BIOSTAR 的 `export/spec_export.php?S_ID=...` 返回的其实是 **PDF 字节**�
 顺带复核：`PRIME B760M-A D4-CSM` 的下载列表两系统都没有 WLAN，但其手册只覆盖非 CSM 型号（手册内无 CSM 字样），按精确型号口径不代填；`Pro WS 665-ACE` 的下载列表同样未列 WLAN，但规格页没有可解析的规格表，仍缺出厂无线状态。两者保持待核。
 
 本轮无新增关闭：待核 **210**（主板 53／54，笔记本 Win10 64、Win11 39）。
+
+### 2026-11-13 剩余 210 格逐型号缺口清单
+
+新增[剩余缺口清单](network-rescue-pending-inventory.csv)：每行一个待核格，含型号、类型、平台、系统、无线证据口径、缺口类别、缺失证据说明与已查来源。按类汇总：
+
+| 缺口类别 | 格数 | 说明 |
+| --- | --- | --- |
+| `factory-vs-listing` | 63 | 下载列表列出通用 Wi-Fi 驱动，但规格/手册写无出厂无线（MSI 24、ASRock 21、ASUS 主板 18） |
+| `mixed-family` | 45 | Acer 系列跨代，族内 SKU 结论不一致或为短列表 |
+| `no-listing-exact-model` | 24 | Acer 精确型号在支持库无驱动记录（US/TW 均 0 命中） |
+| `site-403` | 20 | BIOSTAR 全站 403，规格 PDF 与下载列表无法取回 |
+| `no-network-category` | 19 | ASUS 笔记本该系统驱动列表无网络类目 |
+| `api-403` | 14 | Gigabyte Akamai 拦截下载 API |
+| `consumer-api-403` | 8 | Alienware 不在戴尔驱动包目录，支持页 API 被拦 |
+| `os-list-empty` | 7 | Lenovo 产品页 OS 列表为空/驱动 API 403 |
+| `no-factory-proof` | 4 | ASUS 主板缺出厂无线证据（下载不可用或未列） |
+| `no-per-model-list` | 4 | EVGA 无逐型号驱动列表 |
+| `support-api-empty` | 2 | ASUS 支持接口空响应（B850M AYW CSM） |
+
+本轮无新增关闭：待核 **210**（主板 53／54，笔记本 Win10 64、Win11 39）。Lenovo 驱动 API 与 Gigabyte 区域 API 本轮再次确认 403；Dell 驱动包目录不含 Alienware。
