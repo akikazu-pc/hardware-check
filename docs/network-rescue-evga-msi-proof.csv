@@ -1,0 +1,7 @@
+brand,model,windows,status,evidence
+EVGA,Z790 CLASSIFIED,10,oem-wlan-listed,"WiFi & Bluetooth 22.150.03/6, 2022-12-13, Windows 10 64bit, https://www.evga.com/filesCdn/driver/Z790/E798/WiFi.zip"
+EVGA,Z790 CLASSIFIED,11,oem-wlan-listed,"WiFi & Bluetooth 22.150.03/6, 2022-12-13, Windows 11, https://www.evga.com/filesCdn/driver/Z790/E798/WiFi.zip"
+EVGA,Z790 DARK K|NGP|N,10,oem-wlan-listed,"WiFi & Bluetooth 22.150.03/6, 2022-12-13, Windows 10 64bit, https://www.evga.com/filesCdn/driver/Z790/E799/WiFi.zip"
+EVGA,Z790 DARK K|NGP|N,11,oem-wlan-listed,"WiFi & Bluetooth 22.150.03/6, 2022-12-13, Windows 11, https://www.evga.com/filesCdn/driver/Z790/E799/WiFi.zip"
+MSI,MEG X570 GODLIKE,10,oem-wlan-not-listed,"MSI panel lists only Killer Network Universal Drivers 3.1122.1105 (E3000 Ethernet) and 2.2.1457 (E2500 note), plus Bluetooth 23.40.0.2; no Wi-Fi package. Board spec: Killer Wi-Fi 6 AX1650."
+MSI,MEG X570 GODLIKE,11,oem-wlan-not-listed,Same panel content for Win11 64; no Wi-Fi package listed.

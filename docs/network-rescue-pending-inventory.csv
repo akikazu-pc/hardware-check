@@ -55,12 +55,5 @@ Acer,laptop,,TravelMate Spin 311RN-31,10,oem-model-catalog,no-listing-exact-mode
 Acer,laptop,,TravelMate Spin B311RA-32,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号 0 命中,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
 Acer,laptop,,TravelMate X40-52-M,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号 0 命中,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
 Acer,laptop,,TravelMate X40-52-MG,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号 0 命中,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
-EVGA,motherboard,LGA1700,Z790 CLASSIFIED,10,oem-manual-module,no-per-model-list,驱动下载页无逐型号列表,https://www.evga.com/support/manuals/files/121-RL-E798-KR.pdf
-EVGA,motherboard,LGA1700,Z790 CLASSIFIED,11,oem-manual-module,no-per-model-list,驱动下载页无逐型号列表,https://www.evga.com/support/manuals/files/121-RL-E798-KR.pdf
-EVGA,motherboard,LGA1700,Z790 DARK K|NGP|N,10,oem-model-catalog,no-per-model-list,驱动下载页无逐型号列表,https://www.evga.com/products/pdf/121-RL-E799-KR.pdf
-EVGA,motherboard,LGA1700,Z790 DARK K|NGP|N,11,oem-model-catalog,no-per-model-list,驱动下载页无逐型号列表,https://www.evga.com/products/pdf/121-RL-E799-KR.pdf
-Lenovo,laptop,Legion,Legion Pro 7 16ADR10H,10,oem-wlan-driver-families,os-list-empty,OS 列表空或驱动 API 403,https://pcsupport.lenovo.com/fi/fi/product_security/ps500812
-MSI,motherboard,AM4,MEG X570 GODLIKE,10,oem-spec-wlan-listed,factory-vs-listing,规格无 WLAN，面板列通用 Wi-Fi 驱动,https://storage-asset.msi.com/datasheet/mb/global/MEG-X570-GODLIKE.pdf
-MSI,motherboard,AM4,MEG X570 GODLIKE,11,oem-spec-wlan-listed,factory-vs-listing,规格无 WLAN，面板列通用 Wi-Fi 驱动,https://storage-asset.msi.com/datasheet/mb/global/MEG-X570-GODLIKE.pdf
 MSI,motherboard,LGA1700,PRO H610M-S WIFI DDR4 II,10,oem-spec-wlan-listed,factory-vs-listing,规格无 WLAN，面板列通用 Wi-Fi 驱动,https://storage-asset.msi.com/datasheet/mb/global/PRO-H610M-S-WIFI-DDR4-II.pdf
 MSI,motherboard,LGA1700,PRO H610M-S WIFI DDR4 II,11,oem-spec-wlan-listed,factory-vs-listing,规格无 WLAN，面板列通用 Wi-Fi 驱动,https://storage-asset.msi.com/datasheet/mb/global/PRO-H610M-S-WIFI-DDR4-II.pdf

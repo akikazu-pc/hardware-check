@@ -854,3 +854,13 @@ Lenovo 待核 7→1 格（16ADR10H 的 Win10）。本轮合计关闭 **6 格**�
 用户提供的 Wayback 产品页与规格表确认：**EVGA Z790 CLASSIFIED** 为「Intel Dual-Band Wi-Fi 6E / BT5.2 module, preinstalled in the M.2 Key-E 32mm Slot」，附件含 EVGA Wi-Fi 天线；**Z790 DARK K|NGP|N** 同样在手册中写明 Wi-Fi 6E/BT 5.2。第三方数据库 station-drivers 的该型号页面也标注「Wireless/Bluetooth: Intel AX2xx Wifi 6」，但只给通用 Intel PROSet 驱动链接，没有 EVGA 逐型号驱动包；touslesdrivers 对应页面只是检测工具宣传页。
 
 结论：出厂无线已确认，但 EVGA 已下架产品支持页（PN 页面重定向首页、下载页是 Telerik 表单且无产品参数渲染），拿不到「EVGA 为该型号列出的 WLAN 驱动」这一证据；通用 Intel Wi-Fi 驱动不属于原厂型号条目。EVGA 4 格维持待核，记录为「原厂支持页已移除、仅通用 Intel 驱动可用」。
+
+### 2026-11-13 EVGA 收尾、MSI MEG X570 GODLIKE 与 Lenovo 最后 1 格
+
+用户从 EVGA 下载页与 MSI 面板复制了原始条目：
+
+- **EVGA Z790 CLASSIFIED / Z790 DARK K|NGP|N**：`WiFi & Bluetooth 22.150.03/6`（2022-12-13），**Windows 11 与 Windows 10 64bit** 各一条，包地址 `https://www.evga.com/filesCdn/driver/Z790/E798/WiFi.zip`、`E799/WiFi.zip` → 4 格按「列出」关闭。
+- **MSI MEG X570 GODLIKE**：面板只列 `Killer Network Universal Drivers 3.1122.1105`（E3000 以太网）与 `2.2.1457`（E2500 说明）、`BlueTooth Driver 23.40.0.2`，**没有 Wi-Fi 包**；板载 Killer Wi-Fi 6 AX1650 已由规格确认 → 两系统按「未列 WLAN」关闭。
+- **Lenovo Legion Pro 7 16ADR10H**：手动驱动列表 21 条全部标注 `Windows 11 (64-bit)`，无 Win10 包 → Win10 记未列系统。
+
+本轮合计关闭 **8 格**：待核 65→**58**。EVGA、Lenovo、MSI MEG 已清零。
