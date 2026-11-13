@@ -793,3 +793,12 @@ BIOSTAR 的 `export/spec_export.php?S_ID=...` 返回的其实是 **PDF 字节**�
 - 表从 2,658 行变为 **2,723 行**；Acer SKU 映射与来源见[Acer SKU 证据](network-rescue-acer-sku-proof.csv)。
 
 合计关闭 **76 格**（46 + 30）：待核 166→**90**。
+
+### 2026-11-13 Gigabyte B860M A PRO WIFI7 收尾
+
+用户确认 `B860M A PRO WIFI7` 即 `B860M AORUS PRO WIFI7`，官方支持页为 `gigabyte.com/jp/Motherboard/B860M-AORUS-PRO-WIFI7/support`。用阅读器代理渲染下载表：
+
+- Win11：Realtek WIFI Driver 6102.24.143.0、MediaTek Wi-Fi 7 WIFI Driver 5.7.0.4669 → `oem-wlan-listed`。
+- Win10：15 个驱动（Audio、Chipset、LAN、SATA、USB、VGA、Tools），无 WLAN；出厂 Wi-Fi 模块已确认 → `oem-wlan-not-listed`。
+
+3 个型号行（含 rev 1.0/1.1）共 6 格关闭：待核 90→**84**。

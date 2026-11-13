@@ -70,12 +70,6 @@ EVGA,motherboard,LGA1700,Z790 CLASSIFIED,10,oem-manual-module,no-per-model-list,
 EVGA,motherboard,LGA1700,Z790 CLASSIFIED,11,oem-manual-module,no-per-model-list,驱动下载页无逐型号列表,https://www.evga.com/support/manuals/files/121-RL-E798-KR.pdf
 EVGA,motherboard,LGA1700,Z790 DARK K|NGP|N,10,oem-model-catalog,no-per-model-list,驱动下载页无逐型号列表,https://www.evga.com/products/pdf/121-RL-E799-KR.pdf
 EVGA,motherboard,LGA1700,Z790 DARK K|NGP|N,11,oem-model-catalog,no-per-model-list,驱动下载页无逐型号列表,https://www.evga.com/products/pdf/121-RL-E799-KR.pdf
-GIGABYTE,motherboard,LGA1851,B860M A PRO WIFI7,10,catalog-model,support-url-missing,支持页 slug 未找到（多次 404）,https://download.gigabyte.com/FileList/Manual/mb_manual_b860m-a-pro-wf7_1001_e.pdf
-GIGABYTE,motherboard,LGA1851,B860M A PRO WIFI7,11,catalog-model,support-url-missing,支持页 slug 未找到（多次 404）,https://download.gigabyte.com/FileList/Manual/mb_manual_b860m-a-pro-wf7_1001_e.pdf
-GIGABYTE,motherboard,LGA1851,B860M A PRO WIFI7 rev. 1.0,10,oem-manual-module,support-url-missing,支持页 slug 未找到（多次 404）,https://download.gigabyte.com/FileList/Manual/mb_manual_b860m-a-pro-wf7_1001_e.pdf?v=b2e0b7ea2e560af25d9702b6359f6e54
-GIGABYTE,motherboard,LGA1851,B860M A PRO WIFI7 rev. 1.0,11,oem-manual-module,support-url-missing,支持页 slug 未找到（多次 404）,https://download.gigabyte.com/FileList/Manual/mb_manual_b860m-a-pro-wf7_1001_e.pdf?v=b2e0b7ea2e560af25d9702b6359f6e54
-GIGABYTE,motherboard,LGA1851,B860M A PRO WIFI7 rev. 1.1,10,oem-manual-module,support-url-missing,支持页 slug 未找到（多次 404）,https://download.gigabyte.com/FileList/Manual/mb_manual_b860m-a-pro-wf7_1001_e.pdf?v=b2e0b7ea2e560af25d9702b6359f6e54
-GIGABYTE,motherboard,LGA1851,B860M A PRO WIFI7 rev. 1.1,11,oem-manual-module,support-url-missing,支持页 slug 未找到（多次 404）,https://download.gigabyte.com/FileList/Manual/mb_manual_b860m-a-pro-wf7_1001_e.pdf?v=b2e0b7ea2e560af25d9702b6359f6e54
 Lenovo,laptop,Legion,Legion 5 15IAX11,10,oem-psref-wlan-options,os-list-empty,OS 列表空或驱动 API 403,https://psref.lenovo.com/syspool/Sys/PDF/Legion/Legion_5_15IAX11/Legion_5_15IAX11_Spec.pdf
 Lenovo,laptop,Legion,Legion 5 15IAX11,11,oem-psref-wlan-options,os-list-empty,OS 列表空或驱动 API 403,https://psref.lenovo.com/syspool/Sys/PDF/Legion/Legion_5_15IAX11/Legion_5_15IAX11_Spec.pdf
 Lenovo,laptop,Legion,Legion Pro 5 16IRX10,11,oem-wlan-driver-families,os-list-empty,OS 列表空或驱动 API 403,https://pcsupport.lenovo.com/fi/fi/product_security/ps500812
