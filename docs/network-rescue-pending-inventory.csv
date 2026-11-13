@@ -1,16 +1,16 @@
 brand,type,platform,model,windows,wlanEvidence,reason,detail,source
-ASUS,laptop,ROG-Republic-of-Gamers,ROG Flow Z13-KJP,10,product-series,no-network-category,该系统驱动列表没有网络类目,https://rog.asus.com/laptops/rog-flow/ROG-Flow-Z13-KJP/
-ASUS,laptop,ROG-Republic-of-Gamers,ROG Flow Z13-KJP,11,product-series,no-network-category,该系统驱动列表没有网络类目,https://rog.asus.com/laptops/rog-flow/ROG-Flow-Z13-KJP/
-ASUS,laptop,ROG-Republic-of-Gamers,ROG Strix G15,10,product-series,no-network-category,该系统驱动列表没有网络类目,https://rog.asus.com/laptops/rog-strix/2021-rog-strix-g15-series/
-ASUS,laptop,ROG-Republic-of-Gamers,ROG Strix G15,11,product-series,no-network-category,该系统驱动列表没有网络类目,https://rog.asus.com/laptops/rog-strix/2021-rog-strix-g15-series/
-ASUS,laptop,ROG-Republic-of-Gamers,ROG Strix G17,11,product-series,no-network-category,该系统驱动列表没有网络类目,https://rog.asus.com/laptops/rog-strix/2021-rog-strix-g17-series/
-ASUS,laptop,ROG-Republic-of-Gamers,ROG Strix SCAR 17,11,product-series,no-network-category,该系统驱动列表没有网络类目,https://rog.asus.com/laptops/rog-strix/2021-rog-strix-scar-17-series/
-ASUS,laptop,ROG-Republic-of-Gamers,ROG Zephyrus G14 (2026) GA403,10,product-series,no-network-category,该系统驱动列表没有网络类目,https://rog.asus.com/laptops/rog-zephyrus/rog-zephyrus-g14-2026-ga403/
-ASUS,laptop,ROG-Republic-of-Gamers,ROG Zephyrus G14 (2026) GA403,11,product-series,no-network-category,该系统驱动列表没有网络类目,https://rog.asus.com/laptops/rog-zephyrus/rog-zephyrus-g14-2026-ga403/
-ASUS,laptop,ROG-Republic-of-Gamers,ROG Zephyrus G14 AW SE,10,product-series,no-network-category,该系统驱动列表没有网络类目,https://rog.asus.com/laptops/rog-zephyrus/2021-rog-zephyrus-g14-aw-se-series/
-ASUS,laptop,ROG-Republic-of-Gamers,ROG Zephyrus G14 AW SE,11,product-series,no-network-category,该系统驱动列表没有网络类目,https://rog.asus.com/laptops/rog-zephyrus/2021-rog-zephyrus-g14-aw-se-series/
-ASUS,laptop,TUF-Gaming,ASUS TUF Gaming A16 (2025),10,product-series,no-network-category,该系统驱动列表没有网络类目,https://www.asus.com/laptops/for-gaming/tuf-gaming/asus-tuf-gaming-a16-2025/
-ASUS,laptop,TUF-Gaming,ASUS TUF Gaming A16 (2025),11,product-series,no-network-category,该系统驱动列表没有网络类目,https://www.asus.com/laptops/for-gaming/tuf-gaming/asus-tuf-gaming-a16-2025/
+ASUS,laptop,ROG-Republic-of-Gamers,ROG Flow Z13-KJP,10,product-series,no-network-category,该系统驱动列表没有网络类目或列表过短,https://rog.asus.com/laptops/rog-flow/ROG-Flow-Z13-KJP/
+ASUS,laptop,ROG-Republic-of-Gamers,ROG Flow Z13-KJP,11,product-series,no-network-category,该系统驱动列表没有网络类目或列表过短,https://rog.asus.com/laptops/rog-flow/ROG-Flow-Z13-KJP/
+ASUS,laptop,ROG-Republic-of-Gamers,ROG Strix G15,10,product-series,no-network-category,该系统驱动列表没有网络类目或列表过短,https://rog.asus.com/laptops/rog-strix/2021-rog-strix-g15-series/
+ASUS,laptop,ROG-Republic-of-Gamers,ROG Strix G15,11,product-series,no-network-category,该系统驱动列表没有网络类目或列表过短,https://rog.asus.com/laptops/rog-strix/2021-rog-strix-g15-series/
+ASUS,laptop,ROG-Republic-of-Gamers,ROG Strix G17,11,product-series,no-network-category,该系统驱动列表没有网络类目或列表过短,https://rog.asus.com/laptops/rog-strix/2021-rog-strix-g17-series/
+ASUS,laptop,ROG-Republic-of-Gamers,ROG Strix SCAR 17,11,product-series,no-network-category,该系统驱动列表没有网络类目或列表过短,https://rog.asus.com/laptops/rog-strix/2021-rog-strix-scar-17-series/
+ASUS,laptop,ROG-Republic-of-Gamers,ROG Zephyrus G14 (2026) GA403,10,product-series,no-network-category,该系统驱动列表没有网络类目或列表过短,https://rog.asus.com/laptops/rog-zephyrus/rog-zephyrus-g14-2026-ga403/
+ASUS,laptop,ROG-Republic-of-Gamers,ROG Zephyrus G14 (2026) GA403,11,product-series,no-network-category,该系统驱动列表没有网络类目或列表过短,https://rog.asus.com/laptops/rog-zephyrus/rog-zephyrus-g14-2026-ga403/
+ASUS,laptop,ROG-Republic-of-Gamers,ROG Zephyrus G14 AW SE,10,product-series,no-network-category,该系统驱动列表没有网络类目或列表过短,https://rog.asus.com/laptops/rog-zephyrus/2021-rog-zephyrus-g14-aw-se-series/
+ASUS,laptop,ROG-Republic-of-Gamers,ROG Zephyrus G14 AW SE,11,product-series,no-network-category,该系统驱动列表没有网络类目或列表过短,https://rog.asus.com/laptops/rog-zephyrus/2021-rog-zephyrus-g14-aw-se-series/
+ASUS,laptop,TUF-Gaming,ASUS TUF Gaming A16 (2025),10,product-series,no-network-category,该系统驱动列表没有网络类目或列表过短,https://www.asus.com/laptops/for-gaming/tuf-gaming/asus-tuf-gaming-a16-2025/
+ASUS,laptop,TUF-Gaming,ASUS TUF Gaming A16 (2025),11,product-series,no-network-category,该系统驱动列表没有网络类目或列表过短,https://www.asus.com/laptops/for-gaming/tuf-gaming/asus-tuf-gaming-a16-2025/
 Dell,laptop,Alienware,Alienware 15 DA15260,10,oem-manual-module,consumer-api-403,消费级 Alienware 不在驱动包目录；Dell 支持页 API 被拦,https://www.dell.com/support/manuals/en-my/alienware-da15260-gaming-laptop/alienware_15_da15260_setup_and_specifications/wireless-module?guid=guid-d76a0516-a057-4bd5-87ce-a5b755fed541&lang=en-us
 Dell,laptop,Alienware,Alienware 15 DA15260,11,oem-manual-module,consumer-api-403,消费级 Alienware 不在驱动包目录；Dell 支持页 API 被拦,https://www.dell.com/support/manuals/en-my/alienware-da15260-gaming-laptop/alienware_15_da15260_setup_and_specifications/wireless-module?guid=guid-d76a0516-a057-4bd5-87ce-a5b755fed541&lang=en-us
 Dell,laptop,Alienware,Alienware 16 Area-51 AA16250,10,oem-manual-module,consumer-api-403,消费级 Alienware 不在驱动包目录；Dell 支持页 API 被拦,https://www.dell.com/support/manuals/en-us/alienware-area-51-aa16250-gaming-laptop/alienware-16-area-51-aa16250-owners-manual/wireless-module?guid=guid-c724a1c8-6e1b-4240-8b99-bbd371deee98&lang=en-us
@@ -39,14 +39,10 @@ ASUS,motherboard,AM5,PRIME B850-PLUS-CSM,10,oem-spec-wlan-not-listed,factory-vs-
 ASUS,motherboard,AM5,PRIME B850-PLUS-CSM,11,oem-spec-wlan-not-listed,factory-vs-listing,手册/规格写非 Wi-Fi，下载页却列出 Wi-Fi 驱动,https://www.asus.com/motherboards-components/motherboards/csm/prime-b850-plus-csm/techspec/
 ASUS,motherboard,AM5,Pro WS 665-ACE,10,catalog-model,no-factory-proof,下载列表未列或不可用，缺出厂无线证据,https://www.asus.com/motherboards-components/motherboards/workstation/pro-ws-665-ace/
 ASUS,motherboard,AM5,Pro WS 665-ACE,11,catalog-model,no-factory-proof,下载列表未列或不可用，缺出厂无线证据,https://www.asus.com/motherboards-components/motherboards/workstation/pro-ws-665-ace/
-ASUS,motherboard,AM5,Pro WS B850M-ACE SE,10,oem-spec-wlan-not-listed,factory-vs-listing,手册/规格写非 Wi-Fi，下载页却列出 Wi-Fi 驱动,https://www.asus.com/motherboards-components/motherboards/workstation/pro-ws-b850m-ace-se/techspec/
-ASUS,motherboard,AM5,ProArt B850-CREATOR WIFI NEO,10,manual-module-candidate,factory-vs-listing,手册/规格写非 Wi-Fi，下载页却列出 Wi-Fi 驱动,https://dlcdnets.asus.com/pub/ASUS/MB/SocketAM5/ProArt_B850-CREATOR_WIFI_NEO/E27577_ProArt_B850-CREATOR_WIFI_NEO_EM_WEB.pdf
 ASUS,motherboard,AM5,TUF GAMING A620AM-PLUS,10,oem-spec-wlan-not-listed,factory-vs-listing,手册/规格写非 Wi-Fi，下载页却列出 Wi-Fi 驱动,https://www.asus.com/motherboards-components/motherboards/tuf-gaming/tuf-gaming-a620am-plus/techspec/
 ASUS,motherboard,AM5,TUF GAMING A620AM-PLUS,11,oem-spec-wlan-not-listed,factory-vs-listing,手册/规格写非 Wi-Fi，下载页却列出 Wi-Fi 驱动,https://www.asus.com/motherboards-components/motherboards/tuf-gaming/tuf-gaming-a620am-plus/techspec/
 ASUS,motherboard,AM5,TUF GAMING B850M-PLUS,10,oem-spec-wlan-not-listed,factory-vs-listing,手册/规格写非 Wi-Fi，下载页却列出 Wi-Fi 驱动,https://www.asus.com/motherboards-components/motherboards/tuf-gaming/tuf-gaming-b850m-plus/techspec/
 ASUS,motherboard,AM5,TUF GAMING B850M-PLUS,11,oem-spec-wlan-not-listed,factory-vs-listing,手册/规格写非 Wi-Fi，下载页却列出 Wi-Fi 驱动,https://www.asus.com/motherboards-components/motherboards/tuf-gaming/tuf-gaming-b850m-plus/techspec/
-ASUS,motherboard,LGA1700,PRIME B760M-A D4-CSM,10,catalog-model,no-factory-proof,下载列表未列或不可用，缺出厂无线证据,https://www.asus.com/motherboards-components/motherboards/prime/prime-b760m-a-d4-csm/
-ASUS,motherboard,LGA1700,PRIME B760M-A D4-CSM,11,catalog-model,no-factory-proof,下载列表未列或不可用，缺出厂无线证据,https://www.asus.com/motherboards-components/motherboards/prime/prime-b760m-a-d4-csm/
 ASUS,motherboard,LGA1700,PRIME H610M-F D4 R3.0,10,oem-spec-wlan-not-listed,factory-vs-listing,手册/规格写非 Wi-Fi，下载页却列出 Wi-Fi 驱动,https://www.asus.com/motherboards-components/motherboards/prime/prime-h610m-f-d4-r3-0/techspec/
 ASUS,motherboard,LGA1700,PRIME H610M-F D4 R3.0,11,oem-spec-wlan-not-listed,factory-vs-listing,手册/规格写非 Wi-Fi，下载页却列出 Wi-Fi 驱动,https://www.asus.com/motherboards-components/motherboards/prime/prime-h610m-f-d4-r3-0/techspec/
 ASUS,motherboard,LGA1851,TUF GAMING B860M-PLUS,11,oem-spec-wlan-not-listed,factory-vs-listing,手册/规格写非 Wi-Fi，下载页却列出 Wi-Fi 驱动,https://www.asus.com/motherboards-components/motherboards/tuf-gaming/tuf-gaming-b860m-plus/techspec/
@@ -202,10 +198,10 @@ Acer,laptop,,TravelMate Spin 311RN-31,10,oem-model-catalog,no-listing-exact-mode
 Acer,laptop,,TravelMate Spin B311RA-32,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号无驱动记录（US/TW 均 0 命中）,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
 Acer,laptop,,TravelMate X40-52-M,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号无驱动记录（US/TW 均 0 命中）,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
 Acer,laptop,,TravelMate X40-52-MG,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号无驱动记录（US/TW 均 0 命中）,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
-ASUS,laptop,,ASUS TUF Gaming A16 (2025) FA608PPI,10,oem-driver-list,no-network-category,该系统驱动列表没有网络类目,https://www.asus.com/supportonly/fa608ppi/helpdesk_download/
-ASUS,laptop,,ASUS TUF Gaming A16 (2025) FA608PPI,11,oem-driver-list,no-network-category,该系统驱动列表没有网络类目,https://www.asus.com/supportonly/fa608ppi/helpdesk_download/
-ASUS,laptop,,ASUS TUF Gaming A16 (2025) FA608PMI,10,oem-driver-list,no-network-category,该系统驱动列表没有网络类目,https://www.asus.com/supportonly/fa608pmi/helpdesk_download/
-ASUS,laptop,,ASUS TUF Gaming A16 (2025) FA608PMI,11,oem-driver-list,no-network-category,该系统驱动列表没有网络类目,https://www.asus.com/supportonly/fa608pmi/helpdesk_download/
-ASUS,laptop,,ROG Strix G15 G513IR,11,oem-driver-list,no-network-category,该系统驱动列表没有网络类目,https://www.asus.com/supportonly/g513ir/helpdesk_download/
-ASUS,laptop,,ROG Strix G17 G713IR,11,oem-driver-list,no-network-category,该系统驱动列表没有网络类目,https://www.asus.com/supportonly/g713ir/helpdesk_download/
-ASUS,laptop,,ROG Strix SCAR 17 G733QSA,11,oem-driver-list,no-network-category,该系统驱动列表没有网络类目,https://www.asus.com/supportonly/g733qsa/helpdesk_download/
+ASUS,laptop,,ASUS TUF Gaming A16 (2025) FA608PPI,10,oem-driver-list,no-network-category,该系统驱动列表没有网络类目或列表过短,https://www.asus.com/supportonly/fa608ppi/helpdesk_download/
+ASUS,laptop,,ASUS TUF Gaming A16 (2025) FA608PPI,11,oem-driver-list,no-network-category,该系统驱动列表没有网络类目或列表过短,https://www.asus.com/supportonly/fa608ppi/helpdesk_download/
+ASUS,laptop,,ASUS TUF Gaming A16 (2025) FA608PMI,10,oem-driver-list,no-network-category,该系统驱动列表没有网络类目或列表过短,https://www.asus.com/supportonly/fa608pmi/helpdesk_download/
+ASUS,laptop,,ASUS TUF Gaming A16 (2025) FA608PMI,11,oem-driver-list,no-network-category,该系统驱动列表没有网络类目或列表过短,https://www.asus.com/supportonly/fa608pmi/helpdesk_download/
+ASUS,laptop,,ROG Strix G15 G513IR,11,oem-driver-list,no-network-category,该系统驱动列表没有网络类目或列表过短,https://www.asus.com/supportonly/g513ir/helpdesk_download/
+ASUS,laptop,,ROG Strix G17 G713IR,11,oem-driver-list,no-network-category,该系统驱动列表没有网络类目或列表过短,https://www.asus.com/supportonly/g713ir/helpdesk_download/
+ASUS,laptop,,ROG Strix SCAR 17 G733QSA,11,oem-driver-list,no-network-category,该系统驱动列表没有网络类目或列表过短,https://www.asus.com/supportonly/g733qsa/helpdesk_download/
