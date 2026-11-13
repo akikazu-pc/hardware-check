@@ -410,3 +410,10 @@ v0.1.0 退出后，重启仍留下 `PawnIO` 服务和驱动包。复现确认：
 - CLI 选择无人值守部署和映像后扫描不到匹配的签名网络驱动；确认「不添加驱动继续」后，DISM 应用映像、写入应答文件、设置 UEFI 引导和恢复分区，自动重启进入日语微软许可页。
 - 只读挂载系统盘核对：EFI 260 MiB、MSR 16 MiB、C 盘 78.73 GiB、恢复分区 1 GiB；应答文件和 `ReAgent.xml` 存在；`Windows\INF\oem*.inf` 为空，确认本次未写入第三方网络驱动，驱动库中的 `rt640x64`、`rtu*` 目录来自映像自带。许可页未代为确认，首次设置完成和驱动绑定不在本轮范围。
 - 同一入口在 Setup 模式无匹配驱动时会直接启动无驱动的 Windows Setup（本轮在输入错位时观察到语言页）；Setup 路径的完整安装未执行。
+
+## 2026-11-13 PE 中断后续装
+
+- 在 `NR-RESUME-01` 来宾（第 2 代、不接网络、Secure Boot、无虚拟 TPM、80 GiB 空盘）启动一次无驱动无人值守部署，在分区完成、映像应用期间约 45 秒时强制断电。
+- 重启 PE 后目标发现为 0；磁盘列表以「Retry interrupted deployment (this disk will be erased)」显示同一块 Disk 0（按界面语言显示）。确认后 DiskPart 先 `clean` 再重建 EFI／MSR／Windows／Recovery，随后完成映像应用、应答文件、UEFI 引导和恢复分区，自动重启进入日语许可页。
+- 只读核对：EFI 260 MiB、MSR 16 MiB、C 盘 78.73 GiB、恢复分区 1 GiB；应答文件和 `ReAgent.xml` 存在；`Windows\INF\oem*.inf` 为空（本轮未选驱动）。许可页未代为确认。
+- 重试仅在同一磁盘身份与标记（Windows 分区根目录 `NetworkRescueDeployment` 或 `Windows\Panther\Unattend\Unattend.xml`）匹配时出现；空白盘路径不变。首轮曾把标记误检为 `Windows\NetworkRescueDeployment`，修正后复测通过。
