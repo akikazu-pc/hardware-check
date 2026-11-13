@@ -536,3 +536,26 @@ MSI 的笔记本系列页 OS 选择器常常为空，区域 SKU 藏在系列 ban
 19 个待核系列共取得 57 个区域 SKU：每个 SKU 的 OS 选择器都只有 `Win11 64`，且 Win11 驱动表都列出 Wireless LAN 驱动（Intel／Killer／AMD／MediaTek），因此系列的两个系统格一起关闭，共 **38 格**。`+` 号会让搜索接口返回 500，脚本会去掉 `+` 再查一次。逐 SKU 证据见 [MSI 系列证据](network-rescue-msi-family-proof.csv)，脚本为 [collect-msi-family-listings.py](../scripts/collect-msi-family-listings.py)。
 
 本轮合计关闭 **38 格**：待核 424→**386**（主板 61／61，笔记本 Win10 164、Win11 100）。
+
+### 2026-11-13 剩余证据缺口清单
+
+本轮补结 3 格：H610M/ac 手册明确列出「Wireless LAN: 802.11ac WiFi Module」且下载列表两系统都列 WLAN 驱动（2 格）；ROG Strix G16 (2025) 的 10 个 SKU 全部列出 WLAN 驱动，系列 Win11 格随之关闭（1 格）。待核 386→**383**。
+
+剩余 383 格已全部落到具体缺口，复查时按此表推进：
+
+| 范围 | 待核 | 已查来源 | 缺失证据 |
+| --- | ---: | --- | --- |
+| 主板 ASUS 14／13 | 27 | 原厂规格页、下载接口、手册、CSM 手册归属 | 5 款手册明写非 Wi-Fi 但下载页列通用 Wi-Fi 驱动；4 款只有模块候选；Pro WS 665-ACE 无手册；B850M AYW 与 Z890 HERO 接口不可用 |
+| 主板 ASRock 12／15 | 27 | 手册、下载列表快照 | Key-E 槽位板只有通用 Wi-Fi 驱动；Win11 下载列表无效 |
+| 主板 MSI 12／12 | 24 | 规格页、驱动面板 | 无 Wi-Fi 主板只列通用 Intel WIFI 驱动（`specGated`） |
+| 主板 BIOSTAR 12／12 | 24 | 官网 | 站点对 curl、Python、Node 全部 403 |
+| 主板 Gigabyte 8／6 | 14 | 支持页 | Akamai 拒绝 Nuxt 代理 API |
+| 主板 EVGA 2／2 | 4 | 支持页、产品 PDF | 页面与 PDF 均返回拦截页 |
+| 笔记本 HP 63／21 | 84 | HPIA 目录、SoftPaq 说明、CVA | 缺原厂 OS 支持声明；2025 AI PC 无 Win10 驱动包 |
+| 笔记本 Acer 83／58 | 141 | 驱动接口、sitemap、族级 SKU | 113 个 SKU 的接口返回近似型号，全族一致不可达 |
+| 笔记本 ASUS 10／14 | 24 | 下载接口、逐 SKU GetPDOS | 空 OS 列表或无网络类目 |
+| 笔记本 Lenovo 7 | 7 | PSREF、下载页 OS 列表 | 3 款 OS 列表为空，4 款缺 WLAN 列表 |
+| 笔记本 Dell 5／3 | 8 | 驱动包 XML、驱动目录 | 缺原厂系统支持声明 |
+| 戴尔系统 ID 组合 127／39 | 166 | 驱动包 XML、驱动目录 | 同上，需原厂逐系统支持声明 |
+
+这些条目按 A-GENTS 的要求保持待核并保留来源，不把空响应、近似型号或通用驱动包计为已核实。
