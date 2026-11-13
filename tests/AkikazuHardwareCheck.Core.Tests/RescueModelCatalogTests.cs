@@ -5,6 +5,30 @@ namespace AkikazuHardwareCheck.Core.Tests;
 public sealed class RescueModelCatalogTests
 {
     [Theory]
+    [InlineData("NEC", "PC-VKT13HZG4", "nec/pc-vkt13hzg4")]
+    [InlineData("Panasonic", "CF-191AYSXBM", "panasonic/cf-191aysxbm")]
+    [InlineData("Fujitsu", "LIFEBOOK AH531", "fujitsu/lifebook-ah531")]
+    public void FindsDriverHubModelCandidatesWithPendingEvidence(string brand, string model, string path)
+    {
+        var entry = Assert.Single(RescueModelCatalog.Search($"{brand} {model}", RescueDeviceCategory.Laptop),
+            item => item.Model == model);
+        Assert.Equal("pending", entry.Windows10Evidence);
+        Assert.Equal("pending", entry.Windows11Evidence);
+        Assert.Equal($"https://jp.drvhub.net/laptops/{path}", entry.Source?.AbsoluteUri);
+        Assert.Null(entry.DriverPage);
+    }
+
+    [Fact]
+    public void ExcludesDriverHubSeriesGenerationsFromModelSearch()
+    {
+        foreach (var generation in new[] { "CF-33-1", "CF-20-2", "CF-31-5", "CF-54-3" })
+        {
+            Assert.DoesNotContain(RescueModelCatalog.Search($"Panasonic {generation}", RescueDeviceCategory.Laptop),
+                entry => entry.Model == generation);
+        }
+    }
+
+    [Theory]
     [InlineData("NH.U1BAA.001", "oem-wlan-listed", "AX1675i")]
     [InlineData("NX.KYXAA.002", "outside-x64-record", "802.11be")]
     public void FindsAcerRetailPartNumbersWithTheirSeparatePlatformEvidence(string part, string evidence, string module)

@@ -1,4 +1,4 @@
-"""Export searchable OEM model records from verified updater catalogs."""
+"""Export searchable models from updater catalogs and supplemental sources."""
 
 import argparse
 from collections import Counter, defaultdict
@@ -6,6 +6,7 @@ import csv
 import json
 from pathlib import Path
 import re
+import unicodedata
 
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -87,6 +88,33 @@ def oem_rows(state, source, brand, category, tag, indexed):
         yield catalog_row(model.get("brand") or brand, model, model_category, tag=tag, evidence=evidence, driver_page=driver_page)
 
 
+def model_key(brand, model):
+    return tuple(
+        "".join(character for character in unicodedata.normalize("NFKC", value)
+                if character.isalnum() or character == "+").casefold()
+        for value in (brand, model)
+    )
+
+
+def driverhub_rows(existing):
+    occupied = {model_key(row[1], label) for row in existing
+                for label in (row[2], *row[13].split("|")) if label}
+    with (ROOT / "docs/network-rescue-driverhub-model-candidates.csv").open(
+        encoding="utf-8-sig", newline=""
+    ) as stream:
+        for entry in csv.DictReader(stream):
+            if entry["granularity"] != "model":
+                continue
+            brand, model = entry["brand"], entry["model"]
+            key = model_key(brand, model)
+            if key in occupied:
+                continue
+            occupied.add(key)
+            yield ("laptop", brand, model, "", "", "third-party-model-candidate", "",
+                   "exact-network-id-and-install", entry["source"], entry["status"], entry["status"],
+                   "Laptop", "", "", "")
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--state", type=Path, default=ROOT / "artifacts/network-rescue-update")
@@ -117,6 +145,7 @@ def main():
     for source, brand, category, tag in OEM_SOURCES:
         root = devices if category == "Other" else args.state
         rows.extend(oem_rows(root, source, brand, category, tag, indexed))
+    rows.extend(driverhub_rows(rows))
 
     with (ROOT / "docs/network-rescue-model-gaps.csv").open(encoding="utf-8-sig", newline="") as stream:
         header = next(csv.reader(stream))

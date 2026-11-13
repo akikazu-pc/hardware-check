@@ -43,6 +43,8 @@ python scripts/collect-windriverindex-wlan.py docs/network-rescue-model-gaps.csv
 
 `artifacts/` 是本机的忽略目录。新工作区需要重新采集或从上一工作区带入快照、原包和签名记录。可提交的接手证据是 `docs/` 下的表。需要更新应用内型号时，先运行 `python scripts/export-network-rescue-search.py`，设备采集另用了状态目录时传 `--device-state`。更改应用、数据或脚本后按 `AGENTS.md` 运行相应门禁。交付包沿用 ZIP。
 
+[DriverHub 型号候选表](network-rescue-driverhub-model-candidates.csv)保留日本站的原始型番、来源和待核状态。目录导出只纳入具体型号，遇到同品牌的已有型号或别名时保留现有目录记录。Panasonic 系列代次仅留在候选表中。候选的 Windows 10 与 Windows 11 证据均为待核。
+
 ## 当前待核与接手顺序
 
 截至 `9c1f0c0`（2026-11-13）。主板 Win10／Win11 各 61 条，笔记本 Win10 183 条、Win11 119 条；戴尔系统 ID 组合已清零。
