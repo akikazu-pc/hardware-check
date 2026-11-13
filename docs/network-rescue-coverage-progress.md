@@ -597,3 +597,11 @@ MSI 的笔记本系列页 OS 选择器常常为空，区域 SKU 藏在系列 ban
 - X570 AQUA 手册规格写明「Wireless LAN: Intel 802.11ax WiFi Module」，下载列表两系统都列 WLAN 驱动，关闭 2 格并补模块字段。
 
 本轮合计关闭 **9 格**：待核 230→**221**（主板 57／57，笔记本 Win10 67、Win11 40）。
+
+### 2026-11-13 一体机收尾与 EVGA 手册可达
+
+- **惠普 Presence 24 一体机**：驱动包目录里只有 `Windows 10 64-bit, 20H2` 一个条目，包 sp144635 的 CVA 只声明 `WT64_2009/21H1/21H2/22H2` 且 `[System Information]` 含「HP PRESENCE 24 WITH ZOOM ROOMS」，据此把 Win11 格关闭为 `oem-os-not-listed`。一体机待核清零；`collect-hp-pack-os.py` 现在同时处理一体机行。
+- **EVGA 手册**：`www.evga.com/support/manuals/files/<PN>.pdf` 可读（`products/pdf/` 路径返回拦截页）。两份 Z790 手册都提到「Wi-Fi 6E / BT 5.2」，但 EVGA 的驱动下载页是 ASP.NET 壳，没有可解析的逐型号驱动列表，两个系统格保持待核。
+- **BIOSTAR**：`http`、裸域名与不同 UA 均返回 403，24 格继续阻塞。
+
+本轮合计关闭 **1 格**（一体机）：主板 57／57，笔记本 Win10 67、Win11 40；待核 221，另有戴尔系统 ID 组合 166 格。
