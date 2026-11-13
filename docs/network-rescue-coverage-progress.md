@@ -746,3 +746,15 @@ BIOSTAR 的 `export/spec_export.php?S_ID=...` 返回的其实是 **PDF 字节**�
 - **Gigabyte**：支持页的下载表被渲染成 markdown（`| Description | Version | OS |`，按 `## 分类` 分组，OS 列逐行标注 Win10/Win11）。据此关闭 8 格：Z890 AI TOP、Z890 EAGLE WIFI7 PLUS、B860 DS3H WIFI6E（两行）各系统都列出 Intel／Realtek 无线驱动；A520I AC Rev. 1.5 的无线驱动注明「only for PCB rev. 1.4」，对本修订版不适用 → 两系统都按未列关闭。剩余 B860M A PRO WIFI7 的站点 slug 多次尝试均 404，6 格待核。
 
 新增脚本 [collect-gigabyte-wlan-downloads.py](../scripts/collect-gigabyte-wlan-downloads.py)：按分类与 OS 列解析表格，识别「仅某 PCB 修订版」的限定，并可用 `--apply` 回写。本轮合计关闭 **28 格**：待核 206→**178**。
+
+### 2026-11-13 ASRock Download.html 逐系统核验
+
+阅读器代理同样能渲染 ASRock 的 `Download.html`（Akamai 拦截下的静态下载页），每块驱动带 `Windows® 10 64bit` / `Windows® 11 64bit` 标记，可据此逐系统判断 WLAN 有无。12 个待核型号全部取到页面，结论：
+
+- **X570 Taichi Razer Edition、Z890 Taichi AQUA**：整页没有任何 WLAN 驱动（16/22 条其他驱动），但手册写明随板 Killer AX1650x／Wi-Fi 7 模块 → 两系统都按未列关闭（4 格）。
+- **X470 Master SLI/ac**：无线驱动只标 Win10，Win11 列表 9 条无 WLAN → Win11 关闭（1 格）。
+- **AB350M Pro4/DASH、X370 Pro4**：Win11 列表 9–10 条、无 WLAN，规格未列 WLAN → 各关 Win11（2 格）。
+- **X300M-STX、X300TM-ITX、X470 Master SLI、B660M PG Riptide、Z790 PG Riptide、Z790 PG SONIC**：下载页确实列出通用 Intel／MediaTek 无线驱动 → 与「规格无出厂无线」冲突，维持待核。
+- **B760M PG Riptide**：`Download.html` 只有 356 字节占位，页面无下载数据，维持待核。
+
+新增 [collect-asrock-via-reader.py](../scripts/collect-asrock-via-reader.py)（按驱动块与 OS 标记分类，支持 `--apply`）。本轮合计关闭 **7 格**：待核 178→**171**。
