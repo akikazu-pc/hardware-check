@@ -915,3 +915,28 @@ ASUS 侧规律：`rog.asus.com/{locale}/laptops/{category}/{series-slug}/spec/` 
 新增 [collect-drvhub.py](../scripts/collect-drvhub.py)：抓取品牌索引、按型号代码精确匹配、解析 WLAN 卡片，`--apply` 把该型号待核格写成 `third-party-wlan-listed` 并记录页面 URL。该状态在 `audit-network-rescue.py` 的状态词表中，检索结果单独存于 [DrvHub 证据表](network-rescue-drvhub-proof.csv)。
 
 已匹配并关闭：Aspire A515-41G（Qualcomm QCA9377 12.0.0.1272）、Nitro AN514-54（Intel AX200 24.70.0.3）、ROG Strix SCAR 17 G733QSA（Intel AX200/AX210、MediaTek MT7921）。DrvHub 没有 Acer 各「S」变体、G513IR、Pro WS 665-ACE 的型号页。
+
+### 剩余网卡驱动复核
+
+待核由 **24 降至 20**（Acer 笔记本 Win10 18 格，ASUS 主板 WLAN 2 格）。本次按驱动证据补记 ASUS 笔记本的 Win11，并将一个 ARM64 型号移出 x64 待核。安装、实机联网及救援包集成均为 Unverified。
+
+| 精确型号 | 发现与下载 |
+| --- | --- |
+| ROG Strix G15 G513IR、ROG Strix G17 G713IR | [G513IR 认证声明](https://dlcdnets.asus.com/pub/ASUS/GamingNB/G513IM/DOC-20210309004-1-EN.pdf)和 [G713IR 认证声明](https://dlcdnets.asus.com/pub/ASUS/GamingNB/ROG%20Strix%20G17%20G713/DOC-20200825014-1-EN.pdf)均列 Intel AX200NGW。[第三方托管的 ASUS Win11 镜像清单](https://www.scribd.com/document/689750897/ReleaseNote-FileList-of-X64W11-21H2R-SWP-G513IM-00-01)列出两型号及 ASUS CDN 的 [Intel 22.70.0.6](https://dlcdnets.asus.com/pub/ASUS/GamingNB/Image/Driver/Networking/24199/WirelessLan_DCH_ROG_Intel_J_V22.70.0.6_24199_1.exe) 和 [MediaTek 3.0.1.1207](https://dlcdnets.asus.com/pub/ASUS/GamingNB/Image/Driver/Networking/26562/WirelessLan_ROG_MediaTek_J_V3.00.01.1207_26562_2.exe)。AX200 也可按硬件 ID 选用 [Intel 官方驱动](https://www.intel.com/content/www/us/en/download/915475/intel-wireless-wi-fi-drivers-for-intel-wi-fi-6-ax200.html)。MediaTek 以设备硬件 ID 为准。 |
+| Acer SFA14-11 | [Acer 全驱动 ZIP](https://global-download.acer.com/GDFiles/Driver/Others/Others_Acer_2.0_W11x64_A.zip?acerid=639005191616021898)，SHA-256 `3c955be4bbfcfc64d556b0073dc19af38db75d35292e18acec3bd49781db5df0`。两个网络类 INF 均声明 `NTARM64.10.0...22000`。Qualcomm `qcwlanhmt8380.inf` 1.0.4028.0800 覆盖 `PCI\VEN_17CB&DEV_1107`，`qcwlanhsp8380.inf` 1.0.4023.6900 覆盖 `PCI\VEN_17CB&DEV_1103`。官网 ZIP 名里的 W11x64 与 INF 的架构冲突。 |
+| ASUS Pro WS 665-ACE | [ASUS 明确列出 Intel I225-LM 2.5GbE](https://press.asus.com/news/press-releases/2024-amd-epyc-4004-server-workstation-hardware-launch/)。[Win10 ZIP](https://dlcdnets.asus.com/pub/ASUS/mb/LGA1700/Pro_WS_W680-ACE/DRV_LAN_Intel_I226_UWD_TP_W10_64_V11443_20240710R.zip) 含 `e2f.inf` 1.1.4.43（amd64 build 17763 起），[Win11 ZIP](https://dlcdnets.asus.com/pub/ASUS/mb/04LAN/DRV_LAN_Intel_I226_Cx_TP_W11_64_V21510_20260330R.zip) 含 `e2fn.inf` 2.1.5.10（amd64 build 22000 起），两包都覆盖 `PCI\VEN_8086&DEV_15F2`。出厂 WLAN 状态仍待核。 |
+
+Acer Win10 目前有三项可按实机硬件 ID 尝试的线索：
+
+- SP513-55NA 在 [ENERGY STAR 的 SP513-55N 认证](https://www.energystar.gov/productfinder/product/certified-computers/details/2369769/export/pdf/download)中列为附加型号，两者共用 [Acer Win10 手册](https://global-download.acer.com/GDFiles/Document/User%20Manual%20W10/User%20Manual%20W10_Acer_2.0_A_A.pdf?acerid=637767766152846119)。SP513-55N 有 [Intel AX201](https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.40.0.7_W10x64_A.zip?acerid=637599455561837324) 和 [Killer](https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_22.40.0.7_W10x64_A.zip?acerid=637599458534523260) 两个 22.40.0.7 包。SP513-55NA 的出厂网卡变体尚待确认。
+- TravelMate 311R-31、311RN-31 有同系列 Intel Wireless-AC 9560 线索。Acer 为 TMB311R-31／TMB311RN-31 提供 [Win10 22.0.1.1](https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.0.1.1_W10x64_A.zip?acerid=637483676621351873)。精确 SKU 的出厂网卡待核。
+- 其余 15 款的 Win10 缺口需要精确 SKU 的出厂网卡资料或实机硬件 ID。当前清单见 [待核清单](network-rescue-pending-inventory.csv)。
+
+ASUS 笔记本两个历史 EXE 已下载并静态解包。EXE 的 ASUSTeK Authenticode 签名和下列 CAT 的 Microsoft Windows Hardware Compatibility Publisher 签名均为 Valid。
+
+| ASUS 包 | SHA-256 | INF 与硬件 ID 示例 |
+| --- | --- | --- |
+| Intel 24199 | `e12cdad03ec60d25d842f29c77ea708b1432702fd90ac604ed619e573cfa7665` | `BASE/Netwtw08.INF` 22.70.0.6，`PCI\VEN_8086&DEV_2723&SUBSYS_00808086`；`Netwtw08.cat` |
+| MediaTek 26562 | `50a4500a12b16747ba1608964b69258af1d97b204f35fa16020cdd4a53eff368` | `X64/mtkwl6ex.inf` 3.00.01.1207，`PCI\VEN_14C3&DEV_7961&SUBSYS_46801A3B`；`mtkwl6ex.cat` |
+
+Acer 的三个 Win10 候选 ZIP 也已核对 `Netwtw08.INF` 版本。AX201、Killer、9560 的 SHA-256 分别是 `366abef788aa4c0b88e5a25629da81950aa0caf945578466ac5e06abad1b841a`、`57ef213603ab29d7292dee8e032be3ca4ee028699a94abe149f2e6b66c394bf8`、`faf03dba39b5fc6b8f6886c21088ed9a3667629fa06bc1b51e7f2f721191003e`。

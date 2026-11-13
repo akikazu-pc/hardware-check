@@ -1,6 +1,4 @@
 brand,type,platform,model,windows,wlanEvidence,reason,detail,source
-ASUS,laptop,,ROG Strix G15 G513IR,11,oem-driver-list,no-network-category,驱动列表无网络类目或过短,https://www.asus.com/supportonly/g513ir/helpdesk_download/
-ASUS,laptop,,ROG Strix G17 G713IR,11,oem-driver-list,no-network-category,驱动列表无网络类目或过短,https://www.asus.com/supportonly/g713ir/helpdesk_download/
 ASUS,motherboard,AM5,Pro WS 665-ACE,10,catalog-model,no-factory-proof,缺出厂无线证据,https://www.asus.com/motherboards-components/motherboards/workstation/pro-ws-665-ace/
 ASUS,motherboard,AM5,Pro WS 665-ACE,11,catalog-model,no-factory-proof,缺出厂无线证据,https://www.asus.com/motherboards-components/motherboards/workstation/pro-ws-665-ace/
 Acer,laptop,,Aspire A314-22S,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号 0 命中,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
@@ -11,8 +9,6 @@ Acer,laptop,,Aspire A515-44S,10,oem-model-catalog,no-listing-exact-model,支持�
 Acer,laptop,,Aspire A515-45S,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号 0 命中,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
 Acer,laptop,,Aspire A515-56S,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号 0 命中,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
 Acer,laptop,,ConceptD CN516-72,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号 0 命中,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
-Acer,laptop,,SFA14-11,10,oem-sku-listing,sku-inconclusive,该 SKU 在族级扫描中为短列表或无数据,https://www.acer.com/us-en/support/product-support/SFA14-11
-Acer,laptop,,SFA14-11,11,oem-sku-listing,sku-inconclusive,该 SKU 在族级扫描中为短列表或无数据,https://www.acer.com/us-en/support/product-support/SFA14-11
 Acer,laptop,,Spin SP513-55NA,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号 0 命中,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
 Acer,laptop,,Swift SF314-44G,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号 0 命中,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
 Acer,laptop,,TravelMate P40-41-G2,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号 0 命中,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
