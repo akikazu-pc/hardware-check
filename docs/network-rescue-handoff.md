@@ -20,12 +20,12 @@
 - PE 可发现已有离线 Windows 并写入网络驱动，也可为微软安装器准备选定驱动。无人值守新装从独立 x64 UEFI WinPE 启动，确认版本和空盘后直接应用映像，绕过 Windows Setup 硬件检查。要求 PE 能看到至少 64 GiB 的空盘。C 盘最多 300 GiB，较小的盘扣除启动和恢复分区后使用剩余空间。默认创建空密码本地管理员 `user`。首次出现微软许可页时由用户确认。
 - 操作细节见[产品原型说明](shared-desktop-prototype.md#当前交付方式)和 [PE 安装流程](shared-desktop-prototype.md#无人值守安装验证)。
 
-本机原开发工作树 `hardware-check-shared-desktop` 的 `artifacts/network-rescue/` 仍保留旧版 ZIP（早于合并和 `38d4e71`，大小 5,764,476,552 和 53,719,554）。当前 `main` 工作树的 `artifacts/network-rescue/` 已从本轮代码重建两版，包含补库驱动、`38d4e71` 的运行中安装修复和新增的 5 个华硕笔记本 WLAN 包（MediaTek 3.00.01.1325、3.4.2.1046，Realtek 6001.15.165.3、6101.19.137.0，Intel 23.160.0.4）；实体验收前以这一版为准。构建使用便携 PowerShell 7.6.0（`artifacts/tools/pwsh-7.6.0`）和完整版 `7z.exe`；7za 无法解开 Gigabyte 的 NSIS 安装包。
+本机原开发工作树 `hardware-check-shared-desktop` 的 `artifacts/network-rescue/` 仍保留旧版 ZIP（早于合并和 `38d4e71`，大小 5,764,476,552 和 53,719,554）。当前 `main` 工作树的 `artifacts/network-rescue/` 已从本轮代码重建两版，包含补库驱动、`38d4e71` 的运行中安装修复、新增的 5 个华硕笔记本 WLAN 包（MediaTek 3.00.01.1325、3.4.2.1046，Realtek 6001.15.165.3、6101.19.137.0，Intel 23.160.0.4），以及 PE 的多驱动、Setup 多驱动和无匹配继续（PE 行为尚未在虚拟机执行）；实体验收前以这一版为准。构建使用便携 PowerShell 7.6.0（`artifacts/tools/pwsh-7.6.0`）和完整版 `7z.exe`；7za 无法解开 Gigabyte 的 NSIS 安装包。
 
 | 文件 | 字节数 | SHA-256 |
 | --- | ---: | --- |
-| `NetworkRescue-0.2.0-offline-full-portable-win-x64.zip` | 6,229,806,776 | `BA28E8D1E337FCA1508BD569BB589151C62075B7D5BAEE8427C330FD0857ED8E` |
-| `NetworkRescue-0.2.0-online-install-win-x64.zip` | 53,839,513 | `681695BAC19D517D2196B1978ADCC57FE38E53CBAAD79D5B2C1658351FC9A48D` |
+| `NetworkRescue-0.2.0-offline-full-portable-win-x64.zip` | 6,229,813,105 | `A2D9B4C5546E5CF699980D480292ED136936F8622B41B85FCDCA120E29208719` |
+| `NetworkRescue-0.2.0-online-install-win-x64.zip` | 53,839,920 | `AAA44952A2E20CB8B5A9E94D05657069D8C4FCEBD20B5D726685B3E874EF7196` |
 
 ## 已有验证
 
