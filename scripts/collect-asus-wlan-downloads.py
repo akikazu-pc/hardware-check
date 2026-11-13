@@ -15,11 +15,12 @@ from urllib.request import Request, urlopen
 
 API = re.compile(r'https://(?:www|rog)\.asus\.com/support/webapi/ProductV2/GetPDDrivers\?[^"\s<>]+', re.I)
 SYSTEMS = {"10": "45", "11": "52"}
-WLAN = re.compile(r"wireless|wlan|wi[- ]?fi", re.I)
+WLAN = re.compile(r"wireless|wlan|wi[- ]?fi|無線區域網|無線網路|无线局域网|无线网卡", re.I)
 FIELDS = ["model", "platform", "windows", "supportUrl", "status", "title", "version", "downloadUrl", "sha256"]
 # ASUS answers HTTP 451 above roughly one request per second and per thread burst.
 THROTTLE_SECONDS = 0.6
 RETRY_SECONDS = 8.0
+REGION = ""
 
 
 def model_key(value):
@@ -69,6 +70,16 @@ def downloads(row, catalog):
             endpoint = API.search(fetch(support))
     except OSError:
         pass
+    if endpoint is None and REGION:
+        # Some models only expose GetPDOS/GetPDDrivers on a regional page
+        # (e.g. asus.com/tw/supportonly/<model>/helpdesk_download/).
+        regional = re.sub(r"^https://www\.asus\.com/", f"https://www.asus.com/{REGION}/", support)
+        try:
+            endpoint = API.search(fetch(regional))
+            if endpoint is not None:
+                base["supportUrl"] = regional
+        except OSError:
+            pass
     if endpoint is None:
         return [dict(base, windows=system, status="support-api-unavailable") for system in pending]
 
@@ -90,7 +101,10 @@ def downloads(row, catalog):
         count = 0
         categories = data.get("Obj") or []
         for category in categories:
-            if category.get("Name", "").strip().lower() not in ("wireless", "wireless lan", "wlan"):
+            name = category.get("Name", "")
+            named = name.strip().lower() in ("wireless", "wireless lan", "wlan") or bool(WLAN.search(name))
+            titled = any(WLAN.search(package.get("Title") or "") for package in category.get("Files") or [])
+            if not (named or titled):
                 continue
             for package in category.get("Files") or []:
                 download = official_download(package)
@@ -161,7 +175,7 @@ def apply_oem_evidence(path, audit):
 
 
 def main():
-    global THROTTLE_SECONDS
+    global THROTTLE_SECONDS, REGION
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("models", type=Path)
     parser.add_argument("catalog", type=Path)
@@ -172,8 +186,10 @@ def main():
     parser.add_argument("--refresh", action="store_true", help="Recheck successful pending model/OS queries.")
     parser.add_argument("--workers", type=int, default=2, help="Concurrent ASUS requests; high values trigger HTTP 451")
     parser.add_argument("--pause", type=float, default=THROTTLE_SECONDS, help="Seconds to wait before each request")
+    parser.add_argument("--region", default="", help="Try this ASUS regional support page when the global page exposes no API, e.g. tw")
     args = parser.parse_args()
     THROTTLE_SECONDS = args.pause
+    REGION = args.region.strip().strip("/")
     catalog = {model_key(row["model"]): row["officialUrl"] for row in read(args.catalog)}
     selected = {(row["platform"], row["model"]) for row in read(args.model_list)} if args.model_list else None
     rows = [row for row in read(args.models) if row["type"] == "motherboard" and row["brand"] == "ASUS"
