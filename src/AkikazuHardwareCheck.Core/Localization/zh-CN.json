@@ -273,6 +273,7 @@
   "rescue.pe.deployUnattended": "无人值守安装到空白磁盘",
   "rescue.pe.deployEdition": "选择要安装的 Windows 版本。",
   "rescue.pe.deployDisk": "选择用于安装的空白磁盘。",
+  "rescue.pe.deployRetry": "重试中断的部署（将清除此磁盘）",
   "rescue.pe.deployNoDisk": "未找到可用的空白内置磁盘。已有分区会保留。",
   "rescue.pe.deployConfirm": "确认在此盘无人值守安装？请确认已阅读并同意所选版本的微软许可条款。将跳过 Windows 安装程序的硬件检查。本地管理员为 user，密码为空。重启前请保持安装介质连接。",
   "rescue.pe.deployPreparing": "正在准备部署…",

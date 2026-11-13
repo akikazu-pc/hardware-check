@@ -577,7 +577,7 @@ static int RunPeAction(const fs::path& bundle, const PeText& text, bool setup)
     }
     if (deployment) {
         const auto confirmation = std::wstring(text.deployConfirm) + L"\n\n" +
-            DeploymentDetails(media[target], *deployment, selected);
+            DeploymentDetails(media[target], *deployment, selected, text);
         if (Choose(text, confirmation.c_str(), {}, 0, text.confirm, true) < 0) return 0;
         return DeployWithUi(media[target], *deployment, selected, text);
     }

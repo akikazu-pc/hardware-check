@@ -273,6 +273,7 @@
   "rescue.pe.deployUnattended": "Unattended install on a blank disk",
   "rescue.pe.deployEdition": "Choose the Windows edition.",
   "rescue.pe.deployDisk": "Choose the blank destination disk.",
+  "rescue.pe.deployRetry": "Retry interrupted deployment (this disk will be erased)",
   "rescue.pe.deployNoDisk": "No eligible blank internal disk was found. Existing partitions are preserved.",
   "rescue.pe.deployConfirm": "Start unattended deployment to this disk? Confirm you have read and accept the Microsoft license terms for this edition. Windows Setup hardware checks will be skipped. Local administrator: user, no password. Keep the installation media connected until restart.",
   "rescue.pe.deployPreparing": "Preparing the deployment…",

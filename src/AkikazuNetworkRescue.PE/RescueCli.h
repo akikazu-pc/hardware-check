@@ -190,7 +190,7 @@ static int RunCli(const fs::path& bundle, bool isPe, int language)
     if (deployment) {
         const auto& source = media[selected - 1];
         const auto paths = driverPaths();
-        std::wcout << DeploymentDetails(source, *deployment, paths) << L'\n';
+        std::wcout << DeploymentDetails(source, *deployment, paths, text) << L'\n';
         if (!ChooseCli(text, text.deployConfirm, { text.confirm }, false)) return 0;
         const wchar_t* step = text.deployPreparing;
         const auto code = RunUnattended(source, *deployment, paths, text,

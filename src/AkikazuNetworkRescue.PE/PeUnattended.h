@@ -32,7 +32,7 @@ static std::wstring PhysicalDiskPath(DWORD number)
     return L"\\\\.\\PhysicalDrive" + std::to_wstring(number);
 }
 
-static bool ReadBlankDisk(HANDLE handle, DWORD number, BlankDisk& disk)
+static bool ReadDiskIdentity(HANDLE handle, DWORD number, BlankDisk& disk)
 {
     STORAGE_DEVICE_NUMBER_EX identity{};
     DWORD returned = 0;
@@ -64,12 +64,6 @@ static bool ReadBlankDisk(HANDLE handle, DWORD number, BlankDisk& disk)
     const auto model = field(descriptor->ProductIdOffset);
     const auto serial = field(descriptor->SerialNumberOffset);
 
-    // Some storage drivers report a zeroed disk as MBR with zero entries.
-    // HasEmptyDiskEdges independently rejects boot records and stale tables.
-    DRIVE_LAYOUT_INFORMATION_EX layout{};
-    if (!DeviceIoControl(handle, IOCTL_DISK_GET_DRIVE_LAYOUT_EX, nullptr, 0, &layout,
-            sizeof layout, &returned, nullptr) || layout.PartitionCount != 0 ||
-        (layout.PartitionStyle != PARTITION_STYLE_RAW && layout.PartitionStyle != PARTITION_STYLE_MBR)) return false;
     GET_DISK_ATTRIBUTES attributes{};
     if (!DeviceIoControl(handle, IOCTL_DISK_GET_DISK_ATTRIBUTES, nullptr, 0, &attributes,
             sizeof attributes, &returned, nullptr) ||
@@ -79,6 +73,19 @@ static bool ReadBlankDisk(HANDLE handle, DWORD number, BlankDisk& disk)
             &returned, nullptr) || length.Length.QuadPart < static_cast<LONGLONG>(64 * 1024 * MiB)) return false;
     disk = { number, static_cast<ULONGLONG>(length.Length.QuadPart), descriptor->BusType, model, serial,
         identity.DeviceGuid };
+    return true;
+}
+
+static bool ReadBlankDisk(HANDLE handle, DWORD number, BlankDisk& disk)
+{
+    if (!ReadDiskIdentity(handle, number, disk)) return false;
+    // Some storage drivers report a zeroed disk as MBR with zero entries.
+    // HasEmptyDiskEdges independently rejects boot records and stale tables.
+    DRIVE_LAYOUT_INFORMATION_EX layout{};
+    DWORD returned = 0;
+    if (!DeviceIoControl(handle, IOCTL_DISK_GET_DRIVE_LAYOUT_EX, nullptr, 0, &layout,
+            sizeof layout, &returned, nullptr) || layout.PartitionCount != 0 ||
+        (layout.PartitionStyle != PARTITION_STYLE_RAW && layout.PartitionStyle != PARTITION_STYLE_MBR)) return false;
     return true;
 }
 
@@ -165,6 +172,54 @@ static bool VolumeIsOnDisk(wchar_t letter, DWORD number)
         extents.Extents[0].DiskNumber == number;
 }
 
+// A deployment leaves its scratch directory at the Windows partition root before the image is applied.
+static bool HasDeploymentMarker(const fs::path& root)
+{
+    std::error_code error;
+    return fs::is_directory(root / L"NetworkRescueDeployment", error) ||
+        fs::is_regular_file(root / L"Windows/Panther/Unattend/Unattend.xml", error);
+}
+
+static bool DiskHasDeploymentMarker(DWORD number)
+{
+    for (wchar_t letter = L'C'; letter <= L'Z'; ++letter) {
+        if (letter == L'X') continue;
+        std::error_code error;
+        const fs::path root(std::wstring(1, letter) + L":\\");
+        if (fs::is_directory(root, error) && HasDeploymentMarker(root) && VolumeIsOnDisk(letter, number)) return true;
+    }
+    return false;
+}
+
+// Non-blank disks can only be retried when they carry a partial NetworkRescue deployment.
+static std::vector<BlankDisk> DiscoverRetryDisks()
+{
+    std::vector<BlankDisk> disks;
+    for (wchar_t letter = L'C'; letter <= L'Z'; ++letter) {
+        if (letter == L'X') continue;
+        std::error_code error;
+        const fs::path root(std::wstring(1, letter) + L":\\");
+        if (!fs::is_directory(root, error) || !HasDeploymentMarker(root)) continue;
+        const auto volume = OpenDeploymentFile(L"\\\\.\\" + std::wstring(1, letter) + L":", 0,
+            FILE_SHARE_READ | FILE_SHARE_WRITE);
+        VOLUME_DISK_EXTENTS extents{};
+        DWORD returned = 0;
+        if (!volume || !DeviceIoControl(volume.get(), IOCTL_VOLUME_GET_VOLUME_DISK_EXTENTS, nullptr, 0,
+                &extents, sizeof extents, &returned, nullptr) || extents.NumberOfDiskExtents != 1) continue;
+        const auto number = extents.Extents[0].DiskNumber;
+        if (std::any_of(disks.begin(), disks.end(), [&](const BlankDisk& disk) { return disk.number == number; })) {
+            continue;
+        }
+        auto physical = OpenDeploymentFile(PhysicalDiskPath(number), GENERIC_READ, FILE_SHARE_READ | FILE_SHARE_WRITE);
+        BlankDisk disk{};
+        if (physical && ReadDiskIdentity(physical.get(), number, disk)) disks.push_back(std::move(disk));
+    }
+    std::sort(disks.begin(), disks.end(), [](const BlankDisk& left, const BlankDisk& right) {
+        return left.number < right.number;
+    });
+    return disks;
+}
+
 static bool SaveDeploymentFile(const fs::path& path, const std::wstring& text)
 {
     std::ofstream file(path, std::ios::binary | std::ios::trunc);
@@ -197,9 +252,9 @@ static bool WriteDeploymentAnswer(const fs::path& path, const std::wstring& loca
 
 static bool WriteDeploymentPartitions(const fs::path& path, const BlankDisk& disk, const std::array<wchar_t, 3>& letters)
 {
-    // Each format applies to a just-created partition in DiskPart. No clean, override or noerr.
+    // Each format applies to a just-created partition in DiskPart. Clean removes a partial retry layout.
     std::ofstream script(path);
-    script << "select disk " << disk.number << "\nconvert gpt\n"
+    script << "select disk " << disk.number << "\nclean\nconvert gpt\n"
         << "create partition efi size=260\nformat quick fs=fat32 label=System\nassign letter=" << static_cast<char>(letters[0]) << '\n'
         << "create partition msr size=16\ncreate partition primary size=" << WindowsPartitionMiB(disk)
         << "\nformat quick fs=ntfs label=Windows\nassign letter=" << static_cast<char>(letters[1]) << '\n'
@@ -269,8 +324,8 @@ static bool SupportsUnattended(const SetupMedia& media)
 }
 
 static DWORD DeployWindows(const SetupMedia& media, const SetupImage& edition, const BlankDisk& selected,
-    const std::vector<fs::path>& infs, const PeText& text, const std::function<void(const wchar_t*)>& show,
-    const wchar_t*& failedStep)
+    bool retry, const std::vector<fs::path>& infs, const PeText& text,
+    const std::function<void(const wchar_t*)>& show, const wchar_t*& failedStep)
 {
     failedStep = text.deployPreparing;
     show(failedStep);
@@ -323,8 +378,14 @@ static DWORD DeployWindows(const SetupMedia& media, const SetupImage& edition, c
     const auto recoveryRoot = DeploymentRoot(letters[2]);
     const auto disk = OpenDeploymentFile(PhysicalDiskPath(selected.number), GENERIC_READ, FILE_SHARE_READ | FILE_SHARE_WRITE);
     BlankDisk current{};
-    if (!disk || !ReadBlankDisk(disk.get(), selected.number, current) || !SameDisk(selected, current) ||
-        !HasEmptyDiskEdges(disk.get(), current.bytes) || FreeDeploymentLetters() != letters) return ERROR_MEDIA_CHANGED;
+    if (!disk || !ReadDiskIdentity(disk.get(), selected.number, current) || !SameDisk(selected, current) ||
+        FreeDeploymentLetters() != letters) return ERROR_MEDIA_CHANGED;
+    if (retry) {
+        // The partial layout is only retried when the marker and disk identity still match.
+        if (!DiskHasDeploymentMarker(selected.number)) return ERROR_MEDIA_CHANGED;
+    } else if (!HasEmptyDiskEdges(disk.get(), current.bytes)) {
+        return ERROR_MEDIA_CHANGED;
+    }
 
     failedStep = text.deployPartitioning;
     show(failedStep);
@@ -383,6 +444,7 @@ static DWORD DeployWindows(const SetupMedia& media, const SetupImage& edition, c
 struct DeploymentSelection {
     SetupImage edition;
     BlankDisk disk;
+    bool retry = false;
 };
 
 static std::wstring EditionLabel(const SetupImage& edition)
@@ -394,7 +456,12 @@ static std::optional<DeploymentSelection> ChooseDeployment(const SetupMedia& med
     const std::function<int(const wchar_t*, const std::vector<std::wstring>&)>& choose,
     const std::function<void(const wchar_t*)>& notice)
 {
-    const auto disks = DiscoverBlankDisks();
+    auto disks = DiscoverBlankDisks();
+    bool retry = false;
+    if (disks.empty()) {
+        disks = DiscoverRetryDisks();
+        retry = !disks.empty();
+    }
     if (disks.empty()) {
         notice(text.deployNoDisk);
         return {};
@@ -410,17 +477,20 @@ static std::optional<DeploymentSelection> ChooseDeployment(const SetupMedia& med
     const auto edition = editions.size() == 1 ? 0 : choose(text.deployEdition, labels);
     if (edition < 0) return {};
     labels.clear();
-    for (const auto& disk : disks) labels.push_back(DiskLabel(disk));
+    for (const auto& disk : disks) {
+        labels.push_back(retry ? std::wstring(text.deployRetry) + L"  " + DiskLabel(disk) : DiskLabel(disk));
+    }
     const auto disk = choose(text.deployDisk, labels);
     if (disk < 0) return {};
-    return DeploymentSelection{ editions[edition], disks[disk] };
+    return DeploymentSelection{ editions[edition], disks[disk], retry };
 }
 
 static std::wstring DeploymentDetails(const SetupMedia& media, const DeploymentSelection& plan,
-    const std::vector<fs::path>& infs)
+    const std::vector<fs::path>& infs, const PeText& text)
 {
     auto result = WindowsLabel(media.root, media.build) + L"  " + EditionLabel(plan.edition) + L"\n" +
         DiskLabel(plan.disk);
+    if (plan.retry) result += L"\n" + std::wstring(text.deployRetry);
     for (const auto& inf : infs) result += L"\n" + inf.filename().wstring();
     return result;
 }
@@ -429,7 +499,7 @@ static DWORD RunUnattended(const SetupMedia& media, const DeploymentSelection& p
     const std::vector<fs::path>& infs, const PeText& text, const std::function<void(const wchar_t*)>& show,
     const wchar_t*& step)
 {
-    const auto code = DeployWindows(media, plan.edition, plan.disk, infs, text, show, step);
+    const auto code = DeployWindows(media, plan.edition, plan.disk, plan.retry, infs, text, show, step);
     if (code != ERROR_SUCCESS) return code;
     step = text.deployRestart;
     show(step);

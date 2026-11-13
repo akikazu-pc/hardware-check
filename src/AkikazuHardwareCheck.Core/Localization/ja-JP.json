@@ -273,6 +273,7 @@
   "rescue.pe.deployUnattended": "空のディスクに無人インストール",
   "rescue.pe.deployEdition": "Windows のエディションを選択してください。",
   "rescue.pe.deployDisk": "インストール先の空のディスクを選択してください。",
+  "rescue.pe.deployRetry": "中断した展開をやり直す（このディスクは消去されます）",
   "rescue.pe.deployNoDisk": "使用できる空の内蔵ディスクがありません。既存のパーティションは保持されます。",
   "rescue.pe.deployConfirm": "このディスクに無人でインストールしますか？選択したエディションのマイクロソフトのライセンス条項を読み、同意したことを確認してください。セットアップのハードウェア検査を省略します。ローカル管理者は user、パスワードは空です。再起動までメディアを取り外さないでください。",
   "rescue.pe.deployPreparing": "インストールを準備しています…",
