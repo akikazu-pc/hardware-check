@@ -6,8 +6,8 @@
 
 - GitHub 仓库为 [akikazu-pc/hardware-check](https://github.com/akikazu-pc/hardware-check)。远端 `main` 为 [`1347ce8`](https://github.com/akikazu-pc/hardware-check/commit/1347ce8101c69193727e133f84e8732458d57690)，其中包含合并 [`ee26ee4`](https://github.com/akikazu-pc/hardware-check/commit/ee26ee4ddf2cb887c9a20c04bb4af472de6b8b42)，`proto/shared-desktop` 已删除。合并后相对该分支最后提交 `2f446fd` 的树差异只有 `AGENTS.md`。
 - `1fb8dcc` 接入 PE 空盘部署，`9c55511` 收录 B850M 普通版无线驱动，`2f446fd` 修复 I226-V 兼容 ID 漏匹配。本地 `main` 的补库提交已与远端 `1347ce8` 合并到 `eebb252`，按包 ID 和行键合并索引，重复的华硕 MediaTek 3.5.0.1349 包统一为 `asus-mb-mtk-3501349`。补库流程见[采集与核验交接](network-rescue-catalog-handoff.md)。之后直接在 `main` 上开发。
-- [`ee26ee4` 的 GitHub Actions](https://github.com/akikazu-pc/hardware-check/actions/runs/43266106438)和 [`1347ce8` 的运行](https://github.com/akikazu-pc/hardware-check/actions/runs/43266826000)均已通过。以下安装包是本地产物。本次合并尚未制作新 GitHub Release、提交商店或部署网站。
-- 截至 `faf66de`（2026-11-13 09:13 JST），本地 `main` 比远端 `1347ce8` 多 47 个提交，均未 push，远端 CI 为 Unverified。其中 `38d4e71` 修复运行中 Windows 无法为 I226-V 安装驱动，`62ab531` 修正 PE 命令行版本列表重复编号，`e692526`、`bfed381`、`62ccca5` 记录虚拟机验收，`faf66de` 拆分华硕笔记本 SKU；其余为补库会话的提交。
+- [`ee26ee4` 的 GitHub Actions](https://github.com/akikazu-pc/hardware-check/actions/runs/43266106438)和 [`1347ce8` 的运行](https://github.com/akikazu-pc/hardware-check/actions/runs/43266826000)均已通过。`main` 已 push 到 `d8e5b05`，对应 CI 通过；GitHub Release [`v0.2.1`](https://github.com/akikazu-pc/hardware-check/releases/tag/v0.2.1) 已发布，网站下载数据已同步。商店尚未提交。
+- 截至 2026-11-13 17:20 JST，远端 `main` 为 `d8e5b05`，本地与其一致；本轮推送后的 CI 在 `main` 和 `v0.2.1` tag 上均通过。更早的记录（`faf66de` 时领先 47 个提交）仅作历史。
 
 ## 使用方式和交付包
 
@@ -26,6 +26,8 @@
 | --- | ---: | --- |
 | `NetworkRescue-0.2.1-offline-full-portable-win-x64.zip` | 6,229,824,831 | `49DB2D4DF306A52D1BAD0A92F7343E763AB7CEF0481DDAEE13EA3FC38B34BA0A` |
 | `NetworkRescue-0.2.1-online-install-win-x64.zip` | 53,843,724 | `9D6EEE844C19B11CD4721927810EFD3C53A725FD8C896FC029A6A2DEBEB25C38` |
+
+离线完整版超过 GitHub Release 单文件 2 GiB 上限，已拆成 `.001`–`.004` 四个分卷并上传到 [`v0.2.1` Release](https://github.com/akikazu-pc/hardware-check/releases/tag/v0.2.1)；同页提供 `Merge-offline-bundle.cmd`、`README-offline-bundle.md` 和 SHA-256 文件。分卷合并后的 SHA-256 已复算为 `49DB2D4D…`。主程序 `AkikazuHardwareCheck-win-x64.zip`（`1717317B…`）和在线版也随该 Release 发布，网站数据已同步。
 
 ## 已有验证
 
