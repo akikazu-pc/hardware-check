@@ -373,17 +373,20 @@ static std::wstring XmlEscape(std::wstring_view value)
     return result;
 }
 
-static bool WriteSetupAnswer(const fs::path& answer, const fs::path& driver)
+static bool WriteSetupAnswer(const fs::path& answer, const std::vector<fs::path>& drivers)
 {
+    std::wstring paths;
+    for (size_t index = 0; index < drivers.size(); ++index) {
+        paths += L"<PathAndCredentials wcm:action=\"add\" wcm:keyValue=\"" + std::to_wstring(index + 1) +
+            L"\"><Path>" + XmlEscape(drivers[index].wstring()) + L"</Path></PathAndCredentials>";
+    }
     const auto xml = std::wstring(
         L"\uFEFF<?xml version=\"1.0\" encoding=\"utf-16\"?>"
         L"<unattend xmlns=\"urn:schemas-microsoft-com:unattend\" xmlns:wcm=\"http://schemas.microsoft.com/WMIConfig/2002/State\">"
         L"<settings pass=\"offlineServicing\">"
         L"<component name=\"Microsoft-Windows-PnpCustomizationsNonWinPE\" processorArchitecture=\"amd64\" "
         L"publicKeyToken=\"31bf3856ad364e35\" language=\"neutral\" versionScope=\"nonSxS\">"
-        L"<DriverPaths><PathAndCredentials wcm:action=\"add\" wcm:keyValue=\"1\"><Path>") +
-        XmlEscape(driver.wstring()) +
-        L"</Path></PathAndCredentials></DriverPaths></component></settings></unattend>";
+        L"<DriverPaths>") + paths + L"</DriverPaths></component></settings></unattend>";
     const auto file = CreateFileW(answer.c_str(), GENERIC_WRITE, 0, nullptr, CREATE_NEW, FILE_ATTRIBUTE_NORMAL, nullptr);
     if (file == INVALID_HANDLE_VALUE) {
         return false;
@@ -397,7 +400,7 @@ static bool WriteSetupAnswer(const fs::path& answer, const fs::path& driver)
 
 enum class SetupStart { Started, DriverPreparationFailed, LaunchFailed };
 
-static SetupStart StartSetup(const SetupMedia& media, const fs::path& inf)
+static SetupStart StartSetup(const SetupMedia& media, const std::vector<fs::path>& infs)
 {
     if (IsSetupRunning()) return SetupStart::LaunchFailed;
     wchar_t temp[MAX_PATH]{};
@@ -409,26 +412,51 @@ static SetupStart StartSetup(const SetupMedia& media, const fs::path& inf)
         L"-" + std::to_wstring(GetTickCount64()));
     std::error_code error;
     if (!fs::create_directory(workspace, error)) return SetupStart::LaunchFailed;
-    // An empty path means the user chose to continue without adding a driver.
-    fs::path driver;
-    if (!inf.empty()) {
-        driver = PrepareSetupDriver(inf, workspace);
+    // No INFs means the user chose to continue without adding a driver.
+    std::vector<fs::path> drivers;
+    for (size_t index = 0; index < infs.size(); ++index) {
+        const auto stage = workspace / (L"driver-" + std::to_wstring(index));
+        std::error_code stageError;
+        fs::create_directory(stage, stageError);
+        if (stageError) {
+            fs::remove_all(workspace, error);
+            return SetupStart::LaunchFailed;
+        }
+        const auto driver = PrepareSetupDriver(infs[index], stage);
         if (driver.empty()) {
             fs::remove_all(workspace, error);
             return SetupStart::DriverPreparationFailed;
         }
+        drivers.push_back(driver);
     }
     const auto setup = media.root / L"setup.exe";
     const auto hostBuild = ReadWindowsFileBuild(media.root / L"sources/setuphost.exe");
     const auto setupBuild = hostBuild ? hostBuild : ReadWindowsFileBuild(setup);
     auto command = L"\"" + setup.wstring() + L"\"";
-    if (driver.empty()) {
+    if (drivers.empty()) {
         // Launch Windows Setup without a driver answer.
     } else if (setupBuild >= 26100) {
-        command += L" /InstallDrivers \"" + driver.wstring() + L"\"";
+        // Setup 24H2 takes one folder; put the isolated drivers under it when they differ.
+        auto root = drivers[0];
+        const bool sameRoot = std::all_of(drivers.begin(), drivers.end(), [&](const fs::path& driver) {
+            return driver == drivers[0];
+        });
+        if (!sameRoot) {
+            root = workspace / L"drivers";
+            std::error_code copyError;
+            fs::create_directory(root, copyError);
+            for (size_t index = 0; index < drivers.size() && !copyError; ++index) {
+                fs::copy(drivers[index], root / std::to_wstring(index), fs::copy_options::recursive, copyError);
+            }
+            if (copyError) {
+                fs::remove_all(workspace, error);
+                return SetupStart::LaunchFailed;
+            }
+        }
+        command += L" /InstallDrivers \"" + root.wstring() + L"\"";
     } else {
         const auto answer = workspace / L"unattend.xml";
-        if (!WriteSetupAnswer(answer, driver)) {
+        if (!WriteSetupAnswer(answer, drivers)) {
             fs::remove_all(workspace, error);
             return SetupStart::LaunchFailed;
         }
@@ -530,7 +558,7 @@ static int RunPeAction(const fs::path& bundle, const PeText& text, bool setup)
             labels.push_back(match.name + L"  " + match.path.filename().wstring() + L"  [" + match.id + L"]");
         }
         // Multiple missing NICs can need different INFs; offer one action that installs all of them.
-        const bool installAllOffered = !setup && matches.size() > 1;
+        const bool installAllOffered = matches.size() > 1;
         if (installAllOffered) {
             labels.push_back(std::wstring(text.installAll) + L" (" + std::to_wstring(matches.size()) + L")");
         }
@@ -564,7 +592,7 @@ static int RunPeAction(const fs::path& bundle, const PeText& text, bool setup)
         }
     }
     if (setup) {
-        const auto result = StartSetup(media[target], selected.empty() ? fs::path{} : selected[0]);
+        const auto result = StartSetup(media[target], selected);
         if (result == SetupStart::Started) return 0;
         Notice(text, result == SetupStart::DriverPreparationFailed ? text.setupDriverPreparationFailed : text.failed);
         return 6;

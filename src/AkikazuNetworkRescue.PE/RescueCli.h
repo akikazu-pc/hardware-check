@@ -188,7 +188,7 @@ static int RunCli(const fs::path& bundle, bool isPe, int language)
         return 5;
     }
     if (setup) {
-        const auto result = StartSetup(media[selected - 1], match.path);
+        const auto result = StartSetup(media[selected - 1], { match.path });
         if (result == SetupStart::Started) return 0;
         if (result == SetupStart::DriverPreparationFailed) {
             std::wcout << text.setupDriverPreparationFailed << L'\n';
