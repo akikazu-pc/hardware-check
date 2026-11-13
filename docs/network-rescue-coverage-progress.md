@@ -814,3 +814,16 @@ BIOSTAR 的 `export/spec_export.php?S_ID=...` 返回的其实是 **PDF 字节**�
 Dell Alienware 与 Lenovo 需要登录态浏览器：见[浏览器抓取指引](network-rescue-browser-capture-guide.md)。
 
 本轮合计关闭 **10 格**：待核 90→**80**。
+
+### 2026-11-13 Lenovo 手動ドライバー列表（阅读器可渲染）
+
+用户提供的 Lenovo 手动驱动列表 URL 格式：
+`.../legion-<sku>/downloads/driver-list/component?name=Networking%3A%20Wireless%20LAN`（不需要 `id` 参数）。阅读器代理能渲染出该分类下的驱动条目，逐条带「supported on <型号> and running the following Operating Systems」。
+
+结论（均精确到型号）：
+- **Legion 5 15IAX11**：WLAN 2 条，均 Windows 11（Realtek/MediaTek `WLAN_8922AE_6102.24.108.344_WLAN_MT7925_25.30.3.58`、Intel `WLAN_AX211_AX1675 Killer_24.20.0.4`）→ Win11 列出；PSREF 仅 Windows 11 → Win10 未列系统。
+- **Legion Pro 5 16IRX10**：WLAN 1 条（Intel/Realtek/MediaTek，Windows 11）→ Win11 列出。
+- **Legion Pro 7 16ADR10H**：WLAN 1 条（Realtek/MediaTek `WLAN_MTK_25.30.3.56`，Windows 11）→ Win11 列出；Win10 缺 PSREF，保持待核。
+- **Legion Pro 7 16AFR10H**：WLAN 1 条（Realtek/MediaTek `WLAN_MTK_5.7.0.5275`，Windows 11）→ Win11 列出；PSREF 仅 Windows 11 → Win10 未列系统。
+
+Lenovo 待核 7→1 格（16ADR10H 的 Win10）。本轮合计关闭 **6 格**：待核 80→**74**。
