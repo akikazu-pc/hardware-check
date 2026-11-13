@@ -780,3 +780,16 @@ BIOSTAR 的 `export/spec_export.php?S_ID=...` 返回的其实是 **PDF 字节**�
 其余 19 个精确型号在追加的 25 个区域库中仍为 0 命中，按「接口空响应不算已核实」保持待核。新增 [collect-acer-locale-listings.py](../scripts/collect-acer-locale-listings.py)（区域库扫描 + 占位判定 + `--apply`）与 [audit-network-rescue.py](../scripts/audit-network-rescue.py)（每轮复跑：校验、重建清单、对比快照输出关闭/新增格数）。
 
 收尾分工见 [network-rescue-remaining-actions.md](network-rescue-remaining-actions.md)：约 52 格属通用驱动记账口径、约 58 格属系列级行处理方式，需你决定；其余约 56 格由我继续找来源。本轮合计关闭 **5 格**：待核 171→**166**。
+
+### 2026-11-13 用户决定落地：硬件配置口径与系列行拆分
+
+按用户决定执行两项口径调整：
+
+**① 按硬件配置记账（关闭 46 格）**：对已核实「规格无出厂 WLAN」的主板，下载页里的通用 `Intel/MediaTek WIFI Driver` 属 M.2 E-Key 选配模块驱动，不算该型号配置的无线驱动，直接记 `oem-wlan-not-listed`。覆盖 MSI 21、ASRock 14、ASUS 11，逐格证据（含通用驱动名/版本）见[冲突记账证据](network-rescue-conflict-resolution-proof.csv)。
+
+**② 系列行拆分为精确 SKU（关闭 30 格，表结构变化）**：
+- Acer 19 个有族级扫描数据的系列行替换为 **88 个精确 SKU 行**（模型名即 Acer 型号代码，如 `SFA14-11`），状态按族级 proof 聚合（列出 115、原厂未列 58、x64 范围外与待核 3）。8 个无 SKU 数据的系列行保留待核。
+- ASUS 4 个有 SKU 行的系列行（ROG Strix G15/G17/SCAR 17、TUF A16 2025）直接删除，SKU 行已在表内；3 个尚无 SKU 行的系列行（Flow Z13-KJP、Zephyrus G14 2026、G14 AW SE）保留。
+- 表从 2,658 行变为 **2,723 行**；Acer SKU 映射与来源见[Acer SKU 证据](network-rescue-acer-sku-proof.csv)。
+
+合计关闭 **76 格**（46 + 30）：待核 166→**90**。

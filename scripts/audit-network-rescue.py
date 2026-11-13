@@ -67,6 +67,8 @@ def gap_class(row):
     if brand == "Acer":
         if evidence == "oem-model-catalog":
             return "no-listing-exact-model", "支持库对精确型号 0 命中"
+        if evidence == "oem-sku-listing":
+            return "sku-inconclusive", "该 SKU 在族级扫描中为短列表或无数据"
         return "mixed-family", "系列跨代，族内结论不一致"
     if brand == "Dell":
         return "consumer-api-403", "Alienware 无驱动包目录条目，驱动为 XHR"
