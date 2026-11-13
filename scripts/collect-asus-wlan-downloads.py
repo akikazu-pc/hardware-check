@@ -7,6 +7,8 @@ from html import unescape
 import json
 from pathlib import Path
 import re
+import time
+from urllib.error import HTTPError
 from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 from urllib.request import Request, urlopen
 
@@ -15,6 +17,9 @@ API = re.compile(r'https://(?:www|rog)\.asus\.com/support/webapi/ProductV2/GetPD
 SYSTEMS = {"10": "45", "11": "52"}
 WLAN = re.compile(r"wireless|wlan|wi[- ]?fi", re.I)
 FIELDS = ["model", "platform", "windows", "supportUrl", "status", "title", "version", "downloadUrl", "sha256"]
+# ASUS answers HTTP 451 above roughly one request per second and per thread burst.
+THROTTLE_SECONDS = 0.6
+RETRY_SECONDS = 8.0
 
 
 def model_key(value):
@@ -23,8 +28,16 @@ def model_key(value):
 
 def fetch(url):
     request = Request(url, headers={"User-Agent": "Mozilla/5.0"})
-    with urlopen(request, timeout=12) as response:
-        return response.read().decode("utf-8", errors="replace")
+    for attempt in range(2):
+        time.sleep(THROTTLE_SECONDS)
+        try:
+            with urlopen(request, timeout=20) as response:
+                return response.read().decode("utf-8", errors="replace")
+        except HTTPError as error:
+            if error.code not in {429, 451} or attempt:
+                raise
+            time.sleep(RETRY_SECONDS)
+    raise OSError("retry exhausted")
 
 
 def official_download(package):
@@ -148,6 +161,7 @@ def apply_oem_evidence(path, audit):
 
 
 def main():
+    global THROTTLE_SECONDS
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("models", type=Path)
     parser.add_argument("catalog", type=Path)
@@ -156,7 +170,10 @@ def main():
     parser.add_argument("--all-pending", action="store_true", help="Query every pending ASUS model and system in the catalog")
     parser.add_argument("--apply-oem-evidence", action="store_true", help="Record checked OEM listing evidence with matching factory specifications")
     parser.add_argument("--refresh", action="store_true", help="Recheck successful pending model/OS queries.")
+    parser.add_argument("--workers", type=int, default=2, help="Concurrent ASUS requests; high values trigger HTTP 451")
+    parser.add_argument("--pause", type=float, default=THROTTLE_SECONDS, help="Seconds to wait before each request")
     args = parser.parse_args()
+    THROTTLE_SECONDS = args.pause
     catalog = {model_key(row["model"]): row["officialUrl"] for row in read(args.catalog)}
     selected = {(row["platform"], row["model"]) for row in read(args.model_list)} if args.model_list else None
     rows = [row for row in read(args.models) if row["type"] == "motherboard" and row["brand"] == "ASUS"
@@ -177,7 +194,7 @@ def main():
         if any(query[f"windows{system}X64Evidence"] == "pending" for system in SYSTEMS):
             requested.append(query)
 
-    with ThreadPoolExecutor(max_workers=8) as pool:
+    with ThreadPoolExecutor(max_workers=args.workers) as pool:
         for records in pool.map(lambda row: downloads(row, catalog), requested):
             grouped = defaultdict(list)
             for item in records:
