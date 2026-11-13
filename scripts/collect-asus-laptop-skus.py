@@ -63,10 +63,18 @@ def series_skus(row, rog_capture):
     return [tail] if SKU_CODE.match(tail) else []
 
 
+ASUS_CDN = "https://dlcdnets.asus.com"
+LAPTOP_DRIVER_ROOT = ASUS_CDN + "/pub/ASUS/GamingNB/Image/Driver/Networking/"
+
+
 def download_url(file):
     url = (file.get("DownloadUrl") or {}).get("Global") or ""
-    # ASUS lists many files by CDN-relative path.
-    return "https://dlcdnets.asus.com" + url if url.startswith("/pub/ASUS/") else url
+    # ASUS mixes full URLs, "/pub/..." paths and "<file id>/<name>" paths under the laptop root.
+    if url.startswith("/pub/ASUS/"):
+        return ASUS_CDN + url
+    if url and not url.startswith(("http://", "https://")):
+        return LAPTOP_DRIVER_ROOT + url.lstrip("/")
+    return url
 
 
 def captured_results(record, sku):
