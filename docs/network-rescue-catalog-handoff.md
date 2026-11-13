@@ -49,8 +49,8 @@ python scripts/collect-windriverindex-wlan.py docs/network-rescue-model-gaps.csv
 
 | 范围 | 待核 | 最大缺口 |
 | --- | ---: | --- |
-| 主板 Win10 x64 | 50 | ASUS 9、ASRock 9 |
-| 主板 Win11 x64 | 53 | ASRock 12、ASUS 11 |
+| 主板 Win10 x64 | 35 | ASUS 9、ASRock 9、MSI 12 |
+| 主板 Win11 x64 | 40 | ASRock 12、ASUS 11、MSI 12 |
 | 笔记本 Win10 x64 | 64 | Acer 49、ASUS 7 |
 | 笔记本 Win11 x64 | 39 | Acer 20、ASUS 12 |
 

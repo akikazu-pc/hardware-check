@@ -737,3 +737,12 @@ BIOSTAR 的 `export/spec_export.php?S_ID=...` 返回的其实是 **PDF 字节**�
 **方法写回**：`collect-hp-pack-os.py`、`collect-dell-pack-os.py`、`collect-asus-wlan-downloads.py`（区域页/支持页回退、中文类目、有效列表放宽）、`collect-acer-series-skus.py`（ARM64 与空列表排除）。
 
 **验证**：HP／Dell 脚本对当前表复跑均为 0 待核；CSV 2,658 行 13 列、型号无空值、状态值仅 10 种；待核清单与主表 206 行一一对应。
+
+### 2026-11-13 阅读器代理：BIOSTAR 清零、Gigabyte 部分清零
+
+`www.biostar.com.tw` 已改成 Cloudflare 的「Just a moment」JS 挑战，`www.gigabyte.com` 的下载 API 走 Akamai 拦截；两者对 curl／Python／Node 都返回 403。用公共阅读器代理 `r.jina.ai/<url>` 可以拿到渲染后的内容：
+
+- **BIOSTAR**：`spec_export.php` 返回的 PDF 被代理解析成文本，10 款待核主板的规格都写明 `Wi-Fi card is not provided` / `No WiFi card included`（只有天线口与 M.2 E Key 槽位），配合下载列表无 WLAN → **20 格**关闭。
+- **Gigabyte**：支持页的下载表被渲染成 markdown（`| Description | Version | OS |`，按 `## 分类` 分组，OS 列逐行标注 Win10/Win11）。据此关闭 8 格：Z890 AI TOP、Z890 EAGLE WIFI7 PLUS、B860 DS3H WIFI6E（两行）各系统都列出 Intel／Realtek 无线驱动；A520I AC Rev. 1.5 的无线驱动注明「only for PCB rev. 1.4」，对本修订版不适用 → 两系统都按未列关闭。剩余 B860M A PRO WIFI7 的站点 slug 多次尝试均 404，6 格待核。
+
+新增脚本 [collect-gigabyte-wlan-downloads.py](../scripts/collect-gigabyte-wlan-downloads.py)：按分类与 OS 列解析表格，识别「仅某 PCB 修订版」的限定，并可用 `--apply` 回写。本轮合计关闭 **28 格**：待核 206→**178**。
