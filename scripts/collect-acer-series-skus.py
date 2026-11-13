@@ -115,12 +115,21 @@ def query_family(acer, series, codes):
             results[code] = {"10": "api-error", "11": "api-error"}
             continue
         evidence = acer.classify(response["payload"], code)
+        # The sheet covers Windows x64. A SKU whose driver list is ARM64 only (or empty) cannot
+        # decide the x64 cell, so it is recorded but excluded from the family aggregation.
+        oss = []
+        for hit in acer.parse_hits(response["payload"]):
+            for item in hit["files"]:
+                oss.extend(acer.split_oss(item.get("oss")))
+        arm, x64 = sum("A1" in value for value in oss), sum("M1" in value for value in oss)
+        scope = ("arm64-out-of-scope" if arm >= 5 and x64 <= 2
+                 else "no-listing" if not oss else "")
         results[code] = {}
         for system in SYSTEMS:
             item = evidence.get(system) or {}
-            results[code][system] = item.get("status", "unknown")
+            results[code][system] = scope or item.get("status", "unknown")
             proof.append({"series": series, "sku": code, "windows": system,
-                          "status": item.get("status", "unknown"), "title": item.get("title", ""),
+                          "status": results[code][system], "title": item.get("title", ""),
                           "version": item.get("version", ""), "downloadUrl": item.get("downloadUrl", "")})
     return results, proof
 

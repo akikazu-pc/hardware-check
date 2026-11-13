@@ -1,10 +1,10 @@
 series,sku,windows,status,title,version,downloadUrl
-Aspire 14 AI,A14-11M,10,support-list-empty,,,
-Aspire 14 AI,A14-11M,11,short-list,,,
-Aspire 14 AI,A14-11MN,10,support-list-empty,,,
-Aspire 14 AI,A14-11MN,11,support-list-empty,,,
-Aspire 14 AI,A14-21M,10,support-list-empty,,,
-Aspire 14 AI,A14-21M,11,support-list-empty,,,
+Aspire 14 AI,A14-11M,10,arm64-out-of-scope,,,
+Aspire 14 AI,A14-11M,11,arm64-out-of-scope,,,
+Aspire 14 AI,A14-11MN,10,no-listing,,,
+Aspire 14 AI,A14-11MN,11,no-listing,,,
+Aspire 14 AI,A14-21M,10,no-listing,,,
+Aspire 14 AI,A14-21M,11,no-listing,,,
 Aspire 14 AI,A14-51GM,10,oem-os-not-listed,,,
 Aspire 14 AI,A14-51GM,11,oem-wlan-listed,Wireless LAN_Intel_23.20.0.4_W11x64_(AX211).zip,23.20.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.20.0.4_W11x64_A.zip?acerid=638560294498297943&Step1=&Step2=&Step3=ASPIRE%20A14-51GM&OS=ALL&LC=en&BC=ACER&SC=PA_6
 Aspire 14 AI,A14-51M,10,oem-os-not-listed,,,
@@ -67,8 +67,8 @@ Aspire Go AMD,AG15-I31P,10,oem-os-not-listed,,,
 Aspire Go AMD,AG15-I31P,11,oem-wlan-listed,Wireless LAN_Realtek_6101.19.133.0_W11x64_(RTL8851BE).zip,6101.19.133.0,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Realtek_6101.19.133.0_W11x64_A.zip?acerid=639268724391251316&Step1=&Step2=&Step3=ASPIRE%20AG15-I31P&OS=ALL&LC=en&BC=ACER&SC=PA_6
 Aspire Go AMD,AG15-I51P,10,oem-os-not-listed,,,
 Aspire Go AMD,AG15-I51P,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1015.183_W11x64_(ICPS).zip,50.25.1015.183,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1015.183_W11x64_A.zip?acerid=639189155384825114&Step1=&Step2=&Step3=ASPIRE%20AG15-I51P&OS=ALL&LC=en&BC=ACER&SC=PA_6
-Aspire Go AMD,AG15-Q31P,10,support-list-empty,,,
-Aspire Go AMD,AG15-Q31P,11,support-list-empty,,,
+Aspire Go AMD,AG15-Q31P,10,arm64-out-of-scope,,,
+Aspire Go AMD,AG15-Q31P,11,arm64-out-of-scope,,,
 Aspire Go Intel,AG15-21P,10,oem-os-not-listed,,,
 Aspire Go Intel,AG15-21P,11,oem-wlan-listed,Wireless LAN_MTK_3.4.0.1046_W11x64_(MT7921LE).zip,3.4.0.1046,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.4.0.1046_W11x64_A.zip?acerid=638688096833733002&Step1=&Step2=&Step3=ASPIRE%20AG15-21P&OS=ALL&LC=en&BC=ACER&SC=PA_6
 Aspire Go Intel,AG15-21PT,10,oem-os-not-listed,,,
@@ -101,8 +101,8 @@ Aspire Go Intel,AG15-I31P,10,oem-os-not-listed,,,
 Aspire Go Intel,AG15-I31P,11,oem-wlan-listed,Wireless LAN_Realtek_6101.19.133.0_W11x64_(RTL8851BE).zip,6101.19.133.0,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Realtek_6101.19.133.0_W11x64_A.zip?acerid=639268724391251316&Step1=&Step2=&Step3=ASPIRE%20AG15-I31P&OS=ALL&LC=en&BC=ACER&SC=PA_6
 Aspire Go Intel,AG15-I51P,10,oem-os-not-listed,,,
 Aspire Go Intel,AG15-I51P,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1015.183_W11x64_(ICPS).zip,50.25.1015.183,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1015.183_W11x64_A.zip?acerid=639189155384825114&Step1=&Step2=&Step3=ASPIRE%20AG15-I51P&OS=ALL&LC=en&BC=ACER&SC=PA_6
-Aspire Go Intel,AG15-Q31P,10,support-list-empty,,,
-Aspire Go Intel,AG15-Q31P,11,support-list-empty,,,
+Aspire Go Intel,AG15-Q31P,10,arm64-out-of-scope,,,
+Aspire Go Intel,AG15-Q31P,11,arm64-out-of-scope,,,
 Aspire Go Snapdragon,AG15-21P,10,oem-os-not-listed,,,
 Aspire Go Snapdragon,AG15-21P,11,oem-wlan-listed,Wireless LAN_MTK_3.4.0.1046_W11x64_(MT7921LE).zip,3.4.0.1046,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.4.0.1046_W11x64_A.zip?acerid=638688096833733002&Step1=&Step2=&Step3=ASPIRE%20AG15-21P&OS=ALL&LC=en&BC=ACER&SC=PA_6
 Aspire Go Snapdragon,AG15-21PT,10,oem-os-not-listed,,,
@@ -135,8 +135,8 @@ Aspire Go Snapdragon,AG15-I31P,10,oem-os-not-listed,,,
 Aspire Go Snapdragon,AG15-I31P,11,oem-wlan-listed,Wireless LAN_Realtek_6101.19.133.0_W11x64_(RTL8851BE).zip,6101.19.133.0,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Realtek_6101.19.133.0_W11x64_A.zip?acerid=639268724391251316&Step1=&Step2=&Step3=ASPIRE%20AG15-I31P&OS=ALL&LC=en&BC=ACER&SC=PA_6
 Aspire Go Snapdragon,AG15-I51P,10,oem-os-not-listed,,,
 Aspire Go Snapdragon,AG15-I51P,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1015.183_W11x64_(ICPS).zip,50.25.1015.183,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1015.183_W11x64_A.zip?acerid=639189155384825114&Step1=&Step2=&Step3=ASPIRE%20AG15-I51P&OS=ALL&LC=en&BC=ACER&SC=PA_6
-Aspire Go Snapdragon,AG15-Q31P,10,support-list-empty,,,
-Aspire Go Snapdragon,AG15-Q31P,11,support-list-empty,,,
+Aspire Go Snapdragon,AG15-Q31P,10,arm64-out-of-scope,,,
+Aspire Go Snapdragon,AG15-Q31P,11,arm64-out-of-scope,,,
 Aspire Lite,AL17-31P,10,oem-os-not-listed,,,
 Aspire Lite,AL17-31P,11,oem-wlan-listed,Wireless LAN_Intel_23.90.1.3_W11x64_(AX101).zip,23.90.1.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.90.1.3_W11x64_A.zip?acerid=638808250090331578&Step1=&Step2=&Step3=ASPIRE%20AL17-31P&OS=ALL&LC=en&BC=ACER&SC=PA_6
 Aspire Lite,AL17-51P,10,oem-os-not-listed,,,
@@ -385,10 +385,10 @@ PREDATOR TRITON 17 X,PT14-51,10,oem-os-not-listed,,,
 PREDATOR TRITON 17 X,PT14-51,11,oem-wlan-listed,Wireless LAN_Killer_22.180.0.4_W11x64.zip,22.180.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_22.180.0.4_W11x64_A.zip?acerid=638186354946373530&Step1=&Step2=&Step3=PREDATOR%20PT14-51&OS=ALL&LC=en&BC=ACER&SC=PA_6
 PREDATOR TRITON 17 X,PT14-52T,10,oem-os-not-listed,,,
 PREDATOR TRITON 17 X,PT14-52T,11,oem-wlan-listed,Wireless LAN_Killer_23.160.0.4_W11x64_BE1750i.zip,23.160.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_23.160.0.4_W11x64_A.zip?acerid=639050746928429048&Step1=&Step2=&Step3=PREDATOR%20PT14-52T&OS=ALL&LC=en&BC=ACER&SC=PA_6
-Swift 14,SF14-11,10,support-list-empty,,,
-Swift 14,SF14-11,11,short-list,,,
-Swift 14,SF14-11T,10,support-list-empty,,,
-Swift 14,SF14-11T,11,short-list,,,
+Swift 14,SF14-11,10,arm64-out-of-scope,,,
+Swift 14,SF14-11,11,arm64-out-of-scope,,,
+Swift 14,SF14-11T,10,arm64-out-of-scope,,,
+Swift 14,SF14-11T,11,arm64-out-of-scope,,,
 Swift 14,SF14-51,10,oem-os-not-listed,,,
 Swift 14,SF14-51,11,oem-wlan-listed,Wireless LAN_Killer_23.160.0.4_W11x64_BE1750i.zip,23.160.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_23.160.0.4_W11x64_A.zip?acerid=638937560827316332&Step1=&Step2=&Step3=SWIFT%20SF14-51&OS=ALL&LC=en&BC=ACER&SC=PA_6
 Swift 14,SF14-51T,10,oem-os-not-listed,,,
@@ -397,10 +397,10 @@ Swift 14,SF14-61T,10,oem-os-not-listed,,,
 Swift 14,SF14-61T,11,oem-wlan-listed,Wireless LAN_MTK_5.4.0.1906_W11x64_MT7925.zip,5.4.0.1906,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_5.4.0.1906_W11x64_A.zip?acerid=638615497961239520&Step1=&Step2=&Step3=SWIFT%20SF14-61T&OS=ALL&LC=en&BC=ACER&SC=PA_6
 Swift 14,SF14-71T,10,oem-os-not-listed,,,
 Swift 14,SF14-71T,11,oem-wlan-listed,Wireless LAN_Killer_22.180.0.4_W11x64.zip,22.180.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_22.180.0.4_W11x64_A.zip?acerid=638096101455321381&Step1=&Step2=&Step3=SF14-71T&OS=ALL&LC=en&BC=ACER&SC=PA_6
-Swift 14 AI AMD,SF14-11,10,support-list-empty,,,
-Swift 14 AI AMD,SF14-11,11,short-list,,,
-Swift 14 AI AMD,SF14-11T,10,support-list-empty,,,
-Swift 14 AI AMD,SF14-11T,11,short-list,,,
+Swift 14 AI AMD,SF14-11,10,arm64-out-of-scope,,,
+Swift 14 AI AMD,SF14-11,11,arm64-out-of-scope,,,
+Swift 14 AI AMD,SF14-11T,10,arm64-out-of-scope,,,
+Swift 14 AI AMD,SF14-11T,11,arm64-out-of-scope,,,
 Swift 14 AI AMD,SF14-51,10,oem-os-not-listed,,,
 Swift 14 AI AMD,SF14-51,11,oem-wlan-listed,Wireless LAN_Killer_23.160.0.4_W11x64_BE1750i.zip,23.160.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_23.160.0.4_W11x64_A.zip?acerid=638937560827316332&Step1=&Step2=&Step3=SWIFT%20SF14-51&OS=ALL&LC=en&BC=ACER&SC=PA_6
 Swift 14 AI AMD,SF14-51T,10,oem-os-not-listed,,,
@@ -409,10 +409,10 @@ Swift 14 AI AMD,SF14-61T,10,oem-os-not-listed,,,
 Swift 14 AI AMD,SF14-61T,11,oem-wlan-listed,Wireless LAN_MTK_5.4.0.1906_W11x64_MT7925.zip,5.4.0.1906,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_5.4.0.1906_W11x64_A.zip?acerid=638615497961239520&Step1=&Step2=&Step3=SWIFT%20SF14-61T&OS=ALL&LC=en&BC=ACER&SC=PA_6
 Swift 14 AI AMD,SF14-71T,10,oem-os-not-listed,,,
 Swift 14 AI AMD,SF14-71T,11,oem-wlan-listed,Wireless LAN_Killer_22.180.0.4_W11x64.zip,22.180.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_22.180.0.4_W11x64_A.zip?acerid=638096101455321381&Step1=&Step2=&Step3=SF14-71T&OS=ALL&LC=en&BC=ACER&SC=PA_6
-Swift 14 AI Snapdragon,SF14-11,10,support-list-empty,,,
-Swift 14 AI Snapdragon,SF14-11,11,short-list,,,
-Swift 14 AI Snapdragon,SF14-11T,10,support-list-empty,,,
-Swift 14 AI Snapdragon,SF14-11T,11,short-list,,,
+Swift 14 AI Snapdragon,SF14-11,10,arm64-out-of-scope,,,
+Swift 14 AI Snapdragon,SF14-11,11,arm64-out-of-scope,,,
+Swift 14 AI Snapdragon,SF14-11T,10,arm64-out-of-scope,,,
+Swift 14 AI Snapdragon,SF14-11T,11,arm64-out-of-scope,,,
 Swift 14 AI Snapdragon,SF14-51,10,oem-os-not-listed,,,
 Swift 14 AI Snapdragon,SF14-51,11,oem-wlan-listed,Wireless LAN_Killer_23.160.0.4_W11x64_BE1750i.zip,23.160.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_23.160.0.4_W11x64_A.zip?acerid=638937560827316332&Step1=&Step2=&Step3=SWIFT%20SF14-51&OS=ALL&LC=en&BC=ACER&SC=PA_6
 Swift 14 AI Snapdragon,SF14-51T,10,oem-os-not-listed,,,
@@ -507,8 +507,8 @@ Swift Edge 16,SFE16-44,10,oem-os-not-listed,,,
 Swift Edge 16,SFE16-44,11,oem-wlan-listed,Wireless LAN_MTK_3.3.0.972_W11x64_(MTRZ616).zip,3.3.0.972,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.3.0.972_W11x64_A.zip?acerid=638638905464220580&Step1=&Step2=&Step3=SFE16-44&OS=ALL&LC=en&BC=ACER&SC=PA_6
 Swift Edge 16,SFE16-I51,10,oem-os-not-listed,,,
 Swift Edge 16,SFE16-I51,11,oem-wlan-listed,Wireless LAN_Killer_40.26.107.202_W11x64_(1775s).zip,40.26.107.202,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_40.26.107.202_W11x64_A.zip?acerid=639107123325446531&Step1=&Step2=&Step3=SWIFT%20SFE16-I51&OS=ALL&LC=en&BC=ACER&SC=PA_6
-Swift Go 14,SFG14-01,10,support-list-empty,,,
-Swift Go 14,SFG14-01,11,short-list,,,
+Swift Go 14,SFG14-01,10,arm64-out-of-scope,,,
+Swift Go 14,SFG14-01,11,arm64-out-of-scope,,,
 Swift Go 14,SFG14-41,10,oem-os-not-listed,,,
 Swift Go 14,SFG14-41,11,oem-wlan-listed,Wireless LAN_MTK_3.3.0.789_W11x64_(MTRZ616).zip,3.3.0.789,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.3.0.789_W11x64_A.zip?acerid=638348500958891918&Step1=&Step2=&Step3=SFG14-41&OS=ALL&LC=en&BC=ACER&SC=PA_6
 Swift Go 14,SFG14-42,10,oem-os-not-listed,,,
@@ -541,8 +541,8 @@ Swift Go 14,SFG14-75T,10,oem-os-not-listed,,,
 Swift Go 14,SFG14-75T,11,oem-wlan-listed,Wireless LAN_Intel_24.50.0.4_W11x64_(BE201).zip,24.50.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_24.50.0.4_W11x64_A.zip?acerid=639216893082786788&Step1=&Step2=&Step3=SWIFT%20SFG14-75T&OS=ALL&LC=en&BC=ACER&SC=PA_6
 Swift Go 14,SFG14-I71,10,oem-os-not-listed,,,
 Swift Go 14,SFG14-I71,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1015.183_W11x64_(ICPS).zip,50.25.1015.183,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1015.183_W11x64_A.zip?acerid=639099350337238535&Step1=&Step2=&Step3=SWIFT%20SFG14-I71&OS=ALL&LC=en&BC=ACER&SC=PA_6
-Swift Go 14 AI AMD,SFG14-01,10,support-list-empty,,,
-Swift Go 14 AI AMD,SFG14-01,11,short-list,,,
+Swift Go 14 AI AMD,SFG14-01,10,arm64-out-of-scope,,,
+Swift Go 14 AI AMD,SFG14-01,11,arm64-out-of-scope,,,
 Swift Go 14 AI AMD,SFG14-41,10,oem-os-not-listed,,,
 Swift Go 14 AI AMD,SFG14-41,11,oem-wlan-listed,Wireless LAN_MTK_3.3.0.789_W11x64_(MTRZ616).zip,3.3.0.789,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.3.0.789_W11x64_A.zip?acerid=638348500958891918&Step1=&Step2=&Step3=SFG14-41&OS=ALL&LC=en&BC=ACER&SC=PA_6
 Swift Go 14 AI AMD,SFG14-42,10,oem-os-not-listed,,,
@@ -575,8 +575,8 @@ Swift Go 14 AI AMD,SFG14-75T,10,oem-os-not-listed,,,
 Swift Go 14 AI AMD,SFG14-75T,11,oem-wlan-listed,Wireless LAN_Intel_24.50.0.4_W11x64_(BE201).zip,24.50.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_24.50.0.4_W11x64_A.zip?acerid=639216893082786788&Step1=&Step2=&Step3=SWIFT%20SFG14-75T&OS=ALL&LC=en&BC=ACER&SC=PA_6
 Swift Go 14 AI AMD,SFG14-I71,10,oem-os-not-listed,,,
 Swift Go 14 AI AMD,SFG14-I71,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1015.183_W11x64_(ICPS).zip,50.25.1015.183,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1015.183_W11x64_A.zip?acerid=639099350337238535&Step1=&Step2=&Step3=SWIFT%20SFG14-I71&OS=ALL&LC=en&BC=ACER&SC=PA_6
-Swift Go 14 AI Intel,SFG14-01,10,support-list-empty,,,
-Swift Go 14 AI Intel,SFG14-01,11,short-list,,,
+Swift Go 14 AI Intel,SFG14-01,10,arm64-out-of-scope,,,
+Swift Go 14 AI Intel,SFG14-01,11,arm64-out-of-scope,,,
 Swift Go 14 AI Intel,SFG14-41,10,oem-os-not-listed,,,
 Swift Go 14 AI Intel,SFG14-41,11,oem-wlan-listed,Wireless LAN_MTK_3.3.0.789_W11x64_(MTRZ616).zip,3.3.0.789,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.3.0.789_W11x64_A.zip?acerid=638348500958891918&Step1=&Step2=&Step3=SFG14-41&OS=ALL&LC=en&BC=ACER&SC=PA_6
 Swift Go 14 AI Intel,SFG14-42,10,oem-os-not-listed,,,
@@ -609,8 +609,8 @@ Swift Go 14 AI Intel,SFG14-75T,10,oem-os-not-listed,,,
 Swift Go 14 AI Intel,SFG14-75T,11,oem-wlan-listed,Wireless LAN_Intel_24.50.0.4_W11x64_(BE201).zip,24.50.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_24.50.0.4_W11x64_A.zip?acerid=639216893082786788&Step1=&Step2=&Step3=SWIFT%20SFG14-75T&OS=ALL&LC=en&BC=ACER&SC=PA_6
 Swift Go 14 AI Intel,SFG14-I71,10,oem-os-not-listed,,,
 Swift Go 14 AI Intel,SFG14-I71,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1015.183_W11x64_(ICPS).zip,50.25.1015.183,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1015.183_W11x64_A.zip?acerid=639099350337238535&Step1=&Step2=&Step3=SWIFT%20SFG14-I71&OS=ALL&LC=en&BC=ACER&SC=PA_6
-Swift Go 14 AI Snapdragon,SFG14-01,10,support-list-empty,,,
-Swift Go 14 AI Snapdragon,SFG14-01,11,short-list,,,
+Swift Go 14 AI Snapdragon,SFG14-01,10,arm64-out-of-scope,,,
+Swift Go 14 AI Snapdragon,SFG14-01,11,arm64-out-of-scope,,,
 Swift Go 14 AI Snapdragon,SFG14-41,10,oem-os-not-listed,,,
 Swift Go 14 AI Snapdragon,SFG14-41,11,oem-wlan-listed,Wireless LAN_MTK_3.3.0.789_W11x64_(MTRZ616).zip,3.3.0.789,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.3.0.789_W11x64_A.zip?acerid=638348500958891918&Step1=&Step2=&Step3=SFG14-41&OS=ALL&LC=en&BC=ACER&SC=PA_6
 Swift Go 14 AI Snapdragon,SFG14-42,10,oem-os-not-listed,,,
@@ -643,8 +643,8 @@ Swift Go 14 AI Snapdragon,SFG14-75T,10,oem-os-not-listed,,,
 Swift Go 14 AI Snapdragon,SFG14-75T,11,oem-wlan-listed,Wireless LAN_Intel_24.50.0.4_W11x64_(BE201).zip,24.50.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_24.50.0.4_W11x64_A.zip?acerid=639216893082786788&Step1=&Step2=&Step3=SWIFT%20SFG14-75T&OS=ALL&LC=en&BC=ACER&SC=PA_6
 Swift Go 14 AI Snapdragon,SFG14-I71,10,oem-os-not-listed,,,
 Swift Go 14 AI Snapdragon,SFG14-I71,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1015.183_W11x64_(ICPS).zip,50.25.1015.183,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1015.183_W11x64_A.zip?acerid=639099350337238535&Step1=&Step2=&Step3=SWIFT%20SFG14-I71&OS=ALL&LC=en&BC=ACER&SC=PA_6
-Swift Go 14 AMD,SFG14-01,10,support-list-empty,,,
-Swift Go 14 AMD,SFG14-01,11,short-list,,,
+Swift Go 14 AMD,SFG14-01,10,arm64-out-of-scope,,,
+Swift Go 14 AMD,SFG14-01,11,arm64-out-of-scope,,,
 Swift Go 14 AMD,SFG14-41,10,oem-os-not-listed,,,
 Swift Go 14 AMD,SFG14-41,11,oem-wlan-listed,Wireless LAN_MTK_3.3.0.789_W11x64_(MTRZ616).zip,3.3.0.789,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.3.0.789_W11x64_A.zip?acerid=638348500958891918&Step1=&Step2=&Step3=SFG14-41&OS=ALL&LC=en&BC=ACER&SC=PA_6
 Swift Go 14 AMD,SFG14-42,10,oem-os-not-listed,,,
@@ -677,8 +677,8 @@ Swift Go 14 AMD,SFG14-75T,10,oem-os-not-listed,,,
 Swift Go 14 AMD,SFG14-75T,11,oem-wlan-listed,Wireless LAN_Intel_24.50.0.4_W11x64_(BE201).zip,24.50.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_24.50.0.4_W11x64_A.zip?acerid=639216893082786788&Step1=&Step2=&Step3=SWIFT%20SFG14-75T&OS=ALL&LC=en&BC=ACER&SC=PA_6
 Swift Go 14 AMD,SFG14-I71,10,oem-os-not-listed,,,
 Swift Go 14 AMD,SFG14-I71,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1015.183_W11x64_(ICPS).zip,50.25.1015.183,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1015.183_W11x64_A.zip?acerid=639099350337238535&Step1=&Step2=&Step3=SWIFT%20SFG14-I71&OS=ALL&LC=en&BC=ACER&SC=PA_6
-Swift Go 14/16 AI Intel,SFG14-01,10,support-list-empty,,,
-Swift Go 14/16 AI Intel,SFG14-01,11,short-list,,,
+Swift Go 14/16 AI Intel,SFG14-01,10,arm64-out-of-scope,,,
+Swift Go 14/16 AI Intel,SFG14-01,11,arm64-out-of-scope,,,
 Swift Go 14/16 AI Intel,SFG14-41,10,oem-os-not-listed,,,
 Swift Go 14/16 AI Intel,SFG14-41,11,oem-wlan-listed,Wireless LAN_MTK_3.3.0.789_W11x64_(MTRZ616).zip,3.3.0.789,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.3.0.789_W11x64_A.zip?acerid=638348500958891918&Step1=&Step2=&Step3=SFG14-41&OS=ALL&LC=en&BC=ACER&SC=PA_6
 Swift Go 14/16 AI Intel,SFG14-42,10,oem-os-not-listed,,,
@@ -779,12 +779,12 @@ Swift Go 16 AI Intel,SFG16-I71T,10,oem-os-not-listed,,,
 Swift Go 16 AI Intel,SFG16-I71T,11,oem-wlan-listed,Wireless LAN_Intel_24.10.0.4_W11x64_(BE211).zip,24.10.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_24.10.0.4_W11x64_A.zip?acerid=639197817440688355&Step1=&Step2=&Step3=SWIFT%20SFG16-I71T&OS=ALL&LC=en&BC=ACER&SC=PA_6
 Swift Spin 14 AI Intel,SFSP14-I51T,10,oem-os-not-listed,,,
 Swift Spin 14 AI Intel,SFSP14-I51T,11,oem-wlan-listed,Wireless LAN_Killer_24.20.0.4_W11x64_(1775s).zip,24.20.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_24.20.0.4_W11x64_A.zip?acerid=639167707692637241&Step1=&Step2=&Step3=SWIFT%20SFSP14-I51T&OS=ALL&LC=en&BC=ACER&SC=PA_6
-Swift Spin 14 AI Intel,SFSP14-Q51T,10,support-list-empty,,,
-Swift Spin 14 AI Intel,SFSP14-Q51T,11,support-list-empty,,,
+Swift Spin 14 AI Intel,SFSP14-Q51T,10,arm64-out-of-scope,,,
+Swift Spin 14 AI Intel,SFSP14-Q51T,11,arm64-out-of-scope,,,
 Swift Spin 14 AI Snapdragon,SFSP14-I51T,10,oem-os-not-listed,,,
 Swift Spin 14 AI Snapdragon,SFSP14-I51T,11,oem-wlan-listed,Wireless LAN_Killer_24.20.0.4_W11x64_(1775s).zip,24.20.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_24.20.0.4_W11x64_A.zip?acerid=639167707692637241&Step1=&Step2=&Step3=SWIFT%20SFSP14-I51T&OS=ALL&LC=en&BC=ACER&SC=PA_6
-Swift Spin 14 AI Snapdragon,SFSP14-Q51T,10,support-list-empty,,,
-Swift Spin 14 AI Snapdragon,SFSP14-Q51T,11,support-list-empty,,,
+Swift Spin 14 AI Snapdragon,SFSP14-Q51T,10,arm64-out-of-scope,,,
+Swift Spin 14 AI Snapdragon,SFSP14-Q51T,11,arm64-out-of-scope,,,
 Swift X 14,SFX14-41G,10,oem-wlan-listed,Wireless LAN_MTK_3.0.1.1300_W10x64.zip,3.0.1.1300,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.0.1.1300_W10x64_A.zip?acerid=637860370016652113&Step1=&Step2=&Step3=SFX14-41G&OS=ALL&LC=en&BC=ACER&SC=PA_6
 Swift X 14,SFX14-41G,11,oem-wlan-listed,Wireless LAN_MTK_3.3.0.760_W11x64_(MT7921LE).zip,3.3.0.760,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.3.0.760_W11x64_A.zip?acerid=638356293107947380&Step1=&Step2=&Step3=SFX14-41G&OS=ALL&LC=en&BC=ACER&SC=PA_6
 Swift X 14,SFX14-42G,10,oem-os-not-listed,,,
