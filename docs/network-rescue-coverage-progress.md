@@ -678,3 +678,12 @@ BIOSTAR 的 `export/spec_export.php?S_ID=...` 返回的其实是 **PDF 字节**�
 | `support-api-empty` | 2 | ASUS 支持接口空响应（B850M AYW CSM） |
 
 本轮无新增关闭：待核 **210**（主板 53／54，笔记本 Win10 64、Win11 39）。Lenovo 驱动 API 与 Gigabyte 区域 API 本轮再次确认 403；Dell 驱动包目录不含 Alienware。
+
+### 2026-11-13 消费级目录与 Alienware 复核
+
+- **Dell SDP 目录**：`downloads.dell.com/catalog/DellSDPCatalogPC.cab`（内层 `DellSDPCatalogPC.xml`，172 MB，WSUS `SystemsManagementCatalog`）可正常下载解析，但其中没有 Alienware 16/18 Area-51、15 DA15260 等型号（`Alienware` 仅作为旧条目的品牌名出现，型号代码 0 命中），无法用于这 8 格。
+- **Lenovo**：`pcsupport.lenovo.com` 产品页可读（423 KB），页面内嵌 `DefaultOs` 与产品 ID，但驱动数据接口 `/api/v4/downloads/drivers` 无论 productId 形式如何都返回 403，仍缺逐系统驱动列表。
+- **Gigabyte**：区域 API（tw/jp/de）路径 404，`www.gigabyte.com/api/proxy/...` 仍 403；EVGA 旧下载路径返回拦截页。
+- **Web Archive**：BIOSTAR 规格 PDF 有 2025-12 与 2026-07 快照，但本机访问被 429 限速，未能取回。
+
+本轮无新增关闭：待核 **210**。
