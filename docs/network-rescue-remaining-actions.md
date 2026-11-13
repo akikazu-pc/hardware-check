@@ -1,20 +1,20 @@
 # 联网驱动核实：剩余工作分工
 
-主表剩余 **80 格**待核（起点 2,570，表 2,723 行）。两项口径决定已落地；Gigabyte/ASRock/MSI 又收尾 10 格。本文件记录剩余工作与日后复跑方法。
+主表剩余 **66 格**待核（起点 2,570，表 2,723 行）。两项口径决定已落地；Gigabyte/ASRock/MSI/Lenovo/Dell 又收尾 24 格。本文件记录剩余工作与日后复跑方法。
 
 ## 已落地的决定
 
 1. **按硬件配置记账**：已核实「规格无出厂 WLAN」的主板，下载页里的通用 Wi-Fi 驱动视为 M.2 E-Key 选配模块驱动，该格记 `oem-wlan-not-listed`。覆盖 MSI 21 格、ASRock 14 格、ASUS 11 格，证据见 [冲突记账证据](network-rescue-conflict-resolution-proof.csv)。
 2. **系列行拆分**：Acer 19 个有族级数据的系列行替换为 88 个精确 SKU 行（模型名即 Acer 型号代码），映射见 [Acer SKU 证据](network-rescue-acer-sku-proof.csv)；ASUS 4 个已有 SKU 行的系列行直接删除。
 
-## 剩余 80 格分布
+## 剩余 66 格分布
 
 | 厂商 | 格数 | 缺口 |
 | --- | --- | --- |
-| Acer | 40 | 8 个无 SKU 数据的系列行（16）、20 个精确型号 Win10（21）、2 个 SKU 短列表（3） |
+| Acer | 40 | 8 个无 SKU 数据的系列行（16）、20 个精确型号 Win10（21）、2 个 SKU 短列表（3）；区域库 39 个 locale 均 0 命中 |
 | ASUS | 13 | 3 个无 SKU 数据的系列行（6）、5 个 SKU（FA608PPI/PMI 空 OS 列表、G513IR/G713IR/G733QSA 的 Win11 列表过短）（7） |
-| Dell | 8 | Alienware 驱动页为前端 XHR，Akamai 拦截直连与无头浏览器；需要登录态浏览器复制页面（见浏览器抓取指引） |
-| Lenovo | 7 | 驱动 API 403，页面无服务端驱动表；同样需要浏览器复制（见浏览器抓取指引） |
+
+| Lenovo | 1 | `Legion Pro 7 16ADR10H` 的 Win10：PSREF 缺该型号，缺系统支持证据 |
 
 | MSI | 4 | `MEG X570 GODLIKE`（Killer 通用包无法落到型号）、`PRO H610M-S WIFI DDR4 II`（面板为空） |
 | ASUS 主板 | 4 | `B850M AYW GAMING WIFI-CSM`（接口空）、`Pro WS 665-ACE`（无手册、规格仅一行） |
@@ -42,3 +42,8 @@
 - **已关闭的系列行保留**：拆分只处理了待核的系列行；已关闭的聚合行作为系列索引保留，不删除已验证数据。
 - **实机验证**：由你按需抽少量机型确认，其余以「发现问题再改」方式反馈。
 - **非官方来源**：Softpedia 直连 403、阅读器空；Wayback 对本机持续 429。EVGA 产品页已下线，暂只能靠手册；Dell/Lenovo 需浏览器配合。
+
+## 2026-11-13 后续新增方法
+
+- **Dell**：浏览器 cookie + `packdriversbyproduct` 接口，响应为字母后移 3 位的 JSON，解密后得到完整驱动表；`/supportedos/<slug>` 给支持系统。5 个 Alienware 均仅支持 Windows 11 → 8 格清零。脚本：`collect-dell-alienware.py`、`dell-api-fetch.mjs`。
+- **Lenovo**：`.../downloads/driver-list/component?name=Networking%3A%20Wireless%20LAN`（无需 id）经阅读器渲染，逐条带型号与支持系统 → 6 格关闭。
