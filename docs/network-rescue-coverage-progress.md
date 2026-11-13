@@ -636,3 +636,14 @@ MSI 的笔记本系列页 OS 选择器常常为空，区域 SKU 藏在系列 ban
 - **TUF Gaming A16 FA608UH**：Win11 的「網路驅動程式」类目里有 Realtek／MediaTek 無線區域網驱动（V6001.16.174.103、V3.6.2.1434），Win11 关闭。注意类别名是中文，英文类别名匹配会漏。
 
 按此路线复跑后 `collect-asus-wlan-downloads.py` 仍未接入区域页，后续如需可加 `--region`。本轮合计关闭 **4 格**：待核 218→**214**。
+
+### 2026-11-13 BIOSTAR 规格导出是 PDF
+
+BIOSTAR 的 `export/spec_export.php?S_ID=...` 返回的其实是 **PDF 字节**（之前按 HTML 解析所以读不到文本）。用 pymupdf 解析两份早期缓存：
+
+- **X870E VALKYRIE**：`1 x M.2 (E Key) Socket : Supports 2230 type Wi-Fi & Bluetooth module` 且 `* M.2 (E Key) Wi-Fi card is not provided`。
+- **B850M-SILVER**：`Supports WiFi 7 & 6E module (No WiFi card included)`，同样注明 E Key 卡不随板提供。
+
+两款都没有随板 Wi-Fi 卡，下载列表也没有 WLAN 项 → 两个系统都关闭为 `oem-wlan-not-listed`（4 格）。其余 10 款 BIOSTAR 的规格 PDF 在站点恢复 403 后无法取得，保持待核；站点恢复时可直接沿用同一解析方法。
+
+本轮合计关闭 **4 格**：待核 214→**210**（主板 53／54，笔记本 Win10 64、Win11 39）。
