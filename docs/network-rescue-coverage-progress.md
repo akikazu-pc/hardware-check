@@ -1019,3 +1019,11 @@ Acer 为 SF314-44 发布的 CE 声明列 N21H1、`SF314-44**********` 和 MediaT
 2026-11-14 已向 Acer 技术支持询证 311R-31、311RN-31 和 CN516-72 的正式型号，并请求提供对应销售料号或支持记录。截至本次核查，仍待原厂回复。[Acer 技术支持](https://www.acer.com/my-en/support/service-network/highpoint-service-network)
 
 在 Linux Hardware Project 的 Acer Aspire DMI 目录中检索七款 S 后缀，均未命中精确型号。BSD Hardware、Geekbench、OpenBenchmarking 和 Acer 社区的公开索引也未找到同一台设备同时提供完整 S 后缀与 WLAN PCI 子系统 ID 的记录。待核共 19 格。[公开 DMI 目录](https://github.com/linuxhw/DMI/tree/master/Notebook/Acer/Aspire)
+
+### 2026-11-14 DrvHub 型号库扩展
+
+DrvHub 按品牌收录的笔记本型号页规模远大于当前清单：Acer 约 1,180 个基础型号（清单 475 行）、ASUS 约 2,400 个、Lenovo 约 3,131 个（清单 15 行）、Dell 约 864 个、HP 约 2,040 个、MSI 约 448 个，另收录 726 个品牌。页面系统选择器只有「Windows 10 / 11 (64-bit)」一档。
+
+新增 [expand-drvhub-library.py](../scripts/expand-drvhub-library.py)：抓品牌索引 → 把配置变体归并到基础型号 → 跳过清单已有 → 逐页解析 WLAN 卡片 → 追加新行（两系统记 `third-party-wlan-listed`，来源记页面 URL）。已对 Acer 与 ASUS 应用：追加 **2,535** 行（Acer 1,2xx、ASUS 1,2xx），证据 6,688 条存于 [扩展证据表](network-rescue-drvhub-expansion-proof.csv)。清单从 2,727 行扩到 **5,262** 行，待核仍为 19 格。
+
+Lenovo／Dell／HP／MSI 的约 6,400 个缺口型号已统计但未抓取（逐页抓取耗时较长），可按同一脚本继续。
