@@ -512,3 +512,11 @@ Acer 的 96 个系列行只有营销名，无法直接查询。`https://www.acer
 其中 **15 个系列在美国站只有一个型号页**，映射无歧义：逐一查询该型号的驱动列表，Win10 均无任何文件（`oem-os-not-listed`），Win11 均列出 Wireless LAN 驱动（`oem-wlan-listed`），两个系统各 15 格、共 **30 格**关闭。证据见 [系列证据](network-rescue-acer-series-proof.csv)，其余 81 个系列的候选型号见[系列型号清单](network-rescue-acer-series-skus.csv)。
 
 MSI 另按规格页「Intel Wi-Fi 6E 模块预装」与驱动面板关闭 MAG B660 TOMAHAWK EVA 的 2 格；其余 12 款无 Wi-Fi 主板的通用 Wi-Fi 驱动包继续按工厂规格门禁挂起。本轮合计关闭 **32 格**：待核 527→**495**（主板 73／73，笔记本 Win10 206、Win11 143）。
+
+### 2026-11-13 华擎手册与 Acer 族级查询
+
+华擎的 `www.asrock.com` 被 Incapsula 质询，但 `download.asrock.com` 的手册可读。按精确型号手册的「Wi-Fi 模块」章节与既有下载列表证据交叉：6 款主板手册写明预装 Wi-Fi 模块（Killer／Intel WLAN 驱动对两个系统都列出版本），X370 Pro4 手册无无线章节且 Win10 列表未列 WLAN，合计关闭 13 格。手册章节带「for X470 Master SLI/ac only」这类限定的型号不用于基础型号判断。
+
+Acer 把 73 个多型号系列的 611 个 sitemap SKU 全部查询一遍（约 40 分钟，3 并发），**只有全族结论一致才关闭系列格**：24 个系列、47 格关闭（Win10 均无文件、Win11 均列 Wireless LAN），其余族内出现混合结论或空列表，保持待核。族级逐 SKU 证据见[族级证据](network-rescue-acer-series-family-proof.csv)。
+
+本轮合计关闭 **72 格**：待核 495→**436**（主板 67／67，笔记本 Win10 183、Win11 119）。
