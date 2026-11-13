@@ -444,3 +444,10 @@ v0.1.0 退出后，重启仍留下 `PawnIO` 服务和驱动包。复现确认：
 - 驱动列表显示两个驱动和「Install all matched drivers (2)」；选择全装后确认页列出 `rt25cx21x64.inf`、`rt68cx21x64.inf` 两个 INF。确认按钮仍非默认，Tab 到 Confirm 后空格确认。
 - 修复完成后界面提示「Driver added. Restart into the selected Windows and check the network connection.」。
 - 只读挂载系统盘核对：`Windows\INF\oem*.inf` 出现 `oem0.inf`、`oem1.inf`（Class Net，版本 1125.029.50.0202、1168.029.50.0202），驱动库新增 `rt25cx21x64.inf`、`rt68cx21x64.inf` 目录；修复前该盘没有 `oem*.inf`。覆盖图形界面修复分支的全装、确认、DISM 写入和驱动库复查。
+
+## 2026-11-13 PE 多磁盘目标选择与保护
+
+- 新建 `NR-MULTIDISK-02` 来宾：80 GiB 磁盘（Disk 0）和 70 GiB 磁盘（Disk 2，挂在第二个 SCSI 控制器上）均为空白；CLI 同时列出「Disk 0 80 GiB」和「Disk 2 70 GiB」。
+- 选择第二项把无人值守部署写到 70 GiB 磁盘；应用映像后自动重启进入日语许可页。
+- 只读核对：选中磁盘变为 GPT，分区为 EFI 260 MiB、MSR 16 MiB、C 盘 70,377 MiB、恢复 1,024 MiB；未选中的 80 GiB 磁盘保持 RAW、0 分区，首个 MiB 仅 2 个非零字节（虚拟控制器的磁盘签名痕迹，PE 对未选中磁盘只读）。
+- 另测 60 GiB 空白盘：低于 64 GiB 下限，不会进入空白目标列表，属预期保护。多控制器 SCSI 磁盘可被正常枚举和选择。
