@@ -848,3 +848,9 @@ Lenovo 待核 7→1 格（16ADR10H 的 Win10）。本轮合计关闭 **6 格**�
 - **MSI 中国站**：`cn.msi.com` 对面板接口返回 403，全球站结果不变（MEG X570 GODLIKE 只有 Killer 通用包、PRO H610M-S WIFI DDR4 II 面板为空）。
 - **Acer SFA14-55M**：欧服记录列出 11 个 Win11 驱动（Audio、Bluetooth RTL8852BE、Chipset Utility、DTT/NPU/PMT、IO），无 WLAN 文件；RTL8852BE 为 Wi-Fi 6 + BT 组合模块，出厂无线存在 → Win11 按未列关闭（1 格）。SFA14-11 只有 Chipset 与 All Driver package 两个文件，列表无效，保持待核。
 - **第三方驱动库**：Softpedia、driverscollection、driverscape 直连/代理均被拦截；Treexy 只按厂商/设备分类，没有精确型号+系统的 WLAN 列表；Memento 聚合器不可用。第三方来源无法给出可核对的原厂驱动包。
+
+### 2026-11-13 EVGA 剩余两款的证据状态
+
+用户提供的 Wayback 产品页与规格表确认：**EVGA Z790 CLASSIFIED** 为「Intel Dual-Band Wi-Fi 6E / BT5.2 module, preinstalled in the M.2 Key-E 32mm Slot」，附件含 EVGA Wi-Fi 天线；**Z790 DARK K|NGP|N** 同样在手册中写明 Wi-Fi 6E/BT 5.2。第三方数据库 station-drivers 的该型号页面也标注「Wireless/Bluetooth: Intel AX2xx Wifi 6」，但只给通用 Intel PROSet 驱动链接，没有 EVGA 逐型号驱动包；touslesdrivers 对应页面只是检测工具宣传页。
+
+结论：出厂无线已确认，但 EVGA 已下架产品支持页（PN 页面重定向首页、下载页是 Telerik 表单且无产品参数渲染），拿不到「EVGA 为该型号列出的 WLAN 驱动」这一证据；通用 Intel Wi-Fi 驱动不属于原厂型号条目。EVGA 4 格维持待核，记录为「原厂支持页已移除、仅通用 Intel 驱动可用」。
