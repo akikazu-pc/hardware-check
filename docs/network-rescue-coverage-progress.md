@@ -1002,3 +1002,8 @@ Acer 的三个 Win10 候选 ZIP 也已核对 `Netwtw08.INF` 版本。AX201、Kil
 - **P50-41-G3**：摩尔多瓦采购网站上的附件是 Intertek 能效证书。附件将 TMP50-41-G3 与 TMP215-41-G3 分列于 N19Q8，未注明实际采购的订货号或 WLAN 配置。公开零售料号 NX.VSHEU.003 和 NX.VSMEG.007 均对应 TMP215-41-G3。精确 TMP50-41-G3 的出厂网卡与实机 PCI ID 仍待核。[采购附件](https://storage.mtender.gov.md/get/d5c25228-eecc-4426-b833-b1eb34691fee-1683200885582) · [NX.VSHEU.003 记录](https://www.arukereso.hu/notebook-c3100/acer/travelmate-tmp215-41-g3-r4ma-nx-vsheu-003-p784545549/) · [NX.VSMEG.007 记录](https://www.arukereso.hu/notebook-c3100/acer/travelmate-p2-tmp215-41-g3-nx-vsmeg-007-p773614161/)
 
 三款继续待核。未下载或收录新的驱动。
+
+### CN516-72 订货号与型号映射复查
+
+- Acer 爱尔兰商店将订货号 `NX.C6BEK.002` 明确标为 `CN516-72P`。美国驱动查询对 `CN516-72P` 返回一条精确记录，对无后缀型号及带系列名前缀的写法均返回零条。用已知 G／P 订货号查询同一接口也返回零条，因此该接口不能用订货号建立别名映射。[Acer 官方商店](https://store.acer.com/en-ie/conceptd-5-pro-laptop-cn516-72p-black-nx-c6bek-002) · [Acer CN516-72P 支持页](https://www.acer.com/us-en/support/product-support/CN516-72P)
+- Acer 法国站的兼容表在 `CN516-72G` 后写 `CN516-72`，法国 Acer 社区的升级名单在对应位置写 `CN516-72P`。N20C9 欧盟符合性声明和用户手册只列 G／P 两种后缀。资料支持清单可能漏写 P，公开实机探针未找到无后缀型号的完整 PCI ID。Win10 格保留待核。[法国站兼容表](https://www.acer.com/fr-fr/support/windows/windows-11-compatibility.html) · [法国社区升级名单](https://community.acer.com/fr/fr/kb/articles/14314-liste-des-ordinateurs-portables-acer-eligibles-pour-la-mise-a-niveau-de-windows-11) · [N20C9 声明与手册](https://www.helpowl.com/p/Acer%20Computers/ConceptD%20CN516-72P/342297)
