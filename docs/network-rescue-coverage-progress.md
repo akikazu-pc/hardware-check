@@ -874,3 +874,15 @@ Lenovo 待核 7→1 格（16ADR10H 的 Win10）。本轮合计关闭 **6 格**�
 - **ROG Flow Z13-KJP**：日服产品页给出精确 SKU **GZ302EAC**（OS 仅 Windows 11 Home，Wi-Fi 7）。按系列拆分为 SKU 行：`ROG Flow Z13-KJP GZ302EAC`，Win10 记未列系统（支持库只有 Win11），Win11 记列出（MediaTek Wireless LAN V5.7.0.5115／V5.6.0.4261）。原系列行删除（净减 2 格）。
 
 本轮合计关闭 **6 格**：待核 58→**52**。MSI 清零。
+
+### 2026-11-13 Acer Aspire/TravelMate/Predator 系列拆分与 GA403
+
+用户提供的 Acer 美国商店页与 ASUS 日服页给出精确支持代码：
+
+- **A16-52MT／A16-I71MT／AX16-I71M／A16-I71M**（Aspire 16 AI Intel）：欧服记录均为 Win11 only（29–59 个文件，含 Intel/Killer 无线驱动）→ Win11 列出、Win10 未列系统；替换原「Aspire 14/16 AI Intel」系列行。
+- **A16-A71M／A16-A71MT**（Aspire 14/16 AI AMD）：Win11 only，含 MT7922 无线驱动 → 同上替换。
+- **Aspire 14/16 AI Snapdragon**：A16-11M 欧服记录 21 个文件全为 11A1（Win11 ARM64）→ 该系列属 x64 范围外，两格记 `outside-x64-record`。
+- **PT516-52S**（PREDATOR TRITON 500 SE）、**TMP216-41**（TravelMate P2 16 AI AMD）、**TMP413-51**（TravelMate P4 13）：欧服记录均是 Win11 only 且含无线驱动 → 替换系列行。
+- **ROG Zephyrus G14 (2026) GA403**：日服支持页 OS 选择器只有 Windows 11，Networking 有 MediaTek 无线驱动 V5.7.0.5115 → Win11 列出、Win10 未列系统。
+
+本轮合计关闭 **14 格**：待核 52→**38**。

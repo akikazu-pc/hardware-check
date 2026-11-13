@@ -5,3 +5,23 @@ Spin SP714-61NA,10,oem-os-not-listed,Win10 driver section is only the Windows Up
 Swift SF314-510,10,oem-wlan-listed,Wireless LAN_Intel_22.40.0.7_W10x64_(AX201).zip in the EMEA driver list,de-de
 TravelMate P50-41,10,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64_(AX200).zip in the EMEA driver list,de-de
 SFA14-55M,11,oem-wlan-not-listed,"EU driver record lists 11 Win11 files (Audio, Bluetooth RTL8852BE, Chipset utility, DTT/NPU/PMT, IO) and no WLAN file",de-de
+A16-52MT,11,oem-wlan-listed,Wireless LAN_Intel_4.1025.304.2 / 24.50.0.4 BE201 (W11x64),de-de
+A16-52MT,10,oem-os-not-listed,EU record has 29-59 Win11 files and no Win10 file,de-de
+A16-I71MT,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1121.193 / 24.10.0.4 AX211 (W11x64),de-de
+A16-I71MT,10,oem-os-not-listed,EU record has 29-59 Win11 files and no Win10 file,de-de
+AX16-I71M,11,oem-wlan-listed,Wireless LAN_Killer_24.10.0.4 (1675i) (W11x64),de-de
+AX16-I71M,10,oem-os-not-listed,EU record has 29-59 Win11 files and no Win10 file,de-de
+A16-I71M,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1121.193 (W11x64),de-de
+A16-I71M,10,oem-os-not-listed,EU record has 29-59 Win11 files and no Win10 file,de-de
+A16-A71M,11,oem-wlan-listed,Wireless LAN_MTK_3.5.0.1349 (MT7922) (W11x64),de-de
+A16-A71M,10,oem-os-not-listed,EU record has only Win11 files,de-de
+A16-A71MT,11,oem-wlan-listed,Wireless LAN_MTK_3.5.0.1349 (MT7922) (W11x64),de-de
+A16-A71MT,10,oem-os-not-listed,EU record has only Win11 files,de-de
+Aspire 14/16 AI Snapdragon,10,outside-x64-record,A16-11M EU record: 21 files all 11A1 (Win11 ARM64); Snapdragon series is ARM64 only,de-de
+Aspire 14/16 AI Snapdragon,11,outside-x64-record,A16-11M EU record: 21 files all 11A1 (Win11 ARM64); Snapdragon series is ARM64 only,de-de
+PT516-52S,11,oem-wlan-listed,EU record: 33 Win11 files and 2 WLAN file(s),de-de
+PT516-52S,10,oem-os-not-listed,EU record has only Win11 files,de-de
+TMP216-41,11,oem-wlan-listed,EU record: 62 Win11 files and 3 WLAN file(s),de-de
+TMP216-41,10,oem-os-not-listed,EU record has only Win11 files,de-de
+TMP413-51,11,oem-wlan-listed,EU record: 31 Win11 files and 1 WLAN file(s),de-de
+TMP413-51,10,oem-os-not-listed,EU record has only Win11 files,de-de

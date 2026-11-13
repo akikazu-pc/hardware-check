@@ -6,18 +6,10 @@ ASUS,laptop,,ASUS TUF Gaming A16 (2025) FA608PPI,11,oem-driver-list,no-network-c
 ASUS,laptop,,ROG Strix G15 G513IR,11,oem-driver-list,no-network-category,驱动列表无网络类目或过短,https://www.asus.com/supportonly/g513ir/helpdesk_download/
 ASUS,laptop,,ROG Strix G17 G713IR,11,oem-driver-list,no-network-category,驱动列表无网络类目或过短,https://www.asus.com/supportonly/g713ir/helpdesk_download/
 ASUS,laptop,,ROG Strix SCAR 17 G733QSA,11,oem-driver-list,no-network-category,驱动列表无网络类目或过短,https://www.asus.com/supportonly/g733qsa/helpdesk_download/
-ASUS,laptop,ROG-Republic-of-Gamers,ROG Zephyrus G14 (2026) GA403,10,product-series,no-network-category,驱动列表无网络类目或过短,https://rog.asus.com/laptops/rog-zephyrus/rog-zephyrus-g14-2026-ga403/
-ASUS,laptop,ROG-Republic-of-Gamers,ROG Zephyrus G14 (2026) GA403,11,product-series,no-network-category,驱动列表无网络类目或过短,https://rog.asus.com/laptops/rog-zephyrus/rog-zephyrus-g14-2026-ga403/
 ASUS,laptop,ROG-Republic-of-Gamers,ROG Zephyrus G14 AW SE,10,product-series,no-network-category,驱动列表无网络类目或过短,https://rog.asus.com/laptops/rog-zephyrus/2021-rog-zephyrus-g14-aw-se-series/
 ASUS,laptop,ROG-Republic-of-Gamers,ROG Zephyrus G14 AW SE,11,product-series,no-network-category,驱动列表无网络类目或过短,https://rog.asus.com/laptops/rog-zephyrus/2021-rog-zephyrus-g14-aw-se-series/
 ASUS,motherboard,AM5,Pro WS 665-ACE,10,catalog-model,no-factory-proof,缺出厂无线证据,https://www.asus.com/motherboards-components/motherboards/workstation/pro-ws-665-ace/
 ASUS,motherboard,AM5,Pro WS 665-ACE,11,catalog-model,no-factory-proof,缺出厂无线证据,https://www.asus.com/motherboards-components/motherboards/workstation/pro-ws-665-ace/
-Acer,laptop,,Aspire 14/16 AI AMD,10,oem-series-catalog,mixed-family,系列跨代，族内结论不一致,https://www.acer.com/us-en/laptops/aspire
-Acer,laptop,,Aspire 14/16 AI AMD,11,oem-series-catalog,mixed-family,系列跨代，族内结论不一致,https://www.acer.com/us-en/laptops/aspire
-Acer,laptop,,Aspire 14/16 AI Intel,10,oem-series-catalog,mixed-family,系列跨代，族内结论不一致,https://www.acer.com/us-en/laptops/aspire
-Acer,laptop,,Aspire 14/16 AI Intel,11,oem-series-catalog,mixed-family,系列跨代，族内结论不一致,https://www.acer.com/us-en/laptops/aspire
-Acer,laptop,,Aspire 14/16 AI Snapdragon,10,oem-series-catalog,mixed-family,系列跨代，族内结论不一致,https://www.acer.com/us-en/laptops/aspire
-Acer,laptop,,Aspire 14/16 AI Snapdragon,11,oem-series-catalog,mixed-family,系列跨代，族内结论不一致,https://www.acer.com/us-en/laptops/aspire
 Acer,laptop,,Aspire A314-22S,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号 0 命中,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
 Acer,laptop,,Aspire A315-23S,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号 0 命中,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
 Acer,laptop,,Aspire A315-35S,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号 0 命中,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
@@ -33,16 +25,10 @@ Acer,laptop,,Aspire Intel,10,oem-series-catalog,mixed-family,系列跨代，族�
 Acer,laptop,,Aspire Intel,11,oem-series-catalog,mixed-family,系列跨代，族内结论不一致,https://www.acer.com/us-en/laptops/aspire
 Acer,laptop,,ConceptD CN516-72,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号 0 命中,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
 Acer,laptop,,Nitro AN514-54,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号 0 命中,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
-Acer,laptop,,PREDATOR TRITON 500 SE,10,oem-series-catalog,mixed-family,系列跨代，族内结论不一致,https://www.acer.com/us-en/predator/laptops/triton
-Acer,laptop,,PREDATOR TRITON 500 SE,11,oem-series-catalog,mixed-family,系列跨代，族内结论不一致,https://www.acer.com/us-en/predator/laptops/triton
 Acer,laptop,,SFA14-11,10,oem-sku-listing,sku-inconclusive,该 SKU 在族级扫描中为短列表或无数据,https://www.acer.com/us-en/support/product-support/SFA14-11
 Acer,laptop,,SFA14-11,11,oem-sku-listing,sku-inconclusive,该 SKU 在族级扫描中为短列表或无数据,https://www.acer.com/us-en/support/product-support/SFA14-11
 Acer,laptop,,Spin SP513-55NA,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号 0 命中,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
 Acer,laptop,,Swift SF314-44G,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号 0 命中,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
-Acer,laptop,,TravelMate P2 16 AI AMD,10,oem-series-catalog,mixed-family,系列跨代，族内结论不一致,https://www.acer.com/us-en/laptops/travelmate
-Acer,laptop,,TravelMate P2 16 AI AMD,11,oem-series-catalog,mixed-family,系列跨代，族内结论不一致,https://www.acer.com/us-en/laptops/travelmate
-Acer,laptop,,TravelMate P4 13,10,oem-series-catalog,mixed-family,系列跨代，族内结论不一致,https://www.acer.com/us-en/laptops/travelmate
-Acer,laptop,,TravelMate P4 13,11,oem-series-catalog,mixed-family,系列跨代，族内结论不一致,https://www.acer.com/us-en/laptops/travelmate
 Acer,laptop,,TravelMate P40-41-G2,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号 0 命中,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
 Acer,laptop,,TravelMate P40-41-G3,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号 0 命中,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
 Acer,laptop,,TravelMate P50-41-G3,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号 0 命中,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
