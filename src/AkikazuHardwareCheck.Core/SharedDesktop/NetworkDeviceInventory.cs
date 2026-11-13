@@ -15,7 +15,8 @@ public enum NetworkCandidateKind
 }
 
 public sealed record NetworkDeviceCandidate(
-    string[] HardwareIds, string? SubsystemId, int? ProblemCode, NetworkCandidateKind Kind = NetworkCandidateKind.PciController);
+    string[] HardwareIds, string? SubsystemId, int? ProblemCode, NetworkCandidateKind Kind = NetworkCandidateKind.PciController,
+    string? DriverVersion = null);
 
 public sealed record NetworkDeviceDiagnostic(int SchemaVersion, int WindowsBuild, string Architecture, IReadOnlyList<NetworkDeviceCandidate> Devices);
 
@@ -29,17 +30,29 @@ public static class NetworkDeviceInventory
 
     public static NetworkDeviceDiagnostic Read()
     {
+        var driverVersions = Wmi.Query(Wmi.CIM_SCOPE,
+                "SELECT DeviceID, DriverVersion FROM Win32_PnPSignedDriver",
+                item => (Id: Wmi.Text(item, "DeviceID"), Version: Wmi.Text(item, "DriverVersion")))
+            .Where(pair => !string.IsNullOrWhiteSpace(pair.Id))
+            .GroupBy(pair => pair.Id!, StringComparer.OrdinalIgnoreCase)
+            .ToDictionary(group => group.Key, group => group.First().Version, StringComparer.OrdinalIgnoreCase);
+
         var rows = Wmi.Query(Wmi.CIM_SCOPE,
-            "SELECT HardwareID, CompatibleID, ConfigManagerErrorCode, PNPClass FROM Win32_PnPEntity WHERE Present = TRUE",
-            item => Classify(item["HardwareID"] as string[] ?? [], item["CompatibleID"] as string[] ?? [],
-                Wmi.Integer(item, "ConfigManagerErrorCode"), Wmi.Text(item, "PNPClass")));
+            "SELECT DeviceID, HardwareID, CompatibleID, ConfigManagerErrorCode, PNPClass FROM Win32_PnPEntity WHERE Present = TRUE",
+            item =>
+            {
+                var deviceId = Wmi.Text(item, "DeviceID");
+                var version = deviceId is not null && driverVersions.TryGetValue(deviceId, out var found) ? found : null;
+                return Classify(item["HardwareID"] as string[] ?? [], item["CompatibleID"] as string[] ?? [],
+                    Wmi.Integer(item, "ConfigManagerErrorCode"), Wmi.Text(item, "PNPClass"), version);
+            });
 
         return new NetworkDeviceDiagnostic(2, Environment.OSVersion.Version.Build,
             RuntimeInformation.OSArchitecture.ToString(), rows.OfType<NetworkDeviceCandidate>().ToArray());
     }
 
     public static NetworkDeviceCandidate? Classify(string[] hardwareIds, string[] compatibleIds, int? problemCode,
-        string? setupClass = null)
+        string? setupClass = null, string? driverVersion = null)
     {
         var pciIds = hardwareIds.Where(id => id.StartsWith(@"PCI\VEN_", StringComparison.OrdinalIgnoreCase)).ToArray();
         var deviceIds = hardwareIds.Concat(compatibleIds);
@@ -52,7 +65,7 @@ public static class NetworkDeviceInventory
             var matchIds = pciIds.Concat(compatibleIds.Where(id => IsPciCompatibleDeviceId(id, pciIds)))
                 .Distinct(StringComparer.OrdinalIgnoreCase).ToArray();
             return new NetworkDeviceCandidate(matchIds, subsystemId, problemCode,
-                ethernetProblem ? NetworkCandidateKind.PciEthernet : NetworkCandidateKind.PciController);
+                ethernetProblem ? NetworkCandidateKind.PciEthernet : NetworkCandidateKind.PciController, driverVersion);
         }
 
         var usbIds = hardwareIds.Where(IsUsbProductId).ToArray();
@@ -63,7 +76,7 @@ public static class NetworkDeviceInventory
 
         if (string.Equals(setupClass, "Net", StringComparison.OrdinalIgnoreCase))
         {
-            return new NetworkDeviceCandidate(usbIds, null, problemCode, NetworkCandidateKind.UsbNetwork);
+            return new NetworkDeviceCandidate(usbIds, null, problemCode, NetworkCandidateKind.UsbNetwork, driverVersion);
         }
 
         // Without a driver, the USB class may be unavailable. Keep these entries unclassified
@@ -71,7 +84,7 @@ public static class NetworkDeviceInventory
         if (problemCode == 28 && (string.IsNullOrWhiteSpace(setupClass) ||
                 string.Equals(setupClass, "Unknown", StringComparison.OrdinalIgnoreCase)))
         {
-            return new NetworkDeviceCandidate(usbIds, null, problemCode, NetworkCandidateKind.UsbUnidentified);
+            return new NetworkDeviceCandidate(usbIds, null, problemCode, NetworkCandidateKind.UsbUnidentified, driverVersion);
         }
 
         return null;

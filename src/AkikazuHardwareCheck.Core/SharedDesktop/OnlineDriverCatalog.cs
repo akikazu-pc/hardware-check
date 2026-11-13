@@ -21,6 +21,25 @@ public static class OnlineDriverCatalog
         Find(diagnostic, (id, prefix) => MatchesPrefix(id, OfflineInfMatcher.ChipsetId(prefix)) &&
             !MatchesPrefix(id, prefix), includeInstalled).Except(Find(diagnostic, includeInstalled)).ToArray();
 
+    /// <summary>Packages newer than the driver already bound to an installed adapter.</summary>
+    public static IReadOnlyList<OnlineDriverPackage> FindUpdates(NetworkDeviceDiagnostic diagnostic)
+    {
+        if (!string.Equals(diagnostic.Architecture, "X64", StringComparison.OrdinalIgnoreCase))
+        {
+            return [];
+        }
+
+        var targetWindows = diagnostic.WindowsBuild < 22000 ? "windows10" : "windows11";
+        return Packages.Value.Where(package =>
+            (!package.Windows11Only || diagnostic.WindowsBuild >= 22000) &&
+            (package.TargetWindows is null || package.TargetWindows == targetWindows) &&
+            diagnostic.WindowsBuild >= package.MinimumWindowsBuild &&
+            diagnostic.Devices.Any(device => device.ProblemCode == 0 &&
+                !string.IsNullOrWhiteSpace(device.DriverVersion) &&
+                DriverVersion.IsNewer(package.Version, device.DriverVersion) &&
+                device.HardwareIds.Any(id => package.DevicePrefixes.Any(prefix => MatchesPrefix(id, prefix))))).ToArray();
+    }
+
     private static IReadOnlyList<OnlineDriverPackage> Find(NetworkDeviceDiagnostic diagnostic, Func<string, string, bool> matches,
         bool includeInstalled)
     {

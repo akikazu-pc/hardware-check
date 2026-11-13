@@ -131,4 +131,24 @@ public sealed class OnlineDriverCatalogTests
 
         Assert.Equal(offered, OnlineDriverCatalog.Find(diagnostic).Any(package => package.Id == packageId));
     }
+
+    [Fact]
+    public void FindsNewerCatalogPackageForABoundAdapter()
+    {
+        var diagnostic = new NetworkDeviceDiagnostic(2, 26300, "X64",
+        [
+            new([@"PCI\VEN_14C3&DEV_0616&SUBSYS_00000000"], null, 0, NetworkCandidateKind.PciController, "3.0.0.0"),
+        ]);
+
+        Assert.Contains(OnlineDriverCatalog.FindUpdates(diagnostic), package => package.Id == "asus-rog-mtk-3421046");
+        Assert.Empty(OnlineDriverCatalog.FindUpdates(diagnostic with { WindowsBuild = 19045 }));
+        Assert.Empty(OnlineDriverCatalog.FindUpdates(diagnostic with
+        {
+            Devices = [diagnostic.Devices[0] with { DriverVersion = "9.9.9.9" }],
+        }));
+        Assert.Empty(OnlineDriverCatalog.FindUpdates(diagnostic with
+        {
+            Devices = [diagnostic.Devices[0] with { ProblemCode = 28 }],
+        }));
+    }
 }
