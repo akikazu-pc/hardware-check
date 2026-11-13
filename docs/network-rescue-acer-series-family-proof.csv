@@ -1,0 +1,1223 @@
+series,sku,windows,status,title,version,downloadUrl
+Aspire 14 AI,A14-11M,10,near-model-match,,,
+Aspire 14 AI,A14-11M,11,near-model-match,,,
+Aspire 14 AI,A14-11MN,10,near-model-match,,,
+Aspire 14 AI,A14-11MN,11,near-model-match,,,
+Aspire 14 AI,A14-21M,10,support-list-empty,,,
+Aspire 14 AI,A14-21M,11,support-list-empty,,,
+Aspire 14 AI,A14-51GM,10,oem-os-not-listed,,,
+Aspire 14 AI,A14-51GM,11,oem-wlan-listed,Wireless LAN_Intel_23.20.0.4_W11x64_(AX211).zip,23.20.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.20.0.4_W11x64_A.zip?acerid=638560294498297943&Step1=&Step2=&Step3=ASPIRE%20A14-51GM&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Aspire 14 AI,A14-51M,10,oem-os-not-listed,,,
+Aspire 14 AI,A14-51M,11,oem-wlan-listed,Wireless LAN_Intel_23.10.0.8_W11x64_(AX201).zip,23.10.0.8,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.10.0.8_W11x64_A.zip?acerid=638428776339576688&Step1=&Step2=&Step3=ASPIRE%20A14-51M&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Aspire 14 AI,A14-51P,10,oem-os-not-listed,,,
+Aspire 14 AI,A14-51P,11,oem-wlan-listed,Wireless LAN_Intel_23.10.0.8_W11x64_(AX201).zip,23.10.0.8,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.10.0.8_W11x64_A.zip?acerid=638428776339576688&Step1=&Step2=&Step3=ASPIRE%20A14-51P&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Aspire 14 AI,A14-52M,10,oem-os-not-listed,,,
+Aspire 14 AI,A14-52M,11,oem-wlan-listed,Wireless LAN_Intel_24.20.0.4_W11x64_(AX211).zip,24.20.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_24.20.0.4_W11x64_A.zip?acerid=639237638960069317&Step1=&Step2=&Step3=ASPIRE%20A14-52M&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Aspire 14 AI,A14-52MT,10,oem-os-not-listed,,,
+Aspire 14 AI,A14-52MT,11,oem-wlan-listed,Wireless LAN_Intel_24.20.0.4_W11x64_(AX211).zip,24.20.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_24.20.0.4_W11x64_A.zip?acerid=639237638960069317&Step1=&Step2=&Step3=ASPIRE%20A14-52MT&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Aspire 14 AI,A14-53M,10,near-model-match,,,
+Aspire 14 AI,A14-53M,11,near-model-match,,,
+Aspire 14 AI,A14-53MT,10,oem-os-not-listed,,,
+Aspire 14 AI,A14-53MT,11,oem-wlan-listed,Wireless LAN_Intel_40.25.501.145_W11x64_(ICPS).zip,40.25.501.145,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_40.25.501.145_W11x64_A.zip?acerid=639237603884887013&Step1=&Step2=&Step3=ASPIRE%20A14-53MT&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Aspire 14 AI,A14-61M,10,oem-os-not-listed,,,
+Aspire 14 AI,A14-61M,11,oem-wlan-listed,Wireless LAN_MTK_3.5.0.1349_W11x64_(MT7922).zip,3.5.0.1349,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.5.0.1349_W11x64_A.zip?acerid=639052495349060211&Step1=&Step2=&Step3=ASPIRE%20A14-61M&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Aspire 14 AI,A14-61MT,10,oem-os-not-listed,,,
+Aspire 14 AI,A14-61MT,11,oem-wlan-listed,Wireless LAN_MTK_3.5.0.1349_W11x64_(MT7922).zip,3.5.0.1349,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.5.0.1349_W11x64_A.zip?acerid=639052495349060211&Step1=&Step2=&Step3=ASPIRE%20A14-61MT&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Aspire 14 AI,A14-71GM,10,oem-os-not-listed,,,
+Aspire 14 AI,A14-71GM,11,oem-wlan-listed,Wireless LAN_Intel_23.60.1.2_W11x64_(AX211).zip,23.60.1.2,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.60.1.2_W11x64_A.zip?acerid=638778869910224976&Step1=&Step2=&Step3=ASPIRE%20A14-71GM&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Aspire 14 AI,A14-71M,10,oem-os-not-listed,,,
+Aspire 14 AI,A14-71M,11,oem-wlan-listed,Wireless LAN_Intel_23.60.1.2_W11x64_(AX211).zip,23.60.1.2,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.60.1.2_W11x64_A.zip?acerid=638747696557369361&Step1=&Step2=&Step3=ASPIRE%20A14-71M&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Aspire 14 AI,A14-A71M,10,oem-os-not-listed,,,
+Aspire 14 AI,A14-A71M,11,oem-wlan-listed,Wireless LAN_MTK_3.5.0.1349_W11x64_(MT7922).zip,3.5.0.1349,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.5.0.1349_W11x64_A.zip?acerid=639093303723607696&Step1=&Step2=&Step3=ASPIRE%20A14-A71M&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Aspire 14 AI,A14-A71MT,10,oem-os-not-listed,,,
+Aspire 14 AI,A14-A71MT,11,oem-wlan-listed,Wireless LAN_MTK_3.5.0.1349_W11x64_(MT7922).zip,3.5.0.1349,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.5.0.1349_W11x64_A.zip?acerid=639093303723607696&Step1=&Step2=&Step3=ASPIRE%20A14-A71MT&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Aspire 14 AI,A14-I71M,10,oem-os-not-listed,,,
+Aspire 14 AI,A14-I71M,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1015.183_W11x64_(ICPS).zip,50.25.1015.183,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1015.183_W11x64_A.zip?acerid=639065533175630637&Step1=&Step2=&Step3=ASPIRE%20A14-I71M&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Aspire 14 AI,A14-I71MT,10,near-model-match,,,
+Aspire 14 AI,A14-I71MT,11,near-model-match,,,
+Aspire Go AMD,AG15-21P,10,oem-os-not-listed,,,
+Aspire Go AMD,AG15-21P,11,oem-wlan-listed,Wireless LAN_MTK_3.4.0.1046_W11x64_(MT7921LE).zip,3.4.0.1046,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.4.0.1046_W11x64_A.zip?acerid=638688096833733002&Step1=&Step2=&Step3=ASPIRE%20AG15-21P&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Aspire Go AMD,AG15-21PT,10,oem-os-not-listed,,,
+Aspire Go AMD,AG15-21PT,11,oem-wlan-listed,Wireless LAN_MTK_3.4.0.1046_W11x64_(MT7921LE).zip,3.4.0.1046,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.4.0.1046_W11x64_A.zip?acerid=638688096833733002&Step1=&Step2=&Step3=ASPIRE%20AG15-21PT&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Aspire Go AMD,AG15-31P,10,near-model-match,,,
+Aspire Go AMD,AG15-31P,11,near-model-match,,,
+Aspire Go AMD,AG15-32P,10,near-model-match,,,
+Aspire Go AMD,AG15-32P,11,near-model-match,,,
+Aspire Go AMD,AG15-32PT,10,near-model-match,,,
+Aspire Go AMD,AG15-32PT,11,near-model-match,,,
+Aspire Go AMD,AG15-41P,10,near-model-match,,,
+Aspire Go AMD,AG15-41P,11,near-model-match,,,
+Aspire Go AMD,AG15-42P,10,oem-os-not-listed,,,
+Aspire Go AMD,AG15-42P,11,oem-wlan-listed,Wireless LAN_MTK_3.4.0.1191_W11x64_(MT7920).zip,3.4.0.1191,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.4.0.1191_W11x64_A.zip?acerid=639037970080466704&Step1=&Step2=&Step3=ASPIRE%20AG15-42P&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Aspire Go AMD,AG15-43P,10,oem-os-not-listed,,,
+Aspire Go AMD,AG15-43P,11,oem-wlan-listed,Wireless LAN_MTK_3.4.0.1191_W11x64_(MT7920).zip,3.4.0.1191,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.4.0.1191_W11x64_A.zip?acerid=639082048164781279&Step1=&Step2=&Step3=ASPIRE%20AG15-43P&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Aspire Go AMD,AG15-44P,10,oem-os-not-listed,,,
+Aspire Go AMD,AG15-44P,11,oem-wlan-listed,Wireless LAN_MTK_3.4.0.1191_W11x64_(MT7920).zip,3.4.0.1191,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.4.0.1191_W11x64_A.zip?acerid=639035399747631864&Step1=&Step2=&Step3=ASPIRE%20AG15-44P&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Aspire Go AMD,AG15-51P,10,near-model-match,,,
+Aspire Go AMD,AG15-51P,11,near-model-match,,,
+Aspire Go AMD,AG15-52P,10,near-model-match,,,
+Aspire Go AMD,AG15-52P,11,near-model-match,,,
+Aspire Go AMD,AG15-71P,10,near-model-match,,,
+Aspire Go AMD,AG15-71P,11,near-model-match,,,
+Aspire Go AMD,AG15-71PT,10,near-model-match,,,
+Aspire Go AMD,AG15-71PT,11,near-model-match,,,
+Aspire Go AMD,AG15-72P,10,near-model-match,,,
+Aspire Go AMD,AG15-72P,11,near-model-match,,,
+Aspire Go AMD,AG15-I31P,10,oem-os-not-listed,,,
+Aspire Go AMD,AG15-I31P,11,oem-wlan-listed,Wireless LAN_Realtek_6101.19.133.0_W11x64_(RTL8851BE).zip,6101.19.133.0,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Realtek_6101.19.133.0_W11x64_A.zip?acerid=639268724391251316&Step1=&Step2=&Step3=ASPIRE%20AG15-I31P&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Aspire Go AMD,AG15-I51P,10,oem-os-not-listed,,,
+Aspire Go AMD,AG15-I51P,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1015.183_W11x64_(ICPS).zip,50.25.1015.183,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1015.183_W11x64_A.zip?acerid=639189155384825114&Step1=&Step2=&Step3=ASPIRE%20AG15-I51P&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Aspire Go AMD,AG15-Q31P,10,support-list-empty,,,
+Aspire Go AMD,AG15-Q31P,11,support-list-empty,,,
+Aspire Go Intel,AG15-21P,10,oem-os-not-listed,,,
+Aspire Go Intel,AG15-21P,11,oem-wlan-listed,Wireless LAN_MTK_3.4.0.1046_W11x64_(MT7921LE).zip,3.4.0.1046,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.4.0.1046_W11x64_A.zip?acerid=638688096833733002&Step1=&Step2=&Step3=ASPIRE%20AG15-21P&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Aspire Go Intel,AG15-21PT,10,oem-os-not-listed,,,
+Aspire Go Intel,AG15-21PT,11,oem-wlan-listed,Wireless LAN_MTK_3.4.0.1046_W11x64_(MT7921LE).zip,3.4.0.1046,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.4.0.1046_W11x64_A.zip?acerid=638688096833733002&Step1=&Step2=&Step3=ASPIRE%20AG15-21PT&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Aspire Go Intel,AG15-31P,10,near-model-match,,,
+Aspire Go Intel,AG15-31P,11,near-model-match,,,
+Aspire Go Intel,AG15-32P,10,near-model-match,,,
+Aspire Go Intel,AG15-32P,11,near-model-match,,,
+Aspire Go Intel,AG15-32PT,10,near-model-match,,,
+Aspire Go Intel,AG15-32PT,11,near-model-match,,,
+Aspire Go Intel,AG15-41P,10,oem-os-not-listed,,,
+Aspire Go Intel,AG15-41P,11,oem-wlan-listed,Wireless LAN_MTK_3.4.0.1046_W11x64_(MTK7902).zip,3.4.0.1046,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.4.0.1046_W11x64_A.zip?acerid=638682917719602428&Step1=&Step2=&Step3=ASPIRE%20AG15-41P&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Aspire Go Intel,AG15-42P,10,oem-os-not-listed,,,
+Aspire Go Intel,AG15-42P,11,oem-wlan-listed,Wireless LAN_MTK_3.4.0.1191_W11x64_(MT7920).zip,3.4.0.1191,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.4.0.1191_W11x64_A.zip?acerid=639037970080466704&Step1=&Step2=&Step3=ASPIRE%20AG15-42P&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Aspire Go Intel,AG15-43P,10,near-model-match,,,
+Aspire Go Intel,AG15-43P,11,near-model-match,,,
+Aspire Go Intel,AG15-44P,10,near-model-match,,,
+Aspire Go Intel,AG15-44P,11,near-model-match,,,
+Aspire Go Intel,AG15-51P,10,near-model-match,,,
+Aspire Go Intel,AG15-51P,11,near-model-match,,,
+Aspire Go Intel,AG15-52P,10,near-model-match,,,
+Aspire Go Intel,AG15-52P,11,near-model-match,,,
+Aspire Go Intel,AG15-71P,10,near-model-match,,,
+Aspire Go Intel,AG15-71P,11,near-model-match,,,
+Aspire Go Intel,AG15-71PT,10,near-model-match,,,
+Aspire Go Intel,AG15-71PT,11,near-model-match,,,
+Aspire Go Intel,AG15-72P,10,oem-os-not-listed,,,
+Aspire Go Intel,AG15-72P,11,oem-wlan-listed,Wireless LAN_Intel_4.1024.1009.5_W11x64_(ICPS).zip,4.1024.1009.5,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_4.1024.1009.5_W11x64_A.zip?acerid=638900621060071413&Step1=&Step2=&Step3=ASPIRE%20AG15-72P&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Aspire Go Intel,AG15-I31P,10,oem-os-not-listed,,,
+Aspire Go Intel,AG15-I31P,11,oem-wlan-listed,Wireless LAN_Realtek_6101.19.133.0_W11x64_(RTL8851BE).zip,6101.19.133.0,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Realtek_6101.19.133.0_W11x64_A.zip?acerid=639268724391251316&Step1=&Step2=&Step3=ASPIRE%20AG15-I31P&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Aspire Go Intel,AG15-I51P,10,oem-os-not-listed,,,
+Aspire Go Intel,AG15-I51P,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1015.183_W11x64_(ICPS).zip,50.25.1015.183,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1015.183_W11x64_A.zip?acerid=639189155384825114&Step1=&Step2=&Step3=ASPIRE%20AG15-I51P&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Aspire Go Intel,AG15-Q31P,10,near-model-match,,,
+Aspire Go Intel,AG15-Q31P,11,near-model-match,,,
+Aspire Go Snapdragon,AG15-21P,10,oem-os-not-listed,,,
+Aspire Go Snapdragon,AG15-21P,11,oem-wlan-listed,Wireless LAN_MTK_3.4.0.1046_W11x64_(MT7921LE).zip,3.4.0.1046,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.4.0.1046_W11x64_A.zip?acerid=638688096833733002&Step1=&Step2=&Step3=ASPIRE%20AG15-21P&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Aspire Go Snapdragon,AG15-21PT,10,oem-os-not-listed,,,
+Aspire Go Snapdragon,AG15-21PT,11,oem-wlan-listed,Wireless LAN_MTK_3.4.0.1046_W11x64_(MT7921LE).zip,3.4.0.1046,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.4.0.1046_W11x64_A.zip?acerid=638688096833733002&Step1=&Step2=&Step3=ASPIRE%20AG15-21PT&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Aspire Go Snapdragon,AG15-31P,10,oem-os-not-listed,,,
+Aspire Go Snapdragon,AG15-31P,11,oem-wlan-listed,Wireless LAN_Intel_23.60.1.2_W11x64_(AX101).zip,23.60.1.2,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.60.1.2_W11x64_A.zip?acerid=638632863747033647&Step1=&Step2=&Step3=ASPIRE%20AG15-31P&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Aspire Go Snapdragon,AG15-32P,10,oem-os-not-listed,,,
+Aspire Go Snapdragon,AG15-32P,11,oem-wlan-listed,Wireless LAN_Intel_23.170.0.1_W11x64_(AX101).zip,23.170.0.1,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.170.0.1_W11x64_A.zip?acerid=639058664811630463&Step1=&Step2=&Step3=ASPIRE%20AG15-32P&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Aspire Go Snapdragon,AG15-32PT,10,oem-os-not-listed,,,
+Aspire Go Snapdragon,AG15-32PT,11,oem-wlan-listed,Wireless LAN_Intel_23.170.0.1_W11x64_(AX101).zip,23.170.0.1,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.170.0.1_W11x64_A.zip?acerid=639058664811630463&Step1=&Step2=&Step3=ASPIRE%20AG15-32PT&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Aspire Go Snapdragon,AG15-41P,10,oem-os-not-listed,,,
+Aspire Go Snapdragon,AG15-41P,11,oem-wlan-listed,Wireless LAN_MTK_3.4.0.1046_W11x64_(MTK7902).zip,3.4.0.1046,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.4.0.1046_W11x64_A.zip?acerid=638682917719602428&Step1=&Step2=&Step3=ASPIRE%20AG15-41P&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Aspire Go Snapdragon,AG15-42P,10,oem-os-not-listed,,,
+Aspire Go Snapdragon,AG15-42P,11,oem-wlan-listed,Wireless LAN_MTK_3.4.0.1191_W11x64_(MT7920).zip,3.4.0.1191,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.4.0.1191_W11x64_A.zip?acerid=639037970080466704&Step1=&Step2=&Step3=ASPIRE%20AG15-42P&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Aspire Go Snapdragon,AG15-43P,10,oem-os-not-listed,,,
+Aspire Go Snapdragon,AG15-43P,11,oem-wlan-listed,Wireless LAN_MTK_3.4.0.1191_W11x64_(MT7920).zip,3.4.0.1191,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.4.0.1191_W11x64_A.zip?acerid=639082048164781279&Step1=&Step2=&Step3=ASPIRE%20AG15-43P&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Aspire Go Snapdragon,AG15-44P,10,oem-os-not-listed,,,
+Aspire Go Snapdragon,AG15-44P,11,oem-wlan-listed,Wireless LAN_MTK_3.4.0.1191_W11x64_(MT7920).zip,3.4.0.1191,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.4.0.1191_W11x64_A.zip?acerid=639035399747631864&Step1=&Step2=&Step3=ASPIRE%20AG15-44P&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Aspire Go Snapdragon,AG15-51P,10,oem-os-not-listed,,,
+Aspire Go Snapdragon,AG15-51P,11,oem-wlan-listed,Wireless LAN_MTK_3.3.0.1030_W11x64_(MTK7902).zip,3.3.0.1030,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.3.0.1030_W11x64_A.zip?acerid=638646684837266613&Step1=&Step2=&Step3=ASPIRE%20AG15-51P&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Aspire Go Snapdragon,AG15-52P,10,oem-os-not-listed,,,
+Aspire Go Snapdragon,AG15-52P,11,oem-wlan-listed,Wireless LAN_Realtek_6101.19.133.0_W11x64_(RTL8851BE).zip,6101.19.133.0,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Realtek_6101.19.133.0_W11x64_A.zip?acerid=639160602817937315&Step1=&Step2=&Step3=ASPIRE%20AG15-52P&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Aspire Go Snapdragon,AG15-71P,10,near-model-match,,,
+Aspire Go Snapdragon,AG15-71P,11,near-model-match,,,
+Aspire Go Snapdragon,AG15-71PT,10,oem-os-not-listed,,,
+Aspire Go Snapdragon,AG15-71PT,11,oem-wlan-listed,Wireless LAN_Intel_23.60.1.2_W11x64_(AX201).zip,23.60.1.2,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.60.1.2_W11x64_A.zip?acerid=638826968396568247&Step1=&Step2=&Step3=ASPIRE%20AG15-71PT&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Aspire Go Snapdragon,AG15-72P,10,oem-os-not-listed,,,
+Aspire Go Snapdragon,AG15-72P,11,oem-wlan-listed,Wireless LAN_Intel_4.1024.1009.5_W11x64_(ICPS).zip,4.1024.1009.5,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_4.1024.1009.5_W11x64_A.zip?acerid=638900621060071413&Step1=&Step2=&Step3=ASPIRE%20AG15-72P&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Aspire Go Snapdragon,AG15-I31P,10,oem-os-not-listed,,,
+Aspire Go Snapdragon,AG15-I31P,11,oem-wlan-listed,Wireless LAN_Realtek_6101.19.133.0_W11x64_(RTL8851BE).zip,6101.19.133.0,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Realtek_6101.19.133.0_W11x64_A.zip?acerid=639268724391251316&Step1=&Step2=&Step3=ASPIRE%20AG15-I31P&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Aspire Go Snapdragon,AG15-I51P,10,oem-os-not-listed,,,
+Aspire Go Snapdragon,AG15-I51P,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1015.183_W11x64_(ICPS).zip,50.25.1015.183,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1015.183_W11x64_A.zip?acerid=639189155384825114&Step1=&Step2=&Step3=ASPIRE%20AG15-I51P&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Aspire Go Snapdragon,AG15-Q31P,10,support-list-empty,,,
+Aspire Go Snapdragon,AG15-Q31P,11,support-list-empty,,,
+Aspire Lite,AL17-31P,10,oem-os-not-listed,,,
+Aspire Lite,AL17-31P,11,oem-wlan-listed,Wireless LAN_Intel_23.90.1.3_W11x64_(AX101).zip,23.90.1.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.90.1.3_W11x64_A.zip?acerid=638808250090331578&Step1=&Step2=&Step3=ASPIRE%20AL17-31P&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Aspire Lite,AL17-51P,10,oem-os-not-listed,,,
+Aspire Lite,AL17-51P,11,oem-wlan-listed,Wireless LAN_Realtek_6001.15.165.3_W11x64_(RTL8852BE).zip,6001.15.165.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Realtek_6001.15.165.3_W11x64_A.zip?acerid=639269501510254098&Step1=&Step2=&Step3=ASPIRE%20AL17-51P&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Aspire Lite,AL17-52P,10,oem-os-not-listed,,,
+Aspire Lite,AL17-52P,11,oem-wlan-listed,Wireless LAN_Realtek_6001.15.159.0_W11x64_(RTL8852BE).zip,6001.15.159.0,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Realtek_6001.15.159.0_W11x64_A.zip?acerid=639019720401435495&Step1=&Step2=&Step3=ASPIRE%20AL17-52P&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Aspire Spin 14,ASP14-51MTN,10,near-model-match,,,
+Aspire Spin 14,ASP14-51MTN,11,near-model-match,,,
+Aspire Spin 14,ASP14-51N,10,near-model-match,,,
+Aspire Spin 14,ASP14-51N,11,near-model-match,,,
+Aspire Spin 14,ASP14-51T,10,near-model-match,,,
+Aspire Spin 14,ASP14-51T,11,near-model-match,,,
+Aspire Spin 14,ASP14-52MTN,10,near-model-match,,,
+Aspire Spin 14,ASP14-52MTN,11,near-model-match,,,
+Aspire Spin 14,ASP14-52N,10,oem-os-not-listed,,,
+Aspire Spin 14,ASP14-52N,11,oem-wlan-listed,Wireless LAN_Realtek_6001.15.165.0_W11x64_(RTL8852BE).zip,6001.15.165.0,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Realtek_6001.15.165.0_W11x64_A.zip?acerid=639293858486611653&Step1=&Step2=&Step3=ASPIRE%20ASP14-52N&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Aspire Spin 14,ASP14-53T,10,oem-os-not-listed,,,
+Aspire Spin 14,ASP14-53T,11,oem-wlan-listed,Wireless LAN_Realtek_6001.15.165.0_W11x64_(RTL8852BE).zip,6001.15.165.0,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Realtek_6001.15.165.0_W11x64_A.zip?acerid=639288435332857076&Step1=&Step2=&Step3=ASPIRE%20ASP14-53T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Aspire Spin 14,ASP14-61N,10,near-model-match,,,
+Aspire Spin 14,ASP14-61N,11,near-model-match,,,
+Aspire Vero 14/15,AV14-51,10,oem-os-not-listed,,,
+Aspire Vero 14/15,AV14-51,11,oem-wlan-listed,Wireless LAN_Intel_22.180.0.4_W11x64_(AX211).zip,22.180.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.180.0.4_W11x64_A.zip?acerid=638079616510314494&Step1=&Step2=&Step3=ASPIRE%20AV14-51&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Aspire Vero 14/15,AV14-52P,10,oem-os-not-listed,,,
+Aspire Vero 14/15,AV14-52P,11,oem-wlan-listed,Wireless LAN_Intel_23.60.1.2_W11x64_(AX211).zip,23.60.1.2,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.60.1.2_W11x64_A.zip?acerid=638647409927252755&Step1=&Step2=&Step3=ASPIRE%20AV14-52P&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Aspire Vero 16,AV16-51P,10,near-model-match,,,
+Aspire Vero 16,AV16-51P,11,near-model-match,,,
+Aspire Vero 16,AV16-51PT,10,oem-os-not-listed,,,
+Aspire Vero 16,AV16-51PT,11,oem-wlan-listed,Wireless LAN_Intel_23.30.0.6_W11x64_(AX211).zip,23.30.0.6,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.30.0.6_W11x64_A.zip?acerid=638603278516936292&Step1=&Step2=&Step3=ASPIRE%20AV16-51PT&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Aspire Vero 16,AV16-71P,10,oem-os-not-listed,,,
+Aspire Vero 16,AV16-71P,11,oem-wlan-listed,Wireless LAN_Intel_23.170.1.1_W11x64_(AX211).zip,23.170.1.1,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.170.1.1_W11x64_A.zip?acerid=639231412165193684&Step1=&Step2=&Step3=ASPIRE%20AV16-71P&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro 16 AI AMD,AN16-41,10,near-model-match,,,
+Nitro 16 AI AMD,AN16-41,11,near-model-match,,,
+Nitro 16 AI AMD,AN16-42,10,oem-os-not-listed,,,
+Nitro 16 AI AMD,AN16-42,11,oem-wlan-listed,Wireless LAN_MTK_3.3.0.1030_W11x64_(MTRZ616).zip,3.3.0.1030,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.3.0.1030_W11x64_A.zip?acerid=638638893362280568&Step1=&Step2=&Step3=NITRO%20AN16-42&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro 16 AI AMD,AN16-43,10,oem-os-not-listed,,,
+Nitro 16 AI AMD,AN16-43,11,oem-wlan-listed,Wireless LAN_MTK_3.3.0.1030_W11x64_(MTRZ616).zip,3.3.0.1030,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.3.0.1030_W11x64_A.zip?acerid=638644821027841812&Step1=&Step2=&Step3=NITRO%20AN16-43&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro 16 AI AMD,AN16-51,10,oem-os-not-listed,,,
+Nitro 16 AI AMD,AN16-51,11,oem-wlan-listed,Wireless LAN_Killer_22.170.0.3_W11x64.zip,22.170.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_22.170.0.3_W11x64_A.zip?acerid=638356112294345483&Step1=&Step2=&Step3=NITRO%20AN16-51&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro 16 AI AMD,AN16-61,10,oem-os-not-listed,,,
+Nitro 16 AI AMD,AN16-61,11,oem-wlan-listed,Wireless LAN_MTK_3.04.00.1123_W11x64_(MTRZ616).zip,3.04.00.1123,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.04.00.1123_W11x64_A.zip?acerid=638877303902923330&Step1=&Step2=&Step3=NITRO%20AN16-61&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro 16 AI AMD,AN16-73,10,oem-os-not-listed,,,
+Nitro 16 AI AMD,AN16-73,11,oem-wlan-listed,Wireless LAN_Killer_23.60.1.2_W11x64_(1675i).zip,23.60.1.2,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_23.60.1.2_W11x64_A.zip?acerid=638644729739567222&Step1=&Step2=&Step3=NITRO%20AN16-73&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro 16 AI AMD,AN16-A91,10,oem-os-not-listed,,,
+Nitro 16 AI AMD,AN16-A91,11,oem-wlan-listed,Wireless LAN_MTK_3.5.0.1392_W11x64_(MT7922).zip,3.5.0.1392,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.5.0.1392_W11x64_A.zip?acerid=639216803846267059&Step1=&Step2=&Step3=NITRO%20AN16-A91&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro 16 AMD,AN16-41,10,near-model-match,,,
+Nitro 16 AMD,AN16-41,11,near-model-match,,,
+Nitro 16 AMD,AN16-42,10,oem-os-not-listed,,,
+Nitro 16 AMD,AN16-42,11,oem-wlan-listed,Wireless LAN_MTK_3.3.0.1030_W11x64_(MTRZ616).zip,3.3.0.1030,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.3.0.1030_W11x64_A.zip?acerid=638638893362280568&Step1=&Step2=&Step3=NITRO%20AN16-42&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro 16 AMD,AN16-43,10,oem-os-not-listed,,,
+Nitro 16 AMD,AN16-43,11,oem-wlan-listed,Wireless LAN_MTK_3.3.0.1030_W11x64_(MTRZ616).zip,3.3.0.1030,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.3.0.1030_W11x64_A.zip?acerid=638644821027841812&Step1=&Step2=&Step3=NITRO%20AN16-43&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro 16 AMD,AN16-51,10,oem-os-not-listed,,,
+Nitro 16 AMD,AN16-51,11,oem-wlan-listed,Wireless LAN_Killer_22.170.0.3_W11x64.zip,22.170.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_22.170.0.3_W11x64_A.zip?acerid=638356112294345483&Step1=&Step2=&Step3=NITRO%20AN16-51&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro 16 AMD,AN16-61,10,oem-os-not-listed,,,
+Nitro 16 AMD,AN16-61,11,oem-wlan-listed,Wireless LAN_MTK_3.04.00.1123_W11x64_(MTRZ616).zip,3.04.00.1123,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.04.00.1123_W11x64_A.zip?acerid=638877303902923330&Step1=&Step2=&Step3=NITRO%20AN16-61&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro 16 AMD,AN16-73,10,oem-os-not-listed,,,
+Nitro 16 AMD,AN16-73,11,oem-wlan-listed,Wireless LAN_Killer_23.60.1.2_W11x64_(1675i).zip,23.60.1.2,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_23.60.1.2_W11x64_A.zip?acerid=638644729739567222&Step1=&Step2=&Step3=NITRO%20AN16-73&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro 16 AMD,AN16-A91,10,oem-os-not-listed,,,
+Nitro 16 AMD,AN16-A91,11,oem-wlan-listed,Wireless LAN_MTK_3.5.0.1392_W11x64_(MT7922).zip,3.5.0.1392,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.5.0.1392_W11x64_A.zip?acerid=639216803846267059&Step1=&Step2=&Step3=NITRO%20AN16-A91&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro 16 Intel,AN16-41,10,oem-os-not-listed,,,
+Nitro 16 Intel,AN16-41,11,oem-wlan-listed,Wireless LAN_MTK_3.3.0.789_W11x64_(MTRZ616).zip,3.3.0.789,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.3.0.789_W11x64_A.zip?acerid=638186343425803629&Step1=&Step2=&Step3=NITRO%20AN16-41&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro 16 Intel,AN16-42,10,oem-os-not-listed,,,
+Nitro 16 Intel,AN16-42,11,oem-wlan-listed,Wireless LAN_MTK_3.3.0.1030_W11x64_(MTRZ616).zip,3.3.0.1030,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.3.0.1030_W11x64_A.zip?acerid=638638893362280568&Step1=&Step2=&Step3=NITRO%20AN16-42&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro 16 Intel,AN16-43,10,oem-os-not-listed,,,
+Nitro 16 Intel,AN16-43,11,oem-wlan-listed,Wireless LAN_MTK_3.3.0.1030_W11x64_(MTRZ616).zip,3.3.0.1030,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.3.0.1030_W11x64_A.zip?acerid=638644821027841812&Step1=&Step2=&Step3=NITRO%20AN16-43&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro 16 Intel,AN16-51,10,oem-os-not-listed,,,
+Nitro 16 Intel,AN16-51,11,oem-wlan-listed,Wireless LAN_Killer_22.170.0.3_W11x64.zip,22.170.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_22.170.0.3_W11x64_A.zip?acerid=638356112294345483&Step1=&Step2=&Step3=NITRO%20AN16-51&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro 16 Intel,AN16-61,10,near-model-match,,,
+Nitro 16 Intel,AN16-61,11,near-model-match,,,
+Nitro 16 Intel,AN16-73,10,near-model-match,,,
+Nitro 16 Intel,AN16-73,11,near-model-match,,,
+Nitro 16 Intel,AN16-A91,10,near-model-match,,,
+Nitro 16 Intel,AN16-A91,11,near-model-match,,,
+Nitro 17 AMD,AN17-41,10,oem-os-not-listed,,,
+Nitro 17 AMD,AN17-41,11,oem-wlan-listed,Wireless LAN_MTK_3.3.0.789_W11x64_(MTRZ616).zip,3.3.0.789,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.3.0.789_W11x64_A.zip?acerid=638186357207769537&Step1=&Step2=&Step3=NITRO%20AN17-41&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro 17 AMD,AN17-42,10,oem-os-not-listed,,,
+Nitro 17 AMD,AN17-42,11,oem-wlan-listed,Wireless LAN_MTK_3.3.0.1030_W11x64_(MTRZ616).zip,3.3.0.1030,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.3.0.1030_W11x64_A.zip?acerid=638693089890204123&Step1=&Step2=&Step3=NITRO%20AN17-42&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro 17 AMD,AN17-51,10,oem-os-not-listed,,,
+Nitro 17 AMD,AN17-51,11,oem-wlan-listed,Wireless LAN_Killer_22.170.0.3_W11x64.zip,22.170.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_22.170.0.3_W11x64_A.zip?acerid=638356093422864111&Step1=&Step2=&Step3=NITRO%20AN17-51&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro 17 AMD,AN17-71,10,oem-os-not-listed,,,
+Nitro 17 AMD,AN17-71,11,oem-wlan-listed,Wireless LAN_Killer_22.170.0.3_W11x64.zip,22.170.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_22.170.0.3_W11x64_A.zip?acerid=638192280169396765&Step1=&Step2=&Step3=NITRO%20AN17-71&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro 17 AMD,AN17-72,10,oem-os-not-listed,,,
+Nitro 17 AMD,AN17-72,11,oem-wlan-listed,Wireless LAN_Killer_23.60.1.2_W11x64_(1675i).zip,23.60.1.2,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_23.60.1.2_W11x64_A.zip?acerid=638644723189647071&Step1=&Step2=&Step3=NITRO%20AN17-72&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro 17 Intel,AN17-41,10,oem-os-not-listed,,,
+Nitro 17 Intel,AN17-41,11,oem-wlan-listed,Wireless LAN_MTK_3.3.0.789_W11x64_(MTRZ616).zip,3.3.0.789,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.3.0.789_W11x64_A.zip?acerid=638186357207769537&Step1=&Step2=&Step3=NITRO%20AN17-41&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro 17 Intel,AN17-42,10,oem-os-not-listed,,,
+Nitro 17 Intel,AN17-42,11,oem-wlan-listed,Wireless LAN_MTK_3.3.0.1030_W11x64_(MTRZ616).zip,3.3.0.1030,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.3.0.1030_W11x64_A.zip?acerid=638693089890204123&Step1=&Step2=&Step3=NITRO%20AN17-42&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro 17 Intel,AN17-51,10,oem-os-not-listed,,,
+Nitro 17 Intel,AN17-51,11,oem-wlan-listed,Wireless LAN_Killer_22.170.0.3_W11x64.zip,22.170.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_22.170.0.3_W11x64_A.zip?acerid=638356093422864111&Step1=&Step2=&Step3=NITRO%20AN17-51&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro 17 Intel,AN17-71,10,oem-os-not-listed,,,
+Nitro 17 Intel,AN17-71,11,oem-wlan-listed,Wireless LAN_Killer_22.170.0.3_W11x64.zip,22.170.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_22.170.0.3_W11x64_A.zip?acerid=638192280169396765&Step1=&Step2=&Step3=NITRO%20AN17-71&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro 17 Intel,AN17-72,10,oem-os-not-listed,,,
+Nitro 17 Intel,AN17-72,11,oem-wlan-listed,Wireless LAN_Killer_23.60.1.2_W11x64_(1675i).zip,23.60.1.2,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_23.60.1.2_W11x64_A.zip?acerid=638644723189647071&Step1=&Step2=&Step3=NITRO%20AN17-72&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro V 14 AI AMD,ANV14-61,10,oem-os-not-listed,,,
+Nitro V 14 AI AMD,ANV14-61,11,oem-wlan-listed,Wireless LAN_MTK_3.3.0.918_W11x64_(MTRZ616).zip,3.3.0.918,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.3.0.918_W11x64_A.zip?acerid=638598161883808507&Step1=&Step2=&Step3=NITRO%20ANV14-61&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro V 14 AI AMD,ANV14-62,10,oem-os-not-listed,,,
+Nitro V 14 AI AMD,ANV14-62,11,oem-wlan-listed,Wireless LAN_MTK_3.4.0.1123_W11x64_(MT7922).zip,3.4.0.1123,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.4.0.1123_W11x64_A.zip?acerid=638865247016775897&Step1=&Step2=&Step3=NITRO%20ANV14-62&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro V 14 AMD,ANV14-61,10,oem-os-not-listed,,,
+Nitro V 14 AMD,ANV14-61,11,oem-wlan-listed,Wireless LAN_MTK_3.3.0.918_W11x64_(MTRZ616).zip,3.3.0.918,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.3.0.918_W11x64_A.zip?acerid=638598161883808507&Step1=&Step2=&Step3=NITRO%20ANV14-61&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro V 14 AMD,ANV14-62,10,oem-os-not-listed,,,
+Nitro V 14 AMD,ANV14-62,11,oem-wlan-listed,Wireless LAN_MTK_3.4.0.1123_W11x64_(MT7922).zip,3.4.0.1123,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.4.0.1123_W11x64_A.zip?acerid=638865247016775897&Step1=&Step2=&Step3=NITRO%20ANV14-62&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro V 15 AI AMD,ANV15-41,10,near-model-match,,,
+Nitro V 15 AI AMD,ANV15-41,11,near-model-match,,,
+Nitro V 15 AI AMD,ANV15-42,10,near-model-match,,,
+Nitro V 15 AI AMD,ANV15-42,11,near-model-match,,,
+Nitro V 15 AI AMD,ANV15-51,10,near-model-match,,,
+Nitro V 15 AI AMD,ANV15-51,11,near-model-match,,,
+Nitro V 15 AI AMD,ANV15-52,10,near-model-match,,,
+Nitro V 15 AI AMD,ANV15-52,11,near-model-match,,,
+Nitro V 15 AI AMD,ANV15-A31,10,near-model-match,,,
+Nitro V 15 AI AMD,ANV15-A31,11,near-model-match,,,
+Nitro V 15 Intel,ANV15-41,10,oem-os-not-listed,,,
+Nitro V 15 Intel,ANV15-41,11,oem-wlan-listed,Wireless LAN_MTK_3.5.0.1349_W11x64_(MT7921LE).zip,3.5.0.1349,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.5.0.1349_W11x64_A.zip?acerid=639231571497712905&Step1=&Step2=&Step3=NITRO%20ANV15-41&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro V 15 Intel,ANV15-42,10,oem-os-not-listed,,,
+Nitro V 15 Intel,ANV15-42,11,oem-wlan-listed,Wireless LAN_MTK_3.5.0.1383_W11x64_(MTRZ616).zip,3.5.0.1383,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.5.0.1383_W11x64_A.zip?acerid=639286664979912951&Step1=&Step2=&Step3=NITRO%20ANV15-42&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro V 15 Intel,ANV15-51,10,oem-os-not-listed,,,
+Nitro V 15 Intel,ANV15-51,11,oem-wlan-listed,Wireless LAN_MTK_3.5.0.1349_W11x64_(MT7921LE).zip,3.5.0.1349,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.5.0.1349_W11x64_A.zip?acerid=639053392913782810&Step1=&Step2=&Step3=NITRO%20ANV15-51&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro V 15 Intel,ANV15-52,10,oem-os-not-listed,,,
+Nitro V 15 Intel,ANV15-52,11,oem-wlan-listed,Wireless LAN_MTK_3.4.0.1182_W11x64_(MT7920).zip,3.4.0.1182,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.4.0.1182_W11x64_A.zip?acerid=638857293323179168&Step1=&Step2=&Step3=NITRO%20ANV15-52&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro V 15 Intel,ANV15-A31,10,oem-os-not-listed,,,
+Nitro V 15 Intel,ANV15-A31,11,oem-wlan-listed,Wireless LAN_MTK_3.5.0.1383_W11x64_(MT7922).zip,3.5.0.1383,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.5.0.1383_W11x64_A.zip?acerid=639117508217581037&Step1=&Step2=&Step3=NITRO%20ANV15-A31&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro V 16 AI AMD,ANV16-41,10,oem-os-not-listed,,,
+Nitro V 16 AI AMD,ANV16-41,11,oem-wlan-listed,Wireless LAN_MTK_3.3.0.901_W11x64_(MTRZ616).zip,3.3.0.901,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.3.0.901_W11x64_A.zip?acerid=638436870268526889&Step1=&Step2=&Step3=NITRO%20ANV16-41&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro V 16 AI AMD,ANV16-42,10,oem-os-not-listed,,,
+Nitro V 16 AI AMD,ANV16-42,11,oem-wlan-listed,Wireless LAN_MTK_3.04.00.1223_W11x64_(MTRZ616).zip,3.04.00.1223,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.04.00.1223_W11x64_A.zip?acerid=638978468581781086&Step1=&Step2=&Step3=NITRO%20ANV16-42&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro V 16 AI AMD,ANV16-61,10,oem-os-not-listed,,,
+Nitro V 16 AI AMD,ANV16-61,11,oem-wlan-listed,Wireless LAN_MTK_3.04.00.1223_W11x64_(MTRZ616).zip,3.04.00.1223,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.04.00.1223_W11x64_A.zip?acerid=638978461432678818&Step1=&Step2=&Step3=NITRO%20ANV16-61&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro V 16 AI AMD,ANV16-71,10,oem-os-not-listed,,,
+Nitro V 16 AI AMD,ANV16-71,11,oem-wlan-listed,Wireless LAN_MTK_3.3.0.901_W11x64_(MT7921LE).zip,3.3.0.901,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.3.0.901_W11x64_A.zip?acerid=638602731210936938&Step1=&Step2=&Step3=NITRO%20ANV16-71&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro V 16 AI AMD,ANV16-72,10,oem-os-not-listed,,,
+Nitro V 16 AI AMD,ANV16-72,11,oem-wlan-listed,Wireless LAN_Killer_23.140.0.3_W11x64.zip,23.140.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_23.140.0.3_W11x64_A.zip?acerid=638926659321559466&Step1=&Step2=&Step3=NITRO%20ANV16-72&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro V 16 AI AMD,ANV16-A31,10,oem-os-not-listed,,,
+Nitro V 16 AI AMD,ANV16-A31,11,oem-wlan-listed,Wireless LAN_MTK_3.5.0.1376_W11x64_(MT7922).zip,3.5.0.1376,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.5.0.1376_W11x64_A.zip?acerid=639140816610757168&Step1=&Step2=&Step3=NITRO%20ANV16-A31&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro V 16 AI AMD,ANV16-A71,10,oem-os-not-listed,,,
+Nitro V 16 AI AMD,ANV16-A71,11,oem-wlan-listed,Wireless LAN_MTK_3.5.0.1349_W11x64_(MT7922).zip,3.5.0.1349,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.5.0.1349_W11x64_A.zip?acerid=639113201207352941&Step1=&Step2=&Step3=NITRO%20ANV16-A71&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro V 16 AI AMD,ANV16-I11,10,oem-os-not-listed,,,
+Nitro V 16 AI AMD,ANV16-I11,11,oem-wlan-listed,Wireless LAN_Intel_24.40.0.4_W11x64_(AX211).zip,24.40.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_24.40.0.4_W11x64_A.zip?acerid=639246938284459004&Step1=&Step2=&Step3=NITRO%20ANV16-I11&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro V 16 AI AMD,ANV16-I12,10,oem-os-not-listed,,,
+Nitro V 16 AI AMD,ANV16-I12,11,oem-wlan-listed,Wireless LAN_Intel_23.170.0.1_W11x64_(AX201).zip,23.170.0.1,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.170.0.1_W11x64_A.zip?acerid=639244482498589144&Step1=&Step2=&Step3=NITRO%20ANV16-I12&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro V 16 AI AMD,ANV16-I31,10,oem-os-not-listed,,,
+Nitro V 16 AI AMD,ANV16-I31,11,oem-wlan-listed,Wireless LAN_Killer_24.10.0.4_W11x64.zip,24.10.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_24.10.0.4_W11x64_A.zip?acerid=639113210433734497&Step1=&Step2=&Step3=NITRO%20ANV16-I31&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro V 16 AI AMD,ANV16-I51,10,oem-os-not-listed,,,
+Nitro V 16 AI AMD,ANV16-I51,11,oem-wlan-listed,Wireless LAN_Killer_24.20.0.4_W11x64_(1675i).zip,24.20.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_24.20.0.4_W11x64_A.zip?acerid=639140875736895402&Step1=&Step2=&Step3=NITRO%20ANV16-I51&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro V 16 AI Intel,ANV16-41,10,oem-os-not-listed,,,
+Nitro V 16 AI Intel,ANV16-41,11,oem-wlan-listed,Wireless LAN_MTK_3.3.0.901_W11x64_(MTRZ616).zip,3.3.0.901,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.3.0.901_W11x64_A.zip?acerid=638436870268526889&Step1=&Step2=&Step3=NITRO%20ANV16-41&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro V 16 AI Intel,ANV16-42,10,oem-os-not-listed,,,
+Nitro V 16 AI Intel,ANV16-42,11,oem-wlan-listed,Wireless LAN_MTK_3.04.00.1223_W11x64_(MTRZ616).zip,3.04.00.1223,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.04.00.1223_W11x64_A.zip?acerid=638978468581781086&Step1=&Step2=&Step3=NITRO%20ANV16-42&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro V 16 AI Intel,ANV16-61,10,oem-os-not-listed,,,
+Nitro V 16 AI Intel,ANV16-61,11,oem-wlan-listed,Wireless LAN_MTK_3.04.00.1223_W11x64_(MTRZ616).zip,3.04.00.1223,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.04.00.1223_W11x64_A.zip?acerid=638978461432678818&Step1=&Step2=&Step3=NITRO%20ANV16-61&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro V 16 AI Intel,ANV16-71,10,oem-os-not-listed,,,
+Nitro V 16 AI Intel,ANV16-71,11,oem-wlan-listed,Wireless LAN_MTK_3.3.0.901_W11x64_(MT7921LE).zip,3.3.0.901,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.3.0.901_W11x64_A.zip?acerid=638602731210936938&Step1=&Step2=&Step3=NITRO%20ANV16-71&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro V 16 AI Intel,ANV16-72,10,oem-os-not-listed,,,
+Nitro V 16 AI Intel,ANV16-72,11,oem-wlan-listed,Wireless LAN_Killer_23.140.0.3_W11x64.zip,23.140.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_23.140.0.3_W11x64_A.zip?acerid=638926659321559466&Step1=&Step2=&Step3=NITRO%20ANV16-72&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro V 16 AI Intel,ANV16-A31,10,oem-os-not-listed,,,
+Nitro V 16 AI Intel,ANV16-A31,11,oem-wlan-listed,Wireless LAN_MTK_3.5.0.1376_W11x64_(MT7922).zip,3.5.0.1376,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.5.0.1376_W11x64_A.zip?acerid=639140816610757168&Step1=&Step2=&Step3=NITRO%20ANV16-A31&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro V 16 AI Intel,ANV16-A71,10,oem-os-not-listed,,,
+Nitro V 16 AI Intel,ANV16-A71,11,oem-wlan-listed,Wireless LAN_MTK_3.5.0.1349_W11x64_(MT7922).zip,3.5.0.1349,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.5.0.1349_W11x64_A.zip?acerid=639113201207352941&Step1=&Step2=&Step3=NITRO%20ANV16-A71&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro V 16 AI Intel,ANV16-I11,10,oem-os-not-listed,,,
+Nitro V 16 AI Intel,ANV16-I11,11,oem-wlan-listed,Wireless LAN_Intel_24.40.0.4_W11x64_(AX211).zip,24.40.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_24.40.0.4_W11x64_A.zip?acerid=639246938284459004&Step1=&Step2=&Step3=NITRO%20ANV16-I11&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro V 16 AI Intel,ANV16-I12,10,oem-os-not-listed,,,
+Nitro V 16 AI Intel,ANV16-I12,11,oem-wlan-listed,Wireless LAN_Intel_23.170.0.1_W11x64_(AX201).zip,23.170.0.1,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.170.0.1_W11x64_A.zip?acerid=639244482498589144&Step1=&Step2=&Step3=NITRO%20ANV16-I12&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro V 16 AI Intel,ANV16-I31,10,oem-os-not-listed,,,
+Nitro V 16 AI Intel,ANV16-I31,11,oem-wlan-listed,Wireless LAN_Killer_24.10.0.4_W11x64.zip,24.10.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_24.10.0.4_W11x64_A.zip?acerid=639113210433734497&Step1=&Step2=&Step3=NITRO%20ANV16-I31&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro V 16 AI Intel,ANV16-I51,10,oem-os-not-listed,,,
+Nitro V 16 AI Intel,ANV16-I51,11,oem-wlan-listed,Wireless LAN_Killer_24.20.0.4_W11x64_(1675i).zip,24.20.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_24.20.0.4_W11x64_A.zip?acerid=639140875736895402&Step1=&Step2=&Step3=NITRO%20ANV16-I51&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro V 16 AMD,ANV16S-41,10,oem-os-not-listed,,,
+Nitro V 16 AMD,ANV16S-41,11,oem-wlan-listed,Wireless LAN_MTK_3.4.0.1223_W11x64_(MT7922).zip,3.4.0.1223,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.4.0.1223_W11x64_A.zip?acerid=638845402342408452&Step1=&Step2=&Step3=NITRO%20ANV16S-41&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro V 16 AMD,ANV16S-61,10,oem-os-not-listed,,,
+Nitro V 16 AMD,ANV16S-61,11,oem-wlan-listed,Wireless LAN_MTK_3.4.0.1223_W11x64_(MT7922).zip,3.4.0.1223,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.4.0.1223_W11x64_A.zip?acerid=638845401374998120&Step1=&Step2=&Step3=NITRO%20ANV16S-61&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro V 16 AMD,ANV16S-71,10,oem-os-not-listed,,,
+Nitro V 16 AMD,ANV16S-71,11,oem-wlan-listed,Wireless LAN_Killer_23.170.0.1_W11x64.zip,23.170.0.1,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_23.170.0.1_W11x64_A.zip?acerid=639142489500476087&Step1=&Step2=&Step3=NITRO%20ANV16S-71&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro V 16 AMD,ANV16S-I51,10,oem-os-not-listed,,,
+Nitro V 16 AMD,ANV16S-I51,11,oem-wlan-listed,Wireless LAN_Killer_24.20.0.4_W11x64_(1675i).zip,24.20.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_24.20.0.4_W11x64_A.zip?acerid=639155614004781553&Step1=&Step2=&Step3=NITRO%20ANV16S-I51&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro V 16 Intel,ANV16S-41,10,oem-os-not-listed,,,
+Nitro V 16 Intel,ANV16S-41,11,oem-wlan-listed,Wireless LAN_MTK_3.4.0.1223_W11x64_(MT7922).zip,3.4.0.1223,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.4.0.1223_W11x64_A.zip?acerid=638845402342408452&Step1=&Step2=&Step3=NITRO%20ANV16S-41&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro V 16 Intel,ANV16S-61,10,oem-os-not-listed,,,
+Nitro V 16 Intel,ANV16S-61,11,oem-wlan-listed,Wireless LAN_MTK_3.4.0.1223_W11x64_(MT7922).zip,3.4.0.1223,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.4.0.1223_W11x64_A.zip?acerid=638845401374998120&Step1=&Step2=&Step3=NITRO%20ANV16S-61&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro V 16 Intel,ANV16S-71,10,oem-os-not-listed,,,
+Nitro V 16 Intel,ANV16S-71,11,oem-wlan-listed,Wireless LAN_Killer_23.170.0.1_W11x64.zip,23.170.0.1,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_23.170.0.1_W11x64_A.zip?acerid=639142489500476087&Step1=&Step2=&Step3=NITRO%20ANV16S-71&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro V 16 Intel,ANV16S-I51,10,oem-os-not-listed,,,
+Nitro V 16 Intel,ANV16S-I51,11,oem-wlan-listed,Wireless LAN_Killer_24.20.0.4_W11x64_(1675i).zip,24.20.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_24.20.0.4_W11x64_A.zip?acerid=639155614004781553&Step1=&Step2=&Step3=NITRO%20ANV16S-I51&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro V 16S AI AMD,ANV16S-41,10,oem-os-not-listed,,,
+Nitro V 16S AI AMD,ANV16S-41,11,oem-wlan-listed,Wireless LAN_MTK_3.4.0.1223_W11x64_(MT7922).zip,3.4.0.1223,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.4.0.1223_W11x64_A.zip?acerid=638845402342408452&Step1=&Step2=&Step3=NITRO%20ANV16S-41&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro V 16S AI AMD,ANV16S-61,10,oem-os-not-listed,,,
+Nitro V 16S AI AMD,ANV16S-61,11,oem-wlan-listed,Wireless LAN_MTK_3.4.0.1223_W11x64_(MT7922).zip,3.4.0.1223,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.4.0.1223_W11x64_A.zip?acerid=638845401374998120&Step1=&Step2=&Step3=NITRO%20ANV16S-61&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro V 16S AI AMD,ANV16S-71,10,near-model-match,,,
+Nitro V 16S AI AMD,ANV16S-71,11,near-model-match,,,
+Nitro V 16S AI AMD,ANV16S-I51,10,oem-os-not-listed,,,
+Nitro V 16S AI AMD,ANV16S-I51,11,oem-wlan-listed,Wireless LAN_Killer_24.20.0.4_W11x64_(1675i).zip,24.20.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_24.20.0.4_W11x64_A.zip?acerid=639155614004781553&Step1=&Step2=&Step3=NITRO%20ANV16S-I51&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro V 16S AI Intel,ANV16S-41,10,oem-os-not-listed,,,
+Nitro V 16S AI Intel,ANV16S-41,11,oem-wlan-listed,Wireless LAN_MTK_3.4.0.1223_W11x64_(MT7922).zip,3.4.0.1223,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.4.0.1223_W11x64_A.zip?acerid=638845402342408452&Step1=&Step2=&Step3=NITRO%20ANV16S-41&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro V 16S AI Intel,ANV16S-61,10,oem-os-not-listed,,,
+Nitro V 16S AI Intel,ANV16S-61,11,oem-wlan-listed,Wireless LAN_MTK_3.4.0.1223_W11x64_(MT7922).zip,3.4.0.1223,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.4.0.1223_W11x64_A.zip?acerid=638845401374998120&Step1=&Step2=&Step3=NITRO%20ANV16S-61&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro V 16S AI Intel,ANV16S-71,10,oem-os-not-listed,,,
+Nitro V 16S AI Intel,ANV16S-71,11,oem-wlan-listed,Wireless LAN_Killer_23.170.0.1_W11x64.zip,23.170.0.1,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_23.170.0.1_W11x64_A.zip?acerid=639142489500476087&Step1=&Step2=&Step3=NITRO%20ANV16S-71&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro V 16S AI Intel,ANV16S-I51,10,oem-os-not-listed,,,
+Nitro V 16S AI Intel,ANV16S-I51,11,oem-wlan-listed,Wireless LAN_Killer_24.20.0.4_W11x64_(1675i).zip,24.20.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_24.20.0.4_W11x64_A.zip?acerid=639155614004781553&Step1=&Step2=&Step3=NITRO%20ANV16S-I51&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro V 16S Intel,ANV16S-41,10,oem-os-not-listed,,,
+Nitro V 16S Intel,ANV16S-41,11,oem-wlan-listed,Wireless LAN_MTK_3.4.0.1223_W11x64_(MT7922).zip,3.4.0.1223,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.4.0.1223_W11x64_A.zip?acerid=638845402342408452&Step1=&Step2=&Step3=NITRO%20ANV16S-41&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro V 16S Intel,ANV16S-61,10,oem-os-not-listed,,,
+Nitro V 16S Intel,ANV16S-61,11,oem-wlan-listed,Wireless LAN_MTK_3.4.0.1223_W11x64_(MT7922).zip,3.4.0.1223,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.4.0.1223_W11x64_A.zip?acerid=638845401374998120&Step1=&Step2=&Step3=NITRO%20ANV16S-61&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro V 16S Intel,ANV16S-71,10,oem-os-not-listed,,,
+Nitro V 16S Intel,ANV16S-71,11,oem-wlan-listed,Wireless LAN_Killer_23.170.0.1_W11x64.zip,23.170.0.1,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_23.170.0.1_W11x64_A.zip?acerid=639142489500476087&Step1=&Step2=&Step3=NITRO%20ANV16S-71&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro V 16S Intel,ANV16S-I51,10,oem-os-not-listed,,,
+Nitro V 16S Intel,ANV16S-I51,11,oem-wlan-listed,Wireless LAN_Killer_24.20.0.4_W11x64_(1675i).zip,24.20.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_24.20.0.4_W11x64_A.zip?acerid=639155614004781553&Step1=&Step2=&Step3=NITRO%20ANV16S-I51&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro V 17 AI AMD,ANV17-41,10,near-model-match,,,
+Nitro V 17 AI AMD,ANV17-41,11,near-model-match,,,
+Nitro V 17 AI AMD,ANV17-61,10,oem-os-not-listed,,,
+Nitro V 17 AI AMD,ANV17-61,11,oem-wlan-listed,Wireless LAN_MTK_3.4.0.1115_W11x64_(MTRZ616).zip,3.4.0.1115,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.4.0.1115_W11x64_A.zip?acerid=638802960978627804&Step1=&Step2=&Step3=NITRO%20ANV17-61&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Nitro V 17 AI AMD,ANV17-I31,10,oem-os-not-listed,,,
+Nitro V 17 AI AMD,ANV17-I31,11,oem-wlan-listed,Wireless LAN_MTK_3.5.0.1376_W11x64_(MT7920).zip,3.5.0.1376,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.5.0.1376_W11x64_A.zip?acerid=639167679117811468&Step1=&Step2=&Step3=NITRO%20ANV17-I31&OS=ALL&LC=en&BC=ACER&SC=PA_6
+PREDATOR HELIOS 16,PH16-71,10,oem-os-not-listed,,,
+PREDATOR HELIOS 16,PH16-71,11,oem-wlan-listed,Wireless LAN_Killer_22.180.0.4_W11x64.zip,22.180.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_22.180.0.4_W11x64_A.zip?acerid=638118947056220813&Step1=&Step2=&Step3=PREDATOR%20PH16-71&OS=ALL&LC=en&BC=ACER&SC=PA_6
+PREDATOR HELIOS 16,PH16-72,10,oem-os-not-listed,,,
+PREDATOR HELIOS 16,PH16-72,11,oem-wlan-listed,Wireless LAN_Intel_23.60.1.2_W11x64.zip,23.60.1.2,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.60.1.2_W11x64_A.zip?acerid=638644772015281416&Step1=&Step2=&Step3=PREDATOR%20PH16-72&OS=ALL&LC=en&BC=ACER&SC=PA_6
+PREDATOR HELIOS 16,PH16-73,10,oem-os-not-listed,,,
+PREDATOR HELIOS 16,PH16-73,11,oem-wlan-listed,Wireless LAN_Killer_23.160.0.4_W11x64_(1750x).zip,23.160.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_23.160.0.4_W11x64_A.zip?acerid=639197829578457043&Step1=&Step2=&Step3=PREDATOR%20PH16-73&OS=ALL&LC=en&BC=ACER&SC=PA_6
+PREDATOR HELIOS 18,PHN18-71,10,oem-os-not-listed,,,
+PREDATOR HELIOS 18,PHN18-71,11,oem-wlan-listed,Wireless LAN_Killer_23.30.0.6_W11x64_(1675i).zip,23.30.0.6,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_23.30.0.6_W11x64_A.zip?acerid=638656869020756863&Step1=&Step2=&Step3=PREDATOR%20PHN18-71&OS=ALL&LC=en&BC=ACER&SC=PA_6
+PREDATOR HELIOS 18,PHN18-72,10,oem-os-not-listed,,,
+PREDATOR HELIOS 18,PHN18-72,11,oem-wlan-listed,Wireless LAN_Killer_23.120.0.3_W11x64_(1675i).zip,23.120.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_23.120.0.3_W11x64_A.zip?acerid=638846105281523778&Step1=&Step2=&Step3=PREDATOR%20PHN18-72&OS=ALL&LC=en&BC=ACER&SC=PA_6
+PREDATOR HELIOS 18,PHN18-I71,10,near-model-match,,,
+PREDATOR HELIOS 18,PHN18-I71,11,near-model-match,,,
+PREDATOR HELIOS NEO 14,PHN14-51,10,oem-os-not-listed,,,
+PREDATOR HELIOS NEO 14,PHN14-51,11,oem-wlan-listed,Wireless LAN_Killer_23.30.0.6_W11x64_(1675i).zip,23.30.0.6,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_23.30.0.6_W11x64_A.zip?acerid=638489401625379598&Step1=&Step2=&Step3=PREDATOR%20PHN14-51&OS=ALL&LC=en&BC=ACER&SC=PA_6
+PREDATOR HELIOS NEO 14,PHN14-71,10,oem-os-not-listed,,,
+PREDATOR HELIOS NEO 14,PHN14-71,11,oem-wlan-listed,Wireless LAN_Killer_24.20.0.4_W11x64_(1675i).zip,24.20.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_24.20.0.4_W11x64_A.zip?acerid=639198728321977976&Step1=&Step2=&Step3=PREDATOR%20PHN14-71&OS=ALL&LC=en&BC=ACER&SC=PA_6
+PREDATOR HELIOS NEO 14 AI,PHN14-51,10,oem-os-not-listed,,,
+PREDATOR HELIOS NEO 14 AI,PHN14-51,11,oem-wlan-listed,Wireless LAN_Killer_23.30.0.6_W11x64_(1675i).zip,23.30.0.6,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_23.30.0.6_W11x64_A.zip?acerid=638489401625379598&Step1=&Step2=&Step3=PREDATOR%20PHN14-51&OS=ALL&LC=en&BC=ACER&SC=PA_6
+PREDATOR HELIOS NEO 14 AI,PHN14-71,10,oem-os-not-listed,,,
+PREDATOR HELIOS NEO 14 AI,PHN14-71,11,oem-wlan-listed,Wireless LAN_Killer_24.20.0.4_W11x64_(1675i).zip,24.20.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_24.20.0.4_W11x64_A.zip?acerid=639198728321977976&Step1=&Step2=&Step3=PREDATOR%20PHN14-71&OS=ALL&LC=en&BC=ACER&SC=PA_6
+PREDATOR HELIOS NEO 18,PHN18-71,10,oem-os-not-listed,,,
+PREDATOR HELIOS NEO 18,PHN18-71,11,oem-wlan-listed,Wireless LAN_Killer_23.30.0.6_W11x64_(1675i).zip,23.30.0.6,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_23.30.0.6_W11x64_A.zip?acerid=638656869020756863&Step1=&Step2=&Step3=PREDATOR%20PHN18-71&OS=ALL&LC=en&BC=ACER&SC=PA_6
+PREDATOR HELIOS NEO 18,PHN18-72,10,oem-os-not-listed,,,
+PREDATOR HELIOS NEO 18,PHN18-72,11,oem-wlan-listed,Wireless LAN_Killer_23.120.0.3_W11x64_(1675i).zip,23.120.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_23.120.0.3_W11x64_A.zip?acerid=638846105281523778&Step1=&Step2=&Step3=PREDATOR%20PHN18-72&OS=ALL&LC=en&BC=ACER&SC=PA_6
+PREDATOR HELIOS NEO 18,PHN18-I71,10,oem-os-not-listed,,,
+PREDATOR HELIOS NEO 18,PHN18-I71,11,oem-wlan-listed,Wireless LAN_Killer_24.20.0.4_W11x64_(1675i).zip,24.20.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_24.20.0.4_W11x64_A.zip?acerid=639128623001620845&Step1=&Step2=&Step3=PREDATOR%20PHN18-I71&OS=ALL&LC=en&BC=ACER&SC=PA_6
+PREDATOR TRITON 14,PT14-51,10,oem-os-not-listed,,,
+PREDATOR TRITON 14,PT14-51,11,oem-wlan-listed,Wireless LAN_Killer_22.180.0.4_W11x64.zip,22.180.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_22.180.0.4_W11x64_A.zip?acerid=638186354946373530&Step1=&Step2=&Step3=PREDATOR%20PT14-51&OS=ALL&LC=en&BC=ACER&SC=PA_6
+PREDATOR TRITON 14,PT14-52T,10,oem-os-not-listed,,,
+PREDATOR TRITON 14,PT14-52T,11,oem-wlan-listed,Wireless LAN_Killer_23.160.0.4_W11x64_BE1750i.zip,23.160.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_23.160.0.4_W11x64_A.zip?acerid=639050746928429048&Step1=&Step2=&Step3=PREDATOR%20PT14-52T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+PREDATOR TRITON 14 AI,PT14-51,10,near-model-match,,,
+PREDATOR TRITON 14 AI,PT14-51,11,near-model-match,,,
+PREDATOR TRITON 14 AI,PT14-52T,10,near-model-match,,,
+PREDATOR TRITON 14 AI,PT14-52T,11,near-model-match,,,
+PREDATOR TRITON 17 X,PT14-51,10,oem-os-not-listed,,,
+PREDATOR TRITON 17 X,PT14-51,11,oem-wlan-listed,Wireless LAN_Killer_22.180.0.4_W11x64.zip,22.180.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_22.180.0.4_W11x64_A.zip?acerid=638186354946373530&Step1=&Step2=&Step3=PREDATOR%20PT14-51&OS=ALL&LC=en&BC=ACER&SC=PA_6
+PREDATOR TRITON 17 X,PT14-52T,10,oem-os-not-listed,,,
+PREDATOR TRITON 17 X,PT14-52T,11,oem-wlan-listed,Wireless LAN_Killer_23.160.0.4_W11x64_BE1750i.zip,23.160.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_23.160.0.4_W11x64_A.zip?acerid=639050746928429048&Step1=&Step2=&Step3=PREDATOR%20PT14-52T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift 14,SF14-11,10,support-list-empty,,,
+Swift 14,SF14-11,11,short-list,,,
+Swift 14,SF14-11T,10,support-list-empty,,,
+Swift 14,SF14-11T,11,short-list,,,
+Swift 14,SF14-51,10,oem-os-not-listed,,,
+Swift 14,SF14-51,11,oem-wlan-listed,Wireless LAN_Killer_23.160.0.4_W11x64_BE1750i.zip,23.160.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_23.160.0.4_W11x64_A.zip?acerid=638937560827316332&Step1=&Step2=&Step3=SWIFT%20SF14-51&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift 14,SF14-51T,10,oem-os-not-listed,,,
+Swift 14,SF14-51T,11,oem-wlan-listed,Wireless LAN_Killer_23.160.0.4_W11x64_BE1750i.zip,23.160.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_23.160.0.4_W11x64_A.zip?acerid=638937560827316332&Step1=&Step2=&Step3=SWIFT%20SF14-51T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift 14,SF14-61T,10,oem-os-not-listed,,,
+Swift 14,SF14-61T,11,oem-wlan-listed,Wireless LAN_MTK_5.4.0.1906_W11x64_MT7925.zip,5.4.0.1906,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_5.4.0.1906_W11x64_A.zip?acerid=638615497961239520&Step1=&Step2=&Step3=SWIFT%20SF14-61T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift 14,SF14-71T,10,oem-os-not-listed,,,
+Swift 14,SF14-71T,11,oem-wlan-listed,Wireless LAN_Killer_22.180.0.4_W11x64.zip,22.180.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_22.180.0.4_W11x64_A.zip?acerid=638096101455321381&Step1=&Step2=&Step3=SF14-71T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift 14 AI AMD,SF14-11,10,support-list-empty,,,
+Swift 14 AI AMD,SF14-11,11,short-list,,,
+Swift 14 AI AMD,SF14-11T,10,support-list-empty,,,
+Swift 14 AI AMD,SF14-11T,11,short-list,,,
+Swift 14 AI AMD,SF14-51,10,oem-os-not-listed,,,
+Swift 14 AI AMD,SF14-51,11,oem-wlan-listed,Wireless LAN_Killer_23.160.0.4_W11x64_BE1750i.zip,23.160.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_23.160.0.4_W11x64_A.zip?acerid=638937560827316332&Step1=&Step2=&Step3=SWIFT%20SF14-51&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift 14 AI AMD,SF14-51T,10,oem-os-not-listed,,,
+Swift 14 AI AMD,SF14-51T,11,oem-wlan-listed,Wireless LAN_Killer_23.160.0.4_W11x64_BE1750i.zip,23.160.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_23.160.0.4_W11x64_A.zip?acerid=638937560827316332&Step1=&Step2=&Step3=SWIFT%20SF14-51T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift 14 AI AMD,SF14-61T,10,oem-os-not-listed,,,
+Swift 14 AI AMD,SF14-61T,11,oem-wlan-listed,Wireless LAN_MTK_5.4.0.1906_W11x64_MT7925.zip,5.4.0.1906,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_5.4.0.1906_W11x64_A.zip?acerid=638615497961239520&Step1=&Step2=&Step3=SWIFT%20SF14-61T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift 14 AI AMD,SF14-71T,10,oem-os-not-listed,,,
+Swift 14 AI AMD,SF14-71T,11,oem-wlan-listed,Wireless LAN_Killer_22.180.0.4_W11x64.zip,22.180.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_22.180.0.4_W11x64_A.zip?acerid=638096101455321381&Step1=&Step2=&Step3=SF14-71T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift 14 AI Snapdragon,SF14-11,10,support-list-empty,,,
+Swift 14 AI Snapdragon,SF14-11,11,short-list,,,
+Swift 14 AI Snapdragon,SF14-11T,10,support-list-empty,,,
+Swift 14 AI Snapdragon,SF14-11T,11,short-list,,,
+Swift 14 AI Snapdragon,SF14-51,10,oem-os-not-listed,,,
+Swift 14 AI Snapdragon,SF14-51,11,oem-wlan-listed,Wireless LAN_Killer_23.160.0.4_W11x64_BE1750i.zip,23.160.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_23.160.0.4_W11x64_A.zip?acerid=638937560827316332&Step1=&Step2=&Step3=SWIFT%20SF14-51&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift 14 AI Snapdragon,SF14-51T,10,oem-os-not-listed,,,
+Swift 14 AI Snapdragon,SF14-51T,11,oem-wlan-listed,Wireless LAN_Killer_23.160.0.4_W11x64_BE1750i.zip,23.160.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_23.160.0.4_W11x64_A.zip?acerid=638937560827316332&Step1=&Step2=&Step3=SWIFT%20SF14-51T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift 14 AI Snapdragon,SF14-61T,10,oem-os-not-listed,,,
+Swift 14 AI Snapdragon,SF14-61T,11,oem-wlan-listed,Wireless LAN_MTK_5.4.0.1906_W11x64_MT7925.zip,5.4.0.1906,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_5.4.0.1906_W11x64_A.zip?acerid=638615497961239520&Step1=&Step2=&Step3=SWIFT%20SF14-61T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift 14 AI Snapdragon,SF14-71T,10,oem-os-not-listed,,,
+Swift 14 AI Snapdragon,SF14-71T,11,oem-wlan-listed,Wireless LAN_Killer_22.180.0.4_W11x64.zip,22.180.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_22.180.0.4_W11x64_A.zip?acerid=638096101455321381&Step1=&Step2=&Step3=SF14-71T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift 14/16 AI Intel,SFA14-11,10,support-list-empty,,,
+Swift 14/16 AI Intel,SFA14-11,11,short-list,,,
+Swift 14/16 AI Intel,SFA14-51M,10,oem-os-not-listed,,,
+Swift 14/16 AI Intel,SFA14-51M,11,oem-wlan-listed,Wireless LAN_Realtek_6001.15.160.0_W11x64_(RTL8852BE).zip,6001.15.160.0,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Realtek_6001.15.160.0_W11x64_A.zip?acerid=639113256142581266&Step1=&Step2=&Step3=SWIFT%20SFA14-51M&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift 14/16 AI Intel,SFA14-52M,10,oem-os-not-listed,,,
+Swift 14/16 AI Intel,SFA14-52M,11,oem-wlan-listed,Wireless LAN_Intel_23.170.0.1_W11x64_(AX201).zip,23.170.0.1,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.170.0.1_W11x64_A.zip?acerid=639177819231684046&Step1=&Step2=&Step3=SWIFT%20SFA14-52M&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift 14/16 AI Intel,SFA14-54M,10,oem-os-not-listed,,,
+Swift 14/16 AI Intel,SFA14-54M,11,oem-wlan-listed,Wireless LAN_Intel_23.160.0.4_W11x64_(AX211).zip,23.160.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.160.0.4_W11x64_A.zip?acerid=639233101350864475&Step1=&Step2=&Step3=SWIFT%20SFA14-54M&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift 14/16 AI Intel,SFA14-55M,10,oem-os-not-listed,,,
+Swift 14/16 AI Intel,SFA14-55M,11,short-list,,,
+Swift 14/16 AI Intel,SFA14-56M,10,near-model-match,,,
+Swift 14/16 AI Intel,SFA14-56M,11,near-model-match,,,
+Swift 14/16 AI Intel,SFA14-61M,10,oem-os-not-listed,,,
+Swift 14/16 AI Intel,SFA14-61M,11,oem-wlan-listed,Wireless LAN_Realtek_6001.15.162.1_W11x64_(RTL8852BE).zip,6001.15.162.1,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Realtek_6001.15.162.1_W11x64_A.zip?acerid=639190927167049477&Step1=&Step2=&Step3=SWIFT%20SFA14-61M&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift 14/16 AI Intel,SFA14-62M,10,oem-os-not-listed,,,
+Swift 14/16 AI Intel,SFA14-62M,11,oem-wlan-listed,Wireless LAN_Realtek_6001.15.162.1_W11x64_(RTL8852BE).zip,6001.15.162.1,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Realtek_6001.15.162.1_W11x64_A.zip?acerid=639268740255837984&Step1=&Step2=&Step3=SWIFT%20SFA14-62M&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift 14/16 AI Intel,SFA14-71M,10,oem-os-not-listed,,,
+Swift 14/16 AI Intel,SFA14-71M,11,oem-wlan-listed,Wireless LAN_Realtek_6001.15.160.0_W11x64_(RTL8852BE).zip,6001.15.160.0,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Realtek_6001.15.160.0_W11x64_A.zip?acerid=639113256142581266&Step1=&Step2=&Step3=SWIFT%20SFA14-71M&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift 14/16 AI Intel,SFA14-72M,10,oem-os-not-listed,,,
+Swift 14/16 AI Intel,SFA14-72M,11,oem-wlan-listed,Wireless LAN_Realtek_6001.15.160.0_W11x64_(RTL8852BE).zip,6001.15.160.0,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Realtek_6001.15.160.0_W11x64_A.zip?acerid=639190934816647018&Step1=&Step2=&Step3=SWIFT%20SFA14-72M&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift 14/16 AI Intel,SFA14-I31,10,oem-os-not-listed,,,
+Swift 14/16 AI Intel,SFA14-I31,11,oem-wlan-listed,Wireless LAN_Intel_24.30.1.1_W11x64_(AX211).zip,24.30.1.1,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_24.30.1.1_W11x64_A.zip?acerid=639186487200887326&Step1=&Step2=&Step3=SWIFT%20SFA14-I31&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Air 16,SFA14-11,10,support-list-empty,,,
+Swift Air 16,SFA14-11,11,short-list,,,
+Swift Air 16,SFA14-51M,10,oem-os-not-listed,,,
+Swift Air 16,SFA14-51M,11,oem-wlan-listed,Wireless LAN_Realtek_6001.15.160.0_W11x64_(RTL8852BE).zip,6001.15.160.0,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Realtek_6001.15.160.0_W11x64_A.zip?acerid=639113256142581266&Step1=&Step2=&Step3=SWIFT%20SFA14-51M&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Air 16,SFA14-52M,10,oem-os-not-listed,,,
+Swift Air 16,SFA14-52M,11,oem-wlan-listed,Wireless LAN_Intel_23.170.0.1_W11x64_(AX201).zip,23.170.0.1,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.170.0.1_W11x64_A.zip?acerid=639177819231684046&Step1=&Step2=&Step3=SWIFT%20SFA14-52M&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Air 16,SFA14-54M,10,oem-os-not-listed,,,
+Swift Air 16,SFA14-54M,11,oem-wlan-listed,Wireless LAN_Intel_23.160.0.4_W11x64_(AX211).zip,23.160.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.160.0.4_W11x64_A.zip?acerid=639233101350864475&Step1=&Step2=&Step3=SWIFT%20SFA14-54M&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Air 16,SFA14-55M,10,near-model-match,,,
+Swift Air 16,SFA14-55M,11,near-model-match,,,
+Swift Air 16,SFA14-56M,10,near-model-match,,,
+Swift Air 16,SFA14-56M,11,near-model-match,,,
+Swift Air 16,SFA14-61M,10,oem-os-not-listed,,,
+Swift Air 16,SFA14-61M,11,oem-wlan-listed,Wireless LAN_Realtek_6001.15.162.1_W11x64_(RTL8852BE).zip,6001.15.162.1,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Realtek_6001.15.162.1_W11x64_A.zip?acerid=639190927167049477&Step1=&Step2=&Step3=SWIFT%20SFA14-61M&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Air 16,SFA14-62M,10,oem-os-not-listed,,,
+Swift Air 16,SFA14-62M,11,oem-wlan-listed,Wireless LAN_Realtek_6001.15.162.1_W11x64_(RTL8852BE).zip,6001.15.162.1,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Realtek_6001.15.162.1_W11x64_A.zip?acerid=639268740255837984&Step1=&Step2=&Step3=SWIFT%20SFA14-62M&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Air 16,SFA14-71M,10,oem-os-not-listed,,,
+Swift Air 16,SFA14-71M,11,oem-wlan-listed,Wireless LAN_Realtek_6001.15.160.0_W11x64_(RTL8852BE).zip,6001.15.160.0,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Realtek_6001.15.160.0_W11x64_A.zip?acerid=639113256142581266&Step1=&Step2=&Step3=SWIFT%20SFA14-71M&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Air 16,SFA14-72M,10,oem-os-not-listed,,,
+Swift Air 16,SFA14-72M,11,oem-wlan-listed,Wireless LAN_Realtek_6001.15.160.0_W11x64_(RTL8852BE).zip,6001.15.160.0,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Realtek_6001.15.160.0_W11x64_A.zip?acerid=639190934816647018&Step1=&Step2=&Step3=SWIFT%20SFA14-72M&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Air 16,SFA14-I31,10,oem-os-not-listed,,,
+Swift Air 16,SFA14-I31,11,oem-wlan-listed,Wireless LAN_Intel_24.30.1.1_W11x64_(AX211).zip,24.30.1.1,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_24.30.1.1_W11x64_A.zip?acerid=639186487200887326&Step1=&Step2=&Step3=SWIFT%20SFA14-I31&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Air 16 (SFA16-I31 / SFA16-I31T),SFA14-11,10,support-list-empty,,,
+Swift Air 16 (SFA16-I31 / SFA16-I31T),SFA14-11,11,short-list,,,
+Swift Air 16 (SFA16-I31 / SFA16-I31T),SFA14-51M,10,oem-os-not-listed,,,
+Swift Air 16 (SFA16-I31 / SFA16-I31T),SFA14-51M,11,oem-wlan-listed,Wireless LAN_Realtek_6001.15.160.0_W11x64_(RTL8852BE).zip,6001.15.160.0,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Realtek_6001.15.160.0_W11x64_A.zip?acerid=639113256142581266&Step1=&Step2=&Step3=SWIFT%20SFA14-51M&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Air 16 (SFA16-I31 / SFA16-I31T),SFA14-52M,10,oem-os-not-listed,,,
+Swift Air 16 (SFA16-I31 / SFA16-I31T),SFA14-52M,11,oem-wlan-listed,Wireless LAN_Intel_23.170.0.1_W11x64_(AX201).zip,23.170.0.1,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.170.0.1_W11x64_A.zip?acerid=639177819231684046&Step1=&Step2=&Step3=SWIFT%20SFA14-52M&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Air 16 (SFA16-I31 / SFA16-I31T),SFA14-54M,10,oem-os-not-listed,,,
+Swift Air 16 (SFA16-I31 / SFA16-I31T),SFA14-54M,11,oem-wlan-listed,Wireless LAN_Intel_23.160.0.4_W11x64_(AX211).zip,23.160.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.160.0.4_W11x64_A.zip?acerid=639233101350864475&Step1=&Step2=&Step3=SWIFT%20SFA14-54M&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Air 16 (SFA16-I31 / SFA16-I31T),SFA14-55M,10,oem-os-not-listed,,,
+Swift Air 16 (SFA16-I31 / SFA16-I31T),SFA14-55M,11,short-list,,,
+Swift Air 16 (SFA16-I31 / SFA16-I31T),SFA14-56M,10,near-model-match,,,
+Swift Air 16 (SFA16-I31 / SFA16-I31T),SFA14-56M,11,near-model-match,,,
+Swift Air 16 (SFA16-I31 / SFA16-I31T),SFA14-61M,10,near-model-match,,,
+Swift Air 16 (SFA16-I31 / SFA16-I31T),SFA14-61M,11,near-model-match,,,
+Swift Air 16 (SFA16-I31 / SFA16-I31T),SFA14-62M,10,near-model-match,,,
+Swift Air 16 (SFA16-I31 / SFA16-I31T),SFA14-62M,11,near-model-match,,,
+Swift Air 16 (SFA16-I31 / SFA16-I31T),SFA14-71M,10,near-model-match,,,
+Swift Air 16 (SFA16-I31 / SFA16-I31T),SFA14-71M,11,near-model-match,,,
+Swift Air 16 (SFA16-I31 / SFA16-I31T),SFA14-72M,10,near-model-match,,,
+Swift Air 16 (SFA16-I31 / SFA16-I31T),SFA14-72M,11,near-model-match,,,
+Swift Air 16 (SFA16-I31 / SFA16-I31T),SFA14-I31,10,near-model-match,,,
+Swift Air 16 (SFA16-I31 / SFA16-I31T),SFA14-I31,11,near-model-match,,,
+Swift Edge 14 AI,SFE14-51T,10,oem-os-not-listed,,,
+Swift Edge 14 AI,SFE14-51T,11,oem-wlan-listed,Wireless LAN_Killer_23.160.0.4_W11x64_BE1750i.zip,23.160.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_23.160.0.4_W11x64_A.zip?acerid=638941043257176925&Step1=&Step2=&Step3=SWIFT%20SFE14-51T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Edge 14 AI,SFE14-I51,10,oem-os-not-listed,,,
+Swift Edge 14 AI,SFE14-I51,11,oem-wlan-listed,Wireless LAN_Killer_40.25.1010.181_W11x64_(1775s).zip,40.25.1010.181,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_40.25.1010.181_W11x64_A.zip?acerid=639099356739145325&Step1=&Step2=&Step3=SWIFT%20SFE14-I51&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Edge 14/16 AI Intel,SFA16-41,10,near-model-match,,,
+Swift Edge 14/16 AI Intel,SFA16-41,11,near-model-match,,,
+Swift Edge 14/16 AI Intel,SFA16-51M,10,near-model-match,,,
+Swift Edge 14/16 AI Intel,SFA16-51M,11,near-model-match,,,
+Swift Edge 14/16 AI Intel,SFA16-61M,10,oem-os-not-listed,,,
+Swift Edge 14/16 AI Intel,SFA16-61M,11,oem-wlan-listed,Wireless LAN_Realtek_6001.16.169.0_W11x64_(8852CE).zip,6001.16.169.0,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Realtek_6001.16.169.0_W11x64_A.zip?acerid=639002655649568072&Step1=&Step2=&Step3=SWIFT%20SFA16-61M&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Edge 14/16 AI Intel,SFA16-62M,10,oem-os-not-listed,,,
+Swift Edge 14/16 AI Intel,SFA16-62M,11,oem-wlan-listed,Wireless LAN_Realtek_6001.16.169.0_W11x64_(8852CE).zip,6001.16.169.0,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Realtek_6001.16.169.0_W11x64_A.zip?acerid=639244556177285088&Step1=&Step2=&Step3=SWIFT%20SFA16-62M&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Edge 16,SFE16-42,10,near-model-match,,,
+Swift Edge 16,SFE16-42,11,near-model-match,,,
+Swift Edge 16,SFE16-43,10,near-model-match,,,
+Swift Edge 16,SFE16-43,11,near-model-match,,,
+Swift Edge 16,SFE16-44,10,near-model-match,,,
+Swift Edge 16,SFE16-44,11,near-model-match,,,
+Swift Edge 16,SFE16-I51,10,near-model-match,,,
+Swift Edge 16,SFE16-I51,11,near-model-match,,,
+Swift Go 14,SFG14-01,10,near-model-match,,,
+Swift Go 14,SFG14-01,11,near-model-match,,,
+Swift Go 14,SFG14-41,10,near-model-match,,,
+Swift Go 14,SFG14-41,11,near-model-match,,,
+Swift Go 14,SFG14-42,10,oem-os-not-listed,,,
+Swift Go 14,SFG14-42,11,oem-wlan-listed,Wireless LAN_MTK_3.4.0.1046_W11x64_(MTRZ616).zip,3.4.0.1046,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.4.0.1046_W11x64_A.zip?acerid=638647418340352826&Step1=&Step2=&Step3=SFG14-42&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 14,SFG14-63,10,oem-os-not-listed,,,
+Swift Go 14,SFG14-63,11,oem-wlan-listed,Wireless LAN_MTK_3.5.0.1349_W11x64_(MTRZ616).zip,3.5.0.1349,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.5.0.1349_W11x64_A.zip?acerid=639198690049390580&Step1=&Step2=&Step3=SFG14-63&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 14,SFG14-63T,10,oem-os-not-listed,,,
+Swift Go 14,SFG14-63T,11,oem-wlan-listed,Wireless LAN_MTK_3.5.0.1349_W11x64_(MTRZ616).zip,3.5.0.1349,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.5.0.1349_W11x64_A.zip?acerid=639198690049390580&Step1=&Step2=&Step3=SFG14-63T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 14,SFG14-64,10,oem-os-not-listed,,,
+Swift Go 14,SFG14-64,11,oem-wlan-listed,Wireless LAN_MTK_5.5.0.3175_W11x64_MT7925.zip,5.5.0.3175,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_5.5.0.3175_W11x64_A.zip?acerid=638784762282969173&Step1=&Step2=&Step3=SWIFT%20SFG14-64&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 14,SFG14-71,10,oem-os-not-listed,,,
+Swift Go 14,SFG14-71,11,oem-wlan-listed,Wireless LAN_Intel_23.30.0.6_W11x64_(AX211).zip,23.30.0.6,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.30.0.6_W11x64_A.zip?acerid=638769339967369577&Step1=&Step2=&Step3=SFG14-71&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 14,SFG14-71T,10,oem-os-not-listed,,,
+Swift Go 14,SFG14-71T,11,oem-wlan-listed,Wireless LAN_Intel_23.30.0.6_W11x64_(AX211).zip,23.30.0.6,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.30.0.6_W11x64_A.zip?acerid=638769339967369577&Step1=&Step2=&Step3=SFG14-71T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 14,SFG14-72,10,oem-os-not-listed,,,
+Swift Go 14,SFG14-72,11,oem-wlan-listed,Wireless LAN_Intel_23.0.6.4_W11x64_(AX211).zip,23.0.6.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.0.6.4_W11x64_A.zip?acerid=638386572376223206&Step1=&Step2=&Step3=SFG14-72&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 14,SFG14-72T,10,oem-os-not-listed,,,
+Swift Go 14,SFG14-72T,11,oem-wlan-listed,Wireless LAN_Intel_23.0.6.4_W11x64_(AX211).zip,23.0.6.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.0.6.4_W11x64_A.zip?acerid=638386572376223206&Step1=&Step2=&Step3=SFG14-72T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 14,SFG14-73,10,oem-os-not-listed,,,
+Swift Go 14,SFG14-73,11,oem-wlan-listed,Wireless LAN_Intel_23.30.0.6_W11x64_(AX211).zip,23.30.0.6,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.30.0.6_W11x64_A.zip?acerid=638627466530698278&Step1=&Step2=&Step3=SFG14-73&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 14,SFG14-73T,10,oem-os-not-listed,,,
+Swift Go 14,SFG14-73T,11,oem-wlan-listed,Wireless LAN_Intel_23.30.0.6_W11x64_(AX211).zip,23.30.0.6,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.30.0.6_W11x64_A.zip?acerid=638627466530698278&Step1=&Step2=&Step3=SFG14-73T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 14,SFG14-74,10,oem-os-not-listed,,,
+Swift Go 14,SFG14-74,11,oem-wlan-listed,Wireless LAN_Intel_23.100.0.4_W11x64_BE201.zip,23.100.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.100.0.4_W11x64_A.zip?acerid=638784749387036801&Step1=&Step2=&Step3=SWIFT%20SFG14-74&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 14,SFG14-74T,10,oem-os-not-listed,,,
+Swift Go 14,SFG14-74T,11,oem-wlan-listed,Wireless LAN_Intel_23.100.0.4_W11x64_BE201.zip,23.100.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.100.0.4_W11x64_A.zip?acerid=638784749387036801&Step1=&Step2=&Step3=SWIFT%20SFG14-74T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 14,SFG14-75,10,oem-os-not-listed,,,
+Swift Go 14,SFG14-75,11,oem-wlan-listed,Wireless LAN_Intel_24.50.0.4_W11x64_(BE201).zip,24.50.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_24.50.0.4_W11x64_A.zip?acerid=639216893082786788&Step1=&Step2=&Step3=SWIFT%20SFG14-75&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 14,SFG14-75T,10,oem-os-not-listed,,,
+Swift Go 14,SFG14-75T,11,oem-wlan-listed,Wireless LAN_Intel_24.50.0.4_W11x64_(BE201).zip,24.50.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_24.50.0.4_W11x64_A.zip?acerid=639216893082786788&Step1=&Step2=&Step3=SWIFT%20SFG14-75T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 14,SFG14-I71,10,near-model-match,,,
+Swift Go 14,SFG14-I71,11,near-model-match,,,
+Swift Go 14 AI AMD,SFG14-01,10,near-model-match,,,
+Swift Go 14 AI AMD,SFG14-01,11,near-model-match,,,
+Swift Go 14 AI AMD,SFG14-41,10,near-model-match,,,
+Swift Go 14 AI AMD,SFG14-41,11,near-model-match,,,
+Swift Go 14 AI AMD,SFG14-42,10,near-model-match,,,
+Swift Go 14 AI AMD,SFG14-42,11,near-model-match,,,
+Swift Go 14 AI AMD,SFG14-63,10,near-model-match,,,
+Swift Go 14 AI AMD,SFG14-63,11,near-model-match,,,
+Swift Go 14 AI AMD,SFG14-63T,10,near-model-match,,,
+Swift Go 14 AI AMD,SFG14-63T,11,near-model-match,,,
+Swift Go 14 AI AMD,SFG14-64,10,near-model-match,,,
+Swift Go 14 AI AMD,SFG14-64,11,near-model-match,,,
+Swift Go 14 AI AMD,SFG14-71,10,oem-os-not-listed,,,
+Swift Go 14 AI AMD,SFG14-71,11,oem-wlan-listed,Wireless LAN_Intel_23.30.0.6_W11x64_(AX211).zip,23.30.0.6,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.30.0.6_W11x64_A.zip?acerid=638769339967369577&Step1=&Step2=&Step3=SFG14-71&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 14 AI AMD,SFG14-71T,10,near-model-match,,,
+Swift Go 14 AI AMD,SFG14-71T,11,near-model-match,,,
+Swift Go 14 AI AMD,SFG14-72,10,near-model-match,,,
+Swift Go 14 AI AMD,SFG14-72,11,near-model-match,,,
+Swift Go 14 AI AMD,SFG14-72T,10,near-model-match,,,
+Swift Go 14 AI AMD,SFG14-72T,11,near-model-match,,,
+Swift Go 14 AI AMD,SFG14-73,10,near-model-match,,,
+Swift Go 14 AI AMD,SFG14-73,11,near-model-match,,,
+Swift Go 14 AI AMD,SFG14-73T,10,near-model-match,,,
+Swift Go 14 AI AMD,SFG14-73T,11,near-model-match,,,
+Swift Go 14 AI AMD,SFG14-74,10,near-model-match,,,
+Swift Go 14 AI AMD,SFG14-74,11,near-model-match,,,
+Swift Go 14 AI AMD,SFG14-74T,10,near-model-match,,,
+Swift Go 14 AI AMD,SFG14-74T,11,near-model-match,,,
+Swift Go 14 AI AMD,SFG14-75,10,near-model-match,,,
+Swift Go 14 AI AMD,SFG14-75,11,near-model-match,,,
+Swift Go 14 AI AMD,SFG14-75T,10,near-model-match,,,
+Swift Go 14 AI AMD,SFG14-75T,11,near-model-match,,,
+Swift Go 14 AI AMD,SFG14-I71,10,near-model-match,,,
+Swift Go 14 AI AMD,SFG14-I71,11,near-model-match,,,
+Swift Go 14 AI Intel,SFG14-01,10,near-model-match,,,
+Swift Go 14 AI Intel,SFG14-01,11,near-model-match,,,
+Swift Go 14 AI Intel,SFG14-41,10,oem-os-not-listed,,,
+Swift Go 14 AI Intel,SFG14-41,11,oem-wlan-listed,Wireless LAN_MTK_3.3.0.789_W11x64_(MTRZ616).zip,3.3.0.789,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.3.0.789_W11x64_A.zip?acerid=638348500958891918&Step1=&Step2=&Step3=SFG14-41&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 14 AI Intel,SFG14-42,10,oem-os-not-listed,,,
+Swift Go 14 AI Intel,SFG14-42,11,oem-wlan-listed,Wireless LAN_MTK_3.4.0.1046_W11x64_(MTRZ616).zip,3.4.0.1046,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.4.0.1046_W11x64_A.zip?acerid=638647418340352826&Step1=&Step2=&Step3=SFG14-42&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 14 AI Intel,SFG14-63,10,oem-os-not-listed,,,
+Swift Go 14 AI Intel,SFG14-63,11,oem-wlan-listed,Wireless LAN_MTK_3.5.0.1349_W11x64_(MTRZ616).zip,3.5.0.1349,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.5.0.1349_W11x64_A.zip?acerid=639198690049390580&Step1=&Step2=&Step3=SFG14-63&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 14 AI Intel,SFG14-63T,10,oem-os-not-listed,,,
+Swift Go 14 AI Intel,SFG14-63T,11,oem-wlan-listed,Wireless LAN_MTK_3.5.0.1349_W11x64_(MTRZ616).zip,3.5.0.1349,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.5.0.1349_W11x64_A.zip?acerid=639198690049390580&Step1=&Step2=&Step3=SFG14-63T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 14 AI Intel,SFG14-64,10,near-model-match,,,
+Swift Go 14 AI Intel,SFG14-64,11,near-model-match,,,
+Swift Go 14 AI Intel,SFG14-71,10,oem-os-not-listed,,,
+Swift Go 14 AI Intel,SFG14-71,11,oem-wlan-listed,Wireless LAN_Intel_23.30.0.6_W11x64_(AX211).zip,23.30.0.6,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.30.0.6_W11x64_A.zip?acerid=638769339967369577&Step1=&Step2=&Step3=SFG14-71&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 14 AI Intel,SFG14-71T,10,oem-os-not-listed,,,
+Swift Go 14 AI Intel,SFG14-71T,11,oem-wlan-listed,Wireless LAN_Intel_23.30.0.6_W11x64_(AX211).zip,23.30.0.6,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.30.0.6_W11x64_A.zip?acerid=638769339967369577&Step1=&Step2=&Step3=SFG14-71T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 14 AI Intel,SFG14-72,10,oem-os-not-listed,,,
+Swift Go 14 AI Intel,SFG14-72,11,oem-wlan-listed,Wireless LAN_Intel_23.0.6.4_W11x64_(AX211).zip,23.0.6.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.0.6.4_W11x64_A.zip?acerid=638386572376223206&Step1=&Step2=&Step3=SFG14-72&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 14 AI Intel,SFG14-72T,10,oem-os-not-listed,,,
+Swift Go 14 AI Intel,SFG14-72T,11,oem-wlan-listed,Wireless LAN_Intel_23.0.6.4_W11x64_(AX211).zip,23.0.6.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.0.6.4_W11x64_A.zip?acerid=638386572376223206&Step1=&Step2=&Step3=SFG14-72T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 14 AI Intel,SFG14-73,10,oem-os-not-listed,,,
+Swift Go 14 AI Intel,SFG14-73,11,oem-wlan-listed,Wireless LAN_Intel_23.30.0.6_W11x64_(AX211).zip,23.30.0.6,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.30.0.6_W11x64_A.zip?acerid=638627466530698278&Step1=&Step2=&Step3=SFG14-73&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 14 AI Intel,SFG14-73T,10,oem-os-not-listed,,,
+Swift Go 14 AI Intel,SFG14-73T,11,oem-wlan-listed,Wireless LAN_Intel_23.30.0.6_W11x64_(AX211).zip,23.30.0.6,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.30.0.6_W11x64_A.zip?acerid=638627466530698278&Step1=&Step2=&Step3=SFG14-73T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 14 AI Intel,SFG14-74,10,oem-os-not-listed,,,
+Swift Go 14 AI Intel,SFG14-74,11,oem-wlan-listed,Wireless LAN_Intel_23.100.0.4_W11x64_BE201.zip,23.100.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.100.0.4_W11x64_A.zip?acerid=638784749387036801&Step1=&Step2=&Step3=SWIFT%20SFG14-74&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 14 AI Intel,SFG14-74T,10,oem-os-not-listed,,,
+Swift Go 14 AI Intel,SFG14-74T,11,oem-wlan-listed,Wireless LAN_Intel_23.100.0.4_W11x64_BE201.zip,23.100.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.100.0.4_W11x64_A.zip?acerid=638784749387036801&Step1=&Step2=&Step3=SWIFT%20SFG14-74T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 14 AI Intel,SFG14-75,10,oem-os-not-listed,,,
+Swift Go 14 AI Intel,SFG14-75,11,oem-wlan-listed,Wireless LAN_Intel_24.50.0.4_W11x64_(BE201).zip,24.50.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_24.50.0.4_W11x64_A.zip?acerid=639216893082786788&Step1=&Step2=&Step3=SWIFT%20SFG14-75&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 14 AI Intel,SFG14-75T,10,oem-os-not-listed,,,
+Swift Go 14 AI Intel,SFG14-75T,11,oem-wlan-listed,Wireless LAN_Intel_24.50.0.4_W11x64_(BE201).zip,24.50.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_24.50.0.4_W11x64_A.zip?acerid=639216893082786788&Step1=&Step2=&Step3=SWIFT%20SFG14-75T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 14 AI Intel,SFG14-I71,10,oem-os-not-listed,,,
+Swift Go 14 AI Intel,SFG14-I71,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1015.183_W11x64_(ICPS).zip,50.25.1015.183,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1015.183_W11x64_A.zip?acerid=639099350337238535&Step1=&Step2=&Step3=SWIFT%20SFG14-I71&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 14 AI Snapdragon,SFG14-01,10,near-model-match,,,
+Swift Go 14 AI Snapdragon,SFG14-01,11,near-model-match,,,
+Swift Go 14 AI Snapdragon,SFG14-41,10,near-model-match,,,
+Swift Go 14 AI Snapdragon,SFG14-41,11,near-model-match,,,
+Swift Go 14 AI Snapdragon,SFG14-42,10,near-model-match,,,
+Swift Go 14 AI Snapdragon,SFG14-42,11,near-model-match,,,
+Swift Go 14 AI Snapdragon,SFG14-63,10,near-model-match,,,
+Swift Go 14 AI Snapdragon,SFG14-63,11,near-model-match,,,
+Swift Go 14 AI Snapdragon,SFG14-63T,10,near-model-match,,,
+Swift Go 14 AI Snapdragon,SFG14-63T,11,near-model-match,,,
+Swift Go 14 AI Snapdragon,SFG14-64,10,near-model-match,,,
+Swift Go 14 AI Snapdragon,SFG14-64,11,near-model-match,,,
+Swift Go 14 AI Snapdragon,SFG14-71,10,near-model-match,,,
+Swift Go 14 AI Snapdragon,SFG14-71,11,near-model-match,,,
+Swift Go 14 AI Snapdragon,SFG14-71T,10,near-model-match,,,
+Swift Go 14 AI Snapdragon,SFG14-71T,11,near-model-match,,,
+Swift Go 14 AI Snapdragon,SFG14-72,10,near-model-match,,,
+Swift Go 14 AI Snapdragon,SFG14-72,11,near-model-match,,,
+Swift Go 14 AI Snapdragon,SFG14-72T,10,near-model-match,,,
+Swift Go 14 AI Snapdragon,SFG14-72T,11,near-model-match,,,
+Swift Go 14 AI Snapdragon,SFG14-73,10,near-model-match,,,
+Swift Go 14 AI Snapdragon,SFG14-73,11,near-model-match,,,
+Swift Go 14 AI Snapdragon,SFG14-73T,10,near-model-match,,,
+Swift Go 14 AI Snapdragon,SFG14-73T,11,near-model-match,,,
+Swift Go 14 AI Snapdragon,SFG14-74,10,near-model-match,,,
+Swift Go 14 AI Snapdragon,SFG14-74,11,near-model-match,,,
+Swift Go 14 AI Snapdragon,SFG14-74T,10,near-model-match,,,
+Swift Go 14 AI Snapdragon,SFG14-74T,11,near-model-match,,,
+Swift Go 14 AI Snapdragon,SFG14-75,10,near-model-match,,,
+Swift Go 14 AI Snapdragon,SFG14-75,11,near-model-match,,,
+Swift Go 14 AI Snapdragon,SFG14-75T,10,near-model-match,,,
+Swift Go 14 AI Snapdragon,SFG14-75T,11,near-model-match,,,
+Swift Go 14 AI Snapdragon,SFG14-I71,10,near-model-match,,,
+Swift Go 14 AI Snapdragon,SFG14-I71,11,near-model-match,,,
+Swift Go 14 AMD,SFG14-01,10,near-model-match,,,
+Swift Go 14 AMD,SFG14-01,11,near-model-match,,,
+Swift Go 14 AMD,SFG14-41,10,near-model-match,,,
+Swift Go 14 AMD,SFG14-41,11,near-model-match,,,
+Swift Go 14 AMD,SFG14-42,10,near-model-match,,,
+Swift Go 14 AMD,SFG14-42,11,near-model-match,,,
+Swift Go 14 AMD,SFG14-63,10,near-model-match,,,
+Swift Go 14 AMD,SFG14-63,11,near-model-match,,,
+Swift Go 14 AMD,SFG14-63T,10,near-model-match,,,
+Swift Go 14 AMD,SFG14-63T,11,near-model-match,,,
+Swift Go 14 AMD,SFG14-64,10,near-model-match,,,
+Swift Go 14 AMD,SFG14-64,11,near-model-match,,,
+Swift Go 14 AMD,SFG14-71,10,near-model-match,,,
+Swift Go 14 AMD,SFG14-71,11,near-model-match,,,
+Swift Go 14 AMD,SFG14-71T,10,near-model-match,,,
+Swift Go 14 AMD,SFG14-71T,11,near-model-match,,,
+Swift Go 14 AMD,SFG14-72,10,near-model-match,,,
+Swift Go 14 AMD,SFG14-72,11,near-model-match,,,
+Swift Go 14 AMD,SFG14-72T,10,near-model-match,,,
+Swift Go 14 AMD,SFG14-72T,11,near-model-match,,,
+Swift Go 14 AMD,SFG14-73,10,near-model-match,,,
+Swift Go 14 AMD,SFG14-73,11,near-model-match,,,
+Swift Go 14 AMD,SFG14-73T,10,oem-os-not-listed,,,
+Swift Go 14 AMD,SFG14-73T,11,oem-wlan-listed,Wireless LAN_Intel_23.30.0.6_W11x64_(AX211).zip,23.30.0.6,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.30.0.6_W11x64_A.zip?acerid=638627466530698278&Step1=&Step2=&Step3=SFG14-73T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 14 AMD,SFG14-74,10,oem-os-not-listed,,,
+Swift Go 14 AMD,SFG14-74,11,oem-wlan-listed,Wireless LAN_Intel_23.100.0.4_W11x64_BE201.zip,23.100.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.100.0.4_W11x64_A.zip?acerid=638784749387036801&Step1=&Step2=&Step3=SWIFT%20SFG14-74&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 14 AMD,SFG14-74T,10,oem-os-not-listed,,,
+Swift Go 14 AMD,SFG14-74T,11,oem-wlan-listed,Wireless LAN_Intel_23.100.0.4_W11x64_BE201.zip,23.100.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.100.0.4_W11x64_A.zip?acerid=638784749387036801&Step1=&Step2=&Step3=SWIFT%20SFG14-74T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 14 AMD,SFG14-75,10,oem-os-not-listed,,,
+Swift Go 14 AMD,SFG14-75,11,oem-wlan-listed,Wireless LAN_Intel_24.50.0.4_W11x64_(BE201).zip,24.50.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_24.50.0.4_W11x64_A.zip?acerid=639216893082786788&Step1=&Step2=&Step3=SWIFT%20SFG14-75&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 14 AMD,SFG14-75T,10,oem-os-not-listed,,,
+Swift Go 14 AMD,SFG14-75T,11,oem-wlan-listed,Wireless LAN_Intel_24.50.0.4_W11x64_(BE201).zip,24.50.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_24.50.0.4_W11x64_A.zip?acerid=639216893082786788&Step1=&Step2=&Step3=SWIFT%20SFG14-75T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 14 AMD,SFG14-I71,10,near-model-match,,,
+Swift Go 14 AMD,SFG14-I71,11,near-model-match,,,
+Swift Go 14/16 AI Intel,SFG14-01,10,support-list-empty,,,
+Swift Go 14/16 AI Intel,SFG14-01,11,short-list,,,
+Swift Go 14/16 AI Intel,SFG14-41,10,oem-os-not-listed,,,
+Swift Go 14/16 AI Intel,SFG14-41,11,oem-wlan-listed,Wireless LAN_MTK_3.3.0.789_W11x64_(MTRZ616).zip,3.3.0.789,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.3.0.789_W11x64_A.zip?acerid=638348500958891918&Step1=&Step2=&Step3=SFG14-41&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 14/16 AI Intel,SFG14-42,10,oem-os-not-listed,,,
+Swift Go 14/16 AI Intel,SFG14-42,11,oem-wlan-listed,Wireless LAN_MTK_3.4.0.1046_W11x64_(MTRZ616).zip,3.4.0.1046,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.4.0.1046_W11x64_A.zip?acerid=638647418340352826&Step1=&Step2=&Step3=SFG14-42&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 14/16 AI Intel,SFG14-63,10,oem-os-not-listed,,,
+Swift Go 14/16 AI Intel,SFG14-63,11,oem-wlan-listed,Wireless LAN_MTK_3.5.0.1349_W11x64_(MTRZ616).zip,3.5.0.1349,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.5.0.1349_W11x64_A.zip?acerid=639198690049390580&Step1=&Step2=&Step3=SFG14-63&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 14/16 AI Intel,SFG14-63T,10,oem-os-not-listed,,,
+Swift Go 14/16 AI Intel,SFG14-63T,11,oem-wlan-listed,Wireless LAN_MTK_3.5.0.1349_W11x64_(MTRZ616).zip,3.5.0.1349,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.5.0.1349_W11x64_A.zip?acerid=639198690049390580&Step1=&Step2=&Step3=SFG14-63T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 14/16 AI Intel,SFG14-64,10,oem-os-not-listed,,,
+Swift Go 14/16 AI Intel,SFG14-64,11,oem-wlan-listed,Wireless LAN_MTK_5.5.0.3175_W11x64_MT7925.zip,5.5.0.3175,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_5.5.0.3175_W11x64_A.zip?acerid=638784762282969173&Step1=&Step2=&Step3=SWIFT%20SFG14-64&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 14/16 AI Intel,SFG14-71,10,oem-os-not-listed,,,
+Swift Go 14/16 AI Intel,SFG14-71,11,oem-wlan-listed,Wireless LAN_Intel_23.30.0.6_W11x64_(AX211).zip,23.30.0.6,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.30.0.6_W11x64_A.zip?acerid=638769339967369577&Step1=&Step2=&Step3=SFG14-71&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 14/16 AI Intel,SFG14-71T,10,oem-os-not-listed,,,
+Swift Go 14/16 AI Intel,SFG14-71T,11,oem-wlan-listed,Wireless LAN_Intel_23.30.0.6_W11x64_(AX211).zip,23.30.0.6,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.30.0.6_W11x64_A.zip?acerid=638769339967369577&Step1=&Step2=&Step3=SFG14-71T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 14/16 AI Intel,SFG14-72,10,oem-os-not-listed,,,
+Swift Go 14/16 AI Intel,SFG14-72,11,oem-wlan-listed,Wireless LAN_Intel_23.0.6.4_W11x64_(AX211).zip,23.0.6.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.0.6.4_W11x64_A.zip?acerid=638386572376223206&Step1=&Step2=&Step3=SFG14-72&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 14/16 AI Intel,SFG14-72T,10,oem-os-not-listed,,,
+Swift Go 14/16 AI Intel,SFG14-72T,11,oem-wlan-listed,Wireless LAN_Intel_23.0.6.4_W11x64_(AX211).zip,23.0.6.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.0.6.4_W11x64_A.zip?acerid=638386572376223206&Step1=&Step2=&Step3=SFG14-72T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 14/16 AI Intel,SFG14-73,10,near-model-match,,,
+Swift Go 14/16 AI Intel,SFG14-73,11,near-model-match,,,
+Swift Go 14/16 AI Intel,SFG14-73T,10,near-model-match,,,
+Swift Go 14/16 AI Intel,SFG14-73T,11,near-model-match,,,
+Swift Go 14/16 AI Intel,SFG14-74,10,near-model-match,,,
+Swift Go 14/16 AI Intel,SFG14-74,11,near-model-match,,,
+Swift Go 14/16 AI Intel,SFG14-74T,10,near-model-match,,,
+Swift Go 14/16 AI Intel,SFG14-74T,11,near-model-match,,,
+Swift Go 14/16 AI Intel,SFG14-75,10,near-model-match,,,
+Swift Go 14/16 AI Intel,SFG14-75,11,near-model-match,,,
+Swift Go 14/16 AI Intel,SFG14-75T,10,near-model-match,,,
+Swift Go 14/16 AI Intel,SFG14-75T,11,near-model-match,,,
+Swift Go 14/16 AI Intel,SFG14-I71,10,near-model-match,,,
+Swift Go 14/16 AI Intel,SFG14-I71,11,near-model-match,,,
+Swift Go 16,SFG16-61,10,oem-os-not-listed,,,
+Swift Go 16,SFG16-61,11,oem-wlan-listed,Wireless LAN_MTK_5.7.0.4669_W11x64_MT7925.zip,5.7.0.4669,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_5.7.0.4669_W11x64_A.zip?acerid=639035201571981600&Step1=&Step2=&Step3=SWIFT%20SFG16-61&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 16,SFG16-71,10,oem-os-not-listed,,,
+Swift Go 16,SFG16-71,11,oem-wlan-listed,Wireless LAN_Intel_23.30.0.6_W11x64_(AX211).zip,23.30.0.6,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.30.0.6_W11x64_A.zip?acerid=638620722128688156&Step1=&Step2=&Step3=SFG16-71&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 16,SFG16-72,10,oem-os-not-listed,,,
+Swift Go 16,SFG16-72,11,oem-wlan-listed,Wireless LAN_Intel_23.160.0.4_W11x64_(AX211).zip,23.160.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.160.0.4_W11x64_A.zip?acerid=639222123911437499&Step1=&Step2=&Step3=SFG16-72&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 16,SFG16-72T,10,oem-os-not-listed,,,
+Swift Go 16,SFG16-72T,11,oem-wlan-listed,Wireless LAN_Intel_23.160.0.4_W11x64_(AX211).zip,23.160.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.160.0.4_W11x64_A.zip?acerid=639222123911437499&Step1=&Step2=&Step3=SFG16-72T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 16,SFG16-73,10,oem-os-not-listed,,,
+Swift Go 16,SFG16-73,11,oem-wlan-listed,Wireless LAN_Intel_23.100.0.4_W11x64_BE201.zip,23.100.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.100.0.4_W11x64_A.zip?acerid=638784834954455059&Step1=&Step2=&Step3=SWIFT%20SFG16-73&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 16,SFG16-74,10,oem-os-not-listed,,,
+Swift Go 16,SFG16-74,11,oem-wlan-listed,Wireless LAN_Intel_24.50.0.4_W11x64_(BE201).zip,24.50.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_24.50.0.4_W11x64_A.zip?acerid=639234159093160189&Step1=&Step2=&Step3=SWIFT%20SFG16-74&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 16,SFG16-74T,10,oem-os-not-listed,,,
+Swift Go 16,SFG16-74T,11,oem-wlan-listed,Wireless LAN_Intel_24.50.0.4_W11x64_(BE201).zip,24.50.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_24.50.0.4_W11x64_A.zip?acerid=639234159093160189&Step1=&Step2=&Step3=SWIFT%20SFG16-74T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 16,SFG16-A71,10,oem-os-not-listed,,,
+Swift Go 16,SFG16-A71,11,oem-wlan-listed,Wireless LAN_MTK_5.7.0.4669_W11x64_MT7925.zip,5.7.0.4669,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_5.7.0.4669_W11x64_A.zip?acerid=639167679654587777&Step1=&Step2=&Step3=SWIFT%20SFG16-A71&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 16,SFG16-A71T,10,oem-os-not-listed,,,
+Swift Go 16,SFG16-A71T,11,oem-wlan-listed,Wireless LAN_MTK_5.7.0.4669_W11x64_MT7925.zip,5.7.0.4669,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_5.7.0.4669_W11x64_A.zip?acerid=639075266280150337&Step1=&Step2=&Step3=SWIFT%20SFG16-A71T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 16,SFG16-I71,10,near-model-match,,,
+Swift Go 16,SFG16-I71,11,near-model-match,,,
+Swift Go 16,SFG16-I71T,10,oem-os-not-listed,,,
+Swift Go 16,SFG16-I71T,11,oem-wlan-listed,Wireless LAN_Intel_24.10.0.4_W11x64_(BE211).zip,24.10.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_24.10.0.4_W11x64_A.zip?acerid=639197817440688355&Step1=&Step2=&Step3=SWIFT%20SFG16-I71T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 16 AI AMD,SFG16-61,10,near-model-match,,,
+Swift Go 16 AI AMD,SFG16-61,11,near-model-match,,,
+Swift Go 16 AI AMD,SFG16-71,10,near-model-match,,,
+Swift Go 16 AI AMD,SFG16-71,11,near-model-match,,,
+Swift Go 16 AI AMD,SFG16-72,10,near-model-match,,,
+Swift Go 16 AI AMD,SFG16-72,11,near-model-match,,,
+Swift Go 16 AI AMD,SFG16-72T,10,oem-os-not-listed,,,
+Swift Go 16 AI AMD,SFG16-72T,11,oem-wlan-listed,Wireless LAN_Intel_23.160.0.4_W11x64_(AX211).zip,23.160.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.160.0.4_W11x64_A.zip?acerid=639222123911437499&Step1=&Step2=&Step3=SFG16-72T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 16 AI AMD,SFG16-73,10,oem-os-not-listed,,,
+Swift Go 16 AI AMD,SFG16-73,11,oem-wlan-listed,Wireless LAN_Intel_23.100.0.4_W11x64_BE201.zip,23.100.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.100.0.4_W11x64_A.zip?acerid=638784834954455059&Step1=&Step2=&Step3=SWIFT%20SFG16-73&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 16 AI AMD,SFG16-74,10,oem-os-not-listed,,,
+Swift Go 16 AI AMD,SFG16-74,11,oem-wlan-listed,Wireless LAN_Intel_24.50.0.4_W11x64_(BE201).zip,24.50.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_24.50.0.4_W11x64_A.zip?acerid=639234159093160189&Step1=&Step2=&Step3=SWIFT%20SFG16-74&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 16 AI AMD,SFG16-74T,10,oem-os-not-listed,,,
+Swift Go 16 AI AMD,SFG16-74T,11,oem-wlan-listed,Wireless LAN_Intel_24.50.0.4_W11x64_(BE201).zip,24.50.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_24.50.0.4_W11x64_A.zip?acerid=639234159093160189&Step1=&Step2=&Step3=SWIFT%20SFG16-74T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 16 AI AMD,SFG16-A71,10,oem-os-not-listed,,,
+Swift Go 16 AI AMD,SFG16-A71,11,oem-wlan-listed,Wireless LAN_MTK_5.7.0.4669_W11x64_MT7925.zip,5.7.0.4669,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_5.7.0.4669_W11x64_A.zip?acerid=639167679654587777&Step1=&Step2=&Step3=SWIFT%20SFG16-A71&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 16 AI AMD,SFG16-A71T,10,oem-os-not-listed,,,
+Swift Go 16 AI AMD,SFG16-A71T,11,oem-wlan-listed,Wireless LAN_MTK_5.7.0.4669_W11x64_MT7925.zip,5.7.0.4669,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_5.7.0.4669_W11x64_A.zip?acerid=639075266280150337&Step1=&Step2=&Step3=SWIFT%20SFG16-A71T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 16 AI AMD,SFG16-I71,10,oem-os-not-listed,,,
+Swift Go 16 AI AMD,SFG16-I71,11,oem-wlan-listed,Wireless LAN_Intel_24.10.0.4_W11x64_(BE211).zip,24.10.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_24.10.0.4_W11x64_A.zip?acerid=639197817440688355&Step1=&Step2=&Step3=SWIFT%20SFG16-I71&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 16 AI AMD,SFG16-I71T,10,oem-os-not-listed,,,
+Swift Go 16 AI AMD,SFG16-I71T,11,oem-wlan-listed,Wireless LAN_Intel_24.10.0.4_W11x64_(BE211).zip,24.10.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_24.10.0.4_W11x64_A.zip?acerid=639197817440688355&Step1=&Step2=&Step3=SWIFT%20SFG16-I71T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Go 16 AI Intel,SFG16-61,10,near-model-match,,,
+Swift Go 16 AI Intel,SFG16-61,11,near-model-match,,,
+Swift Go 16 AI Intel,SFG16-71,10,near-model-match,,,
+Swift Go 16 AI Intel,SFG16-71,11,near-model-match,,,
+Swift Go 16 AI Intel,SFG16-72,10,near-model-match,,,
+Swift Go 16 AI Intel,SFG16-72,11,near-model-match,,,
+Swift Go 16 AI Intel,SFG16-72T,10,near-model-match,,,
+Swift Go 16 AI Intel,SFG16-72T,11,near-model-match,,,
+Swift Go 16 AI Intel,SFG16-73,10,near-model-match,,,
+Swift Go 16 AI Intel,SFG16-73,11,near-model-match,,,
+Swift Go 16 AI Intel,SFG16-74,10,near-model-match,,,
+Swift Go 16 AI Intel,SFG16-74,11,near-model-match,,,
+Swift Go 16 AI Intel,SFG16-74T,10,near-model-match,,,
+Swift Go 16 AI Intel,SFG16-74T,11,near-model-match,,,
+Swift Go 16 AI Intel,SFG16-A71,10,near-model-match,,,
+Swift Go 16 AI Intel,SFG16-A71,11,near-model-match,,,
+Swift Go 16 AI Intel,SFG16-A71T,10,near-model-match,,,
+Swift Go 16 AI Intel,SFG16-A71T,11,near-model-match,,,
+Swift Go 16 AI Intel,SFG16-I71,10,near-model-match,,,
+Swift Go 16 AI Intel,SFG16-I71,11,near-model-match,,,
+Swift Go 16 AI Intel,SFG16-I71T,10,near-model-match,,,
+Swift Go 16 AI Intel,SFG16-I71T,11,near-model-match,,,
+Swift Spin 14 AI Intel,SFSP14-I51T,10,near-model-match,,,
+Swift Spin 14 AI Intel,SFSP14-I51T,11,near-model-match,,,
+Swift Spin 14 AI Intel,SFSP14-Q51T,10,support-list-empty,,,
+Swift Spin 14 AI Intel,SFSP14-Q51T,11,support-list-empty,,,
+Swift Spin 14 AI Snapdragon,SFSP14-I51T,10,oem-os-not-listed,,,
+Swift Spin 14 AI Snapdragon,SFSP14-I51T,11,oem-wlan-listed,Wireless LAN_Killer_24.20.0.4_W11x64_(1775s).zip,24.20.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_24.20.0.4_W11x64_A.zip?acerid=639167707692637241&Step1=&Step2=&Step3=SWIFT%20SFSP14-I51T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift Spin 14 AI Snapdragon,SFSP14-Q51T,10,support-list-empty,,,
+Swift Spin 14 AI Snapdragon,SFSP14-Q51T,11,support-list-empty,,,
+Swift X 14,SFX14-41G,10,near-model-match,,,
+Swift X 14,SFX14-41G,11,near-model-match,,,
+Swift X 14,SFX14-42G,10,near-model-match,,,
+Swift X 14,SFX14-42G,11,near-model-match,,,
+Swift X 14,SFX14-51G,10,near-model-match,,,
+Swift X 14,SFX14-51G,11,near-model-match,,,
+Swift X 14,SFX14-61G,10,near-model-match,,,
+Swift X 14,SFX14-61G,11,near-model-match,,,
+Swift X 14,SFX14-71G,10,near-model-match,,,
+Swift X 14,SFX14-71G,11,near-model-match,,,
+Swift X 14,SFX14-72G,10,near-model-match,,,
+Swift X 14,SFX14-72G,11,near-model-match,,,
+Swift X 14,SFX14-73G,10,near-model-match,,,
+Swift X 14,SFX14-73G,11,near-model-match,,,
+Swift X 14 AI AMD,SFX14-41G,10,near-model-match,,,
+Swift X 14 AI AMD,SFX14-41G,11,near-model-match,,,
+Swift X 14 AI AMD,SFX14-42G,10,oem-os-not-listed,,,
+Swift X 14 AI AMD,SFX14-42G,11,oem-wlan-listed,Wireless LAN_MTK_3.0.1.1300_W11x64.zip,3.0.1.1300,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.0.1.1300_W11x64_A.zip?acerid=637861091933527474&Step1=&Step2=&Step3=SFX14-42G&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift X 14 AI AMD,SFX14-51G,10,oem-os-not-listed,,,
+Swift X 14 AI AMD,SFX14-51G,11,oem-wlan-listed,Wireless LAN_Intel_22.100.1.1_W11x64_(AX211).zip,22.100.1.1,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.100.1.1_W11x64_A.zip?acerid=637842107864741901&Step1=&Step2=&Step3=SFX14-51G&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift X 14 AI AMD,SFX14-61G,10,oem-os-not-listed,,,
+Swift X 14 AI AMD,SFX14-61G,11,oem-wlan-listed,Wireless LAN_MTK_3.4.0.1123_W11x64_(MT7922).zip,3.4.0.1123,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.4.0.1123_W11x64_A.zip?acerid=638864390002240846&Step1=&Step2=&Step3=SWIFT%20SFX14-61G&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift X 14 AI AMD,SFX14-71G,10,oem-os-not-listed,,,
+Swift X 14 AI AMD,SFX14-71G,11,oem-wlan-listed,Wireless LAN_Killer_23.60.1.2_W11x64_(1675i).zip,23.60.1.2,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_23.60.1.2_W11x64_A.zip?acerid=638633017753554981&Step1=&Step2=&Step3=SFX14-71G&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift X 14 AI AMD,SFX14-72G,10,oem-os-not-listed,,,
+Swift X 14 AI AMD,SFX14-72G,11,oem-wlan-listed,Wireless LAN_Killer_23.60.1.2_W11x64_(1675i).zip,23.60.1.2,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_23.60.1.2_W11x64_A.zip?acerid=638632941161361137&Step1=&Step2=&Step3=SFX14-72G&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Swift X 14 AI AMD,SFX14-73G,10,oem-os-not-listed,,,
+Swift X 14 AI AMD,SFX14-73G,11,oem-wlan-listed,Wireless LAN_Killer_23.100.0.4_W11x64_(1675i).zip,23.100.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_23.100.0.4_W11x64_A.zip?acerid=638856612458962994&Step1=&Step2=&Step3=SWIFT%20SFX14-73G&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2,TMP214-41,10,oem-wlan-listed,Wireless LAN_MTK_3.3.0.760_W10x64_(MT7921LE).zip,3.3.0.760,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.3.0.760_W10x64_A.zip?acerid=638150604066347702&Step1=&Step2=&Step3=TRAVELMATE%20P214-41&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2,TMP214-41,11,oem-wlan-listed,Wireless LAN_Intel_22.180.0.4_W11x64_(AX200).zip,22.180.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.180.0.4_W11x64_A.zip?acerid=638344136109242908&Step1=&Step2=&Step3=TRAVELMATE%20P214-41&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2,TMP214-42,10,oem-os-not-listed,,,
+TravelMate P2,TMP214-42,11,oem-wlan-listed,Wireless LAN_MTK_3.3.0.789_W11x64_(MTRZ616).zip,3.3.0.789,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.3.0.789_W11x64_A.zip?acerid=638282977834547314&Step1=&Step2=&Step3=TRAVELMATE%20P214-42&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2,TMP214-43,10,oem-os-not-listed,,,
+TravelMate P2,TMP214-43,11,oem-wlan-listed,Wireless LAN_MTK_3.5.0.1376_W11x64_(MTRZ616).zip,3.5.0.1376,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.5.0.1376_W11x64_A.zip?acerid=639241020161044037&Step1=&Step2=&Step3=TRAVELMATE%20P214-43&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2,TMP214-44,10,oem-os-not-listed,,,
+TravelMate P2,TMP214-44,11,oem-wlan-listed,Wireless LAN_MTK_5.7.0.5659_W11x64_MT7925.zip,5.7.0.5659,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_5.7.0.5659_W11x64_A.zip?acerid=639216934651949243&Step1=&Step2=&Step3=TRAVELMATE%20P214-44&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2,TMP214-51,10,oem-wlan-listed,Wireless LAN_Intel_20.70.4.2_W10x64.zip,20.70.4.2,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_20.70.4.2_W10x64_A.zip?acerid=636888228766485887&Step1=&Step2=&Step3=TRAVELMATE%20P214-51&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2,TMP214-51,11,oem-os-not-listed,,,
+TravelMate P2,TMP214-51G,10,oem-wlan-listed,Wireless LAN_Intel_20.70.4.2_W10x64.zip,20.70.4.2,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_20.70.4.2_W10x64_A.zip?acerid=636888228766485887&Step1=&Step2=&Step3=TRAVELMATE%20P214-51G&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2,TMP214-51G,11,oem-os-not-listed,,,
+TravelMate P2,TMP214-52,10,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64_(AX201).zip,22.0.1.1,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.0.1.1_W10x64_A.zip?acerid=637508805775947857&Step1=&Step2=&Step3=TRAVELMATE%20P214-52&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2,TMP214-52,11,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W11x64_(AX201).zip,22.0.1.1,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.0.1.1_W11x64_A.zip?acerid=637756752443377960&Step1=&Step2=&Step3=TRAVELMATE%20P214-52&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2,TMP214-52G,10,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64_(AX201).zip,22.0.1.1,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.0.1.1_W10x64_A.zip?acerid=637508805775947857&Step1=&Step2=&Step3=TRAVELMATE%20P214-52G&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2,TMP214-52G,11,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W11x64_(AX201).zip,22.0.1.1,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.0.1.1_W11x64_A.zip?acerid=637756752443377960&Step1=&Step2=&Step3=TRAVELMATE%20P214-52G&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2,TMP214-53,10,oem-wlan-listed,Wireless LAN_Intel_22.170.0.3_W10x64_(AX201).zip,22.170.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.170.0.3_W10x64_A.zip?acerid=638116168168806404&Step1=&Step2=&Step3=TRAVELMATE%20P214-53&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2,TMP214-53,11,oem-wlan-listed,WLAN_Intel_23.120.0.3_W11x64.zip,23.120.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.120.0.3_W11x64_A.zip?acerid=638901273236896848&Step1=&Step2=&Step3=TRAVELMATE%20P214-53&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2,TMP214-53G,10,oem-wlan-listed,Wireless LAN_Intel_22.170.0.3_W10x64_(AX201).zip,22.170.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.170.0.3_W10x64_A.zip?acerid=638116168168806404&Step1=&Step2=&Step3=TRAVELMATE%20P214-53G&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2,TMP214-53G,11,oem-wlan-listed,WLAN_Intel_23.120.0.3_W11x64.zip,23.120.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.120.0.3_W11x64_A.zip?acerid=638901273236896848&Step1=&Step2=&Step3=TRAVELMATE%20P214-53G&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2,TMP214-54,10,oem-wlan-listed,Wireless LAN_Intel_22.170.0.3_W10x64_(AX211 vPro).zip,22.170.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.170.0.3_W10x64_A.zip?acerid=638096083021262793&Step1=&Step2=&Step3=TRAVELMATE%20P214-54&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2,TMP214-54,11,oem-wlan-listed,WLAN_Intel_23.120.0.3_W11x64.zip,23.120.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.120.0.3_W11x64_A.zip?acerid=638901273236896848&Step1=&Step2=&Step3=TRAVELMATE%20P214-54&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2,TMP214-55,10,oem-wlan-listed,Wireless LAN_Intel_22.180.0.4_W10x64_(AX211).zip,22.180.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.180.0.4_W10x64_A.zip?acerid=638288052010601775&Step1=&Step2=&Step3=TRAVELMATE%20P214-55&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2,TMP214-55,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1121.193_W11x64_(ICPS).zip,50.25.1121.193,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1121.193_W11x64_A.zip?acerid=639243529812901597&Step1=&Step2=&Step3=TRAVELMATE%20P214-55&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2,TMP214-55G,10,oem-wlan-listed,Wireless LAN_Intel_22.180.0.4_W10x64_(AX211).zip,22.180.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.180.0.4_W10x64_A.zip?acerid=638288052010601775&Step1=&Step2=&Step3=TRAVELMATE%20P214-55G&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2,TMP214-55G,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1121.193_W11x64_(ICPS).zip,50.25.1121.193,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1121.193_W11x64_A.zip?acerid=639243529812901597&Step1=&Step2=&Step3=TRAVELMATE%20P214-55G&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2,TMP214-55T,10,oem-wlan-listed,Wireless LAN_Intel_22.180.0.4_W10x64_(AX211).zip,22.180.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.180.0.4_W10x64_A.zip?acerid=638288052010601775&Step1=&Step2=&Step3=TRAVELMATE%20P214-55T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2,TMP214-55T,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1121.193_W11x64_(ICPS).zip,50.25.1121.193,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1121.193_W11x64_A.zip?acerid=639243529812901597&Step1=&Step2=&Step3=TRAVELMATE%20P214-55T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2,TMP214-56,10,oem-os-not-listed,,,
+TravelMate P2,TMP214-56,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1121.193_W11x64_(ICPS).zip,50.25.1121.193,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1121.193_W11x64_A.zip?acerid=639183182769283997&Step1=&Step2=&Step3=TRAVELMATE%20P214-56&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2,TMP214-56T,10,oem-os-not-listed,,,
+TravelMate P2,TMP214-56T,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1121.193_W11x64_(ICPS).zip,50.25.1121.193,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1121.193_W11x64_A.zip?acerid=639183182769283997&Step1=&Step2=&Step3=TRAVELMATE%20P214-56T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2,TMP214-57,10,oem-os-not-listed,,,
+TravelMate P2,TMP214-57,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1121.193_W11x64_(ICPS).zip,50.25.1121.193,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1121.193_W11x64_A.zip?acerid=639190855367912467&Step1=&Step2=&Step3=TRAVELMATE%20P214-57&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2,TMP214-77,10,near-model-match,,,
+TravelMate P2,TMP214-77,11,near-model-match,,,
+TravelMate P2 14 AI AMD,TMP214-41,10,near-model-match,,,
+TravelMate P2 14 AI AMD,TMP214-41,11,near-model-match,,,
+TravelMate P2 14 AI AMD,TMP214-42,10,oem-os-not-listed,,,
+TravelMate P2 14 AI AMD,TMP214-42,11,oem-wlan-listed,Wireless LAN_MTK_3.3.0.789_W11x64_(MTRZ616).zip,3.3.0.789,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.3.0.789_W11x64_A.zip?acerid=638282977834547314&Step1=&Step2=&Step3=TRAVELMATE%20P214-42&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 AI AMD,TMP214-43,10,oem-os-not-listed,,,
+TravelMate P2 14 AI AMD,TMP214-43,11,oem-wlan-listed,Wireless LAN_MTK_3.5.0.1376_W11x64_(MTRZ616).zip,3.5.0.1376,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.5.0.1376_W11x64_A.zip?acerid=639241020161044037&Step1=&Step2=&Step3=TRAVELMATE%20P214-43&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 AI AMD,TMP214-44,10,oem-os-not-listed,,,
+TravelMate P2 14 AI AMD,TMP214-44,11,oem-wlan-listed,Wireless LAN_MTK_5.7.0.5659_W11x64_MT7925.zip,5.7.0.5659,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_5.7.0.5659_W11x64_A.zip?acerid=639216934651949243&Step1=&Step2=&Step3=TRAVELMATE%20P214-44&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 AI AMD,TMP214-51,10,oem-wlan-listed,Wireless LAN_Intel_20.70.4.2_W10x64.zip,20.70.4.2,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_20.70.4.2_W10x64_A.zip?acerid=636888228766485887&Step1=&Step2=&Step3=TRAVELMATE%20P214-51&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 AI AMD,TMP214-51,11,oem-os-not-listed,,,
+TravelMate P2 14 AI AMD,TMP214-51G,10,oem-wlan-listed,Wireless LAN_Intel_20.70.4.2_W10x64.zip,20.70.4.2,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_20.70.4.2_W10x64_A.zip?acerid=636888228766485887&Step1=&Step2=&Step3=TRAVELMATE%20P214-51G&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 AI AMD,TMP214-51G,11,oem-os-not-listed,,,
+TravelMate P2 14 AI AMD,TMP214-52,10,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64_(AX201).zip,22.0.1.1,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.0.1.1_W10x64_A.zip?acerid=637508805775947857&Step1=&Step2=&Step3=TRAVELMATE%20P214-52&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 AI AMD,TMP214-52,11,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W11x64_(AX201).zip,22.0.1.1,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.0.1.1_W11x64_A.zip?acerid=637756752443377960&Step1=&Step2=&Step3=TRAVELMATE%20P214-52&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 AI AMD,TMP214-52G,10,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64_(AX201).zip,22.0.1.1,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.0.1.1_W10x64_A.zip?acerid=637508805775947857&Step1=&Step2=&Step3=TRAVELMATE%20P214-52G&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 AI AMD,TMP214-52G,11,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W11x64_(AX201).zip,22.0.1.1,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.0.1.1_W11x64_A.zip?acerid=637756752443377960&Step1=&Step2=&Step3=TRAVELMATE%20P214-52G&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 AI AMD,TMP214-53,10,oem-wlan-listed,Wireless LAN_Intel_22.170.0.3_W10x64_(AX201).zip,22.170.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.170.0.3_W10x64_A.zip?acerid=638116168168806404&Step1=&Step2=&Step3=TRAVELMATE%20P214-53&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 AI AMD,TMP214-53,11,oem-wlan-listed,WLAN_Intel_23.120.0.3_W11x64.zip,23.120.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.120.0.3_W11x64_A.zip?acerid=638901273236896848&Step1=&Step2=&Step3=TRAVELMATE%20P214-53&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 AI AMD,TMP214-53G,10,oem-wlan-listed,Wireless LAN_Intel_22.170.0.3_W10x64_(AX201).zip,22.170.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.170.0.3_W10x64_A.zip?acerid=638116168168806404&Step1=&Step2=&Step3=TRAVELMATE%20P214-53G&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 AI AMD,TMP214-53G,11,oem-wlan-listed,WLAN_Intel_23.120.0.3_W11x64.zip,23.120.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.120.0.3_W11x64_A.zip?acerid=638901273236896848&Step1=&Step2=&Step3=TRAVELMATE%20P214-53G&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 AI AMD,TMP214-54,10,oem-wlan-listed,Wireless LAN_Intel_22.170.0.3_W10x64_(AX211 vPro).zip,22.170.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.170.0.3_W10x64_A.zip?acerid=638096083021262793&Step1=&Step2=&Step3=TRAVELMATE%20P214-54&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 AI AMD,TMP214-54,11,oem-wlan-listed,WLAN_Intel_23.120.0.3_W11x64.zip,23.120.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.120.0.3_W11x64_A.zip?acerid=638901273236896848&Step1=&Step2=&Step3=TRAVELMATE%20P214-54&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 AI AMD,TMP214-55,10,oem-wlan-listed,Wireless LAN_Intel_22.180.0.4_W10x64_(AX211).zip,22.180.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.180.0.4_W10x64_A.zip?acerid=638288052010601775&Step1=&Step2=&Step3=TRAVELMATE%20P214-55&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 AI AMD,TMP214-55,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1121.193_W11x64_(ICPS).zip,50.25.1121.193,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1121.193_W11x64_A.zip?acerid=639243529812901597&Step1=&Step2=&Step3=TRAVELMATE%20P214-55&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 AI AMD,TMP214-55G,10,oem-wlan-listed,Wireless LAN_Intel_22.180.0.4_W10x64_(AX211).zip,22.180.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.180.0.4_W10x64_A.zip?acerid=638288052010601775&Step1=&Step2=&Step3=TRAVELMATE%20P214-55G&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 AI AMD,TMP214-55G,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1121.193_W11x64_(ICPS).zip,50.25.1121.193,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1121.193_W11x64_A.zip?acerid=639243529812901597&Step1=&Step2=&Step3=TRAVELMATE%20P214-55G&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 AI AMD,TMP214-55T,10,oem-wlan-listed,Wireless LAN_Intel_22.180.0.4_W10x64_(AX211).zip,22.180.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.180.0.4_W10x64_A.zip?acerid=638288052010601775&Step1=&Step2=&Step3=TRAVELMATE%20P214-55T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 AI AMD,TMP214-55T,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1121.193_W11x64_(ICPS).zip,50.25.1121.193,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1121.193_W11x64_A.zip?acerid=639243529812901597&Step1=&Step2=&Step3=TRAVELMATE%20P214-55T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 AI AMD,TMP214-56,10,oem-os-not-listed,,,
+TravelMate P2 14 AI AMD,TMP214-56,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1121.193_W11x64_(ICPS).zip,50.25.1121.193,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1121.193_W11x64_A.zip?acerid=639183182769283997&Step1=&Step2=&Step3=TRAVELMATE%20P214-56&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 AI AMD,TMP214-56T,10,oem-os-not-listed,,,
+TravelMate P2 14 AI AMD,TMP214-56T,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1121.193_W11x64_(ICPS).zip,50.25.1121.193,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1121.193_W11x64_A.zip?acerid=639183182769283997&Step1=&Step2=&Step3=TRAVELMATE%20P214-56T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 AI AMD,TMP214-57,10,oem-os-not-listed,,,
+TravelMate P2 14 AI AMD,TMP214-57,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1121.193_W11x64_(ICPS).zip,50.25.1121.193,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1121.193_W11x64_A.zip?acerid=639190855367912467&Step1=&Step2=&Step3=TRAVELMATE%20P214-57&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 AI AMD,TMP214-77,10,oem-os-not-listed,,,
+TravelMate P2 14 AI AMD,TMP214-77,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1121.193_W11x64_(ICPS).zip,50.25.1121.193,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1121.193_W11x64_A.zip?acerid=639190855367912467&Step1=&Step2=&Step3=TRAVELMATE%20P214-77&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 AI Intel,TMP214-41,10,oem-wlan-listed,Wireless LAN_MTK_3.3.0.760_W10x64_(MT7921LE).zip,3.3.0.760,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.3.0.760_W10x64_A.zip?acerid=638150604066347702&Step1=&Step2=&Step3=TRAVELMATE%20P214-41&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 AI Intel,TMP214-41,11,oem-wlan-listed,Wireless LAN_Intel_22.180.0.4_W11x64_(AX200).zip,22.180.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.180.0.4_W11x64_A.zip?acerid=638344136109242908&Step1=&Step2=&Step3=TRAVELMATE%20P214-41&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 AI Intel,TMP214-42,10,oem-os-not-listed,,,
+TravelMate P2 14 AI Intel,TMP214-42,11,oem-wlan-listed,Wireless LAN_MTK_3.3.0.789_W11x64_(MTRZ616).zip,3.3.0.789,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.3.0.789_W11x64_A.zip?acerid=638282977834547314&Step1=&Step2=&Step3=TRAVELMATE%20P214-42&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 AI Intel,TMP214-43,10,oem-os-not-listed,,,
+TravelMate P2 14 AI Intel,TMP214-43,11,oem-wlan-listed,Wireless LAN_MTK_3.5.0.1376_W11x64_(MTRZ616).zip,3.5.0.1376,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.5.0.1376_W11x64_A.zip?acerid=639241020161044037&Step1=&Step2=&Step3=TRAVELMATE%20P214-43&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 AI Intel,TMP214-44,10,oem-os-not-listed,,,
+TravelMate P2 14 AI Intel,TMP214-44,11,oem-wlan-listed,Wireless LAN_MTK_5.7.0.5659_W11x64_MT7925.zip,5.7.0.5659,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_5.7.0.5659_W11x64_A.zip?acerid=639216934651949243&Step1=&Step2=&Step3=TRAVELMATE%20P214-44&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 AI Intel,TMP214-51,10,oem-wlan-listed,Wireless LAN_Intel_20.70.4.2_W10x64.zip,20.70.4.2,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_20.70.4.2_W10x64_A.zip?acerid=636888228766485887&Step1=&Step2=&Step3=TRAVELMATE%20P214-51&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 AI Intel,TMP214-51,11,oem-os-not-listed,,,
+TravelMate P2 14 AI Intel,TMP214-51G,10,oem-wlan-listed,Wireless LAN_Intel_20.70.4.2_W10x64.zip,20.70.4.2,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_20.70.4.2_W10x64_A.zip?acerid=636888228766485887&Step1=&Step2=&Step3=TRAVELMATE%20P214-51G&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 AI Intel,TMP214-51G,11,oem-os-not-listed,,,
+TravelMate P2 14 AI Intel,TMP214-52,10,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64_(AX201).zip,22.0.1.1,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.0.1.1_W10x64_A.zip?acerid=637508805775947857&Step1=&Step2=&Step3=TRAVELMATE%20P214-52&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 AI Intel,TMP214-52,11,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W11x64_(AX201).zip,22.0.1.1,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.0.1.1_W11x64_A.zip?acerid=637756752443377960&Step1=&Step2=&Step3=TRAVELMATE%20P214-52&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 AI Intel,TMP214-52G,10,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64_(AX201).zip,22.0.1.1,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.0.1.1_W10x64_A.zip?acerid=637508805775947857&Step1=&Step2=&Step3=TRAVELMATE%20P214-52G&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 AI Intel,TMP214-52G,11,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W11x64_(AX201).zip,22.0.1.1,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.0.1.1_W11x64_A.zip?acerid=637756752443377960&Step1=&Step2=&Step3=TRAVELMATE%20P214-52G&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 AI Intel,TMP214-53,10,oem-wlan-listed,Wireless LAN_Intel_22.170.0.3_W10x64_(AX201).zip,22.170.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.170.0.3_W10x64_A.zip?acerid=638116168168806404&Step1=&Step2=&Step3=TRAVELMATE%20P214-53&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 AI Intel,TMP214-53,11,oem-wlan-listed,WLAN_Intel_23.120.0.3_W11x64.zip,23.120.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.120.0.3_W11x64_A.zip?acerid=638901273236896848&Step1=&Step2=&Step3=TRAVELMATE%20P214-53&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 AI Intel,TMP214-53G,10,oem-wlan-listed,Wireless LAN_Intel_22.170.0.3_W10x64_(AX201).zip,22.170.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.170.0.3_W10x64_A.zip?acerid=638116168168806404&Step1=&Step2=&Step3=TRAVELMATE%20P214-53G&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 AI Intel,TMP214-53G,11,oem-wlan-listed,WLAN_Intel_23.120.0.3_W11x64.zip,23.120.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.120.0.3_W11x64_A.zip?acerid=638901273236896848&Step1=&Step2=&Step3=TRAVELMATE%20P214-53G&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 AI Intel,TMP214-54,10,oem-wlan-listed,Wireless LAN_Intel_22.170.0.3_W10x64_(AX211 vPro).zip,22.170.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.170.0.3_W10x64_A.zip?acerid=638096083021262793&Step1=&Step2=&Step3=TRAVELMATE%20P214-54&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 AI Intel,TMP214-54,11,oem-wlan-listed,WLAN_Intel_23.120.0.3_W11x64.zip,23.120.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.120.0.3_W11x64_A.zip?acerid=638901273236896848&Step1=&Step2=&Step3=TRAVELMATE%20P214-54&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 AI Intel,TMP214-55,10,oem-wlan-listed,Wireless LAN_Intel_22.180.0.4_W10x64_(AX211).zip,22.180.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.180.0.4_W10x64_A.zip?acerid=638288052010601775&Step1=&Step2=&Step3=TRAVELMATE%20P214-55&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 AI Intel,TMP214-55,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1121.193_W11x64_(ICPS).zip,50.25.1121.193,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1121.193_W11x64_A.zip?acerid=639243529812901597&Step1=&Step2=&Step3=TRAVELMATE%20P214-55&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 AI Intel,TMP214-55G,10,oem-wlan-listed,Wireless LAN_Intel_22.180.0.4_W10x64_(AX211).zip,22.180.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.180.0.4_W10x64_A.zip?acerid=638288052010601775&Step1=&Step2=&Step3=TRAVELMATE%20P214-55G&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 AI Intel,TMP214-55G,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1121.193_W11x64_(ICPS).zip,50.25.1121.193,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1121.193_W11x64_A.zip?acerid=639243529812901597&Step1=&Step2=&Step3=TRAVELMATE%20P214-55G&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 AI Intel,TMP214-55T,10,oem-wlan-listed,Wireless LAN_Intel_22.180.0.4_W10x64_(AX211).zip,22.180.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.180.0.4_W10x64_A.zip?acerid=638288052010601775&Step1=&Step2=&Step3=TRAVELMATE%20P214-55T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 AI Intel,TMP214-55T,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1121.193_W11x64_(ICPS).zip,50.25.1121.193,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1121.193_W11x64_A.zip?acerid=639243529812901597&Step1=&Step2=&Step3=TRAVELMATE%20P214-55T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 AI Intel,TMP214-56,10,oem-os-not-listed,,,
+TravelMate P2 14 AI Intel,TMP214-56,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1121.193_W11x64_(ICPS).zip,50.25.1121.193,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1121.193_W11x64_A.zip?acerid=639183182769283997&Step1=&Step2=&Step3=TRAVELMATE%20P214-56&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 AI Intel,TMP214-56T,10,oem-os-not-listed,,,
+TravelMate P2 14 AI Intel,TMP214-56T,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1121.193_W11x64_(ICPS).zip,50.25.1121.193,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1121.193_W11x64_A.zip?acerid=639183182769283997&Step1=&Step2=&Step3=TRAVELMATE%20P214-56T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 AI Intel,TMP214-57,10,oem-os-not-listed,,,
+TravelMate P2 14 AI Intel,TMP214-57,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1121.193_W11x64_(ICPS).zip,50.25.1121.193,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1121.193_W11x64_A.zip?acerid=639190855367912467&Step1=&Step2=&Step3=TRAVELMATE%20P214-57&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 AI Intel,TMP214-77,10,near-model-match,,,
+TravelMate P2 14 AI Intel,TMP214-77,11,near-model-match,,,
+TravelMate P2 14 Intel,TMP214-41,10,near-model-match,,,
+TravelMate P2 14 Intel,TMP214-41,11,near-model-match,,,
+TravelMate P2 14 Intel,TMP214-42,10,near-model-match,,,
+TravelMate P2 14 Intel,TMP214-42,11,near-model-match,,,
+TravelMate P2 14 Intel,TMP214-43,10,near-model-match,,,
+TravelMate P2 14 Intel,TMP214-43,11,near-model-match,,,
+TravelMate P2 14 Intel,TMP214-44,10,near-model-match,,,
+TravelMate P2 14 Intel,TMP214-44,11,near-model-match,,,
+TravelMate P2 14 Intel,TMP214-51,10,near-model-match,,,
+TravelMate P2 14 Intel,TMP214-51,11,near-model-match,,,
+TravelMate P2 14 Intel,TMP214-51G,10,oem-wlan-listed,Wireless LAN_Intel_20.70.4.2_W10x64.zip,20.70.4.2,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_20.70.4.2_W10x64_A.zip?acerid=636888228766485887&Step1=&Step2=&Step3=TRAVELMATE%20P214-51G&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 Intel,TMP214-51G,11,oem-os-not-listed,,,
+TravelMate P2 14 Intel,TMP214-52,10,near-model-match,,,
+TravelMate P2 14 Intel,TMP214-52,11,near-model-match,,,
+TravelMate P2 14 Intel,TMP214-52G,10,near-model-match,,,
+TravelMate P2 14 Intel,TMP214-52G,11,near-model-match,,,
+TravelMate P2 14 Intel,TMP214-53,10,oem-wlan-listed,Wireless LAN_Intel_22.170.0.3_W10x64_(AX201).zip,22.170.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.170.0.3_W10x64_A.zip?acerid=638116168168806404&Step1=&Step2=&Step3=TRAVELMATE%20P214-53&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 Intel,TMP214-53,11,oem-wlan-listed,WLAN_Intel_23.120.0.3_W11x64.zip,23.120.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.120.0.3_W11x64_A.zip?acerid=638901273236896848&Step1=&Step2=&Step3=TRAVELMATE%20P214-53&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 Intel,TMP214-53G,10,oem-wlan-listed,Wireless LAN_Intel_22.170.0.3_W10x64_(AX201).zip,22.170.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.170.0.3_W10x64_A.zip?acerid=638116168168806404&Step1=&Step2=&Step3=TRAVELMATE%20P214-53G&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 Intel,TMP214-53G,11,oem-wlan-listed,WLAN_Intel_23.120.0.3_W11x64.zip,23.120.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.120.0.3_W11x64_A.zip?acerid=638901273236896848&Step1=&Step2=&Step3=TRAVELMATE%20P214-53G&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 Intel,TMP214-54,10,oem-wlan-listed,Wireless LAN_Intel_22.170.0.3_W10x64_(AX211 vPro).zip,22.170.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.170.0.3_W10x64_A.zip?acerid=638096083021262793&Step1=&Step2=&Step3=TRAVELMATE%20P214-54&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 Intel,TMP214-54,11,oem-wlan-listed,WLAN_Intel_23.120.0.3_W11x64.zip,23.120.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.120.0.3_W11x64_A.zip?acerid=638901273236896848&Step1=&Step2=&Step3=TRAVELMATE%20P214-54&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 Intel,TMP214-55,10,oem-wlan-listed,Wireless LAN_Intel_22.180.0.4_W10x64_(AX211).zip,22.180.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.180.0.4_W10x64_A.zip?acerid=638288052010601775&Step1=&Step2=&Step3=TRAVELMATE%20P214-55&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 Intel,TMP214-55,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1121.193_W11x64_(ICPS).zip,50.25.1121.193,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1121.193_W11x64_A.zip?acerid=639243529812901597&Step1=&Step2=&Step3=TRAVELMATE%20P214-55&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 Intel,TMP214-55G,10,oem-wlan-listed,Wireless LAN_Intel_22.180.0.4_W10x64_(AX211).zip,22.180.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.180.0.4_W10x64_A.zip?acerid=638288052010601775&Step1=&Step2=&Step3=TRAVELMATE%20P214-55G&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 Intel,TMP214-55G,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1121.193_W11x64_(ICPS).zip,50.25.1121.193,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1121.193_W11x64_A.zip?acerid=639243529812901597&Step1=&Step2=&Step3=TRAVELMATE%20P214-55G&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 Intel,TMP214-55T,10,oem-wlan-listed,Wireless LAN_Intel_22.180.0.4_W10x64_(AX211).zip,22.180.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.180.0.4_W10x64_A.zip?acerid=638288052010601775&Step1=&Step2=&Step3=TRAVELMATE%20P214-55T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 Intel,TMP214-55T,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1121.193_W11x64_(ICPS).zip,50.25.1121.193,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1121.193_W11x64_A.zip?acerid=639243529812901597&Step1=&Step2=&Step3=TRAVELMATE%20P214-55T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 14 Intel,TMP214-56,10,near-model-match,,,
+TravelMate P2 14 Intel,TMP214-56,11,near-model-match,,,
+TravelMate P2 14 Intel,TMP214-56T,10,near-model-match,,,
+TravelMate P2 14 Intel,TMP214-56T,11,near-model-match,,,
+TravelMate P2 14 Intel,TMP214-57,10,near-model-match,,,
+TravelMate P2 14 Intel,TMP214-57,11,near-model-match,,,
+TravelMate P2 14 Intel,TMP214-77,10,near-model-match,,,
+TravelMate P2 14 Intel,TMP214-77,11,near-model-match,,,
+TravelMate P2 15,TMP215-41,10,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64_(AX200).zip,22.0.1.1,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.0.1.1_W10x64_A.zip?acerid=637527549068979321&Step1=&Step2=&Step3=TRAVELMATE%20P215-41&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 15,TMP215-41,11,oem-wlan-listed,Wireless LAN_Intel_22.180.0.4_W11x64_(AX200).zip,22.180.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.180.0.4_W11x64_A.zip?acerid=638345057753509088&Step1=&Step2=&Step3=TRAVELMATE%20P215-41&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 15,TMP215-51,10,oem-wlan-listed,Wireless LAN_Intel_20.70.4.2_W10x64.zip,20.70.4.2,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_20.70.4.2_W10x64_A.zip?acerid=636888208676541027&Step1=&Step2=&Step3=TRAVELMATE%20P215-51&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 15,TMP215-51,11,oem-os-not-listed,,,
+TravelMate P2 15,TMP215-51G,10,oem-wlan-listed,Wireless LAN_Intel_20.70.4.2_W10x64.zip,20.70.4.2,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_20.70.4.2_W10x64_A.zip?acerid=636888208676541027&Step1=&Step2=&Step3=TRAVELMATE%20P215-51G&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 15,TMP215-51G,11,oem-os-not-listed,,,
+TravelMate P2 15,TMP215-52,10,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64_(AX201).zip,22.0.1.1,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.0.1.1_W10x64_A.zip?acerid=637586475662902212&Step1=&Step2=&Step3=TRAVELMATE%20P215-52&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 15,TMP215-52,11,oem-os-not-listed,,,
+TravelMate P2 15,TMP215-52G,10,oem-wlan-listed,Wireless LAN_Intel_22.0.1.1_W10x64_(AX201).zip,22.0.1.1,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.0.1.1_W10x64_A.zip?acerid=637586475662902212&Step1=&Step2=&Step3=TRAVELMATE%20P215-52G&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 15,TMP215-52G,11,oem-os-not-listed,,,
+TravelMate P2 15,TMP215-53,10,oem-wlan-listed,Wireless LAN_Intel_22.170.0.3_W10x64_(AX201).zip,22.170.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.170.0.3_W10x64_A.zip?acerid=638272635005292053&Step1=&Step2=&Step3=TRAVELMATE%20P215-53&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 15,TMP215-53,11,oem-wlan-listed,Wireless LAN_Intel_22.180.0.4_W11x64_(AX201).zip,22.180.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.180.0.4_W11x64_A.zip?acerid=638333779634528519&Step1=&Step2=&Step3=TRAVELMATE%20P215-53&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 15,TMP215-53G,10,oem-wlan-listed,Wireless LAN_Intel_22.170.0.3_W10x64_(AX201).zip,22.170.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.170.0.3_W10x64_A.zip?acerid=638272635005292053&Step1=&Step2=&Step3=TRAVELMATE%20P215-53G&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 15,TMP215-53G,11,oem-wlan-listed,Wireless LAN_Intel_22.180.0.4_W11x64_(AX201).zip,22.180.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.180.0.4_W11x64_A.zip?acerid=638333779634528519&Step1=&Step2=&Step3=TRAVELMATE%20P215-53G&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 15,TMP215-54,10,oem-wlan-listed,Wireless LAN_Intel_22.170.0.3_W10x64_(AX211 vPro).zip,22.170.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.170.0.3_W10x64_A.zip?acerid=638210129875287457&Step1=&Step2=&Step3=TRAVELMATE%20P215-54&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 15,TMP215-54,11,oem-wlan-listed,WLAN_Intel_23.120.0.3_W11x64.zip,23.120.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.120.0.3_W11x64_A.zip?acerid=638901273236896848&Step1=&Step2=&Step3=TRAVELMATE%20P215-54&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 15,TMP215-55,10,oem-os-not-listed,,,
+TravelMate P2 15,TMP215-55,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1121.193_W11x64_(ICPS).zip,50.25.1121.193,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1121.193_W11x64_A.zip?acerid=639183278024098982&Step1=&Step2=&Step3=TRAVELMATE%20P215-55&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 16 AI Intel,TMP216-41,10,oem-os-not-listed,,,
+TravelMate P2 16 AI Intel,TMP216-41,11,oem-wlan-listed,Wireless LAN_MTK_3.5.0.1376_W11x64_(MTRZ616).zip,3.5.0.1376,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.5.0.1376_W11x64_A.zip?acerid=639243530834373277&Step1=&Step2=&Step3=TRAVELMATE%20P216-41&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 16 AI Intel,TMP216-42,10,oem-os-not-listed,,,
+TravelMate P2 16 AI Intel,TMP216-42,11,oem-wlan-listed,Wireless LAN_MTK_5.7.0.5659_W11x64_MT7925.zip,5.7.0.5659,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_5.7.0.5659_W11x64_A.zip?acerid=639168268679005192&Step1=&Step2=&Step3=TRAVELMATE%20P216-42&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 16 AI Intel,TMP216-51,10,oem-os-not-listed,,,
+TravelMate P2 16 AI Intel,TMP216-51,11,oem-wlan-listed,Wireless LAN_Intel_4.1024.730.4_W11x64_(ICPS).zip,4.1024.730.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_4.1024.730.4_W11x64_A.zip?acerid=638636184762821766&Step1=&Step2=&Step3=TRAVELMATE%20P216-51&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 16 AI Intel,TMP216-51G,10,oem-os-not-listed,,,
+TravelMate P2 16 AI Intel,TMP216-51G,11,oem-wlan-listed,Wireless LAN_Intel_4.1024.730.4_W11x64_(ICPS).zip,4.1024.730.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_4.1024.730.4_W11x64_A.zip?acerid=638636184762821766&Step1=&Step2=&Step3=TRAVELMATE%20P216-51G&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 16 AI Intel,TMP216-52,10,oem-os-not-listed,,,
+TravelMate P2 16 AI Intel,TMP216-52,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1121.193_W11x64_(ICPS).zip,50.25.1121.193,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1121.193_W11x64_A.zip?acerid=639196099369307823&Step1=&Step2=&Step3=TRAVELMATE%20P216-52&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 16 AI Intel,TMP216-72,10,oem-os-not-listed,,,
+TravelMate P2 16 AI Intel,TMP216-72,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1121.193_W11x64_(ICPS).zip,50.25.1121.193,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1121.193_W11x64_A.zip?acerid=639196099369307823&Step1=&Step2=&Step3=TRAVELMATE%20P216-72&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 16 AMD,TMP216-41,10,oem-os-not-listed,,,
+TravelMate P2 16 AMD,TMP216-41,11,oem-wlan-listed,Wireless LAN_MTK_3.5.0.1376_W11x64_(MTRZ616).zip,3.5.0.1376,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.5.0.1376_W11x64_A.zip?acerid=639243530834373277&Step1=&Step2=&Step3=TRAVELMATE%20P216-41&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 16 AMD,TMP216-42,10,oem-os-not-listed,,,
+TravelMate P2 16 AMD,TMP216-42,11,oem-wlan-listed,Wireless LAN_MTK_5.7.0.5659_W11x64_MT7925.zip,5.7.0.5659,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_5.7.0.5659_W11x64_A.zip?acerid=639168268679005192&Step1=&Step2=&Step3=TRAVELMATE%20P216-42&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 16 AMD,TMP216-51,10,oem-os-not-listed,,,
+TravelMate P2 16 AMD,TMP216-51,11,oem-wlan-listed,Wireless LAN_Intel_4.1024.730.4_W11x64_(ICPS).zip,4.1024.730.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_4.1024.730.4_W11x64_A.zip?acerid=638636184762821766&Step1=&Step2=&Step3=TRAVELMATE%20P216-51&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 16 AMD,TMP216-51G,10,oem-os-not-listed,,,
+TravelMate P2 16 AMD,TMP216-51G,11,oem-wlan-listed,Wireless LAN_Intel_4.1024.730.4_W11x64_(ICPS).zip,4.1024.730.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_4.1024.730.4_W11x64_A.zip?acerid=638636184762821766&Step1=&Step2=&Step3=TRAVELMATE%20P216-51G&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 16 AMD,TMP216-52,10,oem-os-not-listed,,,
+TravelMate P2 16 AMD,TMP216-52,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1121.193_W11x64_(ICPS).zip,50.25.1121.193,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1121.193_W11x64_A.zip?acerid=639196099369307823&Step1=&Step2=&Step3=TRAVELMATE%20P216-52&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 16 AMD,TMP216-72,10,oem-os-not-listed,,,
+TravelMate P2 16 AMD,TMP216-72,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1121.193_W11x64_(ICPS).zip,50.25.1121.193,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1121.193_W11x64_A.zip?acerid=639196099369307823&Step1=&Step2=&Step3=TRAVELMATE%20P216-72&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 16 Intel,TMP216-41,10,oem-os-not-listed,,,
+TravelMate P2 16 Intel,TMP216-41,11,oem-wlan-listed,Wireless LAN_MTK_3.5.0.1376_W11x64_(MTRZ616).zip,3.5.0.1376,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.5.0.1376_W11x64_A.zip?acerid=639243530834373277&Step1=&Step2=&Step3=TRAVELMATE%20P216-41&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 16 Intel,TMP216-42,10,oem-os-not-listed,,,
+TravelMate P2 16 Intel,TMP216-42,11,oem-wlan-listed,Wireless LAN_MTK_5.7.0.5659_W11x64_MT7925.zip,5.7.0.5659,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_5.7.0.5659_W11x64_A.zip?acerid=639168268679005192&Step1=&Step2=&Step3=TRAVELMATE%20P216-42&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 16 Intel,TMP216-51,10,oem-os-not-listed,,,
+TravelMate P2 16 Intel,TMP216-51,11,oem-wlan-listed,Wireless LAN_Intel_4.1024.730.4_W11x64_(ICPS).zip,4.1024.730.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_4.1024.730.4_W11x64_A.zip?acerid=638636184762821766&Step1=&Step2=&Step3=TRAVELMATE%20P216-51&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 16 Intel,TMP216-51G,10,oem-os-not-listed,,,
+TravelMate P2 16 Intel,TMP216-51G,11,oem-wlan-listed,Wireless LAN_Intel_4.1024.730.4_W11x64_(ICPS).zip,4.1024.730.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_4.1024.730.4_W11x64_A.zip?acerid=638636184762821766&Step1=&Step2=&Step3=TRAVELMATE%20P216-51G&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 16 Intel,TMP216-52,10,oem-os-not-listed,,,
+TravelMate P2 16 Intel,TMP216-52,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1121.193_W11x64_(ICPS).zip,50.25.1121.193,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1121.193_W11x64_A.zip?acerid=639196099369307823&Step1=&Step2=&Step3=TRAVELMATE%20P216-52&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P2 16 Intel,TMP216-72,10,near-model-match,,,
+TravelMate P2 16 Intel,TMP216-72,11,near-model-match,,,
+TravelMate P4 14 AI Intel,TMP414-41,10,near-model-match,,,
+TravelMate P4 14 AI Intel,TMP414-41,11,near-model-match,,,
+TravelMate P4 14 AI Intel,TMP414-51,10,near-model-match,,,
+TravelMate P4 14 AI Intel,TMP414-51,11,near-model-match,,,
+TravelMate P4 14 AI Intel,TMP414-51G,10,oem-wlan-listed,Wireless LAN_Intel_22.160.0.3_W10x64_(AX201).zip,22.160.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.160.0.3_W10x64_A.zip?acerid=638287968117912913&Step1=&Step2=&Step3=TRAVELMATE%20P414-51G&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 14 AI Intel,TMP414-51G,11,oem-wlan-listed,Wireless LAN_Intel_22.160.0.3_W11x64_(AX201).zip,22.160.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.160.0.3_W11x64_A.zip?acerid=638019259434306609&Step1=&Step2=&Step3=TRAVELMATE%20P414-51G&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 14 AI Intel,TMP414-52,10,oem-wlan-listed,Wireless LAN_Intel_22.170.0.3_W10x64_(AX211 vPro).zip,22.170.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.170.0.3_W10x64_A.zip?acerid=638318276893560774&Step1=&Step2=&Step3=TRAVELMATE%20P414-52&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 14 AI Intel,TMP414-52,11,oem-wlan-listed,WLAN_Intel_23.120.0.3_W11x64.zip,23.120.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.120.0.3_W11x64_A.zip?acerid=638901273236896848&Step1=&Step2=&Step3=TRAVELMATE%20P414-52&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 14 AI Intel,TMP414-53,10,oem-wlan-listed,Wireless LAN_Intel_22.180.0.4_W10x64_(AX211 vPro).zip,22.180.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.180.0.4_W10x64_A.zip?acerid=638307114262368711&Step1=&Step2=&Step3=TRAVELMATE%20P414-53&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 14 AI Intel,TMP414-53,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1121.193_W11x64_(ICPS).zip,50.25.1121.193,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1121.193_W11x64_A.zip?acerid=639222056322835223&Step1=&Step2=&Step3=TRAVELMATE%20P414-53&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 14 AI Intel,TMP414-53G,10,oem-wlan-listed,Wireless LAN_Intel_22.180.0.4_W10x64_(AX211 vPro).zip,22.180.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.180.0.4_W10x64_A.zip?acerid=638307114262368711&Step1=&Step2=&Step3=TRAVELMATE%20P414-53G&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 14 AI Intel,TMP414-53G,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1121.193_W11x64_(ICPS).zip,50.25.1121.193,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1121.193_W11x64_A.zip?acerid=639222056322835223&Step1=&Step2=&Step3=TRAVELMATE%20P414-53G&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 14 AI Intel,TMP414-55,10,oem-os-not-listed,,,
+TravelMate P4 14 AI Intel,TMP414-55,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1015.183_W11x64_(ICPS).zip,50.25.1015.183,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1015.183_W11x64_A.zip?acerid=639180592126952709&Step1=&Step2=&Step3=TRAVELMATE%20P414-55&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 14 AI Intel,TMP414-55T,10,oem-os-not-listed,,,
+TravelMate P4 14 AI Intel,TMP414-55T,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1015.183_W11x64_(ICPS).zip,50.25.1015.183,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1015.183_W11x64_A.zip?acerid=639180592126952709&Step1=&Step2=&Step3=TRAVELMATE%20P414-55T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 14 AI Intel,TMP414-56,10,oem-os-not-listed,,,
+TravelMate P4 14 AI Intel,TMP414-56,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1121.193_W11x64_(ICPS).zip,50.25.1121.193,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1121.193_W11x64_A.zip?acerid=639216921177227243&Step1=&Step2=&Step3=TRAVELMATE%20P414-56&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 14 AI Intel,TMP414-76,10,oem-os-not-listed,,,
+TravelMate P4 14 AI Intel,TMP414-76,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1121.193_W11x64_(ICPS).zip,50.25.1121.193,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1121.193_W11x64_A.zip?acerid=639216921177227243&Step1=&Step2=&Step3=TRAVELMATE%20P414-76&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 14 AMD,TMP414-41,10,oem-wlan-listed,Wireless LAN_MTK_3.3.0.595_W10x64_(MTRZ616).zip,3.3.0.595,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.3.0.595_W10x64_A.zip?acerid=638289028384374736&Step1=&Step2=&Step3=TRAVELMATE%20P414-41&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 14 AMD,TMP414-41,11,oem-wlan-listed,Wireless LAN_MTK_3.3.0.595_W11x64_(MTRZ616).zip,3.3.0.595,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.3.0.595_W11x64_A.zip?acerid=637961459012940067&Step1=&Step2=&Step3=TRAVELMATE%20P414-41&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 14 AMD,TMP414-51,10,oem-wlan-listed,Wireless LAN_Intel_22.160.0.3_W10x64_(AX201).zip,22.160.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.160.0.3_W10x64_A.zip?acerid=638287968117912913&Step1=&Step2=&Step3=TRAVELMATE%20P414-51&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 14 AMD,TMP414-51,11,oem-wlan-listed,Wireless LAN_Intel_22.160.0.3_W11x64_(AX201).zip,22.160.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.160.0.3_W11x64_A.zip?acerid=638019259434306609&Step1=&Step2=&Step3=TRAVELMATE%20P414-51&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 14 AMD,TMP414-51G,10,oem-wlan-listed,Wireless LAN_Intel_22.160.0.3_W10x64_(AX201).zip,22.160.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.160.0.3_W10x64_A.zip?acerid=638287968117912913&Step1=&Step2=&Step3=TRAVELMATE%20P414-51G&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 14 AMD,TMP414-51G,11,oem-wlan-listed,Wireless LAN_Intel_22.160.0.3_W11x64_(AX201).zip,22.160.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.160.0.3_W11x64_A.zip?acerid=638019259434306609&Step1=&Step2=&Step3=TRAVELMATE%20P414-51G&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 14 AMD,TMP414-52,10,oem-wlan-listed,Wireless LAN_Intel_22.170.0.3_W10x64_(AX211 vPro).zip,22.170.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.170.0.3_W10x64_A.zip?acerid=638318276893560774&Step1=&Step2=&Step3=TRAVELMATE%20P414-52&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 14 AMD,TMP414-52,11,oem-wlan-listed,WLAN_Intel_23.120.0.3_W11x64.zip,23.120.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.120.0.3_W11x64_A.zip?acerid=638901273236896848&Step1=&Step2=&Step3=TRAVELMATE%20P414-52&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 14 AMD,TMP414-53,10,oem-wlan-listed,Wireless LAN_Intel_22.180.0.4_W10x64_(AX211 vPro).zip,22.180.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.180.0.4_W10x64_A.zip?acerid=638307114262368711&Step1=&Step2=&Step3=TRAVELMATE%20P414-53&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 14 AMD,TMP414-53,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1121.193_W11x64_(ICPS).zip,50.25.1121.193,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1121.193_W11x64_A.zip?acerid=639222056322835223&Step1=&Step2=&Step3=TRAVELMATE%20P414-53&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 14 AMD,TMP414-53G,10,oem-wlan-listed,Wireless LAN_Intel_22.180.0.4_W10x64_(AX211 vPro).zip,22.180.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.180.0.4_W10x64_A.zip?acerid=638307114262368711&Step1=&Step2=&Step3=TRAVELMATE%20P414-53G&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 14 AMD,TMP414-53G,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1121.193_W11x64_(ICPS).zip,50.25.1121.193,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1121.193_W11x64_A.zip?acerid=639222056322835223&Step1=&Step2=&Step3=TRAVELMATE%20P414-53G&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 14 AMD,TMP414-55,10,oem-os-not-listed,,,
+TravelMate P4 14 AMD,TMP414-55,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1015.183_W11x64_(ICPS).zip,50.25.1015.183,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1015.183_W11x64_A.zip?acerid=639180592126952709&Step1=&Step2=&Step3=TRAVELMATE%20P414-55&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 14 AMD,TMP414-55T,10,oem-os-not-listed,,,
+TravelMate P4 14 AMD,TMP414-55T,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1015.183_W11x64_(ICPS).zip,50.25.1015.183,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1015.183_W11x64_A.zip?acerid=639180592126952709&Step1=&Step2=&Step3=TRAVELMATE%20P414-55T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 14 AMD,TMP414-56,10,oem-os-not-listed,,,
+TravelMate P4 14 AMD,TMP414-56,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1121.193_W11x64_(ICPS).zip,50.25.1121.193,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1121.193_W11x64_A.zip?acerid=639216921177227243&Step1=&Step2=&Step3=TRAVELMATE%20P414-56&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 14 AMD,TMP414-76,10,oem-os-not-listed,,,
+TravelMate P4 14 AMD,TMP414-76,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1121.193_W11x64_(ICPS).zip,50.25.1121.193,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1121.193_W11x64_A.zip?acerid=639216921177227243&Step1=&Step2=&Step3=TRAVELMATE%20P414-76&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 14 Intel,TMP414-41,10,near-model-match,,,
+TravelMate P4 14 Intel,TMP414-41,11,near-model-match,,,
+TravelMate P4 14 Intel,TMP414-51,10,oem-wlan-listed,Wireless LAN_Intel_22.160.0.3_W10x64_(AX201).zip,22.160.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.160.0.3_W10x64_A.zip?acerid=638287968117912913&Step1=&Step2=&Step3=TRAVELMATE%20P414-51&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 14 Intel,TMP414-51,11,oem-wlan-listed,Wireless LAN_Intel_22.160.0.3_W11x64_(AX201).zip,22.160.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.160.0.3_W11x64_A.zip?acerid=638019259434306609&Step1=&Step2=&Step3=TRAVELMATE%20P414-51&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 14 Intel,TMP414-51G,10,oem-wlan-listed,Wireless LAN_Intel_22.160.0.3_W10x64_(AX201).zip,22.160.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.160.0.3_W10x64_A.zip?acerid=638287968117912913&Step1=&Step2=&Step3=TRAVELMATE%20P414-51G&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 14 Intel,TMP414-51G,11,oem-wlan-listed,Wireless LAN_Intel_22.160.0.3_W11x64_(AX201).zip,22.160.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.160.0.3_W11x64_A.zip?acerid=638019259434306609&Step1=&Step2=&Step3=TRAVELMATE%20P414-51G&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 14 Intel,TMP414-52,10,oem-wlan-listed,Wireless LAN_Intel_22.170.0.3_W10x64_(AX211 vPro).zip,22.170.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.170.0.3_W10x64_A.zip?acerid=638318276893560774&Step1=&Step2=&Step3=TRAVELMATE%20P414-52&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 14 Intel,TMP414-52,11,oem-wlan-listed,WLAN_Intel_23.120.0.3_W11x64.zip,23.120.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.120.0.3_W11x64_A.zip?acerid=638901273236896848&Step1=&Step2=&Step3=TRAVELMATE%20P414-52&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 14 Intel,TMP414-53,10,oem-wlan-listed,Wireless LAN_Intel_22.180.0.4_W10x64_(AX211 vPro).zip,22.180.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.180.0.4_W10x64_A.zip?acerid=638307114262368711&Step1=&Step2=&Step3=TRAVELMATE%20P414-53&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 14 Intel,TMP414-53,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1121.193_W11x64_(ICPS).zip,50.25.1121.193,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1121.193_W11x64_A.zip?acerid=639222056322835223&Step1=&Step2=&Step3=TRAVELMATE%20P414-53&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 14 Intel,TMP414-53G,10,oem-wlan-listed,Wireless LAN_Intel_22.180.0.4_W10x64_(AX211 vPro).zip,22.180.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.180.0.4_W10x64_A.zip?acerid=638307114262368711&Step1=&Step2=&Step3=TRAVELMATE%20P414-53G&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 14 Intel,TMP414-53G,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1121.193_W11x64_(ICPS).zip,50.25.1121.193,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1121.193_W11x64_A.zip?acerid=639222056322835223&Step1=&Step2=&Step3=TRAVELMATE%20P414-53G&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 14 Intel,TMP414-55,10,oem-os-not-listed,,,
+TravelMate P4 14 Intel,TMP414-55,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1015.183_W11x64_(ICPS).zip,50.25.1015.183,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1015.183_W11x64_A.zip?acerid=639180592126952709&Step1=&Step2=&Step3=TRAVELMATE%20P414-55&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 14 Intel,TMP414-55T,10,oem-os-not-listed,,,
+TravelMate P4 14 Intel,TMP414-55T,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1015.183_W11x64_(ICPS).zip,50.25.1015.183,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1015.183_W11x64_A.zip?acerid=639180592126952709&Step1=&Step2=&Step3=TRAVELMATE%20P414-55T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 14 Intel,TMP414-56,10,oem-os-not-listed,,,
+TravelMate P4 14 Intel,TMP414-56,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1121.193_W11x64_(ICPS).zip,50.25.1121.193,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1121.193_W11x64_A.zip?acerid=639216921177227243&Step1=&Step2=&Step3=TRAVELMATE%20P414-56&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 14 Intel,TMP414-76,10,oem-os-not-listed,,,
+TravelMate P4 14 Intel,TMP414-76,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1121.193_W11x64_(ICPS).zip,50.25.1121.193,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1121.193_W11x64_A.zip?acerid=639216921177227243&Step1=&Step2=&Step3=TRAVELMATE%20P414-76&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 16,TMP416-41,10,near-model-match,,,
+TravelMate P4 16,TMP416-41,11,near-model-match,,,
+TravelMate P4 16,TMP416-51,10,near-model-match,,,
+TravelMate P4 16,TMP416-51,11,near-model-match,,,
+TravelMate P4 16,TMP416-52,10,near-model-match,,,
+TravelMate P4 16,TMP416-52,11,near-model-match,,,
+TravelMate P4 16,TMP416-52G,10,near-model-match,,,
+TravelMate P4 16,TMP416-52G,11,near-model-match,,,
+TravelMate P4 16,TMP416-53,10,near-model-match,,,
+TravelMate P4 16,TMP416-53,11,near-model-match,,,
+TravelMate P4 16,TMP416-54,10,near-model-match,,,
+TravelMate P4 16,TMP416-54,11,near-model-match,,,
+TravelMate P4 16,TMP416-54T,10,near-model-match,,,
+TravelMate P4 16,TMP416-54T,11,near-model-match,,,
+TravelMate P4 16,TMP416-72,10,near-model-match,,,
+TravelMate P4 16,TMP416-72,11,near-model-match,,,
+TravelMate P4 16,TMP416-74,10,oem-os-not-listed,,,
+TravelMate P4 16,TMP416-74,11,oem-wlan-listed,Wireless LAN_Intel_24.50.0.4_W11x64_(BE201 vPro).zip,24.50.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_24.50.0.4_W11x64_A.zip?acerid=639292660190766871&Step1=&Step2=&Step3=TRAVELMATE%20P416-74&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 Spin 14,TMP414RN-41,10,oem-wlan-listed,Wireless LAN_MTK_3.3.0.595_W10x64_(MTRZ616).zip,3.3.0.595,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.3.0.595_W10x64_A.zip?acerid=638289028384374736&Step1=&Step2=&Step3=TRAVELMATE%20SPIN%20P414RN-41&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 Spin 14,TMP414RN-41,11,oem-wlan-listed,Wireless LAN_MTK_3.3.0.595_W11x64_(MTRZ616).zip,3.3.0.595,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.3.0.595_W11x64_A.zip?acerid=637961459012940067&Step1=&Step2=&Step3=TRAVELMATE%20SPIN%20P414RN-41&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 Spin 14,TMP414RN-51,10,oem-wlan-listed,Wireless LAN_Intel_22.160.0.3_W10x64_(AX201).zip,22.160.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.160.0.3_W10x64_A.zip?acerid=638287968117912913&Step1=&Step2=&Step3=TRAVELMATE%20SPIN%20P414RN-51&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 Spin 14,TMP414RN-51,11,oem-wlan-listed,Wireless LAN_Intel_22.160.0.3_W11x64_(AX201).zip,22.160.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.160.0.3_W11x64_A.zip?acerid=638019259434306609&Step1=&Step2=&Step3=TRAVELMATE%20SPIN%20P414RN-51&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 Spin 14,TMP414RN-52,10,oem-wlan-listed,Wireless LAN_Intel_22.170.0.3_W10x64_(AX211 vPro).zip,22.170.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.170.0.3_W10x64_A.zip?acerid=638318276893560774&Step1=&Step2=&Step3=TRAVELMATE%20SPIN%20P414RN-52&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 Spin 14,TMP414RN-52,11,oem-wlan-listed,WLAN_Intel_23.120.0.3_W11x64.zip,23.120.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.120.0.3_W11x64_A.zip?acerid=638901273236896848&Step1=&Step2=&Step3=TRAVELMATE%20SPIN%20P414RN-52&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 Spin 14,TMP414RN-53,10,oem-wlan-listed,Wireless LAN_Intel_22.180.0.4_W10x64_(AX211 vPro).zip,22.180.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.180.0.4_W10x64_A.zip?acerid=638307114262368711&Step1=&Step2=&Step3=TRAVELMATE%20P414RN-53&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 Spin 14,TMP414RN-53,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1121.193_W11x64_(ICPS).zip,50.25.1121.193,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1121.193_W11x64_A.zip?acerid=639222056322835223&Step1=&Step2=&Step3=TRAVELMATE%20P414RN-53&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 Spin 14,TMP414RN-53G,10,oem-wlan-listed,Wireless LAN_Intel_22.180.0.4_W10x64_(AX211 vPro).zip,22.180.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.180.0.4_W10x64_A.zip?acerid=638307114262368711&Step1=&Step2=&Step3=TRAVELMATE%20P414RN-53G&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 Spin 14,TMP414RN-53G,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1121.193_W11x64_(ICPS).zip,50.25.1121.193,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1121.193_W11x64_A.zip?acerid=639222056322835223&Step1=&Step2=&Step3=TRAVELMATE%20P414RN-53G&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 Spin 14,TMP414RN-54,10,oem-os-not-listed,,,
+TravelMate P4 Spin 14,TMP414RN-54,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1015.183_W11x64_(ICPS).zip,50.25.1015.183,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1015.183_W11x64_A.zip?acerid=639198828938621468&Step1=&Step2=&Step3=TRAVELMATE%20SPIN%20P414RN-54&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 Spin 14,TMP414RN-55,10,oem-os-not-listed,,,
+TravelMate P4 Spin 14,TMP414RN-55,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1015.183_W11x64_(ICPS).zip,50.25.1015.183,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1015.183_W11x64_A.zip?acerid=639180592126952709&Step1=&Step2=&Step3=TRAVELMATE%20P414RN-55&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 Spin 14,TMP414RN-56,10,oem-os-not-listed,,,
+TravelMate P4 Spin 14,TMP414RN-56,11,oem-wlan-listed,Wireless LAN_Intel_24.50.0.4_W11x64_(BE211).zip,24.50.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_24.50.0.4_W11x64_A.zip?acerid=639264243719244888&Step1=&Step2=&Step3=TRAVELMATE%20P414RN-56&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 Spin 14,TMP414RN-76,10,near-model-match,,,
+TravelMate P4 Spin 14,TMP414RN-76,11,near-model-match,,,
+TravelMate P4 Spin 14 AI Intel,TMP414RN-41,10,oem-wlan-listed,Wireless LAN_MTK_3.3.0.595_W10x64_(MTRZ616).zip,3.3.0.595,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.3.0.595_W10x64_A.zip?acerid=638289028384374736&Step1=&Step2=&Step3=TRAVELMATE%20SPIN%20P414RN-41&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 Spin 14 AI Intel,TMP414RN-41,11,oem-wlan-listed,Wireless LAN_MTK_3.3.0.595_W11x64_(MTRZ616).zip,3.3.0.595,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_MTK_3.3.0.595_W11x64_A.zip?acerid=637961459012940067&Step1=&Step2=&Step3=TRAVELMATE%20SPIN%20P414RN-41&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 Spin 14 AI Intel,TMP414RN-51,10,oem-wlan-listed,Wireless LAN_Intel_22.160.0.3_W10x64_(AX201).zip,22.160.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.160.0.3_W10x64_A.zip?acerid=638287968117912913&Step1=&Step2=&Step3=TRAVELMATE%20SPIN%20P414RN-51&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 Spin 14 AI Intel,TMP414RN-51,11,oem-wlan-listed,Wireless LAN_Intel_22.160.0.3_W11x64_(AX201).zip,22.160.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.160.0.3_W11x64_A.zip?acerid=638019259434306609&Step1=&Step2=&Step3=TRAVELMATE%20SPIN%20P414RN-51&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 Spin 14 AI Intel,TMP414RN-52,10,oem-wlan-listed,Wireless LAN_Intel_22.170.0.3_W10x64_(AX211 vPro).zip,22.170.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.170.0.3_W10x64_A.zip?acerid=638318276893560774&Step1=&Step2=&Step3=TRAVELMATE%20SPIN%20P414RN-52&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 Spin 14 AI Intel,TMP414RN-52,11,oem-wlan-listed,WLAN_Intel_23.120.0.3_W11x64.zip,23.120.0.3,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.120.0.3_W11x64_A.zip?acerid=638901273236896848&Step1=&Step2=&Step3=TRAVELMATE%20SPIN%20P414RN-52&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 Spin 14 AI Intel,TMP414RN-53,10,oem-wlan-listed,Wireless LAN_Intel_22.180.0.4_W10x64_(AX211 vPro).zip,22.180.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.180.0.4_W10x64_A.zip?acerid=638307114262368711&Step1=&Step2=&Step3=TRAVELMATE%20P414RN-53&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 Spin 14 AI Intel,TMP414RN-53,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1121.193_W11x64_(ICPS).zip,50.25.1121.193,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1121.193_W11x64_A.zip?acerid=639222056322835223&Step1=&Step2=&Step3=TRAVELMATE%20P414RN-53&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 Spin 14 AI Intel,TMP414RN-53G,10,oem-wlan-listed,Wireless LAN_Intel_22.180.0.4_W10x64_(AX211 vPro).zip,22.180.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.180.0.4_W10x64_A.zip?acerid=638307114262368711&Step1=&Step2=&Step3=TRAVELMATE%20P414RN-53G&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 Spin 14 AI Intel,TMP414RN-53G,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1121.193_W11x64_(ICPS).zip,50.25.1121.193,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1121.193_W11x64_A.zip?acerid=639222056322835223&Step1=&Step2=&Step3=TRAVELMATE%20P414RN-53G&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 Spin 14 AI Intel,TMP414RN-54,10,oem-os-not-listed,,,
+TravelMate P4 Spin 14 AI Intel,TMP414RN-54,11,oem-wlan-listed,Wireless LAN_Intel_50.25.1015.183_W11x64_(ICPS).zip,50.25.1015.183,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.25.1015.183_W11x64_A.zip?acerid=639198828938621468&Step1=&Step2=&Step3=TRAVELMATE%20SPIN%20P414RN-54&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P4 Spin 14 AI Intel,TMP414RN-55,10,near-model-match,,,
+TravelMate P4 Spin 14 AI Intel,TMP414RN-55,11,near-model-match,,,
+TravelMate P4 Spin 14 AI Intel,TMP414RN-56,10,near-model-match,,,
+TravelMate P4 Spin 14 AI Intel,TMP414RN-56,11,near-model-match,,,
+TravelMate P4 Spin 14 AI Intel,TMP414RN-76,10,near-model-match,,,
+TravelMate P4 Spin 14 AI Intel,TMP414RN-76,11,near-model-match,,,
+TravelMate P6,TMP614-51,10,oem-wlan-listed,Wireless LAN_Intel_21.0.0.5_W10x64v2.zip,21.0.0.5,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_21.0.0.5_W10x64_A.zip?acerid=636930659603715224&Step1=&Step2=&Step3=TRAVELMATE%20P614-51&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P6,TMP614-51,11,oem-os-not-listed,,,
+TravelMate P6,TMP614-51G,10,oem-wlan-listed,Wireless LAN_Intel_21.0.0.5_W10x64v2.zip,21.0.0.5,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_21.0.0.5_W10x64_A.zip?acerid=636930659603715224&Step1=&Step2=&Step3=TRAVELMATE%20P614-51G&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P6,TMP614-51G,11,oem-os-not-listed,,,
+TravelMate P6,TMP614-51T,10,oem-wlan-listed,Wireless LAN_Intel_21.0.0.5_W10x64v2.zip,21.0.0.5,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_21.0.0.5_W10x64_A.zip?acerid=636930659603715224&Step1=&Step2=&Step3=TRAVELMATE%20P614-51T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P6,TMP614-51T,11,oem-os-not-listed,,,
+TravelMate P6,TMP614-51TG,10,oem-wlan-listed,Wireless LAN_Intel_21.0.0.5_W10x64v2.zip,21.0.0.5,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_21.0.0.5_W10x64_A.zip?acerid=636930659603715224&Step1=&Step2=&Step3=TRAVELMATE%20P614-51TG&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P6,TMP614-51TG,11,oem-os-not-listed,,,
+TravelMate P6,TMP614-52,10,oem-wlan-listed,Wireless LAN_Intel_22.40.0.7_W10x64_(AX201).zip,22.40.0.7,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.40.0.7_W10x64_A.zip?acerid=637692591057090490&Step1=&Step2=&Step3=TRAVELMATE%20P614-52&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P6,TMP614-52,11,oem-wlan-listed,Wireless LAN_Intel_23.60.1.2_W11x64_(AX201).zip,23.60.1.2,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.60.1.2_W11x64_A.zip?acerid=638647417621276067&Step1=&Step2=&Step3=TRAVELMATE%20P614-52&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P6,TMP614-53,10,oem-wlan-listed,Wireless LAN_Intel_2.1122.1128.2_W10x64_(ICPS).zip,2.1122.1128.2,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_2.1122.1128.2_W10x64_A.zip?acerid=638797689350741934&Step1=&Step2=&Step3=TRAVELMATE%20P614-53&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P6,TMP614-53,11,oem-wlan-listed,Wireless LAN_Intel_23.30.0.6_W11x64_(AX211).zip,23.30.0.6,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.30.0.6_W11x64_A.zip?acerid=638596535535945638&Step1=&Step2=&Step3=TRAVELMATE%20P614-53&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P6,TMP614-53T,10,oem-wlan-listed,Wireless LAN_Intel_2.1122.1128.2_W10x64_(ICPS).zip,2.1122.1128.2,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_2.1122.1128.2_W10x64_A.zip?acerid=638797689350741934&Step1=&Step2=&Step3=TRAVELMATE%20P614-53T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P6,TMP614-53T,11,oem-wlan-listed,Wireless LAN_Intel_23.30.0.6_W11x64_(AX211).zip,23.30.0.6,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.30.0.6_W11x64_A.zip?acerid=638596535535945638&Step1=&Step2=&Step3=TRAVELMATE%20P614-53T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P6,TMP614-54,10,oem-os-not-listed,,,
+TravelMate P6,TMP614-54,11,oem-wlan-listed,Wireless LAN_Intel_24.20.0.4_W11x64_(BE201).zip,24.20.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_24.20.0.4_W11x64_A.zip?acerid=639106909208358602&Step1=&Step2=&Step3=TRAVELMATE%20P614-54&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P6,TMP614-54T,10,oem-os-not-listed,,,
+TravelMate P6,TMP614-54T,11,oem-wlan-listed,Wireless LAN_Intel_24.20.0.4_W11x64_(BE201).zip,24.20.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_24.20.0.4_W11x64_A.zip?acerid=639106909208358602&Step1=&Step2=&Step3=TRAVELMATE%20P614-54T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P6,TMP614-55,10,oem-os-not-listed,,,
+TravelMate P6,TMP614-55,11,oem-wlan-listed,Wireless LAN_Intel_50.26.107.203_W11x64_(ICPS).zip,50.26.107.203,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.26.107.203_W11x64_A.zip?acerid=639217035504298334&Step1=&Step2=&Step3=TRAVELMATE%20P614-55&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P6,TMP614-55T,10,oem-os-not-listed,,,
+TravelMate P6,TMP614-55T,11,oem-wlan-listed,Wireless LAN_Intel_50.26.107.203_W11x64_(ICPS).zip,50.26.107.203,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.26.107.203_W11x64_A.zip?acerid=639217035504298334&Step1=&Step2=&Step3=TRAVELMATE%20P614-55T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P6,TMP614-73,10,oem-os-not-listed,,,
+TravelMate P6,TMP614-73,11,oem-wlan-listed,Wireless LAN_Intel_40.25.909.171_W11x64_(ICPS).zip,40.25.909.171,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_40.25.909.171_W11x64_A.zip?acerid=639241090898444372&Step1=&Step2=&Step3=TRAVELMATE%20P614-73&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P6,TMP614-73T,10,oem-os-not-listed,,,
+TravelMate P6,TMP614-73T,11,oem-wlan-listed,Wireless LAN_Intel_40.25.909.171_W11x64_(ICPS).zip,40.25.909.171,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_40.25.909.171_W11x64_A.zip?acerid=639241090898444372&Step1=&Step2=&Step3=TRAVELMATE%20P614-73T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P6,TMP614-74,10,oem-os-not-listed,,,
+TravelMate P6,TMP614-74,11,oem-wlan-listed,Wireless LAN_Intel_50.26.107.203_W11x64_(ICPS).zip,50.26.107.203,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.26.107.203_W11x64_A.zip?acerid=639217035504298334&Step1=&Step2=&Step3=TRAVELMATE%20P614-74&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P6,TMP614-74T,10,oem-os-not-listed,,,
+TravelMate P6,TMP614-74T,11,oem-wlan-listed,Wireless LAN_Intel_50.26.107.203_W11x64_(ICPS).zip,50.26.107.203,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.26.107.203_W11x64_A.zip?acerid=639217035504298334&Step1=&Step2=&Step3=TRAVELMATE%20P614-74T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P6 14,TMP614-51,10,oem-wlan-listed,Wireless LAN_Intel_21.0.0.5_W10x64v2.zip,21.0.0.5,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_21.0.0.5_W10x64_A.zip?acerid=636930659603715224&Step1=&Step2=&Step3=TRAVELMATE%20P614-51&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P6 14,TMP614-51,11,oem-os-not-listed,,,
+TravelMate P6 14,TMP614-51G,10,oem-wlan-listed,Wireless LAN_Intel_21.0.0.5_W10x64v2.zip,21.0.0.5,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_21.0.0.5_W10x64_A.zip?acerid=636930659603715224&Step1=&Step2=&Step3=TRAVELMATE%20P614-51G&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P6 14,TMP614-51G,11,oem-os-not-listed,,,
+TravelMate P6 14,TMP614-51T,10,oem-wlan-listed,Wireless LAN_Intel_21.0.0.5_W10x64v2.zip,21.0.0.5,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_21.0.0.5_W10x64_A.zip?acerid=636930659603715224&Step1=&Step2=&Step3=TRAVELMATE%20P614-51T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P6 14,TMP614-51T,11,oem-os-not-listed,,,
+TravelMate P6 14,TMP614-51TG,10,oem-wlan-listed,Wireless LAN_Intel_21.0.0.5_W10x64v2.zip,21.0.0.5,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_21.0.0.5_W10x64_A.zip?acerid=636930659603715224&Step1=&Step2=&Step3=TRAVELMATE%20P614-51TG&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P6 14,TMP614-51TG,11,oem-os-not-listed,,,
+TravelMate P6 14,TMP614-52,10,oem-wlan-listed,Wireless LAN_Intel_22.40.0.7_W10x64_(AX201).zip,22.40.0.7,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.40.0.7_W10x64_A.zip?acerid=637692591057090490&Step1=&Step2=&Step3=TRAVELMATE%20P614-52&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P6 14,TMP614-52,11,oem-wlan-listed,Wireless LAN_Intel_23.60.1.2_W11x64_(AX201).zip,23.60.1.2,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.60.1.2_W11x64_A.zip?acerid=638647417621276067&Step1=&Step2=&Step3=TRAVELMATE%20P614-52&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P6 14,TMP614-53,10,oem-wlan-listed,Wireless LAN_Intel_2.1122.1128.2_W10x64_(ICPS).zip,2.1122.1128.2,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_2.1122.1128.2_W10x64_A.zip?acerid=638797689350741934&Step1=&Step2=&Step3=TRAVELMATE%20P614-53&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P6 14,TMP614-53,11,oem-wlan-listed,Wireless LAN_Intel_23.30.0.6_W11x64_(AX211).zip,23.30.0.6,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.30.0.6_W11x64_A.zip?acerid=638596535535945638&Step1=&Step2=&Step3=TRAVELMATE%20P614-53&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P6 14,TMP614-53T,10,oem-wlan-listed,Wireless LAN_Intel_2.1122.1128.2_W10x64_(ICPS).zip,2.1122.1128.2,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_2.1122.1128.2_W10x64_A.zip?acerid=638797689350741934&Step1=&Step2=&Step3=TRAVELMATE%20P614-53T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P6 14,TMP614-53T,11,oem-wlan-listed,Wireless LAN_Intel_23.30.0.6_W11x64_(AX211).zip,23.30.0.6,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.30.0.6_W11x64_A.zip?acerid=638596535535945638&Step1=&Step2=&Step3=TRAVELMATE%20P614-53T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P6 14,TMP614-54,10,oem-os-not-listed,,,
+TravelMate P6 14,TMP614-54,11,oem-wlan-listed,Wireless LAN_Intel_24.20.0.4_W11x64_(BE201).zip,24.20.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_24.20.0.4_W11x64_A.zip?acerid=639106909208358602&Step1=&Step2=&Step3=TRAVELMATE%20P614-54&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P6 14,TMP614-54T,10,oem-os-not-listed,,,
+TravelMate P6 14,TMP614-54T,11,oem-wlan-listed,Wireless LAN_Intel_24.20.0.4_W11x64_(BE201).zip,24.20.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_24.20.0.4_W11x64_A.zip?acerid=639106909208358602&Step1=&Step2=&Step3=TRAVELMATE%20P614-54T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P6 14,TMP614-55,10,oem-os-not-listed,,,
+TravelMate P6 14,TMP614-55,11,oem-wlan-listed,Wireless LAN_Intel_50.26.107.203_W11x64_(ICPS).zip,50.26.107.203,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.26.107.203_W11x64_A.zip?acerid=639217035504298334&Step1=&Step2=&Step3=TRAVELMATE%20P614-55&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P6 14,TMP614-55T,10,oem-os-not-listed,,,
+TravelMate P6 14,TMP614-55T,11,oem-wlan-listed,Wireless LAN_Intel_50.26.107.203_W11x64_(ICPS).zip,50.26.107.203,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.26.107.203_W11x64_A.zip?acerid=639217035504298334&Step1=&Step2=&Step3=TRAVELMATE%20P614-55T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P6 14,TMP614-73,10,oem-os-not-listed,,,
+TravelMate P6 14,TMP614-73,11,oem-wlan-listed,Wireless LAN_Intel_40.25.909.171_W11x64_(ICPS).zip,40.25.909.171,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_40.25.909.171_W11x64_A.zip?acerid=639241090898444372&Step1=&Step2=&Step3=TRAVELMATE%20P614-73&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P6 14,TMP614-73T,10,oem-os-not-listed,,,
+TravelMate P6 14,TMP614-73T,11,oem-wlan-listed,Wireless LAN_Intel_40.25.909.171_W11x64_(ICPS).zip,40.25.909.171,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_40.25.909.171_W11x64_A.zip?acerid=639241090898444372&Step1=&Step2=&Step3=TRAVELMATE%20P614-73T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P6 14,TMP614-74,10,oem-os-not-listed,,,
+TravelMate P6 14,TMP614-74,11,oem-wlan-listed,Wireless LAN_Intel_50.26.107.203_W11x64_(ICPS).zip,50.26.107.203,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.26.107.203_W11x64_A.zip?acerid=639217035504298334&Step1=&Step2=&Step3=TRAVELMATE%20P614-74&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P6 14,TMP614-74T,10,oem-os-not-listed,,,
+TravelMate P6 14,TMP614-74T,11,oem-wlan-listed,Wireless LAN_Intel_50.26.107.203_W11x64_(ICPS).zip,50.26.107.203,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.26.107.203_W11x64_A.zip?acerid=639217035504298334&Step1=&Step2=&Step3=TRAVELMATE%20P614-74T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P6 14 AI,TMP614-51,10,near-model-match,,,
+TravelMate P6 14 AI,TMP614-51,11,near-model-match,,,
+TravelMate P6 14 AI,TMP614-51G,10,near-model-match,,,
+TravelMate P6 14 AI,TMP614-51G,11,near-model-match,,,
+TravelMate P6 14 AI,TMP614-51T,10,near-model-match,,,
+TravelMate P6 14 AI,TMP614-51T,11,near-model-match,,,
+TravelMate P6 14 AI,TMP614-51TG,10,oem-wlan-listed,Wireless LAN_Intel_21.0.0.5_W10x64v2.zip,21.0.0.5,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_21.0.0.5_W10x64_A.zip?acerid=636930659603715224&Step1=&Step2=&Step3=TRAVELMATE%20P614-51TG&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P6 14 AI,TMP614-51TG,11,oem-os-not-listed,,,
+TravelMate P6 14 AI,TMP614-52,10,oem-wlan-listed,Wireless LAN_Intel_22.40.0.7_W10x64_(AX201).zip,22.40.0.7,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.40.0.7_W10x64_A.zip?acerid=637692591057090490&Step1=&Step2=&Step3=TRAVELMATE%20P614-52&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P6 14 AI,TMP614-52,11,oem-wlan-listed,Wireless LAN_Intel_23.60.1.2_W11x64_(AX201).zip,23.60.1.2,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.60.1.2_W11x64_A.zip?acerid=638647417621276067&Step1=&Step2=&Step3=TRAVELMATE%20P614-52&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P6 14 AI,TMP614-53,10,oem-wlan-listed,Wireless LAN_Intel_2.1122.1128.2_W10x64_(ICPS).zip,2.1122.1128.2,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_2.1122.1128.2_W10x64_A.zip?acerid=638797689350741934&Step1=&Step2=&Step3=TRAVELMATE%20P614-53&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P6 14 AI,TMP614-53,11,oem-wlan-listed,Wireless LAN_Intel_23.30.0.6_W11x64_(AX211).zip,23.30.0.6,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.30.0.6_W11x64_A.zip?acerid=638596535535945638&Step1=&Step2=&Step3=TRAVELMATE%20P614-53&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P6 14 AI,TMP614-53T,10,oem-wlan-listed,Wireless LAN_Intel_2.1122.1128.2_W10x64_(ICPS).zip,2.1122.1128.2,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_2.1122.1128.2_W10x64_A.zip?acerid=638797689350741934&Step1=&Step2=&Step3=TRAVELMATE%20P614-53T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P6 14 AI,TMP614-53T,11,oem-wlan-listed,Wireless LAN_Intel_23.30.0.6_W11x64_(AX211).zip,23.30.0.6,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.30.0.6_W11x64_A.zip?acerid=638596535535945638&Step1=&Step2=&Step3=TRAVELMATE%20P614-53T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P6 14 AI,TMP614-54,10,oem-os-not-listed,,,
+TravelMate P6 14 AI,TMP614-54,11,oem-wlan-listed,Wireless LAN_Intel_24.20.0.4_W11x64_(BE201).zip,24.20.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_24.20.0.4_W11x64_A.zip?acerid=639106909208358602&Step1=&Step2=&Step3=TRAVELMATE%20P614-54&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P6 14 AI,TMP614-54T,10,oem-os-not-listed,,,
+TravelMate P6 14 AI,TMP614-54T,11,oem-wlan-listed,Wireless LAN_Intel_24.20.0.4_W11x64_(BE201).zip,24.20.0.4,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_24.20.0.4_W11x64_A.zip?acerid=639106909208358602&Step1=&Step2=&Step3=TRAVELMATE%20P614-54T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P6 14 AI,TMP614-55,10,oem-os-not-listed,,,
+TravelMate P6 14 AI,TMP614-55,11,oem-wlan-listed,Wireless LAN_Intel_50.26.107.203_W11x64_(ICPS).zip,50.26.107.203,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.26.107.203_W11x64_A.zip?acerid=639217035504298334&Step1=&Step2=&Step3=TRAVELMATE%20P614-55&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P6 14 AI,TMP614-55T,10,oem-os-not-listed,,,
+TravelMate P6 14 AI,TMP614-55T,11,oem-wlan-listed,Wireless LAN_Intel_50.26.107.203_W11x64_(ICPS).zip,50.26.107.203,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.26.107.203_W11x64_A.zip?acerid=639217035504298334&Step1=&Step2=&Step3=TRAVELMATE%20P614-55T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P6 14 AI,TMP614-73,10,oem-os-not-listed,,,
+TravelMate P6 14 AI,TMP614-73,11,oem-wlan-listed,Wireless LAN_Intel_40.25.909.171_W11x64_(ICPS).zip,40.25.909.171,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_40.25.909.171_W11x64_A.zip?acerid=639241090898444372&Step1=&Step2=&Step3=TRAVELMATE%20P614-73&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P6 14 AI,TMP614-73T,10,oem-os-not-listed,,,
+TravelMate P6 14 AI,TMP614-73T,11,oem-wlan-listed,Wireless LAN_Intel_40.25.909.171_W11x64_(ICPS).zip,40.25.909.171,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_40.25.909.171_W11x64_A.zip?acerid=639241090898444372&Step1=&Step2=&Step3=TRAVELMATE%20P614-73T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P6 14 AI,TMP614-74,10,oem-os-not-listed,,,
+TravelMate P6 14 AI,TMP614-74,11,oem-wlan-listed,Wireless LAN_Intel_50.26.107.203_W11x64_(ICPS).zip,50.26.107.203,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.26.107.203_W11x64_A.zip?acerid=639217035504298334&Step1=&Step2=&Step3=TRAVELMATE%20P614-74&OS=ALL&LC=en&BC=ACER&SC=PA_6
+TravelMate P6 14 AI,TMP614-74T,10,oem-os-not-listed,,,
+TravelMate P6 14 AI,TMP614-74T,11,oem-wlan-listed,Wireless LAN_Intel_50.26.107.203_W11x64_(ICPS).zip,50.26.107.203,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_50.26.107.203_W11x64_A.zip?acerid=639217035504298334&Step1=&Step2=&Step3=TRAVELMATE%20P614-74T&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Vero 16,AV16-51P,10,oem-os-not-listed,,,
+Vero 16,AV16-51P,11,oem-wlan-listed,Wireless LAN_Intel_23.30.0.6_W11x64_(AX211).zip,23.30.0.6,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.30.0.6_W11x64_A.zip?acerid=638603278516936292&Step1=&Step2=&Step3=ASPIRE%20AV16-51P&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Vero 16,AV16-51PT,10,oem-os-not-listed,,,
+Vero 16,AV16-51PT,11,oem-wlan-listed,Wireless LAN_Intel_23.30.0.6_W11x64_(AX211).zip,23.30.0.6,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.30.0.6_W11x64_A.zip?acerid=638603278516936292&Step1=&Step2=&Step3=ASPIRE%20AV16-51PT&OS=ALL&LC=en&BC=ACER&SC=PA_6
+Vero 16,AV16-71P,10,oem-os-not-listed,,,
+Vero 16,AV16-71P,11,oem-wlan-listed,Wireless LAN_Intel_23.170.1.1_W11x64_(AX211).zip,23.170.1.1,https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_23.170.1.1_W11x64_A.zip?acerid=639231412165193684&Step1=&Step2=&Step3=ASPIRE%20AV16-71P&OS=ALL&LC=en&BC=ACER&SC=PA_6
