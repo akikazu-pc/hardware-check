@@ -713,12 +713,12 @@ BIOSTAR 的 `export/spec_export.php?S_ID=...` 返回的其实是 **PDF 字节**�
 
 ### 2026-11-13 收尾核验与剩余缺口总结
 
-**最终待核 206 格**（起点 2,570，累计关闭 2,364）：
+**最终待核 171 格**（起点 2,570，累计关闭 2,399）：
 
 | 类别 | 格数 | 缺口原因 |
 | --- | --- | --- |
-| 主板 Win10 / Win11 | 50 / 53 | ASUS 9/9、MSI 12/12、ASRock 9/12、BIOSTAR 10/10、GIGABYTE 8/6、EVGA 2/2 |
-| 笔记本 Win10 / Win11 | 64 / 39 | Acer 49/20、ASUS 6/12、Dell 5/3、Lenovo 3/4 |
+| 主板 Win10 / Win11 | 33 / 35 | ASUS 14/9、MSI 12/12、ASRock 7/7、GIGABYTE 3/3、EVGA 2/2（BIOSTAR 已清零） |
+| 笔记本 Win10 / Win11 | 64 / 39 | Acer 49/20、ASUS 9/14、Dell 5/3、Lenovo 3/4 |
 
 **每种缺口的准确原因**（逐格见 [剩余缺口清单](network-rescue-pending-inventory.csv)）：
 
