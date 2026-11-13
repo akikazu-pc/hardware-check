@@ -118,6 +118,12 @@ def download_is_oem(url):
     return host == DOWNLOAD_HOST or host.endswith("." + DOWNLOAD_HOST)
 
 
+def entry_sha256(entry):
+    value = re.sub(r"<[^>]*>", "", entry.get("download_sha256") or "")
+    value = re.sub(r"^SHA-256:\s*", "", value, flags=re.I)
+    return re.sub(r"[^0-9A-Fa-f]", "", value).lower()
+
+
 @dataclass
 class Bridge:
     """Batch transport over scripts/oem-http.mjs with in-run caching."""
@@ -492,17 +498,17 @@ def judge_listing(target, label, system, panel, allow_combined, model_title):
         chosen = combined[0]
     if chosen:
         url = chosen.get("download_url") or ""
-        sha = re.sub(r"^SHA-256:\s*", "", chosen.get("download_sha256") or "", flags=re.I).strip()
+        sha = entry_sha256(chosen)
         if not download_is_oem(url):
             return "non-oem-download-host", chosen.get("download_title") or "", \
                 chosen.get("download_version") or "", url, sha
         return ("oem-wlan-listed", chosen.get("download_title") or "",
-                chosen.get("download_version") or "", url, sha.lower())
+                chosen.get("download_version") or "", url, sha)
     if combined:
         entry = combined[0]
         return ("combined-system-package", entry.get("download_title") or "",
                 entry.get("download_version") or "", entry.get("download_url") or "",
-                re.sub(r"^SHA-256:\s*", "", entry.get("download_sha256") or "", flags=re.I).strip())
+                entry_sha256(entry))
     if killer:
         return "generic-killer-package", "", "", "", ""
     if has_lan and has_audio:
@@ -645,6 +651,7 @@ def main():
     args = parser.parse_args()
 
     started = time.monotonic()
+    raw_before = args.gaps.read_bytes()
     models = read_csv(args.gaps)
     targets = pending_targets(models, args.limit)
     if not targets:
@@ -676,6 +683,10 @@ def main():
     if unresolved:
         print(f"Unresolved models ({len(unresolved)}): {', '.join(unresolved[:10])}"
               + (" ..." if len(unresolved) > 10 else ""))
+    changed = args.gaps.read_bytes() != raw_before
+    if changed and not args.apply_oem_evidence:
+        print("WARNING: the gaps CSV changed during this run; the outputs describe the snapshot "
+              "read at start, not the current file.")
     if args.apply_oem_evidence:
         updates = Counter()
         for target in targets:
@@ -692,6 +703,10 @@ def main():
         print("First request failures:")
         for failure in bridge.failures[:5]:
             print(" ", failure)
+    if args.gaps.read_bytes() != raw_before:
+        print("WARNING: the gaps CSV changed during this run; the outputs above describe the "
+              "snapshot read at start, not the current file.")
+        return 2
     return 0
 
 
