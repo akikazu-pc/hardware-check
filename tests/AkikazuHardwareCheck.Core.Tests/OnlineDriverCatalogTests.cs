@@ -116,4 +116,17 @@ public sealed class OnlineDriverCatalogTests
         Assert.Equal(windows11, OnlineDriverCatalog.FindPossible(diagnostic)
             .Any(package => package.Id == "asus-tuf-mt7922"));
     }
+
+    [Theory]
+    [InlineData(19045, @"PCI\VEN_14C3&DEV_7961", "asus-rog-mtk-3001325", true)]
+    [InlineData(19045, @"PCI\VEN_14C3&DEV_0616", "asus-rog-mtk-3421046", false)]
+    [InlineData(26300, @"PCI\VEN_14C3&DEV_0616", "asus-rog-mtk-3421046", true)]
+    [InlineData(26300, @"PCI\VEN_8086&DEV_2723", "asus-rog-intel-23160", true)]
+    [InlineData(19045, @"PCI\VEN_8086&DEV_2723", "asus-rog-intel-23160", false)]
+    public void OffersAsusLaptopPackageForItsChipsetAndWindows(int build, string hardwareId, string packageId, bool offered)
+    {
+        var diagnostic = new NetworkDeviceDiagnostic(2, build, "X64", [new([hardwareId], null, 28)]);
+
+        Assert.Equal(offered, OnlineDriverCatalog.Find(diagnostic).Any(package => package.Id == packageId));
+    }
 }
