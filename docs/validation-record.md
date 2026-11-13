@@ -397,3 +397,9 @@ v0.1.0 退出后，重启仍留下 `PawnIO` 服务和驱动包。复现确认：
 - 修复的缺陷：运行中 Windows 的安装器只按硬件 ID 查找设备，而 `e2fn.inf` 匹配的 `PCI\VEN_8086&DEV_125C` 是 Windows 报告的兼容 ID，因此 I226-V 无法安装。已改为同时比对兼容 ID，与 `UpdateDriverForPlugAndPlayDevices` 一致，仍要求恰好一台问题码 28 的设备。另修正命令行版本列表重复编号。
 - 合成设备无真实硬件，驱动加载后为问题码 31，所以结果是「绑定未确认」。实体网卡的绑定、地址、DNS 和 HTTPS 仍需按[实机验收](network-rescue-field-test.md)执行。
 - Windows 11 26300 和 Windows 10 22H2 映像自带 Realtek `rt640x64.inf`，常见 RTL8168 系列可能无需额外驱动即可联网。
+
+## 2026-11-13 PE 命令行多驱动回归
+
+- 用 `main` 重建的 PE 替换实验数据 ISO 中的 `PeNetworkRescue.exe` 和 `NetworkRescue.exe`，在 `NR-W10P-REPAIR` 来宾（Windows 10 22H2，映像 19045.2965）跑一次 CLI 修复回归。合成 RTL8168 设备（问题码 28）匹配 `rt640x64.inf` 10.79.50.1003；DISM 写入 `oem3.inf`，`Get-Drivers` 列出该包，输出 `Driver added`，退出码 0。覆盖 PE 启动、夹具注册、单个 INF 选择、确认、DISM 写入和驱动库复查，未覆盖实体网卡绑定。
+- 在 `NR-W11LTSC-OS` 来宾（Windows 11 26100.1742）用两个合成设备（RTL8125、RTL8168）复测。CLI 列出两个驱动，并出现「Install all matched drivers (2)」选项；本次输入管道与确认提示未对齐，只写入第一个驱动 `rt25cx21x64.inf`，全装循环尚未执行，标 Unverified。
+- 实验夹具 `MultiNicFixture.exe` 按 `@file` 读取硬件 ID 建根枚举设备，ISO 为 lab-bin6；两轮来宾均已关机，未改宿主驱动。目标 Windows 显示 19041、DISM 报告 19045.2965，复现交接中的构建号显示问题。
