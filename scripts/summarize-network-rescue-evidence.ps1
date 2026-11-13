@@ -18,7 +18,8 @@ function Read-Evidence([string]$Directory) {
     $reports = @()
     foreach ($file in Get-ChildItem -LiteralPath $Directory -Filter '*.json' -File) {
         try {
-            $report = Get-Content -LiteralPath $file.FullName -Raw | ConvertFrom-Json
+            # The collector writes UTF-8 without a BOM; Windows PowerShell 5.1 would otherwise read ANSI.
+            $report = Get-Content -LiteralPath $file.FullName -Raw -Encoding UTF8 | ConvertFrom-Json
         } catch {
             Write-Warning "Skip unreadable JSON: $($file.Name)"
             continue
@@ -38,10 +39,11 @@ function Get-Devices($Report) {
 }
 
 function Find-TargetDevice($Devices, $HardwareIds) {
-    if ($null -eq $HardwareIds -or $HardwareIds.Count -eq 0) { return $null }
+    $ids = @($HardwareIds)
+    if ($ids.Count -eq 0) { return $null }
     foreach ($device in $Devices) {
         foreach ($candidate in @($device.hardwareIds)) {
-            if ($HardwareIds -contains $candidate) { return $device }
+            if ($ids -contains $candidate) { return $device }
         }
     }
     return $null
@@ -62,7 +64,7 @@ function Test-Final($Device, $Connectivity) {
     return $results
 }
 
-$reports = Read-Evidence -Directory (Resolve-Path -LiteralPath $EvidenceDirectory).Path
+$reports = @(Read-Evidence -Directory (Resolve-Path -LiteralPath $EvidenceDirectory).Path)
 if ($reports.Count -eq 0) { throw "No evidence JSON found in $EvidenceDirectory." }
 
 $byScenario = [ordered]@{}
