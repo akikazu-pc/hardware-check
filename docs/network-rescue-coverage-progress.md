@@ -940,3 +940,17 @@ ASUS 笔记本两个历史 EXE 已下载并静态解包。EXE 的 ASUSTeK Authen
 | MediaTek 26562 | `50a4500a12b16747ba1608964b69258af1d97b204f35fa16020cdd4a53eff368` | `X64/mtkwl6ex.inf` 3.00.01.1207，`PCI\VEN_14C3&DEV_7961&SUBSYS_46801A3B`；`mtkwl6ex.cat` |
 
 Acer 的三个 Win10 候选 ZIP 也已核对 `Netwtw08.INF` 版本。AX201、Killer、9560 的 SHA-256 分别是 `366abef788aa4c0b88e5a25629da81950aa0caf945578466ac5e06abad1b841a`、`57ef213603ab29d7292dee8e032be3ca4ee028699a94abe149f2e6b66c394bf8`、`faf03dba39b5fc6b8f6886c21088ed9a3667629fa06bc1b51e7f2f721191003e`。
+
+### 精确 SKU 复查与 ASUS x64 入包
+
+待核维持 **20 格**。Acer 18 格继续按精确 SKU 与网卡硬件 ID 核对，Pro WS 665-ACE 的两格仍追踪 WLAN。该主板已验证的有线驱动单独供联网恢复使用。
+
+- **P40-41-G2、P40-41-G3、P50-41-G3** 的商业型号可对应 Acer 欧盟符合性声明的监管型号。两份声明均列 Intel AX200NGW。已下载并解开 Microsoft Win10 x64 驱动，`Netwtw08.INF` 24.20.2.1 含 `PCI\VEN_8086&DEV_2723&SUBSYS_00808086`、`00848086` 等，`netwtw08.cat` 为有效的 Microsoft WHCP 签名。目录注明 Win10 2004（build 19041）起。CAB SHA-256 为 `797f22d0b2fcb2378d494a0112179dbb5f5b89dd71b61be7669fbf88078aa9f3`。P40 基础型号另有 MediaTek 驱动，监管文档只能证明 AX200 配置；三个精确 SKU 仍缺出厂配置或实机 ID，保留待核。[P40 Acer 声明](https://global-download.acer.com/GDFiles/Document/CE%20DoC/CE%20DoC_Acer_1.0_A_A.pdf?acerid=637527525426459481) · [P40 TCO 证书](https://katalog.atcomp.cz/katalog/tco/N923070340.pdf) · [P50 Acer 声明](https://global-download.acer.com/GDFiles/Document/CE%20DoC/CE%20DoC_Acer_1.0_A_A.pdf?acerid=637527526294706681) · [Microsoft 驱动目录](https://www.catalog.update.microsoft.com/ScopedViewInline.aspx?updateid=d1d2e553-ab47-4d5d-af51-5512cca975ee)
+- **Aspire S 后缀**：A315-23S 原厂规格表列出出厂 Windows 10 x64、802.11ac 及系列可选 Intel Dual Band Wireless-AC。ENERGY STAR 认证还覆盖 A315-35S、A514-54S、A515-44S、A515-45S、A515-56S，认证资料没有把网卡硬件 ID 对应到精确 SKU。[A315-23S 产品表](https://www.jarcomputers.com/images/custom/docs/asA315-23_A315_23G_A315-23S%28Lotus_DA%29_ps_v4-1630461876.pdf) · [N18Q13](https://www.energystar.gov/productfinder/product/certified-computers/details/2378257/export/pdf/download) · [N20C4](https://www.energystar.gov/productfinder/product/certified-computers/details/2365889/export/pdf/download) · [N20C5](https://www.energystar.gov/productfinder/product/certified-computers/details/2382942/export/pdf/download)
+- **SP513-55NA、311R-31、311RN-31、B311RA-32**：相邻型号的 Win10 AX201／Killer／9560 包下载后核对了 `Netwtw08.INF` 和有效的 Microsoft WHCP CAT 签名。Acer 兼容性页面分列有 B 和无 B 的机型；B311RA-32 的 N20Q14 认证允许 9560NGQ 和 AX201NGQ。精确出厂配置待核。[Acer 兼容性列表](https://www.acer.com/us-en/support/windows/windows-11-compatibility.html) · [B311RA-32 ENERGY STAR](https://www.energystar.gov/productfinder/product/certified-computers/details/2376263/export/pdf) · [Acer FCC 附件](https://apps.fcc.gov/eas/GetApplicationAttachment.html?id=5234620)
+- **CN516-72、SF314-44G、X40-52-M/MG**：精确 Acer 驱动查询无命中。目前资料只确认型号名称或关联产品，网卡仍待核。
+- **Pro WS 665-ACE**：ASUS 主板照片及一台 Hetzner 装机实拍均未见后置 WLAN 天线座。缺完整物料清单，两格仍待核。[ASUS 主板照片](https://dlcdnwebimgs.asus.com/gain/44b7e5e4-f357-4628-9751-dc12decd2d2d/w800) · [Hetzner 装机实拍](https://www.youtube.com/watch?v=V2P8mjWRqpk)
+
+[驱动清单](../packaging/shared-desktop/wifi-preview-packages.json)和[原厂下载索引](network-rescue-driver-index.csv)已收录两份 ROG WLAN 包与 Pro WS 665-ACE 的两份按系统区分的 Intel LAN 包。Windows 10 LAN 门槛为 build 17763，Windows 11 LAN 门槛为 build 22000。所有归档均按 SHA-256 校验并静态解包。目录版成品已检查 INF／CAT／SYS，Win11 build 26300 的 SetupAPI 验证了两份 WLAN 目录的四个匹配 INF 和 Win11 LAN 目录的两个匹配 INF。Win10 LAN 的 CAT 签名已通过检查。真实设备安装与联网均为 Unverified。
+
+离线完整版已按现有打包脚本重建并逐文件验证 ZIP 内容，四个目标 INF 已在成品中确认。完整版 SHA-256 为 `bb9aaced21032faa3ff15603916e45b152989e3c74ddea1424c6d1e394891d55`。

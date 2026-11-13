@@ -2510,6 +2510,93 @@
         "PCI\\VEN_10EC&DEV_B520",
         "PCI\\VEN_10EC&DEV_B851"
       ]
+    },
+    {
+      "id": "asus-rog-intel-22706",
+      "version": "22.70.0.6",
+      "source": "https://dlcdnets.asus.com/pub/ASUS/GamingNB/Image/Driver/Networking/24199/WirelessLan_DCH_ROG_Intel_J_V22.70.0.6_24199_1.exe",
+      "archiveSha256": "E12CDAD03EC60D25D842F29C77EA708B1432702FD90AC604ED619E573CFA7665",
+      "driverDirectory": "BASE",
+      "scope": "ASUS G513IR/G713IR; verify hardware ID and target Windows build",
+      "archiveLayout": "embedded-7z",
+      "archiveOffset": 4282400,
+      "devicePrefixes": [
+        "PCI\\VEN_8086&DEV_2723&SUBSYS_00808086",
+        "PCI\\VEN_8086&DEV_2723&SUBSYS_00848086",
+        "PCI\\VEN_8086&DEV_2723&SUBSYS_00888086",
+        "PCI\\VEN_8086&DEV_2723&SUBSYS_008C8086",
+        "PCI\\VEN_8086&DEV_2723&SUBSYS_16531A56",
+        "PCI\\VEN_8086&DEV_2723&SUBSYS_16541A56",
+        "PCI\\VEN_8086&DEV_2723&SUBSYS_20808086",
+        "PCI\\VEN_8086&DEV_2723&SUBSYS_40808086",
+        "PCI\\VEN_8086&DEV_2723&SUBSYS_40888086"
+      ],
+      "windows11Only": false,
+      "minimumWindowsBuild": 10240,
+      "adapterName": "Intel AX200"
+    },
+    {
+      "id": "asus-rog-mtk-30011207",
+      "version": "3.00.01.1207",
+      "source": "https://dlcdnets.asus.com/pub/ASUS/GamingNB/Image/Driver/Networking/26562/WirelessLan_ROG_MediaTek_J_V3.00.01.1207_26562_2.exe",
+      "archiveSha256": "50A4500A12B16747BA1608964B69258AF1D97B204F35FA16020CDD4A53EFF368",
+      "driverDirectory": "X64",
+      "scope": "ASUS G513IR/G713IR; verify hardware ID and target Windows build",
+      "archiveLayout": "embedded-7z",
+      "archiveOffset": 4283488,
+      "devicePrefixes": [
+        "PCI\\VEN_14C3&DEV_7961&SUBSYS_380211AD",
+        "PCI\\VEN_14C3&DEV_7961&SUBSYS_381217AA",
+        "PCI\\VEN_14C3&DEV_7961&SUBSYS_46801A3B",
+        "PCI\\VEN_14C3&DEV_7961&SUBSYS_46811A3B",
+        "PCI\\VEN_14C3&DEV_7961&SUBSYS_46821A3B",
+        "PCI\\VEN_14C3&DEV_7961&SUBSYS_796114C3",
+        "PCI\\VEN_14C3&DEV_7961&SUBSYS_E0B7105B",
+        "PCI\\VEN_14C3&DEV_7961&SUBSYS_E0BC17AA"
+      ],
+      "windows11Only": false,
+      "minimumWindowsBuild": 10240,
+      "adapterName": "MediaTek MT7921"
+    },
+    {
+      "id": "asus-ws-i225-w10",
+      "version": "1.1.4.43",
+      "source": "https://dlcdnets.asus.com/pub/ASUS/mb/LGA1700/Pro_WS_W680-ACE/DRV_LAN_Intel_I226_UWD_TP_W10_64_V11443_20240710R.zip",
+      "archiveSha256": "6A95A86CB39A5CFF878C78709F4E2E83EF0591D480479B725EFB88F58D139D0E",
+      "driverDirectory": ".",
+      "scope": "ASUS Pro WS 665-ACE; verify hardware ID and target Windows build",
+      "archiveLayout": "direct",
+      "devicePrefixes": [
+        "PCI\\VEN_8086&DEV_15F2&REV_01",
+        "PCI\\VEN_8086&DEV_15F2&REV_02",
+        "PCI\\VEN_8086&DEV_15F2&REV_03",
+        "PCI\\VEN_8086&DEV_15F2&SUBSYS_00018086",
+        "PCI\\VEN_8086&DEV_15F2&SUBSYS_00028086"
+      ],
+      "windows11Only": false,
+      "minimumWindowsBuild": 17763,
+      "adapterName": "Intel I225-LM",
+      "targetWindows": "windows10"
+    },
+    {
+      "id": "asus-ws-i225-w11",
+      "version": "2.1.5.10",
+      "source": "https://dlcdnets.asus.com/pub/ASUS/mb/04LAN/DRV_LAN_Intel_I226_Cx_TP_W11_64_V21510_20260330R.zip",
+      "archiveSha256": "8B1FD01959C6D15E872952C39F927207C23AA7EE4FB5E3A945289F372DE3F614",
+      "driverDirectory": ".",
+      "scope": "ASUS Pro WS 665-ACE; verify hardware ID and target Windows build",
+      "archiveLayout": "direct",
+      "devicePrefixes": [
+        "PCI\\VEN_8086&DEV_15F2&REV_01",
+        "PCI\\VEN_8086&DEV_15F2&REV_02",
+        "PCI\\VEN_8086&DEV_15F2&REV_03",
+        "PCI\\VEN_8086&DEV_15F2&SUBSYS_00018086",
+        "PCI\\VEN_8086&DEV_15F2&SUBSYS_00028086"
+      ],
+      "windows11Only": true,
+      "minimumWindowsBuild": 22000,
+      "adapterName": "Intel I225-LM",
+      "targetWindows": "windows11"
     }
   ]
 }
