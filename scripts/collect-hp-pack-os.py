@@ -1,16 +1,16 @@
-"""Close the HP Windows 10 cells that HP publishes no Windows 10 driver pack for.
+"""Close HP cells for a system that HP publishes no driver pack for.
 
 Two HP documents are combined for the exact model:
 
 * the HP Client Driver Pack Catalog (``HPClientDriverPackCatalog.cab``) names the model and its
-  driver packs per Windows version; the pending models only appear under Windows 11 entries,
+  driver packs per Windows version; a model that only appears under Windows 11 entries has no
+  Windows 10 pack, and the other way round for older models,
 * each pack's ``.cva`` file (``ftp.hp.com``) lists the exact models in ``[System Information]`` and
-  the supported systems in ``[Operating Systems]``; for these packs that section holds only
-  ``W11_*`` keys.
+  the supported systems in ``[Operating Systems]`` (``W10_*`` or ``W11_*`` keys).
 
-A Windows 10 cell closes as ``oem-os-not-listed`` only when the catalog has entries for the exact
-model, none of them is a Windows 10 entry, and every linked pack declares Windows 11 only in its
-own CVA. Older models without any catalog entry stay pending.
+A cell closes as ``oem-os-not-listed`` only when the catalog has entries for the exact model, none
+of them is for the target system, and every linked pack declares the other system only in its own
+CVA. Models without any catalog entry stay pending.
 
 Usage: python scripts/collect-hp-pack-os.py docs/network-rescue-model-gaps.csv \
     artifacts/network-rescue-hp-cva/x/hpclientdriverpackcatalog.cab \
@@ -27,8 +27,8 @@ import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parent.parent
 BRIDGE = ROOT / "scripts" / "oem-http.mjs"
-FIELDS = ["model", "packs", "catalogOs", "cvaOs"]
-SYSTEM = "Windows 10"
+FIELDS = ["model", "windows", "packs", "catalogOs", "cvaOs"]
+SYSTEMS = {"10": ("Windows 10", ("W11_",)), "11": ("Windows 11", ("W10_", "WT64_"))}
 
 
 def norm(value):
@@ -63,33 +63,68 @@ def main():
 
     candidates = []
     for row in rows:
-        if row["brand"] != "HP" or row["type"] != "laptop" or row["windows10X64Evidence"] != "pending":
+        if row["brand"] != "HP" or row["type"] != "laptop":
             continue
         entries = by_system.get(norm(row["model"])) or by_system.get(norm("HP " + row["model"])) or []
-        ids = sorted({entry.findtext("SoftPaqId") for entry in entries})
-        if not ids:
+        if not entries:
             continue
         catalog_os = sorted({entry.findtext("OSName") or "" for entry in entries})
-        if any(name.startswith(SYSTEM) for name in catalog_os):
-            continue
-        candidates.append((row["model"], ids, catalog_os))
-
-    cva_urls = {softpaq: packs[softpaq].findtext("CvaFileUrl") for _, ids, _ in candidates
+        ids = sorted({entry.findtext("SoftPaqId") for entry in entries})
+        for system, (catalog_prefix, other_keys) in SYSTEMS.items():
+            if row[f"windows{system}X64Evidence"] != "pending":
+                continue
+            if any(name.startswith(catalog_prefix) for name in catalog_os):
+                continue
+            candidates.append((row["model"], system, ids, catalog_os, other_keys))
+    cva_urls = {softpaq: packs[softpaq].findtext("CvaFileUrl") for _, _, ids, _, _ in candidates
                 for softpaq in ids if softpaq in packs}
     bodies = fetch(sorted({url for url in cva_urls.values() if url}))
     cva_os = {}
     for softpaq, url in cva_urls.items():
-        text = bodies.get(url, "")
-        cva_os[softpaq] = re.findall(r"^(W\d\d_[A-Z0-9]+)=", text, re.M)
+        cva_os[softpaq] = re.findall(r"^((?:W\d\d|WT64)_[A-Z0-9]+)=", bodies.get(url, ""), re.M)
+    # Some packs carry no [Operating Systems] section; their release notes state the systems and
+    # the supported models explicitly, which serves as the same declaration.
+    notes = {}
+    for softpaq in sorted({softpaq for _, _, ids, _, _ in candidates for softpaq in ids}):
+        if cva_os.get(softpaq) or softpaq not in packs:
+            continue
+        exe = packs[softpaq].findtext("Url") or ""
+        if not exe.endswith(".exe"):
+            continue
+        notes[softpaq] = exe[:-4] + ".html"
+    bodies.update(fetch(sorted(notes.values())))
+    release = {}
+    for softpaq, url in notes.items():
+        text = re.sub(r"<[^>]+>", " ", bodies.get(url, ""))
+        text = re.sub(r"\s+", " ", text)
+        systems = re.search(r"OPERATING SYSTEM\(S\):\s*(.*?)\s*LANGUAGE", text)
+        models = re.search(r"HARDWARE PRODUCT MODEL\(S\):\s*(.*?)(?:OPERATING SYSTEM|LANGUAGE)", text)
+        release[softpaq] = {"systems": systems.group(1).strip() if systems else "",
+                            "models": norm(models.group(1)) if models else ""}
 
     proof, closable = [], []
-    for model, ids, catalog_os in candidates:
-        systems = {softpaq: cva_os.get(softpaq, []) for softpaq in ids}
-        if any(not keys or any(not key.startswith("W11_") for key in keys) for keys in systems.values()):
+    for model, system, ids, catalog_os, other_keys in candidates:
+        target = "Windows 11" if system == "10" else "Windows 10"
+        other = "Windows 10" if target == "Windows 11" else "Windows 11"
+        proven = True
+        for softpaq in ids:
+            keys = cva_os.get(softpaq, [])
+            if keys:
+                # CVA declaration: every key must name the other system (WT64_ = Windows 10 x64).
+                proven = proven and all(key.startswith(other_keys) for key in keys)
+            else:
+                note = release.get(softpaq, {})
+                proven = proven and bool(note) and target in note["systems"] \
+                    and other not in note["systems"] and norm(model) in note["models"]
+            if not proven:
+                break
+        if not proven:
             continue
-        closable.append(model)
-        proof.append({"model": model, "packs": ";".join(ids), "catalogOs": ";".join(catalog_os),
-                      "cvaOs": ";".join(sorted({key for keys in systems.values() for key in keys}))})
+        closable.append((model, system))
+        declared = sorted({key for softpaq in ids for key in cva_os.get(softpaq, [])}
+                          | {release[softpaq]["systems"] for softpaq in ids if softpaq in release})
+        proof.append({"model": model, "windows": system, "packs": ";".join(ids),
+                      "catalogOs": ";".join(catalog_os), "cvaOs": "|".join(declared)})
     with args.output.open("w", encoding="utf-8", newline="") as destination:
         writer = csv.DictWriter(destination, FIELDS)
         writer.writeheader()
@@ -101,12 +136,13 @@ def main():
             reader = csv.DictReader(source)
             rows, fields = list(reader), reader.fieldnames
         updates = 0
-        names = set(closable)
+        wanted = set(closable)
         for row in rows:
-            if row["brand"] == "HP" and row["type"] == "laptop" and row["model"] in names \
-                    and row["windows10X64Evidence"] == "pending":
-                row["windows10X64Evidence"] = "oem-os-not-listed"
-                updates += 1
+            for system in SYSTEMS:
+                field = f"windows{system}X64Evidence"
+                if (row["model"], system) in wanted and row[field] == "pending":
+                    row[field] = "oem-os-not-listed"
+                    updates += 1
         temporary = args.models.with_suffix(args.models.suffix + ".tmp")
         with temporary.open("w", encoding="utf-8-sig" if raw.startswith(b"\xef\xbb\xbf") else "utf-8",
                             newline="") as output:

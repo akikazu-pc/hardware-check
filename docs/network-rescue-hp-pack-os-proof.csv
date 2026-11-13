@@ -1,64 +1,85 @@
-model,packs,catalogOs,cvaOs
-EliteBook 6 G1a 14 inch Notebook AI PC,sp174366,"Windows 11 64-bit, 23H2;Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2
-EliteBook 6 G1a 14 inch Notebook Next Gen AI PC,sp174426,"Windows 11 64-bit, 23H2;Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2
-EliteBook 6 G1a 16 inch Notebook AI PC,sp174366,"Windows 11 64-bit, 23H2;Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2
-EliteBook 6 G1ah 14 inch Notebook PC,sp174366,"Windows 11 64-bit, 23H2;Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2
-EliteBook 6 G1ah 16 inch Notebook PC,sp174366,"Windows 11 64-bit, 23H2;Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2
-EliteBook 6 G2a 14 inch Notebook AI PC,sp174560,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2
-EliteBook 6 G2a 14 inch Notebook Next Gen AI PC,sp174718,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2;Windows 11 64-bit, 26H2",W11_24H2;W11_25H2;W11_26H2
-EliteBook 6 G2a 16 inch Notebook AI PC,sp174560,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2
-EliteBook 6 G2a 16 inch Notebook Next Gen AI PC,sp174718,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2;Windows 11 64-bit, 26H2",W11_24H2;W11_25H2;W11_26H2
-EliteBook 6 G2ah 14 inch Notebook PC,sp174560,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2
-EliteBook 6 G2ah 16 inch Notebook PC,sp174560,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2
-EliteBook 6 G2i 14 inch Notebook AI PC,sp174691;sp174895,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2;Windows 11 64-bit, 26H2",W11_23H2;W11_24H2;W11_25H2;W11_26H2
-EliteBook 6 G2i 14 inch Notebook Next Gen AI PC,sp174056,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2;Windows 11 64-bit, 26H2",W11_24H2;W11_25H2;W11_26H2
-EliteBook 6 G2i 16 inch Notebook AI PC,sp174691;sp174895,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2;Windows 11 64-bit, 26H2",W11_23H2;W11_24H2;W11_25H2;W11_26H2
-EliteBook 6 G2i 16 inch Notebook Next Gen AI PC,sp174056,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2;Windows 11 64-bit, 26H2",W11_24H2;W11_25H2;W11_26H2
-EliteBook 6 G2iR 14 inch Notebook Next Gen AI PC,sp174788,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_24H2;W11_25H2
-EliteBook 8 Flip G2i 13 inch Notebook Next Gen AI PC,sp174427,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_24H2;W11_25H2;W11_26H2
-EliteBook 8 G1a 13 inch Notebook AI PC,sp174545,"Windows 11 64-bit, 23H2;Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2;W11_26H2
-EliteBook 8 G1a 13 inch Notebook Next Gen AI PC,sp168444,"Windows 11 64-bit, 23H2;Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2
-EliteBook 8 G1a 14 inch Notebook AI PC,sp174545,"Windows 11 64-bit, 23H2;Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2;W11_26H2
-EliteBook 8 G1a 14 inch Notebook Next Gen AI PC,sp168444,"Windows 11 64-bit, 23H2;Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2
-EliteBook 8 G1a 16 inch Notebook AI PC,sp174545,"Windows 11 64-bit, 23H2;Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2;W11_26H2
-EliteBook 8 G1a 16 inch Notebook Next Gen AI PC,sp168444,"Windows 11 64-bit, 23H2;Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2
-EliteBook 8 G2a 14 inch Notebook Next Gen AI PC,sp174518,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2
-EliteBook 8 G2a 16 inch Notebook Next Gen AI PC,sp174518,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2
-EliteBook 8 G2i 13 inch Notebook Next Gen AI PC,sp174427,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_24H2;W11_25H2;W11_26H2
-EliteBook 8 G2i 14 inch Notebook Next Gen AI PC,sp174427,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_24H2;W11_25H2;W11_26H2
-EliteBook 8 G2i 16 inch Notebook Next Gen AI PC,sp174427,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_24H2;W11_25H2;W11_26H2
-EliteBook 8 G2iW 14 inch Notebook AI PC,sp174778,"Windows 11 64-bit, 25H2;Windows 11 64-bit, 26H2",W11_24H2;W11_25H2;W11_26H2
-EliteBook Ultra G1i 14 inch Notebook Next Gen AI PC,sp157866,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_24H2;W11_25H2
-EliteBook X Flip G2i 14 inch Notebook Next Gen AI PC,sp172736,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2;Windows 11 64-bit, 26H2",W11_23H2;W11_24H2;W11_25H2;W11_26H2
-EliteBook X G1a 14 inch Notebook Next Gen AI PC,sp174481,"Windows 11 64-bit, 23H2;Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2
-EliteBook X G2a 14 inch Notebook Next Gen AI PC,sp174204,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_24H2;W11_25H2
-EliteBook X G2i 14 inch Notebook Next Gen AI PC,sp172736,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2;Windows 11 64-bit, 26H2",W11_23H2;W11_24H2;W11_25H2;W11_26H2
-Fortis Flip G1i 11 inch Notebook PC,sp174544,"Windows 11 64-bit, 23H2;Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2
-Limited Edition Scuderia Ferrari Notebook Next Gen AI PC,sp174478,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_24H2;W11_25H2
-ProBook 4 Flip G2i 13 inch Notebook AI PC,sp174691;sp174895,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2;Windows 11 64-bit, 26H2",W11_23H2;W11_24H2;W11_25H2;W11_26H2
-ProBook 4 G1a 14 inch Notebook AI PC,sp174366,"Windows 11 64-bit, 23H2;Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2
-ProBook 4 G1a 16 inch Notebook AI PC,sp174366,"Windows 11 64-bit, 23H2;Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2
-ProBook 4 G1ah 14 inch Notebook PC,sp174366,"Windows 11 64-bit, 23H2;Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2
-ProBook 4 G1ah 16 inch Notebook PC,sp174366,"Windows 11 64-bit, 23H2;Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2
-ProBook 4 G2a 14 inch Notebook AI PC,sp174560,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2
-ProBook 4 G2a 14 inch Notebook Next Gen AI PC,sp174718,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2;Windows 11 64-bit, 26H2",W11_24H2;W11_25H2;W11_26H2
-ProBook 4 G2a 16 inch Notebook AI PC,sp174560,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2
-ProBook 4 G2a 16 inch Notebook Next Gen AI PC,sp174718,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2;Windows 11 64-bit, 26H2",W11_24H2;W11_25H2;W11_26H2
-ProBook 4 G2ah 14 inch Notebook PC,sp174560,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2
-ProBook 4 G2ah 16 inch Notebook PC,sp174560,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2
-ProBook 4 G2i 13 inch Notebook AI PC,sp174691;sp174895,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2;Windows 11 64-bit, 26H2",W11_23H2;W11_24H2;W11_25H2;W11_26H2
-ProBook 4 G2i 14 inch Notebook AI PC,sp174691;sp174895,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2;Windows 11 64-bit, 26H2",W11_23H2;W11_24H2;W11_25H2;W11_26H2
-ProBook 4 G2i 14 inch Notebook Next Gen AI PC,sp174056,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2;Windows 11 64-bit, 26H2",W11_24H2;W11_25H2;W11_26H2
-ProBook 4 G2i 16 inch Notebook AI PC,sp174691;sp174895,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2;Windows 11 64-bit, 26H2",W11_23H2;W11_24H2;W11_25H2;W11_26H2
-ProBook 4 G2i 16 inch Notebook Next Gen AI PC,sp174056,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2;Windows 11 64-bit, 26H2",W11_24H2;W11_25H2;W11_26H2
-ProBook 4 G2iR 14 inch Notebook Next Gen AI PC,sp174788,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_24H2;W11_25H2
-ZBook 8 G1ah 14 inch Mobile Workstation PC,sp174545,"Windows 11 64-bit, 23H2;Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2;W11_26H2
-ZBook 8 G1ak 14 inch Mobile Workstation PC,sp168444,"Windows 11 64-bit, 23H2;Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2
-ZBook 8 G1as 14 inch Mobile Workstation PC,sp168444,"Windows 11 64-bit, 23H2;Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2
-ZBook 8 G2a 14 inch Mobile Workstation PC,sp174518,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2
-ZBook 8 G2a 16 inch Mobile Workstation PC,sp174518,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2
-ZBook 8 G2i 14 inch Mobile Workstation PC,sp174427,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_24H2;W11_25H2;W11_26H2
-ZBook 8 G2i 16 inch Mobile Workstation PC,sp174427,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_24H2;W11_25H2;W11_26H2
-ZBook Ultra G1a 14 inch Mobile Workstation PC,sp174592,"Windows 11 64-bit, 23H2;Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2;W11_26H2
-ZBook Ultra G3a 16 inch Mobile Workstation PC,sp174542,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_24H2;W11_25H2
-ZBook X G2i 16 inch Mobile Workstation PC,sp173906,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_24H2;W11_25H2;W11_26H2
+model,windows,packs,catalogOs,cvaOs
+EliteBook 6 G1a 14 inch Notebook AI PC,10,sp174366,"Windows 11 64-bit, 23H2;Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2
+EliteBook 6 G1a 14 inch Notebook Next Gen AI PC,10,sp174426,"Windows 11 64-bit, 23H2;Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2
+EliteBook 6 G1a 16 inch Notebook AI PC,10,sp174366,"Windows 11 64-bit, 23H2;Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2
+EliteBook 6 G1ah 14 inch Notebook PC,10,sp174366,"Windows 11 64-bit, 23H2;Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2
+EliteBook 6 G1ah 16 inch Notebook PC,10,sp174366,"Windows 11 64-bit, 23H2;Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2
+EliteBook 6 G2a 14 inch Notebook AI PC,10,sp174560,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2
+EliteBook 6 G2a 14 inch Notebook Next Gen AI PC,10,sp174718,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2;Windows 11 64-bit, 26H2",W11_24H2;W11_25H2;W11_26H2
+EliteBook 6 G2a 16 inch Notebook AI PC,10,sp174560,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2
+EliteBook 6 G2a 16 inch Notebook Next Gen AI PC,10,sp174718,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2;Windows 11 64-bit, 26H2",W11_24H2;W11_25H2;W11_26H2
+EliteBook 6 G2ah 14 inch Notebook PC,10,sp174560,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2
+EliteBook 6 G2ah 16 inch Notebook PC,10,sp174560,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2
+EliteBook 6 G2i 14 inch Notebook AI PC,10,sp174691;sp174895,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2;Windows 11 64-bit, 26H2",W11_23H2;W11_24H2;W11_25H2;W11_26H2
+EliteBook 6 G2i 14 inch Notebook Next Gen AI PC,10,sp174056,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2;Windows 11 64-bit, 26H2",W11_24H2;W11_25H2;W11_26H2
+EliteBook 6 G2i 16 inch Notebook AI PC,10,sp174691;sp174895,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2;Windows 11 64-bit, 26H2",W11_23H2;W11_24H2;W11_25H2;W11_26H2
+EliteBook 6 G2i 16 inch Notebook Next Gen AI PC,10,sp174056,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2;Windows 11 64-bit, 26H2",W11_24H2;W11_25H2;W11_26H2
+EliteBook 6 G2iR 14 inch Notebook Next Gen AI PC,10,sp174788,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_24H2;W11_25H2
+EliteBook 8 Flip G2i 13 inch Notebook Next Gen AI PC,10,sp174427,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_24H2;W11_25H2;W11_26H2
+EliteBook 8 G1a 13 inch Notebook AI PC,10,sp174545,"Windows 11 64-bit, 23H2;Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2;W11_26H2
+EliteBook 8 G1a 13 inch Notebook Next Gen AI PC,10,sp168444,"Windows 11 64-bit, 23H2;Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2
+EliteBook 8 G1a 14 inch Notebook AI PC,10,sp174545,"Windows 11 64-bit, 23H2;Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2;W11_26H2
+EliteBook 8 G1a 14 inch Notebook Next Gen AI PC,10,sp168444,"Windows 11 64-bit, 23H2;Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2
+EliteBook 8 G1a 16 inch Notebook AI PC,10,sp174545,"Windows 11 64-bit, 23H2;Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2;W11_26H2
+EliteBook 8 G1a 16 inch Notebook Next Gen AI PC,10,sp168444,"Windows 11 64-bit, 23H2;Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2
+EliteBook 8 G2a 14 inch Notebook Next Gen AI PC,10,sp174518,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2
+EliteBook 8 G2a 16 inch Notebook Next Gen AI PC,10,sp174518,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2
+EliteBook 8 G2i 13 inch Notebook Next Gen AI PC,10,sp174427,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_24H2;W11_25H2;W11_26H2
+EliteBook 8 G2i 14 inch Notebook Next Gen AI PC,10,sp174427,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_24H2;W11_25H2;W11_26H2
+EliteBook 8 G2i 16 inch Notebook Next Gen AI PC,10,sp174427,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_24H2;W11_25H2;W11_26H2
+EliteBook 8 G2iW 14 inch Notebook AI PC,10,sp174778,"Windows 11 64-bit, 25H2;Windows 11 64-bit, 26H2",W11_24H2;W11_25H2;W11_26H2
+EliteBook Ultra G1i 14 inch Notebook Next Gen AI PC,10,sp157866,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_24H2;W11_25H2
+EliteBook X Flip G2i 14 inch Notebook Next Gen AI PC,10,sp172736,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2;Windows 11 64-bit, 26H2",W11_23H2;W11_24H2;W11_25H2;W11_26H2
+EliteBook X G1a 14 inch Notebook Next Gen AI PC,10,sp174481,"Windows 11 64-bit, 23H2;Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2
+EliteBook X G2a 14 inch Notebook Next Gen AI PC,10,sp174204,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_24H2;W11_25H2
+EliteBook X G2i 14 inch Notebook Next Gen AI PC,10,sp172736,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2;Windows 11 64-bit, 26H2",W11_23H2;W11_24H2;W11_25H2;W11_26H2
+Fortis Flip G1i 11 inch Notebook PC,10,sp174544,"Windows 11 64-bit, 23H2;Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2
+Limited Edition Scuderia Ferrari Notebook Next Gen AI PC,10,sp174478,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_24H2;W11_25H2
+ProBook 4 Flip G2i 13 inch Notebook AI PC,10,sp174691;sp174895,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2;Windows 11 64-bit, 26H2",W11_23H2;W11_24H2;W11_25H2;W11_26H2
+ProBook 4 G1a 14 inch Notebook AI PC,10,sp174366,"Windows 11 64-bit, 23H2;Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2
+ProBook 4 G1a 16 inch Notebook AI PC,10,sp174366,"Windows 11 64-bit, 23H2;Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2
+ProBook 4 G1ah 14 inch Notebook PC,10,sp174366,"Windows 11 64-bit, 23H2;Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2
+ProBook 4 G1ah 16 inch Notebook PC,10,sp174366,"Windows 11 64-bit, 23H2;Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2
+ProBook 4 G2a 14 inch Notebook AI PC,10,sp174560,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2
+ProBook 4 G2a 14 inch Notebook Next Gen AI PC,10,sp174718,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2;Windows 11 64-bit, 26H2",W11_24H2;W11_25H2;W11_26H2
+ProBook 4 G2a 16 inch Notebook AI PC,10,sp174560,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2
+ProBook 4 G2a 16 inch Notebook Next Gen AI PC,10,sp174718,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2;Windows 11 64-bit, 26H2",W11_24H2;W11_25H2;W11_26H2
+ProBook 4 G2ah 14 inch Notebook PC,10,sp174560,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2
+ProBook 4 G2ah 16 inch Notebook PC,10,sp174560,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2
+ProBook 4 G2i 13 inch Notebook AI PC,10,sp174691;sp174895,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2;Windows 11 64-bit, 26H2",W11_23H2;W11_24H2;W11_25H2;W11_26H2
+ProBook 4 G2i 14 inch Notebook AI PC,10,sp174691;sp174895,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2;Windows 11 64-bit, 26H2",W11_23H2;W11_24H2;W11_25H2;W11_26H2
+ProBook 4 G2i 14 inch Notebook Next Gen AI PC,10,sp174056,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2;Windows 11 64-bit, 26H2",W11_24H2;W11_25H2;W11_26H2
+ProBook 4 G2i 16 inch Notebook AI PC,10,sp174691;sp174895,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2;Windows 11 64-bit, 26H2",W11_23H2;W11_24H2;W11_25H2;W11_26H2
+ProBook 4 G2i 16 inch Notebook Next Gen AI PC,10,sp174056,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2;Windows 11 64-bit, 26H2",W11_24H2;W11_25H2;W11_26H2
+ProBook 4 G2iR 14 inch Notebook Next Gen AI PC,10,sp174788,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_24H2;W11_25H2
+ZBook 8 G1ah 14 inch Mobile Workstation PC,10,sp174545,"Windows 11 64-bit, 23H2;Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2;W11_26H2
+ZBook 8 G1ak 14 inch Mobile Workstation PC,10,sp168444,"Windows 11 64-bit, 23H2;Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2
+ZBook 8 G1as 14 inch Mobile Workstation PC,10,sp168444,"Windows 11 64-bit, 23H2;Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2
+ZBook 8 G2a 14 inch Mobile Workstation PC,10,sp174518,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2
+ZBook 8 G2a 16 inch Mobile Workstation PC,10,sp174518,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2
+ZBook 8 G2i 14 inch Mobile Workstation PC,10,sp174427,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_24H2;W11_25H2;W11_26H2
+ZBook 8 G2i 16 inch Mobile Workstation PC,10,sp174427,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_24H2;W11_25H2;W11_26H2
+ZBook Ultra G1a 14 inch Mobile Workstation PC,10,sp174592,"Windows 11 64-bit, 23H2;Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_23H2;W11_24H2;W11_25H2;W11_26H2
+ZBook Ultra G3a 16 inch Mobile Workstation PC,10,sp174542,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_24H2;W11_25H2
+ZBook X G2i 16 inch Mobile Workstation PC,10,sp173906,"Windows 11 64-bit, 24H2;Windows 11 64-bit, 25H2",W11_24H2;W11_25H2;W11_26H2
+EliteBook 1040 G3 Notebook PC,11,sp101080;sp80523;sp80904;sp90254;sp95314,"Windows 10 64-bit, 1607;Windows 10 64-bit, 1703;Windows 10 64-bit, 1709;Windows 10 64-bit, 1803;Windows 10 64-bit, 1809;Windows 10 64-bit, 1903;Windows 10 64-bit, 1909",WT64_1607|WT64_1703|WT64_1709|WT64_1803|WT64_1809|WT64_1903|WT64_1909
+EliteBook 1040 G4 Notebook PC,11,sp105670;sp112022;sp80239;sp90224;sp95271;sp99541,"Windows 10 64-bit, 1703;Windows 10 64-bit, 1709;Windows 10 64-bit, 1803;Windows 10 64-bit, 1809;Windows 10 64-bit, 1903;Windows 10 64-bit, 1909;Windows 10 64-bit, 2004;Windows 10 64-bit, 20H2",WT64_1703|WT64_1709|WT64_1803|WT64_1809|WT64_1903|WT64_1909|WT64_2004|WT64_2009
+EliteBook 735 G5 Notebook PC,11,sp101496;sp110177;sp114233;sp84352;sp90334;sp93466;sp99710,"Windows 10 64-bit, 1703;Windows 10 64-bit, 1709;Windows 10 64-bit, 1803;Windows 10 64-bit, 1809;Windows 10 64-bit, 1903;Windows 10 64-bit, 1909;Windows 10 64-bit, 2004;Windows 10 64-bit, 20H2;Windows 10 64-bit, 21H1",WT64_1703|WT64_1709|WT64_1803|WT64_1809|WT64_1903|WT64_1909|WT64_2004|WT64_2009|WT64_21H1
+EliteBook 745 G2 Notebook PC,11,sp79214;sp92598;sp96748,"Windows 10 64-bit, 1703;Windows 10 64-bit, 1709;Windows 10 64-bit, 1803;Windows 10 64-bit, 1809;Windows 10 64-bit, 1903",WT64_1703|WT64_1709|WT64_1803|WT64_1809|WT64_1903
+EliteBook 745 G5 Notebook PC,11,sp101496;sp110177;sp114233;sp84352;sp90334;sp93466;sp99710,"Windows 10 64-bit, 1703;Windows 10 64-bit, 1709;Windows 10 64-bit, 1803;Windows 10 64-bit, 1809;Windows 10 64-bit, 1903;Windows 10 64-bit, 1909;Windows 10 64-bit, 2004;Windows 10 64-bit, 20H2;Windows 10 64-bit, 21H1",WT64_1703|WT64_1709|WT64_1803|WT64_1809|WT64_1903|WT64_1909|WT64_2004|WT64_2009|WT64_21H1
+EliteBook 755 G2 Notebook PC,11,sp79214;sp92598;sp96748,"Windows 10 64-bit, 1703;Windows 10 64-bit, 1709;Windows 10 64-bit, 1803;Windows 10 64-bit, 1809;Windows 10 64-bit, 1903",WT64_1703|WT64_1709|WT64_1803|WT64_1809|WT64_1903
+EliteBook 755 G5 Notebook PC,11,sp101496;sp110177;sp114233;sp84352;sp90334;sp93466;sp99710,"Windows 10 64-bit, 1703;Windows 10 64-bit, 1709;Windows 10 64-bit, 1803;Windows 10 64-bit, 1809;Windows 10 64-bit, 1903;Windows 10 64-bit, 1909;Windows 10 64-bit, 2004;Windows 10 64-bit, 20H2;Windows 10 64-bit, 21H1",WT64_1703|WT64_1709|WT64_1803|WT64_1809|WT64_1903|WT64_1909|WT64_2004|WT64_2009|WT64_21H1
+EliteBook 820 G4 Notebook PC,11,sp112019,"Windows 10 64-bit, 1607;Windows 10 64-bit, 1703;Windows 10 64-bit, 1709;Windows 10 64-bit, 1803;Windows 10 64-bit, 1809;Windows 10 64-bit, 1903;Windows 10 64-bit, 1909;Windows 10 64-bit, 2004;Windows 10 64-bit, 20H2;Windows 10 64-bit, 21H1;Windows 10 64-bit, 21H2",Microsoft Windows 10 All Editions (64-bit)
+EliteBook 840 G4 Notebook PC,11,sp112019,"Windows 10 64-bit, 1607;Windows 10 64-bit, 1703;Windows 10 64-bit, 1709;Windows 10 64-bit, 1803;Windows 10 64-bit, 1809;Windows 10 64-bit, 1903;Windows 10 64-bit, 1909;Windows 10 64-bit, 2004;Windows 10 64-bit, 20H2;Windows 10 64-bit, 21H1;Windows 10 64-bit, 21H2",Microsoft Windows 10 All Editions (64-bit)
+EliteBook 848 G4 Notebook PC,11,sp112019,"Windows 10 64-bit, 1607;Windows 10 64-bit, 1703;Windows 10 64-bit, 1709;Windows 10 64-bit, 1803;Windows 10 64-bit, 1809;Windows 10 64-bit, 1903;Windows 10 64-bit, 1909;Windows 10 64-bit, 2004;Windows 10 64-bit, 20H2;Windows 10 64-bit, 21H1;Windows 10 64-bit, 21H2",Microsoft Windows 10 All Editions (64-bit)
+EliteBook 850 G4 Notebook PC,11,sp112019,"Windows 10 64-bit, 1607;Windows 10 64-bit, 1703;Windows 10 64-bit, 1709;Windows 10 64-bit, 1803;Windows 10 64-bit, 1809;Windows 10 64-bit, 1903;Windows 10 64-bit, 1909;Windows 10 64-bit, 2004;Windows 10 64-bit, 20H2;Windows 10 64-bit, 21H1",Microsoft Windows 10 All Editions (64-bit)
+Pro x2 612 G1 Tablet,11,sp77225;sp79219;sp92562;sp96751,"Windows 10 64-bit, 1607;Windows 10 64-bit, 1703;Windows 10 64-bit, 1709;Windows 10 64-bit, 1803;Windows 10 64-bit, 1809;Windows 10 64-bit, 1903",WT64_1607|WT64_1703|WT64_1709|WT64_1803|WT64_1809|WT64_1903
+Pro x2 612 G1 Tablet with Power Keyboard,11,sp77225;sp79219;sp92562;sp96751,"Windows 10 64-bit, 1607;Windows 10 64-bit, 1703;Windows 10 64-bit, 1709;Windows 10 64-bit, 1803;Windows 10 64-bit, 1809;Windows 10 64-bit, 1903",WT64_1607|WT64_1703|WT64_1709|WT64_1803|WT64_1809|WT64_1903
+Pro x2 612 G1 Tablet with Travel Keyboard,11,sp77225;sp79219;sp92562;sp96751,"Windows 10 64-bit, 1607;Windows 10 64-bit, 1703;Windows 10 64-bit, 1709;Windows 10 64-bit, 1803;Windows 10 64-bit, 1809;Windows 10 64-bit, 1903",WT64_1607|WT64_1703|WT64_1709|WT64_1803|WT64_1809|WT64_1903
+ProBook 445 G6 Notebook PC,11,sp103578;sp114179;sp93254;sp99461,"Windows 10 64-bit, 1803;Windows 10 64-bit, 1809;Windows 10 64-bit, 1903;Windows 10 64-bit, 1909;Windows 10 64-bit, 2004;Windows 10 64-bit, 20H2;Windows 10 64-bit, 21H1",WT64_1803|WT64_1809|WT64_1903|WT64_1909|WT64_2004|WT64_2009|WT64_21H1
+ProBook 455 G6 Notebook PC,11,sp103578;sp114179;sp93254;sp99461,"Windows 10 64-bit, 1803;Windows 10 64-bit, 1809;Windows 10 64-bit, 1903;Windows 10 64-bit, 1909;Windows 10 64-bit, 2004;Windows 10 64-bit, 20H2;Windows 10 64-bit, 21H1",WT64_1803|WT64_1809|WT64_1903|WT64_1909|WT64_2004|WT64_2009|WT64_21H1
+ProBook 645 G4 Notebook PC,11,sp103626;sp114239;sp84351;sp91601;sp93537;sp99719,"Windows 10 64-bit, 1703;Windows 10 64-bit, 1709;Windows 10 64-bit, 1803;Windows 10 64-bit, 1809;Windows 10 64-bit, 1903;Windows 10 64-bit, 1909;Windows 10 64-bit, 2004;Windows 10 64-bit, 20H2;Windows 10 64-bit, 21H1",WT64_1703|WT64_1709|WT64_1803|WT64_1809|WT64_1903|WT64_1909|WT64_2004|WT64_2009|WT64_21H1
+ZBook 14 Mobile Workstation,11,sp92710,"Windows 10 64-bit, 1607;Windows 10 64-bit, 1703;Windows 10 64-bit, 1709;Windows 10 64-bit, 1803;Windows 10 64-bit, 1809",WT64_1607|WT64_1703|WT64_1709|WT64_1803|WT64_1809
+ZBook 14u G4 Mobile Workstation,11,sp112019,"Windows 10 64-bit, 1607;Windows 10 64-bit, 1703;Windows 10 64-bit, 1709;Windows 10 64-bit, 1803;Windows 10 64-bit, 1809;Windows 10 64-bit, 1903;Windows 10 64-bit, 1909;Windows 10 64-bit, 2004;Windows 10 64-bit, 20H2;Windows 10 64-bit, 21H1",Microsoft Windows 10 All Editions (64-bit)
+ZBook 15u G4 Mobile Workstation,11,sp112019,"Windows 10 64-bit, 1607;Windows 10 64-bit, 1703;Windows 10 64-bit, 1709;Windows 10 64-bit, 1803;Windows 10 64-bit, 1809;Windows 10 64-bit, 1903;Windows 10 64-bit, 1909;Windows 10 64-bit, 2004;Windows 10 64-bit, 20H2;Windows 10 64-bit, 21H1",Microsoft Windows 10 All Editions (64-bit)
+ZBook 15v G5 Mobile Workstation,11,sp135797;sp92372;sp93501;sp96760,"Windows 10 64-bit, 1709;Windows 10 64-bit, 1803;Windows 10 64-bit, 1809;Windows 10 64-bit, 1903;Windows 10 64-bit, 1909;Windows 10 64-bit, 2004",WT64_1709|WT64_1803|WT64_1809|WT64_1903|WT64_1909|WT64_2004|WT64_2009
