@@ -86,7 +86,7 @@ MSI、Acer、华擎的原厂下载接口拒绝脚本直连。本轮先在浏览�
 - Acer：仍有 130／102 格待核。37 款接口返回空，后来被限流（Failed to fetch），冷却后重查；101 条系列行还要拆成精确 SKU。本机 `www.acer.com` 卡在 TLS 重协商，`curl`、Python 和 headless Edge 都超时，只有 `global-download.acer.com` 可读，需换网络或浏览器会话再采。
 - 惠普：84 格。`hpia.hpcloud.hp.com` 的驱动包矩阵和 `ftp.hp.com` 的 SoftPaq 说明可读，但待核型号在矩阵中没有对应系统的包（2025 AI PC 无 Win10 包，2017–2019 机型无 Win11 包），HPIA 范围本身不作为结案证据。
 - MSI、技嘉、映泰、联想：`www.msi.com`、`www.gigabyte.com`、`www.biostar.com.tw`、`support.lenovo.com` 均返回 403 或拒绝 headless 浏览器；`storage-asset.msi.com` 数据表和 `pcsupport.lenovo.com` 可读，但拿不到逐型号下载列表。
-- 华硕主板：余 20／19 格。已用原厂手册补足 14 款「无出厂无线」证据（[手册证据](network-rescue-asus-mb-spec-proof.csv)）；剩余为 CSM 变体无独立手册、8 款手册只在 BIOS 或法规页提到无线、以及 ROG MAXIMUS Z890 HERO、B850M AYW、ROG STRIX B860-G、ProArt B850-CREATOR 等只有模块候选的记录。
+- 华硕主板：余 20／19 格。已用原厂手册补足 14 款「无出厂无线」证据（[手册证据](network-rescue-asus-mb-spec-proof.csv)）；另有 5 款手册明写「Notices for non Wi-Fi model」，但原厂下载页仍列 Wi-Fi 驱动，按来源冲突保留待核；12 款没有精确型号手册（CSM 变体和 TUF 系列手册）；ROG MAXIMUS Z890 HERO、B850M AYW、ROG STRIX B860-G、ProArt B850-CREATOR 只有模块候选。
 - 华擎：余 19／22 格。规格页标题不匹配的 36 格，另有 5 格规格未列 WLAN 但下载列表却列出；`www.asrock.com` 现在整站返回 Incapsula 质询页，只有 `download.asrock.com` 的文件可读，需浏览器会话。
 - 华硕笔记本：82 个系列已拆分 333 个精确 SKU，余 7 个系列待核格、3 个系列缺型号列表。复跑同一批证据为 0 项变化。下一步按 SKU 的原厂下载链接补包入库和实机硬件 ID。
 - 戴尔、EVGA、技嘉、映泰、联想：见上条与[采集交接](network-rescue-catalog-handoff.md)；戴尔的 127 个 Win10 组合是只发 Win11 的新机型没有 Win10 驱动包，缺原厂系统支持声明。

@@ -25,8 +25,9 @@ import pymupdf
 
 PDF_PATH = re.compile(r'(/pub/ASUS/mb/[^"<>?\\]+/[EQ]\d+_[^"<>?\\]+\.pdf)', re.I)
 WIRELESS = re.compile(r"Wi[\s-]*Fi|WLAN|wireless|802\.11", re.I)
-SPEC_ROW = re.compile(r"Expansion Slot", re.I)
-SPEC_EXTRA = re.compile(r"Storage", re.I)
+SPEC_SUMMARY = re.compile(r"specifications?\s+summary", re.I)
+SPEC_PAGES = 4
+NON_WIFI = re.compile(r"non[\s-]*wi[\s-]*fi\s+model", re.I)
 MODULE = re.compile(
     r"\b(?:MT79(?:02|20|21|22|25|27)[A-Z0-9]*|RTL(?:88|89)\d{2}[A-Z]{1,4}|"
     r"BE(?:200|201|202|211|213)(?:NGW)?|AX(?:101|200|201|210|211|411)(?:NGW)?|"
@@ -57,6 +58,7 @@ def manual_urls(support, model):
     matched = [path for path in paths if key in model_key(path.rsplit("/", 1)[-1])]
     if "WIFI" not in key:
         matched = [path for path in matched if "WIFI" not in path.upper()]
+    matched = [path for path in matched if "SERIES" not in path.upper()]
     manuals = [path for path in matched if "_UM_" in path.upper() or "_EM_" in path.upper()]
     return ["https://dlcdnets.asus.com" + quote(path, safe="/%") for path in manuals[:1]]
 
@@ -84,25 +86,32 @@ def inspect(row, catalog):
     result["sha256"] = hashlib.sha256(payload).hexdigest().upper()
     try:
         with pymupdf.open(stream=payload, filetype="pdf") as pdf:
-            pages, wireless, modules, spec_pages = [], set(), set(), set()
+            pages, wireless, modules, spec_start = 0, set(), set(), None
+            non_wifi = set()
             for number, page in enumerate(pdf, 1):
                 text = page.get_text()
-                pages.append(number)
+                pages = number
                 if WIRELESS.search(text):
                     wireless.add(number)
                     modules.update(match.group().upper() for match in MODULE.finditer(text))
-                if SPEC_ROW.search(text) and SPEC_EXTRA.search(text):
-                    spec_pages.add(number)
+                if spec_start is None and SPEC_SUMMARY.search(text) and text.count("....") < 5:
+                    spec_start = number
+                if NON_WIFI.search(text):
+                    non_wifi.add(number)
     except (RuntimeError, ValueError):
         result["status"] = "manual-unreadable"
         return result
-    result.update(pages=str(len(pages)), wirelessPages=";".join(str(n) for n in sorted(wireless)),
+    # ASUS prints the specifications summary as a multi-page block after the contents page.
+    spec_pages = set(range(spec_start, spec_start + SPEC_PAGES)) if spec_start else set()
+    result.update(pages=str(pages), wirelessPages=";".join(str(n) for n in sorted(wireless)),
                   modules=";".join(sorted(modules)))
-    if not wireless:
-        result["status"] = "manual-wlan-absent"
-    elif wireless & spec_pages:
-        # Wireless appears in the specification table itself, not only in BIOS or safety text.
+    if wireless & spec_pages:
         result["status"] = "manual-spec-wlan-listed"
+    elif not wireless:
+        result["status"] = "manual-wlan-absent"
+    elif wireless <= non_wifi:
+        # ASUS prints "Notices for non Wi-Fi model" on the variant without a wireless module.
+        result["status"] = "manual-non-wifi-model"
     else:
         result["status"] = "manual-wlan-mentioned"
     return result
@@ -112,7 +121,7 @@ def apply_spec(path, proof):
     """Record the factory WLAN state; a manual without WLAN is the missing second omission."""
     factory = {}
     for item in proof:
-        if item["status"] == "manual-wlan-absent":
+        if item["status"] in {"manual-wlan-absent", "manual-non-wifi-model"}:
             factory[item["model"]] = ("oem-spec-wlan-not-listed", "")
         elif item["status"] == "manual-spec-wlan-listed" and item["modules"]:
             # A manual module name is a candidate; the exact SUBSYS and the driver still need proof.
