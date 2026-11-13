@@ -864,3 +864,13 @@ Lenovo 待核 7→1 格（16ADR10H 的 Win10）。本轮合计关闭 **6 格**�
 - **Lenovo Legion Pro 7 16ADR10H**：手动驱动列表 21 条全部标注 `Windows 11 (64-bit)`，无 Win10 包 → Win10 记未列系统。
 
 本轮合计关闭 **8 格**：待核 65→**58**。EVGA、Lenovo、MSI MEG 已清零。
+
+### 2026-11-13 MSI H610M II、ASUS B850M CSM、ROG Flow Z13-KJP SKU
+
+用户提供的页面数据：
+
+- **MSI PRO H610M-S WIFI DDR4 II**：支持页只有 BIOS（无任何驱动包），规格明确「Wi-Fi 6E 预装于 M.2 Key-E」「支持 Windows 11/10 64-bit」→ 两个系统按「未列 WLAN 驱动」关闭（2 格）。
+- **ASUS B850M AYW GAMING WIFI-CSM**：规格页写明「1x1 Wi-Fi 6 (802.11ax) + BT 5.3」随板模块；支持页对该精确型号没有任何 OS/驱动条目 → 两系统按未列关闭（2 格）。
+- **ROG Flow Z13-KJP**：日服产品页给出精确 SKU **GZ302EAC**（OS 仅 Windows 11 Home，Wi-Fi 7）。按系列拆分为 SKU 行：`ROG Flow Z13-KJP GZ302EAC`，Win10 记未列系统（支持库只有 Win11），Win11 记列出（MediaTek Wireless LAN V5.7.0.5115／V5.6.0.4261）。原系列行删除（净减 2 格）。
+
+本轮合计关闭 **6 格**：待核 58→**52**。MSI 清零。

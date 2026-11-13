@@ -3,8 +3,6 @@ ASUS,laptop,,ASUS TUF Gaming A16 (2025) FA608PMI,10,oem-driver-list,no-network-c
 ASUS,laptop,,ASUS TUF Gaming A16 (2025) FA608PMI,11,oem-driver-list,no-network-category,驱动列表无网络类目或过短,https://www.asus.com/supportonly/fa608pmi/helpdesk_download/
 ASUS,laptop,,ASUS TUF Gaming A16 (2025) FA608PPI,10,oem-driver-list,no-network-category,驱动列表无网络类目或过短,https://www.asus.com/supportonly/fa608ppi/helpdesk_download/
 ASUS,laptop,,ASUS TUF Gaming A16 (2025) FA608PPI,11,oem-driver-list,no-network-category,驱动列表无网络类目或过短,https://www.asus.com/supportonly/fa608ppi/helpdesk_download/
-ASUS,laptop,ROG-Republic-of-Gamers,ROG Flow Z13-KJP,10,product-series,no-network-category,驱动列表无网络类目或过短,https://rog.asus.com/laptops/rog-flow/ROG-Flow-Z13-KJP/
-ASUS,laptop,ROG-Republic-of-Gamers,ROG Flow Z13-KJP,11,product-series,no-network-category,驱动列表无网络类目或过短,https://rog.asus.com/laptops/rog-flow/ROG-Flow-Z13-KJP/
 ASUS,laptop,,ROG Strix G15 G513IR,11,oem-driver-list,no-network-category,驱动列表无网络类目或过短,https://www.asus.com/supportonly/g513ir/helpdesk_download/
 ASUS,laptop,,ROG Strix G17 G713IR,11,oem-driver-list,no-network-category,驱动列表无网络类目或过短,https://www.asus.com/supportonly/g713ir/helpdesk_download/
 ASUS,laptop,,ROG Strix SCAR 17 G733QSA,11,oem-driver-list,no-network-category,驱动列表无网络类目或过短,https://www.asus.com/supportonly/g733qsa/helpdesk_download/
@@ -12,8 +10,6 @@ ASUS,laptop,ROG-Republic-of-Gamers,ROG Zephyrus G14 (2026) GA403,10,product-seri
 ASUS,laptop,ROG-Republic-of-Gamers,ROG Zephyrus G14 (2026) GA403,11,product-series,no-network-category,驱动列表无网络类目或过短,https://rog.asus.com/laptops/rog-zephyrus/rog-zephyrus-g14-2026-ga403/
 ASUS,laptop,ROG-Republic-of-Gamers,ROG Zephyrus G14 AW SE,10,product-series,no-network-category,驱动列表无网络类目或过短,https://rog.asus.com/laptops/rog-zephyrus/2021-rog-zephyrus-g14-aw-se-series/
 ASUS,laptop,ROG-Republic-of-Gamers,ROG Zephyrus G14 AW SE,11,product-series,no-network-category,驱动列表无网络类目或过短,https://rog.asus.com/laptops/rog-zephyrus/2021-rog-zephyrus-g14-aw-se-series/
-ASUS,motherboard,AM5,B850M AYW GAMING WIFI-CSM,10,onboard-chip-unknown,support-api-empty,支持接口空 OS 列表,https://www.asus.com/product-compare?LevelId=Motherboards-Components-Motherboards&ProductID=31128%2C28588
-ASUS,motherboard,AM5,B850M AYW GAMING WIFI-CSM,11,onboard-chip-unknown,support-api-empty,支持接口空 OS 列表,https://www.asus.com/product-compare?LevelId=Motherboards-Components-Motherboards&ProductID=31128%2C28588
 ASUS,motherboard,AM5,Pro WS 665-ACE,10,catalog-model,no-factory-proof,缺出厂无线证据,https://www.asus.com/motherboards-components/motherboards/workstation/pro-ws-665-ace/
 ASUS,motherboard,AM5,Pro WS 665-ACE,11,catalog-model,no-factory-proof,缺出厂无线证据,https://www.asus.com/motherboards-components/motherboards/workstation/pro-ws-665-ace/
 Acer,laptop,,Aspire 14/16 AI AMD,10,oem-series-catalog,mixed-family,系列跨代，族内结论不一致,https://www.acer.com/us-en/laptops/aspire
@@ -55,5 +51,3 @@ Acer,laptop,,TravelMate Spin 311RN-31,10,oem-model-catalog,no-listing-exact-mode
 Acer,laptop,,TravelMate Spin B311RA-32,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号 0 命中,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
 Acer,laptop,,TravelMate X40-52-M,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号 0 命中,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
 Acer,laptop,,TravelMate X40-52-MG,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号 0 命中,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
-MSI,motherboard,LGA1700,PRO H610M-S WIFI DDR4 II,10,oem-spec-wlan-listed,factory-vs-listing,规格无 WLAN，面板列通用 Wi-Fi 驱动,https://storage-asset.msi.com/datasheet/mb/global/PRO-H610M-S-WIFI-DDR4-II.pdf
-MSI,motherboard,LGA1700,PRO H610M-S WIFI DDR4 II,11,oem-spec-wlan-listed,factory-vs-listing,规格无 WLAN，面板列通用 Wi-Fi 驱动,https://storage-asset.msi.com/datasheet/mb/global/PRO-H610M-S-WIFI-DDR4-II.pdf

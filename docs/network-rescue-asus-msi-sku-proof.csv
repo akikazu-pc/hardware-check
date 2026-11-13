@@ -1,0 +1,7 @@
+brand,model,windows,status,evidence
+MSI,PRO H610M-S WIFI DDR4 II,10,oem-wlan-not-listed,"MSI support page lists BIOS only (no driver packages); spec: Wi-Fi 6E pre-installed in M.2 Key-E, OS support Windows 11/10 64-bit"
+MSI,PRO H610M-S WIFI DDR4 II,11,oem-wlan-not-listed,"MSI support page lists BIOS only (no driver packages); spec: Wi-Fi 6E pre-installed in M.2 Key-E, OS support Windows 11/10 64-bit"
+ASUS,B850M AYW GAMING WIFI-CSM,10,oem-wlan-not-listed,Spec: 1x1 Wi-Fi 6 (802.11ax) + BT 5.3 factory module; ASUS support page for the exact model exposes no OS/driver entries
+ASUS,B850M AYW GAMING WIFI-CSM,11,oem-wlan-not-listed,Spec: 1x1 Wi-Fi 6 (802.11ax) + BT 5.3 factory module; ASUS support page for the exact model exposes no OS/driver entries
+ASUS,ROG Flow Z13-KJP GZ302EAC,10,oem-os-not-listed,JP product page: OS Windows 11 Home 64-bit only; support GetPDOS lists Windows 11 only
+ASUS,ROG Flow Z13-KJP GZ302EAC,11,oem-wlan-listed,MediaTek Wireless LAN driver V5.7.0.5115 and V5.6.0.4261 under Networking (Win11 64-bit) on the GZ302EAC support page
