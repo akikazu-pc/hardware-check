@@ -437,3 +437,10 @@ v0.1.0 退出后，重启仍留下 `PawnIO` 服务和驱动包。复现确认：
 - 驱动列表显示两个驱动和「Install all matched drivers (2)」；选择全装后确认页列出 `rt25cx21x64.inf` 和 `rt68cx21x64.inf` 两个 INF。
 - 确认按钮不是默认按钮（回车走取消，属安全默认）；按 Tab 把焦点移到 Confirm 后空格确认，Windows Setup 语言页启动。
 - 覆盖图形界面的介质选择、安装方式、驱动列表、全装选项和确认；未完成 Setup 实际安装，图形界面的修复分支仍待验证。
+
+## 2026-11-13 PE 图形界面修复多驱动
+
+- 同一来宾用键盘导航进入修复分支：按 Tab 把焦点移到工具栏，回车打开 Tools，选「Repair an existing Windows installation」，选择 `C:\ Windows 11 x64 (26100)` 后进入驱动列表。
+- 驱动列表显示两个驱动和「Install all matched drivers (2)」；选择全装后确认页列出 `rt25cx21x64.inf`、`rt68cx21x64.inf` 两个 INF。确认按钮仍非默认，Tab 到 Confirm 后空格确认。
+- 修复完成后界面提示「Driver added. Restart into the selected Windows and check the network connection.」。
+- 只读挂载系统盘核对：`Windows\INF\oem*.inf` 出现 `oem0.inf`、`oem1.inf`（Class Net，版本 1125.029.50.0202、1168.029.50.0202），驱动库新增 `rt25cx21x64.inf`、`rt68cx21x64.inf` 目录；修复前该盘没有 `oem*.inf`。覆盖图形界面修复分支的全装、确认、DISM 写入和驱动库复查。
