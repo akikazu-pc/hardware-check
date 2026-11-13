@@ -36,9 +36,9 @@
 
 ## Portable ZIP/EXE
 
-- [ ] 确认 `Directory.Build.props` 的版本号
+- [x] 确认 `Directory.Build.props` 的版本号（0.2.1）
 - [ ] 确认 GitHub Actions 的构建、单元测试和窗口冒烟测试全绿
-- [ ] 运行 `scripts/publish.ps1`，确认体积没有异常增长（v0.1.2 实测：程序 55.6 MB，压缩包 49.4 MB；v0.2.0 待重新测量）
+- [x] 运行 `scripts/publish.ps1`，确认体积没有异常增长（v0.2.1 实测：程序 53.1 MB，压缩包 47.8 MB，SHA-256 `673272932A46C2D74283AFB52B87BFEA3E9850DA20EC908CCAE19A92615DBF4E`）
 - [ ] 在仓库 `akikazu-pc/hardware-check` 的 GitHub Release 上传 `AkikazuHardwareCheck-win-x64.zip`（需要单独授权）
 - [ ] 在网站仓库的 `app/data/tools/hardware-check-release.json` 填入 `url`、`sha256`、`version`。`url` 为 `https://github.com/<owner>/<repo>/releases/latest/download/AkikazuHardwareCheck-win-x64.zip`，`sha256` 取 zip 的值。`url` 为空时网站下载按钮保持禁用
 - [ ] 每次发新版都同步上述 `sha256` 和 `version`：`latest` 链接会自动指向新版，网页上的版本和校验值不会
@@ -70,7 +70,7 @@ MSI 使用 `Website` 能力并按 per-machine 安装到 Program Files。MSI 只�
 商店版和官网完整版共用代码。使用 `DistributionChannel=Store` 构建时，程序不自动提权、不安装或卸载
 PawnIO、不显示需要管理员权限的入口，并从程序集排除 PawnIO 安装程序。官网构建默认仍为 `Website`，行为不变。
 
-- [ ] 运行 `scripts/publish-store-payload.ps1`；脚本必须确认 `DistributionChannel=Store` 且不含 `pawnio.setup.exe`
+- [x] 运行 `scripts/publish-store-payload.ps1`；0.2.1 输出确认 `Channel: Store`、`PawnIO=False`，不含 `pawnio.setup.exe`
 - [ ] 在 Partner Center 保留产品名称，并取得准确的 Package Identity Name、Publisher 和 Publisher Display Name
 - [ ] 根据 Partner Center 身份生成 MSIX manifest；不得使用示例 Publisher 或临时身份提交
 - [x] 从 `my-site` 既有品牌图形生成包图标和 300 × 300 Store listing 图标，并记录来源
