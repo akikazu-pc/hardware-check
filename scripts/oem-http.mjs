@@ -20,6 +20,9 @@ const ROOT = dirname(dirname(fileURLToPath(import.meta.url)));
 const CACHE = join(ROOT, "artifacts", "oem-cache");
 const TIMEOUT_MS = 45_000;
 const PAUSE_MS = 400;
+// Akamai hands out the session cookies on the page GET but rejects an immediate POST with 403;
+// this short settle time lets the edge accept the replayed cookies.
+const WARM_SETTLE_MS = 2500;
 const HEADERS = {
   "user-agent":
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0 Safari/537.36",
@@ -60,29 +63,42 @@ async function fetchWithSession(warmUrl, url, body) {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), TIMEOUT_MS);
   try {
-    const warm = await fetch(warmUrl, { signal: controller.signal, headers: HEADERS, redirect: "follow" });
-    await warm.arrayBuffer();
-    const cookies = sessionCookie(warm);
-    const origin = new URL(warmUrl).origin;
-    const response = await fetch(url, {
-      signal: controller.signal,
-      method: "POST",
-      redirect: "follow",
-      headers: {
-        ...HEADERS,
-        accept: "application/json, text/plain, */*",
-        "content-type": "application/json",
-        "x-requested-with": "XMLHttpRequest",
-        cookie: cookies,
-        referer: warmUrl,
-        origin
-      },
-      body
-    });
-    const payload = Buffer.from(await response.arrayBuffer());
-    const file = join(CACHE, `${createHash("sha1").update(url).digest("hex")}.bin`);
-    await writeFile(file, payload);
-    return { url, status: response.status, file, bytes: payload.length, warmStatus: warm.status, cookies: cookies.length };
+    for (let attempt = 0; attempt < 2; attempt += 1) {
+      const warm = await fetch(warmUrl, { signal: controller.signal, headers: HEADERS, redirect: "follow" });
+      await warm.arrayBuffer();
+      const cookies = sessionCookie(warm);
+      const origin = new URL(warmUrl).origin;
+      await sleep(WARM_SETTLE_MS * (attempt + 1));
+      const response = await fetch(url, {
+        signal: controller.signal,
+        method: "POST",
+        redirect: "follow",
+        headers: {
+          ...HEADERS,
+          accept: "application/json, text/plain, */*",
+          "content-type": "application/json",
+          "x-requested-with": "XMLHttpRequest",
+          cookie: cookies,
+          referer: warmUrl,
+          origin
+        },
+        body
+      });
+      const payload = Buffer.from(await response.arrayBuffer());
+      if (response.status !== 403 || attempt === 1) {
+        const file = join(CACHE, `${createHash("sha1").update(url).digest("hex")}.bin`);
+        await writeFile(file, payload);
+        return {
+          url,
+          status: response.status,
+          file,
+          bytes: payload.length,
+          warmStatus: warm.status,
+          cookies: cookies.length
+        };
+      }
+    }
+    throw new Error("unreachable");
   } catch (error) {
     return { url, status: 0, error: error.name, file: "", bytes: 0 };
   } finally {
