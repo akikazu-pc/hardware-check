@@ -1,0 +1,167 @@
+model,systemId,windows,status,evidence,note
+Dell Pro 14 Plus PB14250,0CDC,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14670513M/1/PB14250-PTXY3_Win10_1.0_A08.xml,Intel BE2xx/AX4xx/AX2xx/9xxx Wi-Fi Driver
+Dell Pro 14 Plus PB14250,0CDC,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14670513M/1/PB14250-PTXY3_Win10_1.0_A08.xml,Intel BE2xx/AX4xx/AX2xx/9xxx Wi-Fi Driver
+Dell Pro 13 Premium PA13250,0CE3,10,oem-os-not-listed,https://downloads.dell.com/FOLDER15030221M/1/PA13250-3DPCR_Win11_1.0_A10.xml,catalog has Windows11 packs only
+Dell Pro 14 Premium PA14250,0CE4,10,oem-os-not-listed,https://downloads.dell.com/FOLDER15030223M/1/PA14250-CVKC8_Win11_1.0_A10.xml,catalog has Windows11 packs only
+Dell 14 Premium DA14250,0CE5,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14665841M/1/DA14250-P1KTX_Win11_1.0_A07.xml,catalog has Windows11 packs only
+DA16250,0CE6,10,oem-os-not-listed,https://downloads.dell.com/FOLDER13656849M/1/DA16250-Y23VT_Win11_1.0_A02.xml,catalog has Windows11 packs only
+DA16250,0CE7,10,oem-os-not-listed,https://downloads.dell.com/FOLDER13656849M/1/DA16250-Y23VT_Win11_1.0_A02.xml,catalog has Windows11 packs only
+Dell Pro Max 14 MC14250,0CF0,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14100826M/1/MC14250-T7HTK_Win10_1.0_A05.xml,Intel BE2xx/AX4xx/AX2xx/9xxx Wi-Fi Driver
+Dell Pro Max 14 MC14250,0CF0,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14100826M/1/MC14250-T7HTK_Win10_1.0_A05.xml,Intel BE2xx/AX4xx/AX2xx/9xxx Wi-Fi Driver
+Dell Pro Max 16 MC16250,0CF1,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14100818M/1/MC16250-PJFNJ_Win10_1.0_A05.xml,Intel BE2xx/AX4xx/AX2xx/9xxx Wi-Fi Driver
+Dell Pro Max 16 MC16250,0CF1,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14100818M/1/MC16250-PJFNJ_Win10_1.0_A05.xml,Intel BE2xx/AX4xx/AX2xx/9xxx Wi-Fi Driver
+Dell Pro 13 Plus PB13250,0CF4,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14670471M/1/PB13250-VT1WP_Win10_1.0_A08.xml,Intel BE2xx/AX4xx/AX2xx/9xxx Wi-Fi Driver
+Dell Pro 13 Plus PB13250,0CF4,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14670471M/1/PB13250-VT1WP_Win10_1.0_A08.xml,Intel BE2xx/AX4xx/AX2xx/9xxx Wi-Fi Driver
+Dell Pro 16 Plus PB16250,0CF5,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14670507M/1/PB16250-J20PF_Win10_1.0_A08.xml,Intel BE2xx/AX4xx/AX2xx/9xxx Wi-Fi Driver
+Dell Pro 16 Plus PB16250,0CF5,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14670507M/1/PB16250-J20PF_Win10_1.0_A08.xml,Intel BE2xx/AX4xx/AX2xx/9xxx Wi-Fi Driver
+Dell Pro 14 PC14250,0CFB,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14643836M/1/PC14250-FWPNN_Win10_1.0_A06.xml,MediaTek MT7920/MT7921/MT7922/MT7925 Wi-Fi UWD Driver
+Dell Pro 14 PC14250,0CFB,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14643836M/1/PC14250-FWPNN_Win10_1.0_A06.xml,MediaTek MT7920/MT7921/MT7922/MT7925 Wi-Fi UWD Driver
+Dell Pro 16 PC16250,0CFC,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14643879M/1/PC16250-TMR64_Win10_1.0_A06.xml,MediaTek MT7920/MT7921/MT7922/MT7925 Wi-Fi UWD Driver
+Dell Pro 16 PC16250,0CFC,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14643879M/1/PC16250-TMR64_Win10_1.0_A06.xml,MediaTek MT7920/MT7921/MT7922/MT7925 Wi-Fi UWD Driver
+Dell Pro Max 16 Plus MB16250,0D12,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14610444M/1/MB16250-K9TK1_Win10_1.0_A05.xml,Intel BE2xx/AX4xx/AX2xx/9xxx Wi-Fi Driver
+Dell Pro Max 16 Plus MB16250,0D12,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14610444M/1/MB16250-K9TK1_Win10_1.0_A05.xml,Intel BE2xx/AX4xx/AX2xx/9xxx Wi-Fi Driver
+Dell Pro Max 18 Plus MB18250,0D13,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14497969M/1/MB18250-HYH51_Win10_1.0_A05.xml,Intel BE2xx/AX4xx/AX2xx/9xxx Wi-Fi Driver
+Dell Pro Max 18 Plus MB18250,0D13,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14497969M/1/MB18250-HYH51_Win10_1.0_A05.xml,Intel BE2xx/AX4xx/AX2xx/9xxx Wi-Fi Driver
+Dell Pro Max 14 Premium MA14250,0D32,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14892354M/1/MA14250-GR86P_Win10_1.0_A06.xml,Intel BE2xx/AX4xx/AX2xx/9xxx Wi-Fi Driver
+Dell Pro Max 14 Premium MA14250,0D32,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14892354M/1/MA14250-GR86P_Win10_1.0_A06.xml,Intel BE2xx/AX4xx/AX2xx/9xxx Wi-Fi Driver
+Dell Pro Max 16 Premium MA16250,0D33,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14383422M/1/MA16250-TCGJ0_Win10_1.0_A05.xml,Intel BE2xx/AX4xx/AX2xx/9xxx Wi-Fi Driver
+Dell Pro Max 16 Premium MA16250,0D33,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14383422M/1/MA16250-TCGJ0_Win10_1.0_A05.xml,Intel BE2xx/AX4xx/AX2xx/9xxx Wi-Fi Driver
+Dell Pro 13 Plus PB13255,0D47,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14722260M/1/PB13255-PHX4M_Win10_1.0_A07.xml,MediaTek MT7920/MT7921/MT7922/MT7925 Wi-Fi UWD Driver
+Dell Pro 13 Plus PB13255,0D47,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14722260M/1/PB13255-PHX4M_Win10_1.0_A07.xml,MediaTek MT7920/MT7921/MT7922/MT7925 Wi-Fi UWD Driver
+Dell Pro 16 Plus PB16255,0D4D,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14709836M/1/PB16255-8995J_Win10_1.0_A06.xml,MediaTek MT7920/MT7921/MT7922/MT7925 Wi-Fi UWD Driver
+Dell Pro 16 Plus PB16255,0D4D,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14709836M/1/PB16255-8995J_Win10_1.0_A06.xml,MediaTek MT7920/MT7921/MT7922/MT7925 Wi-Fi UWD Driver
+Dell Pro 14 PC14255,0D50,10,oem-wlan-listed,https://downloads.dell.com/FOLDER15028073M/1/PC14255-53C10_Win10_1.0_A07.xml,MediaTek MT7920/MT7921/MT7922/MT7925 Wi-Fi UWD Driver
+Dell Pro 14 PC14255,0D50,10,oem-wlan-listed,https://downloads.dell.com/FOLDER15028073M/1/PC14255-53C10_Win10_1.0_A07.xml,MediaTek MT7920/MT7921/MT7922/MT7925 Wi-Fi UWD Driver
+Dell Pro 16 PC16255,0D53,10,oem-wlan-listed,https://downloads.dell.com/FOLDER15028083M/1/PC16255-1VFNG_Win10_1.0_A07.xml,MediaTek MT7920/MT7921/MT7922/MT7925 Wi-Fi UWD Driver
+Dell Pro 16 PC16255,0D53,10,oem-wlan-listed,https://downloads.dell.com/FOLDER15028083M/1/PC16255-1VFNG_Win10_1.0_A07.xml,MediaTek MT7920/MT7921/MT7922/MT7925 Wi-Fi UWD Driver
+Dell Pro 14 Plus PB14255,0D5C,10,oem-os-not-listed,https://downloads.dell.com/FOLDER15030245M/1/PB14255-FY0NP_Win11_1.0_A08.xml,catalog has Windows11 packs only
+Dell Pro 14 Plus PB14255,0D5D,10,oem-os-not-listed,https://downloads.dell.com/FOLDER15030245M/1/PB14255-FY0NP_Win11_1.0_A08.xml,catalog has Windows11 packs only
+Dell Pro 14 Plus PB14255,0D5E,10,oem-os-not-listed,https://downloads.dell.com/FOLDER15030245M/1/PB14255-FY0NP_Win11_1.0_A08.xml,catalog has Windows11 packs only
+Dell Pro 14 Plus PB14255,0D5F,10,oem-os-not-listed,https://downloads.dell.com/FOLDER15030245M/1/PB14255-FY0NP_Win11_1.0_A08.xml,catalog has Windows11 packs only
+Dell Pro 14 Plus PB14255,0D60,10,oem-os-not-listed,https://downloads.dell.com/FOLDER15030245M/1/PB14255-FY0NP_Win11_1.0_A08.xml,catalog has Windows11 packs only
+Dell Pro 14 Plus PB14255,0D68,10,oem-os-not-listed,https://downloads.dell.com/FOLDER15030245M/1/PB14255-FY0NP_Win11_1.0_A08.xml,catalog has Windows11 packs only
+Dell Pro 14 Plus PB14255,0D69,10,oem-os-not-listed,https://downloads.dell.com/FOLDER15030245M/1/PB14255-FY0NP_Win11_1.0_A08.xml,catalog has Windows11 packs only
+Dell Pro 14 Plus PB14255,0D6A,10,oem-os-not-listed,https://downloads.dell.com/FOLDER15030245M/1/PB14255-FY0NP_Win11_1.0_A08.xml,catalog has Windows11 packs only
+Dell Pro Education 11 PE11260,0D7D,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14924931M/1/PE11260-4T5DC_Win11_1.0_A03.xml,catalog has Windows11 packs only
+Dell Pro Education 11 PE11260,0D7E,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14924931M/1/PE11260-4T5DC_Win11_1.0_A03.xml,catalog has Windows11 packs only
+Dell Pro Max 14 MC14255,0D80,10,oem-os-not-listed,https://downloads.dell.com/FOLDER15026837M/1/MC14255-RPN6J_Win11_1.0_A07.xml,catalog has Windows11 packs only
+Dell Pro Max 14 MC14255,0D81,10,oem-os-not-listed,https://downloads.dell.com/FOLDER15026837M/1/MC14255-RPN6J_Win11_1.0_A07.xml,catalog has Windows11 packs only
+Dell Pro Max 16 MC16255,0D82,10,oem-os-not-listed,https://downloads.dell.com/FOLDER15027085M/1/MC16255-HTKCY_Win11_1.0_A08.xml,catalog has Windows11 packs only
+Dell Pro Max 16 MC16255,0D83,10,oem-os-not-listed,https://downloads.dell.com/FOLDER15027085M/1/MC16255-HTKCY_Win11_1.0_A08.xml,catalog has Windows11 packs only
+Dell Pro Precision 7 14 PW714260,0DB3,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14538011M/1/PW714260-GP308_Win11_1.0_A01.xml,catalog has Windows11 packs only
+Dell Pro Precision 7 16 PW716260,0DB4,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14780045M/1/PW716260-1V1TR_Win11_1.0_A02.xml,catalog has Windows11 packs only
+XPS 14 DA14260,0DB9,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14363573M/1/XPS-14-DA14260-10KF7_Win11_1.0_A01.xml,catalog has Windows11 packs only
+XPS 16 DA16260,0DBA,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14363575M/1/XPS-16-DA16260-7D92M_Win11_1.0_A01.xml,catalog has Windows11 packs only
+Dell Pro Precision 5 14 PW514261,0DBC,10,oem-os-not-listed,https://downloads.dell.com/FOLDER15069502M/1/PW514261-86KYC_Win11_1.0_A02.xml,catalog has Windows11 packs only
+Dell Pro Precision 5 16 PW516261,0DBD,10,oem-os-not-listed,https://downloads.dell.com/FOLDER15069716M/1/PW516261-V1K11_Win11_1.0_A02.xml,catalog has Windows11 packs only
+Dell Pro Max 16 MC16255,0DD4,10,oem-os-not-listed,https://downloads.dell.com/FOLDER15027085M/1/MC16255-HTKCY_Win11_1.0_A08.xml,catalog has Windows11 packs only
+Dell Pro 14 Premium PA14260,0DD6,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14788345M/1/PA14260-TG84P_Win11_1.0_A02.xml,catalog has Windows11 packs only
+Dell Pro 14 Essential PV14250,0DE8,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14938424M/1/PV14250-5KX55_Win11_1.0_A04.xml,catalog has Windows11 packs only
+Dell Pro 14 Essential PV14250,0DE9,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14938424M/1/PV14250-5KX55_Win11_1.0_A04.xml,catalog has Windows11 packs only
+Dell Pro Education 14 PE14260,0DED,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14927097M/1/PE14260-47WY2_Win11_1.0_A03.xml,catalog has Windows11 packs only
+Dell Pro 3 14 P314260,0DF4,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14619834M/1/P314260-5V66Y_Win11_1.0_A01.xml,catalog has Windows11 packs only
+Dell Pro 3 16 P316260,0DF5,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14619686M/1/P316260-2YT5X_Win11_1.0_A01.xml,catalog has Windows11 packs only
+Dell Pro Rugged 14 PR514260,0E04,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14857731M/1/PR514260-MNCHW_Win11_1.0_A00.xml,catalog has Windows11 packs only
+Dell Pro Rugged 13 Extreme PR713260,0E05,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14857510M/1/PR713260-231XR_Win11_1.0_A00.xml,catalog has Windows11 packs only
+Dell Pro 7 13 P713260/Dell Pro 7 13 2-in-1 P703260,0E1A,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14814762M/1/P7x3260-JXVYW_Win11_1.0_A03.xml,catalog has Windows11 packs only
+Dell Pro 7 13 P713260/Dell Pro 7 13 2-in-1 P703260,0E1B,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14814762M/1/P7x3260-JXVYW_Win11_1.0_A03.xml,catalog has Windows11 packs only
+Dell Pro 5 14 P514260,0E1C,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14620268M/1/P514260-1CG01_Win11_1.0_A02.xml,catalog has Windows11 packs only
+Dell Pro 7 14 P714260/Dell Pro 7 14 2-in-1 P704260,0E1D,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14820692M/1/P7x4260-K5VR6_Win11_1.0_A03.xml,catalog has Windows11 packs only
+Dell Pro 5 16 P516260,0E1E,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14931234M/1/P516260-F9WXR_Win11_1.0_A03.xml,catalog has Windows11 packs only
+Dell Pro Precision 5 14S PW514260,0E1F,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14835615M/1/PW514260-4XXRX_Win11_1.0_A02.xml,catalog has Windows11 packs only
+Dell Pro Precision 5 16S PW516260,0E20,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14803316M/1/PW516260-KCV6V_Win11_1.0_A02.xml,catalog has Windows11 packs only
+Dell Pro 7 13 P713265/Dell Pro 7 13 2-in-1 P703265,0E21,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14830838M/1/P7x3265-PKJTY_Win11_1.0_A01.xml,catalog has Windows11 packs only
+Dell Pro 7 13 P713265/Dell Pro 7 13 2-in-1 P703265,0E22,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14830838M/1/P7x3265-PKJTY_Win11_1.0_A01.xml,catalog has Windows11 packs only
+Dell Pro 7 14 P714265/Dell Pro 7 14 2-in-1 P704265,0E23,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14795712M/1/P7x4265-H37T2_Win11_1.0_A01.xml,catalog has Windows11 packs only
+Dell Pro 7 14 P714265/Dell Pro 7 14 2-in-1 P704265,0E24,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14795712M/1/P7x4265-H37T2_Win11_1.0_A01.xml,catalog has Windows11 packs only
+Dell Pro 5 14 P514265,0E25,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14857340M/1/P514265-5D0VR_Win11_1.0_A01.xml,catalog has Windows11 packs only
+Dell Pro Precision 5 14S PW514265,0E26,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14819861M/1/PW514265-MJ98T_Win11_1.0_A01.xml,catalog has Windows11 packs only
+Dell Pro 5 16 P516265,0E27,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14857806M/1/P516265-5FJYF_Win11_1.0_A01.xml,catalog has Windows11 packs only
+Dell Pro Precision 5 16S PW516265,0E28,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14830090M/1/PW516265-T5RD1_Win11_1.0_A01.xml,catalog has Windows11 packs only
+Dell Pro 3 14 P314265,0E29,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14857380M/1/P314265-DX936_Win11_1.0_A01.xml,catalog has Windows11 packs only
+Dell Pro 3 16 P316265,0E2A,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14857560M/1/P316265-93CMF_Win11_1.0_A01.xml,catalog has Windows11 packs only
+Dell Pro 5 14 P514265,0E31,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14857340M/1/P514265-5D0VR_Win11_1.0_A01.xml,catalog has Windows11 packs only
+Dell Pro 5 16 P516265,0E32,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14857806M/1/P516265-5FJYF_Win11_1.0_A01.xml,catalog has Windows11 packs only
+Dell Pro 5 14 P514260,0E33,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14620268M/1/P514260-1CG01_Win11_1.0_A02.xml,catalog has Windows11 packs only
+Dell Pro 5 16 P516260,0E34,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14931234M/1/P516260-F9WXR_Win11_1.0_A03.xml,catalog has Windows11 packs only
+Dell Pro 5 14 P514260,0E35,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14620268M/1/P514260-1CG01_Win11_1.0_A02.xml,catalog has Windows11 packs only
+Dell Pro 5 16 P516260,0E36,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14931234M/1/P516260-F9WXR_Win11_1.0_A03.xml,catalog has Windows11 packs only
+Dell Pro 7 14 P714260/Dell Pro 7 14 2-in-1 P704260,0E38,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14820692M/1/P7x4260-K5VR6_Win11_1.0_A03.xml,catalog has Windows11 packs only
+Dell Pro 3 14 P314260,0E3A,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14619834M/1/P314260-5V66Y_Win11_1.0_A01.xml,catalog has Windows11 packs only
+Dell Pro 3 16 P316260,0E3B,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14619686M/1/P316260-2YT5X_Win11_1.0_A01.xml,catalog has Windows11 packs only
+Dell Pro 5 14 P514260,0E3C,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14620268M/1/P514260-1CG01_Win11_1.0_A02.xml,catalog has Windows11 packs only
+Dell Pro 5 16 P516260,0E3D,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14931234M/1/P516260-F9WXR_Win11_1.0_A03.xml,catalog has Windows11 packs only
+Dell Pro 5 14 P514260,0E3E,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14620268M/1/P514260-1CG01_Win11_1.0_A02.xml,catalog has Windows11 packs only
+Dell Pro 5 16 P516260,0E3F,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14931234M/1/P516260-F9WXR_Win11_1.0_A03.xml,catalog has Windows11 packs only
+XPS 13 DX13260,0E53,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14659619M/1/XPS-13-DX13260-M5WNV_Win11_1.0_A00.xml,catalog has Windows11 packs only
+XPS 13 DX13260,0E54,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14659619M/1/XPS-13-DX13260-M5WNV_Win11_1.0_A00.xml,catalog has Windows11 packs only
+Dell Pro 5 14 P514265,0E5B,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14857340M/1/P514265-5D0VR_Win11_1.0_A01.xml,catalog has Windows11 packs only
+Dell Pro 5 16 P516265,0E5C,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14857806M/1/P516265-5FJYF_Win11_1.0_A01.xml,catalog has Windows11 packs only
+Dell Pro 3 14 P314265,0E5D,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14857380M/1/P314265-DX936_Win11_1.0_A01.xml,catalog has Windows11 packs only
+Dell Pro 3 16 P316265,0E5E,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14857560M/1/P316265-93CMF_Win11_1.0_A01.xml,catalog has Windows11 packs only
+Dell Pro 5 14 P514265,0E5F,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14857340M/1/P514265-5D0VR_Win11_1.0_A01.xml,catalog has Windows11 packs only
+Dell Pro 5 16 P516265,0E60,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14857806M/1/P516265-5FJYF_Win11_1.0_A01.xml,catalog has Windows11 packs only
+Dell Pro 5 14 P514265,0E65,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14857340M/1/P514265-5D0VR_Win11_1.0_A01.xml,catalog has Windows11 packs only
+Dell Pro 5 16 P516265,0E66,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14857806M/1/P516265-5FJYF_Win11_1.0_A01.xml,catalog has Windows11 packs only
+Dell Pro 3 14 P314265,0E67,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14857380M/1/P314265-DX936_Win11_1.0_A01.xml,catalog has Windows11 packs only
+Dell Pro 3 16 P316265,0E68,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14857560M/1/P316265-93CMF_Win11_1.0_A01.xml,catalog has Windows11 packs only
+Dell Pro 5 14 P514265,0E69,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14857340M/1/P514265-5D0VR_Win11_1.0_A01.xml,catalog has Windows11 packs only
+Dell Pro 5 16 P516265,0E6A,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14857806M/1/P516265-5FJYF_Win11_1.0_A01.xml,catalog has Windows11 packs only
+Dell Pro 7 13 P713260/Dell Pro 7 13 2-in-1 P703260,0E82,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14814762M/1/P7x3260-JXVYW_Win11_1.0_A03.xml,catalog has Windows11 packs only
+Dell Pro 7 13 P713260/Dell Pro 7 13 2-in-1 P703260,0E83,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14814762M/1/P7x3260-JXVYW_Win11_1.0_A03.xml,catalog has Windows11 packs only
+Dell Pro 7 14 P714260/Dell Pro 7 14 2-in-1 P704260,0E84,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14820692M/1/P7x4260-K5VR6_Win11_1.0_A03.xml,catalog has Windows11 packs only
+Dell Pro 7 14 P714260/Dell Pro 7 14 2-in-1 P704260,0E85,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14820692M/1/P7x4260-K5VR6_Win11_1.0_A03.xml,catalog has Windows11 packs only
+Dell Pro Max 18 Plus MB18250,0E87,10,oem-os-not-listed,https://www.dell.com/support/kbdoc/en-bi/000346069/dell-pro-max-laptops-mb18250-windows-11-driver-pack,catalog has Windows11 packs only
+Dell Pro 3 14 P314260,0EA3,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14619834M/1/P314260-5V66Y_Win11_1.0_A01.xml,catalog has Windows11 packs only
+Dell Pro 3 16 P316260,0EA4,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14619686M/1/P316260-2YT5X_Win11_1.0_A01.xml,catalog has Windows11 packs only
+Dell Pro 5 14 P514260,0EAA,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14620268M/1/P514260-1CG01_Win11_1.0_A02.xml,catalog has Windows11 packs only
+Dell Pro 5 16 P516260,0EAB,10,oem-os-not-listed,https://downloads.dell.com/FOLDER14931234M/1/P516260-F9WXR_Win11_1.0_A03.xml,catalog has Windows11 packs only
+Dell Pro 5 14 P514265,0EFB,10,oem-os-not-listed,https://www.dell.com/support/kbdoc/en-au/000471948/dell-pro-laptops-p514265-windows11-driver-pack,catalog has Windows11 packs only
+Dell Pro 13 Plus PB13250,0CDB,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14670471M/1/PB13250-VT1WP_Win10_1.0_A08.xml,Intel BE2xx/AX4xx/AX2xx/9xxx Wi-Fi Driver
+Dell Pro 13 Plus PB13250,0CDB,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14670471M/1/PB13250-VT1WP_Win10_1.0_A08.xml,Intel BE2xx/AX4xx/AX2xx/9xxx Wi-Fi Driver
+Dell Pro 16 Plus PB16250,0CDD,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14670507M/1/PB16250-J20PF_Win10_1.0_A08.xml,Intel BE2xx/AX4xx/AX2xx/9xxx Wi-Fi Driver
+Dell Pro 16 Plus PB16250,0CDD,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14670507M/1/PB16250-J20PF_Win10_1.0_A08.xml,Intel BE2xx/AX4xx/AX2xx/9xxx Wi-Fi Driver
+Dell Pro 14 Plus PB14250,0CE8,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14670513M/1/PB14250-PTXY3_Win10_1.0_A08.xml,Intel BE2xx/AX4xx/AX2xx/9xxx Wi-Fi Driver
+Dell Pro 14 Plus PB14250,0CE8,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14670513M/1/PB14250-PTXY3_Win10_1.0_A08.xml,Intel BE2xx/AX4xx/AX2xx/9xxx Wi-Fi Driver
+Dell Pro 13 Plus PB13250,0CF3,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14670471M/1/PB13250-VT1WP_Win10_1.0_A08.xml,Intel BE2xx/AX4xx/AX2xx/9xxx Wi-Fi Driver
+Dell Pro 13 Plus PB13250,0CF3,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14670471M/1/PB13250-VT1WP_Win10_1.0_A08.xml,Intel BE2xx/AX4xx/AX2xx/9xxx Wi-Fi Driver
+Dell Pro 16 Plus PB16250,0CF6,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14670507M/1/PB16250-J20PF_Win10_1.0_A08.xml,Intel BE2xx/AX4xx/AX2xx/9xxx Wi-Fi Driver
+Dell Pro 16 Plus PB16250,0CF6,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14670507M/1/PB16250-J20PF_Win10_1.0_A08.xml,Intel BE2xx/AX4xx/AX2xx/9xxx Wi-Fi Driver
+Dell Pro 14 Plus PB14250,0CF7,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14670513M/1/PB14250-PTXY3_Win10_1.0_A08.xml,Intel BE2xx/AX4xx/AX2xx/9xxx Wi-Fi Driver
+Dell Pro 14 Plus PB14250,0CF7,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14670513M/1/PB14250-PTXY3_Win10_1.0_A08.xml,Intel BE2xx/AX4xx/AX2xx/9xxx Wi-Fi Driver
+Dell Pro 14 Plus PB14250,0CF8,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14670513M/1/PB14250-PTXY3_Win10_1.0_A08.xml,Intel BE2xx/AX4xx/AX2xx/9xxx Wi-Fi Driver
+Dell Pro 14 Plus PB14250,0CF8,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14670513M/1/PB14250-PTXY3_Win10_1.0_A08.xml,Intel BE2xx/AX4xx/AX2xx/9xxx Wi-Fi Driver
+Dell Pro 14 Plus PB14250,0CF9,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14670513M/1/PB14250-PTXY3_Win10_1.0_A08.xml,Intel BE2xx/AX4xx/AX2xx/9xxx Wi-Fi Driver
+Dell Pro 14 Plus PB14250,0CF9,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14670513M/1/PB14250-PTXY3_Win10_1.0_A08.xml,Intel BE2xx/AX4xx/AX2xx/9xxx Wi-Fi Driver
+Dell Pro 13 Plus PB13255,0D48,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14722260M/1/PB13255-PHX4M_Win10_1.0_A07.xml,MediaTek MT7920/MT7921/MT7922/MT7925 Wi-Fi UWD Driver
+Dell Pro 13 Plus PB13255,0D48,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14722260M/1/PB13255-PHX4M_Win10_1.0_A07.xml,MediaTek MT7920/MT7921/MT7922/MT7925 Wi-Fi UWD Driver
+Dell Pro 13 Plus PB13255,0D49,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14722260M/1/PB13255-PHX4M_Win10_1.0_A07.xml,MediaTek MT7920/MT7921/MT7922/MT7925 Wi-Fi UWD Driver
+Dell Pro 13 Plus PB13255,0D49,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14722260M/1/PB13255-PHX4M_Win10_1.0_A07.xml,MediaTek MT7920/MT7921/MT7922/MT7925 Wi-Fi UWD Driver
+Dell Pro 13 Plus PB13255,0D4A,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14722260M/1/PB13255-PHX4M_Win10_1.0_A07.xml,MediaTek MT7920/MT7921/MT7922/MT7925 Wi-Fi UWD Driver
+Dell Pro 13 Plus PB13255,0D4A,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14722260M/1/PB13255-PHX4M_Win10_1.0_A07.xml,MediaTek MT7920/MT7921/MT7922/MT7925 Wi-Fi UWD Driver
+Dell Pro 13 Plus PB13255,0D4B,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14722260M/1/PB13255-PHX4M_Win10_1.0_A07.xml,MediaTek MT7920/MT7921/MT7922/MT7925 Wi-Fi UWD Driver
+Dell Pro 13 Plus PB13255,0D4B,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14722260M/1/PB13255-PHX4M_Win10_1.0_A07.xml,MediaTek MT7920/MT7921/MT7922/MT7925 Wi-Fi UWD Driver
+Dell Pro 13 Plus PB13255,0D4C,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14722260M/1/PB13255-PHX4M_Win10_1.0_A07.xml,MediaTek MT7920/MT7921/MT7922/MT7925 Wi-Fi UWD Driver
+Dell Pro 13 Plus PB13255,0D4C,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14722260M/1/PB13255-PHX4M_Win10_1.0_A07.xml,MediaTek MT7920/MT7921/MT7922/MT7925 Wi-Fi UWD Driver
+Dell Pro 16 Plus PB16255,0D4E,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14709836M/1/PB16255-8995J_Win10_1.0_A06.xml,MediaTek MT7920/MT7921/MT7922/MT7925 Wi-Fi UWD Driver
+Dell Pro 16 Plus PB16255,0D4E,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14709836M/1/PB16255-8995J_Win10_1.0_A06.xml,MediaTek MT7920/MT7921/MT7922/MT7925 Wi-Fi UWD Driver
+Dell Pro 16 Plus PB16255,0D4F,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14709836M/1/PB16255-8995J_Win10_1.0_A06.xml,MediaTek MT7920/MT7921/MT7922/MT7925 Wi-Fi UWD Driver
+Dell Pro 16 Plus PB16255,0D4F,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14709836M/1/PB16255-8995J_Win10_1.0_A06.xml,MediaTek MT7920/MT7921/MT7922/MT7925 Wi-Fi UWD Driver
+Dell Pro 14 PC14255,0D51,10,oem-wlan-listed,https://downloads.dell.com/FOLDER15028073M/1/PC14255-53C10_Win10_1.0_A07.xml,MediaTek MT7920/MT7921/MT7922/MT7925 Wi-Fi UWD Driver
+Dell Pro 14 PC14255,0D51,10,oem-wlan-listed,https://downloads.dell.com/FOLDER15028073M/1/PC14255-53C10_Win10_1.0_A07.xml,MediaTek MT7920/MT7921/MT7922/MT7925 Wi-Fi UWD Driver
+Dell Pro 14 PC14255,0D52,10,oem-wlan-listed,https://downloads.dell.com/FOLDER15028073M/1/PC14255-53C10_Win10_1.0_A07.xml,MediaTek MT7920/MT7921/MT7922/MT7925 Wi-Fi UWD Driver
+Dell Pro 14 PC14255,0D52,10,oem-wlan-listed,https://downloads.dell.com/FOLDER15028073M/1/PC14255-53C10_Win10_1.0_A07.xml,MediaTek MT7920/MT7921/MT7922/MT7925 Wi-Fi UWD Driver
+Dell Pro 16 PC16255,0D54,10,oem-wlan-listed,https://downloads.dell.com/FOLDER15028083M/1/PC16255-1VFNG_Win10_1.0_A07.xml,MediaTek MT7920/MT7921/MT7922/MT7925 Wi-Fi UWD Driver
+Dell Pro 16 PC16255,0D54,10,oem-wlan-listed,https://downloads.dell.com/FOLDER15028083M/1/PC16255-1VFNG_Win10_1.0_A07.xml,MediaTek MT7920/MT7921/MT7922/MT7925 Wi-Fi UWD Driver
+Dell Pro 16 PC16255,0D55,10,oem-wlan-listed,https://downloads.dell.com/FOLDER15028083M/1/PC16255-1VFNG_Win10_1.0_A07.xml,MediaTek MT7920/MT7921/MT7922/MT7925 Wi-Fi UWD Driver
+Dell Pro 16 PC16255,0D55,10,oem-wlan-listed,https://downloads.dell.com/FOLDER15028083M/1/PC16255-1VFNG_Win10_1.0_A07.xml,MediaTek MT7920/MT7921/MT7922/MT7925 Wi-Fi UWD Driver
+Dell Pro 13 Plus PB13255,0D61,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14722260M/1/PB13255-PHX4M_Win10_1.0_A07.xml,MediaTek MT7920/MT7921/MT7922/MT7925 Wi-Fi UWD Driver
+Dell Pro 13 Plus PB13255,0D61,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14722260M/1/PB13255-PHX4M_Win10_1.0_A07.xml,MediaTek MT7920/MT7921/MT7922/MT7925 Wi-Fi UWD Driver
+Dell Pro 13 Plus PB13255,0D62,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14722260M/1/PB13255-PHX4M_Win10_1.0_A07.xml,MediaTek MT7920/MT7921/MT7922/MT7925 Wi-Fi UWD Driver
+Dell Pro 13 Plus PB13255,0D62,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14722260M/1/PB13255-PHX4M_Win10_1.0_A07.xml,MediaTek MT7920/MT7921/MT7922/MT7925 Wi-Fi UWD Driver
+Dell Pro 14 PC14250,0D63,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14643836M/1/PC14250-FWPNN_Win10_1.0_A06.xml,MediaTek MT7920/MT7921/MT7922/MT7925 Wi-Fi UWD Driver
+Dell Pro 14 PC14250,0D63,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14643836M/1/PC14250-FWPNN_Win10_1.0_A06.xml,MediaTek MT7920/MT7921/MT7922/MT7925 Wi-Fi UWD Driver
+Dell Pro 16 PC16250,0D64,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14643879M/1/PC16250-TMR64_Win10_1.0_A06.xml,MediaTek MT7920/MT7921/MT7922/MT7925 Wi-Fi UWD Driver
+Dell Pro 16 PC16250,0D64,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14643879M/1/PC16250-TMR64_Win10_1.0_A06.xml,MediaTek MT7920/MT7921/MT7922/MT7925 Wi-Fi UWD Driver
+Dell Pro 16 Plus PB16255,0D65,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14709836M/1/PB16255-8995J_Win10_1.0_A06.xml,MediaTek MT7920/MT7921/MT7922/MT7925 Wi-Fi UWD Driver
+Dell Pro 16 Plus PB16255,0D65,10,oem-wlan-listed,https://downloads.dell.com/FOLDER14709836M/1/PB16255-8995J_Win10_1.0_A06.xml,MediaTek MT7920/MT7921/MT7922/MT7925 Wi-Fi UWD Driver
