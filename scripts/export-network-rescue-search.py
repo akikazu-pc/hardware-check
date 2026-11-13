@@ -99,20 +99,29 @@ def model_key(brand, model):
 def driverhub_rows(existing):
     occupied = {model_key(row[1], label) for row in existing
                 for label in (row[2], *row[13].split("|")) if label}
+    with (ROOT / "docs/network-rescue-model-gaps.csv").open(encoding="utf-8-sig", newline="") as stream:
+        occupied.update(model_key(row["brand"], row["model"]) for row in csv.DictReader(stream))
+    groups = defaultdict(list)
     with (ROOT / "docs/network-rescue-driverhub-model-candidates.csv").open(
         encoding="utf-8-sig", newline=""
     ) as stream:
         for entry in csv.DictReader(stream):
-            if entry["granularity"] != "model":
-                continue
-            brand, model = entry["brand"], entry["model"]
-            key = model_key(brand, model)
-            if key in occupied:
-                continue
-            occupied.add(key)
-            yield ("laptop", brand, model, "", "", "third-party-model-candidate", "",
-                   "exact-network-id-and-install", entry["source"], entry["status"], entry["status"],
-                   "Laptop", "", "", "")
+            if entry["granularity"] == "model":
+                groups[model_key(entry["catalogBrand"], entry["comparisonModel"])].append(entry)
+    for key, entries in groups.items():
+        aliases = dict.fromkeys(entry[field] for entry in entries for field in ("model", "comparisonModel"))
+        brand = entries[0]["catalogBrand"]
+        keys = {model_key(brand, label) for label in aliases}
+        if key in occupied or not keys.isdisjoint(occupied):
+            continue
+        occupied.update(keys)
+        entry = next((row for row in entries if row["brand"].casefold() == brand.casefold()), entries[0])
+        model = entry["model"]
+        category = entry["category"]
+        kind = {"Laptop": "laptop", "DiyDesktop": "motherboard", "Other": "device"}[category]
+        yield (kind, brand, model, "", "", "third-party-model-candidate", "",
+               "exact-network-id-and-install", entry["source"], entry["status"], entry["status"],
+               category, entry["tag"], "|".join(label for label in aliases if label != model and "|" not in label), "")
 
 
 def main():

@@ -452,18 +452,29 @@ internal sealed class NetworkRescueView : UserControl
         RescueDeviceTag? tag = category == RescueDeviceCategory.Other && _catalogTag.SelectedIndex > 0
             ? CatalogTags[_catalogTag.SelectedIndex - 1] : null;
         var results = RescueModelCatalog.Search(_catalogQuery.Text, category, tag, out var approximate);
-        _catalogResults.BeginUpdate();
-        _catalogResults.Items.Clear();
-        foreach (var entry in results)
+        var items = new ListViewItem[results.Count];
+        ListViewItem? selectedItem = null;
+        for (var index = 0; index < results.Count; index++)
         {
+            var entry = results[index];
             var qualifier = entry.Type == "laptop-os-record"
                 ? string.Join(" · ", new[] { entry.Platform, entry.Windows }.Where(value => value.Length > 0))
                 : entry.DeviceTag is { } deviceTag ? _t[$"rescue.tag{deviceTag}"] : entry.Platform;
             var item = new ListViewItem(entry.Brand) { Tag = entry };
             item.SubItems.Add(entry.Model);
             item.SubItems.Add(qualifier);
-            _catalogResults.Items.Add(item);
-            item.Selected = entry == selected;
+            items[index] = item;
+            if (entry == selected)
+            {
+                selectedItem = item;
+            }
+        }
+        _catalogResults.BeginUpdate();
+        _catalogResults.Items.Clear();
+        _catalogResults.Items.AddRange(items);
+        if (selectedItem is not null)
+        {
+            selectedItem.Selected = true;
         }
         _catalogResults.EndUpdate();
         _catalogStatus.Text = string.IsNullOrWhiteSpace(_catalogQuery.Text) && category is null ? "" :

@@ -21,11 +21,24 @@ public sealed class RescueModelCatalogTests
     [Fact]
     public void ExcludesDriverHubSeriesGenerationsFromModelSearch()
     {
-        foreach (var generation in new[] { "CF-33-1", "CF-20-2", "CF-31-5", "CF-54-3" })
+        foreach (var generation in new[] { "CF-33-1", "CF-20-2", "CF-31-5", "CF-54-3", "CF-33-2" })
         {
             Assert.DoesNotContain(RescueModelCatalog.Search($"Panasonic {generation}", RescueDeviceCategory.Laptop),
                 entry => entry.Model == generation);
         }
+    }
+
+    [Theory]
+    [InlineData("AM1M-A", RescueDeviceCategory.DiyDesktop, null, "AM1M-A")]
+    [InlineData("ESPRIMO D9500", RescueDeviceCategory.Other, RescueDeviceTag.BrandedDesktop, "ESPRIMO D9500")]
+    public void FindsImportedDriverHubModelsInTheirDeviceClass(string query, RescueDeviceCategory category,
+        RescueDeviceTag? tag, string model)
+    {
+        var entry = Assert.Single(RescueModelCatalog.Search(query, category, tag), item => item.Model == model);
+        Assert.Equal("pending", entry.Windows10Evidence);
+        Assert.Equal("pending", entry.Windows11Evidence);
+        Assert.Equal("jp.drvhub.net", entry.Source?.Host);
+        Assert.Null(entry.DriverPage);
     }
 
     [Theory]
