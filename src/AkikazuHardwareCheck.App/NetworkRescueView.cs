@@ -808,6 +808,9 @@ internal sealed class NetworkRescueView : UserControl
 
         var packages = OnlineDriverCatalog.Find(diagnostic, includeInstalled: downloadOnly);
         var possible = OnlineDriverCatalog.FindPossible(diagnostic, includeInstalled: downloadOnly);
+        HashSet<string> updateIds = downloadOnly
+            ? OnlineDriverCatalog.FindUpdates(diagnostic).Select(package => package.Id).ToHashSet(StringComparer.Ordinal)
+            : [];
         IReadOnlyList<NetworkDeviceCandidate> devices = downloadOnly ? diagnostic.Devices : MissingDriverDevices(diagnostic);
         if (packages.Count == 0 && possible.Count == 0)
         {
@@ -817,13 +820,14 @@ internal sealed class NetworkRescueView : UserControl
 
         var selected = packages.Count == 1 && possible.Count == 0
             ? packages[0]
-            : SelectOnlinePackage(packages, possible, diagnostic);
+            : SelectOnlinePackage(packages, possible, diagnostic, updateIds);
         if (selected is null)
         {
             return;
         }
 
-        var prompt = string.Join(Environment.NewLine, _t["rescue.onlineConfirm"], PackageLabel(selected), selected.Source);
+        var prompt = string.Join(Environment.NewLine, _t["rescue.onlineConfirm"],
+            PackageLabel(selected, updateIds.Contains(selected.Id)), selected.Source);
         if (MessageBox.Show(this, prompt, _t["rescue.onlineCandidates"], MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) != DialogResult.Yes)
         {
@@ -905,7 +909,7 @@ internal sealed class NetworkRescueView : UserControl
     }
 
     private OnlineDriverPackage? SelectOnlinePackage(IReadOnlyList<OnlineDriverPackage> matches,
-        IReadOnlyList<OnlineDriverPackage> possible, NetworkDeviceDiagnostic diagnostic)
+        IReadOnlyList<OnlineDriverPackage> possible, NetworkDeviceDiagnostic diagnostic, IReadOnlySet<string> updates)
     {
         var packages = matches.Concat(possible).ToArray();
         using var dialog = new Form
@@ -919,11 +923,11 @@ internal sealed class NetworkRescueView : UserControl
         var list = new ListBox { Dock = DockStyle.Fill };
         foreach (var package in matches)
         {
-            list.Items.Add(PackageLabel(package));
+            list.Items.Add(PackageLabel(package, updates.Contains(package.Id)));
         }
         foreach (var package in possible)
         {
-            list.Items.Add($"[{_t["rescue.possibleCandidates"]}] {PackageLabel(package)}");
+            list.Items.Add($"[{_t["rescue.possibleCandidates"]}] {PackageLabel(package, updates.Contains(package.Id))}");
         }
 
         var select = Ui.Button();
@@ -967,7 +971,8 @@ internal sealed class NetworkRescueView : UserControl
             : null;
     }
 
-    private static string PackageLabel(OnlineDriverPackage package) => $"{package.Id} {package.Version}";
+    private string PackageLabel(OnlineDriverPackage package, bool update) =>
+        $"{package.Id} {package.Version}" + (update ? $"  [{_t["rescue.onlineUpdate"]}]" : "");
 
     private OfflinePackageCandidate? SelectCandidate(string root, IReadOnlyList<OfflinePackageCandidate> candidates, string skipped)
     {

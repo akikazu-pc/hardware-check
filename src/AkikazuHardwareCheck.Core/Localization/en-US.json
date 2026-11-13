@@ -409,6 +409,7 @@
   "rescue.onlineDownloading": "Downloading and checking driver package…",
   "rescue.onlineFailed": "Could not download or verify this package.",
   "rescue.onlineSelect": "Select package",
+  "rescue.onlineUpdate": "Update available",
   "rescue.note": "Reads local network interfaces only; it does not use the internet. Link speed is the adapter rate, not the provider's bandwidth.",
   "rescue.present": "Yes",
   "rescue.refresh": "Refresh",
