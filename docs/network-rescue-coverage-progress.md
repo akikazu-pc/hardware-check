@@ -1013,3 +1013,9 @@ Acer 的三个 Win10 候选 ZIP 也已核对 `Netwtw08.INF` 版本。AX201、Kil
 Acer 为 SF314-44 发布的 CE 声明列 N21H1、`SF314-44**********` 和 MediaTek MT7922。声明未单列 SF314-44G，也未给出适用于该精确型号的订货料号或 WLAN 物料。Acer 台湾兼容表明确列出 SF314-44G，美国及台湾精确驱动查询未返回记录。[Acer CE 声明](https://global-download.acer.com/GDFiles/Document/CE%20DoC/CE%20DoC_Acer_1.0_A_A.pdf?acerid=637892104939241451) · [Acer 台湾兼容表](https://www.acer.com/tw-zh/support/windows/windows-11-compatibility.html)
 
 维修资料把 SF314-44G 与 SFX14-41G 同时关联到 Compal LA-L201P 和 LA-L202P，另有资料在 SFX14-42G 上也记录 LA-L202P。板号无法定位精确机型的出厂网卡。公开实机索引未找到可归属 SF314-44G 的完整 PCI ID，Win10 x64 格继续待核。[LA-L202P 板号索引](https://www.laptopserviz.bg/index.php/bgview/boardview/compal-boardview/acer-swift-3-sf314-44g-sfx14-41g-compal-la-l202p-gn20-gh4fz-rev1-0-boardview.html) · [SFX14-42G 板号记录](https://vinafix.com/threads/sfx14-42g-la-l202p.45142/)
+
+### Acer 型号询证与 Aspire S 实机检索
+
+2026-11-14 已向 Acer 技术支持询证 311R-31、311RN-31 和 CN516-72 的正式型号，并请求提供对应销售料号或支持记录。截至本次核查，仍待原厂回复。[Acer 技术支持](https://www.acer.com/my-en/support/service-network/highpoint-service-network)
+
+在 Linux Hardware Project 的 Acer Aspire DMI 目录中检索七款 S 后缀，均未命中精确型号。BSD Hardware、Geekbench、OpenBenchmarking 和 Acer 社区的公开索引也未找到同一台设备同时提供完整 S 后缀与 WLAN PCI 子系统 ID 的记录。待核共 19 格。[公开 DMI 目录](https://github.com/linuxhw/DMI/tree/master/Notebook/Acer/Aspire)
