@@ -6,7 +6,7 @@
 
 - 测试机只连接被测网卡。有线测试拔掉 Wi-Fi 天线或在固件中关闭 WLAN；Wi-Fi 测试拔掉网线。USB 网卡测试时不接其他网络。
 - 准备一台可联网的路由器，记录它是否提供 IPv4 DHCP、IPv6 和 DNS。网络名和密码不写入记录。
-- U 盘使用 exFAT 或 NTFS，放入离线完整版 ZIP 及 `scripts/collect-network-rescue-evidence.ps1`。核对 ZIP 的 SHA-256。
+- U 盘使用 exFAT 或 NTFS，放入离线完整版 ZIP 及 `scripts/collect-network-rescue-evidence.ps1`、`scripts/summarize-network-rescue-evidence.ps1`。核对 ZIP 的 SHA-256。
 - 制造缺驱动状态时优先用微软官方介质全新安装，安装后不连网。已有系统可在测试机上用 `pnputil /delete-driver oemNN.inf /uninstall` 删除被测网卡驱动；先用 `pnputil /enum-drivers /class Net` 确认 INF 名称。若 Windows 自带驱动仍能绑定，该组合记为「系统自带可用」，不计入断网恢复。
 
 ## 每个场景的记录步骤
@@ -46,6 +46,21 @@ powershell -ExecutionPolicy Bypass -File .\collect-network-rescue-evidence.ps1 -
 | W11P-WIFI-NEW | Windows 11 Pro x64 | Wi-Fi | NEW | Unverified |
 
 每行另记主板或整机型号、BIOS 版本、网卡硬件 ID、Windows 构建号和 UBR、INF 版本、是否需要重启。同一型号的不同出厂网卡分别建行。
+
+## 汇总判定
+
+把同一目录下的 JSON 交给 `summarize-network-rescue-evidence.ps1`，生成场景 × 阶段的 Markdown 表：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\summarize-network-rescue-evidence.ps1 -EvidenceDirectory .\evidence -OutputPath .\matrix.md -FailOnIncomplete
+```
+
+- **Pass**：最终阶段问题码 0、已绑定签名驱动、适配器 `Up`、有 IPv4 或 IPv6 网关、有 DNS 服务器、DNS 解析成功、HTTPS 返回 200–399。
+- **Fail**：基线有缺驱动设备，但最终阶段未满足上述任一项；说明列列出未通过项。
+- **Incomplete**：缺 `baseline` 或 `after-install`／`after-restart`，补采后重跑。
+- **Inbox**：基线设备已绑定签名驱动，说明该组合由系统自带驱动可用，按准备规则不计入断网恢复。
+
+同一场景有多条 `after-*` 记录时取时间最新的一条，并优先 `after-restart`。加 `-FailOnIncomplete` 时任一非 Pass 会返回退出码 1，可直接作为验收门禁。
 
 ## 需重点观察
 
