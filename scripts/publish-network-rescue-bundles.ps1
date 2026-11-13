@@ -1,6 +1,7 @@
 [CmdletBinding()]
 param(
     [string]$RealtekVendorZip,
+    [switch]$PublicOffline,
     [switch]$IncludeCatalog,
     [string]$VendorSourceDirectory,
     [string]$WlanArchive,
@@ -10,6 +11,10 @@ param(
 
 $ErrorActionPreference = 'Stop'
 $root = Split-Path -Parent $PSScriptRoot
+if ($PublicOffline -and (!$RealtekVendorZip -or $IncludeCatalog -or $VendorSourceDirectory -or
+        $WlanArchive -or $PeEthernetPackDirectory -or $SevenZipExecutable)) {
+    throw 'Use -PublicOffline with -RealtekVendorZip only. Catalog and full-library inputs are local-only.'
+}
 if ($WlanArchive) {
     if (-not $IncludeCatalog) {
         throw 'Use -IncludeCatalog with -WlanArchive.'
@@ -30,7 +35,7 @@ if ($PeEthernetPackDirectory) {
     }
     $PeEthernetPackDirectory = (Resolve-Path -LiteralPath $PeEthernetPackDirectory).Path
 }
-if ($WlanArchive) {
+if ($WlanArchive -or $PublicOffline) {
     & (Join-Path $PSScriptRoot 'build-network-rescue-pe.cmd')
     if ($LASTEXITCODE -ne 0) {
         throw "Native PE helper build failed ($LASTEXITCODE)."
@@ -73,8 +78,12 @@ if errorlevel 1 pause
     if ($RealtekVendorZip -and -not $IncludeCatalog) {
         $flavors += 'offline-preview-portable'
     }
+    if ($PublicOffline) {
+        $flavors = @('offline-redistributable')
+    }
 
     foreach ($flavor in $flavors) {
+        $useEsd = $flavor -in 'offline-full-portable', 'offline-redistributable'
         $bundleRoot = $staging.FullName
         if ($flavor -ne 'online-install') {
             $bundleRoot = Join-Path $staging.FullName 'portable'
@@ -97,7 +106,7 @@ start "" "%~dp0AkikazuHardwareCheck.exe" --portable-rescue
             & (Join-Path $PSScriptRoot 'prepare-network-rescue-packs.ps1') -OutputDirectory $bundleRoot -VendorSourceDirectory $VendorSourceDirectory -ExcludeVendorArchives:($flavor -eq 'offline-full-portable')
         }
 
-        if ($flavor -eq 'offline-full-portable') {
+        if ($useEsd) {
             # Older Windows 10 builds can crash in CoreCLR before managed startup when the host opts into CET.
             # Separate intermediates keep the single-file host from being reused by the regular Website publish.
             $offlinePublish = Join-Path $staging.FullName 'offline-publish'
@@ -112,10 +121,39 @@ start "" "%~dp0AkikazuHardwareCheck.exe" --portable-rescue
             Copy-Item -LiteralPath (Join-Path $offlinePublish $appName) -Destination $bundleRoot -Force
             $appHash = (Get-FileHash -LiteralPath (Join-Path $bundleRoot $appName) -Algorithm SHA256).Hash
             Set-Content -LiteralPath (Join-Path $bundleRoot 'SHA256.txt') -Value "$appHash  $appName" -Encoding ascii
+            foreach ($exe in 'PeNetworkRescue.exe', 'NetworkRescue.exe') {
+                Copy-Item -LiteralPath (Join-Path $root "artifacts/network-rescue-pe/$exe") -Destination $bundleRoot
+            }
+            Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'prototype/Run-Network-Rescue.cmd') -Destination $bundleRoot -Force
+        }
 
+        if ($flavor -eq 'offline-redistributable') {
+            $reviewedFiles = @{
+                'Copyright Notice.txt' = '3CA53329DBC214366EC3395D55B0809272403E02A0FC85F6E58857F06974BA40'
+                'rtwlane602.sys' = '5AC18F9F9C13B2CA73D53E96D6BE0D90239E28411F8923AE83EEE1FCE7A8172B'
+                'netrtwlane602.cat' = '655C7C0AF56D120BF29741C3E7839AA6913A34EE22C6B7B03C7DB1159BC4C88A'
+                'netrtwlane602.inf' = '964C9F9D17BE4F1FA4965DCE8E681A399373FBFD12B0A1746A4BBD65A406753C'
+                'rtldata602.dat' = 'C4231985990CEB4C6FC272856B19FA9506EE734DB444C87CE7FC34158A6DDBA2'
+            }
+            $prepared = Join-Path $staging.FullName 'reviewed-realtek'
+            & (Join-Path $PSScriptRoot 'prototype/prepare-realtek-wifi-pack.ps1') `
+                -VendorZip $RealtekVendorZip -OutputDirectory $prepared
+            $driverId = 'rtl8852-6001.16.172.0'
+            $destination = Join-Path $bundleRoot "driver-packs/$driverId"
+            New-Item -ItemType Directory -Path $destination | Out-Null
+            foreach ($name in $reviewedFiles.Keys) {
+                $sourceDirectory = if ($name -eq 'Copyright Notice.txt') { $prepared } else { Join-Path $prepared 'Win10X64' }
+                $source = Join-Path $sourceDirectory $name
+                if ((Get-FileHash -LiteralPath $source -Algorithm SHA256).Hash -ne $reviewedFiles[$name]) {
+                    throw "The file differs from the reviewed Realtek driver set: $name"
+                }
+                Copy-Item -LiteralPath $source -Destination $destination
+            }
+            Set-Content -LiteralPath (Join-Path $bundleRoot 'pe-driver-scope.txt') -Value "10240 $driverId" -Encoding ascii
+        }
+
+        if ($flavor -eq 'offline-full-portable') {
             & (Join-Path $PSScriptRoot 'prepare-sdio-wlan-library.ps1') -Archive $WlanArchive -OutputDirectory $bundleRoot
-            Copy-Item -LiteralPath (Join-Path $root 'artifacts/network-rescue-pe/PeNetworkRescue.exe') -Destination $bundleRoot
-            Copy-Item -LiteralPath (Join-Path $root 'artifacts/network-rescue-pe/NetworkRescue.exe') -Destination $bundleRoot
             $fontCache = Join-Path $root 'artifacts/network-rescue-pe/fonts'
             New-Item -ItemType Directory -Path $fontCache -Force | Out-Null
             $fontSource = 'https://raw.githubusercontent.com/notofonts/noto-cjk/Sans2.004'
@@ -142,7 +180,6 @@ start "" "%~dp0AkikazuHardwareCheck.exe" --portable-rescue
                 }
                 Copy-Item -LiteralPath $cached -Destination $peFonts.FullName
             }
-            Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'prototype/Run-Network-Rescue.cmd') -Destination $bundleRoot -Force
             $packages = (Get-Content -LiteralPath (Join-Path $bundleRoot 'wifi-preview-packages.json') -Raw | ConvertFrom-Json).packages
             $peScope = @(
                 '10240 sdio-wlan-wifi-26082'
@@ -215,8 +252,10 @@ start "" "%~dp0AkikazuHardwareCheck.exe" --portable-rescue
             }
         }
 
-        Copy-Item -LiteralPath (Join-Path $root 'docs/network-rescue-driver-index.csv') -Destination $bundleRoot
-        $extension = if ($flavor -eq 'offline-full-portable') { 'esd' } else { 'zip' }
+        if ($flavor -ne 'offline-redistributable') {
+            Copy-Item -LiteralPath (Join-Path $root 'docs/network-rescue-driver-index.csv') -Destination $bundleRoot
+        }
+        $extension = if ($useEsd) { 'esd' } else { 'zip' }
         $name = "NetworkRescue-$version-$flavor-win-x64.$extension"
         $archive = Join-Path $output $name
         if ($flavor -eq 'offline-full-portable') {
@@ -227,7 +266,9 @@ start "" "%~dp0AkikazuHardwareCheck.exe" --portable-rescue
             if ($libraryInfCount -eq 0 -or $driverInfCount -le $libraryInfCount) {
                 throw 'The full bundle must contain both the WLAN library and OEM driver packs.'
             }
+        }
 
+        if ($useEsd) {
             $dism = Join-Path ([Environment]::SystemDirectory) 'dism.exe'
             $capture = Join-Path $staging.FullName 'offline.wim'
             $temporaryArchive = Join-Path $staging.FullName 'offline.esd'

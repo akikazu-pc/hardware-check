@@ -270,12 +270,19 @@ pwsh -NoProfile -File scripts/publish-network-rescue-bundles.ps1 -IncludeCatalog
 ## 当前交付方式
 
 - 在线安装版 `NetworkRescue-<version>-online-install-win-x64.zip` 解包后运行 `Install.cmd`。包内不含驱动本体。扫描到缺驱动设备后，可从内置目录查询官方来源，选择并确认下载。ZIP 通过 SHA-256 校验后解包，随后用本机 Windows 的硬件 ID 和签名流程确认安装。目录是随程序发布的固定快照，暂不提供全量联网索引、驱动升级或回退。
-- 离线完整版为单个 `NetworkRescue-<version>-offline-full-portable-win-x64.esd`。在管理员终端中创建一个空目录，用 Windows 自带的 DISM 还原，再双击该目录里的 `NetworkRescue.exe`。主程序使用随附运行时和同目录的 `driver-packs`。安装 Wi-Fi 驱动需要管理员确认。
+- 公开离线版仅随附 Realtek 8852 Wi-Fi 6001.16.172.0，保留原版权声明和二进制。请从 [v0.2.1 Release](https://github.com/akikazu-pc/hardware-check/releases/tag/v0.2.1) 下载 `NetworkRescue-0.2.1-offline-redistributable-win-x64.esd` 和对应 SHA-256。在管理员终端运行下方命令。
+- 本地离线完整版为单个 `NetworkRescue-<version>-offline-full-portable-win-x64.esd`。在管理员终端中创建一个空目录，用 Windows 自带的 DISM 还原，再双击该目录里的 `NetworkRescue.exe`。主程序使用随附运行时和同目录的 `driver-packs`。安装 Wi-Fi 驱动需要管理员确认。
 - 完整版需在管理员终端构建。打包脚本检查 SDIO 和原厂 INF，验证 ESD 小于 2 GiB，逐文件核对还原路径和 SHA-256。完整版的应用宿主关闭 CET 兼容标志，以便在受影响的旧版 Windows 10 上启动。
 
 ```powershell
 New-Item -ItemType Directory -Path .\NetworkRescue
-dism.exe /Apply-Image /ImageFile:"NetworkRescue-<version>-offline-full-portable-win-x64.esd" /Index:1 /ApplyDir:NetworkRescue /CheckIntegrity
+dism.exe /Apply-Image /ImageFile:"NetworkRescue-0.2.1-offline-redistributable-win-x64.esd" /Index:1 /ApplyDir:NetworkRescue /CheckIntegrity
+```
+
+公开离线版在管理员 PowerShell 中用下列命令构建。原厂 ZIP 来自技嘉 B650 AORUS ELITE AX rev. 1.2 支持页。脚本只复制五个已核对许可和 SHA-256 的文件，验证 ESD 小于 2 GiB，使用 DISM 还原后逐文件校验。
+
+```powershell
+pwsh -NoProfile -File scripts/publish-network-rescue-bundles.ps1 -PublicOffline -RealtekVendorZip <原厂ZIP>
 ```
 
 本地验证使用保留 v0.2.1 完整驱动库的 ESD，大小为 1,260,880,368 字节。Win10 22H2（19045.2965）和 Win11 24H2（26100.1742，LTSC 评估版）均在断网虚拟机中用系统 DISM 还原，12,876 个文件的路径和 SHA-256 与暂存目录一致，随后从资源管理器打开了 Network Rescue。Win10 原版在同一来宾上以 CoreCLR 错误 `0x80131506` 退出。
@@ -300,7 +307,7 @@ dism.exe /Apply-Image /ImageFile:"NetworkRescue-<version>-offline-full-portable-
 
 ## 离线完整版在 Windows 与 WinPE 中使用
 
-将同一个离线完整版 ZIP 解压到 U 盘，两种环境都双击 `NetworkRescue.exe`。普通 Windows 默认打开完整急救窗口，包括型号搜索、在线下载和导出。x64 WinPE 打开原生窗口，顶部保留工具、语言和帮助。上方显示本机网络设备状态，下方显示驱动准备入口和可修复的离线 Windows。运行时不依赖 WMI、PowerShell 或 .NET。普通 Windows 和 PE 的顶部工具栏都支持日语、简体中文、繁体中文和英语。从终端运行 EXE 时打开命令行界面。使用 `NetworkRescue.exe --gui` 可显式打开图形窗口，使用 `Run-Network-Rescue.cmd --cli` 可在当前控制台运行。两种界面默认跟随 Windows 显示语言，无法匹配时使用英语。交互式命令行等待 3 秒，按键后持续等待语言编号，超时则继续。唯一目标和唯一签名驱动自动选中，写入前仍需确认。控制台以 Unicode 输出，精简 PE 的中日文显示取决于控制台可用字体；图形向导使用离线包内置字体。
+将本地离线完整版 ESD 还原到 U 盘的空目录，两种环境都双击 `NetworkRescue.exe`。普通 Windows 默认打开完整急救窗口，包括型号搜索、在线下载和导出。x64 WinPE 打开原生窗口，顶部保留工具、语言和帮助。上方显示本机网络设备状态，下方显示驱动准备入口和可修复的离线 Windows。运行时不依赖 WMI、PowerShell 或 .NET。普通 Windows 和 PE 的顶部工具栏都支持日语、简体中文、繁体中文和英语。从终端运行 EXE 时打开命令行界面。使用 `NetworkRescue.exe --gui` 可显式打开图形窗口，使用 `Run-Network-Rescue.cmd --cli` 可在当前控制台运行。两种界面默认跟随 Windows 显示语言，无法匹配时使用英语。交互式命令行等待 3 秒，按键后持续等待语言编号，超时则继续。唯一目标和唯一签名驱动自动选中，写入前仍需确认。控制台以 Unicode 输出，精简 PE 的中日文显示取决于控制台可用字体；图形向导使用离线包内置字体。
 
 在 PE 的「工具」中选择「修复已有 Windows」，工具列出可访问的固定磁盘分区中的 Windows 10/11 x64 系统。它用内核版本区分系统和匹配 INF 最低构建号，启用包更新的 Windows 可能显示较早的基线内核构建号。若找不到预期分区，先检查 PE 是否能读取磁盘，或在具备相应组件的 PE 中解锁 BitLocker。
 

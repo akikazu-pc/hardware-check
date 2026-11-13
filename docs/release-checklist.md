@@ -39,7 +39,8 @@
 - [x] 确认 `Directory.Build.props` 的版本号（0.2.1）
 - [x] 确认 GitHub Actions 的构建、单元测试和窗口冒烟测试全绿（`main` 与 `v0.2.1` tag 均通过）
 - [x] 运行 `scripts/publish.ps1`，确认体积没有异常增长（v0.2.1 实测：程序 53.1 MB，压缩包 47.8 MB，SHA-256 `1717317BBE222D078F9D54FA3651130CB049AB7D2F364FB16514DE259C56C6F6`）
-- [x] 在仓库 `akikazu-pc/hardware-check` 的 GitHub Release 上传 `AkikazuHardwareCheck-win-x64.zip`（已发布到 [`v0.2.1`](https://github.com/akikazu-pc/hardware-check/releases/tag/v0.2.1)，另有在线版和离线包 4 个分卷）
+- [x] 在仓库 `akikazu-pc/hardware-check` 的 GitHub Release 上传 `AkikazuHardwareCheck-win-x64.zip`（已发布到 [`v0.2.1`](https://github.com/akikazu-pc/hardware-check/releases/tag/v0.2.1)，另有在线版和仅含 Realtek 8852 Wi-Fi 驱动的公开离线 ESD）
+- 公开离线 ESD 使用 `scripts/publish-network-rescue-bundles.ps1 -PublicOffline -RealtekVendorZip <原厂 ZIP>` 构建。核对成品低于 2 GiB，在 Win10 和 Win11 用系统 DISM 还原，逐文件校验并离线启动。发布后从公开链接重新下载核对 SHA-256。
 - [x] 在网站仓库的 `app/data/tools/hardware-check-release.json` 填入 `url`、`sha256`、`version`（已填 v0.2.1；网站构建时 `sync-hardware-release.ts` 会自动校验并同步）
 - [ ] 每次发新版都同步上述 `sha256` 和 `version`：`latest` 链接会自动指向新版，网页上的版本和校验值不会
 - [ ] 尽可能完成代码签名，并在签名后重新计算 SHA-256
