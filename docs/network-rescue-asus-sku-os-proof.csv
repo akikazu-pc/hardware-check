@@ -1,0 +1,19 @@
+model,sku,supportUrl,osIds,windows10,windows11,status
+ROG Zephyrus G14 (2026) GA403,GA403,https://www.asus.com/supportonly/ga403/helpdesk_download/,,no,no,os-list-empty
+TUF Gaming A16 FA608UH,FA608UH,https://www.asus.com/supportonly/fa608uh/helpdesk_download/,52;8,no,yes,os-listed
+TUF Gaming A16 FA608WM,FA608WM,https://www.asus.com/supportonly/fa608wm/helpdesk_download/,52;8,no,yes,os-listed
+ROG Zephyrus G14 (2023) GA402NI,GA402NI,https://www.asus.com/supportonly/ga402ni/helpdesk_download/,52;8,no,yes,os-listed
+ROG Zephyrus G14 (2023) GA402NJ,GA402NJ,https://www.asus.com/supportonly/ga402nj/helpdesk_download/,52;8,no,yes,os-listed
+ROG Zephyrus G14 (2023) GA402NU,GA402NU,https://www.asus.com/supportonly/ga402nu/helpdesk_download/,52;8,no,yes,os-listed
+ROG Zephyrus G14 (2023) GA402NV,GA402NV,https://www.asus.com/supportonly/ga402nv/helpdesk_download/,52;8,no,yes,os-listed
+ROG Zephyrus G14 (2023) GA402XI,GA402XI,https://www.asus.com/supportonly/ga402xi/helpdesk_download/,52;8,no,yes,os-listed
+ROG Zephyrus G14 (2023) GA402XU,GA402XU,https://www.asus.com/supportonly/ga402xu/helpdesk_download/,52;8,no,yes,os-listed
+ROG Zephyrus G14 (2023) GA402XV,GA402XV,https://www.asus.com/supportonly/ga402xv/helpdesk_download/,52;8,no,yes,os-listed
+ROG Zephyrus G14 (2023) GA402XY,GA402XY,https://www.asus.com/supportonly/ga402xy/helpdesk_download/,52;8,no,yes,os-listed
+ROG Zephyrus G14 (2023) GA402XZ,GA402XZ,https://www.asus.com/supportonly/ga402xz/helpdesk_download/,52;8,no,yes,os-listed
+ASUS TUF Gaming A15 (2022) FA507RW,FA507RW,https://www.asus.com/supportonly/fa507rw/helpdesk_download/,52;45;8,yes,yes,os-listed
+ASUS TUF Gaming A16 (2025) FA608PPI,FA608PPI,https://www.asus.com/supportonly/fa608ppi/helpdesk_download/,,no,no,os-list-empty
+ASUS TUF Gaming A16 (2025) FA608PMI,FA608PMI,https://www.asus.com/supportonly/fa608pmi/helpdesk_download/,,no,no,os-list-empty
+ROG Strix G15 G513IR,G513IR,https://www.asus.com/supportonly/g513ir/helpdesk_download/,52;45;8,yes,yes,os-listed
+ROG Strix G17 G713IR,G713IR,https://www.asus.com/supportonly/g713ir/helpdesk_download/,52;45;8,yes,yes,os-listed
+ROG Strix SCAR 17 G733QSA,G733QSA,https://www.asus.com/supportonly/g733qsa/helpdesk_download/,52;45;8,yes,yes,os-listed
