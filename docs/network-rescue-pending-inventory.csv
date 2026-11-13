@@ -1,207 +1,179 @@
 brand,type,platform,model,windows,wlanEvidence,reason,detail,source
-ASUS,laptop,ROG-Republic-of-Gamers,ROG Flow Z13-KJP,10,product-series,no-network-category,该系统驱动列表没有网络类目或列表过短,https://rog.asus.com/laptops/rog-flow/ROG-Flow-Z13-KJP/
-ASUS,laptop,ROG-Republic-of-Gamers,ROG Flow Z13-KJP,11,product-series,no-network-category,该系统驱动列表没有网络类目或列表过短,https://rog.asus.com/laptops/rog-flow/ROG-Flow-Z13-KJP/
-ASUS,laptop,ROG-Republic-of-Gamers,ROG Strix G15,10,product-series,no-network-category,该系统驱动列表没有网络类目或列表过短,https://rog.asus.com/laptops/rog-strix/2021-rog-strix-g15-series/
-ASUS,laptop,ROG-Republic-of-Gamers,ROG Strix G15,11,product-series,no-network-category,该系统驱动列表没有网络类目或列表过短,https://rog.asus.com/laptops/rog-strix/2021-rog-strix-g15-series/
-ASUS,laptop,ROG-Republic-of-Gamers,ROG Strix G17,11,product-series,no-network-category,该系统驱动列表没有网络类目或列表过短,https://rog.asus.com/laptops/rog-strix/2021-rog-strix-g17-series/
-ASUS,laptop,ROG-Republic-of-Gamers,ROG Strix SCAR 17,11,product-series,no-network-category,该系统驱动列表没有网络类目或列表过短,https://rog.asus.com/laptops/rog-strix/2021-rog-strix-scar-17-series/
-ASUS,laptop,ROG-Republic-of-Gamers,ROG Zephyrus G14 (2026) GA403,10,product-series,no-network-category,该系统驱动列表没有网络类目或列表过短,https://rog.asus.com/laptops/rog-zephyrus/rog-zephyrus-g14-2026-ga403/
-ASUS,laptop,ROG-Republic-of-Gamers,ROG Zephyrus G14 (2026) GA403,11,product-series,no-network-category,该系统驱动列表没有网络类目或列表过短,https://rog.asus.com/laptops/rog-zephyrus/rog-zephyrus-g14-2026-ga403/
-ASUS,laptop,ROG-Republic-of-Gamers,ROG Zephyrus G14 AW SE,10,product-series,no-network-category,该系统驱动列表没有网络类目或列表过短,https://rog.asus.com/laptops/rog-zephyrus/2021-rog-zephyrus-g14-aw-se-series/
-ASUS,laptop,ROG-Republic-of-Gamers,ROG Zephyrus G14 AW SE,11,product-series,no-network-category,该系统驱动列表没有网络类目或列表过短,https://rog.asus.com/laptops/rog-zephyrus/2021-rog-zephyrus-g14-aw-se-series/
-ASUS,laptop,TUF-Gaming,ASUS TUF Gaming A16 (2025),10,product-series,no-network-category,该系统驱动列表没有网络类目或列表过短,https://www.asus.com/laptops/for-gaming/tuf-gaming/asus-tuf-gaming-a16-2025/
-ASUS,laptop,TUF-Gaming,ASUS TUF Gaming A16 (2025),11,product-series,no-network-category,该系统驱动列表没有网络类目或列表过短,https://www.asus.com/laptops/for-gaming/tuf-gaming/asus-tuf-gaming-a16-2025/
-Dell,laptop,Alienware,Alienware 15 DA15260,10,oem-manual-module,consumer-api-403,消费级 Alienware 不在驱动包目录；Dell 支持页 API 被拦,https://www.dell.com/support/manuals/en-my/alienware-da15260-gaming-laptop/alienware_15_da15260_setup_and_specifications/wireless-module?guid=guid-d76a0516-a057-4bd5-87ce-a5b755fed541&lang=en-us
-Dell,laptop,Alienware,Alienware 15 DA15260,11,oem-manual-module,consumer-api-403,消费级 Alienware 不在驱动包目录；Dell 支持页 API 被拦,https://www.dell.com/support/manuals/en-my/alienware-da15260-gaming-laptop/alienware_15_da15260_setup_and_specifications/wireless-module?guid=guid-d76a0516-a057-4bd5-87ce-a5b755fed541&lang=en-us
-Dell,laptop,Alienware,Alienware 16 Area-51 AA16250,10,oem-manual-module,consumer-api-403,消费级 Alienware 不在驱动包目录；Dell 支持页 API 被拦,https://www.dell.com/support/manuals/en-us/alienware-area-51-aa16250-gaming-laptop/alienware-16-area-51-aa16250-owners-manual/wireless-module?guid=guid-c724a1c8-6e1b-4240-8b99-bbd371deee98&lang=en-us
-Dell,laptop,Alienware,Alienware 16 Area-51 AA16250,11,oem-manual-module,consumer-api-403,消费级 Alienware 不在驱动包目录；Dell 支持页 API 被拦,https://www.dell.com/support/manuals/en-us/alienware-area-51-aa16250-gaming-laptop/alienware-16-area-51-aa16250-owners-manual/wireless-module?guid=guid-c724a1c8-6e1b-4240-8b99-bbd371deee98&lang=en-us
-Dell,laptop,Alienware,Alienware 16 Aurora AC16250,10,oem-manual-module,consumer-api-403,消费级 Alienware 不在驱动包目录；Dell 支持页 API 被拦,https://www.dell.com/support/manuals/ja-jp/alienware-aurora-ac16250-gaming-laptop/alienware-16-aurora-ac16250-owners-manual/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9-%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB?guid=guid-9268df17-896f-4186-ad5c-ce736e3aab6d&lang=ja-jp
-Dell,laptop,Alienware,Alienware 16X Aurora AC16251,10,oem-manual-module,consumer-api-403,消费级 Alienware 不在驱动包目录；Dell 支持页 API 被拦,https://www.dell.com/support/manuals/da-dk/alienware-aurora-ac16251-gaming-laptop/alienware-16x-aurora-ac16251-owners-manual/Tr%C3%A5dl%C3%B8s-modul?guid=guid-9268df17-896f-4186-ad5c-ce736e3aab6d&lang=da-dk
-Dell,laptop,Alienware,Alienware 18 Area-51 AA18250,10,oem-manual-module,consumer-api-403,消费级 Alienware 不在驱动包目录；Dell 支持页 API 被拦,https://www.dell.com/support/manuals/en-ie/alienware-area-51-aa18250-gaming-laptop/alienware-18-area-51-aa18250-owners-manual/wireless-module?guid=guid-c724a1c8-6e1b-4240-8b99-bbd371deee98&lang=en-us
-Dell,laptop,Alienware,Alienware 18 Area-51 AA18250,11,oem-manual-module,consumer-api-403,消费级 Alienware 不在驱动包目录；Dell 支持页 API 被拦,https://www.dell.com/support/manuals/en-ie/alienware-area-51-aa18250-gaming-laptop/alienware-18-area-51-aa18250-owners-manual/wireless-module?guid=guid-c724a1c8-6e1b-4240-8b99-bbd371deee98&lang=en-us
-Lenovo,laptop,Legion,Legion 5 15IAX11,10,oem-psref-wlan-options,os-list-empty,产品页 OS 列表为空或驱动 API 403,https://psref.lenovo.com/syspool/Sys/PDF/Legion/Legion_5_15IAX11/Legion_5_15IAX11_Spec.pdf
-Lenovo,laptop,Legion,Legion 5 15IAX11,11,oem-psref-wlan-options,os-list-empty,产品页 OS 列表为空或驱动 API 403,https://psref.lenovo.com/syspool/Sys/PDF/Legion/Legion_5_15IAX11/Legion_5_15IAX11_Spec.pdf
-Lenovo,laptop,Legion,Legion Pro 5 16IRX10,11,oem-wlan-driver-families,os-list-empty,产品页 OS 列表为空或驱动 API 403,https://pcsupport.lenovo.com/fi/fi/product_security/ps500812
-Lenovo,laptop,Legion,Legion Pro 7 16ADR10H,10,oem-wlan-driver-families,os-list-empty,产品页 OS 列表为空或驱动 API 403,https://pcsupport.lenovo.com/fi/fi/product_security/ps500812
-Lenovo,laptop,Legion,Legion Pro 7 16ADR10H,11,oem-wlan-driver-families,os-list-empty,产品页 OS 列表为空或驱动 API 403,https://pcsupport.lenovo.com/fi/fi/product_security/ps500812
-Lenovo,laptop,Legion,Legion Pro 7 16AFR10H,10,oem-wlan-driver-families,os-list-empty,产品页 OS 列表为空或驱动 API 403,https://pcsupport.lenovo.com/fi/fi/product_security/ps500812
-Lenovo,laptop,Legion,Legion Pro 7 16AFR10H,11,oem-wlan-driver-families,os-list-empty,产品页 OS 列表为空或驱动 API 403,https://pcsupport.lenovo.com/fi/fi/product_security/ps500812
-ASUS,motherboard,AM4,PRIME B550M-K/CSM,11,oem-spec-wlan-not-listed,factory-vs-listing,手册/规格写非 Wi-Fi，下载页却列出 Wi-Fi 驱动,https://www.asus.com/motherboards-components/motherboards/prime/prime-b550m-k-csm/techspec/
-ASUS,motherboard,AM5,B850M AYW GAMING WIFI-CSM,10,onboard-chip-unknown,support-api-empty,支持接口返回空 OS 列表；芯片未知,https://www.asus.com/product-compare?LevelId=Motherboards-Components-Motherboards&ProductID=31128%2C28588
-ASUS,motherboard,AM5,B850M AYW GAMING WIFI-CSM,11,onboard-chip-unknown,support-api-empty,支持接口返回空 OS 列表；芯片未知,https://www.asus.com/product-compare?LevelId=Motherboards-Components-Motherboards&ProductID=31128%2C28588
-ASUS,motherboard,AM5,PRIME B840M-A,10,oem-spec-wlan-not-listed,factory-vs-listing,手册/规格写非 Wi-Fi，下载页却列出 Wi-Fi 驱动,https://www.asus.com/motherboards-components/motherboards/prime/prime-b840m-a/techspec/
-ASUS,motherboard,AM5,PRIME B840M-A,11,oem-spec-wlan-not-listed,factory-vs-listing,手册/规格写非 Wi-Fi，下载页却列出 Wi-Fi 驱动,https://www.asus.com/motherboards-components/motherboards/prime/prime-b840m-a/techspec/
-ASUS,motherboard,AM5,PRIME B840M-A-CSM,10,oem-spec-wlan-not-listed,factory-vs-listing,手册/规格写非 Wi-Fi，下载页却列出 Wi-Fi 驱动,https://www.asus.com/motherboards-components/motherboards/csm/prime-b840m-a-csm/techspec/
-ASUS,motherboard,AM5,PRIME B840M-A-CSM,11,oem-spec-wlan-not-listed,factory-vs-listing,手册/规格写非 Wi-Fi，下载页却列出 Wi-Fi 驱动,https://www.asus.com/motherboards-components/motherboards/csm/prime-b840m-a-csm/techspec/
-ASUS,motherboard,AM5,PRIME B850-PLUS,10,oem-spec-wlan-not-listed,factory-vs-listing,手册/规格写非 Wi-Fi，下载页却列出 Wi-Fi 驱动,https://www.asus.com/motherboards-components/motherboards/prime/prime-b850-plus/techspec/
-ASUS,motherboard,AM5,PRIME B850-PLUS,11,oem-spec-wlan-not-listed,factory-vs-listing,手册/规格写非 Wi-Fi，下载页却列出 Wi-Fi 驱动,https://www.asus.com/motherboards-components/motherboards/prime/prime-b850-plus/techspec/
-ASUS,motherboard,AM5,PRIME B850-PLUS-CSM,10,oem-spec-wlan-not-listed,factory-vs-listing,手册/规格写非 Wi-Fi，下载页却列出 Wi-Fi 驱动,https://www.asus.com/motherboards-components/motherboards/csm/prime-b850-plus-csm/techspec/
-ASUS,motherboard,AM5,PRIME B850-PLUS-CSM,11,oem-spec-wlan-not-listed,factory-vs-listing,手册/规格写非 Wi-Fi，下载页却列出 Wi-Fi 驱动,https://www.asus.com/motherboards-components/motherboards/csm/prime-b850-plus-csm/techspec/
-ASUS,motherboard,AM5,Pro WS 665-ACE,10,catalog-model,no-factory-proof,下载列表未列或不可用，缺出厂无线证据,https://www.asus.com/motherboards-components/motherboards/workstation/pro-ws-665-ace/
-ASUS,motherboard,AM5,Pro WS 665-ACE,11,catalog-model,no-factory-proof,下载列表未列或不可用，缺出厂无线证据,https://www.asus.com/motherboards-components/motherboards/workstation/pro-ws-665-ace/
-ASUS,motherboard,AM5,TUF GAMING A620AM-PLUS,10,oem-spec-wlan-not-listed,factory-vs-listing,手册/规格写非 Wi-Fi，下载页却列出 Wi-Fi 驱动,https://www.asus.com/motherboards-components/motherboards/tuf-gaming/tuf-gaming-a620am-plus/techspec/
-ASUS,motherboard,AM5,TUF GAMING A620AM-PLUS,11,oem-spec-wlan-not-listed,factory-vs-listing,手册/规格写非 Wi-Fi，下载页却列出 Wi-Fi 驱动,https://www.asus.com/motherboards-components/motherboards/tuf-gaming/tuf-gaming-a620am-plus/techspec/
-ASUS,motherboard,AM5,TUF GAMING B850M-PLUS,10,oem-spec-wlan-not-listed,factory-vs-listing,手册/规格写非 Wi-Fi，下载页却列出 Wi-Fi 驱动,https://www.asus.com/motherboards-components/motherboards/tuf-gaming/tuf-gaming-b850m-plus/techspec/
-ASUS,motherboard,AM5,TUF GAMING B850M-PLUS,11,oem-spec-wlan-not-listed,factory-vs-listing,手册/规格写非 Wi-Fi，下载页却列出 Wi-Fi 驱动,https://www.asus.com/motherboards-components/motherboards/tuf-gaming/tuf-gaming-b850m-plus/techspec/
-ASUS,motherboard,LGA1700,PRIME H610M-F D4 R3.0,10,oem-spec-wlan-not-listed,factory-vs-listing,手册/规格写非 Wi-Fi，下载页却列出 Wi-Fi 驱动,https://www.asus.com/motherboards-components/motherboards/prime/prime-h610m-f-d4-r3-0/techspec/
-ASUS,motherboard,LGA1700,PRIME H610M-F D4 R3.0,11,oem-spec-wlan-not-listed,factory-vs-listing,手册/规格写非 Wi-Fi，下载页却列出 Wi-Fi 驱动,https://www.asus.com/motherboards-components/motherboards/prime/prime-h610m-f-d4-r3-0/techspec/
-ASUS,motherboard,LGA1851,TUF GAMING B860M-PLUS,11,oem-spec-wlan-not-listed,factory-vs-listing,手册/规格写非 Wi-Fi，下载页却列出 Wi-Fi 驱动,https://www.asus.com/motherboards-components/motherboards/tuf-gaming/tuf-gaming-b860m-plus/techspec/
-GIGABYTE,motherboard,AM4,A520I AC (Rev. 1.5),10,oem-spec-module,api-403,Akamai 拦截支持页下载 API；手册只给模块，缺逐系统驱动列表,https://www.gigabyte.com/eu/Motherboard/A520I-AC-rev-15/sp
-GIGABYTE,motherboard,AM4,A520I AC (Rev. 1.5),11,oem-spec-module,api-403,Akamai 拦截支持页下载 API；手册只给模块，缺逐系统驱动列表,https://www.gigabyte.com/eu/Motherboard/A520I-AC-rev-15/sp
-GIGABYTE,motherboard,LGA1851,B860 DS3H WIFI6E (Rev. 1.1),10,catalog-model,api-403,Akamai 拦截支持页下载 API；手册只给模块，缺逐系统驱动列表,https://download.gigabyte.com/FileList/Manual/mb_manual_b860-ds3h_1003_e.pdf
-GIGABYTE,motherboard,LGA1851,B860 DS3H WIFI6E (Rev. 1.1),11,catalog-model,api-403,Akamai 拦截支持页下载 API；手册只给模块，缺逐系统驱动列表,https://download.gigabyte.com/FileList/Manual/mb_manual_b860-ds3h_1003_e.pdf
-GIGABYTE,motherboard,LGA1851,B860 DS3H WIFI6E rev. 1.1,10,oem-manual-module,api-403,Akamai 拦截支持页下载 API；手册只给模块，缺逐系统驱动列表,https://download.gigabyte.com/FileList/Manual/mb_manual_b860-ds3h_1003_e.pdf?v=2c8698e390dfa83f5b63237a0b47886d
-GIGABYTE,motherboard,LGA1851,B860 DS3H WIFI6E rev. 1.1,11,oem-manual-module,api-403,Akamai 拦截支持页下载 API；手册只给模块，缺逐系统驱动列表,https://download.gigabyte.com/FileList/Manual/mb_manual_b860-ds3h_1003_e.pdf?v=2c8698e390dfa83f5b63237a0b47886d
-GIGABYTE,motherboard,LGA1851,B860M A PRO WIFI7,10,catalog-model,api-403,Akamai 拦截支持页下载 API；手册只给模块，缺逐系统驱动列表,https://download.gigabyte.com/FileList/Manual/mb_manual_b860m-a-pro-wf7_1001_e.pdf
-GIGABYTE,motherboard,LGA1851,B860M A PRO WIFI7,11,catalog-model,api-403,Akamai 拦截支持页下载 API；手册只给模块，缺逐系统驱动列表,https://download.gigabyte.com/FileList/Manual/mb_manual_b860m-a-pro-wf7_1001_e.pdf
-GIGABYTE,motherboard,LGA1851,B860M A PRO WIFI7 rev. 1.0,10,oem-manual-module,api-403,Akamai 拦截支持页下载 API；手册只给模块，缺逐系统驱动列表,https://download.gigabyte.com/FileList/Manual/mb_manual_b860m-a-pro-wf7_1001_e.pdf?v=b2e0b7ea2e560af25d9702b6359f6e54
-GIGABYTE,motherboard,LGA1851,B860M A PRO WIFI7 rev. 1.0,11,oem-manual-module,api-403,Akamai 拦截支持页下载 API；手册只给模块，缺逐系统驱动列表,https://download.gigabyte.com/FileList/Manual/mb_manual_b860m-a-pro-wf7_1001_e.pdf?v=b2e0b7ea2e560af25d9702b6359f6e54
-GIGABYTE,motherboard,LGA1851,B860M A PRO WIFI7 rev. 1.1,10,oem-manual-module,api-403,Akamai 拦截支持页下载 API；手册只给模块，缺逐系统驱动列表,https://download.gigabyte.com/FileList/Manual/mb_manual_b860m-a-pro-wf7_1001_e.pdf?v=b2e0b7ea2e560af25d9702b6359f6e54
-GIGABYTE,motherboard,LGA1851,B860M A PRO WIFI7 rev. 1.1,11,oem-manual-module,api-403,Akamai 拦截支持页下载 API；手册只给模块，缺逐系统驱动列表,https://download.gigabyte.com/FileList/Manual/mb_manual_b860m-a-pro-wf7_1001_e.pdf?v=b2e0b7ea2e560af25d9702b6359f6e54
-GIGABYTE,motherboard,LGA1851,Z890 AI TOP,10,oem-spec-module,api-403,Akamai 拦截支持页下载 API；手册只给模块，缺逐系统驱动列表,https://www.gigabyte.com/uk/Motherboard/Z890-AI-TOP/sp
-GIGABYTE,motherboard,LGA1851,Z890 EAGLE WIFI7 PLUS,10,oem-spec-module,api-403,Akamai 拦截支持页下载 API；手册只给模块，缺逐系统驱动列表,https://www.gigabyte.com/Motherboard/Z890-EAGLE-WIFI7-PLUS/sp
-MSI,motherboard,AM4,A320M-A PRO MAX,11,oem-spec-wlan-not-listed,factory-vs-listing,规格页无 WLAN，但驱动面板列出通用 Intel/AMD Wi-Fi 驱动,https://storage-asset.msi.com/datasheet/mb/global/A320M-A-PRO-MAX.pdf
-MSI,motherboard,AM4,A520M PRO-C DASH,10,oem-spec-wlan-not-listed,factory-vs-listing,规格页无 WLAN，但驱动面板列出通用 Intel/AMD Wi-Fi 驱动,https://storage-asset.msi.com/datasheet/mb/global/A520M-PRO-C-DASH.pdf
-MSI,motherboard,AM4,A520M PRO-C DASH,11,oem-spec-wlan-not-listed,factory-vs-listing,规格页无 WLAN，但驱动面板列出通用 Intel/AMD Wi-Fi 驱动,https://storage-asset.msi.com/datasheet/mb/global/A520M-PRO-C-DASH.pdf
-MSI,motherboard,AM4,B550M GAMING PLUS WIFI6E (Rev 1),10,catalog-model,factory-vs-listing,规格页无 WLAN，但驱动面板列出通用 Intel/AMD Wi-Fi 驱动,https://www.msi.com/support/motherboard/cpu-support
-MSI,motherboard,AM4,B550M GAMING PLUS WIFI6E (Rev 1),11,catalog-model,factory-vs-listing,规格页无 WLAN，但驱动面板列出通用 Intel/AMD Wi-Fi 驱动,https://www.msi.com/support/motherboard/cpu-support
-MSI,motherboard,AM4,MEG X570 GODLIKE,10,oem-spec-wlan-listed,factory-vs-listing,规格页无 WLAN，但驱动面板列出通用 Intel/AMD Wi-Fi 驱动,https://storage-asset.msi.com/datasheet/mb/global/MEG-X570-GODLIKE.pdf
-MSI,motherboard,AM4,MEG X570 GODLIKE,11,oem-spec-wlan-listed,factory-vs-listing,规格页无 WLAN，但驱动面板列出通用 Intel/AMD Wi-Fi 驱动,https://storage-asset.msi.com/datasheet/mb/global/MEG-X570-GODLIKE.pdf
-MSI,motherboard,AM4,MEG X570S UNIFY-X MAX,10,oem-spec-wlan-not-listed,factory-vs-listing,规格页无 WLAN，但驱动面板列出通用 Intel/AMD Wi-Fi 驱动,https://storage-asset.msi.com/datasheet/mb/global/MEG-X570S-UNIFY-X-MAX.pdf
-MSI,motherboard,AM5,MAG B650M MORTAR,10,oem-spec-wlan-not-listed,factory-vs-listing,规格页无 WLAN，但驱动面板列出通用 Intel/AMD Wi-Fi 驱动,https://storage-asset.msi.com/datasheet/mb/global/MAG-B650M-MORTAR.pdf
-MSI,motherboard,AM5,MAG B650M MORTAR,11,oem-spec-wlan-not-listed,factory-vs-listing,规格页无 WLAN，但驱动面板列出通用 Intel/AMD Wi-Fi 驱动,https://storage-asset.msi.com/datasheet/mb/global/MAG-B650M-MORTAR.pdf
-MSI,motherboard,AM5,PRO B650M-X,10,oem-spec-wlan-not-listed,factory-vs-listing,规格页无 WLAN，但驱动面板列出通用 Intel/AMD Wi-Fi 驱动,https://storage-asset.msi.com/datasheet/mb/global/PRO-B650M-X.pdf
-MSI,motherboard,AM5,PRO B650M-X,11,oem-spec-wlan-not-listed,factory-vs-listing,规格页无 WLAN，但驱动面板列出通用 Intel/AMD Wi-Fi 驱动,https://storage-asset.msi.com/datasheet/mb/global/PRO-B650M-X.pdf
-MSI,motherboard,LGA1700,PRO B760-VC,10,oem-spec-wlan-not-listed,factory-vs-listing,规格页无 WLAN，但驱动面板列出通用 Intel/AMD Wi-Fi 驱动,https://storage-asset.msi.com/datasheet/mb/global/PRO-B760-VC.pdf
-MSI,motherboard,LGA1700,PRO B760-VC,11,oem-spec-wlan-not-listed,factory-vs-listing,规格页无 WLAN，但驱动面板列出通用 Intel/AMD Wi-Fi 驱动,https://storage-asset.msi.com/datasheet/mb/global/PRO-B760-VC.pdf
-MSI,motherboard,LGA1700,PRO H610M-S DDR4,10,oem-spec-wlan-not-listed,factory-vs-listing,规格页无 WLAN，但驱动面板列出通用 Intel/AMD Wi-Fi 驱动,https://storage-asset.msi.com/datasheet/mb/global/PRO-H610M-S-DDR4.pdf
-MSI,motherboard,LGA1700,PRO H610M-S DDR4,11,oem-spec-wlan-not-listed,factory-vs-listing,规格页无 WLAN，但驱动面板列出通用 Intel/AMD Wi-Fi 驱动,https://storage-asset.msi.com/datasheet/mb/global/PRO-H610M-S-DDR4.pdf
-MSI,motherboard,LGA1700,PRO H610M-S DDR4 II,10,oem-spec-wlan-not-listed,factory-vs-listing,规格页无 WLAN，但驱动面板列出通用 Intel/AMD Wi-Fi 驱动,https://storage-asset.msi.com/datasheet/mb/global/PRO-H610M-S-DDR4-II.pdf
-MSI,motherboard,LGA1700,PRO H610M-S DDR4 II,11,oem-spec-wlan-not-listed,factory-vs-listing,规格页无 WLAN，但驱动面板列出通用 Intel/AMD Wi-Fi 驱动,https://storage-asset.msi.com/datasheet/mb/global/PRO-H610M-S-DDR4-II.pdf
-MSI,motherboard,LGA1700,PRO H610M-S WIFI DDR4 II,10,oem-spec-wlan-listed,factory-vs-listing,规格页无 WLAN，但驱动面板列出通用 Intel/AMD Wi-Fi 驱动,https://storage-asset.msi.com/datasheet/mb/global/PRO-H610M-S-WIFI-DDR4-II.pdf
-MSI,motherboard,LGA1700,PRO H610M-S WIFI DDR4 II,11,oem-spec-wlan-listed,factory-vs-listing,规格页无 WLAN，但驱动面板列出通用 Intel/AMD Wi-Fi 驱动,https://storage-asset.msi.com/datasheet/mb/global/PRO-H610M-S-WIFI-DDR4-II.pdf
-MSI,motherboard,LGA1700,PRO Z790-P,10,oem-spec-wlan-not-listed,factory-vs-listing,规格页无 WLAN，但驱动面板列出通用 Intel/AMD Wi-Fi 驱动,https://storage-asset.msi.com/datasheet/mb/global/PRO-Z790-P.pdf
-MSI,motherboard,LGA1700,PRO Z790-P,11,oem-spec-wlan-not-listed,factory-vs-listing,规格页无 WLAN，但驱动面板列出通用 Intel/AMD Wi-Fi 驱动,https://storage-asset.msi.com/datasheet/mb/global/PRO-Z790-P.pdf
-MSI,motherboard,LGA1851,MAG B860M MORTAR,10,oem-spec-wlan-not-listed,factory-vs-listing,规格页无 WLAN，但驱动面板列出通用 Intel/AMD Wi-Fi 驱动,https://storage-asset.msi.com/datasheet/mb/global/MAG-B860M-MORTAR.pdf
-MSI,motherboard,LGA1851,MAG B860M MORTAR,11,oem-spec-wlan-not-listed,factory-vs-listing,规格页无 WLAN，但驱动面板列出通用 Intel/AMD Wi-Fi 驱动,https://storage-asset.msi.com/datasheet/mb/global/MAG-B860M-MORTAR.pdf
-ASRock,motherboard,AM4,AB350M Pro4/DASH,11,oem-spec-wlan-not-listed,factory-vs-listing,下载列表与手册规格冲突（通用 Wi-Fi 驱动或仅 Key-E 槽位）,https://www.asrock.com/mb/AMD/AB350M%20Pro4DASH/index.asp#Download
-ASRock,motherboard,AM4,X300M-STX,10,oem-spec-wlan-not-listed,factory-vs-listing,下载列表与手册规格冲突（通用 Wi-Fi 驱动或仅 Key-E 槽位）,https://www.asrock.com/mb/AMD/X300M-STX/index.asp#Download
-ASRock,motherboard,AM4,X300M-STX,11,oem-spec-wlan-not-listed,factory-vs-listing,下载列表与手册规格冲突（通用 Wi-Fi 驱动或仅 Key-E 槽位）,https://www.asrock.com/mb/AMD/X300M-STX/index.asp#Download
-ASRock,motherboard,AM4,X300TM-ITX,10,oem-spec-wlan-not-listed,factory-vs-listing,下载列表与手册规格冲突（通用 Wi-Fi 驱动或仅 Key-E 槽位）,https://www.asrock.com/mb/AMD/X300TM-ITX/index.asp#Download
-ASRock,motherboard,AM4,X300TM-ITX,11,oem-spec-wlan-not-listed,factory-vs-listing,下载列表与手册规格冲突（通用 Wi-Fi 驱动或仅 Key-E 槽位）,https://www.asrock.com/mb/AMD/X300TM-ITX/index.asp#Download
-ASRock,motherboard,AM4,X370 Pro4,11,oem-spec-wlan-not-listed,factory-vs-listing,下载列表与手册规格冲突（通用 Wi-Fi 驱动或仅 Key-E 槽位）,https://www.asrock.com/mb/AMD/X370%20Pro4/index.asp#Download
-ASRock,motherboard,AM4,X470 Master SLI,10,oem-spec-wlan-not-listed,factory-vs-listing,下载列表与手册规格冲突（通用 Wi-Fi 驱动或仅 Key-E 槽位）,https://www.asrock.com/mb/AMD/X470%20Master%20SLI/index.asp#Download
-ASRock,motherboard,AM4,X470 Master SLI,11,oem-spec-wlan-not-listed,factory-vs-listing,下载列表与手册规格冲突（通用 Wi-Fi 驱动或仅 Key-E 槽位）,https://www.asrock.com/mb/AMD/X470%20Master%20SLI/index.asp#Download
-ASRock,motherboard,AM4,X470 Master SLI/ac,11,oem-spec-wlan-listed,factory-vs-listing,下载列表与手册规格冲突（通用 Wi-Fi 驱动或仅 Key-E 槽位）,https://www.asrock.com/mb/AMD/X470%20Master%20SLIac/index.asp#Download
-ASRock,motherboard,AM4,X570 Taichi Razer Edition,10,oem-model-catalog,factory-vs-listing,下载列表与手册规格冲突（通用 Wi-Fi 驱动或仅 Key-E 槽位）,https://www.asrock.com/mb/AMD/X570%20Taichi%20Razer%20Edition/index.asp#Download
-ASRock,motherboard,AM4,X570 Taichi Razer Edition,11,oem-model-catalog,factory-vs-listing,下载列表与手册规格冲突（通用 Wi-Fi 驱动或仅 Key-E 槽位）,https://www.asrock.com/mb/AMD/X570%20Taichi%20Razer%20Edition/index.asp#Download
-ASRock,motherboard,LGA1700,B660M PG Riptide,10,oem-spec-wlan-not-listed,factory-vs-listing,下载列表与手册规格冲突（通用 Wi-Fi 驱动或仅 Key-E 槽位）,https://www.asrock.com/mb/Intel/B660M%20PG%20Riptide/index.asp#Download
-ASRock,motherboard,LGA1700,B660M PG Riptide,11,oem-spec-wlan-not-listed,factory-vs-listing,下载列表与手册规格冲突（通用 Wi-Fi 驱动或仅 Key-E 槽位）,https://www.asrock.com/mb/Intel/B660M%20PG%20Riptide/index.asp#Download
-ASRock,motherboard,LGA1700,B760M PG Riptide,10,oem-spec-wlan-not-listed,factory-vs-listing,下载列表与手册规格冲突（通用 Wi-Fi 驱动或仅 Key-E 槽位）,https://www.asrock.com/mb/Intel/B760M%20PG%20Riptide/index.asp#Download
-ASRock,motherboard,LGA1700,B760M PG Riptide,11,oem-spec-wlan-not-listed,factory-vs-listing,下载列表与手册规格冲突（通用 Wi-Fi 驱动或仅 Key-E 槽位）,https://www.asrock.com/mb/Intel/B760M%20PG%20Riptide/index.asp#Download
-ASRock,motherboard,LGA1700,Z790 PG Riptide,10,oem-spec-wlan-not-listed,factory-vs-listing,下载列表与手册规格冲突（通用 Wi-Fi 驱动或仅 Key-E 槽位）,https://www.asrock.com/mb/Intel/Z790%20PG%20Riptide/index.asp#Download
-ASRock,motherboard,LGA1700,Z790 PG Riptide,11,oem-spec-wlan-not-listed,factory-vs-listing,下载列表与手册规格冲突（通用 Wi-Fi 驱动或仅 Key-E 槽位）,https://www.asrock.com/mb/Intel/Z790%20PG%20Riptide/index.asp#Download
-ASRock,motherboard,LGA1700,Z790 PG SONIC,10,oem-model-catalog,factory-vs-listing,下载列表与手册规格冲突（通用 Wi-Fi 驱动或仅 Key-E 槽位）,https://www.asrock.com/mb/Intel/Z790%20PG%20SONIC/index.asp#Download
-ASRock,motherboard,LGA1700,Z790 PG SONIC,11,oem-model-catalog,factory-vs-listing,下载列表与手册规格冲突（通用 Wi-Fi 驱动或仅 Key-E 槽位）,https://www.asrock.com/mb/Intel/Z790%20PG%20SONIC/index.asp#Download
-ASRock,motherboard,LGA1851,Z890 Taichi AQUA,10,oem-model-catalog,factory-vs-listing,下载列表与手册规格冲突（通用 Wi-Fi 驱动或仅 Key-E 槽位）,https://www.asrock.com/mb/Intel/Z890%20Taichi%20AQUA/index.asp#Download
-ASRock,motherboard,LGA1851,Z890 Taichi AQUA,11,oem-model-catalog,factory-vs-listing,下载列表与手册规格冲突（通用 Wi-Fi 驱动或仅 Key-E 槽位）,https://www.asrock.com/mb/Intel/Z890%20Taichi%20AQUA/index.asp#Download
-Acer,laptop,,Aspire 14/16 AI AMD,10,oem-series-catalog,mixed-family,系列跨代，族内 SKU 结论不一致或为短列表,https://www.acer.com/us-en/laptops/aspire
-Acer,laptop,,Aspire 14/16 AI AMD,11,oem-series-catalog,mixed-family,系列跨代，族内 SKU 结论不一致或为短列表,https://www.acer.com/us-en/laptops/aspire
-Acer,laptop,,Aspire 14/16 AI Intel,10,oem-series-catalog,mixed-family,系列跨代，族内 SKU 结论不一致或为短列表,https://www.acer.com/us-en/laptops/aspire
-Acer,laptop,,Aspire 14/16 AI Intel,11,oem-series-catalog,mixed-family,系列跨代，族内 SKU 结论不一致或为短列表,https://www.acer.com/us-en/laptops/aspire
-Acer,laptop,,Aspire 14/16 AI Snapdragon,10,oem-series-catalog,mixed-family,系列跨代，族内 SKU 结论不一致或为短列表,https://www.acer.com/us-en/laptops/aspire
-Acer,laptop,,Aspire 14/16 AI Snapdragon,11,oem-series-catalog,mixed-family,系列跨代，族内 SKU 结论不一致或为短列表,https://www.acer.com/us-en/laptops/aspire
-Acer,laptop,,Aspire AMD,10,oem-series-catalog,mixed-family,系列跨代，族内 SKU 结论不一致或为短列表,https://www.acer.com/us-en/laptops/aspire
-Acer,laptop,,Aspire AMD,11,oem-series-catalog,mixed-family,系列跨代，族内 SKU 结论不一致或为短列表,https://www.acer.com/us-en/laptops/aspire
-Acer,laptop,,Aspire Intel,10,oem-series-catalog,mixed-family,系列跨代，族内 SKU 结论不一致或为短列表,https://www.acer.com/us-en/laptops/aspire
-Acer,laptop,,Aspire Intel,11,oem-series-catalog,mixed-family,系列跨代，族内 SKU 结论不一致或为短列表,https://www.acer.com/us-en/laptops/aspire
-Acer,laptop,,PREDATOR TRITON 500 SE,10,oem-series-catalog,mixed-family,系列跨代，族内 SKU 结论不一致或为短列表,https://www.acer.com/us-en/predator/laptops/triton
-Acer,laptop,,PREDATOR TRITON 500 SE,11,oem-series-catalog,mixed-family,系列跨代，族内 SKU 结论不一致或为短列表,https://www.acer.com/us-en/predator/laptops/triton
-Acer,laptop,,Swift 14/16 AI Intel,11,oem-series-catalog,mixed-family,系列跨代，族内 SKU 结论不一致或为短列表,https://www.acer.com/us-en/laptops/swift
-Acer,laptop,,Swift Air 16,11,oem-series-catalog,mixed-family,系列跨代，族内 SKU 结论不一致或为短列表,https://www.acer.com/us-en/laptops/swift
-Acer,laptop,,Swift Air 16 (SFA16-I31 / SFA16-I31T),11,oem-series-catalog,mixed-family,系列跨代，族内 SKU 结论不一致或为短列表,https://www.acer.com/us-en/laptops/swift
-Acer,laptop,,Swift X 14,10,oem-series-catalog,mixed-family,系列跨代，族内 SKU 结论不一致或为短列表,https://www.acer.com/us-en/laptops/swift
-Acer,laptop,,Swift X 14 AI AMD,10,oem-series-catalog,mixed-family,系列跨代，族内 SKU 结论不一致或为短列表,https://www.acer.com/us-en/laptops/swift
-Acer,laptop,,TravelMate P2,10,oem-series-catalog,mixed-family,系列跨代，族内 SKU 结论不一致或为短列表,https://www.acer.com/us-en/laptops/travelmate
-Acer,laptop,,TravelMate P2,11,oem-series-catalog,mixed-family,系列跨代，族内 SKU 结论不一致或为短列表,https://www.acer.com/us-en/laptops/travelmate
-Acer,laptop,,TravelMate P2 14 AI AMD,10,oem-series-catalog,mixed-family,系列跨代，族内 SKU 结论不一致或为短列表,https://www.acer.com/us-en/laptops/travelmate
-Acer,laptop,,TravelMate P2 14 AI AMD,11,oem-series-catalog,mixed-family,系列跨代，族内 SKU 结论不一致或为短列表,https://www.acer.com/us-en/laptops/travelmate
-Acer,laptop,,TravelMate P2 14 AI Intel,10,oem-series-catalog,mixed-family,系列跨代，族内 SKU 结论不一致或为短列表,https://www.acer.com/us-en/laptops/travelmate
-Acer,laptop,,TravelMate P2 14 AI Intel,11,oem-series-catalog,mixed-family,系列跨代，族内 SKU 结论不一致或为短列表,https://www.acer.com/us-en/laptops/travelmate
-Acer,laptop,,TravelMate P2 14 Intel,10,oem-series-catalog,mixed-family,系列跨代，族内 SKU 结论不一致或为短列表,https://www.acer.com/us-en/laptops/travelmate
-Acer,laptop,,TravelMate P2 14 Intel,11,oem-series-catalog,mixed-family,系列跨代，族内 SKU 结论不一致或为短列表,https://www.acer.com/us-en/laptops/travelmate
-Acer,laptop,,TravelMate P2 15,10,oem-series-catalog,mixed-family,系列跨代，族内 SKU 结论不一致或为短列表,https://www.acer.com/us-en/laptops/travelmate
-Acer,laptop,,TravelMate P2 15,11,oem-series-catalog,mixed-family,系列跨代，族内 SKU 结论不一致或为短列表,https://www.acer.com/us-en/laptops/travelmate
-Acer,laptop,,TravelMate P2 16 AI AMD,10,oem-series-catalog,mixed-family,系列跨代，族内 SKU 结论不一致或为短列表,https://www.acer.com/us-en/laptops/travelmate
-Acer,laptop,,TravelMate P2 16 AI AMD,11,oem-series-catalog,mixed-family,系列跨代，族内 SKU 结论不一致或为短列表,https://www.acer.com/us-en/laptops/travelmate
-Acer,laptop,,TravelMate P4 13,10,oem-series-catalog,mixed-family,系列跨代，族内 SKU 结论不一致或为短列表,https://www.acer.com/us-en/laptops/travelmate
-Acer,laptop,,TravelMate P4 13,11,oem-series-catalog,mixed-family,系列跨代，族内 SKU 结论不一致或为短列表,https://www.acer.com/us-en/laptops/travelmate
-Acer,laptop,,TravelMate P4 14 AI Intel,10,oem-series-catalog,mixed-family,系列跨代，族内 SKU 结论不一致或为短列表,https://www.acer.com/us-en/laptops/travelmate
-Acer,laptop,,TravelMate P4 14 AMD,10,oem-series-catalog,mixed-family,系列跨代，族内 SKU 结论不一致或为短列表,https://www.acer.com/us-en/laptops/travelmate
-Acer,laptop,,TravelMate P4 14 Intel,10,oem-series-catalog,mixed-family,系列跨代，族内 SKU 结论不一致或为短列表,https://www.acer.com/us-en/laptops/travelmate
-Acer,laptop,,TravelMate P4 16,10,oem-series-catalog,mixed-family,系列跨代，族内 SKU 结论不一致或为短列表,https://www.acer.com/us-en/laptops/travelmate
-Acer,laptop,,TravelMate P4 Spin 14,10,oem-series-catalog,mixed-family,系列跨代，族内 SKU 结论不一致或为短列表,https://www.acer.com/us-en/laptops/travelmate
-Acer,laptop,,TravelMate P4 Spin 14 AI Intel,10,oem-series-catalog,mixed-family,系列跨代，族内 SKU 结论不一致或为短列表,https://www.acer.com/us-en/laptops/travelmate
-Acer,laptop,,TravelMate P6,10,oem-series-catalog,mixed-family,系列跨代，族内 SKU 结论不一致或为短列表,https://www.acer.com/us-en/laptops/travelmate
-Acer,laptop,,TravelMate P6,11,oem-series-catalog,mixed-family,系列跨代，族内 SKU 结论不一致或为短列表,https://www.acer.com/us-en/laptops/travelmate
-Acer,laptop,,TravelMate P6 14,10,oem-series-catalog,mixed-family,系列跨代，族内 SKU 结论不一致或为短列表,https://www.acer.com/us-en/laptops/travelmate
-Acer,laptop,,TravelMate P6 14,11,oem-series-catalog,mixed-family,系列跨代，族内 SKU 结论不一致或为短列表,https://www.acer.com/us-en/laptops/travelmate
-Acer,laptop,,TravelMate P6 14 AI,10,oem-series-catalog,mixed-family,系列跨代，族内 SKU 结论不一致或为短列表,https://www.acer.com/us-en/laptops/travelmate
-Acer,laptop,,TravelMate P6 14 AI,11,oem-series-catalog,mixed-family,系列跨代，族内 SKU 结论不一致或为短列表,https://www.acer.com/us-en/laptops/travelmate
-BIOSTAR,motherboard,AM5,B650M-SILVER,10,oem-model-catalog,site-403,官网对 curl/Python/Node 均 403；规格 PDF 与下载列表无法取回,https://www.biostar.com.tw/app/en/mb/index.php?Series=SILVER
-BIOSTAR,motherboard,AM5,B650M-SILVER,11,oem-model-catalog,site-403,官网对 curl/Python/Node 均 403；规格 PDF 与下载列表无法取回,https://www.biostar.com.tw/app/en/mb/index.php?Series=SILVER
-BIOSTAR,motherboard,AM5,X670E VALKYRIE,10,oem-model-catalog,site-403,官网对 curl/Python/Node 均 403；规格 PDF 与下载列表无法取回,https://www.biostar.com.tw/app/en/mb/index.php?Series=VALKYRIE
-BIOSTAR,motherboard,AM5,X670E VALKYRIE,11,oem-model-catalog,site-403,官网对 curl/Python/Node 均 403；规格 PDF 与下载列表无法取回,https://www.biostar.com.tw/app/en/mb/index.php?Series=VALKYRIE
-BIOSTAR,motherboard,LGA1700,B760A-SILVER,10,oem-model-catalog,site-403,官网对 curl/Python/Node 均 403；规格 PDF 与下载列表无法取回,https://www.biostar.com.tw/app/en/mb/index.php?Series=SILVER
-BIOSTAR,motherboard,LGA1700,B760A-SILVER,11,oem-model-catalog,site-403,官网对 curl/Python/Node 均 403；规格 PDF 与下载列表无法取回,https://www.biostar.com.tw/app/en/mb/index.php?Series=SILVER
-BIOSTAR,motherboard,LGA1700,B760M-SILVER,10,oem-model-catalog,site-403,官网对 curl/Python/Node 均 403；规格 PDF 与下载列表无法取回,https://www.biostar.com.tw/app/en/mb/mb_overview_new.php?S_ID=1095
-BIOSTAR,motherboard,LGA1700,B760M-SILVER,11,oem-model-catalog,site-403,官网对 curl/Python/Node 均 403；规格 PDF 与下载列表无法取回,https://www.biostar.com.tw/app/en/mb/mb_overview_new.php?S_ID=1095
-BIOSTAR,motherboard,LGA1700,B760T-SILVER,10,oem-model-catalog,site-403,官网对 curl/Python/Node 均 403；规格 PDF 与下载列表无法取回,https://www.biostar.com.tw/app/en/mb/index.php?Series=SILVER
-BIOSTAR,motherboard,LGA1700,B760T-SILVER,11,oem-model-catalog,site-403,官网对 curl/Python/Node 均 403；规格 PDF 与下载列表无法取回,https://www.biostar.com.tw/app/en/mb/index.php?Series=SILVER
-BIOSTAR,motherboard,LGA1700,Z790 VALKYRIE,10,oem-model-catalog,site-403,官网对 curl/Python/Node 均 403；规格 PDF 与下载列表无法取回,https://www.biostar.com.tw/app/en/mb/index.php?Series=VALKYRIE
-BIOSTAR,motherboard,LGA1700,Z790 VALKYRIE,11,oem-model-catalog,site-403,官网对 curl/Python/Node 均 403；规格 PDF 与下载列表无法取回,https://www.biostar.com.tw/app/en/mb/index.php?Series=VALKYRIE
-BIOSTAR,motherboard,LGA1700,Z790A-SILVER,10,oem-model-catalog,site-403,官网对 curl/Python/Node 均 403；规格 PDF 与下载列表无法取回,https://www.biostar.com.tw/app/en/mb/index.php?Series=SILVER
-BIOSTAR,motherboard,LGA1700,Z790A-SILVER,11,oem-model-catalog,site-403,官网对 curl/Python/Node 均 403；规格 PDF 与下载列表无法取回,https://www.biostar.com.tw/app/en/mb/index.php?Series=SILVER
-BIOSTAR,motherboard,LGA1851,B860M-SILVER,10,oem-model-catalog,site-403,官网对 curl/Python/Node 均 403；规格 PDF 与下载列表无法取回,https://www.biostar.com.tw/app/ru/mb/export/spec_export.php?S_ID=1165
-BIOSTAR,motherboard,LGA1851,B860M-SILVER,11,oem-model-catalog,site-403,官网对 curl/Python/Node 均 403；规格 PDF 与下载列表无法取回,https://www.biostar.com.tw/app/ru/mb/export/spec_export.php?S_ID=1165
-BIOSTAR,motherboard,LGA1851,Z890 VALKYRIE,10,oem-model-catalog,site-403,官网对 curl/Python/Node 均 403；规格 PDF 与下载列表无法取回,https://www.biostar.com.tw/app/en/mb/index.php?Series=VALKYRIE
-BIOSTAR,motherboard,LGA1851,Z890 VALKYRIE,11,oem-model-catalog,site-403,官网对 curl/Python/Node 均 403；规格 PDF 与下载列表无法取回,https://www.biostar.com.tw/app/en/mb/index.php?Series=VALKYRIE
-BIOSTAR,motherboard,LGA1851,Z890A-SILVER,10,oem-model-catalog,site-403,官网对 curl/Python/Node 均 403；规格 PDF 与下载列表无法取回,https://www.biostar.com.tw/app/es/mb/export/spec_export.php?S_ID=1167
-BIOSTAR,motherboard,LGA1851,Z890A-SILVER,11,oem-model-catalog,site-403,官网对 curl/Python/Node 均 403；规格 PDF 与下载列表无法取回,https://www.biostar.com.tw/app/es/mb/export/spec_export.php?S_ID=1167
-EVGA,motherboard,LGA1700,Z790 CLASSIFIED,10,oem-manual-module,no-per-model-list,驱动下载页是 ASP.NET 壳，没有逐型号驱动列表,https://www.evga.com/support/manuals/files/121-RL-E798-KR.pdf
-EVGA,motherboard,LGA1700,Z790 CLASSIFIED,11,oem-manual-module,no-per-model-list,驱动下载页是 ASP.NET 壳，没有逐型号驱动列表,https://www.evga.com/support/manuals/files/121-RL-E798-KR.pdf
-EVGA,motherboard,LGA1700,Z790 DARK K|NGP|N,10,oem-model-catalog,no-per-model-list,驱动下载页是 ASP.NET 壳，没有逐型号驱动列表,https://www.evga.com/products/pdf/121-RL-E799-KR.pdf
-EVGA,motherboard,LGA1700,Z790 DARK K|NGP|N,11,oem-model-catalog,no-per-model-list,驱动下载页是 ASP.NET 壳，没有逐型号驱动列表,https://www.evga.com/products/pdf/121-RL-E799-KR.pdf
-Acer,laptop,,Aspire A114-61,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号无驱动记录（US/TW 均 0 命中）,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
-Acer,laptop,,Aspire A114-61L,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号无驱动记录（US/TW 均 0 命中）,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
-Acer,laptop,,Aspire A314-22S,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号无驱动记录（US/TW 均 0 命中）,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
-Acer,laptop,,Aspire A315-23S,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号无驱动记录（US/TW 均 0 命中）,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
-Acer,laptop,,Aspire A315-35S,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号无驱动记录（US/TW 均 0 命中）,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
-Acer,laptop,,Aspire A514-54S,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号无驱动记录（US/TW 均 0 命中）,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
-Acer,laptop,,Aspire A515-41G,10,oem-spec-wireless,mixed-family,系列跨代，族内 SKU 结论不一致或为短列表,https://www.acer.com/us-en/support/product-support/Aspire_A515-41G/
-Acer,laptop,,Aspire A515-41G,11,oem-spec-wireless,mixed-family,系列跨代，族内 SKU 结论不一致或为短列表,https://www.acer.com/us-en/support/product-support/Aspire_A515-41G/
-Acer,laptop,,Aspire A515-44S,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号无驱动记录（US/TW 均 0 命中）,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
-Acer,laptop,,Aspire A515-45S,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号无驱动记录（US/TW 均 0 命中）,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
-Acer,laptop,,Aspire A515-56S,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号无驱动记录（US/TW 均 0 命中）,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
-Acer,laptop,,ConceptD CN516-72,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号无驱动记录（US/TW 均 0 命中）,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
-Acer,laptop,,Nitro AN514-54,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号无驱动记录（US/TW 均 0 命中）,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
-Acer,laptop,,Spin SP513-55NA,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号无驱动记录（US/TW 均 0 命中）,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
-Acer,laptop,,Spin SP714-61NA,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号无驱动记录（US/TW 均 0 命中）,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
-Acer,laptop,,Swift SF314-44G,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号无驱动记录（US/TW 均 0 命中）,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
-Acer,laptop,,Swift SF314-510,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号无驱动记录（US/TW 均 0 命中）,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
-Acer,laptop,,TravelMate P40-41-G2,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号无驱动记录（US/TW 均 0 命中）,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
-Acer,laptop,,TravelMate P40-41-G3,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号无驱动记录（US/TW 均 0 命中）,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
-Acer,laptop,,TravelMate P50-41,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号无驱动记录（US/TW 均 0 命中）,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
-Acer,laptop,,TravelMate P50-41-G3,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号无驱动记录（US/TW 均 0 命中）,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
-Acer,laptop,,TravelMate Spin 311R-31,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号无驱动记录（US/TW 均 0 命中）,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
-Acer,laptop,,TravelMate Spin 311RN-31,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号无驱动记录（US/TW 均 0 命中）,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
-Acer,laptop,,TravelMate Spin B311RA-32,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号无驱动记录（US/TW 均 0 命中）,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
-Acer,laptop,,TravelMate X40-52-M,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号无驱动记录（US/TW 均 0 命中）,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
-Acer,laptop,,TravelMate X40-52-MG,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号无驱动记录（US/TW 均 0 命中）,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
-ASUS,laptop,,ASUS TUF Gaming A16 (2025) FA608PPI,10,oem-driver-list,no-network-category,该系统驱动列表没有网络类目或列表过短,https://www.asus.com/supportonly/fa608ppi/helpdesk_download/
-ASUS,laptop,,ASUS TUF Gaming A16 (2025) FA608PPI,11,oem-driver-list,no-network-category,该系统驱动列表没有网络类目或列表过短,https://www.asus.com/supportonly/fa608ppi/helpdesk_download/
-ASUS,laptop,,ASUS TUF Gaming A16 (2025) FA608PMI,10,oem-driver-list,no-network-category,该系统驱动列表没有网络类目或列表过短,https://www.asus.com/supportonly/fa608pmi/helpdesk_download/
-ASUS,laptop,,ASUS TUF Gaming A16 (2025) FA608PMI,11,oem-driver-list,no-network-category,该系统驱动列表没有网络类目或列表过短,https://www.asus.com/supportonly/fa608pmi/helpdesk_download/
-ASUS,laptop,,ROG Strix G15 G513IR,11,oem-driver-list,no-network-category,该系统驱动列表没有网络类目或列表过短,https://www.asus.com/supportonly/g513ir/helpdesk_download/
-ASUS,laptop,,ROG Strix G17 G713IR,11,oem-driver-list,no-network-category,该系统驱动列表没有网络类目或列表过短,https://www.asus.com/supportonly/g713ir/helpdesk_download/
-ASUS,laptop,,ROG Strix SCAR 17 G733QSA,11,oem-driver-list,no-network-category,该系统驱动列表没有网络类目或列表过短,https://www.asus.com/supportonly/g733qsa/helpdesk_download/
+ASUS,laptop,ROG-Republic-of-Gamers,ROG Flow Z13-KJP,10,product-series,no-network-category,驱动列表无网络类目或过短,https://rog.asus.com/laptops/rog-flow/ROG-Flow-Z13-KJP/
+ASUS,laptop,ROG-Republic-of-Gamers,ROG Flow Z13-KJP,11,product-series,no-network-category,驱动列表无网络类目或过短,https://rog.asus.com/laptops/rog-flow/ROG-Flow-Z13-KJP/
+ASUS,laptop,ROG-Republic-of-Gamers,ROG Strix G15,10,product-series,no-network-category,驱动列表无网络类目或过短,https://rog.asus.com/laptops/rog-strix/2021-rog-strix-g15-series/
+ASUS,laptop,ROG-Republic-of-Gamers,ROG Strix G15,11,product-series,no-network-category,驱动列表无网络类目或过短,https://rog.asus.com/laptops/rog-strix/2021-rog-strix-g15-series/
+ASUS,laptop,ROG-Republic-of-Gamers,ROG Strix G17,11,product-series,no-network-category,驱动列表无网络类目或过短,https://rog.asus.com/laptops/rog-strix/2021-rog-strix-g17-series/
+ASUS,laptop,ROG-Republic-of-Gamers,ROG Strix SCAR 17,11,product-series,no-network-category,驱动列表无网络类目或过短,https://rog.asus.com/laptops/rog-strix/2021-rog-strix-scar-17-series/
+ASUS,laptop,ROG-Republic-of-Gamers,ROG Zephyrus G14 (2026) GA403,10,product-series,no-network-category,驱动列表无网络类目或过短,https://rog.asus.com/laptops/rog-zephyrus/rog-zephyrus-g14-2026-ga403/
+ASUS,laptop,ROG-Republic-of-Gamers,ROG Zephyrus G14 (2026) GA403,11,product-series,no-network-category,驱动列表无网络类目或过短,https://rog.asus.com/laptops/rog-zephyrus/rog-zephyrus-g14-2026-ga403/
+ASUS,laptop,ROG-Republic-of-Gamers,ROG Zephyrus G14 AW SE,10,product-series,no-network-category,驱动列表无网络类目或过短,https://rog.asus.com/laptops/rog-zephyrus/2021-rog-zephyrus-g14-aw-se-series/
+ASUS,laptop,ROG-Republic-of-Gamers,ROG Zephyrus G14 AW SE,11,product-series,no-network-category,驱动列表无网络类目或过短,https://rog.asus.com/laptops/rog-zephyrus/2021-rog-zephyrus-g14-aw-se-series/
+ASUS,laptop,TUF-Gaming,ASUS TUF Gaming A16 (2025),10,product-series,no-network-category,驱动列表无网络类目或过短,https://www.asus.com/laptops/for-gaming/tuf-gaming/asus-tuf-gaming-a16-2025/
+ASUS,laptop,TUF-Gaming,ASUS TUF Gaming A16 (2025),11,product-series,no-network-category,驱动列表无网络类目或过短,https://www.asus.com/laptops/for-gaming/tuf-gaming/asus-tuf-gaming-a16-2025/
+Dell,laptop,Alienware,Alienware 15 DA15260,10,oem-manual-module,consumer-api-403,Alienware 无驱动包目录条目，支持页驱动为 XHR,https://www.dell.com/support/manuals/en-my/alienware-da15260-gaming-laptop/alienware_15_da15260_setup_and_specifications/wireless-module?guid=guid-d76a0516-a057-4bd5-87ce-a5b755fed541&lang=en-us
+Dell,laptop,Alienware,Alienware 15 DA15260,11,oem-manual-module,consumer-api-403,Alienware 无驱动包目录条目，支持页驱动为 XHR,https://www.dell.com/support/manuals/en-my/alienware-da15260-gaming-laptop/alienware_15_da15260_setup_and_specifications/wireless-module?guid=guid-d76a0516-a057-4bd5-87ce-a5b755fed541&lang=en-us
+Dell,laptop,Alienware,Alienware 16 Area-51 AA16250,10,oem-manual-module,consumer-api-403,Alienware 无驱动包目录条目，支持页驱动为 XHR,https://www.dell.com/support/manuals/en-us/alienware-area-51-aa16250-gaming-laptop/alienware-16-area-51-aa16250-owners-manual/wireless-module?guid=guid-c724a1c8-6e1b-4240-8b99-bbd371deee98&lang=en-us
+Dell,laptop,Alienware,Alienware 16 Area-51 AA16250,11,oem-manual-module,consumer-api-403,Alienware 无驱动包目录条目，支持页驱动为 XHR,https://www.dell.com/support/manuals/en-us/alienware-area-51-aa16250-gaming-laptop/alienware-16-area-51-aa16250-owners-manual/wireless-module?guid=guid-c724a1c8-6e1b-4240-8b99-bbd371deee98&lang=en-us
+Dell,laptop,Alienware,Alienware 16 Aurora AC16250,10,oem-manual-module,consumer-api-403,Alienware 无驱动包目录条目，支持页驱动为 XHR,https://www.dell.com/support/manuals/ja-jp/alienware-aurora-ac16250-gaming-laptop/alienware-16-aurora-ac16250-owners-manual/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9-%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB?guid=guid-9268df17-896f-4186-ad5c-ce736e3aab6d&lang=ja-jp
+Dell,laptop,Alienware,Alienware 16X Aurora AC16251,10,oem-manual-module,consumer-api-403,Alienware 无驱动包目录条目，支持页驱动为 XHR,https://www.dell.com/support/manuals/da-dk/alienware-aurora-ac16251-gaming-laptop/alienware-16x-aurora-ac16251-owners-manual/Tr%C3%A5dl%C3%B8s-modul?guid=guid-9268df17-896f-4186-ad5c-ce736e3aab6d&lang=da-dk
+Dell,laptop,Alienware,Alienware 18 Area-51 AA18250,10,oem-manual-module,consumer-api-403,Alienware 无驱动包目录条目，支持页驱动为 XHR,https://www.dell.com/support/manuals/en-ie/alienware-area-51-aa18250-gaming-laptop/alienware-18-area-51-aa18250-owners-manual/wireless-module?guid=guid-c724a1c8-6e1b-4240-8b99-bbd371deee98&lang=en-us
+Dell,laptop,Alienware,Alienware 18 Area-51 AA18250,11,oem-manual-module,consumer-api-403,Alienware 无驱动包目录条目，支持页驱动为 XHR,https://www.dell.com/support/manuals/en-ie/alienware-area-51-aa18250-gaming-laptop/alienware-18-area-51-aa18250-owners-manual/wireless-module?guid=guid-c724a1c8-6e1b-4240-8b99-bbd371deee98&lang=en-us
+Lenovo,laptop,Legion,Legion 5 15IAX11,10,oem-psref-wlan-options,os-list-empty,OS 列表空或驱动 API 403,https://psref.lenovo.com/syspool/Sys/PDF/Legion/Legion_5_15IAX11/Legion_5_15IAX11_Spec.pdf
+Lenovo,laptop,Legion,Legion 5 15IAX11,11,oem-psref-wlan-options,os-list-empty,OS 列表空或驱动 API 403,https://psref.lenovo.com/syspool/Sys/PDF/Legion/Legion_5_15IAX11/Legion_5_15IAX11_Spec.pdf
+Lenovo,laptop,Legion,Legion Pro 5 16IRX10,11,oem-wlan-driver-families,os-list-empty,OS 列表空或驱动 API 403,https://pcsupport.lenovo.com/fi/fi/product_security/ps500812
+Lenovo,laptop,Legion,Legion Pro 7 16ADR10H,10,oem-wlan-driver-families,os-list-empty,OS 列表空或驱动 API 403,https://pcsupport.lenovo.com/fi/fi/product_security/ps500812
+Lenovo,laptop,Legion,Legion Pro 7 16ADR10H,11,oem-wlan-driver-families,os-list-empty,OS 列表空或驱动 API 403,https://pcsupport.lenovo.com/fi/fi/product_security/ps500812
+Lenovo,laptop,Legion,Legion Pro 7 16AFR10H,10,oem-wlan-driver-families,os-list-empty,OS 列表空或驱动 API 403,https://pcsupport.lenovo.com/fi/fi/product_security/ps500812
+Lenovo,laptop,Legion,Legion Pro 7 16AFR10H,11,oem-wlan-driver-families,os-list-empty,OS 列表空或驱动 API 403,https://pcsupport.lenovo.com/fi/fi/product_security/ps500812
+ASUS,motherboard,AM4,PRIME B550M-K/CSM,11,oem-spec-wlan-not-listed,factory-vs-listing,手册/规格写非 Wi-Fi，下载页却列 Wi-Fi 驱动,https://www.asus.com/motherboards-components/motherboards/prime/prime-b550m-k-csm/techspec/
+ASUS,motherboard,AM5,B850M AYW GAMING WIFI-CSM,10,onboard-chip-unknown,support-api-empty,支持接口空 OS 列表,https://www.asus.com/product-compare?LevelId=Motherboards-Components-Motherboards&ProductID=31128%2C28588
+ASUS,motherboard,AM5,B850M AYW GAMING WIFI-CSM,11,onboard-chip-unknown,support-api-empty,支持接口空 OS 列表,https://www.asus.com/product-compare?LevelId=Motherboards-Components-Motherboards&ProductID=31128%2C28588
+ASUS,motherboard,AM5,PRIME B840M-A,10,oem-spec-wlan-not-listed,factory-vs-listing,手册/规格写非 Wi-Fi，下载页却列 Wi-Fi 驱动,https://www.asus.com/motherboards-components/motherboards/prime/prime-b840m-a/techspec/
+ASUS,motherboard,AM5,PRIME B840M-A,11,oem-spec-wlan-not-listed,factory-vs-listing,手册/规格写非 Wi-Fi，下载页却列 Wi-Fi 驱动,https://www.asus.com/motherboards-components/motherboards/prime/prime-b840m-a/techspec/
+ASUS,motherboard,AM5,PRIME B840M-A-CSM,10,oem-spec-wlan-not-listed,factory-vs-listing,手册/规格写非 Wi-Fi，下载页却列 Wi-Fi 驱动,https://www.asus.com/motherboards-components/motherboards/csm/prime-b840m-a-csm/techspec/
+ASUS,motherboard,AM5,PRIME B840M-A-CSM,11,oem-spec-wlan-not-listed,factory-vs-listing,手册/规格写非 Wi-Fi，下载页却列 Wi-Fi 驱动,https://www.asus.com/motherboards-components/motherboards/csm/prime-b840m-a-csm/techspec/
+ASUS,motherboard,AM5,PRIME B850-PLUS,10,oem-spec-wlan-not-listed,factory-vs-listing,手册/规格写非 Wi-Fi，下载页却列 Wi-Fi 驱动,https://www.asus.com/motherboards-components/motherboards/prime/prime-b850-plus/techspec/
+ASUS,motherboard,AM5,PRIME B850-PLUS,11,oem-spec-wlan-not-listed,factory-vs-listing,手册/规格写非 Wi-Fi，下载页却列 Wi-Fi 驱动,https://www.asus.com/motherboards-components/motherboards/prime/prime-b850-plus/techspec/
+ASUS,motherboard,AM5,PRIME B850-PLUS-CSM,10,oem-spec-wlan-not-listed,factory-vs-listing,手册/规格写非 Wi-Fi，下载页却列 Wi-Fi 驱动,https://www.asus.com/motherboards-components/motherboards/csm/prime-b850-plus-csm/techspec/
+ASUS,motherboard,AM5,PRIME B850-PLUS-CSM,11,oem-spec-wlan-not-listed,factory-vs-listing,手册/规格写非 Wi-Fi，下载页却列 Wi-Fi 驱动,https://www.asus.com/motherboards-components/motherboards/csm/prime-b850-plus-csm/techspec/
+ASUS,motherboard,AM5,Pro WS 665-ACE,10,catalog-model,no-factory-proof,缺出厂无线证据,https://www.asus.com/motherboards-components/motherboards/workstation/pro-ws-665-ace/
+ASUS,motherboard,AM5,Pro WS 665-ACE,11,catalog-model,no-factory-proof,缺出厂无线证据,https://www.asus.com/motherboards-components/motherboards/workstation/pro-ws-665-ace/
+ASUS,motherboard,AM5,TUF GAMING A620AM-PLUS,10,oem-spec-wlan-not-listed,factory-vs-listing,手册/规格写非 Wi-Fi，下载页却列 Wi-Fi 驱动,https://www.asus.com/motherboards-components/motherboards/tuf-gaming/tuf-gaming-a620am-plus/techspec/
+ASUS,motherboard,AM5,TUF GAMING A620AM-PLUS,11,oem-spec-wlan-not-listed,factory-vs-listing,手册/规格写非 Wi-Fi，下载页却列 Wi-Fi 驱动,https://www.asus.com/motherboards-components/motherboards/tuf-gaming/tuf-gaming-a620am-plus/techspec/
+ASUS,motherboard,AM5,TUF GAMING B850M-PLUS,10,oem-spec-wlan-not-listed,factory-vs-listing,手册/规格写非 Wi-Fi，下载页却列 Wi-Fi 驱动,https://www.asus.com/motherboards-components/motherboards/tuf-gaming/tuf-gaming-b850m-plus/techspec/
+ASUS,motherboard,AM5,TUF GAMING B850M-PLUS,11,oem-spec-wlan-not-listed,factory-vs-listing,手册/规格写非 Wi-Fi，下载页却列 Wi-Fi 驱动,https://www.asus.com/motherboards-components/motherboards/tuf-gaming/tuf-gaming-b850m-plus/techspec/
+ASUS,motherboard,LGA1700,PRIME H610M-F D4 R3.0,10,oem-spec-wlan-not-listed,factory-vs-listing,手册/规格写非 Wi-Fi，下载页却列 Wi-Fi 驱动,https://www.asus.com/motherboards-components/motherboards/prime/prime-h610m-f-d4-r3-0/techspec/
+ASUS,motherboard,LGA1700,PRIME H610M-F D4 R3.0,11,oem-spec-wlan-not-listed,factory-vs-listing,手册/规格写非 Wi-Fi，下载页却列 Wi-Fi 驱动,https://www.asus.com/motherboards-components/motherboards/prime/prime-h610m-f-d4-r3-0/techspec/
+ASUS,motherboard,LGA1851,TUF GAMING B860M-PLUS,11,oem-spec-wlan-not-listed,factory-vs-listing,手册/规格写非 Wi-Fi，下载页却列 Wi-Fi 驱动,https://www.asus.com/motherboards-components/motherboards/tuf-gaming/tuf-gaming-b860m-plus/techspec/
+GIGABYTE,motherboard,LGA1851,B860M A PRO WIFI7,10,catalog-model,support-url-missing,支持页 slug 未找到（多次 404），下载表无法取得,https://download.gigabyte.com/FileList/Manual/mb_manual_b860m-a-pro-wf7_1001_e.pdf
+GIGABYTE,motherboard,LGA1851,B860M A PRO WIFI7,11,catalog-model,support-url-missing,支持页 slug 未找到（多次 404），下载表无法取得,https://download.gigabyte.com/FileList/Manual/mb_manual_b860m-a-pro-wf7_1001_e.pdf
+GIGABYTE,motherboard,LGA1851,B860M A PRO WIFI7 rev. 1.0,10,oem-manual-module,support-url-missing,支持页 slug 未找到（多次 404），下载表无法取得,https://download.gigabyte.com/FileList/Manual/mb_manual_b860m-a-pro-wf7_1001_e.pdf?v=b2e0b7ea2e560af25d9702b6359f6e54
+GIGABYTE,motherboard,LGA1851,B860M A PRO WIFI7 rev. 1.0,11,oem-manual-module,support-url-missing,支持页 slug 未找到（多次 404），下载表无法取得,https://download.gigabyte.com/FileList/Manual/mb_manual_b860m-a-pro-wf7_1001_e.pdf?v=b2e0b7ea2e560af25d9702b6359f6e54
+GIGABYTE,motherboard,LGA1851,B860M A PRO WIFI7 rev. 1.1,10,oem-manual-module,support-url-missing,支持页 slug 未找到（多次 404），下载表无法取得,https://download.gigabyte.com/FileList/Manual/mb_manual_b860m-a-pro-wf7_1001_e.pdf?v=b2e0b7ea2e560af25d9702b6359f6e54
+GIGABYTE,motherboard,LGA1851,B860M A PRO WIFI7 rev. 1.1,11,oem-manual-module,support-url-missing,支持页 slug 未找到（多次 404），下载表无法取得,https://download.gigabyte.com/FileList/Manual/mb_manual_b860m-a-pro-wf7_1001_e.pdf?v=b2e0b7ea2e560af25d9702b6359f6e54
+MSI,motherboard,AM4,A320M-A PRO MAX,11,oem-spec-wlan-not-listed,factory-vs-listing,规格无 WLAN，面板列通用 Wi-Fi 驱动,https://storage-asset.msi.com/datasheet/mb/global/A320M-A-PRO-MAX.pdf
+MSI,motherboard,AM4,A520M PRO-C DASH,10,oem-spec-wlan-not-listed,factory-vs-listing,规格无 WLAN，面板列通用 Wi-Fi 驱动,https://storage-asset.msi.com/datasheet/mb/global/A520M-PRO-C-DASH.pdf
+MSI,motherboard,AM4,A520M PRO-C DASH,11,oem-spec-wlan-not-listed,factory-vs-listing,规格无 WLAN，面板列通用 Wi-Fi 驱动,https://storage-asset.msi.com/datasheet/mb/global/A520M-PRO-C-DASH.pdf
+MSI,motherboard,AM4,B550M GAMING PLUS WIFI6E (Rev 1),10,catalog-model,factory-vs-listing,规格无 WLAN，面板列通用 Wi-Fi 驱动,https://www.msi.com/support/motherboard/cpu-support
+MSI,motherboard,AM4,B550M GAMING PLUS WIFI6E (Rev 1),11,catalog-model,factory-vs-listing,规格无 WLAN，面板列通用 Wi-Fi 驱动,https://www.msi.com/support/motherboard/cpu-support
+MSI,motherboard,AM4,MEG X570 GODLIKE,10,oem-spec-wlan-listed,factory-vs-listing,规格无 WLAN，面板列通用 Wi-Fi 驱动,https://storage-asset.msi.com/datasheet/mb/global/MEG-X570-GODLIKE.pdf
+MSI,motherboard,AM4,MEG X570 GODLIKE,11,oem-spec-wlan-listed,factory-vs-listing,规格无 WLAN，面板列通用 Wi-Fi 驱动,https://storage-asset.msi.com/datasheet/mb/global/MEG-X570-GODLIKE.pdf
+MSI,motherboard,AM4,MEG X570S UNIFY-X MAX,10,oem-spec-wlan-not-listed,factory-vs-listing,规格无 WLAN，面板列通用 Wi-Fi 驱动,https://storage-asset.msi.com/datasheet/mb/global/MEG-X570S-UNIFY-X-MAX.pdf
+MSI,motherboard,AM5,MAG B650M MORTAR,10,oem-spec-wlan-not-listed,factory-vs-listing,规格无 WLAN，面板列通用 Wi-Fi 驱动,https://storage-asset.msi.com/datasheet/mb/global/MAG-B650M-MORTAR.pdf
+MSI,motherboard,AM5,MAG B650M MORTAR,11,oem-spec-wlan-not-listed,factory-vs-listing,规格无 WLAN，面板列通用 Wi-Fi 驱动,https://storage-asset.msi.com/datasheet/mb/global/MAG-B650M-MORTAR.pdf
+MSI,motherboard,AM5,PRO B650M-X,10,oem-spec-wlan-not-listed,factory-vs-listing,规格无 WLAN，面板列通用 Wi-Fi 驱动,https://storage-asset.msi.com/datasheet/mb/global/PRO-B650M-X.pdf
+MSI,motherboard,AM5,PRO B650M-X,11,oem-spec-wlan-not-listed,factory-vs-listing,规格无 WLAN，面板列通用 Wi-Fi 驱动,https://storage-asset.msi.com/datasheet/mb/global/PRO-B650M-X.pdf
+MSI,motherboard,LGA1700,PRO B760-VC,10,oem-spec-wlan-not-listed,factory-vs-listing,规格无 WLAN，面板列通用 Wi-Fi 驱动,https://storage-asset.msi.com/datasheet/mb/global/PRO-B760-VC.pdf
+MSI,motherboard,LGA1700,PRO B760-VC,11,oem-spec-wlan-not-listed,factory-vs-listing,规格无 WLAN，面板列通用 Wi-Fi 驱动,https://storage-asset.msi.com/datasheet/mb/global/PRO-B760-VC.pdf
+MSI,motherboard,LGA1700,PRO H610M-S DDR4,10,oem-spec-wlan-not-listed,factory-vs-listing,规格无 WLAN，面板列通用 Wi-Fi 驱动,https://storage-asset.msi.com/datasheet/mb/global/PRO-H610M-S-DDR4.pdf
+MSI,motherboard,LGA1700,PRO H610M-S DDR4,11,oem-spec-wlan-not-listed,factory-vs-listing,规格无 WLAN，面板列通用 Wi-Fi 驱动,https://storage-asset.msi.com/datasheet/mb/global/PRO-H610M-S-DDR4.pdf
+MSI,motherboard,LGA1700,PRO H610M-S DDR4 II,10,oem-spec-wlan-not-listed,factory-vs-listing,规格无 WLAN，面板列通用 Wi-Fi 驱动,https://storage-asset.msi.com/datasheet/mb/global/PRO-H610M-S-DDR4-II.pdf
+MSI,motherboard,LGA1700,PRO H610M-S DDR4 II,11,oem-spec-wlan-not-listed,factory-vs-listing,规格无 WLAN，面板列通用 Wi-Fi 驱动,https://storage-asset.msi.com/datasheet/mb/global/PRO-H610M-S-DDR4-II.pdf
+MSI,motherboard,LGA1700,PRO H610M-S WIFI DDR4 II,10,oem-spec-wlan-listed,factory-vs-listing,规格无 WLAN，面板列通用 Wi-Fi 驱动,https://storage-asset.msi.com/datasheet/mb/global/PRO-H610M-S-WIFI-DDR4-II.pdf
+MSI,motherboard,LGA1700,PRO H610M-S WIFI DDR4 II,11,oem-spec-wlan-listed,factory-vs-listing,规格无 WLAN，面板列通用 Wi-Fi 驱动,https://storage-asset.msi.com/datasheet/mb/global/PRO-H610M-S-WIFI-DDR4-II.pdf
+MSI,motherboard,LGA1700,PRO Z790-P,10,oem-spec-wlan-not-listed,factory-vs-listing,规格无 WLAN，面板列通用 Wi-Fi 驱动,https://storage-asset.msi.com/datasheet/mb/global/PRO-Z790-P.pdf
+MSI,motherboard,LGA1700,PRO Z790-P,11,oem-spec-wlan-not-listed,factory-vs-listing,规格无 WLAN，面板列通用 Wi-Fi 驱动,https://storage-asset.msi.com/datasheet/mb/global/PRO-Z790-P.pdf
+MSI,motherboard,LGA1851,MAG B860M MORTAR,10,oem-spec-wlan-not-listed,factory-vs-listing,规格无 WLAN，面板列通用 Wi-Fi 驱动,https://storage-asset.msi.com/datasheet/mb/global/MAG-B860M-MORTAR.pdf
+MSI,motherboard,LGA1851,MAG B860M MORTAR,11,oem-spec-wlan-not-listed,factory-vs-listing,规格无 WLAN，面板列通用 Wi-Fi 驱动,https://storage-asset.msi.com/datasheet/mb/global/MAG-B860M-MORTAR.pdf
+ASRock,motherboard,AM4,AB350M Pro4/DASH,11,oem-spec-wlan-not-listed,factory-vs-listing,下载列表与手册规格冲突,https://www.asrock.com/mb/AMD/AB350M%20Pro4DASH/index.asp#Download
+ASRock,motherboard,AM4,X300M-STX,10,oem-spec-wlan-not-listed,factory-vs-listing,下载列表与手册规格冲突,https://www.asrock.com/mb/AMD/X300M-STX/index.asp#Download
+ASRock,motherboard,AM4,X300M-STX,11,oem-spec-wlan-not-listed,factory-vs-listing,下载列表与手册规格冲突,https://www.asrock.com/mb/AMD/X300M-STX/index.asp#Download
+ASRock,motherboard,AM4,X300TM-ITX,10,oem-spec-wlan-not-listed,factory-vs-listing,下载列表与手册规格冲突,https://www.asrock.com/mb/AMD/X300TM-ITX/index.asp#Download
+ASRock,motherboard,AM4,X300TM-ITX,11,oem-spec-wlan-not-listed,factory-vs-listing,下载列表与手册规格冲突,https://www.asrock.com/mb/AMD/X300TM-ITX/index.asp#Download
+ASRock,motherboard,AM4,X370 Pro4,11,oem-spec-wlan-not-listed,factory-vs-listing,下载列表与手册规格冲突,https://www.asrock.com/mb/AMD/X370%20Pro4/index.asp#Download
+ASRock,motherboard,AM4,X470 Master SLI,10,oem-spec-wlan-not-listed,factory-vs-listing,下载列表与手册规格冲突,https://www.asrock.com/mb/AMD/X470%20Master%20SLI/index.asp#Download
+ASRock,motherboard,AM4,X470 Master SLI,11,oem-spec-wlan-not-listed,factory-vs-listing,下载列表与手册规格冲突,https://www.asrock.com/mb/AMD/X470%20Master%20SLI/index.asp#Download
+ASRock,motherboard,AM4,X470 Master SLI/ac,11,oem-spec-wlan-listed,factory-vs-listing,下载列表与手册规格冲突,https://www.asrock.com/mb/AMD/X470%20Master%20SLIac/index.asp#Download
+ASRock,motherboard,AM4,X570 Taichi Razer Edition,10,oem-model-catalog,factory-vs-listing,下载列表与手册规格冲突,https://www.asrock.com/mb/AMD/X570%20Taichi%20Razer%20Edition/index.asp#Download
+ASRock,motherboard,AM4,X570 Taichi Razer Edition,11,oem-model-catalog,factory-vs-listing,下载列表与手册规格冲突,https://www.asrock.com/mb/AMD/X570%20Taichi%20Razer%20Edition/index.asp#Download
+ASRock,motherboard,LGA1700,B660M PG Riptide,10,oem-spec-wlan-not-listed,factory-vs-listing,下载列表与手册规格冲突,https://www.asrock.com/mb/Intel/B660M%20PG%20Riptide/index.asp#Download
+ASRock,motherboard,LGA1700,B660M PG Riptide,11,oem-spec-wlan-not-listed,factory-vs-listing,下载列表与手册规格冲突,https://www.asrock.com/mb/Intel/B660M%20PG%20Riptide/index.asp#Download
+ASRock,motherboard,LGA1700,B760M PG Riptide,10,oem-spec-wlan-not-listed,factory-vs-listing,下载列表与手册规格冲突,https://www.asrock.com/mb/Intel/B760M%20PG%20Riptide/index.asp#Download
+ASRock,motherboard,LGA1700,B760M PG Riptide,11,oem-spec-wlan-not-listed,factory-vs-listing,下载列表与手册规格冲突,https://www.asrock.com/mb/Intel/B760M%20PG%20Riptide/index.asp#Download
+ASRock,motherboard,LGA1700,Z790 PG Riptide,10,oem-spec-wlan-not-listed,factory-vs-listing,下载列表与手册规格冲突,https://www.asrock.com/mb/Intel/Z790%20PG%20Riptide/index.asp#Download
+ASRock,motherboard,LGA1700,Z790 PG Riptide,11,oem-spec-wlan-not-listed,factory-vs-listing,下载列表与手册规格冲突,https://www.asrock.com/mb/Intel/Z790%20PG%20Riptide/index.asp#Download
+ASRock,motherboard,LGA1700,Z790 PG SONIC,10,oem-model-catalog,factory-vs-listing,下载列表与手册规格冲突,https://www.asrock.com/mb/Intel/Z790%20PG%20SONIC/index.asp#Download
+ASRock,motherboard,LGA1700,Z790 PG SONIC,11,oem-model-catalog,factory-vs-listing,下载列表与手册规格冲突,https://www.asrock.com/mb/Intel/Z790%20PG%20SONIC/index.asp#Download
+ASRock,motherboard,LGA1851,Z890 Taichi AQUA,10,oem-model-catalog,factory-vs-listing,下载列表与手册规格冲突,https://www.asrock.com/mb/Intel/Z890%20Taichi%20AQUA/index.asp#Download
+ASRock,motherboard,LGA1851,Z890 Taichi AQUA,11,oem-model-catalog,factory-vs-listing,下载列表与手册规格冲突,https://www.asrock.com/mb/Intel/Z890%20Taichi%20AQUA/index.asp#Download
+Acer,laptop,,Aspire 14/16 AI AMD,10,oem-series-catalog,mixed-family,系列跨代，族内结论不一致,https://www.acer.com/us-en/laptops/aspire
+Acer,laptop,,Aspire 14/16 AI AMD,11,oem-series-catalog,mixed-family,系列跨代，族内结论不一致,https://www.acer.com/us-en/laptops/aspire
+Acer,laptop,,Aspire 14/16 AI Intel,10,oem-series-catalog,mixed-family,系列跨代，族内结论不一致,https://www.acer.com/us-en/laptops/aspire
+Acer,laptop,,Aspire 14/16 AI Intel,11,oem-series-catalog,mixed-family,系列跨代，族内结论不一致,https://www.acer.com/us-en/laptops/aspire
+Acer,laptop,,Aspire 14/16 AI Snapdragon,10,oem-series-catalog,mixed-family,系列跨代，族内结论不一致,https://www.acer.com/us-en/laptops/aspire
+Acer,laptop,,Aspire 14/16 AI Snapdragon,11,oem-series-catalog,mixed-family,系列跨代，族内结论不一致,https://www.acer.com/us-en/laptops/aspire
+Acer,laptop,,Aspire AMD,10,oem-series-catalog,mixed-family,系列跨代，族内结论不一致,https://www.acer.com/us-en/laptops/aspire
+Acer,laptop,,Aspire AMD,11,oem-series-catalog,mixed-family,系列跨代，族内结论不一致,https://www.acer.com/us-en/laptops/aspire
+Acer,laptop,,Aspire Intel,10,oem-series-catalog,mixed-family,系列跨代，族内结论不一致,https://www.acer.com/us-en/laptops/aspire
+Acer,laptop,,Aspire Intel,11,oem-series-catalog,mixed-family,系列跨代，族内结论不一致,https://www.acer.com/us-en/laptops/aspire
+Acer,laptop,,PREDATOR TRITON 500 SE,10,oem-series-catalog,mixed-family,系列跨代，族内结论不一致,https://www.acer.com/us-en/predator/laptops/triton
+Acer,laptop,,PREDATOR TRITON 500 SE,11,oem-series-catalog,mixed-family,系列跨代，族内结论不一致,https://www.acer.com/us-en/predator/laptops/triton
+Acer,laptop,,Swift 14/16 AI Intel,11,oem-series-catalog,mixed-family,系列跨代，族内结论不一致,https://www.acer.com/us-en/laptops/swift
+Acer,laptop,,Swift Air 16,11,oem-series-catalog,mixed-family,系列跨代，族内结论不一致,https://www.acer.com/us-en/laptops/swift
+Acer,laptop,,Swift Air 16 (SFA16-I31 / SFA16-I31T),11,oem-series-catalog,mixed-family,系列跨代，族内结论不一致,https://www.acer.com/us-en/laptops/swift
+Acer,laptop,,Swift X 14,10,oem-series-catalog,mixed-family,系列跨代，族内结论不一致,https://www.acer.com/us-en/laptops/swift
+Acer,laptop,,Swift X 14 AI AMD,10,oem-series-catalog,mixed-family,系列跨代，族内结论不一致,https://www.acer.com/us-en/laptops/swift
+Acer,laptop,,TravelMate P2,10,oem-series-catalog,mixed-family,系列跨代，族内结论不一致,https://www.acer.com/us-en/laptops/travelmate
+Acer,laptop,,TravelMate P2,11,oem-series-catalog,mixed-family,系列跨代，族内结论不一致,https://www.acer.com/us-en/laptops/travelmate
+Acer,laptop,,TravelMate P2 14 AI AMD,10,oem-series-catalog,mixed-family,系列跨代，族内结论不一致,https://www.acer.com/us-en/laptops/travelmate
+Acer,laptop,,TravelMate P2 14 AI AMD,11,oem-series-catalog,mixed-family,系列跨代，族内结论不一致,https://www.acer.com/us-en/laptops/travelmate
+Acer,laptop,,TravelMate P2 14 AI Intel,10,oem-series-catalog,mixed-family,系列跨代，族内结论不一致,https://www.acer.com/us-en/laptops/travelmate
+Acer,laptop,,TravelMate P2 14 AI Intel,11,oem-series-catalog,mixed-family,系列跨代，族内结论不一致,https://www.acer.com/us-en/laptops/travelmate
+Acer,laptop,,TravelMate P2 14 Intel,10,oem-series-catalog,mixed-family,系列跨代，族内结论不一致,https://www.acer.com/us-en/laptops/travelmate
+Acer,laptop,,TravelMate P2 14 Intel,11,oem-series-catalog,mixed-family,系列跨代，族内结论不一致,https://www.acer.com/us-en/laptops/travelmate
+Acer,laptop,,TravelMate P2 15,10,oem-series-catalog,mixed-family,系列跨代，族内结论不一致,https://www.acer.com/us-en/laptops/travelmate
+Acer,laptop,,TravelMate P2 15,11,oem-series-catalog,mixed-family,系列跨代，族内结论不一致,https://www.acer.com/us-en/laptops/travelmate
+Acer,laptop,,TravelMate P2 16 AI AMD,10,oem-series-catalog,mixed-family,系列跨代，族内结论不一致,https://www.acer.com/us-en/laptops/travelmate
+Acer,laptop,,TravelMate P2 16 AI AMD,11,oem-series-catalog,mixed-family,系列跨代，族内结论不一致,https://www.acer.com/us-en/laptops/travelmate
+Acer,laptop,,TravelMate P4 13,10,oem-series-catalog,mixed-family,系列跨代，族内结论不一致,https://www.acer.com/us-en/laptops/travelmate
+Acer,laptop,,TravelMate P4 13,11,oem-series-catalog,mixed-family,系列跨代，族内结论不一致,https://www.acer.com/us-en/laptops/travelmate
+Acer,laptop,,TravelMate P4 14 AI Intel,10,oem-series-catalog,mixed-family,系列跨代，族内结论不一致,https://www.acer.com/us-en/laptops/travelmate
+Acer,laptop,,TravelMate P4 14 AMD,10,oem-series-catalog,mixed-family,系列跨代，族内结论不一致,https://www.acer.com/us-en/laptops/travelmate
+Acer,laptop,,TravelMate P4 14 Intel,10,oem-series-catalog,mixed-family,系列跨代，族内结论不一致,https://www.acer.com/us-en/laptops/travelmate
+Acer,laptop,,TravelMate P4 16,10,oem-series-catalog,mixed-family,系列跨代，族内结论不一致,https://www.acer.com/us-en/laptops/travelmate
+Acer,laptop,,TravelMate P4 Spin 14,10,oem-series-catalog,mixed-family,系列跨代，族内结论不一致,https://www.acer.com/us-en/laptops/travelmate
+Acer,laptop,,TravelMate P4 Spin 14 AI Intel,10,oem-series-catalog,mixed-family,系列跨代，族内结论不一致,https://www.acer.com/us-en/laptops/travelmate
+Acer,laptop,,TravelMate P6,10,oem-series-catalog,mixed-family,系列跨代，族内结论不一致,https://www.acer.com/us-en/laptops/travelmate
+Acer,laptop,,TravelMate P6,11,oem-series-catalog,mixed-family,系列跨代，族内结论不一致,https://www.acer.com/us-en/laptops/travelmate
+Acer,laptop,,TravelMate P6 14,10,oem-series-catalog,mixed-family,系列跨代，族内结论不一致,https://www.acer.com/us-en/laptops/travelmate
+Acer,laptop,,TravelMate P6 14,11,oem-series-catalog,mixed-family,系列跨代，族内结论不一致,https://www.acer.com/us-en/laptops/travelmate
+Acer,laptop,,TravelMate P6 14 AI,10,oem-series-catalog,mixed-family,系列跨代，族内结论不一致,https://www.acer.com/us-en/laptops/travelmate
+Acer,laptop,,TravelMate P6 14 AI,11,oem-series-catalog,mixed-family,系列跨代，族内结论不一致,https://www.acer.com/us-en/laptops/travelmate
+EVGA,motherboard,LGA1700,Z790 CLASSIFIED,10,oem-manual-module,no-per-model-list,驱动下载页无逐型号列表,https://www.evga.com/support/manuals/files/121-RL-E798-KR.pdf
+EVGA,motherboard,LGA1700,Z790 CLASSIFIED,11,oem-manual-module,no-per-model-list,驱动下载页无逐型号列表,https://www.evga.com/support/manuals/files/121-RL-E798-KR.pdf
+EVGA,motherboard,LGA1700,Z790 DARK K|NGP|N,10,oem-model-catalog,no-per-model-list,驱动下载页无逐型号列表,https://www.evga.com/products/pdf/121-RL-E799-KR.pdf
+EVGA,motherboard,LGA1700,Z790 DARK K|NGP|N,11,oem-model-catalog,no-per-model-list,驱动下载页无逐型号列表,https://www.evga.com/products/pdf/121-RL-E799-KR.pdf
+Acer,laptop,,Aspire A114-61,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号 0 命中,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
+Acer,laptop,,Aspire A114-61L,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号 0 命中,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
+Acer,laptop,,Aspire A314-22S,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号 0 命中,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
+Acer,laptop,,Aspire A315-23S,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号 0 命中,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
+Acer,laptop,,Aspire A315-35S,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号 0 命中,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
+Acer,laptop,,Aspire A514-54S,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号 0 命中,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
+Acer,laptop,,Aspire A515-41G,10,oem-spec-wireless,mixed-family,系列跨代，族内结论不一致,https://www.acer.com/us-en/support/product-support/Aspire_A515-41G/
+Acer,laptop,,Aspire A515-41G,11,oem-spec-wireless,mixed-family,系列跨代，族内结论不一致,https://www.acer.com/us-en/support/product-support/Aspire_A515-41G/
+Acer,laptop,,Aspire A515-44S,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号 0 命中,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
+Acer,laptop,,Aspire A515-45S,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号 0 命中,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
+Acer,laptop,,Aspire A515-56S,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号 0 命中,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
+Acer,laptop,,ConceptD CN516-72,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号 0 命中,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
+Acer,laptop,,Nitro AN514-54,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号 0 命中,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
+Acer,laptop,,Spin SP513-55NA,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号 0 命中,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
+Acer,laptop,,Spin SP714-61NA,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号 0 命中,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
+Acer,laptop,,Swift SF314-44G,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号 0 命中,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
+Acer,laptop,,Swift SF314-510,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号 0 命中,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
+Acer,laptop,,TravelMate P40-41-G2,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号 0 命中,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
+Acer,laptop,,TravelMate P40-41-G3,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号 0 命中,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
+Acer,laptop,,TravelMate P50-41,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号 0 命中,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
+Acer,laptop,,TravelMate P50-41-G3,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号 0 命中,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
+Acer,laptop,,TravelMate Spin 311R-31,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号 0 命中,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
+Acer,laptop,,TravelMate Spin 311RN-31,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号 0 命中,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
+Acer,laptop,,TravelMate Spin B311RA-32,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号 0 命中,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
+Acer,laptop,,TravelMate X40-52-M,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号 0 命中,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
+Acer,laptop,,TravelMate X40-52-MG,10,oem-model-catalog,no-listing-exact-model,支持库对精确型号 0 命中,https://www.acer.com/us-en/support/windows/windows-11-compatibility.html
+ASUS,laptop,,ASUS TUF Gaming A16 (2025) FA608PPI,10,oem-driver-list,no-network-category,驱动列表无网络类目或过短,https://www.asus.com/supportonly/fa608ppi/helpdesk_download/
+ASUS,laptop,,ASUS TUF Gaming A16 (2025) FA608PPI,11,oem-driver-list,no-network-category,驱动列表无网络类目或过短,https://www.asus.com/supportonly/fa608ppi/helpdesk_download/
+ASUS,laptop,,ASUS TUF Gaming A16 (2025) FA608PMI,10,oem-driver-list,no-network-category,驱动列表无网络类目或过短,https://www.asus.com/supportonly/fa608pmi/helpdesk_download/
+ASUS,laptop,,ASUS TUF Gaming A16 (2025) FA608PMI,11,oem-driver-list,no-network-category,驱动列表无网络类目或过短,https://www.asus.com/supportonly/fa608pmi/helpdesk_download/
+ASUS,laptop,,ROG Strix G15 G513IR,11,oem-driver-list,no-network-category,驱动列表无网络类目或过短,https://www.asus.com/supportonly/g513ir/helpdesk_download/
+ASUS,laptop,,ROG Strix G17 G713IR,11,oem-driver-list,no-network-category,驱动列表无网络类目或过短,https://www.asus.com/supportonly/g713ir/helpdesk_download/
+ASUS,laptop,,ROG Strix SCAR 17 G733QSA,11,oem-driver-list,no-network-category,驱动列表无网络类目或过短,https://www.asus.com/supportonly/g733qsa/helpdesk_download/
