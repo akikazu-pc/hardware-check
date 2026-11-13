@@ -80,16 +80,18 @@ MSI、Acer、华擎的原厂下载接口拒绝脚本直连。本轮先在浏览�
 
 判定口径与华硕一致：“列出”要求已有出厂无线证据；“未列出”要求该系统有有效的 LAN 列表和音频或芯片组列表，且有出厂无线证据或规格未列 WLAN。Killer 通用包、近似型号、组合系统文件、空列表都保持待核。提交 `e22e373` 的说明写成关闭 300 格，实际是 301 格。
 
-最新待核：主板 Win10 75、Win11 75，笔记本 Win10 296、Win11 221，合计 **667**（起点 2,570）。另有戴尔系统 ID 组合 127 个 Win10、39 个 Win11 待核，单独计数。
+最新待核：主板 Win10 74、Win11 74，笔记本 Win10 226、Win11 160，合计 **534**（起点 2,570）。另有戴尔系统 ID 组合 127 个 Win10、39 个 Win11 待核，单独计数。
 
 剩余与下一步：
-- Acer：仍有 130／102 格待核。37 款接口返回空，后来被限流（Failed to fetch），冷却后重查；101 条系列行还要拆成精确 SKU。本机 `www.acer.com` 卡在 TLS 重协商，`curl`、Python 和 headless Edge 都超时，只有 `global-download.acer.com` 可读，需换网络或浏览器会话再采。
+- Acer：仍有 121／97 格待核。37 款接口返回空，后来被限流（Failed to fetch），冷却后重查；101 条系列行还要拆成精确 SKU。本机 `www.acer.com` 卡在 TLS 重协商，`curl`、Python 和 headless Edge 都超时，只有 `global-download.acer.com` 可读，需换网络或浏览器会话再采。
 - 惠普：84 格。`hpia.hpcloud.hp.com` 的驱动包矩阵和 `ftp.hp.com` 的 SoftPaq 说明可读，但待核型号在矩阵中没有对应系统的包（2025 AI PC 无 Win10 包，2017–2019 机型无 Win11 包），HPIA 范围本身不作为结案证据。
 - MSI、技嘉、映泰、联想：`www.msi.com`、`www.gigabyte.com`、`www.biostar.com.tw`、`support.lenovo.com` 均返回 403 或拒绝 headless 浏览器；`storage-asset.msi.com` 数据表和 `pcsupport.lenovo.com` 可读，但拿不到逐型号下载列表。
 - 华硕主板：余 20／19 格。已用原厂手册补足 14 款「无出厂无线」证据（[手册证据](network-rescue-asus-mb-spec-proof.csv)）；另有 5 款手册明写「Notices for non Wi-Fi model」，但原厂下载页仍列 Wi-Fi 驱动，按来源冲突保留待核；12 款没有精确型号手册（CSM 变体和 TUF 系列手册）；ROG MAXIMUS Z890 HERO、B850M AYW、ROG STRIX B860-G、ProArt B850-CREATOR 只有模块候选。
 - 华擎：余 19／22 格。规格页标题不匹配的 36 格，另有 5 格规格未列 WLAN 但下载列表却列出；`www.asrock.com` 现在整站返回 Incapsula 质询页，只有 `download.asrock.com` 的文件可读，需浏览器会话。
 - 华硕笔记本：82 个系列已拆分 333 个精确 SKU，余 7 个系列待核格、3 个系列缺型号列表。复跑同一批证据为 0 项变化。下一步按 SKU 的原厂下载链接补包入库和实机硬件 ID。
 - 联想：余 Win10 3、Win11 4 格。PSREF 规格表对 14 款在待核 Legion 全部只列 Windows 11；其中 8 款的 WLAN 驱动包元数据也只列 `Windows 11 (64-bit)`，两处一致后关闭 8 个 Win10 格。余项缺独立的整机驱动列表（`support.lenovo.com` 403，只有 `pcsupport.lenovo.com` 的单个包页面可读）。[PSREF 证据](network-rescue-lenovo-psref-proof.csv)
-- MSI：主板余 10／10 格。原厂规格页明确写「WIRELESS LAN & BLUETOOTH Wi-Fi 7，模块预装于 M.2 Key-E」，逐型号驱动面板只给 Windows 11 的 MediaTek／Qualcomm Wi-Fi 驱动、Windows 10 面板有 LAN 和音频而没有 Wi-Fi 项，据此关闭 4 款 Wi-Fi 板的两个系统格。[MSI 规格证据](network-rescue-msi-spec-proof.csv) 其余型号是通用 Wi-Fi 驱动包与规格未列 WLAN 的冲突，保持待核。
+- MSI：主板余 13／13 格、笔记本 24／21 格。原厂规格页明确写「WIRELESS LAN & BLUETOOTH Wi-Fi 7，模块预装于 M.2 Key-E」，逐型号驱动面板只给 Windows 11 的 MediaTek／Qualcomm Wi-Fi 驱动、Windows 10 面板有 LAN 和音频而没有 Wi-Fi 项，据此关闭 4 款 Wi-Fi 板的两个系统格。[MSI 规格证据](network-rescue-msi-spec-proof.csv) 其余型号是通用 Wi-Fi 驱动包与规格未列 WLAN 的冲突，保持待核。
+- MSI 逐型号驱动面板：`/api/v1/product/support/os` 给出型号可选系统，`panel?…&os=` 给出该系统驱动表。108 款待核型号全部命中，笔记本的「Wireless LAN Driver」带版本和 `download.msi.com` 链接，关闭 119 格；主板的通用 Wi-Fi 驱动包与规格未列 WLAN 冲突，只有 2 格按两处都未列关闭。[MSI 证据](network-rescue-msi-oem-listing-proof.csv)
+- Acer 逐型号接口：用页面会话的 Cookie 重放 `DynamicContent/GetDriversAndManuals`，34 个精确 SKU 取到结果，9 格列出 Wireless LAN、5 格原厂 OS 列表没有该系统。[Acer 证据](network-rescue-acer-oem-listing-proof.csv)
 - 华硕笔记本：逐 SKU 复核 `GetPDOS` 后，11 个 SKU 自身的 OS 列表不含 Windows 10，另有 2 个系列因全部 SKU 一致而关闭，共补结 13 格；余 10 格是空 OS 列表或只有非网络类目。证据见[逐 SKU OS 证据](network-rescue-asus-sku-os-proof.csv)。
 - 戴尔、EVGA、技嘉、映泰：见上条与[采集交接](network-rescue-catalog-handoff.md)；戴尔的 127 个 Win10 组合是只发 Win11 的新机型没有 Win10 驱动包，缺原厂系统支持声明。
