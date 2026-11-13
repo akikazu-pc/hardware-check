@@ -29,13 +29,17 @@ Evidence policy (strict):
   table is populated.
 * An entry whose ``os`` field also covers another Windows version is a combined-system package and
   stays pending unless ``--allow-combined-os`` is given.
+* A positive listing is only proposed/applied when the row's factory evidence (``wlanEvidence``)
+  already names WLAN or a Wi-Fi module. MSI also publishes optional-module Wi-Fi packages on
+  boards whose specification has no WLAN; those rows are held under ``specGated`` in the
+  proposals JSON and can be released with ``--allow-spec-mismatch``.
 * Empty tables, near model names, unresolved products and failed requests stay pending.
 
 ``--apply-oem-evidence`` writes the proposed statuses into the gaps CSV. Without it the script only
 writes the proof table and the proposals JSON.
 """
 import argparse
-from collections import Counter, defaultdict
+from collections import Counter
 import csv
 from dataclasses import dataclass, field
 import json
@@ -59,7 +63,6 @@ CHIPSET = re.compile(r"chipset", re.I)
 KILLER_UNIVERSAL = re.compile(r"killer.*universal|universal.*killer", re.I)
 DOWNLOAD_HOST = "msi.com"
 MAX_SEARCH_PAGES = 3
-MAX_LIST_CHECKS = 3
 REQUEST_CHUNK = 25
 # A "populated" list for the other Windows version: a handful of real driver rows, not a partial
 # table that only carries an audio add-on.
@@ -459,7 +462,7 @@ def table_substantive(panel, system):
     return count >= MIN_OTHER_OS_FILES and has_kind
 
 
-def judge_listing(target, label, system, panel, allow_combined, model_title):
+def judge_listing(system, panel, allow_combined, model_title):
     """Return (status, title, version, url, sha256) for one system of one model."""
     if panel is None:
         return "request-failed", "", "", "", ""
@@ -552,8 +555,19 @@ def classify(target, allow_combined):
     return proof
 
 
-def update_evidence(target, proof, models):
-    """Apply the closable proof rows to the still-pending cells of the selected targets."""
+def spec_allows_positive(target):
+    """Mirror the factory-spec gate of the existing MSI collector.
+
+    MSI's driver tab can list an Intel/Killer Wi-Fi package for a board whose factory
+    specification has no WLAN or Wi-Fi module (optional M.2 module support or shared board data).
+    A positive listing is only applied when the specification already names WLAN or a module;
+    otherwise it is recorded in the proof and held for review.
+    """
+    return target.kind != "motherboard" or target.row.get("wlanEvidence") in FACTORY_WLAN
+
+
+def update_evidence(target, proof, allow_spec_mismatch):
+    """Apply the closable proof rows to the still-pending cells of one target."""
     row = target.row
     updates = Counter()
     by_system = {entry["windows"]: entry for entry in proof}
@@ -561,6 +575,9 @@ def update_evidence(target, proof, models):
         field = f"windows{system}X64Evidence"
         entry = by_system.get(label) or {}
         if row[field] != "pending" or entry.get("status") not in CLOSABLE:
+            continue
+        if (entry["status"] == "oem-wlan-listed" and not allow_spec_mismatch
+                and not spec_allows_positive(target)):
             continue
         row[field] = entry["status"]
         updates[f"{system}:{entry['status']}"] += 1
@@ -579,7 +596,8 @@ def write_models(path, models):
     temporary.replace(path)
 
 
-def write_outputs(output, proposals_path, proof, targets, models, bridge, elapsed, allow_combined):
+def write_outputs(output, proposals_path, proof, targets, models, bridge, elapsed, allow_combined,
+                  allow_spec_mismatch):
     temporary = output.with_suffix(output.suffix + ".tmp")
     with temporary.open("w", encoding="utf-8", newline="") as handle:
         writer = csv.DictWriter(handle, PROOF_FIELDS)
@@ -587,7 +605,7 @@ def write_outputs(output, proposals_path, proof, targets, models, bridge, elapse
         writer.writerows(proof)
     temporary.replace(output)
 
-    proposed, pending_rows = [], []
+    proposed, pending_rows, spec_gated = [], [], []
     for target in targets:
         for entry in target.proof:
             system = "10" if entry["windows"] == "Win10 64" else "11"
@@ -595,7 +613,7 @@ def write_outputs(output, proposals_path, proof, targets, models, bridge, elapse
             if current != "pending":
                 continue
             if entry["status"] in CLOSABLE:
-                proposed.append({
+                item = {
                     "type": target.kind, "brand": "MSI", "model": target.row["model"],
                     "windows": system,
                     "os": entry["windows"], "current": current,
@@ -605,7 +623,19 @@ def write_outputs(output, proposals_path, proof, targets, models, bridge, elapse
                         "title": entry["title"], "version": entry["version"],
                         "download": entry["downloadUrl"],
                     },
-                })
+                }
+                if (entry["status"] == "oem-wlan-listed" and not allow_spec_mismatch
+                        and not spec_allows_positive(target)):
+                    item["heldReason"] = (f"wlanEvidence={target.row.get('wlanEvidence') or 'empty'}"
+                                          " does not list WLAN or a Wi-Fi module")
+                    spec_gated.append(item)
+                    pending_rows.append({
+                        "type": target.kind, "brand": "MSI", "model": target.row["model"],
+                        "windows": system, "os": entry["windows"],
+                        "reason": "oem-wlan-listed-spec-gap", "title": entry["title"],
+                    })
+                else:
+                    proposed.append(item)
             else:
                 pending_rows.append({
                     "type": target.kind, "brand": "MSI", "model": target.row["model"],
@@ -617,17 +647,20 @@ def write_outputs(output, proposals_path, proof, targets, models, bridge, elapse
         "brand": "MSI",
         "generated": time.strftime("%Y-%m-%dT%H:%M:%S%z"),
         "allowCombinedOs": allow_combined,
+        "allowSpecMismatch": allow_spec_mismatch,
         "summary": {
             "modelsQueried": len(targets),
             "cellsExamined": len(proof),
             "proposedClosures": len(proposed),
             "byProposedStatus": dict(Counter(item["proposed"] for item in proposed)),
+            "specGatedListings": len(spec_gated),
             "byPendingReason": dict(Counter(item["reason"] for item in pending_rows)),
             "requests": bridge.requests,
             "requestFailures": len(bridge.failures),
             "elapsedSeconds": round(elapsed, 1),
         },
         "proposals": proposed,
+        "specGated": spec_gated,
         "leftPending": pending_rows,
     }
     proposals_path.parent.mkdir(parents=True, exist_ok=True)
@@ -647,6 +680,9 @@ def main():
                         help="write the proposed statuses into the gaps CSV")
     parser.add_argument("--allow-combined-os", action="store_true",
                         help="accept WLAN entries whose os field also names another Windows version")
+    parser.add_argument("--allow-spec-mismatch", action="store_true",
+                        help="propose/apply a positive listing even when the row's wlanEvidence does "
+                             "not name WLAN or a module (default: hold for review)")
     parser.add_argument("--limit", type=int, help="only examine the first N pending models")
     args = parser.parse_args()
 
@@ -671,12 +707,15 @@ def main():
 
     proposals_path = args.proposals or args.output.with_name("msi-proposals.json")
     payload = write_outputs(args.output, proposals_path, proof, targets, models, bridge,
-                            elapsed, args.allow_combined_os)
+                            elapsed, args.allow_combined_os, args.allow_spec_mismatch)
     summary = payload["summary"]
     print(f"Proof rows: {len(proof)}")
     print("Proof statuses:", dict(Counter(entry["status"] for entry in proof)))
     print(f"Proposed closures: {summary['proposedClosures']} "
           f"{summary['byProposedStatus']}")
+    if summary["specGatedListings"]:
+        print(f"Positive listings held by the factory-spec gate: "
+              f"{summary['specGatedListings']} (see specGated in the proposals JSON)")
     print(f"Requests: {bridge.requests}, failures: {len(bridge.failures)}, "
           f"elapsed: {elapsed:.1f}s")
     unresolved = [target.row["model"] for target in targets if target.error]
@@ -692,7 +731,7 @@ def main():
         for target in targets:
             if target.error:
                 continue
-            updates.update(update_evidence(target, target.proof, models))
+            updates.update(update_evidence(target, target.proof, args.allow_spec_mismatch))
         if updates:
             write_models(args.gaps, models)
         print("Applied to gaps CSV:", dict(updates))
@@ -703,9 +742,7 @@ def main():
         print("First request failures:")
         for failure in bridge.failures[:5]:
             print(" ", failure)
-    if args.gaps.read_bytes() != raw_before:
-        print("WARNING: the gaps CSV changed during this run; the outputs above describe the "
-              "snapshot read at start, not the current file.")
+    if changed and not args.apply_oem_evidence:
         return 2
     return 0
 
