@@ -263,6 +263,7 @@
   "rescue.pe.noTarget": "No accessible offline Windows was found. Check the disk or unlock it in PE.",
   "rescue.pe.noMedia": "Insert readable Windows 10 or 11 x64 installation media and try again.",
   "rescue.pe.noDriver": "No matching signed driver was found. Check the driver folders and try again.",
+  "rescue.pe.continueWithoutDriver": "No matching driver was found. Continue without adding a network driver? Windows may still have its own driver.",
   "rescue.pe.installAll": "Install all matched drivers",
   "rescue.pe.setupDriverPreparationFailed": "The selected driver could not be prepared for Windows Setup. Choose a self-contained package or install the driver at the first-boot network screen.",
   "rescue.pe.scan": "Searching the offline driver library…",

@@ -409,16 +409,22 @@ static SetupStart StartSetup(const SetupMedia& media, const fs::path& inf)
         L"-" + std::to_wstring(GetTickCount64()));
     std::error_code error;
     if (!fs::create_directory(workspace, error)) return SetupStart::LaunchFailed;
-    const auto driver = PrepareSetupDriver(inf, workspace);
-    if (driver.empty()) {
-        fs::remove_all(workspace, error);
-        return SetupStart::DriverPreparationFailed;
+    // An empty path means the user chose to continue without adding a driver.
+    fs::path driver;
+    if (!inf.empty()) {
+        driver = PrepareSetupDriver(inf, workspace);
+        if (driver.empty()) {
+            fs::remove_all(workspace, error);
+            return SetupStart::DriverPreparationFailed;
+        }
     }
     const auto setup = media.root / L"setup.exe";
     const auto hostBuild = ReadWindowsFileBuild(media.root / L"sources/setuphost.exe");
     const auto setupBuild = hostBuild ? hostBuild : ReadWindowsFileBuild(setup);
     auto command = L"\"" + setup.wstring() + L"\"";
-    if (setupBuild >= 26100) {
+    if (driver.empty()) {
+        // Launch Windows Setup without a driver answer.
+    } else if (setupBuild >= 26100) {
         command += L" /InstallDrivers \"" + driver.wstring() + L"\"";
     } else {
         const auto answer = workspace / L"unattend.xml";
@@ -510,26 +516,31 @@ static int RunPeAction(const fs::path& bundle, const PeText& text, bool setup)
     }
     const auto build = setup ? media[target].build : targets[target].build;
     auto matches = ScanWithProgress(bundle, build, text);
-    if (matches.empty()) {
-        Notice(text, text.noDriver);
-        return 0;
-    }
-    std::vector<std::wstring> labels;
-    for (const auto& match : matches) {
-        labels.push_back(match.name + L"  " + match.path.filename().wstring() + L"  [" + match.id + L"]");
-    }
-    // Multiple missing NICs can need different INFs; offer one action that installs all of them.
-    const bool installAllOffered = !setup && matches.size() > 1;
-    if (installAllOffered) {
-        labels.push_back(std::wstring(text.installAll) + L" (" + std::to_wstring(matches.size()) + L")");
-    }
-    const auto driver = deployment && labels.size() == 1 ? 0 : Choose(text, text.driver, labels);
-    if (driver < 0) return 0;
     std::vector<fs::path> selected;
-    if (installAllOffered && driver == static_cast<int>(matches.size())) {
-        for (const auto& match : matches) selected.push_back(match.path);
+    if (matches.empty()) {
+        if (!setup && !deployment) {
+            Notice(text, text.noDriver);
+            return 0;
+        }
+        // Setup and unattended deployment can continue; the image may carry its own network driver.
+        if (!Confirm(text, text.continueWithoutDriver, choices[target])) return 0;
     } else {
-        selected.push_back(matches[driver].path);
+        std::vector<std::wstring> labels;
+        for (const auto& match : matches) {
+            labels.push_back(match.name + L"  " + match.path.filename().wstring() + L"  [" + match.id + L"]");
+        }
+        // Multiple missing NICs can need different INFs; offer one action that installs all of them.
+        const bool installAllOffered = !setup && matches.size() > 1;
+        if (installAllOffered) {
+            labels.push_back(std::wstring(text.installAll) + L" (" + std::to_wstring(matches.size()) + L")");
+        }
+        const auto driver = deployment && labels.size() == 1 ? 0 : Choose(text, text.driver, labels);
+        if (driver < 0) return 0;
+        if (installAllOffered && driver == static_cast<int>(matches.size())) {
+            for (const auto& match : matches) selected.push_back(match.path);
+        } else {
+            selected.push_back(matches[driver].path);
+        }
     }
     std::wstring selectedNames;
     for (const auto& path : selected) {
@@ -542,7 +553,8 @@ static int RunPeAction(const fs::path& bundle, const PeText& text, bool setup)
         if (Choose(text, confirmation.c_str(), {}, 0, text.confirm, true) < 0) return 0;
         return DeployWithUi(media[target], *deployment, selected, text);
     }
-    if (!Confirm(text, setup ? text.confirmSetup : text.confirmRepair, choices[target] + L"  " + selectedNames)) {
+    if (!selected.empty() &&
+        !Confirm(text, setup ? text.confirmSetup : text.confirmRepair, choices[target] + L"  " + selectedNames)) {
         return 0;
     }
     for (const auto& path : selected) {
@@ -552,7 +564,7 @@ static int RunPeAction(const fs::path& bundle, const PeText& text, bool setup)
         }
     }
     if (setup) {
-        const auto result = StartSetup(media[target], selected[0]);
+        const auto result = StartSetup(media[target], selected.empty() ? fs::path{} : selected[0]);
         if (result == SetupStart::Started) return 0;
         Notice(text, result == SetupStart::DriverPreparationFailed ? text.setupDriverPreparationFailed : text.failed);
         return 6;

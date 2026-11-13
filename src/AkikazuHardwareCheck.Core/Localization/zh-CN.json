@@ -263,6 +263,7 @@
   "rescue.pe.noTarget": "找不到可访问的离线 Windows。请检查磁盘或在 PE 中解锁。",
   "rescue.pe.noMedia": "请插入可读取的 Windows 10 或 11 x64 安装介质后重试。",
   "rescue.pe.noDriver": "找不到匹配的签名驱动。请检查驱动目录后重试。",
+  "rescue.pe.continueWithoutDriver": "没有找到匹配的驱动。是否不添加网络驱动继续？Windows 可能自带可用驱动。",
   "rescue.pe.installAll": "安装全部匹配的驱动",
   "rescue.pe.setupDriverPreparationFailed": "无法为 Windows 安装程序准备所选驱动。请选择独立驱动包，或在首次开机的联网页面补装。",
   "rescue.pe.scan": "正在搜索离线驱动库…",
