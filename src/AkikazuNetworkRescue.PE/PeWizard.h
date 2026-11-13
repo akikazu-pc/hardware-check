@@ -519,7 +519,7 @@ static int RunPeAction(const fs::path& bundle, const PeText& text, bool setup)
         labels.push_back(match.name + L"  " + match.path.filename().wstring() + L"  [" + match.id + L"]");
     }
     // Multiple missing NICs can need different INFs; offer one action that installs all of them.
-    const bool installAllOffered = !setup && !deployment && matches.size() > 1;
+    const bool installAllOffered = !setup && matches.size() > 1;
     if (installAllOffered) {
         labels.push_back(std::wstring(text.installAll) + L" (" + std::to_wstring(matches.size()) + L")");
     }
@@ -538,9 +538,9 @@ static int RunPeAction(const fs::path& bundle, const PeText& text, bool setup)
     }
     if (deployment) {
         const auto confirmation = std::wstring(text.deployConfirm) + L"\n\n" +
-            DeploymentDetails(media[target], *deployment, selected[0]);
+            DeploymentDetails(media[target], *deployment, selected);
         if (Choose(text, confirmation.c_str(), {}, 0, text.confirm, true) < 0) return 0;
-        return DeployWithUi(media[target], *deployment, selected[0], text);
+        return DeployWithUi(media[target], *deployment, selected, text);
     }
     if (!Confirm(text, setup ? text.confirmSetup : text.confirmRepair, choices[target] + L"  " + selectedNames)) {
         return 0;

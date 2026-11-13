@@ -269,7 +269,7 @@ static bool SupportsUnattended(const SetupMedia& media)
 }
 
 static DWORD DeployWindows(const SetupMedia& media, const SetupImage& edition, const BlankDisk& selected,
-    const fs::path& inf, const PeText& text, const std::function<void(const wchar_t*)>& show,
+    const std::vector<fs::path>& infs, const PeText& text, const std::function<void(const wchar_t*)>& show,
     const wchar_t*& failedStep)
 {
     failedStep = text.deployPreparing;
@@ -302,8 +302,16 @@ static DWORD DeployWindows(const SetupMedia& media, const SetupImage& edition, c
     const auto work = fs::path(temp) / (L"NetworkRescueDeploy-" + std::to_wstring(GetCurrentProcessId()));
     if (!fs::create_directory(work, error)) return ERROR_CANNOT_MAKE;
     const DeploymentWorkspace cleanup{ work };
-    const auto driver = PrepareSetupDriver(inf, work);
-    if (driver.empty() || !VerifyNetworkDriver(driver / inf.filename())) return ERROR_INVALID_DATA;
+    std::vector<fs::path> stagedDrivers;
+    for (size_t index = 0; index < infs.size(); ++index) {
+        const auto stage = work / (L"driver-" + std::to_wstring(index));
+        std::error_code stageError;
+        fs::create_directory(stage, stageError);
+        if (stageError) return ERROR_CANNOT_MAKE;
+        const auto driver = PrepareSetupDriver(infs[index], stage);
+        if (driver.empty() || !VerifyNetworkDriver(driver / infs[index].filename())) return ERROR_INVALID_DATA;
+        stagedDrivers.push_back(driver);
+    }
     const auto answer = work / L"Unattend.xml";
     const auto partitions = work / L"partitions.txt";
     const auto letters = FreeDeploymentLetters();
@@ -343,9 +351,11 @@ static DWORD DeployWindows(const SetupMedia& media, const SetupImage& edition, c
 
     failedStep = text.deployDrivers;
     show(failedStep);
-    code = RunDeploymentTool(dism, L"/Image:" + DeploymentQuoted(windowsRoot / L".") + L" /Add-Driver /Driver:" +
-        DeploymentQuoted(driver / inf.filename()) + dismScratch + log(L"drivers.log"));
-    if (code != ERROR_SUCCESS && code != ERROR_SUCCESS_REBOOT_REQUIRED) return code;
+    for (size_t index = 0; index < stagedDrivers.size(); ++index) {
+        code = RunDeploymentTool(dism, L"/Image:" + DeploymentQuoted(windowsRoot / L".") + L" /Add-Driver /Driver:" +
+            DeploymentQuoted(stagedDrivers[index] / infs[index].filename()) + dismScratch + log(L"drivers.log"));
+        if (code != ERROR_SUCCESS && code != ERROR_SUCCESS_REBOOT_REQUIRED) return code;
+    }
 
     failedStep = text.deployBoot;
     show(failedStep);
@@ -407,16 +417,19 @@ static std::optional<DeploymentSelection> ChooseDeployment(const SetupMedia& med
 }
 
 static std::wstring DeploymentDetails(const SetupMedia& media, const DeploymentSelection& plan,
-    const fs::path& inf)
+    const std::vector<fs::path>& infs)
 {
-    return WindowsLabel(media.root, media.build) + L"  " + EditionLabel(plan.edition) + L"\n" +
-        DiskLabel(plan.disk) + L"\n" + inf.filename().wstring();
+    auto result = WindowsLabel(media.root, media.build) + L"  " + EditionLabel(plan.edition) + L"\n" +
+        DiskLabel(plan.disk);
+    for (const auto& inf : infs) result += L"\n" + inf.filename().wstring();
+    return result;
 }
 
-static DWORD RunUnattended(const SetupMedia& media, const DeploymentSelection& plan, const fs::path& inf,
-    const PeText& text, const std::function<void(const wchar_t*)>& show, const wchar_t*& step)
+static DWORD RunUnattended(const SetupMedia& media, const DeploymentSelection& plan,
+    const std::vector<fs::path>& infs, const PeText& text, const std::function<void(const wchar_t*)>& show,
+    const wchar_t*& step)
 {
-    const auto code = DeployWindows(media, plan.edition, plan.disk, inf, text, show, step);
+    const auto code = DeployWindows(media, plan.edition, plan.disk, infs, text, show, step);
     if (code != ERROR_SUCCESS) return code;
     step = text.deployRestart;
     show(step);
@@ -432,8 +445,8 @@ static std::wstring DeploymentFailure(const PeText& text, const wchar_t* step, D
     return std::wstring(text.deployFailed) + L"\n" + step + L"  (" + std::to_wstring(code) + L")";
 }
 
-static int DeployWithUi(const SetupMedia& media, const DeploymentSelection& plan, const fs::path& inf,
-    const PeText& text)
+static int DeployWithUi(const SetupMedia& media, const DeploymentSelection& plan,
+    const std::vector<fs::path>& infs, const PeText& text)
 {
     const auto progress = CreateWindowExW(WS_EX_TOOLWINDOW, L"STATIC", text.deployPreparing,
         WS_POPUP | WS_CAPTION | WS_VISIBLE | SS_CENTER | SS_CENTERIMAGE,
@@ -451,7 +464,7 @@ static int DeployWithUi(const SetupMedia& media, const DeploymentSelection& plan
         UpdateWindow(progress);
     };
     const wchar_t* step = text.deployPreparing;
-    const auto code = RunUnattended(media, plan, inf, text, show, step);
+    const auto code = RunUnattended(media, plan, infs, text, show, step);
     EnableWindow(wizardOwner, TRUE);
     DestroyWindow(progress);
     if (font) DeleteObject(font);

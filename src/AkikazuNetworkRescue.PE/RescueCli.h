@@ -172,10 +172,10 @@ static int RunCli(const fs::path& bundle, bool isPe, int language)
     const auto& match = matches[driver - 1];
     if (deployment) {
         const auto& source = media[selected - 1];
-        std::wcout << DeploymentDetails(source, *deployment, match.path) << L'\n';
+        std::wcout << DeploymentDetails(source, *deployment, { match.path }) << L'\n';
         if (!ChooseCli(text, text.deployConfirm, { text.confirm }, false)) return 0;
         const wchar_t* step = text.deployPreparing;
-        const auto code = RunUnattended(source, *deployment, match.path, text,
+        const auto code = RunUnattended(source, *deployment, { match.path }, text,
             [](const wchar_t* message) { std::wcout << message << L'\n' << std::flush; }, step);
         if (code == ERROR_SUCCESS) return 0;
         std::wcout << DeploymentFailure(text, step, code) << L'\n';
