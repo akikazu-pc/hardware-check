@@ -93,7 +93,7 @@ public sealed class RescueModelCatalogTests
         var model = Assert.Single(RescueModelCatalog.Search("HP Presence 24"));
         Assert.Equal("all-in-one", model.Type);
         Assert.Equal("oem-driver-pack-listed", model.Windows10Evidence);
-        Assert.Equal("pending", model.Windows11Evidence);
+        Assert.Equal("oem-os-not-listed", model.Windows11Evidence);
         Assert.Equal(RescueDeviceCategory.Other, model.Category);
         Assert.Equal(RescueDeviceTag.AllInOne, model.DeviceTag);
         Assert.Contains(model, RescueModelCatalog.Search("", RescueDeviceCategory.Other, RescueDeviceTag.AllInOne));
