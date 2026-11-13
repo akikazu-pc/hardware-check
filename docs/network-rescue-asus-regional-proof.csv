@@ -1,0 +1,5 @@
+model,windows,status,title,version,url,source
+ROG MAXIMUS Z890 HERO,10,oem-wlan-listed,"Intel Wi-Fi Driver V24.20.0.4 for Windows10, Windows11 64-bit.",24.20.0.4,https://dlcdnets.asus.com/pub/ASUS/mb/08WIRELESS/DRV_WiFi_Intel_TP_W11_64_V242004_20260513R.zip,https://www.asus.com/tw/supportonly/rog maximus z890 hero/helpdesk_download/
+ROG MAXIMUS Z890 HERO,11,oem-wlan-listed,"Intel Wi-Fi Driver V24.20.0.4 for Windows10, Windows11 64-bit.",24.20.0.4,https://dlcdnets.asus.com/pub/ASUS/mb/08WIRELESS/DRV_WiFi_Intel_TP_W11_64_V242004_20260513R.zip,https://www.asus.com/tw/supportonly/rog maximus z890 hero/helpdesk_download/
+ROG STRIX B860-G GAMING WIFI,10,oem-wlan-not-listed,Windows 10 list has no wireless category; Windows 11 lists MediaTek MT7925/7927 5.7.0.6054,,,https://www.asus.com/tw/supportonly/rog strix b860-g gaming wifi/helpdesk_download/
+TUF Gaming A16 FA608UH,11,oem-wlan-listed,Realtek無線區域網驅動程式 / MediaTek 無線網路驅動程式,V6001.16.174.103 / V3.6.2.1434,https://dlcdnets.asus.com/pub/ASUS/GamingNB/Image/Driver/Networking/49948/WirelessLan_ROG_Realtek_B_V6001.16.174.103Sub1_49948.exe,https://www.asus.com/tw/supportonly/fa608uh/helpdesk_download/
