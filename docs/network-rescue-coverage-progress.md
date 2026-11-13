@@ -907,3 +907,11 @@ Lenovo 待核 7→1 格（16ADR10H 的 Win10）。本轮合计关闭 **6 格**�
 ASUS 侧规律：`rog.asus.com/{locale}/laptops/{category}/{series-slug}/spec/` 列出精确 SKU（如 G513RW-R76R3070T、G713PV-R98R4060T）；支持页 `asus.com/{locale}/supportonly/{code}/helpdesk_download/` 的 GetPDOS/GetPDDrivers 给系统与驱动。G513IR／G713IR／G733QSA 的日服 Win11 列表同样只有触控板/Hotfix/工具，无网络类目。
 
 本轮合计关闭 **4 格**：待核 32→**28**。
+
+### 2026-11-13 DrvHub 第三方驱动库接入
+
+用户提供的 `jp.drvhub.net` 按型号收录驱动卡片：页面 `https://jp.drvhub.net/laptops/{品牌}/{slug}`，卡片含设备名、驱动类型、厂商、版本、INF 与硬件 ID，系统选择器只有「Windows 10 / 11 (64-bit)」一档。品牌索引 `https://jp.drvhub.net/laptops/{品牌}?page=N` 列出全部型号页，可据此建立型号→URL 映射。
+
+新增 [collect-drvhub.py](../scripts/collect-drvhub.py)：抓取品牌索引、按型号代码精确匹配、解析 WLAN 卡片，`--apply` 把该型号待核格写成 `third-party-wlan-listed` 并记录页面 URL。该状态在 `audit-network-rescue.py` 的状态词表中，检索结果单独存于 [DrvHub 证据表](network-rescue-drvhub-proof.csv)。
+
+已匹配并关闭：Aspire A515-41G（Qualcomm QCA9377 12.0.0.1272）、Nitro AN514-54（Intel AX200 24.70.0.3）、ROG Strix SCAR 17 G733QSA（Intel AX200/AX210、MediaTek MT7921）。DrvHub 没有 Acer 各「S」变体、G513IR、Pro WS 665-ACE 的型号页。

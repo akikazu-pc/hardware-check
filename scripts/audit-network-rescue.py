@@ -28,6 +28,7 @@ STATUSES = {
     "pending", "oem-wlan-listed", "oem-wlan-not-listed", "oem-os-not-listed",
     "oem-driver-pack-listed", "no-factory-wifi", "oem-package-indexed",
     "oem-os-upgrade-tested", "oem-wlan-not-supported", "outside-x64-record",
+    "third-party-wlan-listed",
 }
 SYSTEM_FIELDS = {"10": "windows10X64Evidence", "11": "windows11X64Evidence"}
 INVENTORY_FIELDS = ["brand", "type", "platform", "model", "windows", "wlanEvidence", "reason", "detail", "source"]
