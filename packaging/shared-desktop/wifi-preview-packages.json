@@ -2871,6 +2871,25 @@
       "minimumWindowsBuild": 10240,
       "adapterName": "Intel AX201 / Wireless-AC 9560",
       "targetWindows": "windows10"
+    },
+    {
+      "id": "acer-nfa344a-w10",
+      "version": "12.0.0.455",
+      "source": "https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Atheros_12.0.0.455_W10x64_A.zip?acerid=636591873794752550",
+      "archiveSha256": "78F289A68D25578F832531B7E8C0AA2D7C870908B9C1DEFE51B6ECD9EA392152",
+      "driverDirectory": "Wireless LAN_Atheros_12.0.0.455_W10x64_(NFA344A HAI)/DriverOnly/x64",
+      "scope": "Acer Nitro AN515-52 OEM WLAN; Win10 x64 recovery by INF hardware ID",
+      "archiveLayout": "direct",
+      "devicePrefixes": [
+        "PCI\\VEN_168C&DEV_003E&SUBSYS_080711AD&REV_32",
+        "PCI\\VEN_168C&DEV_003E&SUBSYS_083711AD&REV_32",
+        "PCI\\VEN_168C&DEV_003E&SUBSYS_180711AD&REV_32",
+        "PCI\\VEN_168C&DEV_003E&SUBSYS_E09D105B&REV_32"
+      ],
+      "windows11Only": false,
+      "minimumWindowsBuild": 10240,
+      "adapterName": "Qualcomm Atheros NFA344A",
+      "targetWindows": "windows10"
     }
   ]
 }

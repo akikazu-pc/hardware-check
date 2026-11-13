@@ -973,6 +973,12 @@ Acer 的三个 Win10 候选 ZIP 也已核对 `Netwtw08.INF` 版本。AX201、Kil
 - **9560 Win10 x64 候选**：下载并静态提取 Acer 为 `TMB311-31R/TMB311-31RN` 列出的 SCCM CAB。CAB SHA-256 `5885492638863b332ffc40d3ac1e7cc3f775b6ccde11dd97c263eee228f42c4e`，含 `Netwtw08.INF` 21.50.1.1，CAT 签名有效。该 INF 的 156 条 9560 完整 PCI 子系统 ID 均在带 B 型号的 Acer 22.0.1.1 ZIP 中出现。这加强了两份包的对应，仍需确认精确实机或正式别名。[Acer SCCM 表](https://community.acer.com/en/en/kb/articles/15378-microsoft-system-center-configuration-manager-sccm) · [CAB](https://global-download.acer.com/SupportFiles/Files/Support/SCCM/TMB311-31_Windows10_All.cab)
 - **SP513-55NA**：精确型号的备件目录出现 Intel WLAN，商品图片料号 `KE.11X0N.021` 对应 Killer AX1650i。备件可用性与 FCC 送审配置均无法确认零售出厂网卡，仍缺可对应精确型号的 PCI ID 或出厂物料记录。[精确型号备件目录](https://dev.ipc-computer.de/acer/notebook/spin-serie/spin-5-sp513-55na/) · [料号资料](https://www.acerparts.ca/product/ke-11x0n-021/)
 
+### 按实机硬件 ID 救援
+
+- **SP513-55NA / KE.11X0N.021**：Acer Killer 22.40.0.7 Win10 x64 包的 `Netwtw08.INF` 通过 CAT 内核签名校验。Killer AX1650i 的 6 个 INF ID（`SUBSYS_16521A56`）均已由现有 Win10 救援包 `acer-b311ra32-intel-w10` 覆盖，复核该包 INF 的签名通过。带 B 的两条扫描记录所列 Intel 9560 `31DC/00348086` 和 AX201 `4DF0/00748086` 也有现成匹配。[Acer Killer 原包](https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Killer_22.40.0.7_W10x64_A.zip?acerid=637599458534523260)
+- **Qualcomm NFA344A**：新增 `acer-nfa344a-w10`，从 Acer Nitro AN515-52 原厂 12.0.0.455 ZIP 提取 x64 驱动目录。核对 `netathr10x.inf` 的 Win10 AMD64 段，以及 INF、SYS 在 `qcamainext10x.cat` 下的内核签名。清单记录四个 Acer／Lite-On 完整 PCI ID，保留 INF 要求的 `REV_32`。这是 Aspire S 等机型的网卡候选，按实机 ID 选择。[Acer 原厂下载页](https://www.acer.com.cn/getmodel.html?name=85000002834&type=1)
+- **其他候选**：现有包已提供 AX200、MT7921、MT7922（3.5.0.1349，INF 要求 build 16299 起）和 RTL8852BE。核对 MediaTek 与 Realtek 的 x64 INF 和 CAT 签名，适用范围以实际子系统 ID 为准。只有 Wi-Fi 代际、系列或认证信息的型号仍需实机 ID。ASUS Pro WS 665-ACE 仍缺 WLAN 模块线索。整机待核仍为 19 格，实机安装和联网未验证。
+
 ### Aspire S 后缀出厂网卡复查
 
 七款 Aspire S 的 Win10 x64 格继续待核。本轮未找到能把出厂 WLAN 料号或实机完整 PCI ID 对应到精确 S 型号的公开记录。
