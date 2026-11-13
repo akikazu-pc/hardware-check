@@ -841,3 +841,10 @@ Lenovo 待核 7→1 格（16ADR10H 的 Win10）。本轮合计关闭 **6 格**�
 - 因此 Win11 记列出、Win10 记未列系统（Dell 支持列表无 Windows 10）。
 
 新增 [collect-dell-alienware.py](../scripts/collect-dell-alienware.py) 与 [dell-api-fetch.mjs](../scripts/dell-api-fetch.mjs)（cookie 文件传入，自动解密与分类，支持 `--apply`），干跑验证输出与手工结论一致。**Dell 清零**，本轮合计关闭 **8 格**：待核 74→**66**。
+
+### 2026-11-13 区域站点与第三方来源的边界
+
+- **ASUS 中国站**：`www.asus.com.cn/supportonly/<sku>/helpdesk_download/` 同样是 `GetPDOS`／`GetPDDrivers`；G713IR/G513IR/G733QSA 的中国站 Win11 列表依旧只有触控板/Hotfix/软件共 1–3 个文件，无网络类目（与全球站一致）。Pro WS 665-ACE 中国站两系统列表都有 LAN+芯片组、无 WLAN，但 ASUS 仍未发布该型号规格（techspec 只有一行、GetPDManual Count 0），出厂无线状态无法确认。
+- **MSI 中国站**：`cn.msi.com` 对面板接口返回 403，全球站结果不变（MEG X570 GODLIKE 只有 Killer 通用包、PRO H610M-S WIFI DDR4 II 面板为空）。
+- **Acer SFA14-55M**：欧服记录列出 11 个 Win11 驱动（Audio、Bluetooth RTL8852BE、Chipset Utility、DTT/NPU/PMT、IO），无 WLAN 文件；RTL8852BE 为 Wi-Fi 6 + BT 组合模块，出厂无线存在 → Win11 按未列关闭（1 格）。SFA14-11 只有 Chipset 与 All Driver package 两个文件，列表无效，保持待核。
+- **第三方驱动库**：Softpedia、driverscollection、driverscape 直连/代理均被拦截；Treexy 只按厂商/设备分类，没有精确型号+系统的 WLAN 列表；Memento 聚合器不可用。第三方来源无法给出可核对的原厂驱动包。
