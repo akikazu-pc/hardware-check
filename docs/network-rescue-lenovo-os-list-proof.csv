@@ -1,0 +1,8 @@
+model,productUrl,description,systems,windows10,windows11,status
+Legion 5 15IAX11,https://support.lenovo.com/us/en/products/laptops-and-netbooks/legion-series/legion-5-15iax11/downloads,LEGION-5-15IAX11,,no,no,os-list-empty
+Legion 5 16IAX10,https://support.lenovo.com/us/en/products/laptops-and-netbooks/legion-series/legion-5-16iax10/downloads,LEGION-5-16IAX10,Windows 11 (64-bit),no,yes,os-list
+Legion Pro 5 16IAX10,https://support.lenovo.com/us/en/products/laptops-and-netbooks/legion-series/legion-pro-5-16iax10/downloads,LEGION-PRO-5-16IAX10,Windows 11 (64-bit),no,yes,os-list
+Legion Pro 5 16IAX10H,https://support.lenovo.com/us/en/products/laptops-and-netbooks/legion-series/legion-pro-5-16iax10h/downloads,LEGION-PRO-5-16IAX10H,Windows 11 (64-bit),no,yes,os-list
+Legion Pro 5 16IRX10,https://support.lenovo.com/us/en/products/laptops-and-netbooks/legion-series/legion-pro-5-16irx10/downloads,LEGION-PRO-5-16IRX10,Windows 11 (64-bit),no,yes,os-list
+Legion Pro 7 16ADR10H,https://support.lenovo.com/us/en/products/laptops-and-netbooks/legion-series/legion-pro-7-16adr10h/downloads,LEGION-PRO-7-16ADR10H,,no,no,os-list-empty
+Legion Pro 7 16AFR10H,https://support.lenovo.com/us/en/products/laptops-and-netbooks/legion-series/legion-pro-7-16afr10h/downloads,LEGION-PRO-7-16AFR10H,,no,no,os-list-empty
