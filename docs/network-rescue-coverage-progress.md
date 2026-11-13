@@ -954,3 +954,13 @@ Acer 的三个 Win10 候选 ZIP 也已核对 `Netwtw08.INF` 版本。AX201、Kil
 [驱动清单](../packaging/shared-desktop/wifi-preview-packages.json)和[原厂下载索引](network-rescue-driver-index.csv)已收录两份 ROG WLAN 包与 Pro WS 665-ACE 的两份按系统区分的 Intel LAN 包。Windows 10 LAN 门槛为 build 17763，Windows 11 LAN 门槛为 build 22000。所有归档均按 SHA-256 校验并静态解包。目录版成品已检查 INF／CAT／SYS，Win11 build 26300 的 SetupAPI 验证了两份 WLAN 目录的四个匹配 INF 和 Win11 LAN 目录的两个匹配 INF。Win10 LAN 的 CAT 签名已通过检查。真实设备安装与联网均为 Unverified。
 
 离线完整版已按现有打包脚本重建并逐文件验证 ZIP 内容，四个目标 INF 已在成品中确认。完整版 SHA-256 为 `bb9aaced21032faa3ff15603916e45b152989e3c74ddea1424c6d1e394891d55`。
+
+### Win10 精确 SKU 补证
+
+待核由 **20 降至 19**，余 Acer 笔记本 17 格和 ASUS 主板 WLAN 2 格。
+
+- **TravelMate Spin B311RA-32**：Acer SCCM 下载表明确将 `TMB311RA-32` 列在 Win10 x64 包覆盖范围内。官方 SCCM EXE 的 SHA-256 为 `8c246110f920994026010a2076355445c51ef9fca7fb022dcc5dc39f674aa272`。静态解包后，`Intel_WLAN_9560` 和 `Intel_WLAN_AX201` 中的 `Netwtw08.INF`、`netwtw08.cat`、`NETwtw08.sys` 均与较小的 Acer WLAN ZIP 中对应文件逐一同哈希。INF 版本为 `22.0.0.6`，含 9560 的 `PCI\VEN_8086&DEV_02F0&SUBSYS_00348086` 和 AX201 的 `PCI\VEN_8086&DEV_02F0&SUBSYS_00748086` 等匹配项。两份目录的 CAT 均通过 Microsoft WHCP 签名验证。救援包使用经比较的小 ZIP，仅收录其中的无线驱动目录，按完整硬件 ID 选择，实机安装仍为 Unverified。[Acer SCCM 列表](https://community.acer.com/en/en/kb/articles/15378-microsoft-system-center-configuration-manager-sccm) · [SCCM 原包](https://global-download.acer.com/SupportFiles/Files/Support/SCCM/TMB311-32_TMB311RN-32_Windows10_All.exe) · [小 ZIP](https://global-download.acer.com/GDFiles/Driver/Wireless%20LAN/Wireless%20LAN_Intel_22.0.0.6_W10x64_A.zip?acerid=637527559434678697)
+- **P40-41-G2、P40-41-G3、P50-41-G3**：Acer 公告分别列出了这些型号。SCCM 表里的 TMP214-41／TMP215-41 G2/G3 包未列这三个 SKU，公开 Linux Hardware Project Acer DMI 索引未检出对应实机记录。仍需精确订货号的出厂网卡配置或可对应精确型号的完整 PCI ID。[Acer 型号公告](https://community.acer.com/es/kb/articles/16277-falta-la-opcion-de-contrasena-de-hdd-en-el-bios-del-sistema-despues-de-reemplazar-ssd) · [Acer SCCM 列表](https://community.acer.com/en/en/kb/articles/15378-microsoft-system-center-configuration-manager-sccm) · [DMI 索引](https://github.com/linuxhw/DMI)
+- **其他待核**：公开 DMI 索引可见带 B 的 B311R-31／B311RN-31，欠缺无 B 拼法的实机对应。FCC 的 SP513-55NA 送审资料增加了 MT7921 配置线索。Acer 商店确认 CN516-72G／72P 的 AX1650i，原厂驱动的 INF 和签名已核对，无后缀 CN516-72 仍缺型号对应。SF314-44G、X40-52-M／MG、Aspire S 变体和 Pro WS 665-ACE WLAN 保留待核。[SP513-55NA FCC 附件](https://fccid.io/HLZAI7921W/User-Manual/User-manual-5262930) · [CN516-72G 原厂规格](https://store.acer.com/en-us/conceptd-5-laptop-cn516-72g-787y) · [CN516-72P 原厂规格](https://store.acer.com/en-ie/conceptd-5-pro-laptop-cn516-72p-black-nx-c6bek-002)
+
+离线完整版 ZIP 已逐文件验证。成品内 Win10 B311RA-32 的 INF、CAT、SYS 已与 SCCM 同哈希记录复核。ZIP SHA-256 为 `48e4c65ccfdc1f1dbb7b901f512b8079cf29b7bfd63563e360c7d4eca4d3055f`。
