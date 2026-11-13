@@ -7,7 +7,7 @@ SKU, closes the cell when the OEM OS list has no entry for that system, and then
 cell only when every SKU recorded under it agrees.
 
 Usage: python scripts/verify-asus-sku-os.py docs/network-rescue-model-gaps.csv \
-    docs/network-rescue-asus-laptop-sku-proof.csv artifacts/sku-os.csv [--apply]
+    docs/network-rescue-asus-sku-os-proof.csv [--apply]
 """
 import argparse
 from collections import defaultdict
@@ -112,7 +112,6 @@ def read(path):
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("models", type=Path)
-    parser.add_argument("proof", type=Path, help="SKU proof table to append the rechecked OS lists to")
     parser.add_argument("output", type=Path)
     parser.add_argument("--apply", action="store_true")
     parser.add_argument("--workers", type=int, default=2)
