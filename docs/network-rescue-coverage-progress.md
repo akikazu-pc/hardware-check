@@ -758,3 +758,14 @@ BIOSTAR 的 `export/spec_export.php?S_ID=...` 返回的其实是 **PDF 字节**�
 - **B760M PG Riptide**：`Download.html` 只有 356 字节占位，页面无下载数据，维持待核。
 
 新增 [collect-asrock-via-reader.py](../scripts/collect-asrock-via-reader.py)（按驱动块与 OS 标记分类，支持 `--apply`）。本轮合计关闭 **7 格**：待核 178→**171**。
+
+### 2026-11-13 阅读器代理的边界
+
+本轮继续用 `r.jina.ai` 探测剩余缺口，确认了代理能解决与不能解决的范围：
+
+- **能**：静态/服务端渲染的页面与 PDF（BIOSTAR 规格 PDF、Gigabyte `Download.html` 表格、ASRock `Download.html`）。
+- **不能**：纯前端接口取数的页面。Acer 驱动页（`/drivers` 渲染后只有导航与 FAQ）、Lenovo 驱动页（页面正常但驱动列表为空）、Dell Alienware 驱动页（15 KB 外壳）、EVGA 下载中心（1.3 KB 外壳）都拿不到驱动数据；直接代理解析 Lenovo 的 `/api/v4/downloads/drivers` 也只得到 200 多条错误 JSON。
+- **Gigabyte B860M A PRO WIFI7**：官网与 US 站的 `B860M-A-PRO-WIFI7`、`-rev-10/11` 均 404，仅手册 PDF 存在，6 格继续缺下载表。
+- **Dell**：Edge 无头抓包只拿到 11 个 URL（Akamai 拦截），未发现驱动 XHR 端点。
+
+本轮无新增关闭：待核 **171**（缺口清单已刷新到 171 行）。
