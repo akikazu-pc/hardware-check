@@ -589,3 +589,11 @@ MSI 的笔记本系列页 OS 选择器常常为空，区域 SKU 藏在系列 ban
 同一套「目录 + 包声明」规则镜像后也适用于旧机型：21 个 Win11 待核型号（2017–2019）在 HP 驱动包目录里只有 Windows 10 条目，其驱动包的 CVA 只声明 `WT64_*`（WT64 = Windows 10 x64）；其中 6 款的某个包没有 CVA OS 段，改用该包发布说明的 `OPERATING SYSTEM(S)`（仅 Windows 10）和 `HARDWARE PRODUCT MODEL(S)`（含精确型号）核对。21 格全部关闭，惠普笔记本待核清零。
 
 本轮合计关闭 **21 格**：待核 251→**230**（主板 60／60，笔记本 Win10 70、Win11 40）。
+
+### 2026-11-13 Swift Air、LiveMixer 与 X570 AQUA
+
+- Swift Air 16 三个系列的 Win10 侧：除一个 SKU 只有 Win11 文件（因此没有 Win10 文件）外，其余全部 `oem-os-not-listed`，Win10 格关闭 3 格；Win11 侧仍有短列表，保持待核。
+- B650 LiveMixer、Z790 LiveMixer 的手册只写 M.2 Key-E 插槽（无随板模块），下载列表两系统都未列 WLAN，按两处都未列关闭 4 格。
+- X570 AQUA 手册规格写明「Wireless LAN: Intel 802.11ax WiFi Module」，下载列表两系统都列 WLAN 驱动，关闭 2 格并补模块字段。
+
+本轮合计关闭 **9 格**：待核 230→**221**（主板 57／57，笔记本 Win10 67、Win11 40）。
