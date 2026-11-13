@@ -8,6 +8,7 @@
 | --- | --- | --- |
 | 按快照清单增量更新 | [双击入口](../scripts/update-network-rescue.cmd)、[更新脚本](../scripts/update-network-rescue.py) | 检查快照及 OEM 目录，缓存元数据，按哈希复用包，处理新地址、变更和重试。首次笔记本与其他设备扫描可建立基线。可按设备分跑，限量补采优先选覆盖更多待验型号的包。结果写入本地状态目录。 |
 | 华硕全量待核和严格回填 | [ASUS 采集脚本](../scripts/collect-asus-wlan-downloads.py) | `--all-pending` 查询主表的待核型号和系统。精确匹配型号，保留 `+`，并核对 OEM x64 包标题。`--apply-oem-evidence` 才写主表。正向回填要求已有出厂无线证据。回填未列出要求原厂接口返回有效列表，且已有出厂无线证据或原厂完整规格也未列 WLAN。空响应不用于回填。 |
+| 华硕笔记本系列拆分 SKU | [ASUS 笔记本 SKU 脚本](../scripts/collect-asus-laptop-skus.py) | 从系列支持页的型号选择器或 ROG `GetPDCPUName` 取得精确 SKU，再逐 SKU 查询 `GetPDOS`／`GetPDDrivers`（45 = Win10、52 = Win11，均 x64）。系列行只在全部 SKU 结论一致时关闭。ROG 页面用浏览器会话快照 `--rog-capture`；`--apply-oem-evidence` 才写主表，重复运行为 0 项变化。 |
 | 逐板候选与 SHA-256 批次 | [逐板采集脚本](../scripts/collect-windriverindex-wlan.py) | 校验快照文件和逐板报告的代次、型号、厂商。以厂商、无线家族、版本、日期匹配唯一归档。`--package-plan` 按有效 SHA-256 分组，并按涉及型号数排序。输出供下载与验证，脚本不回填主表。 |
 | 静态 ZIP 签名审计 | [库审计](../scripts/audit-network-rescue-library.ps1)、[ZIP 审计](../scripts/audit-network-rescue-zip.py) | 更新器检查直接 ZIP 中可见的驱动 INF，跳过只有 `autorun.inf` 的安装封装。签名审计记录 Windows 构建、INF 路径和硬件 ID。ZIP 审计复用内容未变的包，发行验收使用 `--fresh`。 |
 | 待核统计和应用检索导出 | [覆盖统计](../scripts/report-network-rescue-coverage.py)、[目录导出](../scripts/export-network-rescue-search.py) | 分系统、厂商、缺口和系列层级统计。导出更新器来源为[嵌入检索目录](network-rescue-search-models.csv)，应用构建后可搜索。双击更新本身只更新本地目录。 |
@@ -43,13 +44,16 @@ python scripts/collect-windriverindex-wlan.py docs/network-rescue-model-gaps.csv
 
 ## 当前待核与接手顺序
 
+截至 `faf66de`（2026-11-13）。主板 Win10／Win11 各 93 条，笔记本 Win10 321 条、Win11 221 条。
+
 | 范围 | 待核 | 最大缺口 |
 | --- | ---: | --- |
-| 主板 Win10 x64 | 767 | MSI 408 |
-| 主板 Win11 x64 | 814 | MSI 409 |
-| 笔记本 Win10 x64 | 669 | Acer 401 |
-| 笔记本 Win11 x64 | 320 | Acer 108、MSI 100 |
+| 主板 Win10 x64 | 93 | ASUS 34、ASRock 19 |
+| 主板 Win11 x64 | 93 | ASUS 33、ASRock 22 |
+| 笔记本 Win10 x64 | 321 | Acer 130 |
+| 笔记本 Win11 x64 | 221 | Acer 102、MSI 77 |
 
-1. MSI 主板先从已有的 239 条签名候选中按确切型号补原厂下载证据。已有 6 个包的 INF 字节和签名证据可复用。原厂接口不可读时保留来源和未通过的原因。
-2. Acer 先补只有系列名的精确 SKU，再找按系统发布的 OEM 下载。对已知精确型号，合规声明只能补芯片候选，仍需逐型号包证据。
-3. 每轮重算四组待核，分别报告已核 OEM 列表、签名候选、实机结果和无新增的来源。若同一路线已经复跑无变化，转到尚可取得的独立证据。待核目标为零，当前未达到。
+1. Acer 笔记本先补只有系列名的精确 SKU，再找按系统发布的 OEM 下载。现有 130／102 条待核，是两组最大缺口。
+2. MSI 笔记本 85／77 与 HP 63／21：MSI 的 Killer 通用包要拆包核对 INF，新款笔记本的原厂驱动列表为空；HP 用 HPIA 精确引用，只有矩阵范围说明的 Win10 条目继续保留原厂证据缺口。
+3. 主板余项集中在 ASUS 34／33、ASRock 19／22、MSI 18／18，另有 BIOSTAR 12／12、GIGABYTE 8／6。华硕笔记本拆分后，82 个系列中 7 个仍有待核格，3 个系列未取到型号列表。
+4. 每轮重算四组待核，分别报告已核 OEM 列表、签名候选、实机结果和无新增的来源。若同一路线已经复跑无变化，转到尚可取得的独立证据。待核目标为零，当前未达到。

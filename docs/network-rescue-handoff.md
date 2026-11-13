@@ -4,10 +4,10 @@
 
 ## 接手基线
 
-- GitHub 仓库为 [akikazu-pc/hardware-check](https://github.com/akikazu-pc/hardware-check)。远端 `main` 已合并至 [`ee26ee4`](https://github.com/akikazu-pc/hardware-check/commit/ee26ee4ddf2cb887c9a20c04bb4af472de6b8b42)，`proto/shared-desktop` 已删除。合并后相对该分支最后提交 `2f446fd` 的树差异只有 `AGENTS.md`。
+- GitHub 仓库为 [akikazu-pc/hardware-check](https://github.com/akikazu-pc/hardware-check)。远端 `main` 为 [`1347ce8`](https://github.com/akikazu-pc/hardware-check/commit/1347ce8101c69193727e133f84e8732458d57690)，其中包含合并 [`ee26ee4`](https://github.com/akikazu-pc/hardware-check/commit/ee26ee4ddf2cb887c9a20c04bb4af472de6b8b42)，`proto/shared-desktop` 已删除。合并后相对该分支最后提交 `2f446fd` 的树差异只有 `AGENTS.md`。
 - `1fb8dcc` 接入 PE 空盘部署，`9c55511` 收录 B850M 普通版无线驱动，`2f446fd` 修复 I226-V 兼容 ID 漏匹配。本地 `main` 的补库提交已与远端 `1347ce8` 合并到 `eebb252`，按包 ID 和行键合并索引，重复的华硕 MediaTek 3.5.0.1349 包统一为 `asus-mb-mtk-3501349`。补库流程见[采集与核验交接](network-rescue-catalog-handoff.md)。之后直接在 `main` 上开发。
-- [合并后 GitHub Actions](https://github.com/akikazu-pc/hardware-check/actions/runs/43266106438)已通过。以下安装包是本地产物。本次合并尚未制作新 GitHub Release、提交商店或部署网站。
-- 2026-11-13 结束时本地 `main` 为 `62ccca5`，比远端 `1347ce8` 多 45 个提交，均未 push，远端 CI 为 Unverified。其中 `38d4e71` 修复运行中 Windows 无法为 I226-V 安装驱动，`62ab531` 修正 PE 命令行版本列表重复编号，`e692526`、`bfed381`、`62ccca5` 记录虚拟机验收；其余为补库会话的提交。
+- [`ee26ee4` 的 GitHub Actions](https://github.com/akikazu-pc/hardware-check/actions/runs/43266106438)和 [`1347ce8` 的运行](https://github.com/akikazu-pc/hardware-check/actions/runs/43266826000)均已通过。以下安装包是本地产物。本次合并尚未制作新 GitHub Release、提交商店或部署网站。
+- 截至 `faf66de`（2026-11-13 09:13 JST），本地 `main` 比远端 `1347ce8` 多 47 个提交，均未 push，远端 CI 为 Unverified。其中 `38d4e71` 修复运行中 Windows 无法为 I226-V 安装驱动，`62ab531` 修正 PE 命令行版本列表重复编号，`e692526`、`bfed381`、`62ccca5` 记录虚拟机验收，`faf66de` 拆分华硕笔记本 SKU；其余为补库会话的提交。
 
 ## 使用方式和交付包
 
@@ -36,12 +36,13 @@
 | 有分区磁盘保护 | 差分盘包含已有 Windows，GUI 和 CLI 均未将其列为无人值守目标。该 Windows 仍可由离线修复功能发现。 |
 | 驱动与实体联网基线 | 虚拟机用合成 RTL8156 ID 验证签名驱动入库。ROG STRIX B860-G GAMING WIFI 实卡的 MT7925 和 I226-V 均匹配签名 INF，现有 Wi-Fi 访问 HTTPS 成功。I226-V 当时未接网线。宿主驱动未重装或停用。 |
 | 型号与索引 | B850M AYW GAMING WIFI 普通版包已进入两版，核验 75 个精确 PCI 子系统 ID，其中 47 个首次进入在线索引。B850M AYW GAMING WIFI-CSM 已确认板载 Wi-Fi，仍缺实际芯片和精确 INF 对应。 |
+| 华硕笔记本系列拆分 | 82 个 ROG／TUF 系列拆出 333 个精确 SKU、337 条系列×SKU 记录；逐 SKU 核对 Windows 10／11 原厂下载，75 个 Win10 格和 75 个 Win11 格关闭。7 个系列仍有待核格，3 个系列未取到型号列表。 |
 | 消费版断网新装 | 微软官网 Windows 11 26300 与 Windows 10 22H2 日语 ISO，四台无网卡来宾分别部署 Home、Pro，合成 I226-V 或 RTL8168 缺驱动设备。自动选择分系统的签名 INF 并入库，用户确认许可后均离线进入 `user` 桌面。 |
 | PE 修复已有 Windows 10 | DISM 写入 `rt640x64.inf` 10.79.50.1003，驱动库可见。 |
 | 运行中 Windows 安装 | Windows 11 LTSC 24H2 来宾中，合成 I226-V 问题码 28 被识别并匹配 `e2fn.inf`。修复前返回 `NoEligibleDevice`，修复后驱动装到设备并启用 `e2fnexpress`，因无真实硬件报告「绑定未确认」。 |
 | 当前构建 | `62ab531` 的 565 项核心测试和原生 PE 构建通过。 |
 
-详细结果见[验证记录](validation-record.md#2026-11-13-hyper-v-消费版断网部署与修复)、[型号覆盖进度](network-rescue-coverage-progress.md)和[原厂下载索引](network-rescue-driver-index.csv)。全部测试虚拟机均已关机。
+详细结果见[验证记录](validation-record.md#2026-11-13-hyper-v-消费版断网部署与修复)、[型号覆盖进度](network-rescue-coverage-progress.md)和[原厂下载索引](network-rescue-driver-index.csv)。截至本次记录，`NetworkRescue-PE-Validation` 仍在运行，其余虚拟机已关机；清理 `hardware-check-shared-desktop` 前先确认没有运行中的来宾。
 
 ## 下一阶段验收
 
@@ -79,11 +80,12 @@ MSI、Acer、华擎的原厂下载接口拒绝脚本直连。本轮先在浏览�
 
 判定口径与华硕一致：“列出”要求已有出厂无线证据；“未列出”要求该系统有有效的 LAN 列表和音频或芯片组列表，且有出厂无线证据或规格未列 WLAN。Killer 通用包、近似型号、组合系统文件、空列表都保持待核。提交 `e22e373` 的说明写成关闭 300 格，实际是 301 格。
 
-最新待核：主板 Win10 190、Win11 185，笔记本 Win10 397、Win11 291，合计 **1,063**（起点 2,570）。
+最新待核：主板 Win10 93、Win11 93，笔记本 Win10 321、Win11 221，合计 **728**（起点 2,570）。
 
 剩余与下一步：
-- Acer：37 款接口返回空，后来被限流（Failed to fetch），冷却后重查；101 条系列行还要拆成精确 SKU。
-- 华硕主板：59 款规格未列 WLAN，22 款只有目录证据。浏览器页面 HTML 里有 GetPDDrivers 接口地址（带 pdid 和 pdhashedid），可以照同样方式在浏览器里批量取。
-- MSI：Killer 通用包约 17 格，要拆包核对 INF；新款笔记本的原厂驱动列表是空的；12UC 等型号不在规格页上。
-- 华擎：规格页标题不匹配的 36 格，另有 5 格规格未列 WLAN 但下载列表却列出。
+- Acer：仍有 130／102 格待核。37 款接口返回空，后来被限流（Failed to fetch），冷却后重查；101 条系列行还要拆成精确 SKU。
+- 华硕主板：余 34／33 格，多为规格未列 WLAN 或只有目录证据。浏览器页面 HTML 里有 GetPDDrivers 接口地址（带 pdid 和 pdhashedid），可以照同样方式在浏览器里批量取。
+- MSI：主板余 18／18 格，笔记本 85／77 格。Killer 通用包约 17 格，要拆包核对 INF；新款笔记本的原厂驱动列表是空的；12UC 等型号不在规格页上。
+- 华擎：余 19／22 格。规格页标题不匹配的 36 格，另有 5 格规格未列 WLAN 但下载列表却列出。
+- 华硕笔记本：82 个系列已拆分 333 个精确 SKU，余 7 个系列待核格、3 个系列缺型号列表。下一步按 SKU 的原厂下载链接补包入库和实机硬件 ID。
 - 惠普、技嘉、映泰、EVGA、联想、戴尔：本轮没碰。
