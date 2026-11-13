@@ -988,3 +988,10 @@ Acer 的三个 Win10 候选 ZIP 也已核对 `Netwtw08.INF` 版本。AX201、Kil
 - **SF314-44G**：配件商将 MediaTek MT7921／MT7921LE（Acer 料号 `KE.11X0M.001`）及 Realtek RTL8852BE 列为替换选项。仍缺该型号的出厂 WLAN 配置或实机完整 PCI ID。[配件清单](https://rozetka.com.ua/471820624/p471820624/)
 
 四个 Win10 格继续待核。主表总计待核 19 格，本轮未下载或收录驱动。
+
+### Pro WS 665-ACE 出厂 WLAN 复查
+
+- ASUS 支持页提供精确型号的英文 CE 和 UKCA 声明，两份文件均写明主板型号 Pro WS 665-ACE，日期为 2022-11-28。CE 声明列 EMC、低电压与 RoHS，未列欧盟 RED 2014/53/EU。UKCA 声明列 EMC、电气设备安全与 RoHS，未列英国无线设备法规。两份文件均未列 WLAN 模块或逐配置物料。[CE 原件](https://dlcdnets.asus.com/pub/ASUS/mb/Socket%20AM5/PRO%20WS%20665-ACE/DOC-EU-20220927020-1-EN-ics.pdf) · [UKCA 原件](https://dlcdnets.asus.com/pub/ASUS/mb/Socket%20AM5/PRO%20WS%20665-ACE/DOC-UKCA-20220927020-1-EN-ics.pdf)
+- ASUS 技术规格和对比页中，该型号仅有 Socket AM5 一项。对比页写的「Wi-Fi 模块另售」对应 Pro WS W890E-SAGE SE。现有声明与只列有线设备的支持资料一致，仍缺明确的 WLAN 规格、BOM 或板卡配置声明，Win10 和 Win11 两格继续待核。[原厂规格](https://www.asus.com/motherboards-components/motherboards/workstation/pro-ws-665-ace/techspec/) · [原厂对比页](https://www.asus.com/business/product-compare?LevelId=motherboards-x-all-series&ProductID=34626%2C27555)
+
+总计待核 19 格。本轮仅补充证据。
