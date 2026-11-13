@@ -616,3 +616,13 @@ MSI 的笔记本系列页 OS 选择器常常为空，区域 SKU 藏在系列 ban
 脚本 [collect-dell-pack-os.py](../scripts/collect-dell-pack-os.py) 先在 CSV 副本上验证：待核 166、可关闭 166。证据见[戴尔 System 证据](network-rescue-dell-os-record-proof.csv)。**戴尔系统 ID 组合清零**，总待核 221 全部为主表型号。
 
 本轮合计关闭 **166 格**：总待核 387→**221**（主板 57／57，笔记本 Win10 67、Win11 40）。
+
+### 2026-11-13 华硕笔记本 OS 列表空类目
+
+- **FA507RW**：GetPDOS 含 Windows 10，但该系统的驱动类目为 0（Windows 11 有 7 类 32 个文件），按 Acer 同口径判为原厂未列，Win10 关闭。
+- **G513IR**：Win10 有 Networking（Realtek LAN、NXP NFC）、Audio、Chipset，但没有 WLAN 文件，判为原厂未列 WLAN，Win10 关闭。
+- **TUF Gaming A15 (2022)** 系列：全部 6 个 SKU 的 Win10 结论一致（原厂未列），系列格随之关闭。
+
+华硕笔记本余 7 格是空 OS 列表（FA608PPI／PMI）或无网络类目（G513IR／G713IR／G733QSA 的 Win11、FA608UH）。
+
+本轮合计关闭 **3 格**：待核 221→**218**（主板 57／57，笔记本 Win10 64、Win11 40）。
