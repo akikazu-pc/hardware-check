@@ -575,3 +575,11 @@ MSI 的笔记本系列页 OS 选择器常常为空，区域 SKU 藏在系列 ban
 排除后 **62 个系列、116 格**的 x64 结论一致；已关闭的 47 个系列全部一致，新增关闭 **15 个系列、30 格**。逐 SKU 证据表已更新为带 `arm64-out-of-scope`／`no-listing` 状态。
 
 本轮合计关闭 **30 格**：待核 344→**314**（主板 60／60，笔记本 Win10 133、Win11 61）。
+
+### 2026-11-13 惠普驱动包目录与 CVA
+
+惠普的 63 个 Win10 待核型号（2025 AI PC）此前只有「HPIA 矩阵没有 Win10 包」这一条间接证据。本轮补齐第二份原厂文件：每个型号在 **HP Client Driver Pack Catalog** 里只出现在 Windows 11 条目下（没有任何 Windows 10 条目），其关联驱动包的 **CVA** 文件在 `[System Information]` 列出精确型号、在 `[Operating Systems]` 只声明 `W11_23H2/24H2/25H2/26H2`。两份原厂文件都指向「该型号只有 Windows 11 驱动包」，据此把 **63 个 Win10 格**关闭为 `oem-os-not-listed`。
+
+脚本 [collect-hp-pack-os.py](../scripts/collect-hp-pack-os.py) 复用 Node 传输桥读取 CVA，先在 CSV 副本上验证：候选 63、可关闭 63、只改目标格。证据见[驱动包证据](network-rescue-hp-pack-os-proof.csv)。惠普剩余 Win11 21 格是 2017–2019 机型没有任何 Win11 包，仍缺原厂系统支持声明。
+
+本轮合计关闭 **63 格**：待核 314→**251**（主板 60／60，笔记本 Win10 70、Win11 61）。

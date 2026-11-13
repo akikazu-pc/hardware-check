@@ -51,7 +51,7 @@ python scripts/collect-windriverindex-wlan.py docs/network-rescue-model-gaps.csv
 | --- | ---: | --- |
 | 主板 Win10 x64 | 60 | ASUS 14、ASRock 12 |
 | 主板 Win11 x64 | 60 | ASRock 15、ASUS 13 |
-| 笔记本 Win10 x64 | 133 | HP 63、Acer 52 |
+| 笔记本 Win10 x64 | 70 | Acer 52、ASUS 10 |
 | 笔记本 Win11 x64 | 61 | HP 21、Acer 20 |
 
 1. Acer 笔记本现有 106／82 条待核；15 个系列已按单型号族关闭，其余 81 个系列用[系列型号清单](network-rescue-acer-series-skus.csv)逐 SKU 查询，要求该系列全部型号结论一致后才关闭。
