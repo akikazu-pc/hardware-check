@@ -44,16 +44,16 @@ python scripts/collect-windriverindex-wlan.py docs/network-rescue-model-gaps.csv
 
 ## 当前待核与接手顺序
 
-截至 `faf66de`（2026-11-13）。主板 Win10／Win11 各 93 条，笔记本 Win10 321 条、Win11 221 条。
+截至 `6dac966`（2026-11-13）。主板 Win10／Win11 各 79 条，笔记本 Win10 321 条、Win11 221 条；戴尔系统 ID 组合另有 Win10 127、Win11 39 条。
 
 | 范围 | 待核 | 最大缺口 |
 | --- | ---: | --- |
-| 主板 Win10 x64 | 93 | ASUS 34、ASRock 19 |
-| 主板 Win11 x64 | 93 | ASUS 33、ASRock 22 |
+| 主板 Win10 x64 | 79 | ASRock 19、MSI 18 |
+| 主板 Win11 x64 | 79 | ASRock 22、MSI 18 |
 | 笔记本 Win10 x64 | 321 | Acer 130 |
 | 笔记本 Win11 x64 | 221 | Acer 102、MSI 77 |
 
 1. Acer 笔记本先补只有系列名的精确 SKU，再找按系统发布的 OEM 下载。现有 130／102 条待核，是两组最大缺口。
 2. MSI 笔记本 85／77 与 HP 63／21：MSI 的 Killer 通用包要拆包核对 INF，新款笔记本的原厂驱动列表为空；HP 用 HPIA 精确引用，只有矩阵范围说明的 Win10 条目继续保留原厂证据缺口。
-3. 主板余项集中在 ASUS 34／33、ASRock 19／22、MSI 18／18，另有 BIOSTAR 12／12、GIGABYTE 8／6。华硕笔记本拆分后，82 个系列中 7 个仍有待核格，3 个系列未取到型号列表。
+3. 主板余项集中在 ASRock 19／22、MSI 18／18，另有 ASUS 20／19、BIOSTAR 12／12、GIGABYTE 8／6。华硕主板新增按精确型号读原厂手册的手册规格核验（[脚本](../scripts/collect-asus-motherboard-specs.py)、[证据](network-rescue-asus-mb-spec-proof.csv)），本轮关闭 28 格。华硕笔记本拆分后，82 个系列中 7 个仍有待核格，3 个系列未取到型号列表。
 4. 每轮重算四组待核，分别报告已核 OEM 列表、签名候选、实机结果和无新增的来源。若同一路线已经复跑无变化，转到尚可取得的独立证据。待核目标为零，当前未达到。
