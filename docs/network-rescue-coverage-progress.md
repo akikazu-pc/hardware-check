@@ -827,3 +827,17 @@ Dell Alienware 与 Lenovo 需要登录态浏览器：见[浏览器抓取指引](
 - **Legion Pro 7 16AFR10H**：WLAN 1 条（Realtek/MediaTek `WLAN_MTK_5.7.0.5275`，Windows 11）→ Win11 列出；PSREF 仅 Windows 11 → Win10 未列系统。
 
 Lenovo 待核 7→1 格（16ADR10H 的 Win10）。本轮合计关闭 **6 格**：待核 80→**74**。
+
+### 2026-11-13 Dell Alienware 走前端接口 + 字符位移解密
+
+用浏览器抓到的会话 cookie 直接请求 Dell 的驱动接口：
+
+`/support/driver/ja-jp/dep/api/driverlist/packdriversbyproduct?productcode=<slug>&oscode=&lob=Alienware%20Laptop&initialload=false`
+
+响应是 **ASCII 字母整体后移 3 位** 的 JSON（`"DriverName"` 变成 `"GulyhuQdph"`，数字、标点、日文不动），按字母 -3 还原后得到完整驱动表：`DriverName`、`DellVer`、`AppOses`（`W2021/W11S/LTSC3` = Windows 11，`WT64A/W10GE/EX64/LTSC2` = Windows 10）与分类。
+
+同页的 `/supportedos/<slug>` 给出该型号支持的系统列表。5 个 Alienware 型号结论一致：
+- 支持系统只有 **Windows 11**；WLAN 驱动为 Killer BE1775/BE1750/AX1690/AX1675/AX1650 50.26.820.2552（AA16250/AA18250）或 MediaTek MT7920/7921/7922/7925 5.7.0.6054（AC16250/AC16251/DA15260），均只标 Win11。
+- 因此 Win11 记列出、Win10 记未列系统（Dell 支持列表无 Windows 10）。
+
+新增 [collect-dell-alienware.py](../scripts/collect-dell-alienware.py) 与 [dell-api-fetch.mjs](../scripts/dell-api-fetch.mjs)（cookie 文件传入，自动解密与分类，支持 `--apply`），干跑验证输出与手工结论一致。**Dell 清零**，本轮合计关闭 **8 格**：待核 74→**66**。

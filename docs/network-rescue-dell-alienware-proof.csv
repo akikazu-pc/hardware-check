@@ -1,0 +1,9 @@
+model,windows,status,evidence,supportedOs,url
+Alienware 16 Area-51 AA16250,11,oem-wlan-listed,"Intel Killer BE1775/BE1750/AX1690/AX1675/AX1650 Wi-Fi driver 50.26.820.2552 A49 (W2021, W11S, LTSC3)",Windows 11,https://www.dell.com/support/driver/ja-jp/dep/api/driverlist/packdriversbyproduct?productcode=alienware-area-51-aa16250-gaming-laptop
+Alienware 16 Area-51 AA16250,10,oem-os-not-listed,Dell supported OS list: Windows 11 only,Windows 11,https://www.dell.com/support/driver/ja-jp/supportedos/alienware-area-51-aa16250-gaming-laptop
+Alienware 18 Area-51 AA18250,11,oem-wlan-listed,"Intel Killer BE1775/BE1750/AX1690/AX1675/AX1650 Wi-Fi driver 50.26.820.2552 A49 (W2021, W11S, LTSC3)",Windows 11,https://www.dell.com/support/driver/ja-jp/dep/api/driverlist/packdriversbyproduct?productcode=alienware-area-51-aa18250-gaming-laptop
+Alienware 18 Area-51 AA18250,10,oem-os-not-listed,Dell supported OS list: Windows 11 only,Windows 11,https://www.dell.com/support/driver/ja-jp/supportedos/alienware-area-51-aa18250-gaming-laptop
+Alienware 15 DA15260,11,oem-wlan-listed,"MediaTek MT7920/MT7921/MT7922/MT7925 Wi-Fi UWD driver 5.7.0.6054 A25 (W2021, LTSC3)",Windows 11,https://www.dell.com/support/driver/ja-jp/dep/api/driverlist/packdriversbyproduct?productcode=alienware-da15260-gaming-laptop
+Alienware 15 DA15260,10,oem-os-not-listed,Dell supported OS list: Windows 11 only,Windows 11,https://www.dell.com/support/driver/ja-jp/supportedos/alienware-da15260-gaming-laptop
+Alienware 16 Aurora AC16250,10,oem-os-not-listed,Dell supported OS list: Windows 11 only,Windows 11,https://www.dell.com/support/driver/ja-jp/supportedos/alienware-aurora-ac16250-gaming-laptop
+Alienware 16X Aurora AC16251,10,oem-os-not-listed,Dell supported OS list: Windows 11 only,Windows 11,https://www.dell.com/support/driver/ja-jp/supportedos/alienware-aurora-ac16251-gaming-laptop
