@@ -2398,6 +2398,59 @@
       "devicePrefixes": [],
       "windows11Only": true,
       "adapterName": "Realtek RTL8922AE"
+    },
+    {
+      "id": "asus-rog-mtk-3001325",
+      "version": "3.00.01.1325",
+      "source": "https://dlcdnets.asus.com/pub/ASUS/GamingNB/Image/Driver/Networking/38028/WirelessLan_ROG_MediaTek_J_V3.00.01.1325Sub1_38028_1.exe",
+      "archiveSha256": "18B665FF772459F1ABF1B3AE0AA5821303155B1AECE10785B02C3A0D7F4F07DB",
+      "driverDirectory": "WLAN",
+      "scope": "ASUS ROG/TUF laptop OEM WLAN; MediaTek MT7902/MT7921; Windows 10/11 x64",
+      "archiveLayout": "embedded-7z",
+      "archiveOffset": 4283104,
+      "windows11Only": false,
+      "minimumWindowsBuild": 0,
+      "adapterName": "MediaTek MT7902/MT7921",
+      "devicePrefixes": [
+        "PCI\\VEN_14C3&DEV_0608",
+        "PCI\\VEN_14C3&DEV_7961"
+      ]
+    },
+    {
+      "id": "asus-rog-mtk-3421046",
+      "version": "3.4.2.1046",
+      "source": "https://dlcdnets.asus.com/pub/ASUS/GamingNB/Image/Driver/Networking/38522/WirelessLan_ROG_MediaTek_J_V3.4.2.1046Sub1_38522_1.exe",
+      "archiveSha256": "CF85579D683CC51207942135952B9850E62EF99CA9F6E4EF51DACAF4ED16492C",
+      "driverDirectory": "WLAN",
+      "scope": "ASUS ROG/TUF laptop OEM WLAN; MediaTek MT7920/MT7922/MT7902; Windows 11 x64",
+      "archiveLayout": "embedded-7z",
+      "archiveOffset": 4283120,
+      "windows11Only": true,
+      "minimumWindowsBuild": 22000,
+      "adapterName": "MediaTek MT7920/MT7922/MT7902",
+      "devicePrefixes": [
+        "PCI\\VEN_14C3&DEV_0616",
+        "PCI\\VEN_14C3&DEV_7902",
+        "PCI\\VEN_14C3&DEV_7920",
+        "PCI\\VEN_14C3&DEV_7922"
+      ]
+    },
+    {
+      "id": "asus-rog-rtl-6001151653",
+      "version": "6001.15.165.3",
+      "source": "https://dlcdnets.asus.com/pub/ASUS/GamingNB/Image/Driver/Networking/51818/WirelessLan_ROG_Realtek_B_V6001.15.165.3Sub1_51818.exe",
+      "archiveSha256": "05A3FCC045A6D5A710A97208FABCA35878D165D771D4B9839C52D7788A9D1DB9",
+      "driverDirectory": "WLAN",
+      "scope": "ASUS ROG/TUF laptop OEM WLAN; Realtek RTL8852BE/8852CE; Windows 11 x64",
+      "archiveLayout": "embedded-7z",
+      "archiveOffset": 4283520,
+      "windows11Only": true,
+      "minimumWindowsBuild": 22000,
+      "adapterName": "Realtek RTL8852BE/8852CE",
+      "devicePrefixes": [
+        "PCI\\VEN_10EC&DEV_B852",
+        "PCI\\VEN_10EC&DEV_B85B"
+      ]
     }
   ]
 }

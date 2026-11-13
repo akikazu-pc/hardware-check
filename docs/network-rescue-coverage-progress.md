@@ -458,7 +458,9 @@ D-Link 本轮补入 34 个原厂网卡型号。首批检查 7 个型号的 11 �
 
 批量取证逐厂商的回填格数与判定依据见[交接文档](network-rescue-handoff.md#2026-11-13-原厂列表批量取证)，本轮不回填没有原厂列表或出厂无线证据的条目。
 
-华硕笔记本共得 **333 个精确 SKU**、337 条系列×SKU 记录、677 条系统证据，见[逐 SKU 证据](network-rescue-asus-laptop-sku-proof.csv)。系列行只在全部 SKU 结论一致时关闭：75 个 Win10 格、75 个 Win11 格更新，82 个系列中 7 个仍有待核格，另 3 个系列未取到型号列表。新增 337 条 SKU 行：Win10 列出 37 条、原厂列表未列 287 条、待核 13 条；Win11 列出 332 条、待核 5 条。采集与回填见 [ASUS 笔记本 SKU 脚本](../scripts/collect-asus-laptop-skus.py)，ROG 页面需要浏览器会话快照（`--rog-capture`），`--apply-oem-evidence` 才写主表。证据表涉及 24 个不同版本、37 个下载地址，其中只有 2 个地址已在[原厂下载索引](network-rescue-driver-index.csv)；其余需下载、验签并静态提取后才能进入在线安装版或离线完整版。
+华硕笔记本共得 **333 个精确 SKU**、337 条系列×SKU 记录、677 条系统证据，见[逐 SKU 证据](network-rescue-asus-laptop-sku-proof.csv)。系列行只在全部 SKU 结论一致时关闭：75 个 Win10 格、75 个 Win11 格更新，82 个系列中 7 个仍有待核格，另 3 个系列未取到型号列表。新增 337 条 SKU 行：Win10 列出 37 条、原厂列表未列 287 条、待核 13 条；Win11 列出 332 条、待核 5 条。采集与回填见 [ASUS 笔记本 SKU 脚本](../scripts/collect-asus-laptop-skus.py)，ROG 页面需要浏览器会话快照（`--rog-capture`），`--apply-oem-evidence` 才写主表。证据表涉及 24 个不同版本、37 个下载地址，其中只有 2 个地址已在[原厂下载索引](network-rescue-driver-index.csv)。
+
+已把其中 3 个版本加入在线驱动目录：MediaTek 3.00.01.1325（MT7902／MT7921，Win10/11）、MediaTek 3.4.2.1046（MT7920／MT7922／MT7902，Win11）和 Realtek 6001.15.165.3（RTL8852BE／CE，Win11），分别覆盖 56、50、23 条 SKU 系统证据。原厂 EXE 的 SHA-256、内嵌 7z 偏移和 CAT 签名已核对，按 PCI VEN／DEV 前缀匹配；源文件缓存在本地 `artifacts/vendor-wifi/<包 ID>/`，构建时仍按原厂哈希复核。其余版本继续按下载、验签、入库的顺序补。
 
 截至 `6dac966`，待核为主板 Win10 **79**、Win11 **79**，笔记本 Win10 **321**、Win11 **221**，合计 **700**。Acer 笔记本仍是最大缺口（130／102），其次为 MSI 笔记本（85／77）与 HP 笔记本（63／21）。主板余项集中在 ASUS（20／19）、ASRock（19／22）和 MSI（18／18），华硕主板手册补证见下一节。以上均为原厂列表与规格证据，出厂硬件 ID、签名 INF 绑定和实机联网仍分别验收。
 
