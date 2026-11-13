@@ -63,7 +63,7 @@ def main():
 
     candidates = []
     for row in rows:
-        if row["brand"] != "HP" or row["type"] != "laptop":
+        if row["brand"] != "HP" or row["type"] not in {"laptop", "all-in-one"}:
             continue
         entries = by_system.get(norm(row["model"])) or by_system.get(norm("HP " + row["model"])) or []
         if not entries:
