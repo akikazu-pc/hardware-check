@@ -120,7 +120,7 @@ public sealed class RescueModelCatalogTests
         var model = results[0];
         Assert.Equal("ROG STRIX B860-G GAMING WIFI", model.Model);
         Assert.Equal("www.asus.com", model.DriverPage?.Host);
-        Assert.Equal("pending", model.Windows10Evidence);
+        Assert.Equal("oem-wlan-not-listed", model.Windows10Evidence);
         Assert.Equal("oem-package-indexed", model.Windows11Evidence);
     }
 
