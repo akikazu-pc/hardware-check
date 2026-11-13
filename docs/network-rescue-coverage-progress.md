@@ -886,3 +886,11 @@ Lenovo 待核 7→1 格（16ADR10H 的 Win10）。本轮合计关闭 **6 格**�
 - **ROG Zephyrus G14 (2026) GA403**：日服支持页 OS 选择器只有 Windows 11，Networking 有 MediaTek 无线驱动 V5.7.0.5115 → Win11 列出、Win10 未列系统。
 
 本轮合计关闭 **14 格**：待核 52→**38**。
+
+### 2026-11-13 FA608PPI/PMI 同系列判定与 AW SE 拆分
+
+- **FA608PPI／FA608PMI**：用户确认按日服同系列 FA608PP／FA608PM 判定（OS 仅 Win11；Networking 有 Realtek 无线 V6001.16.174.103 与 MediaTek 无线 V3.6.2.1434）→ Win10 未列系统、Win11 列出（4 格）。
+- **ROG Zephyrus G14 AW SE**：从日服页面数据里取到精确型号 **GA401QEC**，支持页两系统列表均含 MediaTek WLAN V3.00.01.1325／Intel Wireless LAN V23.70.2.3 → 拆为 SKU 行并两系统记列出（净减 2 格）。
+- **Pro WS 665-ACE**：驱动页确认只有 LAN（Intel I225/I226），仍缺规格/手册，维持待核。
+
+本轮合计关闭 **6 格**：待核 38→**32**。

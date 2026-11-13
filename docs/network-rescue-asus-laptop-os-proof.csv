@@ -4,3 +4,9 @@ ROG Strix G15 G513IR,10,oem-wlan-not-listed,"Win10 list has LAN/Audio/Chipset, n
 ASUS TUF Gaming A15 (2022),10,oem-os-not-listed,all recorded SKUs report the same
 ROG Zephyrus G14 (2026) GA403,11,oem-wlan-listed,JP support page: OS select Windows 11 only; Networking has MediaTek wireless network driver V5.7.0.5115
 ROG Zephyrus G14 (2026) GA403,10,oem-os-not-listed,JP support page OS list: Windows 11 only
+ASUS TUF Gaming A16 (2025) FA608PPI,10,oem-os-not-listed,Japanese sibling FA608PP/FA608PM support pages list Windows 11 only (user accepted same-series judgement)
+ASUS TUF Gaming A16 (2025) FA608PPI,11,oem-wlan-listed,FA608PP/FA608PM pages: Realtek wireless LAN V6001.16.174.103 and MediaTek wireless V3.6.2.1434 under Networking (Win11 64-bit)
+ASUS TUF Gaming A16 (2025) FA608PMI,10,oem-os-not-listed,Japanese sibling FA608PP/FA608PM support pages list Windows 11 only (user accepted same-series judgement)
+ASUS TUF Gaming A16 (2025) FA608PMI,11,oem-wlan-listed,FA608PP/FA608PM pages: Realtek wireless LAN V6001.16.174.103 and MediaTek wireless V3.6.2.1434 under Networking (Win11 64-bit)
+ROG Zephyrus G14 AW SE GA401QEC,10,oem-wlan-listed,GA401QEC support page lists Networking: MediaTek WLAN V3.00.01.1325/V3.00.01.1294 and Intel Wireless LAN V23.70.2.3/V22.230.0.8 for both Windows 10 and Windows 11
+ROG Zephyrus G14 AW SE GA401QEC,11,oem-wlan-listed,GA401QEC support page lists Networking: MediaTek WLAN V3.00.01.1325/V3.00.01.1294 and Intel Wireless LAN V23.70.2.3/V22.230.0.8 for both Windows 10 and Windows 11
