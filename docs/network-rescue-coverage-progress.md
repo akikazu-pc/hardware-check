@@ -487,3 +487,11 @@ D-Link 本轮补入 34 个原厂网卡型号。首批检查 7 个型号的 11 �
 本机 curl、PowerShell 和 Python 在 Acer 卡在 TLS 重协商，在 MSI、Gigabyte、Dell 被 Akamai 返回 403；WordPress 式的「站点不可读」结论其实来自客户端指纹。新增 [Node 传输桥](../scripts/oem-http.mjs)：只负责取回原始字节并缓存，解析与判定仍在 Python 里，现有采集脚本可复用同一桥。实测 Acer、MSI、Gigabyte、Dell、EVGA、联想 `support.lenovo.com` 均返回 200；Gigabyte 与 Acer 的数据接口仍需会话 Cookie，Biostar 仍 403。
 
 联想方面，型号下载页内嵌 `"OSs":[{"Value":"Windows 11 (64-bit)"}]` 就是原厂 OS 选择器。7 款仍待核的 Legion 中 4 款取到该列表且只列 Windows 11，关闭 4 个 Win10 格；3 款的列表为空（型号页存在但无驱动记录），保持待核。此前 8 格用的是 PSREF 加驱动包元数据，两种口径一致。证据见[联想 OS 列表](network-rescue-lenovo-os-list-proof.csv)。
+
+### 2026-11-13 MSI 规格页与驱动面板
+
+MSI 的规格页和驱动接口在 Node 传输桥下均可读：`Specification` 页面直接写「WIRELESS LAN & BLUETOOTH Wi-Fi 7，模块预装于 M.2 Key-E」，`/api/v1/product/support/os?product=<slug>&type=driver` 返回该型号可选系统，`panel?…&os=<系统>` 返回按系统过滤的驱动表。四款 B850M Wi-Fi 板的 Windows 11 面板列出 MediaTek／Qualcomm Wi-Fi 驱动（5.7.0.5977、3.1.0.1430），Windows 10 面板有 LAN 和音频、没有 Wi-Fi 项，两个系统各 4 格因此关闭，并把出厂无线证据从「只有目录」提升为「原厂规格列出」。证据见 [MSI 规格证据](network-rescue-msi-spec-proof.csv)。
+
+其余 MSI 主板仍有「通用 Wi-Fi 驱动包（如 AMD／Intel WIFI Drivers）与规格未列 WLAN」的冲突：无 Wi-Fi 型号的下载面板也会列出通用 Wi-Fi 驱动，按现有口径保持待核。联想另有 4 款型号的下载页 OS 列表只列 Windows 11，关闭 4 个 Win10 格。
+
+本轮合计关闭 12 格：待核 679→**667**（主板 75／75，笔记本 Win10 296、Win11 221）。
