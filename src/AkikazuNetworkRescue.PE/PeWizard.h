@@ -518,24 +518,41 @@ static int RunPeAction(const fs::path& bundle, const PeText& text, bool setup)
     for (const auto& match : matches) {
         labels.push_back(match.name + L"  " + match.path.filename().wstring() + L"  [" + match.id + L"]");
     }
+    // Multiple missing NICs can need different INFs; offer one action that installs all of them.
+    const bool installAllOffered = !setup && !deployment && matches.size() > 1;
+    if (installAllOffered) {
+        labels.push_back(std::wstring(text.installAll) + L" (" + std::to_wstring(matches.size()) + L")");
+    }
     const auto driver = deployment && labels.size() == 1 ? 0 : Choose(text, text.driver, labels);
     if (driver < 0) return 0;
-    const auto& inf = matches[driver].path;
+    std::vector<fs::path> selected;
+    if (installAllOffered && driver == static_cast<int>(matches.size())) {
+        for (const auto& match : matches) selected.push_back(match.path);
+    } else {
+        selected.push_back(matches[driver].path);
+    }
+    std::wstring selectedNames;
+    for (const auto& path : selected) {
+        if (!selectedNames.empty()) selectedNames += L"\n";
+        selectedNames += path.filename().wstring();
+    }
     if (deployment) {
         const auto confirmation = std::wstring(text.deployConfirm) + L"\n\n" +
-            DeploymentDetails(media[target], *deployment, inf);
+            DeploymentDetails(media[target], *deployment, selected[0]);
         if (Choose(text, confirmation.c_str(), {}, 0, text.confirm, true) < 0) return 0;
-        return DeployWithUi(media[target], *deployment, inf, text);
+        return DeployWithUi(media[target], *deployment, selected[0], text);
     }
-    if (!Confirm(text, setup ? text.confirmSetup : text.confirmRepair, choices[target] + L"  " + inf.wstring())) {
+    if (!Confirm(text, setup ? text.confirmSetup : text.confirmRepair, choices[target] + L"  " + selectedNames)) {
         return 0;
     }
-    if (!VerifyNetworkDriver(inf)) {
-        Notice(text, text.failed);
-        return 0;
+    for (const auto& path : selected) {
+        if (!VerifyNetworkDriver(path)) {
+            Notice(text, text.failed);
+            return 0;
+        }
     }
     if (setup) {
-        const auto result = StartSetup(media[target], inf);
+        const auto result = StartSetup(media[target], selected[0]);
         if (result == SetupStart::Started) return 0;
         Notice(text, result == SetupStart::DriverPreparationFailed ? text.setupDriverPreparationFailed : text.failed);
         return 6;
@@ -545,8 +562,14 @@ static int RunPeAction(const fs::path& bundle, const PeText& text, bool setup)
         Notice(text, text.failed);
         return 0;
     }
-    const auto result = RunDism(offline, L"/Add-Driver /Driver:\"" + inf.wstring() + L"\"");
-    const bool added = result == ERROR_SUCCESS || result == ERROR_SUCCESS_REBOOT_REQUIRED;
+    bool added = true;
+    for (const auto& path : selected) {
+        const auto result = RunDism(offline, L"/Add-Driver /Driver:\"" + path.wstring() + L"\"");
+        if (result != ERROR_SUCCESS && result != ERROR_SUCCESS_REBOOT_REQUIRED) {
+            added = false;
+            break;
+        }
+    }
     const bool checked = added && RunDism(offline, L"/Get-Drivers") == ERROR_SUCCESS;
     Notice(text, checked ? text.repairDone : text.failed);
     return checked ? 0 : 6;
