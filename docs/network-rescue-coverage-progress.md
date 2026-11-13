@@ -687,3 +687,12 @@ BIOSTAR 的 `export/spec_export.php?S_ID=...` 返回的其实是 **PDF 字节**�
 - **Web Archive**：BIOSTAR 规格 PDF 有 2025-12 与 2026-07 快照，但本机访问被 429 限速，未能取回。
 
 本轮无新增关闭：待核 **210**。
+
+### 2026-11-13 华硕规格页空行判定
+
+华硕 techspec 页把规格行渲染成 `rowTableTitle` + `rowTableItems`：没有内容的行（如 `PRIME B760M-A D4-CSM` 的 `Wireless & Bluetooth`）对应空的 `rowTableItems`，同时 Nuxt 数据里该行的 `Content` 指向空占位。用这一条判定「规格未列 WLAN」：
+
+- **PRIME B760M-A D4-CSM**：techspec 的 `Wireless & Bluetooth` 行为空 + 下载列表两系统都没有 WLAN → 两个系统都关闭为 `oem-wlan-not-listed`（2 格）。
+- **Pro WS 665-ACE**：`GetPDOS`／`GetPDDrivers`（`product.asmx`）可用，两系统列表只有 LAN、Chipset、VGA、SATA，没有 WLAN；但 techspec 只发布了「News & Updates: Socket AM5」一行，没有完整规格表，缺出厂无线状态，保持待核。
+
+本轮合计关闭 **2 格**：待核 210→**208**（主板 52／53，笔记本 Win10 64、Win11 39）。
