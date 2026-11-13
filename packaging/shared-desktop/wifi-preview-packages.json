@@ -2490,6 +2490,26 @@
         "PCI\\VEN_8086&DEV_A370",
         "PCI\\VEN_8086&DEV_A840"
       ]
+    },
+    {
+      "id": "asus-rog-rtl-6101191370",
+      "version": "6101.19.137.0",
+      "source": "https://dlcdnets.asus.com/pub/ASUS/GamingNB/Image/Driver/Networking/50575/WirelessLan_ROG_Realtek_B_V6101.19.137.0Sub1_50575.exe",
+      "archiveSha256": "0CA3C6B752FFFE7F4B00610C7013F78AA399DB66D1FA821E5A54B3DF7F9DEA28",
+      "driverDirectory": "WLAN",
+      "scope": "ASUS ROG/TUF laptop OEM WLAN; Realtek Wi-Fi 6E/7; Windows 11 x64",
+      "archiveLayout": "embedded-7z",
+      "archiveOffset": 4283640,
+      "windows11Only": true,
+      "minimumWindowsBuild": 22000,
+      "adapterName": "Realtek Wi-Fi 6E/7",
+      "devicePrefixes": [
+        "PCI\\VEN_10EC&DEV_885D",
+        "PCI\\VEN_10EC&DEV_885E",
+        "PCI\\VEN_10EC&DEV_A85D",
+        "PCI\\VEN_10EC&DEV_B520",
+        "PCI\\VEN_10EC&DEV_B851"
+      ]
     }
   ]
 }

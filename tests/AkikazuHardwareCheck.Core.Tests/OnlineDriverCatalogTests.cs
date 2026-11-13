@@ -123,6 +123,8 @@ public sealed class OnlineDriverCatalogTests
     [InlineData(26300, @"PCI\VEN_14C3&DEV_0616", "asus-rog-mtk-3421046", true)]
     [InlineData(26300, @"PCI\VEN_8086&DEV_2723", "asus-rog-intel-23160", true)]
     [InlineData(19045, @"PCI\VEN_8086&DEV_2723", "asus-rog-intel-23160", false)]
+    [InlineData(26300, @"PCI\VEN_10EC&DEV_B851", "asus-rog-rtl-6101191370", true)]
+    [InlineData(19045, @"PCI\VEN_10EC&DEV_B851", "asus-rog-rtl-6101191370", false)]
     public void OffersAsusLaptopPackageForItsChipsetAndWindows(int build, string hardwareId, string packageId, bool offered)
     {
         var diagnostic = new NetworkDeviceDiagnostic(2, build, "X64", [new([hardwareId], null, 28)]);
