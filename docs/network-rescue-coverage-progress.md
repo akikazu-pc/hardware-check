@@ -528,3 +528,11 @@ Acer 把 73 个多型号系列的 611 个 sitemap SKU 全部查询一遍（约 4
 Acer 侧复核了族级混合结论的原因：113 个 sitemap SKU 用精确型号查询时接口返回的是**近似型号**（该 SKU 在支持库里没有独立驱动数据），因此 49 个系列的「全族一致」无法达成。这批记录只有在拿到原厂「营销系列→全部 SKU」映射后才能继续，sitemap 只能给出型号页集合，未据此关闭任何系列。
 
 本轮合计关闭 **12 格**：待核 436→**424**（主板 63／63，笔记本 Win10 183、Win11 119）。
+
+### 2026-11-13 MSI 笔记本系列区域 SKU
+
+MSI 的笔记本系列页 OS 选择器常常为空，区域 SKU 藏在系列 banner 里。用同源接口串起来：`/api/v1/search?group=1` 找到系列并列出 `sub_product`，`/api/v1/product/support/banner?product=<系列 slug>` 给出 `sub_product_list` 的 slug 映射，再逐个查 `/api/v1/product/support/os` 与 `panel?…&os=Win11 64`。
+
+19 个待核系列共取得 57 个区域 SKU：每个 SKU 的 OS 选择器都只有 `Win11 64`，且 Win11 驱动表都列出 Wireless LAN 驱动（Intel／Killer／AMD／MediaTek），因此系列的两个系统格一起关闭，共 **38 格**。`+` 号会让搜索接口返回 500，脚本会去掉 `+` 再查一次。逐 SKU 证据见 [MSI 系列证据](network-rescue-msi-family-proof.csv)，脚本为 [collect-msi-family-listings.py](../scripts/collect-msi-family-listings.py)。
+
+本轮合计关闭 **38 格**：待核 424→**386**（主板 61／61，笔记本 Win10 164、Win11 100）。
