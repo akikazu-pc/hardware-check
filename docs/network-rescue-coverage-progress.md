@@ -551,7 +551,7 @@ MSI 的笔记本系列页 OS 选择器常常为空，区域 SKU 藏在系列 ban
 | 主板 BIOSTAR 12／12 | 24 | 官网 | 站点对 curl、Python、Node 全部 403 |
 | 主板 Gigabyte 8／6 | 14 | 支持页 | Akamai 拒绝 Nuxt 代理 API |
 | 主板 EVGA 2／2 | 4 | 支持页、产品 PDF | 页面与 PDF 均返回拦截页 |
-| 笔记本 HP 63／21 | 84 | HPIA 目录、SoftPaq 说明、CVA | 缺原厂 OS 支持声明；2025 AI PC 无 Win10 驱动包 |
+| 笔记本 HP 0／21 | 21 | 驱动包目录、CVA、SoftPaq 说明 | 2017–2019 机型没有任何 Win11 包 |
 | 笔记本 Acer 52／20 | 72 | 驱动接口、sitemap、族级 SKU、ARM64 排除 | 剩余族内仍有短列表或空列表 |
 | 笔记本 ASUS 10／13 | 23 | 下载接口、逐 SKU GetPDOS | 空 OS 列表或无网络类目 |
 | 笔记本 Lenovo 7 | 7 | PSREF、下载页 OS 列表 | 3 款 OS 列表为空，4 款缺 WLAN 列表 |
