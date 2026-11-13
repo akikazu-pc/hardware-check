@@ -548,7 +548,7 @@ def classify(target, allow_combined):
                 entry["status"] = "os-selector-missing-system"
         else:
             status, title, version, url, sha = judge_listing(
-                target, label, system, target.panels.get(label), allow_combined, model_title)
+                system, target.panels.get(label), allow_combined, model_title)
             entry.update(status=status, title=title, version=version, downloadUrl=url,
                          sha256=sha)
         proof.append(entry)
@@ -596,7 +596,7 @@ def write_models(path, models):
     temporary.replace(path)
 
 
-def write_outputs(output, proposals_path, proof, targets, models, bridge, elapsed, allow_combined,
+def write_outputs(output, proposals_path, proof, targets, bridge, elapsed, allow_combined,
                   allow_spec_mismatch):
     temporary = output.with_suffix(output.suffix + ".tmp")
     with temporary.open("w", encoding="utf-8", newline="") as handle:
@@ -706,7 +706,7 @@ def main():
     elapsed = time.monotonic() - started
 
     proposals_path = args.proposals or args.output.with_name("msi-proposals.json")
-    payload = write_outputs(args.output, proposals_path, proof, targets, models, bridge,
+    payload = write_outputs(args.output, proposals_path, proof, targets, bridge,
                             elapsed, args.allow_combined_os, args.allow_spec_mismatch)
     summary = payload["summary"]
     print(f"Proof rows: {len(proof)}")
