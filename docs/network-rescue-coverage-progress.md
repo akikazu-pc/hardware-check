@@ -995,3 +995,10 @@ Acer 的三个 Win10 候选 ZIP 也已核对 `Netwtw08.INF` 版本。AX201、Kil
 - ASUS 技术规格和对比页中，该型号仅有 Socket AM5 一项。对比页写的「Wi-Fi 模块另售」对应 Pro WS W890E-SAGE SE。现有声明与只列有线设备的支持资料一致，仍缺明确的 WLAN 规格、BOM 或板卡配置声明，Win10 和 Win11 两格继续待核。[原厂规格](https://www.asus.com/motherboards-components/motherboards/workstation/pro-ws-665-ace/techspec/) · [原厂对比页](https://www.asus.com/business/product-compare?LevelId=motherboards-x-all-series&ProductID=34626%2C27555)
 
 总计待核 19 格。本轮仅补充证据。
+
+### P40-41-G2／G3、P50-41-G3 采购料号复查
+
+- **P40-41-G2／G3**：TCO 证书 N923070340 与 Acer BIOS 公告分别列出 TMP40-41 和 TMP214-41 的 G2／G3 型号。公开采购及配件目录未找到能与两款 TMP40-41 精确对应的 Acer 订货号及 WLAN 配置，也未找到完整的实机 PCI ID。[TCO 证书](https://katalog.atcomp.cz/katalog/tco/N923070340.pdf) · [Acer 型号公告](https://community.acer.com/en/kb/articles/16277-missing-hdd-password-option-in-system-bios-after-replacing-ssd)
+- **P50-41-G3**：摩尔多瓦采购网站上的附件是 Intertek 能效证书。附件将 TMP50-41-G3 与 TMP215-41-G3 分列于 N19Q8，未注明实际采购的订货号或 WLAN 配置。公开零售料号 NX.VSHEU.003 和 NX.VSMEG.007 均对应 TMP215-41-G3。精确 TMP50-41-G3 的出厂网卡与实机 PCI ID 仍待核。[采购附件](https://storage.mtender.gov.md/get/d5c25228-eecc-4426-b833-b1eb34691fee-1683200885582) · [NX.VSHEU.003 记录](https://www.arukereso.hu/notebook-c3100/acer/travelmate-tmp215-41-g3-r4ma-nx-vsheu-003-p784545549/) · [NX.VSMEG.007 记录](https://www.arukereso.hu/notebook-c3100/acer/travelmate-p2-tmp215-41-g3-nx-vsmeg-007-p773614161/)
+
+三款继续待核。未下载或收录新的驱动。
