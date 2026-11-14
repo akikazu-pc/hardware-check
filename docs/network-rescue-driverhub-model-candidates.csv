@@ -6209,13 +6209,13 @@ HP,EliteBook 2570p,model,pending,https://jp.drvhub.net/laptops/hp/elitebook-2570
 HP,EliteBook 2730p,model,pending,https://jp.drvhub.net/laptops/hp/elitebook-2730p,HP,EliteBook 2730p,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/EliteBook/EliteBook%202730p
 HP,EliteBook 2740p,model,pending,https://jp.drvhub.net/laptops/hp/elitebook-2740p,HP,EliteBook 2740p,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/EliteBook/EliteBook%202740p
 HP,EliteBook 2740p (BW751US),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-2740p-bw751us,HP,EliteBook 2740p (BW751US),Laptop,,
-HP,EliteBook 2740p (VB511AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-2740p-vb511av,HP,EliteBook 2740p (VB511AV),Laptop,,
+HP,EliteBook 2740p (VB511AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-2740p-vb511av,HP,EliteBook 2740p (VB511AV),Laptop,,https://partsurfer.hp.com/?searchtext=VB511AV
 HP,EliteBook 276,model,pending,https://jp.drvhub.net/laptops/hp/elitebook-276,HP,EliteBook 276,Laptop,,
 HP,EliteBook 2760p,model,pending,https://jp.drvhub.net/laptops/hp/elitebook-2760p,HP,EliteBook 2760p,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/EliteBook/EliteBook%202760p
-HP,EliteBook 2760p (A2U61AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-2760p-a2u61av,HP,EliteBook 2760p (A2U61AV),Laptop,,
-HP,EliteBook 2760p (H3P02UC),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-2760p-h3p02uc,HP,EliteBook 2760p (H3P02UC),Laptop,,
-HP,EliteBook 2760p (LX389AW),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-2760p-lx389aw,HP,EliteBook 2760p (LX389AW),Laptop,,
-HP,EliteBook 2760p (XX048AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-2760p-xx048av,HP,EliteBook 2760p (XX048AV),Laptop,,
+HP,EliteBook 2760p (A2U61AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-2760p-a2u61av,HP,EliteBook 2760p (A2U61AV),Laptop,,https://partsurfer.hp.com/?searchtext=A2U61AV
+HP,EliteBook 2760p (H3P02UC),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-2760p-h3p02uc,HP,EliteBook 2760p (H3P02UC),Laptop,,https://partsurfer.hp.com/?searchtext=H3P02UC
+HP,EliteBook 2760p (LX389AW),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-2760p-lx389aw,HP,EliteBook 2760p (LX389AW),Laptop,,https://partsurfer.hp.com/?searchtext=LX389AW
+HP,EliteBook 2760p (XX048AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-2760p-xx048av,HP,EliteBook 2760p (XX048AV),Laptop,,https://partsurfer.hp.com/?searchtext=XX048AV
 HP,EliteBook 360,model,pending,https://jp.drvhub.net/laptops/hp/elitebook-360,HP,EliteBook 360,Laptop,,
 HP,EliteBook 450 G8,model,pending,https://jp.drvhub.net/laptops/hp/elitebook-450-g8,HP,EliteBook 450 G8,Laptop,,
 HP,EliteBook 450 G9,model,pending,https://jp.drvhub.net/laptops/hp/elitebook-450-g9,HP,EliteBook 450 G9,Laptop,,
@@ -7072,7 +7072,7 @@ HP,ProBook 4530s (A7K22LT#ABM),model,pending,https://jp.drvhub.net/laptops/hp/pr
 HP,ProBook 4530s (A7K22LT),model,pending,https://jp.drvhub.net/laptops/hp/probook-4530s-a7k22lt,HP,ProBook 4530s (A7K22LT),Laptop,,https://partsurfer.hp.com/?searchtext=A7K22LT
 HP,ProBook 4530s (A9D68PA#AB1),model,pending,https://jp.drvhub.net/laptops/hp/probook-4530s-a9d68pa-ab1,HP,ProBook 4530s (A9D68PA#AB1),Laptop,,
 HP,ProBook 4530s (B0W34ES#ABV),model,pending,https://jp.drvhub.net/laptops/hp/probook-4530s-b0w34es-abv,HP,ProBook 4530s (B0W34ES#ABV),Laptop,,
-HP,ProBook 4530s (B0W70ES),model,pending,https://jp.drvhub.net/laptops/hp/probook-4530s-b0w70es,HP,ProBook 4530s (B0W70ES),Laptop,,
+HP,ProBook 4530s (B0W70ES),model,pending,https://jp.drvhub.net/laptops/hp/probook-4530s-b0w70es,HP,ProBook 4530s (B0W70ES),Laptop,,https://north.pl/czesci-do-laptopow/czesci-hp/czesci-do-4530s-laptopa-hp%2C0%2C4530S%2Cm2601977.html
 HP,ProBook 4530s (B0X66EA#ACB),model,pending,https://jp.drvhub.net/laptops/hp/probook-4530s-b0x66ea-acb,HP,ProBook 4530s (B0X66EA#ACB),Laptop,,
 HP,ProBook 4530s (B0X98EA#ACQ),model,pending,https://jp.drvhub.net/laptops/hp/probook-4530s-b0x98eaacq,HP,ProBook 4530s (B0X98EA#ACQ),Laptop,,
 HP,ProBook 4530s (LH309EA),model,pending,https://jp.drvhub.net/laptops/hp/probook-4530s-lh309ea,HP,ProBook 4530s (LH309EA),Laptop,,https://partsurfer.hp.com/?searchtext=LH309EA

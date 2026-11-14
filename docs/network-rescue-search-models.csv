@@ -12258,13 +12258,13 @@ laptop,HP,EliteBook 2570p,,,third-party-model-candidate,,exact-network-id-and-in
 laptop,HP,EliteBook 2730p,,,third-party-model-candidate,,exact-network-id-and-install,https://jp.drvhub.net/laptops/hp/elitebook-2730p,pending,pending,Laptop,,,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/EliteBook/EliteBook%202730p
 laptop,HP,EliteBook 2740p,,,third-party-model-candidate,,exact-network-id-and-install,https://jp.drvhub.net/laptops/hp/elitebook-2740p,pending,pending,Laptop,,,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/EliteBook/EliteBook%202740p
 laptop,HP,EliteBook 2740p (BW751US),,,third-party-model-candidate,,exact-network-id-and-install,https://jp.drvhub.net/laptops/hp/elitebook-2740p-bw751us,pending,pending,Laptop,,,
-laptop,HP,EliteBook 2740p (VB511AV),,,third-party-model-candidate,,exact-network-id-and-install,https://jp.drvhub.net/laptops/hp/elitebook-2740p-vb511av,pending,pending,Laptop,,,
+laptop,HP,EliteBook 2740p (VB511AV),,,third-party-model-candidate,,exact-network-id-and-install,https://jp.drvhub.net/laptops/hp/elitebook-2740p-vb511av,pending,pending,Laptop,,,,https://partsurfer.hp.com/?searchtext=VB511AV
 laptop,HP,EliteBook 276,,,third-party-model-candidate,,exact-network-id-and-install,https://jp.drvhub.net/laptops/hp/elitebook-276,pending,pending,Laptop,,,
 laptop,HP,EliteBook 2760p,,,third-party-model-candidate,,exact-network-id-and-install,https://jp.drvhub.net/laptops/hp/elitebook-2760p,pending,pending,Laptop,,,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/EliteBook/EliteBook%202760p
-laptop,HP,EliteBook 2760p (A2U61AV),,,third-party-model-candidate,,exact-network-id-and-install,https://jp.drvhub.net/laptops/hp/elitebook-2760p-a2u61av,pending,pending,Laptop,,,
-laptop,HP,EliteBook 2760p (H3P02UC),,,third-party-model-candidate,,exact-network-id-and-install,https://jp.drvhub.net/laptops/hp/elitebook-2760p-h3p02uc,pending,pending,Laptop,,,
-laptop,HP,EliteBook 2760p (LX389AW),,,third-party-model-candidate,,exact-network-id-and-install,https://jp.drvhub.net/laptops/hp/elitebook-2760p-lx389aw,pending,pending,Laptop,,,
-laptop,HP,EliteBook 2760p (XX048AV),,,third-party-model-candidate,,exact-network-id-and-install,https://jp.drvhub.net/laptops/hp/elitebook-2760p-xx048av,pending,pending,Laptop,,,
+laptop,HP,EliteBook 2760p (A2U61AV),,,third-party-model-candidate,,exact-network-id-and-install,https://jp.drvhub.net/laptops/hp/elitebook-2760p-a2u61av,pending,pending,Laptop,,,,https://partsurfer.hp.com/?searchtext=A2U61AV
+laptop,HP,EliteBook 2760p (H3P02UC),,,third-party-model-candidate,,exact-network-id-and-install,https://jp.drvhub.net/laptops/hp/elitebook-2760p-h3p02uc,pending,pending,Laptop,,,,https://partsurfer.hp.com/?searchtext=H3P02UC
+laptop,HP,EliteBook 2760p (LX389AW),,,third-party-model-candidate,,exact-network-id-and-install,https://jp.drvhub.net/laptops/hp/elitebook-2760p-lx389aw,pending,pending,Laptop,,,,https://partsurfer.hp.com/?searchtext=LX389AW
+laptop,HP,EliteBook 2760p (XX048AV),,,third-party-model-candidate,,exact-network-id-and-install,https://jp.drvhub.net/laptops/hp/elitebook-2760p-xx048av,pending,pending,Laptop,,,,https://partsurfer.hp.com/?searchtext=XX048AV
 laptop,HP,EliteBook 360,,,third-party-model-candidate,,exact-network-id-and-install,https://jp.drvhub.net/laptops/hp/elitebook-360,pending,pending,Laptop,,,
 laptop,HP,EliteBook 450 G8,,,third-party-model-candidate,,exact-network-id-and-install,https://jp.drvhub.net/laptops/hp/elitebook-450-g8,pending,pending,Laptop,,,
 laptop,HP,EliteBook 450 G9,,,third-party-model-candidate,,exact-network-id-and-install,https://jp.drvhub.net/laptops/hp/elitebook-450-g9,pending,pending,Laptop,,,
@@ -13542,7 +13542,7 @@ laptop,HP,ProBook 4530s (A7K22LT#ABM),,,third-party-model-candidate,,exact-netwo
 laptop,HP,ProBook 4530s (A7K22LT),,,third-party-model-candidate,,exact-network-id-and-install,https://jp.drvhub.net/laptops/hp/probook-4530s-a7k22lt,pending,pending,Laptop,,,,https://partsurfer.hp.com/?searchtext=A7K22LT
 laptop,HP,ProBook 4530s (A9D68PA#AB1),,,third-party-model-candidate,,exact-network-id-and-install,https://jp.drvhub.net/laptops/hp/probook-4530s-a9d68pa-ab1,pending,pending,Laptop,,,
 laptop,HP,ProBook 4530s (B0W34ES#ABV),,,third-party-model-candidate,,exact-network-id-and-install,https://jp.drvhub.net/laptops/hp/probook-4530s-b0w34es-abv,pending,pending,Laptop,,,
-laptop,HP,ProBook 4530s (B0W70ES),,,third-party-model-candidate,,exact-network-id-and-install,https://jp.drvhub.net/laptops/hp/probook-4530s-b0w70es,pending,pending,Laptop,,,
+laptop,HP,ProBook 4530s (B0W70ES),,,third-party-model-candidate,,exact-network-id-and-install,https://jp.drvhub.net/laptops/hp/probook-4530s-b0w70es,pending,pending,Laptop,,,,https://north.pl/czesci-do-laptopow/czesci-hp/czesci-do-4530s-laptopa-hp%2C0%2C4530S%2Cm2601977.html
 laptop,HP,ProBook 4530s (B0X66EA#ACB),,,third-party-model-candidate,,exact-network-id-and-install,https://jp.drvhub.net/laptops/hp/probook-4530s-b0x66ea-acb,pending,pending,Laptop,,,
 laptop,HP,ProBook 4530s (B0X98EA#ACQ),,,third-party-model-candidate,,exact-network-id-and-install,https://jp.drvhub.net/laptops/hp/probook-4530s-b0x98eaacq,pending,pending,Laptop,,,
 laptop,HP,ProBook 4530s (LH309EA),,,third-party-model-candidate,,exact-network-id-and-install,https://jp.drvhub.net/laptops/hp/probook-4530s-lh309ea,pending,pending,Laptop,,,,https://partsurfer.hp.com/?searchtext=LH309EA
