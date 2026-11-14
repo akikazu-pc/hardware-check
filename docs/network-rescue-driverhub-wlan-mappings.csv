@@ -1,0 +1,3 @@
+brand,model,module,evidenceType,status,source,evidence,hardwareId
+Dynabook,P1-V8RP-BB,Intel Wi-Fi 6 AX201 160MHz,single-system-observation,pending,https://jp.drvhub.net/laptops/dynabook/p1-v8rp-bb,https://www.driveridentifier.com/scan/intelr-wi-fi-6-ax201-160mhz-driver/download/1327131199/08845F3C56604098BD0E4E9499CC5C47/PCI%5CVEN_8086%26DEV_A0F0%26SUBSYS_00708086,PCI\VEN_8086&DEV_A0F0&SUBSYS_00708086
+Dynabook,PDA31A-0E2023,Intel Wi-Fi 6E AX211,third-party-specification,pending,https://jp.drvhub.net/laptops/dynabook/pda31a-0e2023,https://kelaptop.com/es/dynabook-portege-x30w-k-pda31a-0e2023,
