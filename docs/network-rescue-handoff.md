@@ -13,21 +13,21 @@
 
 | 包 | 入口 | 用途 |
 | --- | --- | --- |
-| 公开离线 ESD | 在管理员终端用系统 DISM 还原到空目录，再运行 `NetworkRescue.exe`。 | 仅随附 Realtek 8852 Wi-Fi 6001.16.172.0。 |
+| 公开离线 ESD | 在管理员终端用系统 DISM 还原到空目录，再运行 `NetworkRescue.exe`。 | 随附 Realtek 8852、8851 和 8922 Wi-Fi 驱动。 |
 | 在线安装版 ZIP | 解压后运行 `Install.cmd`。 | 用已有的网络连接下载和校验原厂驱动。索引随程序发布。 |
 
 - Windows 桌面可扫描有线／无线设备、按型号或设备类型搜索、打开官网驱动页、导出驱动 ZIP 和确认安装。存在候选分歧时，按硬件 ID 比对后选择。最终安装仍校验 INF 匹配及签名。两个应用可各自安装，也可在双装时共享窗口和托盘。日语、简体中文、繁体中文和英语可从菜单切换。
 - PE 可发现已有离线 Windows 并写入网络驱动，也可为微软安装器准备选定驱动。无人值守新装从独立 x64 UEFI WinPE 启动，确认版本和空盘后直接应用映像，绕过 Windows Setup 硬件检查。要求 PE 能看到至少 64 GiB 的空盘。C 盘最多 300 GiB，较小的盘扣除启动和恢复分区后使用剩余空间。默认创建空密码本地管理员 `user`。首次出现微软许可页时由用户确认。
 - 操作细节见[产品原型说明](shared-desktop-prototype.md#当前交付方式)和 [PE 安装流程](shared-desktop-prototype.md#无人值守安装验证)。
 
-历史完整版包含 SDIO、OEM 和分系统的有线驱动，保留作本地救援和验证。公开离线版使用 `-PublicOffline -RealtekVendorZip <原厂 ZIP>` 构建。
+历史完整版包含 SDIO、OEM 和分系统的有线驱动，保留作本地救援和验证。公开离线版使用 `-PublicOffline -RealtekVendorZip <8852 原厂 ZIP> -PublicDriverSourceDirectory <附加 ZIP 目录>` 构建。
 
 | 文件 | 字节数 | SHA-256 |
 | --- | ---: | --- |
-| `NetworkRescue-0.2.1-offline-redistributable-win-x64.esd` | 51,491,542 | `8285CC77C2C78659A07879C7E13442ECFAE42360A74E4DC62C0908CA4C25FCD1` |
+| `NetworkRescue-0.2.1-offline-redistributable-win-x64.esd` | 58,024,060 | `170342BA0E1781366F44E4F7F36D91C108BFB19C44DA06630A5ED88E95C0BF42` |
 | `NetworkRescue-0.2.1-online-install-win-x64.zip` | 53,843,724 | `9D6EEE844C19B11CD4721927810EFD3C53A725FD8C896FC029A6A2DEBEB25C38` |
 
-[`v0.2.1` Release](https://github.com/akikazu-pc/hardware-check/releases/tag/v0.2.1) 已用公开离线 ESD 和校验文件替换旧四分卷。公开下载的 ESD 已重新核对 SHA-256，随后删除了含受限驱动的旧分卷、合并脚本、配套说明和旧 ZIP 校验文件。已发布的 ESD 在 Win10 22H2 和 Win11 24H2 离线虚拟机上通过 DISM 还原、23 个文件的 SHA-256 和图形窗口启动检查。
+[`v0.2.1` Release](https://github.com/akikazu-pc/hardware-check/releases/tag/v0.2.1) 已用公开离线 ESD 和校验文件替换旧四分卷。公开下载的 ESD 已重新核对 SHA-256，随后删除了含受限驱动的旧分卷、合并脚本、配套说明和旧 ZIP 校验文件。已发布的 ESD 在 Win10 22H2 和 Win11 24H2 离线虚拟机上通过 DISM 还原、39 个文件的 SHA-256 和图形窗口启动检查。
 
 ## 已有验证
 

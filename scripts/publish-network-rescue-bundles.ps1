@@ -2,6 +2,7 @@
 param(
     [string]$RealtekVendorZip,
     [switch]$PublicOffline,
+    [string]$PublicDriverSourceDirectory,
     [switch]$IncludeCatalog,
     [string]$VendorSourceDirectory,
     [string]$WlanArchive,
@@ -11,9 +12,15 @@ param(
 
 $ErrorActionPreference = 'Stop'
 $root = Split-Path -Parent $PSScriptRoot
+if ($PublicDriverSourceDirectory -and !$PublicOffline) {
+    throw 'Use -PublicDriverSourceDirectory with -PublicOffline.'
+}
+if ($PublicDriverSourceDirectory) {
+    $PublicDriverSourceDirectory = (Resolve-Path -LiteralPath $PublicDriverSourceDirectory).Path
+}
 if ($PublicOffline -and (!$RealtekVendorZip -or $IncludeCatalog -or $VendorSourceDirectory -or
         $WlanArchive -or $PeEthernetPackDirectory -or $SevenZipExecutable)) {
-    throw 'Use -PublicOffline with -RealtekVendorZip only. Catalog and full-library inputs are local-only.'
+    throw 'Use -PublicOffline with -RealtekVendorZip and optionally -PublicDriverSourceDirectory. Catalog and full-library inputs are local-only.'
 }
 if ($WlanArchive) {
     if (-not $IncludeCatalog) {
@@ -46,9 +53,11 @@ if ($RealtekVendorZip) {
     $RealtekVendorZip = (Resolve-Path -LiteralPath $RealtekVendorZip).Path
 }
 
-& (Join-Path $PSScriptRoot 'publish.ps1')
-if ($LASTEXITCODE -ne 0) {
-    throw "Self-contained payload build failed ($LASTEXITCODE)."
+if (!$PublicOffline) {
+    & (Join-Path $PSScriptRoot 'publish.ps1')
+    if ($LASTEXITCODE -ne 0) {
+        throw "Self-contained payload build failed ($LASTEXITCODE)."
+    }
 }
 
 $version = ([xml](Get-Content (Join-Path $root 'Directory.Build.props'))).Project.PropertyGroup.Version
@@ -64,7 +73,9 @@ try {
     Copy-Item -LiteralPath (Join-Path $root 'packaging/shared-desktop/app-identities.json') -Destination $manifest
     Copy-Item -LiteralPath (Join-Path $root 'Directory.Build.props') -Destination $staging.FullName
     Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'prototype/install-network-rescue-bundle.ps1') -Destination (Join-Path $staging.FullName 'install.ps1')
-    Copy-Item -LiteralPath $releasePayload -Destination (Join-Path $staging.FullName 'payload') -Recurse
+    if (!$PublicOffline) {
+        Copy-Item -LiteralPath $releasePayload -Destination (Join-Path $staging.FullName 'payload') -Recurse
+    }
     @"
 @echo off
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%~dp0install.ps1"
@@ -88,7 +99,15 @@ if errorlevel 1 pause
         if ($flavor -ne 'online-install') {
             $bundleRoot = Join-Path $staging.FullName 'portable'
             New-Item -ItemType Directory -Path $bundleRoot | Out-Null
-            Get-ChildItem -LiteralPath $releasePayload | Copy-Item -Destination $bundleRoot -Recurse
+            if ($PublicOffline) {
+                Copy-Item -LiteralPath (Join-Path $root 'LICENSE'), (Join-Path $root 'THIRD-PARTY-NOTICES.md'), (Join-Path $root 'licenses') -Destination $bundleRoot -Recurse
+                $dotnetRoot = Split-Path -Parent (Get-Command dotnet).Source
+                foreach ($notice in 'LICENSE.txt', 'ThirdPartyNotices.txt') {
+                    Copy-Item -LiteralPath (Join-Path $dotnetRoot $notice) -Destination (Join-Path $bundleRoot "licenses/dotnet-$notice")
+                }
+            } else {
+                Get-ChildItem -LiteralPath $releasePayload | Copy-Item -Destination $bundleRoot -Recurse
+            }
             @"
 @echo off
 start "" "%~dp0AkikazuHardwareCheck.exe" --portable-rescue
@@ -149,7 +168,41 @@ start "" "%~dp0AkikazuHardwareCheck.exe" --portable-rescue
                 }
                 Copy-Item -LiteralPath $source -Destination $destination
             }
-            Set-Content -LiteralPath (Join-Path $bundleRoot 'pe-driver-scope.txt') -Value "10240 $driverId" -Encoding ascii
+            $scope = @("10240 $driverId")
+            if ($PublicDriverSourceDirectory) {
+                $packages = Get-Content -LiteralPath (Join-Path $root 'packaging/shared-desktop/public-offline-drivers.json') -Raw | ConvertFrom-Json
+                foreach ($package in $packages) {
+                    $archivePath = Join-Path $PublicDriverSourceDirectory $package.archive
+                    if ((Get-FileHash -LiteralPath $archivePath).Hash -ne $package.sha256) {
+                        throw "The archive differs from the reviewed OEM source: $($package.archive)"
+                    }
+                    $extract = Join-Path $staging.FullName $package.installer
+                    Expand-Archive -LiteralPath $archivePath -DestinationPath $extract
+                    $payload = Join-Path $extract 'payload'
+                    New-Item -ItemType Directory -Path $payload | Out-Null
+                    & (Join-Path ([Environment]::SystemDirectory) 'tar.exe') -xf (Join-Path $extract $package.installer) -C $payload
+                    if ($LASTEXITCODE -ne 0) { throw "Unable to unpack $($package.archive)." }
+
+                    $notice = Join-Path $payload 'Copyright Notice.txt'
+                    if ((Get-FileHash -LiteralPath $notice).Hash -ne $package.noticeSha256) {
+                        throw "The Realtek copyright notice differs from the reviewed source: $($package.archive)"
+                    }
+                    foreach ($driver in $package.drivers) {
+                        $destination = Join-Path $bundleRoot "driver-packs/$($driver.id)"
+                        New-Item -ItemType Directory -Path $destination | Out-Null
+                        Copy-Item -LiteralPath $notice -Destination $destination
+                        foreach ($file in $driver.files.PSObject.Properties) {
+                            $source = Join-Path (Join-Path $payload $driver.directory) $file.Name
+                            if ((Get-FileHash -LiteralPath $source).Hash -ne $file.Value) {
+                                throw "The file differs from the reviewed Realtek driver set: $($driver.id)/$($file.Name)"
+                            }
+                            Copy-Item -LiteralPath $source -Destination $destination
+                        }
+                        $scope += "$($driver.minimumBuild) $($driver.id)"
+                    }
+                }
+            }
+            Set-Content -LiteralPath (Join-Path $bundleRoot 'pe-driver-scope.txt') -Value $scope -Encoding ascii
         }
 
         if ($flavor -eq 'offline-full-portable') {

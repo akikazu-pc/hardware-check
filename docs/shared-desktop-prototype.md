@@ -270,7 +270,7 @@ pwsh -NoProfile -File scripts/publish-network-rescue-bundles.ps1 -IncludeCatalog
 ## 当前交付方式
 
 - 在线安装版 `NetworkRescue-<version>-online-install-win-x64.zip` 解包后运行 `Install.cmd`。包内不含驱动本体。扫描到缺驱动设备后，可从内置目录查询官方来源，选择并确认下载。ZIP 通过 SHA-256 校验后解包，随后用本机 Windows 的硬件 ID 和签名流程确认安装。目录是随程序发布的固定快照，暂不提供全量联网索引、驱动升级或回退。
-- 公开离线版仅随附 Realtek 8852 Wi-Fi 6001.16.172.0，保留原版权声明和二进制。请从 [v0.2.1 Release](https://github.com/akikazu-pc/hardware-check/releases/tag/v0.2.1) 下载 `NetworkRescue-0.2.1-offline-redistributable-win-x64.esd` 和对应 SHA-256。在管理员终端运行下方命令。
+- 公开离线版随附 Realtek 8852、8851 和 8922 Wi-Fi 驱动，保留原版权声明和二进制。8851 包含 Windows 10 和 Windows 11 驱动，8922 仅用于 Windows 11。请从 [v0.2.1 Release](https://github.com/akikazu-pc/hardware-check/releases/tag/v0.2.1) 下载 `NetworkRescue-0.2.1-offline-redistributable-win-x64.esd` 和对应 SHA-256。在管理员终端运行下方命令。
 - 本地离线完整版为单个 `NetworkRescue-<version>-offline-full-portable-win-x64.esd`。在管理员终端中创建一个空目录，用 Windows 自带的 DISM 还原，再双击该目录里的 `NetworkRescue.exe`。主程序使用随附运行时和同目录的 `driver-packs`。安装 Wi-Fi 驱动需要管理员确认。
 - 完整版需在管理员终端构建。打包脚本检查 SDIO 和原厂 INF，验证 ESD 小于 2 GiB，逐文件核对还原路径和 SHA-256。完整版的应用宿主关闭 CET 兼容标志，以便在受影响的旧版 Windows 10 上启动。
 
@@ -279,10 +279,10 @@ New-Item -ItemType Directory -Path .\NetworkRescue
 dism.exe /Apply-Image /ImageFile:"NetworkRescue-0.2.1-offline-redistributable-win-x64.esd" /Index:1 /ApplyDir:NetworkRescue /CheckIntegrity
 ```
 
-公开离线版在管理员 PowerShell 中用下列命令构建。原厂 ZIP 来自技嘉 B650 AORUS ELITE AX rev. 1.2 支持页。脚本只复制五个已核对许可和 SHA-256 的文件，验证 ESD 小于 2 GiB，使用 DISM 还原后逐文件校验。
+公开离线版在管理员 PowerShell 中用下列命令构建。原厂 ZIP 来自技嘉 B650 AORUS ELITE AX rev. 1.2 支持页。通过 `-PublicDriverSourceDirectory` 提供两份附加原厂 ZIP，文件名和 SHA-256 见 [公开驱动清单](../packaging/shared-desktop/public-offline-drivers.json)。两份原厂包均附 Realtek 再分发声明。脚本只复制清单锁定的驱动文件和版权声明，验证 ESD 小于 2 GiB，使用 DISM 还原后逐文件校验。
 
 ```powershell
-pwsh -NoProfile -File scripts/publish-network-rescue-bundles.ps1 -PublicOffline -RealtekVendorZip <原厂ZIP>
+pwsh -NoProfile -File scripts/publish-network-rescue-bundles.ps1 -PublicOffline -RealtekVendorZip <8852原厂ZIP> -PublicDriverSourceDirectory <附加ZIP目录>
 ```
 
 本地验证使用保留 v0.2.1 完整驱动库的 ESD，大小为 1,260,880,368 字节。Win10 22H2（19045.2965）和 Win11 24H2（26100.1742，LTSC 评估版）均在断网虚拟机中用系统 DISM 还原，12,876 个文件的路径和 SHA-256 与暂存目录一致，随后从资源管理器打开了 Network Rescue。Win10 原版在同一来宾上以 CoreCLR 错误 `0x80131506` 退出。
