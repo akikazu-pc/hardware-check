@@ -107,7 +107,7 @@ def driverhub_rows(existing):
         encoding="utf-8-sig", newline=""
     ) as stream:
         for entry in csv.DictReader(stream):
-            if entry["granularity"] == "model":
+            if entry["granularity"] in {"model", "manual-revision"}:
                 key = model_key(entry["catalogBrand"], entry["comparisonModel"])
                 groups[key].append(entry)
                 model_groups[model_key(entry["catalogBrand"], entry["model"])].add(key)
@@ -121,10 +121,14 @@ def driverhub_rows(existing):
         occupied.update(keys)
         entry = next((row for row in entries if row["brand"].casefold() == brand.casefold()), entries[0])
         model = entry["model"] if entry["model"] in aliases else entry["comparisonModel"]
+        if entry["granularity"] == "manual-revision":
+            model = entry["comparisonModel"]
         category = entry["category"]
         kind = {"Laptop": "laptop", "DiyDesktop": "motherboard", "Other": "device"}[category]
+        gap = ("manual-revision-selection" if entry["granularity"] == "manual-revision"
+               else "exact-network-id-and-install")
         yield (kind, brand, model, "", "", "third-party-model-candidate", "",
-               "exact-network-id-and-install", entry["source"], entry["status"], entry["status"],
+               gap, entry["source"], entry["status"], entry["status"],
                category, entry["tag"], "|".join(label for label in aliases if label != model and "|" not in label), "")
 
 
