@@ -14,6 +14,14 @@
 | OEM 页面传输桥 | [Node 桥](../scripts/oem-http.mjs) | 本机 curl、PowerShell 和 Python 在 Acer 卡 TLS 重协商，在 MSI、Gigabyte、Dell 被 Akamai 返回 403。Node 的 fetch 可通过，桥只负责取回原始字节并缓存到 `artifacts/oem-cache/`，解析和判定仍由 Python 脚本完成。`--post <url> <json>` 用于 JSON 接口。 |
 | 待核统计和应用检索导出 | [覆盖统计](../scripts/report-network-rescue-coverage.py)、[目录导出](../scripts/export-network-rescue-search.py) | 分系统、厂商、缺口和系列层级统计。导出更新器来源为[嵌入检索目录](network-rescue-search-models.csv)，应用构建后可搜索。双击更新本身只更新本地目录。 |
 
+## 型号补证台账
+
+[待核台账](network-rescue-model-evidence-pending.csv)从样本库基线 `7d114cd` 导入。以品牌、原始型番、DriverHub 来源和设备分类定位记录。已有查证记录保留公开链接、结果和缓存 SHA-256。缓存路径相对于 `artifacts/driverhub-model-audit/`，缓存时间来自本地文件的最后修改时间。仅持有仓库的维护者可从公开链接重新核验。
+
+`no_row_level_check_recorded` 表示这条记录没有可关联的逐条记录。`checked_needs_review` 行可通过 `checkResult` 和 `reviewNotes` 回查具体原因。
+
+按顾客遇到的完整型番、设备标签或硬件 ID 重开相关记录。有新目录覆盖一批完整型番时，先抽查 50–100 条，记录净补证数与耗时，再决定是否扩大。证据确认后同步更新[样本库](network-rescue-driverhub-model-candidates.csv)、[补证明细](network-rescue-model-evidence-backfill.csv)和搜索索引，再从待核台账移除对应条目。修订不明的网卡继续由顾客手动选择。
+
 ## 仍需单独核验的策略
 
 - **华擎按型号拆分共用手册。** 已核的原厂页面、手册页码和变体结论在[华擎证据表](network-rescue-asrock-variant-proof.csv)。对同一本手册，先确认包装清单中的精确型号，再核对 WLAN 段落是否限定某个变体。仅预留可分别结案，明确无 Win10 出厂无线驱动只结 Win10。仅限 6 GHz 或 Wi-Fi 7 功能的说明保留驱动待核。当前更新入口未自动获取和判读这批手册。
