@@ -54,7 +54,8 @@ public sealed class RescueModelCatalogTests
 
     [Theory]
     [InlineData("AM1M-A", RescueDeviceCategory.DiyDesktop, null, "AM1M-A")]
-    [InlineData("ESPRIMO D9500", RescueDeviceCategory.Other, RescueDeviceTag.BrandedDesktop, "ESPRIMO D9500")]
+    [InlineData("ESPRIMO D9500", RescueDeviceCategory.Laptop, null, "ESPRIMO D9500")]
+    [InlineData("ESPRIMO D9510", RescueDeviceCategory.Laptop, null, "ESPRIMO D9510")]
     public void FindsImportedDriverHubModelsInTheirDeviceClass(string query, RescueDeviceCategory category,
         RescueDeviceTag? tag, string model)
     {

@@ -29,8 +29,8 @@ Fujitsu,CELSIUS H5511,model,pending,https://jp.drvhub.net/laptops/fujitsu/celsiu
 Fujitsu,CELSIUS H7510,model,pending,https://jp.drvhub.net/laptops/fujitsu/celsius-h7510,Fujitsu,CELSIUS H7510,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Fujitsu/CELSIUS/CELSIUS%20H7510
 Fujitsu,AMILO A1655,model,pending,https://jp.drvhub.net/laptops/fujitsu/amilo-a1655,Fujitsu,AMILO A1655,Laptop,,
 Fujitsu,AMILO Li 1818,model,pending,https://jp.drvhub.net/laptops/fujitsu/amilo-li-1818,Fujitsu,AMILO Li 1818,Laptop,,
-Fujitsu,ESPRIMO D9500,model,pending,https://jp.drvhub.net/laptops/fujitsu/esprimo-d9500,Fujitsu,ESPRIMO D9500,Other,BrandedDesktop,
-Fujitsu,ESPRIMO D9510,model,pending,https://jp.drvhub.net/laptops/fujitsu/esprimo-d9510,Fujitsu,ESPRIMO D9510,Other,BrandedDesktop,
+Fujitsu,ESPRIMO D9500,model,pending,https://jp.drvhub.net/laptops/fujitsu/esprimo-d9500,Fujitsu,ESPRIMO D9500,Laptop,,https://support.ts.fujitsu.com/Search/SWP1084546.asp
+Fujitsu,ESPRIMO D9510,model,pending,https://jp.drvhub.net/laptops/fujitsu/esprimo-d9510,Fujitsu,ESPRIMO D9510,Laptop,,https://support.ts.fujitsu.com/Search/SWP1084562.asp
 GPD,G1617-01,model,pending,https://jp.drvhub.net/laptops/gpd/g1617-01,GPD,G1617-01,Other,Handheld,
 Valve,Galileo,model,pending,https://jp.drvhub.net/laptops/valve/galileo,Valve,Steam Deck OLED,Other,Handheld,
 Valve,Jupiter,model,pending,https://jp.drvhub.net/laptops/valve/jupiter,Valve,Steam Deck LCD,Other,Handheld,
@@ -1458,7 +1458,7 @@ ASUS,E402MA,model,pending,https://jp.drvhub.net/laptops/asus/e402ma,ASUS,E402MA,
 ASUS,E402NA,model,pending,https://jp.drvhub.net/laptops/asus/e402na,ASUS,E402NA,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/E402/E402NA
 ASUS,E402NAS,model,pending,https://jp.drvhub.net/laptops/asus/e402nas,ASUS,E402NAS,Laptop,,
 ASUS,E402SA,model,pending,https://jp.drvhub.net/laptops/asus/e402sa,ASUS,E402SA,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/E402/E402SA
-ASUS,E402WA,model,pending,https://jp.drvhub.net/laptops/asus/e402wa,ASUS,E402WA,Laptop,,
+ASUS,E402WA,model,pending,https://jp.drvhub.net/laptops/asus/e402wa,ASUS,E402WA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
 ASUS,E402WAS,model,pending,https://jp.drvhub.net/laptops/asus/e402was,ASUS,E402WAS,Laptop,,
 ASUS,E402YA,model,pending,https://jp.drvhub.net/laptops/asus/e402ya,ASUS,E402YA,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=3
 ASUS,E403NA,model,pending,https://jp.drvhub.net/laptops/asus/e403na,ASUS,E403NA,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/E403/E403NA
@@ -1489,7 +1489,7 @@ ASUS,G551VW,model,pending,https://jp.drvhub.net/laptops/asus/g551vw,ASUS,G551VW,
 ASUS,G701VI,model,pending,https://jp.drvhub.net/laptops/asus/g701vi,ASUS,G701VI,Laptop,,
 ASUS,G701VIK,model,pending,https://jp.drvhub.net/laptops/asus/g701vik,ASUS,G701VIK,Laptop,,
 ASUS,G701VO,model,pending,https://jp.drvhub.net/laptops/asus/g701vo,ASUS,G701VO,Laptop,,
-ASUS,G703VI,model,pending,https://jp.drvhub.net/laptops/asus/g703vi,ASUS,G703VI,Laptop,,
+ASUS,G703VI,model,pending,https://jp.drvhub.net/laptops/asus/g703vi,ASUS,G703VI,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=5993&productflag=1
 ASUS,G713PI,model,pending,https://jp.drvhub.net/laptops/asus/g713pi,ASUS,G713PI,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=9
 ASUS,G713PV,model,pending,https://jp.drvhub.net/laptops/asus/g713pv,ASUS,G713PV,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=9
 ASUS,G731GV,model,pending,https://jp.drvhub.net/laptops/asus/g731gv,ASUS,G731GV,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=9
@@ -1531,11 +1531,11 @@ ASUS,K501UXM,model,pending,https://jp.drvhub.net/laptops/asus/k501uxm,ASUS,K501U
 ASUS,N501JW,model,pending,https://jp.drvhub.net/laptops/asus/n501jw,ASUS,N501JW,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/N501/N501JW
 ASUS,N501VW,model,pending,https://jp.drvhub.net/laptops/asus/n501vw,ASUS,N501VW,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/N501/N501VW
 ASUS,N5051Tp,model,pending,https://jp.drvhub.net/laptops/asus/n5051tp,ASUS,N5051Tp,Laptop,,
-ASUS,N550JA,model,pending,https://jp.drvhub.net/laptops/asus/n550ja,ASUS,N550JA,Laptop,,
+ASUS,N550JA,model,pending,https://jp.drvhub.net/laptops/asus/n550ja,ASUS,N550JA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35213&productflag=1
 ASUS,N550JK,model,pending,https://jp.drvhub.net/laptops/asus/n550jk,ASUS,N550JK,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/N550/N550JK
 ASUS,N550JV,model,pending,https://jp.drvhub.net/laptops/asus/n550jv,ASUS,N550JV,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/N550/N550JV
 ASUS,N550JX,model,pending,https://jp.drvhub.net/laptops/asus/n550jx,ASUS,N550JX,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/N550/N550JX
-ASUS,N550LF,model,pending,https://jp.drvhub.net/laptops/asus/n550lf,ASUS,N550LF,Laptop,,
+ASUS,N550LF,model,pending,https://jp.drvhub.net/laptops/asus/n550lf,ASUS,N550LF,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35213&productflag=1
 ASUS,N551JB,model,pending,https://jp.drvhub.net/laptops/asus/n551jb,ASUS,N551JB,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/N551/N551JB
 ASUS,N551JK,model,pending,https://jp.drvhub.net/laptops/asus/n551jk,ASUS,N551JK,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/N551/N551JK
 ASUS,N551JM,model,pending,https://jp.drvhub.net/laptops/asus/n551jm,ASUS,N551JM,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/N551/N551JM
@@ -1599,8 +1599,8 @@ ASUS,ROG Strix G16 G614PR,model,pending,https://jp.drvhub.net/laptops/asus/rog-s
 ASUS,ROG Strix G16 G614PW,model,pending,https://jp.drvhub.net/laptops/asus/rog-strix-g16-g614pw,ASUS,G614PW,Laptop,,https://www.asus.com/supportonly/g614pw/helpdesk_download/
 ASUS,ROG Strix G16 G615JH,model,pending,https://jp.drvhub.net/laptops/asus/rog-strix-g16-g615jh,ASUS,G615JH,Laptop,,
 ASUS,ROG Strix G16 G615JHR,model,pending,https://jp.drvhub.net/laptops/asus/rog-strix-g16-g615jhr,ASUS,G615JHR,Laptop,,
-ASUS,ROG Strix G16 G615JM,model,pending,https://jp.drvhub.net/laptops/asus/rog-strix-g16-g615jm,ASUS,G615JM,Laptop,,
-ASUS,ROG Strix G16 G615JMR,model,pending,https://jp.drvhub.net/laptops/asus/rog-strix-g16-g615jmr,ASUS,G615JMR,Laptop,,
+ASUS,ROG Strix G16 G615JM,model,pending,https://jp.drvhub.net/laptops/asus/rog-strix-g16-g615jm,ASUS,G615JM,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=5993&productflag=1
+ASUS,ROG Strix G16 G615JMR,model,pending,https://jp.drvhub.net/laptops/asus/rog-strix-g16-g615jmr,ASUS,G615JMR,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=5993&productflag=1
 ASUS,ROG Strix G16 G615JPR,model,pending,https://jp.drvhub.net/laptops/asus/rog-strix-g16-g615jpr,ASUS,G615JPR,Laptop,,
 ASUS,ROG Strix G16 G615LM,model,pending,https://jp.drvhub.net/laptops/asus/rog-strix-g16-g615lm,ASUS,G615LM,Laptop,,https://www.asus.com/supportonly/g615lm/helpdesk_download/
 ASUS,ROG Strix G16 G615LP,model,pending,https://jp.drvhub.net/laptops/asus/rog-strix-g16-g615lp,ASUS,G615LP,Laptop,,https://www.asus.com/supportonly/g615lp/helpdesk_download/
@@ -1762,7 +1762,7 @@ ASUS,ROG Zephyrus G14 GA402XI,model,pending,https://jp.drvhub.net/laptops/asus/r
 ASUS,ROG Zephyrus G14 GA402XU,model,pending,https://jp.drvhub.net/laptops/asus/rog-zephyrus-g14-ga402xu,ASUS,GA402XU,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=10
 ASUS,ROG Zephyrus G14 GA402XV,model,pending,https://jp.drvhub.net/laptops/asus/rog-zephyrus-g14-ga402xv,ASUS,GA402XV,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=10
 ASUS,ROG Zephyrus G14 GA402XZ,model,pending,https://jp.drvhub.net/laptops/asus/rog-zephyrus-g14-ga402xz,ASUS,GA402XZ,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=10
-ASUS,ROG Zephyrus G14 GA403GM,model,pending,https://jp.drvhub.net/laptops/asus/rog-zephyrus-g14-ga403gm,ASUS,GA403GM,Laptop,,
+ASUS,ROG Zephyrus G14 GA403GM,model,pending,https://jp.drvhub.net/laptops/asus/rog-zephyrus-g14-ga403gm,ASUS,GA403GM,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=5993&productflag=1
 ASUS,ROG Zephyrus G14 GA403UI,model,pending,https://jp.drvhub.net/laptops/asus/rog-zephyrus-g14-ga403ui,ASUS,GA403UI,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=10
 ASUS,ROG Zephyrus G14 GA403UM,model,pending,https://jp.drvhub.net/laptops/asus/rog-zephyrus-g14-ga403um,ASUS,GA403UM,Laptop,,https://www.asus.com/supportonly/ga403um/helpdesk_download/
 ASUS,ROG Zephyrus G14 GA403UP,model,pending,https://jp.drvhub.net/laptops/asus/rog-zephyrus-g14-ga403up,ASUS,GA403UP,Laptop,,https://www.asus.com/supportonly/ga403up/helpdesk_download/
@@ -1881,8 +1881,8 @@ ASUS,TUF A15 FA506IV FA566IV,model,pending,https://jp.drvhub.net/laptops/asus/tu
 ASUS,TUF A15 FA506IV FX506IV,model,pending,https://jp.drvhub.net/laptops/asus/tuf-a15-fa506iv-fx506iv,ASUS,TUF A15 FA506IV FX506IV,Laptop,,
 ASUS,TUF A15 FA506NC,model,pending,https://jp.drvhub.net/laptops/asus/tuf-a15-fa506nc,ASUS,FA506NC,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=4
 ASUS,TUF A15 FA506NC FA566NC,model,pending,https://jp.drvhub.net/laptops/asus/tuf-a15-fa506nc-fa566nc,ASUS,TUF A15 FA506NC FA566NC,Laptop,,
-ASUS,TUF A15 FA506NCG,model,pending,https://jp.drvhub.net/laptops/asus/tuf-a15-fa506ncg,ASUS,FA506NCG,Laptop,,
-ASUS,TUF A15 FA506NCQ,model,pending,https://jp.drvhub.net/laptops/asus/tuf-a15-fa506ncq,ASUS,FA506NCQ,Laptop,,
+ASUS,TUF A15 FA506NCG,model,pending,https://jp.drvhub.net/laptops/asus/tuf-a15-fa506ncg,ASUS,FA506NCG,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=5993&productflag=1
+ASUS,TUF A15 FA506NCQ,model,pending,https://jp.drvhub.net/laptops/asus/tuf-a15-fa506ncq,ASUS,FA506NCQ,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=5993&productflag=1
 ASUS,TUF A15 FA506NCR,model,pending,https://jp.drvhub.net/laptops/asus/tuf-a15-fa506ncr,ASUS,FA506NCR,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=4
 ASUS,TUF A15 FA506NCR FA566NCR,model,pending,https://jp.drvhub.net/laptops/asus/tuf-a15-fa506ncr-fa566ncr,ASUS,TUF A15 FA506NCR FA566NCR,Laptop,,
 ASUS,TUF A15 FA506NF,model,pending,https://jp.drvhub.net/laptops/asus/tuf-a15-fa506nf,ASUS,FA506NF,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=4
@@ -2097,63 +2097,63 @@ ASUS,VivoBook 12 E203MA L203MA,model,pending,https://jp.drvhub.net/laptops/asus/
 ASUS,VivoBook 12 E203MAH,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-12-e203mah,ASUS,E203MAH,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240108144316635_ASUS_System_Control_Interface_v1modellist.pdf#page=1
 ASUS,VivoBook 12 E203MAS E203MA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-12-e203mas-e203ma,ASUS,VivoBook 12 E203MAS E203MA,Laptop,,
 ASUS,VivoBook 12 E203MAS L203MA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-12-e203mas-l203ma,ASUS,E203MAS,Laptop,,
-ASUS,VivoBook 14 E406SA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-14-e406sa,ASUS,E406SA,Laptop,,
+ASUS,VivoBook 14 E406SA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-14-e406sa,ASUS,E406SA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=27762&productflag=1
 ASUS,VivoBook 14 E406SAS,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-14-e406sas,ASUS,E406SAS,Laptop,,
 ASUS,Vivobook 14 F1407AA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-14-f1407aa,ASUS,F1407AA,Laptop,,
 ASUS,Vivobook 14 Flip TP3407SA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-14-flip-tp3407sa,ASUS,Vivobook 14 Flip TP3407SA,Laptop,,
-ASUS,Vivobook 14 M1405NAQ,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-14-m1405naq,ASUS,M1405NAQ,Laptop,,
-ASUS,Vivobook 14 M1407KA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-14-m1407ka,ASUS,M1407KA,Laptop,,
-ASUS,Vivobook 14 X1404MA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-14-x1404ma,ASUS,X1404MA,Laptop,,
+ASUS,Vivobook 14 M1405NAQ,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-14-m1405naq,ASUS,M1405NAQ,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
+ASUS,Vivobook 14 M1407KA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-14-m1407ka,ASUS,M1407KA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
+ASUS,Vivobook 14 X1404MA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-14-x1404ma,ASUS,X1404MA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
 ASUS,Vivobook 14 X1404VAP A1404VA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-14-x1404vap-a1404va,ASUS,X1404VAP,Laptop,,
 ASUS,Vivobook 14 X1404VAP X1404VA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-14-x1404vap-x1404va,ASUS,Vivobook 14 X1404VAP X1404VA,Laptop,,
-ASUS,Vivobook 14 X1404VAPB,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-14-x1404vapb,ASUS,X1404VAPB,Laptop,,
+ASUS,Vivobook 14 X1404VAPB,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-14-x1404vapb,ASUS,X1404VAPB,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
 ASUS,Vivobook 14 X1404VAPB A1404VA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-14-x1404vapb-a1404va,ASUS,X1404VAPB,Laptop,,
 ASUS,Vivobook 14 X1404VAPB F1404VA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-14-x1404vapb-f1404va,ASUS,Vivobook 14 X1404VAPB F1404VA,Laptop,,
 ASUS,Vivobook 14 X1404VAPB X1404VA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-14-x1404vapb-x1404va,ASUS,Vivobook 14 X1404VAPB X1404VA,Laptop,,
 ASUS,Vivobook 14 X1404VAPBF X1404VA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-14-x1404vapbf-x1404va,ASUS,Vivobook 14 X1404VAPBF X1404VA,Laptop,,
 ASUS,Vivobook 14 X1404VAPF X1404VA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-14-x1404vapf-x1404va,ASUS,Vivobook 14 X1404VAPF X1404VA,Laptop,,
-ASUS,Vivobook 14 X1407AA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-14-x1407aa,ASUS,X1407AA,Laptop,,
-ASUS,Vivobook 14 X1407CA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-14-x1407ca,ASUS,X1407CA,Laptop,,
+ASUS,Vivobook 14 X1407AA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-14-x1407aa,ASUS,X1407AA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
+ASUS,Vivobook 14 X1407CA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-14-x1407ca,ASUS,X1407CA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
 ASUS,Vivobook 14 X1407CA A1407CA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-14-x1407ca-a1407ca,ASUS,X1407CA,Laptop,,
-ASUS,Vivobook 14 X1407QA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-14-x1407qa,ASUS,X1407QA,Laptop,,
+ASUS,Vivobook 14 X1407QA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-14-x1407qa,ASUS,X1407QA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
 ASUS,Vivobook 14 X1407QA A1407QA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-14-x1407qa-a1407qa,ASUS,X1407QA,Laptop,,
 ASUS,Vivobook 14 X1407QA F1407QA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-14-x1407qa-f1407qa,ASUS,Vivobook 14 X1407QA F1407QA,Laptop,,
-ASUS,VivoBook 14 X407MA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-14-x407ma,ASUS,X407MA,Laptop,,
+ASUS,VivoBook 14 X407MA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-14-x407ma,ASUS,X407MA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=27762&productflag=1
 ASUS,VivoBook 14 X407MA A407MA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-14-x407ma-a407ma,ASUS,X407MA,Laptop,,
 ASUS,VivoBook 14 X407MA F407MA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-14-x407ma-f407ma,ASUS,VivoBook 14 X407MA F407MA,Laptop,,
 ASUS,VivoBook 14 X407MA P1401MA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-14-x407ma-p1401ma,ASUS,VivoBook 14 X407MA P1401MA,Laptop,,
 ASUS,VivoBook 14 X407MA R410MA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-14-x407ma-r410ma,ASUS,VivoBook 14 X407MA R410MA,Laptop,,
 ASUS,VivoBook 14 X407MA X407M,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-14-x407ma-x407m,ASUS,VivoBook 14 X407MA X407M,Laptop,,
-ASUS,VivoBook 14 X407UA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-14-x407ua,ASUS,X407UA,Laptop,,
+ASUS,VivoBook 14 X407UA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-14-x407ua,ASUS,X407UA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
 ASUS,VivoBook 14 X407UAR,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-14-x407uar,ASUS,X407UAR,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240108144316635_ASUS_System_Control_Interface_v1modellist.pdf#page=2
-ASUS,VivoBook 14 X407UB,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-14-x407ub,ASUS,X407UB,Laptop,,
+ASUS,VivoBook 14 X407UB,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-14-x407ub,ASUS,X407UB,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=27762&productflag=1
 ASUS,VivoBook 14 X407UBR,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-14-x407ubr,ASUS,X407UBR,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240108144316635_ASUS_System_Control_Interface_v1modellist.pdf#page=3
 ASUS,VivoBook 14 X407UF,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-14-x407uf,ASUS,X407UF,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240108144316635_ASUS_System_Control_Interface_v1modellist.pdf#page=3
-ASUS,VivoBook 14 X441MA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-14-x441ma,ASUS,X441MA,Laptop,,
+ASUS,VivoBook 14 X441MA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-14-x441ma,ASUS,X441MA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=27762&productflag=1
 ASUS,VivoBook 14 X441MA A441MA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-14-x441ma-a441ma,ASUS,X441MA,Laptop,,
-ASUS,VivoBook 14 X441MA K7N0CV11U297306,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-14-x441ma-k7n0cv11u297306,ASUS,X441MA,Laptop,,
+ASUS,VivoBook 14 X441MA K7N0CV11U297306,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-14-x441ma-k7n0cv11u297306,ASUS,X441MA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=27762&productflag=1
 ASUS,VivoBook 14 X441MA X441MA05A267166,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-14-x441ma-x441ma05a267166,ASUS,X441MA,Laptop,,
 ASUS,VivoBook 14 X441MAR X441MA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-14-x441mar-x441ma,ASUS,VivoBook 14 X441MAR X441MA,Laptop,,
-ASUS,VivoBook 14 X441MB,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-14-x441mb,ASUS,X441MB,Laptop,,
+ASUS,VivoBook 14 X441MB,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-14-x441mb,ASUS,X441MB,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=27762&productflag=1
 ASUS,VivoBook 14 X441UAR,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-14-x441uar,ASUS,X441UAR,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240108144316635_ASUS_System_Control_Interface_v1modellist.pdf#page=3
-ASUS,VivoBook 14 X441UB,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-14-x441ub,ASUS,X441UB,Laptop,,
+ASUS,VivoBook 14 X441UB,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-14-x441ub,ASUS,X441UB,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=27762&productflag=1
 ASUS,VivoBook 14 X441UBR,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-14-x441ubr,ASUS,X441UBR,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240108144316635_ASUS_System_Control_Interface_v1modellist.pdf#page=3
-ASUS,VivoBook 14 X442UF,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-14-x442uf,ASUS,X442UF,Laptop,,
-ASUS,VivoBook 14 X705MB,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-14-x705mb,ASUS,X705MB,Laptop,,
+ASUS,VivoBook 14 X442UF,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-14-x442uf,ASUS,X442UF,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
+ASUS,VivoBook 14 X705MB,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-14-x705mb,ASUS,X705MB,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
 ASUS,Vivobook 15 A1504MA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-a1504ma,ASUS,Vivobook 15 A1504MA,Laptop,,
 ASUS,Vivobook 15 D1502NAQ,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-d1502naq,ASUS,Vivobook 15 D1502NAQ,Laptop,,
-ASUS,Vivobook 15 F1504MA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-f1504ma,ASUS,F1504MA,Laptop,,
-ASUS,Vivobook 15 M1502NAQ,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-m1502naq,ASUS,M1502NAQ,Laptop,,
-ASUS,Vivobook 15 M1502XA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-m1502xa,ASUS,M1502XA,Laptop,,
+ASUS,Vivobook 15 F1504MA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-f1504ma,ASUS,F1504MA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
+ASUS,Vivobook 15 M1502NAQ,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-m1502naq,ASUS,M1502NAQ,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
+ASUS,Vivobook 15 M1502XA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-m1502xa,ASUS,M1502XA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
 ASUS,Vivobook 15 R1504MA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-r1504ma,ASUS,R1504MA,Laptop,,
-ASUS,Vivobook 15 X1504MA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-x1504ma,ASUS,X1504MA,Laptop,,
+ASUS,Vivobook 15 X1504MA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-x1504ma,ASUS,X1504MA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
 ASUS,Vivobook 15 X1504VAP,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-x1504vap,ASUS,X1504VAP,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=21
 ASUS,Vivobook 15 X1504VAP A1504VA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-x1504vap-a1504va,ASUS,X1504VAP,Laptop,,
 ASUS,Vivobook 15 X1504VAP F1504VA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-x1504vap-f1504va,ASUS,Vivobook 15 X1504VAP F1504VA,Laptop,,
 ASUS,Vivobook 15 X1504VAP P1504CVA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-x1504vap-p1504cva,ASUS,Vivobook 15 X1504VAP P1504CVA,Laptop,,
 ASUS,Vivobook 15 X1504VAP R1504VA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-x1504vap-r1504va,ASUS,Vivobook 15 X1504VAP R1504VA,Laptop,,
 ASUS,Vivobook 15 X1504VAP X1504VA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-x1504vap-x1504va,ASUS,Vivobook 15 X1504VAP X1504VA,Laptop,,
-ASUS,Vivobook 15 X1504VAPB,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-x1504vapb,ASUS,X1504VAPB,Laptop,,
+ASUS,Vivobook 15 X1504VAPB,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-x1504vapb,ASUS,X1504VAPB,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
 ASUS,Vivobook 15 X1504VAPB A1504VA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-x1504vapb-a1504va,ASUS,X1504VAPB,Laptop,,
 ASUS,Vivobook 15 X1504VAPB F1504VA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-x1504vapb-f1504va,ASUS,Vivobook 15 X1504VAPB F1504VA,Laptop,,
 ASUS,Vivobook 15 X1504VAPB X1504VA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-x1504vapb-x1504va,ASUS,Vivobook 15 X1504VAPB X1504VA,Laptop,,
@@ -2164,18 +2164,18 @@ ASUS,Vivobook 15 X1504VAPF A1504VA,model,pending,https://jp.drvhub.net/laptops/a
 ASUS,Vivobook 15 X1504VAPF F1504VA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-x1504vapf-f1504va,ASUS,Vivobook 15 X1504VAPF F1504VA,Laptop,,
 ASUS,Vivobook 15 X1504VAPF R1504VA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-x1504vapf-r1504va,ASUS,Vivobook 15 X1504VAPF R1504VA,Laptop,,
 ASUS,Vivobook 15 X1504VAPF X1504VA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-x1504vapf-x1504va,ASUS,Vivobook 15 X1504VAPF X1504VA,Laptop,,
-ASUS,VivoBook 15 X507LA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-x507la,ASUS,X507LA,Laptop,,
-ASUS,VivoBook 15 X507MA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-x507ma,ASUS,X507MA,Laptop,,
+ASUS,VivoBook 15 X507LA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-x507la,ASUS,X507LA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=27762&productflag=1
+ASUS,VivoBook 15 X507MA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-x507ma,ASUS,X507MA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
 ASUS,VivoBook 15 X507MA A507MA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-x507ma-a507ma,ASUS,X507MA,Laptop,,
 ASUS,VivoBook 15 X507MA F507MA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-x507ma-f507ma,ASUS,VivoBook 15 X507MA F507MA,Laptop,,
 ASUS,VivoBook 15 X507MA R507MA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-x507ma-r507ma,ASUS,VivoBook 15 X507MA R507MA,Laptop,,
 ASUS,VivoBook 15 X507UAR,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-x507uar,ASUS,X507UAR,Laptop,,
 ASUS,VivoBook 15 X507UBR,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-x507ubr,ASUS,X507UBR,Laptop,,
-ASUS,VivoBook 15 X507UF,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-x507uf,ASUS,X507UF,Laptop,,
+ASUS,VivoBook 15 X507UF,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-x507uf,ASUS,X507UF,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
 ASUS,Vivobook 15 X515EAB X1500EA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-x515eab-x1500ea,ASUS,Vivobook 15 X515EAB X1500EA,Laptop,,
 ASUS,VivoBook 15 X540BA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-x540ba,ASUS,X540BA,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240108144316635_ASUS_System_Control_Interface_v1modellist.pdf#page=3
 ASUS,VivoBook 15 X540BP,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-x540bp,ASUS,X540BP,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240108144316635_ASUS_System_Control_Interface_v1modellist.pdf#page=3
-ASUS,VivoBook 15 X540MA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-x540ma,ASUS,X540MA,Laptop,,
+ASUS,VivoBook 15 X540MA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-x540ma,ASUS,X540MA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=27762&productflag=1
 ASUS,VivoBook 15 X540MA A540MA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-x540ma-a540ma,ASUS,X540MA,Laptop,,
 ASUS,VivoBook 15 X540MA A543MA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-x540ma-a543ma,ASUS,X540MA,Laptop,,
 ASUS,VivoBook 15 X540MA D540MA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-x540ma-d540ma,ASUS,X540MA,Laptop,,
@@ -2186,60 +2186,60 @@ ASUS,VivoBook 15 X540MA R540MA,model,pending,https://jp.drvhub.net/laptops/asus/
 ASUS,VivoBook 15 X540MA R543MA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-x540ma-r543ma,ASUS,VivoBook 15 X540MA R543MA,Laptop,,
 ASUS,VivoBook 15 X540MA X541SA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-x540ma-x541sa,ASUS,VivoBook 15 X540MA X541SA,Laptop,,
 ASUS,VivoBook 15 X540MA X543MA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-x540ma-x543ma,ASUS,VivoBook 15 X540MA X543MA,Laptop,,
-ASUS,VivoBook 15 X540MB,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-x540mb,ASUS,X540MB,Laptop,,
+ASUS,VivoBook 15 X540MB,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-x540mb,ASUS,X540MB,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=27762&productflag=1
 ASUS,VivoBook 15 X540MB A540MB,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-x540mb-a540mb,ASUS,X540MB,Laptop,,
 ASUS,VivoBook 15 X540MB D540MB,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-x540mb-d540mb,ASUS,X540MB,Laptop,,
 ASUS,VivoBook 15 X540MB F540MB,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-x540mb-f540mb,ASUS,VivoBook 15 X540MB F540MB,Laptop,,
 ASUS,VivoBook 15 X540MB R540MB,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-x540mb-r540mb,ASUS,VivoBook 15 X540MB R540MB,Laptop,,
 ASUS,VivoBook 15 X540UAR,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-x540uar,ASUS,X540UAR,Laptop,,
-ASUS,VivoBook 15 X540UB,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-x540ub,ASUS,X540UB,Laptop,,
+ASUS,VivoBook 15 X540UB,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-x540ub,ASUS,X540UB,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=27762&productflag=1
 ASUS,VivoBook 15 X540UBR,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-x540ubr,ASUS,X540UBR,Laptop,,
 ASUS,VivoBook 15 X542UF,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-x542uf,ASUS,X542UF,Laptop,,
 ASUS,VivoBook 15 X560UD,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-x560ud,ASUS,X560UD,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240108144316635_ASUS_System_Control_Interface_v1modellist.pdf#page=3
-ASUS,VivoBook 15 X570UD,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-x570ud,ASUS,X570UD,Laptop,,
+ASUS,VivoBook 15 X570UD,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-15-x570ud,ASUS,X570UD,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=27762&productflag=1
 ASUS,Vivobook 16 D1605NAQ,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-16-d1605naq,ASUS,Vivobook 16 D1605NAQ,Laptop,,
 ASUS,Vivobook 16 Flip TP3607AA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-16-flip-tp3607aa,ASUS,Vivobook 16 Flip TP3607AA,Laptop,,
 ASUS,Vivobook 16 Flip TP3607SA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-16-flip-tp3607sa,ASUS,Vivobook 16 Flip TP3607SA,Laptop,,
 ASUS,Vivobook 16 Flip TP3607SH,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-16-flip-tp3607sh,ASUS,Vivobook 16 Flip TP3607SH,Laptop,,
-ASUS,Vivobook 16 M1605NAQ,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-16-m1605naq,ASUS,M1605NAQ,Laptop,,
-ASUS,Vivobook 16 M1607GA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-16-m1607ga,ASUS,M1607GA,Laptop,,
-ASUS,Vivobook 16 M1607HA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-16-m1607ha,ASUS,M1607HA,Laptop,,
-ASUS,Vivobook 16 M1607KA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-16-m1607ka,ASUS,M1607KA,Laptop,,
-ASUS,Vivobook 16 V3607VJ,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-16-v3607vj,ASUS,V3607VJ,Laptop,,
+ASUS,Vivobook 16 M1605NAQ,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-16-m1605naq,ASUS,M1605NAQ,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
+ASUS,Vivobook 16 M1607GA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-16-m1607ga,ASUS,M1607GA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
+ASUS,Vivobook 16 M1607HA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-16-m1607ha,ASUS,M1607HA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
+ASUS,Vivobook 16 M1607KA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-16-m1607ka,ASUS,M1607KA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
+ASUS,Vivobook 16 V3607VJ,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-16-v3607vj,ASUS,V3607VJ,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
 ASUS,Vivobook 16 V3607VJ K3607VJ,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-16-v3607vj-k3607vj,ASUS,Vivobook 16 V3607VJ K3607VJ,Laptop,,
-ASUS,Vivobook 16 V3607VU,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-16-v3607vu,ASUS,V3607VU,Laptop,,
+ASUS,Vivobook 16 V3607VU,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-16-v3607vu,ASUS,V3607VU,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
 ASUS,Vivobook 16 V3607VU A3607VU,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-16-v3607vu-a3607vu,ASUS,V3607VU,Laptop,,
 ASUS,Vivobook 16 X1605VAP,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-16-x1605vap,ASUS,X1605VAP,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=21
 ASUS,Vivobook 16 X1605VAP X1605VA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-16-x1605vap-x1605va,ASUS,Vivobook 16 X1605VAP X1605VA,Laptop,,
 ASUS,Vivobook 16 X1605VAPBF X1605VA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-16-x1605vapbf-x1605va,ASUS,Vivobook 16 X1605VAPBF X1605VA,Laptop,,
-ASUS,Vivobook 16 X1607AA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-16-x1607aa,ASUS,X1607AA,Laptop,,
-ASUS,Vivobook 16 X1607CA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-16-x1607ca,ASUS,X1607CA,Laptop,,
-ASUS,Vivobook 16 X1607QA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-16-x1607qa,ASUS,X1607QA,Laptop,,
+ASUS,Vivobook 16 X1607AA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-16-x1607aa,ASUS,X1607AA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
+ASUS,Vivobook 16 X1607CA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-16-x1607ca,ASUS,X1607CA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
+ASUS,Vivobook 16 X1607QA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-16-x1607qa,ASUS,X1607QA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
 ASUS,Vivobook 16 X1607QA A1607QA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-16-x1607qa-a1607qa,ASUS,X1607QA,Laptop,,
 ASUS,Vivobook 16 X1607QA F1607QA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-16-x1607qa-f1607qa,ASUS,Vivobook 16 X1607QA F1607QA,Laptop,,
 ASUS,Vivobook 16 X1607QA R1607QA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-16-x1607qa-r1607qa,ASUS,Vivobook 16 X1607QA R1607QA,Laptop,,
-ASUS,Vivobook 16 X1652DA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-16-x1652da,ASUS,X1652DA,Laptop,,
+ASUS,Vivobook 16 X1652DA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-16-x1652da,ASUS,X1652DA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
 ASUS,Vivobook 17 X1704MA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-17-x1704ma,ASUS,X1704MA,Laptop,,
 ASUS,Vivobook 17 X1704VAP F1704VA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-17-x1704vap-f1704va,ASUS,Vivobook 17 X1704VAP F1704VA,Laptop,,
 ASUS,Vivobook 17 X1704VAP X1704VA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-17-x1704vap-x1704va,ASUS,Vivobook 17 X1704VAP X1704VA,Laptop,,
 ASUS,Vivobook 17 X1704VAPBF X1704VA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-17-x1704vapbf-x1704va,ASUS,Vivobook 17 X1704VAPBF X1704VA,Laptop,,
 ASUS,Vivobook 17 X1704VAPF F1704VA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-17-x1704vapf-f1704va,ASUS,Vivobook 17 X1704VAPF F1704VA,Laptop,,
 ASUS,Vivobook 17 X1704VAPF X1704VA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-17-x1704vapf-x1704va,ASUS,Vivobook 17 X1704VAPF X1704VA,Laptop,,
-ASUS,VivoBook 17 X705MA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-17-x705ma,ASUS,X705MA,Laptop,,
+ASUS,VivoBook 17 X705MA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-17-x705ma,ASUS,X705MA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
 ASUS,VivoBook 17 X705MA A705MA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-17-x705ma-a705ma,ASUS,X705MA,Laptop,,
 ASUS,VivoBook 17 X705MA F705MA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-17-x705ma-f705ma,ASUS,VivoBook 17 X705MA F705MA,Laptop,,
 ASUS,VivoBook 17 X705MA R702MA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-17-x705ma-r702ma,ASUS,VivoBook 17 X705MA R702MA,Laptop,,
-ASUS,VivoBook 17 X705MB,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-17-x705mb,ASUS,X705MB,Laptop,,
+ASUS,VivoBook 17 X705MB,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-17-x705mb,ASUS,X705MB,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
 ASUS,VivoBook 17 X705MB F705MB,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-17-x705mb-f705mb,ASUS,VivoBook 17 X705MB F705MB,Laptop,,
 ASUS,VivoBook 17 X705UB,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-17-x705ub,ASUS,X705UB,Laptop,,
 ASUS,VivoBook 17 X705UBP,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-17-x705ubp,ASUS,X705UBP,Laptop,,
 ASUS,VivoBook 17 X705UBR,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-17-x705ubr,ASUS,X705UBR,Laptop,,
-ASUS,VivoBook 17 X705UF,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-17-x705uf,ASUS,X705UF,Laptop,,
+ASUS,VivoBook 17 X705UF,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-17-x705uf,ASUS,X705UF,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
 ASUS,VivoBook 17 X705UFR,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-17-x705ufr,ASUS,X705UFR,Laptop,,
-ASUS,Vivobook 18 M1807GA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-18-m1807ga,ASUS,M1807GA,Laptop,,
-ASUS,Vivobook 18 M1807HA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-18-m1807ha,ASUS,M1807HA,Laptop,,
+ASUS,Vivobook 18 M1807GA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-18-m1807ga,ASUS,M1807GA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
+ASUS,Vivobook 18 M1807HA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-18-m1807ha,ASUS,M1807HA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
 ASUS,Vivobook 18 M1807HA D1807HA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-18-m1807ha-d1807ha,ASUS,M1807HA,Laptop,,
-ASUS,VivoBook E14 E402WA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-e14-e402wa,ASUS,E402WA,Laptop,,
+ASUS,VivoBook E14 E402WA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-e14-e402wa,ASUS,E402WA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
 ASUS,VivoBook E14 E402WAS,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-e14-e402was,ASUS,E402WAS,Laptop,,
 ASUS,VivoBook E14 E402YA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-e14-e402ya,ASUS,E402YA,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=3
 ASUS,VivoBook E14 E402YA F402YA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-e14-e402ya-f402ya,ASUS,VivoBook E14 E402YA F402YA,Laptop,,
@@ -2300,7 +2300,7 @@ ASUS,VivoBook Flip 14 TP401CAE,model,pending,https://jp.drvhub.net/laptops/asus/
 ASUS,VivoBook Flip 14 TP410UF,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-flip-14-tp410uf,ASUS,VivoBook Flip 14 TP410UF,Laptop,,
 ASUS,Vivobook Go 14 E1404FAF E1404FA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-go-14-e1404faf-e1404fa,ASUS,Vivobook Go 14 E1404FAF E1404FA,Laptop,,
 ASUS,Vivobook Go 14 E1404GABF E1404GA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-go-14-e1404gabf-e1404ga,ASUS,Vivobook Go 14 E1404GABF E1404GA,Laptop,,
-ASUS,Vivobook Go 14 E1404TA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-go-14-e1404ta,ASUS,E1404TA,Laptop,,
+ASUS,Vivobook Go 14 E1404TA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-go-14-e1404ta,ASUS,E1404TA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=27762&productflag=1
 ASUS,Vivobook Go 14 E410KAB E410KA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-go-14-e410kab-e410ka,ASUS,Vivobook Go 14 E410KAB E410KA,Laptop,,
 ASUS,Vivobook Go 14 E410KAB L410KA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-go-14-e410kab-l410ka,ASUS,E410KAB,Laptop,,
 ASUS,Vivobook Go 14 E410KABF E410KA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-go-14-e410kabf-e410ka,ASUS,Vivobook Go 14 E410KABF E410KA,Laptop,,
@@ -2308,7 +2308,7 @@ ASUS,Vivobook Go 15 E1504FAF E1504FA,model,pending,https://jp.drvhub.net/laptops
 ASUS,Vivobook Go 15 E1504FAF L1504FA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-go-15-e1504faf-l1504fa,ASUS,E1504FAF,Laptop,,
 ASUS,Vivobook Go 15 E1504GABF E1504GA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-go-15-e1504gabf-e1504ga,ASUS,Vivobook Go 15 E1504GABF E1504GA,Laptop,,
 ASUS,Vivobook Go 15 E1504GAF E1504GA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-go-15-e1504gaf-e1504ga,ASUS,Vivobook Go 15 E1504GAF E1504GA,Laptop,,
-ASUS,Vivobook Go 15 E1504TA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-go-15-e1504ta,ASUS,E1504TA,Laptop,,
+ASUS,Vivobook Go 15 E1504TA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-go-15-e1504ta,ASUS,E1504TA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=27762&productflag=1
 ASUS,Vivobook Go 15 E510KAB,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-go-15-e510kab,ASUS,E510KAB,Laptop,,
 ASUS,Vivobook Go 15 E510KAB E510KA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-go-15-e510kab-e510ka,ASUS,Vivobook Go 15 E510KAB E510KA,Laptop,,
 ASUS,Vivobook Go 15 E510KAB L510KA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-go-15-e510kab-l510ka,ASUS,E510KAB,Laptop,,
@@ -2466,26 +2466,26 @@ ASUS,Vivobook N7601ZM,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-
 ASUS,Vivobook N7601ZMB N7601ZM,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-n7601zmb-n7601zm,ASUS,Vivobook N7601ZMB N7601ZM,Laptop,,
 ASUS,Vivobook N7601ZWB N7601ZW,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-n7601zwb-n7601zw,ASUS,Vivobook N7601ZWB N7601ZW,Laptop,,
 ASUS,Vivobook N7601ZWB UX6601ZW,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-n7601zwb-ux6601zw,ASUS,N7601ZWB,Laptop,,
-ASUS,Vivobook Pro 15 N6506CU,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-pro-15-n6506cu,ASUS,N6506CU,Laptop,,
+ASUS,Vivobook Pro 15 N6506CU,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-pro-15-n6506cu,ASUS,N6506CU,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=6070&productflag=1
 ASUS,Vivobook Pro 15 N6506MJ,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-pro-15-n6506mj,ASUS,N6506MJ,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=16
 ASUS,Vivobook Pro 15 N6506MJ Q533MJ,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-pro-15-n6506mj-q533mj,ASUS,Vivobook Pro 15 N6506MJ Q533MJ,Laptop,,
 ASUS,Vivobook Pro 15 N6506MJ Q543MJ,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-pro-15-n6506mj-q543mj,ASUS,Vivobook Pro 15 N6506MJ Q543MJ,Laptop,,
 ASUS,Vivobook Pro 15 N6506MU,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-pro-15-n6506mu,ASUS,N6506MU,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=16
 ASUS,Vivobook Pro 15 N6506MV,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-pro-15-n6506mv,ASUS,N6506MV,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=16
 ASUS,Vivobook Pro 15 N6506MV Q543MV,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-pro-15-n6506mv-q543mv,ASUS,Vivobook Pro 15 N6506MV Q543MV,Laptop,,
-ASUS,Vivobook S 14 M3407HA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s-14-m3407ha,ASUS,M3407HA,Laptop,,
-ASUS,Vivobook S 14 M3407KA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s-14-m3407ka,ASUS,M3407KA,Laptop,,
+ASUS,Vivobook S 14 M3407HA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s-14-m3407ha,ASUS,M3407HA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=27337&productflag=1
+ASUS,Vivobook S 14 M3407KA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s-14-m3407ka,ASUS,M3407KA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=27337&productflag=1
 ASUS,Vivobook S 14 M3407KA D3407KA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s-14-m3407ka-d3407ka,ASUS,M3407KA,Laptop,,
-ASUS,Vivobook S 14 M5406KA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s-14-m5406ka,ASUS,M5406KA,Laptop,,
+ASUS,Vivobook S 14 M5406KA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s-14-m5406ka,ASUS,M5406KA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=27337&productflag=1
 ASUS,Vivobook S 14 M5406NA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s-14-m5406na,ASUS,M5406NA,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=15
 ASUS,Vivobook S 14 M5406UA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s-14-m5406ua,ASUS,M5406UA,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=15
 ASUS,Vivobook S 14 M5406WA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s-14-m5406wa,ASUS,M5406WA,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=15
 ASUS,Vivobook S 14 M5406WA D5406WA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s-14-m5406wa-d5406wa,ASUS,M5406WA,Laptop,,
-ASUS,Vivobook S 14 S3407CA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s-14-s3407ca,ASUS,S3407CA,Laptop,,
-ASUS,Vivobook S 14 S3407QA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s-14-s3407qa,ASUS,S3407QA,Laptop,,
-ASUS,Vivobook S 14 S3407VA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s-14-s3407va,ASUS,S3407VA,Laptop,,
+ASUS,Vivobook S 14 S3407CA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s-14-s3407ca,ASUS,S3407CA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=27337&productflag=1
+ASUS,Vivobook S 14 S3407QA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s-14-s3407qa,ASUS,S3407QA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=27337&productflag=1
+ASUS,Vivobook S 14 S3407VA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s-14-s3407va,ASUS,S3407VA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=27337&productflag=1
 ASUS,Vivobook S 14 S5406MA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s-14-s5406ma,ASUS,S5406MA,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=17
-ASUS,Vivobook S 14 S5406SA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s-14-s5406sa,ASUS,S5406SA,Laptop,,
+ASUS,Vivobook S 14 S5406SA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s-14-s5406sa,ASUS,S5406SA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=27337&productflag=1
 ASUS,Vivobook S 14 S5406SA Q423SA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s-14-s5406sa-q423sa,ASUS,Vivobook S 14 S5406SA Q423SA,Laptop,,
 ASUS,Vivobook S 15 M5506NA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s-15-m5506na,ASUS,M5506NA,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=15
 ASUS,Vivobook S 15 M5506UA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s-15-m5506ua,ASUS,M5506UA,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=15
@@ -2493,23 +2493,23 @@ ASUS,Vivobook S 15 M5506WA,model,pending,https://jp.drvhub.net/laptops/asus/vivo
 ASUS,Vivobook S 15 M5506WA D5506WA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s-15-m5506wa-d5506wa,ASUS,M5506WA,Laptop,,
 ASUS,Vivobook S 15 S5506MA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s-15-s5506ma,ASUS,S5506MA,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=17
 ASUS,Vivobook S 15 S5506MA K5506MA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s-15-s5506ma-k5506ma,ASUS,Vivobook S 15 S5506MA K5506MA,Laptop,,
-ASUS,Vivobook S 15 S5507QA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s-15-s5507qa,ASUS,S5507QA,Laptop,,
+ASUS,Vivobook S 15 S5507QA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s-15-s5507qa,ASUS,S5507QA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=6070&productflag=1
 ASUS,Vivobook S 15 S5507QA K5507QA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s-15-s5507qa-k5507qa,ASUS,Vivobook S 15 S5507QA K5507QA,Laptop,,
 ASUS,Vivobook S 15 S5507QA Q5507QA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s-15-s5507qa-q5507qa,ASUS,Vivobook S 15 S5507QA Q5507QA,Laptop,,
 ASUS,Vivobook S 15 S5507QA S5507QAD,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s-15-s5507qa-s5507qad,ASUS,Vivobook S 15 S5507QA S5507QAD,Laptop,,
 ASUS,Vivobook S 15 S5507QA V5507QA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s-15-s5507qa-v5507qa,ASUS,Vivobook S 15 S5507QA V5507QA,Laptop,,
-ASUS,Vivobook S 16 M3607HA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s-16-m3607ha,ASUS,M3607HA,Laptop,,
+ASUS,Vivobook S 16 M3607HA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s-16-m3607ha,ASUS,M3607HA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=27337&productflag=1
 ASUS,Vivobook S 16 M3607HA D3607HA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s-16-m3607ha-d3607ha,ASUS,M3607HA,Laptop,,
-ASUS,Vivobook S 16 M3607KA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s-16-m3607ka,ASUS,M3607KA,Laptop,,
+ASUS,Vivobook S 16 M3607KA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s-16-m3607ka,ASUS,M3607KA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=27337&productflag=1
 ASUS,Vivobook S 16 M3607KA D3607KA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s-16-m3607ka-d3607ka,ASUS,M3607KA,Laptop,,
-ASUS,Vivobook S 16 M5606KA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s-16-m5606ka,ASUS,M5606KA,Laptop,,
+ASUS,Vivobook S 16 M5606KA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s-16-m5606ka,ASUS,M5606KA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=27337&productflag=1
 ASUS,Vivobook S 16 M5606NA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s-16-m5606na,ASUS,M5606NA,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=16
 ASUS,Vivobook S 16 M5606UA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s-16-m5606ua,ASUS,M5606UA,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=16
 ASUS,Vivobook S 16 M5606WA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s-16-m5606wa,ASUS,M5606WA,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=16
-ASUS,Vivobook S 16 S3607CA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s-16-s3607ca,ASUS,S3607CA,Laptop,,
-ASUS,Vivobook S 16 S3607QA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s-16-s3607qa,ASUS,S3607QA,Laptop,,
-ASUS,Vivobook S 16 S3607VA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s-16-s3607va,ASUS,S3607VA,Laptop,,
-ASUS,Vivobook S 16 S5606CA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s-16-s5606ca,ASUS,S5606CA,Laptop,,
+ASUS,Vivobook S 16 S3607CA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s-16-s3607ca,ASUS,S3607CA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=27337&productflag=1
+ASUS,Vivobook S 16 S3607QA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s-16-s3607qa,ASUS,S3607QA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=27337&productflag=1
+ASUS,Vivobook S 16 S3607VA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s-16-s3607va,ASUS,S3607VA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=27337&productflag=1
+ASUS,Vivobook S 16 S5606CA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s-16-s5606ca,ASUS,S5606CA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=27337&productflag=1
 ASUS,Vivobook S 16 S5606MA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s-16-s5606ma,ASUS,S5606MA,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=17
 ASUS,Vivobook S Flip TN3604YA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s-flip-tn3604ya,ASUS,Vivobook S Flip TN3604YA,Laptop,,
 ASUS,VivoBook S13 I330UN,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s13-i330un,ASUS,VivoBook S13 I330UN,Laptop,,
@@ -2520,25 +2520,25 @@ ASUS,VivoBook S13 X330FL S330FL,model,pending,https://jp.drvhub.net/laptops/asus
 ASUS,VivoBook S13 X330FN S330FN,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s13-x330fn-s330fn,ASUS,VivoBook S13 X330FN S330FN,Laptop,,
 ASUS,VivoBook S13 X330UA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s13-x330ua,ASUS,X330UA,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240108144316635_ASUS_System_Control_Interface_v1modellist.pdf#page=2
 ASUS,VivoBook S13 X330UN,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s13-x330un,ASUS,X330UN,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240108144316635_ASUS_System_Control_Interface_v1modellist.pdf#page=2
-ASUS,Vivobook S14 M5450GA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s14-m5450ga,ASUS,M5450GA,Laptop,,
-ASUS,Vivobook S14 S3407AA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s14-s3407aa,ASUS,S3407AA,Laptop,,
-ASUS,Vivobook S14 S5452MA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s14-s5452ma,ASUS,S5452MA,Laptop,,
+ASUS,Vivobook S14 M5450GA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s14-m5450ga,ASUS,M5450GA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
+ASUS,Vivobook S14 S3407AA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s14-s3407aa,ASUS,S3407AA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=27337&productflag=1
+ASUS,Vivobook S14 S5452MA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s14-s5452ma,ASUS,S5452MA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=27337&productflag=1
 ASUS,VivoBook S14 X411UF,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s14-x411uf,ASUS,X411UF,Laptop,,
 ASUS,VivoBook S14 X430UA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s14-x430ua,ASUS,X430UA,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240108144316635_ASUS_System_Control_Interface_v1modellist.pdf#page=3
 ASUS,VivoBook S14 X430UF,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s14-x430uf,ASUS,X430UF,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240108144316635_ASUS_System_Control_Interface_v1modellist.pdf#page=3
 ASUS,VivoBook S14 X430UN,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s14-x430un,ASUS,X430UN,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240108144316635_ASUS_System_Control_Interface_v1modellist.pdf#page=3
-ASUS,VivoBook S15 X510UF,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s15-x510uf,ASUS,X510UF,Laptop,,
+ASUS,VivoBook S15 X510UF,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s15-x510uf,ASUS,X510UF,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
 ASUS,VivoBook S15 X510UNO,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s15-x510uno,ASUS,X510UNO,Laptop,,
 ASUS,VivoBook S15 X530UA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s15-x530ua,ASUS,X530UA,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240108144316635_ASUS_System_Control_Interface_v1modellist.pdf#page=3
 ASUS,VivoBook S15 X530UF,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s15-x530uf,ASUS,X530UF,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240108144316635_ASUS_System_Control_Interface_v1modellist.pdf#page=3
 ASUS,VivoBook S15 X530UN,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s15-x530un,ASUS,X530UN,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240108144316635_ASUS_System_Control_Interface_v1modellist.pdf#page=3
 ASUS,Vivobook S16 D3607GA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s16-d3607ga,ASUS,Vivobook S16 D3607GA,Laptop,,
-ASUS,Vivobook S16 M3607GA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s16-m3607ga,ASUS,M3607GA,Laptop,,
-ASUS,Vivobook S16 M5650GA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s16-m5650ga,ASUS,M5650GA,Laptop,,
-ASUS,Vivobook S16 S3607AA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s16-s3607aa,ASUS,S3607AA,Laptop,,
-ASUS,Vivobook S16 S3652MA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s16-s3652ma,ASUS,S3652MA,Laptop,,
-ASUS,Vivobook S16 S5650AA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s16-s5650aa,ASUS,S5650AA,Laptop,,
-ASUS,Vivobook S16 S5652MA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s16-s5652ma,ASUS,S5652MA,Laptop,,
+ASUS,Vivobook S16 M3607GA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s16-m3607ga,ASUS,M3607GA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=27337&productflag=1
+ASUS,Vivobook S16 M5650GA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s16-m5650ga,ASUS,M5650GA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
+ASUS,Vivobook S16 S3607AA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s16-s3607aa,ASUS,S3607AA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=27337&productflag=1
+ASUS,Vivobook S16 S3652MA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s16-s3652ma,ASUS,S3652MA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=27337&productflag=1
+ASUS,Vivobook S16 S5650AA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s16-s5650aa,ASUS,S5650AA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
+ASUS,Vivobook S16 S5652MA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s16-s5652ma,ASUS,S5652MA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=27337&productflag=1
 ASUS,VivoBook S5402ZA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s5402za,ASUS,S5402ZA,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=17
 ASUS,VivoBook S5602ZA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s5602za,ASUS,S5602ZA,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=17
 ASUS,VivoBook S5602ZA K5602ZA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-s5602za-k5602za,ASUS,VivoBook S5602ZA K5602ZA,Laptop,,
@@ -2603,7 +2603,7 @@ ASUS,Vivobook X1502VA F1502VA,model,pending,https://jp.drvhub.net/laptops/asus/v
 ASUS,Vivobook X1502VA R1502VA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x1502va-r1502va,ASUS,Vivobook X1502VA R1502VA,Laptop,,
 ASUS,Vivobook X1502ZA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x1502za,ASUS,X1502ZA,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=21
 ASUS,Vivobook X1502ZA A1502ZA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x1502za-a1502za,ASUS,X1502ZA,Laptop,,
-ASUS,Vivobook X1502ZA Action,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x1502za-action,ASUS,X1502ZA,Laptop,,
+ASUS,Vivobook X1502ZA Action,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x1502za-action,ASUS,X1502ZA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
 ASUS,Vivobook X1502ZA F1502ZA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x1502za-f1502za,ASUS,Vivobook X1502ZA F1502ZA,Laptop,,
 ASUS,Vivobook X1502ZA P1502CZA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x1502za-p1502cza,ASUS,Vivobook X1502ZA P1502CZA,Laptop,,
 ASUS,Vivobook X1502ZA R1502ZA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x1502za-r1502za,ASUS,Vivobook X1502ZA R1502ZA,Laptop,,
@@ -2682,7 +2682,7 @@ ASUS,VivoBook X403FA A403FA,model,pending,https://jp.drvhub.net/laptops/asus/viv
 ASUS,VivoBook X403FA K403FA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x403fa-k403fa,ASUS,VivoBook X403FA K403FA,Laptop,,
 ASUS,VivoBook X403FAC S403FA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x403fac-s403fa,ASUS,VivoBook X403FAC S403FA,Laptop,,
 ASUS,VivoBook X403JA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x403ja,ASUS,X403JA,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=21
-ASUS,VivoBook X403JA 2nd3JA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x403ja-2nd3ja,ASUS,X403JA,Laptop,,
+ASUS,VivoBook X403JA 2nd3JA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x403ja-2nd3ja,ASUS,X403JA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
 ASUS,VivoBook X403JA K403JA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x403ja-k403ja,ASUS,VivoBook X403JA K403JA,Laptop,,
 ASUS,VivoBook X403JA S403JA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x403ja-s403ja,ASUS,VivoBook X403JA S403JA,Laptop,,
 ASUS,VivoBook X409BA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x409ba,ASUS,X409BA,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=21
@@ -2739,7 +2739,7 @@ ASUS,VivoBook X411UAS X411UA,model,pending,https://jp.drvhub.net/laptops/asus/vi
 ASUS,VivoBook X412DA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x412da,ASUS,X412DA,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=22
 ASUS,VivoBook X412DA A412DA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x412da-a412da,ASUS,X412DA,Laptop,,
 ASUS,VivoBook X412DA F412DA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x412da-f412da,ASUS,VivoBook X412DA F412DA,Laptop,,
-ASUS,VivoBook X412DA KAN0CV13N546437,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x412da-kan0cv13n546437,ASUS,X412DA,Laptop,,
+ASUS,VivoBook X412DA KAN0CV13N546437,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x412da-kan0cv13n546437,ASUS,X412DA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
 ASUS,VivoBook X412DA R424DA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x412da-r424da,ASUS,VivoBook X412DA R424DA,Laptop,,
 ASUS,VivoBook X412DAP 2nd2DA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x412dap-2nd2da,ASUS,X412DAP,Laptop,,
 ASUS,VivoBook X412DAP F412DA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x412dap-f412da,ASUS,VivoBook X412DAP F412DA,Laptop,,
@@ -2762,7 +2762,7 @@ ASUS,VivoBook X412FAG F412FA,model,pending,https://jp.drvhub.net/laptops/asus/vi
 ASUS,VivoBook X412FAG X412FA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x412fag-x412fa,ASUS,VivoBook X412FAG X412FA,Laptop,,
 ASUS,VivoBook X412FJ,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x412fj,ASUS,X412FJ,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=22
 ASUS,VivoBook X412FJ F412FJ,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x412fj-f412fj,ASUS,VivoBook X412FJ F412FJ,Laptop,,
-ASUS,VivoBook X412FJ OUNO,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x412fj-ouno,ASUS,X412FJ,Laptop,,
+ASUS,VivoBook X412FJ OUNO,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x412fj-ouno,ASUS,X412FJ,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
 ASUS,VivoBook X412FJ R424FJ,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x412fj-r424fj,ASUS,VivoBook X412FJ R424FJ,Laptop,,
 ASUS,VivoBook X412FJ S412FJ,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x412fj-s412fj,ASUS,VivoBook X412FJ S412FJ,Laptop,,
 ASUS,VivoBook X412FJ V4000FJ,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x412fj-v4000fj,ASUS,VivoBook X412FJ V4000FJ,Laptop,,
@@ -2821,7 +2821,7 @@ ASUS,VivoBook X415JAB R465JA,model,pending,https://jp.drvhub.net/laptops/asus/vi
 ASUS,VivoBook X415JAB X415JA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x415jab-x415ja,ASUS,VivoBook X415JAB X415JA,Laptop,,
 ASUS,VivoBook X415JAB X415JABR,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x415jab-x415jabr,ASUS,VivoBook X415JAB X415JABR,Laptop,,
 ASUS,VivoBook X415JF,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x415jf,ASUS,X415JF,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=22
-ASUS,VivoBook X415JF <!DOCTYPE,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x415jf-doctype,ASUS,X415JF,Laptop,,
+ASUS,VivoBook X415JF <!DOCTYPE,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x415jf-doctype,ASUS,X415JF,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=27762&productflag=1
 ASUS,VivoBook X415JF A416JF,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x415jf-a416jf,ASUS,X415JF,Laptop,,
 ASUS,VivoBook X415JF F415JF,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x415jf-f415jf,ASUS,VivoBook X415JF F415JF,Laptop,,
 ASUS,VivoBook X415JP,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x415jp,ASUS,X415JP,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=22
@@ -2840,7 +2840,7 @@ ASUS,VivoBook X415MA A416MA,model,pending,https://jp.drvhub.net/laptops/asus/viv
 ASUS,VivoBook X415MA F415MA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x415ma-f415ma,ASUS,VivoBook X415MA F415MA,Laptop,,
 ASUS,VivoBook X415MA P1411CMA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x415ma-p1411cma,ASUS,VivoBook X415MA P1411CMA,Laptop,,
 ASUS,VivoBook X415MA R465MA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x415ma-r465ma,ASUS,VivoBook X415MA R465MA,Laptop,,
-ASUS,VivoBook X415UA 2nd5UA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x415ua-2nd5ua,ASUS,X415UA,Laptop,,
+ASUS,VivoBook X415UA 2nd5UA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x415ua-2nd5ua,ASUS,X415UA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=27762&productflag=1
 ASUS,VivoBook X415UA D415UA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x415ua-d415ua,ASUS,X415UA,Laptop,,
 ASUS,VivoBook X415UA M415UA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x415ua-m415ua,ASUS,VivoBook X415UA M415UA,Laptop,,
 ASUS,VivoBook X420FA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x420fa,ASUS,X420FA,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=22
@@ -3030,7 +3030,7 @@ ASUS,VivoBook X510UFD,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-
 ASUS,VivoBook X510UFO,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x510ufo,ASUS,X510UFO,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240108144316635_ASUS_System_Control_Interface_v1modellist.pdf#page=3
 ASUS,VivoBook X510UNO,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x510uno,ASUS,X510UNO,Laptop,,
 ASUS,VivoBook X512DA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x512da,ASUS,X512DA,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=23
-ASUS,VivoBook X512DA 2nd2DA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x512da-2nd2da,ASUS,X512DA,Laptop,,
+ASUS,VivoBook X512DA 2nd2DA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x512da-2nd2da,ASUS,X512DA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
 ASUS,VivoBook X512DA A512DA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x512da-a512da,ASUS,X512DA,Laptop,,
 ASUS,VivoBook X512DA F512DA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x512da-f512da,ASUS,VivoBook X512DA F512DA,Laptop,,
 ASUS,VivoBook X512DA R564DA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x512da-r564da,ASUS,VivoBook X512DA R564DA,Laptop,,
@@ -3099,7 +3099,7 @@ ASUS,VivoBook X512JF,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x
 ASUS,VivoBook X512JF A512JF,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x512jf-a512jf,ASUS,X512JF,Laptop,,
 ASUS,VivoBook X512JF F512JF,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x512jf-f512jf,ASUS,VivoBook X512JF F512JF,Laptop,,
 ASUS,VivoBook X512JP,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x512jp,ASUS,X512JP,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=24
-ASUS,VivoBook X512JP 2nd2JP,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x512jp-2nd2jp,ASUS,X512JP,Laptop,,
+ASUS,VivoBook X512JP 2nd2JP,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x512jp-2nd2jp,ASUS,X512JP,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
 ASUS,VivoBook X512JP A512JP,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x512jp-a512jp,ASUS,X512JP,Laptop,,
 ASUS,VivoBook X512JP F512JP,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x512jp-f512jp,ASUS,VivoBook X512JP F512JP,Laptop,,
 ASUS,VivoBook X512JP R564JP,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x512jp-r564jp,ASUS,VivoBook X512JP R564JP,Laptop,,
@@ -3145,7 +3145,7 @@ ASUS,VivoBook X513EPN R528EP,model,pending,https://jp.drvhub.net/laptops/asus/vi
 ASUS,VivoBook X513EPN S513EP,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x513epn-s513ep,ASUS,VivoBook X513EPN S513EP,Laptop,,
 ASUS,VivoBook X513EPN X513EP,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x513epn-x513ep,ASUS,VivoBook X513EPN X513EP,Laptop,,
 ASUS,VivoBook X513EQ,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x513eq,ASUS,X513EQ,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=24
-ASUS,VivoBook X513EQ 2nd3EQ,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x513eq-2nd3eq,ASUS,X513EQ,Laptop,,
+ASUS,VivoBook X513EQ 2nd3EQ,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x513eq-2nd3eq,ASUS,X513EQ,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
 ASUS,VivoBook X513EQ K513EQ,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x513eq-k513eq,ASUS,VivoBook X513EQ K513EQ,Laptop,,
 ASUS,VivoBook X513EQ S513EQ,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x513eq-s513eq,ASUS,VivoBook X513EQ S513EQ,Laptop,,
 ASUS,VivoBook X513EQN,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x513eqn,ASUS,X513EQN,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=24
@@ -3169,7 +3169,7 @@ ASUS,VivoBook X515DAP FL8850DA,model,pending,https://jp.drvhub.net/laptops/asus/
 ASUS,VivoBook X515DAP M515DA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x515dap-m515da,ASUS,VivoBook X515DAP M515DA,Laptop,,
 ASUS,VivoBook X515DAP Y1511CDA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x515dap-y1511cda,ASUS,X515DAP,Laptop,,
 ASUS,VivoBook X515EA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x515ea,ASUS,X515EA,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=24
-ASUS,VivoBook X515EA <!DOCTYPE,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x515ea-doctype,ASUS,X515EA,Laptop,,
+ASUS,VivoBook X515EA <!DOCTYPE,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x515ea-doctype,ASUS,X515EA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=27762&productflag=1
 ASUS,VivoBook X515EA A1500EA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x515ea-a1500ea,ASUS,X515EA,Laptop,,
 ASUS,VivoBook X515EA A516EA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x515ea-a516ea,ASUS,X515EA,Laptop,,
 ASUS,VivoBook X515EA F1500EA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x515ea-f1500ea,ASUS,VivoBook X515EA F1500EA,Laptop,,
@@ -3305,7 +3305,7 @@ ASUS,VivoBook X571GT,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x
 ASUS,VivoBook X571GT A571GT,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x571gt-a571gt,ASUS,X571GT,Laptop,,
 ASUS,VivoBook X571GT F571GT,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x571gt-f571gt,ASUS,VivoBook X571GT F571GT,Laptop,,
 ASUS,VivoBook X571GT K571GT,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x571gt-k571gt,ASUS,VivoBook X571GT K571GT,Laptop,,
-ASUS,VivoBook X571GT VX60GT,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x571gt-vx60gt,ASUS,X571GT,Laptop,,
+ASUS,VivoBook X571GT VX60GT,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x571gt-vx60gt,ASUS,X571GT,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
 ASUS,VivoBook X571LH,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x571lh,ASUS,X571LH,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=24
 ASUS,VivoBook X571LH A571LH,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x571lh-a571lh,ASUS,X571LH,Laptop,,
 ASUS,VivoBook X571LH F571LH,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x571lh-f571lh,ASUS,VivoBook X571LH F571LH,Laptop,,
@@ -3344,7 +3344,7 @@ ASUS,VivoBook X712DK,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x
 ASUS,VivoBook X712DK D712DK,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x712dk-d712dk,ASUS,X712DK,Laptop,,
 ASUS,VivoBook X712DK M712DK,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x712dk-m712dk,ASUS,VivoBook X712DK M712DK,Laptop,,
 ASUS,VivoBook X712EA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x712ea,ASUS,X712EA,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=25
-ASUS,VivoBook X712EA <!DOCTYPE,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x712ea-doctype,ASUS,X712EA,Laptop,,
+ASUS,VivoBook X712EA <!DOCTYPE,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x712ea-doctype,ASUS,X712EA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
 ASUS,VivoBook X712EA A712EA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x712ea-a712ea,ASUS,X712EA,Laptop,,
 ASUS,VivoBook X712EA F712EA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x712ea-f712ea,ASUS,VivoBook X712EA F712EA,Laptop,,
 ASUS,VivoBook X712EA K712EA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x712ea-k712ea,ASUS,VivoBook X712EA K712EA,Laptop,,
@@ -3376,7 +3376,7 @@ ASUS,VivoBook X712FBC P1701FB,model,pending,https://jp.drvhub.net/laptops/asus/v
 ASUS,VivoBook X712FBC S712FB,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x712fbc-s712fb,ASUS,VivoBook X712FBC S712FB,Laptop,,
 ASUS,VivoBook X712FBC X712FB,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x712fbc-x712fb,ASUS,VivoBook X712FBC X712FB,Laptop,,
 ASUS,VivoBook X712JA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x712ja,ASUS,X712JA,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=25
-ASUS,VivoBook X712JA 2nd2JA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x712ja-2nd2ja,ASUS,X712JA,Laptop,,
+ASUS,VivoBook X712JA 2nd2JA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x712ja-2nd2ja,ASUS,X712JA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
 ASUS,VivoBook X712JA A712JA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x712ja-a712ja,ASUS,X712JA,Laptop,,
 ASUS,VivoBook X712JA F712JA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x712ja-f712ja,ASUS,VivoBook X712JA F712JA,Laptop,,
 ASUS,VivoBook X712JA K712JA,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x712ja-k712ja,ASUS,VivoBook X712JA K712JA,Laptop,,
@@ -3422,12 +3422,12 @@ ASUS,X402CA,model,pending,https://jp.drvhub.net/laptops/asus/x402ca,ASUS,X402CA,
 ASUS,X405UA,model,pending,https://jp.drvhub.net/laptops/asus/x405ua,ASUS,X405UA,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/X405/X405UA
 ASUS,X405UAP,model,pending,https://jp.drvhub.net/laptops/asus/x405uap,ASUS,X405UAP,Laptop,,
 ASUS,X405UQ,model,pending,https://jp.drvhub.net/laptops/asus/x405uq,ASUS,X405UQ,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/X405/X405UQ
-ASUS,X405UR,model,pending,https://jp.drvhub.net/laptops/asus/x405ur,ASUS,X405UR,Laptop,,
+ASUS,X405UR,model,pending,https://jp.drvhub.net/laptops/asus/x405ur,ASUS,X405UR,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
 ASUS,X405URP,model,pending,https://jp.drvhub.net/laptops/asus/x405urp,ASUS,X405URP,Laptop,,
 ASUS,X406UA,model,pending,https://jp.drvhub.net/laptops/asus/x406ua,ASUS,X406UA,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/X406/X406UA
 ASUS,X406UAR,model,pending,https://jp.drvhub.net/laptops/asus/x406uar,ASUS,X406UAR,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/X406/X406UAR
-ASUS,X407MA,model,pending,https://jp.drvhub.net/laptops/asus/x407ma,ASUS,X407MA,Laptop,,
-ASUS,X407UA,model,pending,https://jp.drvhub.net/laptops/asus/x407ua,ASUS,X407UA,Laptop,,
+ASUS,X407MA,model,pending,https://jp.drvhub.net/laptops/asus/x407ma,ASUS,X407MA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=27762&productflag=1
+ASUS,X407UA,model,pending,https://jp.drvhub.net/laptops/asus/x407ua,ASUS,X407UA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
 ASUS,X407UAR,model,pending,https://jp.drvhub.net/laptops/asus/x407uar,ASUS,X407UAR,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240108144316635_ASUS_System_Control_Interface_v1modellist.pdf#page=2
 ASUS,X407UF,model,pending,https://jp.drvhub.net/laptops/asus/x407uf,ASUS,X407UF,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240108144316635_ASUS_System_Control_Interface_v1modellist.pdf#page=3
 ASUS,X409DA,model,pending,https://jp.drvhub.net/laptops/asus/x409da,ASUS,X409DA,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=21
@@ -3452,10 +3452,10 @@ ASUS,X415MA,model,pending,https://jp.drvhub.net/laptops/asus/x415ma,ASUS,X415MA,
 ASUS,X420UA,model,pending,https://jp.drvhub.net/laptops/asus/x420ua,ASUS,X420UA,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240108144316635_ASUS_System_Control_Interface_v1modellist.pdf#page=3
 ASUS,X430FA,model,pending,https://jp.drvhub.net/laptops/asus/x430fa,ASUS,X430FA,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240108144316635_ASUS_System_Control_Interface_v1modellist.pdf#page=3
 ASUS,X441BA,model,pending,https://jp.drvhub.net/laptops/asus/x441ba,ASUS,X441BA,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/X441/X441BA
-ASUS,X441MA,model,pending,https://jp.drvhub.net/laptops/asus/x441ma,ASUS,X441MA,Laptop,,
+ASUS,X441MA,model,pending,https://jp.drvhub.net/laptops/asus/x441ma,ASUS,X441MA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=27762&productflag=1
 ASUS,X441MAR,model,pending,https://jp.drvhub.net/laptops/asus/x441mar,ASUS,X441MAR,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=23
 ASUS,X441NA,model,pending,https://jp.drvhub.net/laptops/asus/x441na,ASUS,X441NA,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/X441/X441NA
-ASUS,X441NC,model,pending,https://jp.drvhub.net/laptops/asus/x441nc,ASUS,X441NC,Laptop,,
+ASUS,X441NC,model,pending,https://jp.drvhub.net/laptops/asus/x441nc,ASUS,X441NC,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=27762&productflag=1
 ASUS,X441SA,model,pending,https://jp.drvhub.net/laptops/asus/x441sa,ASUS,X441SA,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/X441/X441SA
 ASUS,X441SC,model,pending,https://jp.drvhub.net/laptops/asus/x441sc,ASUS,X441SC,Laptop,,
 ASUS,X441UA,model,pending,https://jp.drvhub.net/laptops/asus/x441ua,ASUS,X441UA,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/X441/X441UA
@@ -3463,11 +3463,11 @@ ASUS,X441UAK,model,pending,https://jp.drvhub.net/laptops/asus/x441uak,ASUS,X441U
 ASUS,X441UAR,model,pending,https://jp.drvhub.net/laptops/asus/x441uar,ASUS,X441UAR,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240108144316635_ASUS_System_Control_Interface_v1modellist.pdf#page=3
 ASUS,X441UBR,model,pending,https://jp.drvhub.net/laptops/asus/x441ubr,ASUS,X441UBR,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240108144316635_ASUS_System_Control_Interface_v1modellist.pdf#page=3
 ASUS,X441URK,model,pending,https://jp.drvhub.net/laptops/asus/x441urk,ASUS,X441URK,Laptop,,
-ASUS,X441UV,model,pending,https://jp.drvhub.net/laptops/asus/x441uv,ASUS,X441UV,Laptop,,
+ASUS,X441UV,model,pending,https://jp.drvhub.net/laptops/asus/x441uv,ASUS,X441UV,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=27762&productflag=1
 ASUS,X441UVK,model,pending,https://jp.drvhub.net/laptops/asus/x441uvk,ASUS,X441UVK,Laptop,,
 ASUS,X442UA,model,pending,https://jp.drvhub.net/laptops/asus/x442ua,ASUS,X442UA,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/X442/X442UA
 ASUS,X442UAR,model,pending,https://jp.drvhub.net/laptops/asus/x442uar,ASUS,X442UAR,Laptop,,
-ASUS,X442UF,model,pending,https://jp.drvhub.net/laptops/asus/x442uf,ASUS,X442UF,Laptop,,
+ASUS,X442UF,model,pending,https://jp.drvhub.net/laptops/asus/x442uf,ASUS,X442UF,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
 ASUS,X442UQ,model,pending,https://jp.drvhub.net/laptops/asus/x442uq,ASUS,X442UQ,Laptop,,
 ASUS,X442UQR,model,pending,https://jp.drvhub.net/laptops/asus/x442uqr,ASUS,X442UQR,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/X442/X442UQR
 ASUS,X442UR,model,pending,https://jp.drvhub.net/laptops/asus/x442ur,ASUS,X442UR,Laptop,,
@@ -3510,7 +3510,7 @@ ASUS,X455LNB,model,pending,https://jp.drvhub.net/laptops/asus/x455lnb,ASUS,X455L
 ASUS,X455WA,model,pending,https://jp.drvhub.net/laptops/asus/x455wa,ASUS,X455WA,Laptop,,
 ASUS,X455YA,model,pending,https://jp.drvhub.net/laptops/asus/x455ya,ASUS,X455YA,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/X455/X455YA
 ASUS,X455YI,model,pending,https://jp.drvhub.net/laptops/asus/x455yi,ASUS,X455YI,Laptop,,
-ASUS,X456UA,model,pending,https://jp.drvhub.net/laptops/asus/x456ua,ASUS,X456UA,Laptop,,
+ASUS,X456UA,model,pending,https://jp.drvhub.net/laptops/asus/x456ua,ASUS,X456UA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
 ASUS,X456UAK,model,pending,https://jp.drvhub.net/laptops/asus/x456uak,ASUS,X456UAK,Laptop,,
 ASUS,X456UAM,model,pending,https://jp.drvhub.net/laptops/asus/x456uam,ASUS,X456UAM,Laptop,,
 ASUS,X456UB,model,pending,https://jp.drvhub.net/laptops/asus/x456ub,ASUS,X456UB,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/X456/X456UB
@@ -3528,12 +3528,12 @@ ASUS,X502CA,model,pending,https://jp.drvhub.net/laptops/asus/x502ca,ASUS,X502CA,
 ASUS,X505BA,model,pending,https://jp.drvhub.net/laptops/asus/x505ba,ASUS,X505BA,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/X505/X505BA
 ASUS,X505BP,model,pending,https://jp.drvhub.net/laptops/asus/x505bp,ASUS,X505BP,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/X505/X505BP
 ASUS,X505ZA,model,pending,https://jp.drvhub.net/laptops/asus/x505za,ASUS,X505ZA,Laptop,,
-ASUS,X507MA,model,pending,https://jp.drvhub.net/laptops/asus/x507ma,ASUS,X507MA,Laptop,,
+ASUS,X507MA,model,pending,https://jp.drvhub.net/laptops/asus/x507ma,ASUS,X507MA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
 ASUS,X507UA,model,pending,https://jp.drvhub.net/laptops/asus/x507ua,ASUS,X507UA,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/X507/X507UA
 ASUS,X507UAR,model,pending,https://jp.drvhub.net/laptops/asus/x507uar,ASUS,X507UAR,Laptop,,
 ASUS,X507UB,model,pending,https://jp.drvhub.net/laptops/asus/x507ub,ASUS,X507UB,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/X507/X507UB
 ASUS,X507UBR,model,pending,https://jp.drvhub.net/laptops/asus/x507ubr,ASUS,X507UBR,Laptop,,
-ASUS,X507UF,model,pending,https://jp.drvhub.net/laptops/asus/x507uf,ASUS,X507UF,Laptop,,
+ASUS,X507UF,model,pending,https://jp.drvhub.net/laptops/asus/x507uf,ASUS,X507UF,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
 ASUS,X509BA,model,pending,https://jp.drvhub.net/laptops/asus/x509ba,ASUS,X509BA,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=23
 ASUS,X509DA,model,pending,https://jp.drvhub.net/laptops/asus/x509da,ASUS,X509DA,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=23
 ASUS,X509DAP,model,pending,https://jp.drvhub.net/laptops/asus/x509dap,ASUS,X509DAP,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=23
@@ -3550,7 +3550,7 @@ ASUS,X510QA,model,pending,https://jp.drvhub.net/laptops/asus/x510qa,ASUS,X510QA,
 ASUS,X510QR,model,pending,https://jp.drvhub.net/laptops/asus/x510qr,ASUS,X510QR,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=23
 ASUS,X510UA,model,pending,https://jp.drvhub.net/laptops/asus/x510ua,ASUS,X510UA,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/X510/X510UA
 ASUS,X510UAR,model,pending,https://jp.drvhub.net/laptops/asus/x510uar,ASUS,X510UAR,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/X510/X510UAR
-ASUS,X510UF,model,pending,https://jp.drvhub.net/laptops/asus/x510uf,ASUS,X510UF,Laptop,,
+ASUS,X510UF,model,pending,https://jp.drvhub.net/laptops/asus/x510uf,ASUS,X510UF,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
 ASUS,X510UN,model,pending,https://jp.drvhub.net/laptops/asus/x510un,ASUS,X510UN,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/X510/X510UN
 ASUS,X510UNR,model,pending,https://jp.drvhub.net/laptops/asus/x510unr,ASUS,X510UNR,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/X510/X510UNR
 ASUS,X510UQ,model,pending,https://jp.drvhub.net/laptops/asus/x510uq,ASUS,X510UQ,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/X510/X510UQ
@@ -3574,9 +3574,9 @@ ASUS,X540BA,model,pending,https://jp.drvhub.net/laptops/asus/x540ba,ASUS,X540BA,
 ASUS,X540BP,model,pending,https://jp.drvhub.net/laptops/asus/x540bp,ASUS,X540BP,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240108144316635_ASUS_System_Control_Interface_v1modellist.pdf#page=3
 ASUS,X540LA,model,pending,https://jp.drvhub.net/laptops/asus/x540la,ASUS,X540LA,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/X540/X540LA
 ASUS,X540LJ,model,pending,https://jp.drvhub.net/laptops/asus/x540lj,ASUS,X540LJ,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/X540/X540LJ
-ASUS,X540MA,model,pending,https://jp.drvhub.net/laptops/asus/x540ma,ASUS,X540MA,Laptop,,
+ASUS,X540MA,model,pending,https://jp.drvhub.net/laptops/asus/x540ma,ASUS,X540MA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=27762&productflag=1
 ASUS,X540MAR,model,pending,https://jp.drvhub.net/laptops/asus/x540mar,ASUS,X540MAR,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=24
-ASUS,X540MB,model,pending,https://jp.drvhub.net/laptops/asus/x540mb,ASUS,X540MB,Laptop,,
+ASUS,X540MB,model,pending,https://jp.drvhub.net/laptops/asus/x540mb,ASUS,X540MB,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=27762&productflag=1
 ASUS,X540NA,model,pending,https://jp.drvhub.net/laptops/asus/x540na,ASUS,X540NA,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/X540/X540NA
 ASUS,X540NV,model,pending,https://jp.drvhub.net/laptops/asus/x540nv,ASUS,X540NV,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/X540/X540NV
 ASUS,X540SA,model,pending,https://jp.drvhub.net/laptops/asus/x540sa,ASUS,X540SA,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/X540/X540SA
@@ -3585,7 +3585,7 @@ ASUS,X540SC,model,pending,https://jp.drvhub.net/laptops/asus/x540sc,ASUS,X540SC,
 ASUS,X540SCA,model,pending,https://jp.drvhub.net/laptops/asus/x540sca,ASUS,X540SCA,Laptop,,
 ASUS,X540UA,model,pending,https://jp.drvhub.net/laptops/asus/x540ua,ASUS,X540UA,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/X540/X540UA
 ASUS,X540UAR,model,pending,https://jp.drvhub.net/laptops/asus/x540uar,ASUS,X540UAR,Laptop,,
-ASUS,X540UB,model,pending,https://jp.drvhub.net/laptops/asus/x540ub,ASUS,X540UB,Laptop,,
+ASUS,X540UB,model,pending,https://jp.drvhub.net/laptops/asus/x540ub,ASUS,X540UB,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=27762&productflag=1
 ASUS,X540UBR,model,pending,https://jp.drvhub.net/laptops/asus/x540ubr,ASUS,X540UBR,Laptop,,
 ASUS,X540UP,model,pending,https://jp.drvhub.net/laptops/asus/x540up,ASUS,X540UP,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/X540/X540UP
 ASUS,X540UPR,model,pending,https://jp.drvhub.net/laptops/asus/x540upr,ASUS,X540UPR,Laptop,,
@@ -3619,7 +3619,7 @@ ASUS,X550DA,model,pending,https://jp.drvhub.net/laptops/asus/x550da,ASUS,X550DA,
 ASUS,X550DP,model,pending,https://jp.drvhub.net/laptops/asus/x550dp,ASUS,X550DP,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/X550/X550DP
 ASUS,X550EA,model,pending,https://jp.drvhub.net/laptops/asus/x550ea,ASUS,X550EA,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/X550/X550EA
 ASUS,X550EP,model,pending,https://jp.drvhub.net/laptops/asus/x550ep,ASUS,X550EP,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/X550/X550EP
-ASUS,X550IK,model,pending,https://jp.drvhub.net/laptops/asus/x550ik,ASUS,X550IK,Laptop,,
+ASUS,X550IK,model,pending,https://jp.drvhub.net/laptops/asus/x550ik,ASUS,X550IK,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
 ASUS,X550IU,model,pending,https://jp.drvhub.net/laptops/asus/x550iu,ASUS,X550IU,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/X550/X550IU
 ASUS,X550JD,model,pending,https://jp.drvhub.net/laptops/asus/x550jd,ASUS,X550JD,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/X550/X550JD
 ASUS,X550JF,model,pending,https://jp.drvhub.net/laptops/asus/x550jf,ASUS,X550JF,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/X550/X550JF
@@ -3690,9 +3690,9 @@ ASUS,X570ZD,model,pending,https://jp.drvhub.net/laptops/asus/x570zd,ASUS,X570ZD,
 ASUS,X580VD,model,pending,https://jp.drvhub.net/laptops/asus/x580vd,ASUS,X580VD,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/X580/X580VD
 ASUS,X580VN,model,pending,https://jp.drvhub.net/laptops/asus/x580vn,ASUS,X580VN,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/X580/X580VN
 ASUS,X705BA,model,pending,https://jp.drvhub.net/laptops/asus/x705ba,ASUS,X705BA,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=24
-ASUS,X705MA,model,pending,https://jp.drvhub.net/laptops/asus/x705ma,ASUS,X705MA,Laptop,,
+ASUS,X705MA,model,pending,https://jp.drvhub.net/laptops/asus/x705ma,ASUS,X705MA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
 ASUS,X705MAR,model,pending,https://jp.drvhub.net/laptops/asus/x705mar,ASUS,X705MAR,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=24
-ASUS,X705MB,model,pending,https://jp.drvhub.net/laptops/asus/x705mb,ASUS,X705MB,Laptop,,
+ASUS,X705MB,model,pending,https://jp.drvhub.net/laptops/asus/x705mb,ASUS,X705MB,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
 ASUS,X705NA,model,pending,https://jp.drvhub.net/laptops/asus/x705na,ASUS,X705NA,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/X705/X705NA
 ASUS,X705NC,model,pending,https://jp.drvhub.net/laptops/asus/x705nc,ASUS,X705NC,Laptop,,
 ASUS,X705UA,model,pending,https://jp.drvhub.net/laptops/asus/x705ua,ASUS,X705UA,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/X705/X705UA
@@ -3702,7 +3702,7 @@ ASUS,X705UB,model,pending,https://jp.drvhub.net/laptops/asus/x705ub,ASUS,X705UB,
 ASUS,X705UBP,model,pending,https://jp.drvhub.net/laptops/asus/x705ubp,ASUS,X705UBP,Laptop,,
 ASUS,X705UD,model,pending,https://jp.drvhub.net/laptops/asus/x705ud,ASUS,X705UD,Laptop,,
 ASUS,X705UDR,model,pending,https://jp.drvhub.net/laptops/asus/x705udr,ASUS,X705UDR,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/X705/X705UDR
-ASUS,X705UF,model,pending,https://jp.drvhub.net/laptops/asus/x705uf,ASUS,X705UF,Laptop,,
+ASUS,X705UF,model,pending,https://jp.drvhub.net/laptops/asus/x705uf,ASUS,X705UF,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
 ASUS,X705UFR,model,pending,https://jp.drvhub.net/laptops/asus/x705ufr,ASUS,X705UFR,Laptop,,
 ASUS,X705UN,model,pending,https://jp.drvhub.net/laptops/asus/x705un,ASUS,X705UN,Laptop,,
 ASUS,X705UNR,model,pending,https://jp.drvhub.net/laptops/asus/x705unr,ASUS,X705UNR,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/X705/X705UNR
@@ -3739,7 +3739,7 @@ ASUS,X751SA,model,pending,https://jp.drvhub.net/laptops/asus/x751sa,ASUS,X751SA,
 ASUS,X751SJ,model,pending,https://jp.drvhub.net/laptops/asus/x751sj,ASUS,X751SJ,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/X751/X751SJ
 ASUS,X751SV,model,pending,https://jp.drvhub.net/laptops/asus/x751sv,ASUS,X751SV,Laptop,,
 ASUS,X751YI,model,pending,https://jp.drvhub.net/laptops/asus/x751yi,ASUS,X751YI,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/X751/X751YI
-ASUS,X756UA,model,pending,https://jp.drvhub.net/laptops/asus/x756ua,ASUS,X756UA,Laptop,,
+ASUS,X756UA,model,pending,https://jp.drvhub.net/laptops/asus/x756ua,ASUS,X756UA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
 ASUS,X756UAK,model,pending,https://jp.drvhub.net/laptops/asus/x756uak,ASUS,X756UAK,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/X756/X756UAK
 ASUS,X756UAM,model,pending,https://jp.drvhub.net/laptops/asus/x756uam,ASUS,X756UAM,Laptop,,
 ASUS,X756UB,model,pending,https://jp.drvhub.net/laptops/asus/x756ub,ASUS,X756UB,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/X756/X756UB
@@ -3748,7 +3748,7 @@ ASUS,X756UQ,model,pending,https://jp.drvhub.net/laptops/asus/x756uq,ASUS,X756UQ,
 ASUS,X756UQK,model,pending,https://jp.drvhub.net/laptops/asus/x756uqk,ASUS,X756UQK,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/X756/X756UQK
 ASUS,X756UV,model,pending,https://jp.drvhub.net/laptops/asus/x756uv,ASUS,X756UV,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/X756/X756UV
 ASUS,X756UVK,model,pending,https://jp.drvhub.net/laptops/asus/x756uvk,ASUS,X756UVK,Laptop,,
-ASUS,X756UW,model,pending,https://jp.drvhub.net/laptops/asus/x756uw,ASUS,X756UW,Laptop,,
+ASUS,X756UW,model,pending,https://jp.drvhub.net/laptops/asus/x756uw,ASUS,X756UW,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14309&productflag=1
 ASUS,X756UWK,model,pending,https://jp.drvhub.net/laptops/asus/x756uwk,ASUS,X756UWK,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/X756/X756UWK
 ASUS,X756UX,model,pending,https://jp.drvhub.net/laptops/asus/x756ux,ASUS,X756UX,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/X756/X756UX
 ASUS,X756UXK,model,pending,https://jp.drvhub.net/laptops/asus/x756uxk,ASUS,X756UXK,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/X756/X756UXK
@@ -15489,8 +15489,8 @@ Toshiba,dynabook Satellite B350/W2FA,model,pending,https://jp.drvhub.net/laptops
 Toshiba,dynabook Satellite B350/W2JA,model,pending,https://jp.drvhub.net/laptops/toshiba/dynabook-satellite-b350-w2ja,Toshiba,dynabook Satellite B350/W2JA,Laptop,,
 Toshiba,dynabook Satellite B351/W2FC,model,pending,https://jp.drvhub.net/laptops/toshiba/dynabook-satellite-b351-w2fc,Toshiba,dynabook Satellite B351/W2FC,Laptop,,
 Toshiba,dynabook Satellite B351/W2MC,model,pending,https://jp.drvhub.net/laptops/toshiba/dynabook-satellite-b351w2mc,Toshiba,dynabook Satellite B351/W2MC,Laptop,,
-Toshiba,dynabook Satellite B351/W2MD,model,pending,https://jp.drvhub.net/laptops/toshiba/dynabook-satellite-b351-w2md,Toshiba,dynabook Satellite B351/W2MD,Laptop,,
-Toshiba,dynabook Satellite B352/W2JF,model,pending,https://jp.drvhub.net/laptops/toshiba/dynabook-satellite-b352-w2jf,Toshiba,dynabook Satellite B352/W2JF,Laptop,,
+Toshiba,dynabook Satellite B351/W2MD,model,pending,https://jp.drvhub.net/laptops/toshiba/dynabook-satellite-b351-w2md,Toshiba,dynabook Satellite B351/W2MD,Laptop,,https://dynabook.com/direct/pc-static/before2016/pc1/catalog/2011/b35d/spec.html
+Toshiba,dynabook Satellite B352/W2JF,model,pending,https://jp.drvhub.net/laptops/toshiba/dynabook-satellite-b352-w2jf,Toshiba,dynabook Satellite B352/W2JF,Laptop,,https://dynabook.com/direct/pc-static/before2016/pc1/catalog/2012/b35f/spec.html
 Toshiba,dynabook Satellite B352/W2MHB,model,pending,https://jp.drvhub.net/laptops/toshiba/dynabook-satellite-b352-w2mhb,Toshiba,dynabook Satellite B352/W2MHB,Laptop,,
 Toshiba,dynabook Satellite B352/W2MHW,model,pending,https://jp.drvhub.net/laptops/toshiba/dynabook-satellite-b352-w2mhw,Toshiba,dynabook Satellite B352/W2MHW,Laptop,,
 Toshiba,dynabook Satellite B353/21KB,model,pending,https://jp.drvhub.net/laptops/toshiba/dynabook-satellite-b353-21kb,Toshiba,dynabook Satellite B353/21KB,Laptop,,
@@ -15571,11 +15571,11 @@ Toshiba,dynabook Satellite R35/P,model,pending,https://jp.drvhub.net/laptops/tos
 Toshiba,dynabook Satellite T551/W4MBB,model,pending,https://jp.drvhub.net/laptops/toshiba/dynabook-satellite-t551-w4mbb,Toshiba,dynabook Satellite T551/W4MBB,Laptop,,
 Toshiba,dynabook Satellite T560/W5TAB,model,pending,https://jp.drvhub.net/laptops/toshiba/dynabook-satellite-t560w5tab,Toshiba,dynabook Satellite T560/W5TAB,Laptop,,
 Toshiba,dynabook Satellite T57/45M,model,pending,https://jp.drvhub.net/laptops/toshiba/dynabook-satellite-t57-45m,Toshiba,dynabook Satellite T57/45M,Laptop,,
-Toshiba,dynabook Satellite T571/W3TD,model,pending,https://jp.drvhub.net/laptops/toshiba/dynabook-satellite-t571-w3td,Toshiba,dynabook Satellite T571/W3TD,Laptop,,
-Toshiba,dynabook Satellite T571/W4TD,model,pending,https://jp.drvhub.net/laptops/toshiba/dynabook-satellite-t571-w4td,Toshiba,dynabook Satellite T571/W4TD,Laptop,,
+Toshiba,dynabook Satellite T571/W3TD,model,pending,https://jp.drvhub.net/laptops/toshiba/dynabook-satellite-t571-w3td,Toshiba,dynabook Satellite T571/W3TD,Laptop,,https://dynabook.com/direct/pc-static/before2016/pc1/catalog/2011/t57d/spec.html
+Toshiba,dynabook Satellite T571/W4TD,model,pending,https://jp.drvhub.net/laptops/toshiba/dynabook-satellite-t571-w4td,Toshiba,dynabook Satellite T571/W4TD,Laptop,,https://dynabook.com/direct/pc-static/before2016/pc1/catalog/2011/t57d/spec.html
 Toshiba,dynabook Satellite T571/W5TC,model,pending,https://jp.drvhub.net/laptops/toshiba/dynabook-satellite-t571-w5tc,Toshiba,dynabook Satellite T571/W5TC,Laptop,,
-Toshiba,dynabook Satellite T571/W5TD,model,pending,https://jp.drvhub.net/laptops/toshiba/dynabook-satellite-t571-w5td,Toshiba,dynabook Satellite T571/W5TD,Laptop,,
-Toshiba,dynabook Satellite T571/W5TE,model,pending,https://jp.drvhub.net/laptops/toshiba/dynabook-satellite-t571-w5te,Toshiba,dynabook Satellite T571/W5TE,Laptop,,
+Toshiba,dynabook Satellite T571/W5TD,model,pending,https://jp.drvhub.net/laptops/toshiba/dynabook-satellite-t571-w5td,Toshiba,dynabook Satellite T571/W5TD,Laptop,,https://dynabook.com/direct/pc-static/before2016/pc1/catalog/2011/t57d/spec.html
+Toshiba,dynabook Satellite T571/W5TE,model,pending,https://jp.drvhub.net/laptops/toshiba/dynabook-satellite-t571-w5te,Toshiba,dynabook Satellite T571/W5TE,Laptop,,https://dynabook.com/direct/pc-static/before2016/pc1/catalog/2012/t57e/spec.html
 Toshiba,dynabook Satellite T574/45K,model,pending,https://jp.drvhub.net/laptops/toshiba/dynabook-satellite-t574-45k,Toshiba,dynabook Satellite T574/45K,Laptop,,
 Toshiba,dynabook Satellite T652/W6VHB,model,pending,https://jp.drvhub.net/laptops/toshiba/dynabook-satellite-t652-w6vhb,Toshiba,dynabook Satellite T652/W6VHB,Laptop,,
 Toshiba,dynabook Satellite T752/WVJGB,model,pending,https://jp.drvhub.net/laptops/toshiba/dynabook-satellite-t752-wvjgb,Toshiba,dynabook Satellite T752/WVJGB,Laptop,,
@@ -18653,16 +18653,16 @@ Azulle,A-1054-QALAN,model,pending,https://jp.drvhub.net/laptops/azulle/a-1054-qa
 BEELINK,BT3 PRO,model,pending,https://jp.drvhub.net/laptops/beelink/bt3-pro-2,BEELINK,BT3 PRO,Other,MiniPc,
 Bosgame,DNB20,model,pending,https://jp.drvhub.net/laptops/bosgame/dnb20,Bosgame,DNB20,Other,MiniPc,
 Bosgame,U56,model,pending,https://jp.drvhub.net/laptops/bosgame/u56,Bosgame,U56,Other,MiniPc,
-GEEKOM,GT1 Mega,model,pending,https://jp.drvhub.net/laptops/geekom/gt1-mega,GEEKOM,GT1 Mega,Other,MiniPc,
+GEEKOM,GT1 Mega,model,pending,https://jp.drvhub.net/laptops/geekom/gt1-mega,GEEKOM,GT1 Mega,Other,MiniPc,https://www.geekompc.com/product/geekom-gt1-mega-mini-pc/
 GEEKOM,IT1 Mega,model,pending,https://jp.drvhub.net/laptops/geekom/it1-mega,GEEKOM,IT1 Mega,Other,MiniPc,
 GEEKOM,NM16DM,model,pending,https://jp.drvhub.net/laptops/geekom/nm16dm,GEEKOM,NM16DM,Other,MiniPc,
 GEEKOM,NX14CM,model,pending,https://jp.drvhub.net/laptops/geekom/nx14cm,GEEKOM,NX14CM,Other,MiniPc,
 GEEKOM,NX16AM,model,pending,https://jp.drvhub.net/laptops/geekom/nx16am,GEEKOM,NX16AM,Other,MiniPc,
 GEEKOM,XT1 Mega,model,pending,https://jp.drvhub.net/laptops/geekom/xt1-mega,GEEKOM,XT1 Mega,Other,MiniPc,
-ASUS,AM1M-A,model,pending,https://jp.drvhub.net/laptops/asus/am1m-a,ASUS,AM1M-A,DiyDesktop,,
+ASUS,AM1M-A,model,pending,https://jp.drvhub.net/laptops/asus/am1m-a,ASUS,AM1M-A,DiyDesktop,,https://dlcdnets.asus.com/pub/ASUS/mb/SocketAM1/AM1M-A/f9004_am1m_a.pdf?model=am1m-a
 COLORFUL,C.B75PT PRO,model,pending,https://jp.drvhub.net/laptops/colorful/cb75pt-pro,COLORFUL,C.B75PT PRO,DiyDesktop,,
-ECS,H61H2-M16,model,pending,https://jp.drvhub.net/laptops/ecs/h61h2-m16,ECS,H61H2-M16,DiyDesktop,,
-ECS,Z97-PK,model,pending,https://jp.drvhub.net/laptops/ecs/z97-pk,ECS,Z97-PK,DiyDesktop,,
+ECS,H61H2-M16,model,pending,https://jp.drvhub.net/laptops/ecs/h61h2-m16,ECS,H61H2-M16,DiyDesktop,,https://campaign.ecs.com.tw/support/windows_8_support/intel_win8_biosupgrade.html
+ECS,Z97-PK,model,pending,https://jp.drvhub.net/laptops/ecs/z97-pk,ECS,Z97-PK,DiyDesktop,,https://campaign.ecs.com.tw/support/9series_broadwell/broadwell_ready.html
 Gigabyte,H410M S2Hzqs88,model,pending,https://jp.drvhub.net/laptops/gigabyte/h410m-s2hzqs88,GIGABYTE,H410M S2H,DiyDesktop,,
 ASUS,(ASUS USB-N53_V2 USB Wireless) by 3DP,model,pending,https://jp.drvhub.net/devices/network/asus/asus-usb-n53-v2-usb-wireless-by-3dp,ASUS,USB-N53 rev V2,Other,NetworkAdapter,
 ASUS,[CommView] ASUS USB-AC53,model,pending,https://jp.drvhub.net/devices/network/asus/commview-asus-usb-ac53,ASUS,USB-AC53,Other,NetworkAdapter,https://www.asus.com/event/network/eol-product/#wireless-adapters
@@ -19012,16 +19012,16 @@ ASUS,EXPERTBOOK B9400CEA,model,pending,https://jp.drvhub.net/laptops/asus/expert
 ASUS,EXPERTBOOK B9400CEA B9450CEA,model,pending,https://jp.drvhub.net/laptops/asus/expertbook-b9400cea-b9450cea,ASUS,B9400CEA,Laptop,,
 ASUS,EXPERTBOOK B9403CVA,model,pending,https://jp.drvhub.net/laptops/asus/expertbook-b9403cva,ASUS,B9403CVA,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=2
 ASUS,EXPERTBOOK B9403CVAR,model,pending,https://jp.drvhub.net/laptops/asus/expertbook-b9403cvar,ASUS,B9403CVAR,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=2
-ASUS,EXPERTBOOK B9406CAA,model,pending,https://jp.drvhub.net/laptops/asus/expertbook-b9406caa,ASUS,B9406CAA,Laptop,,
+ASUS,EXPERTBOOK B9406CAA,model,pending,https://jp.drvhub.net/laptops/asus/expertbook-b9406caa,ASUS,B9406CAA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=49245&productflag=1
 ASUS,EXPERTBOOK B9450FA,model,pending,https://jp.drvhub.net/laptops/asus/expertbook-b9450fa,ASUS,B9450FA,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=2
 ASUS,EXPERTBOOK B9450FAV B9450FA,model,pending,https://jp.drvhub.net/laptops/asus/expertbook-b9450fav-b9450fa,ASUS,B9450FAV,Laptop,,
 ASUS,EXPERTBOOK BM1403CDA,model,pending,https://jp.drvhub.net/laptops/asus/expertbook-bm1403cda,ASUS,BM1403CDA,Laptop,,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx
 ASUS,EXPERTBOOK BM1503CDA,model,pending,https://jp.drvhub.net/laptops/asus/expertbook-bm1503cda,ASUS,BM1503CDA,Laptop,,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx
-ASUS,EXPERTBOOK BM3406CHA,model,pending,https://jp.drvhub.net/laptops/asus/expertbook-bm3406cha,ASUS,BM3406CHA,Laptop,,
-ASUS,EXPERTBOOK BM3606CHA,model,pending,https://jp.drvhub.net/laptops/asus/expertbook-bm3606cha,ASUS,BM3606CHA,Laptop,,
+ASUS,EXPERTBOOK BM3406CHA,model,pending,https://jp.drvhub.net/laptops/asus/expertbook-bm3406cha,ASUS,BM3406CHA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=27762&productflag=1
+ASUS,EXPERTBOOK BM3606CHA,model,pending,https://jp.drvhub.net/laptops/asus/expertbook-bm3606cha,ASUS,BM3606CHA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=27762&productflag=1
 ASUS,EXPERTBOOK BR1104CTA,model,pending,https://jp.drvhub.net/laptops/asus/expertbook-br1104cta,ASUS,BR1104CTA,Laptop,,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx
-ASUS,EXPERTBOOK BR1204CTA,model,pending,https://jp.drvhub.net/laptops/asus/expertbook-br1204cta,ASUS,BR1204CTA,Laptop,,
-ASUS,EXPERTBOOK BR1204FTA,model,pending,https://jp.drvhub.net/laptops/asus/expertbook-br1204fta,ASUS,BR1204FTA,Laptop,,
+ASUS,EXPERTBOOK BR1204CTA,model,pending,https://jp.drvhub.net/laptops/asus/expertbook-br1204cta,ASUS,BR1204CTA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=46170&productflag=1
+ASUS,EXPERTBOOK BR1204FTA,model,pending,https://jp.drvhub.net/laptops/asus/expertbook-br1204fta,ASUS,BR1204FTA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=46170&productflag=1
 ASUS,F50GX,model,pending,https://jp.drvhub.net/laptops/asus/f50gx,ASUS,F50GX,Laptop,,
 ASUS,F50Q,model,pending,https://jp.drvhub.net/laptops/asus/f50q,ASUS,F50Q,Laptop,,
 ASUS,F50Sf,model,pending,https://jp.drvhub.net/laptops/asus/f50sf,ASUS,F50Sf,Laptop,,
@@ -19040,29 +19040,29 @@ ASUS,F83VD,model,pending,https://jp.drvhub.net/laptops/asus/f83vd-2,ASUS,F83VD,L
 ASUS,F83VF,model,pending,https://jp.drvhub.net/laptops/asus/f83vf,ASUS,F83VF,Laptop,,
 ASUS,TUF A17 FA706IE TUF706IE,model,pending,https://jp.drvhub.net/laptops/asus/tuf-a17-fa706ie-tuf706ie,ASUS,FA706IE,Laptop,,
 ASUS,TUF A17 FA706IE TUF766IE,model,pending,https://jp.drvhub.net/laptops/asus/tuf-a17-fa706ie-tuf766ie,ASUS,FA706IE,Laptop,,
-ASUS,TUF FX504GD FX80GD,model,pending,https://jp.drvhub.net/laptops/asus/tuf-fx504gd-fx80gd,ASUS,FX504GD,Laptop,,
-ASUS,TUF FX504GE FX80GE,model,pending,https://jp.drvhub.net/laptops/asus/tuf-fx504ge-fx80ge,ASUS,FX504GE,Laptop,,
+ASUS,TUF FX504GD FX80GD,model,pending,https://jp.drvhub.net/laptops/asus/tuf-fx504gd-fx80gd,ASUS,FX504GD,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=17067&productflag=1
+ASUS,TUF FX504GE FX80GE,model,pending,https://jp.drvhub.net/laptops/asus/tuf-fx504ge-fx80ge,ASUS,FX504GE,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=5993&productflag=1
 ASUS,TUF FX505DD,model,pending,https://jp.drvhub.net/laptops/asus/tuf-fx505dd,ASUS,FX505DD,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=5
-ASUS,TUF FX505DD 8C66,model,pending,https://jp.drvhub.net/laptops/asus/tuf-fx505dd-8c66,ASUS,FX505DD,Laptop,,
-ASUS,TUF FX505DD ASUS,model,pending,https://jp.drvhub.net/laptops/asus/tuf-fx505dd-asus,ASUS,FX505DD,Laptop,,
-ASUS,TUF FX505DD FX95DD,model,pending,https://jp.drvhub.net/laptops/asus/tuf-fx505dd-fx95dd,ASUS,FX505DD,Laptop,,
-ASUS,TUF FX505DD KANRCV04H130438,model,pending,https://jp.drvhub.net/laptops/asus/tuf-fx505dd-kanrcv04h130438,ASUS,FX505DD,Laptop,,
+ASUS,TUF FX505DD 8C66,model,pending,https://jp.drvhub.net/laptops/asus/tuf-fx505dd-8c66,ASUS,FX505DD,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=17067&productflag=1
+ASUS,TUF FX505DD ASUS,model,pending,https://jp.drvhub.net/laptops/asus/tuf-fx505dd-asus,ASUS,FX505DD,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=17067&productflag=1
+ASUS,TUF FX505DD FX95DD,model,pending,https://jp.drvhub.net/laptops/asus/tuf-fx505dd-fx95dd,ASUS,FX505DD,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=17067&productflag=1
+ASUS,TUF FX505DD KANRCV04H130438,model,pending,https://jp.drvhub.net/laptops/asus/tuf-fx505dd-kanrcv04h130438,ASUS,FX505DD,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=17067&productflag=1
 ASUS,TUF FX505DD TUF505DD,model,pending,https://jp.drvhub.net/laptops/asus/tuf-fx505dd-tuf505dd,ASUS,FX505DD,Laptop,,
 ASUS,TUF FX505DT,model,pending,https://jp.drvhub.net/laptops/asus/tuf-fx505dt,ASUS,FX505DT,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=5
-ASUS,TUF FX505DT <!DOCTYPE,model,pending,https://jp.drvhub.net/laptops/asus/tuf-fx505dt-doctype,ASUS,FX505DT,Laptop,,
-ASUS,TUF FX505DT FX95DT,model,pending,https://jp.drvhub.net/laptops/asus/tuf-fx505dt-fx95dt,ASUS,FX505DT,Laptop,,
+ASUS,TUF FX505DT <!DOCTYPE,model,pending,https://jp.drvhub.net/laptops/asus/tuf-fx505dt-doctype,ASUS,FX505DT,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=5993&productflag=1
+ASUS,TUF FX505DT FX95DT,model,pending,https://jp.drvhub.net/laptops/asus/tuf-fx505dt-fx95dt,ASUS,FX505DT,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=5993&productflag=1
 ASUS,TUF FX505DT TUF505DT,model,pending,https://jp.drvhub.net/laptops/asus/tuf-fx505dt-tuf505dt,ASUS,FX505DT,Laptop,,
 ASUS,TUF FX505DT TUF565DT,model,pending,https://jp.drvhub.net/laptops/asus/tuf-fx505dt-tuf565dt,ASUS,FX505DT,Laptop,,
 ASUS,TUF FX505DU,model,pending,https://jp.drvhub.net/laptops/asus/tuf-fx505du,ASUS,FX505DU,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=5
-ASUS,TUF FX505DU FX95DU,model,pending,https://jp.drvhub.net/laptops/asus/tuf-fx505du-fx95du,ASUS,FX505DU,Laptop,,
+ASUS,TUF FX505DU FX95DU,model,pending,https://jp.drvhub.net/laptops/asus/tuf-fx505du-fx95du,ASUS,FX505DU,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=5993&productflag=1
 ASUS,TUF FX505DU TUF505DU,model,pending,https://jp.drvhub.net/laptops/asus/tuf-fx505du-tuf505du,ASUS,FX505DU,Laptop,,
 ASUS,TUF FX505DV,model,pending,https://jp.drvhub.net/laptops/asus/tuf-fx505dv,ASUS,FX505DV,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=5
-ASUS,TUF FX505DV 2nd05DV,model,pending,https://jp.drvhub.net/laptops/asus/tuf-fx505dv-2nd05dv,ASUS,FX505DV,Laptop,,
-ASUS,TUF FX505DV FX95DV,model,pending,https://jp.drvhub.net/laptops/asus/tuf-fx505dv-fx95dv,ASUS,FX505DV,Laptop,,
+ASUS,TUF FX505DV 2nd05DV,model,pending,https://jp.drvhub.net/laptops/asus/tuf-fx505dv-2nd05dv,ASUS,FX505DV,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=17067&productflag=1
+ASUS,TUF FX505DV FX95DV,model,pending,https://jp.drvhub.net/laptops/asus/tuf-fx505dv-fx95dv,ASUS,FX505DV,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=17067&productflag=1
 ASUS,TUF FX505DV TUF505DV,model,pending,https://jp.drvhub.net/laptops/asus/tuf-fx505dv-tuf505dv,ASUS,FX505DV,Laptop,,
 ASUS,TUF FX505DV TUF565DV,model,pending,https://jp.drvhub.net/laptops/asus/tuf-fx505dv-tuf565dv,ASUS,FX505DV,Laptop,,
 ASUS,TUF FX505DY,model,pending,https://jp.drvhub.net/laptops/asus/tuf-fx505dy,ASUS,FX505DY,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240108144316635_ASUS_System_Control_Interface_v1modellist.pdf#page=1
-ASUS,TUF FX505DY FX86FY,model,pending,https://jp.drvhub.net/laptops/asus/tuf-fx505dy-fx86fy,ASUS,FX505DY,Laptop,,
+ASUS,TUF FX505DY FX86FY,model,pending,https://jp.drvhub.net/laptops/asus/tuf-fx505dy-fx86fy,ASUS,FX505DY,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=17067&productflag=1
 ASUS,TUF FX505DY TUF505,model,pending,https://jp.drvhub.net/laptops/asus/tuf-fx505dy-tuf505,ASUS,FX505DY,Laptop,,
 ASUS,TUF FX505DY X515JFY,model,pending,https://jp.drvhub.net/laptops/asus/tuf-fx505dy-x515jfy,ASUS,FX505DY,Laptop,,
 ASUS,TUF FX505GD,model,pending,https://jp.drvhub.net/laptops/asus/tuf-fx505gd,ASUS,FX505GD,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240108144316635_ASUS_System_Control_Interface_v1modellist.pdf#page=1
@@ -19073,11 +19073,11 @@ ASUS,TUF FX505GM,model,pending,https://jp.drvhub.net/laptops/asus/tuf-fx505gm,AS
 ASUS,TUF FX505GM CNK4K90209,model,pending,https://jp.drvhub.net/laptops/asus/tuf-fx505gm-cnk4k90209,ASUS,FX505GM,Laptop,,
 ASUS,TUF FX505GM FX86FM,model,pending,https://jp.drvhub.net/laptops/asus/tuf-fx505gm-fx86fm,ASUS,FX505GM,Laptop,,
 ASUS,TUF FX505GT,model,pending,https://jp.drvhub.net/laptops/asus/tuf-fx505gt,ASUS,FX505GT,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=5
-ASUS,TUF FX505GT <!DOCTYPE,model,pending,https://jp.drvhub.net/laptops/asus/tuf-fx505gt-doctype,ASUS,FX505GT,Laptop,,
-ASUS,TUF FX505GT FX95GT,model,pending,https://jp.drvhub.net/laptops/asus/tuf-fx505gt-fx95gt,ASUS,FX505GT,Laptop,,
+ASUS,TUF FX505GT <!DOCTYPE,model,pending,https://jp.drvhub.net/laptops/asus/tuf-fx505gt-doctype,ASUS,FX505GT,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=17067&productflag=1
+ASUS,TUF FX505GT FX95GT,model,pending,https://jp.drvhub.net/laptops/asus/tuf-fx505gt-fx95gt,ASUS,FX505GT,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=17067&productflag=1
 ASUS,TUF FX505GT TUF505GT,model,pending,https://jp.drvhub.net/laptops/asus/tuf-fx505gt-tuf505gt,ASUS,FX505GT,Laptop,,
 ASUS,TUF FX505GU,model,pending,https://jp.drvhub.net/laptops/asus/tuf-fx505gu,ASUS,FX505GU,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=5
-ASUS,TUF FX505GU FX95GU,model,pending,https://jp.drvhub.net/laptops/asus/tuf-fx505gu-fx95gu,ASUS,FX505GU,Laptop,,
+ASUS,TUF FX505GU FX95GU,model,pending,https://jp.drvhub.net/laptops/asus/tuf-fx505gu-fx95gu,ASUS,FX505GU,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=17067&productflag=1
 ASUS,TUF F15 FX507ZC4 TUF507ZC4,model,pending,https://jp.drvhub.net/laptops/asus/tuf-f15-fx507zc4-tuf507zc4,ASUS,FX507ZC4,Laptop,,
 ASUS,TUF F15 FX507ZU4 TUF507ZU4,model,pending,https://jp.drvhub.net/laptops/asus/tuf-f15-fx507zu4-tuf507zu4,ASUS,FX507ZU4,Laptop,,
 ASUS,TUF F15 FX507ZV4 TUF507ZV4,model,pending,https://jp.drvhub.net/laptops/asus/tuf-f15-fx507zv4-tuf507zv4,ASUS,FX507ZV4,Laptop,,
@@ -19156,17 +19156,17 @@ ASUS,ProArt Studiobook H7600ZX,model,pending,https://jp.drvhub.net/laptops/asus/
 ASUS,ProArt Studiobook H7604JI,model,pending,https://jp.drvhub.net/laptops/asus/proart-studiobook-h7604ji,ASUS,H7604JI,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=13
 ASUS,ProArt Studiobook H7604JV,model,pending,https://jp.drvhub.net/laptops/asus/proart-studiobook-h7604jv,ASUS,H7604JV,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=13
 ASUS,ProArt P16 H7606WI,model,pending,https://jp.drvhub.net/laptops/asus/proart-p16-h7606wi,ASUS,H7606WI,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=13
-ASUS,ProArt P16 H7606WM,model,pending,https://jp.drvhub.net/laptops/asus/proart-p16-h7606wm,ASUS,H7606WM,Laptop,,
-ASUS,ProArt P16 H7606WP,model,pending,https://jp.drvhub.net/laptops/asus/proart-p16-h7606wp,ASUS,H7606WP,Laptop,,
-ASUS,ProArt P16 H7606WR,model,pending,https://jp.drvhub.net/laptops/asus/proart-p16-h7606wr,ASUS,H7606WR,Laptop,,
+ASUS,ProArt P16 H7606WM,model,pending,https://jp.drvhub.net/laptops/asus/proart-p16-h7606wm,ASUS,H7606WM,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35489&productflag=1
+ASUS,ProArt P16 H7606WP,model,pending,https://jp.drvhub.net/laptops/asus/proart-p16-h7606wp,ASUS,H7606WP,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35489&productflag=1
+ASUS,ProArt P16 H7606WR,model,pending,https://jp.drvhub.net/laptops/asus/proart-p16-h7606wr,ASUS,H7606WR,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35489&productflag=1
 ASUS,ProArt P16 H7606WU,model,pending,https://jp.drvhub.net/laptops/asus/proart-p16-h7606wu,ASUS,H7606WU,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=13
 ASUS,ProArt P16 H7606WV,model,pending,https://jp.drvhub.net/laptops/asus/proart-p16-h7606wv,ASUS,H7606WV,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=13
-ASUS,ProArt P16 H7606WW,model,pending,https://jp.drvhub.net/laptops/asus/proart-p16-h7606ww,ASUS,H7606WW,Laptop,,
-ASUS,ProArt P16 H7606WX,model,pending,https://jp.drvhub.net/laptops/asus/proart-p16-h7606wx,ASUS,H7606WX,Laptop,,
-ASUS,ProArt PX13 HN7306EA,model,pending,https://jp.drvhub.net/laptops/asus/proart-px13-hn7306ea,ASUS,HN7306EA,Laptop,,
-ASUS,ProArt PX13 HN7306EAC,model,pending,https://jp.drvhub.net/laptops/asus/proart-px13-hn7306eac,ASUS,HN7306EAC,Laptop,,
+ASUS,ProArt P16 H7606WW,model,pending,https://jp.drvhub.net/laptops/asus/proart-p16-h7606ww,ASUS,H7606WW,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35489&productflag=1
+ASUS,ProArt P16 H7606WX,model,pending,https://jp.drvhub.net/laptops/asus/proart-p16-h7606wx,ASUS,H7606WX,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35489&productflag=1
+ASUS,ProArt PX13 HN7306EA,model,pending,https://jp.drvhub.net/laptops/asus/proart-px13-hn7306ea,ASUS,HN7306EA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35489&productflag=1
+ASUS,ProArt PX13 HN7306EAC,model,pending,https://jp.drvhub.net/laptops/asus/proart-px13-hn7306eac,ASUS,HN7306EAC,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35489&productflag=1
 ASUS,ProArt PX13 HN7306WI,model,pending,https://jp.drvhub.net/laptops/asus/proart-px13-hn7306wi,ASUS,HN7306WI,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=13
-ASUS,ProArt PX13 HN7306WI 000515213,model,pending,https://jp.drvhub.net/laptops/asus/proart-px13-hn7306wi-000515213,ASUS,HN7306WI,Laptop,,
+ASUS,ProArt PX13 HN7306WI 000515213,model,pending,https://jp.drvhub.net/laptops/asus/proart-px13-hn7306wi-000515213,ASUS,HN7306WI,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35489&productflag=1
 ASUS,ProArt PX13 HN7306WU,model,pending,https://jp.drvhub.net/laptops/asus/proart-px13-hn7306wu,ASUS,HN7306WU,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=13
 ASUS,ProArt PX13 HN7306WV,model,pending,https://jp.drvhub.net/laptops/asus/proart-px13-hn7306wv,ASUS,HN7306WV,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=13
 ASUS,K40AB,model,pending,https://jp.drvhub.net/laptops/asus/k40ab,ASUS,K40AB,Laptop,,
@@ -19328,47 +19328,47 @@ ASUS,N10Jb,model,pending,https://jp.drvhub.net/laptops/asus/n10jb,ASUS,N10Jb,Lap
 ASUS,N10Jc,model,pending,https://jp.drvhub.net/laptops/asus/n10jc,ASUS,N10Jc,Laptop,,
 ASUS,N20A,model,pending,https://jp.drvhub.net/laptops/asus/n20a,ASUS,N20A,Laptop,,
 ASUS,N43JF,model,pending,https://jp.drvhub.net/laptops/asus/n43jf,ASUS,N43JF,Laptop,,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx
-ASUS,N43JM,model,pending,https://jp.drvhub.net/laptops/asus/n43jm,ASUS,N43JM,Laptop,,
-ASUS,N43JQ,model,pending,https://jp.drvhub.net/laptops/asus/n43jq,ASUS,N43JQ,Laptop,,
+ASUS,N43JM,model,pending,https://jp.drvhub.net/laptops/asus/n43jm,ASUS,N43JM,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35213&productflag=1
+ASUS,N43JQ,model,pending,https://jp.drvhub.net/laptops/asus/n43jq,ASUS,N43JQ,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35213&productflag=1
 ASUS,N43SL,model,pending,https://jp.drvhub.net/laptops/asus/n43sl,ASUS,N43SL,Laptop,,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx
-ASUS,N43SM,model,pending,https://jp.drvhub.net/laptops/asus/n43sm,ASUS,N43SM,Laptop,,
+ASUS,N43SM,model,pending,https://jp.drvhub.net/laptops/asus/n43sm,ASUS,N43SM,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35213&productflag=1
 ASUS,N43SN,model,pending,https://jp.drvhub.net/laptops/asus/n43sn,ASUS,N43SN,Laptop,,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx
-ASUS,N45SF,model,pending,https://jp.drvhub.net/laptops/asus/n45sf,ASUS,N45SF,Laptop,,
-ASUS,N45SL,model,pending,https://jp.drvhub.net/laptops/asus/n45sl,ASUS,N45SL,Laptop,,
-ASUS,N46JV,model,pending,https://jp.drvhub.net/laptops/asus/n46jv,ASUS,N46JV,Laptop,,
-ASUS,N46VB,model,pending,https://jp.drvhub.net/laptops/asus/n46vb,ASUS,N46VB,Laptop,,
-ASUS,N46VJ,model,pending,https://jp.drvhub.net/laptops/asus/n46vj,ASUS,N46VJ,Laptop,,
-ASUS,N46VM,model,pending,https://jp.drvhub.net/laptops/asus/n46vm,ASUS,N46VM,Laptop,,
-ASUS,N46VZ,model,pending,https://jp.drvhub.net/laptops/asus/n46vz,ASUS,N46VZ,Laptop,,
-ASUS,N50Vc,model,pending,https://jp.drvhub.net/laptops/asus/n50vc,ASUS,N50Vc,Laptop,,
-ASUS,N50Vn,model,pending,https://jp.drvhub.net/laptops/asus/n50vn,ASUS,N50Vn,Laptop,,
-ASUS,N51Vf,model,pending,https://jp.drvhub.net/laptops/asus/n51vf,ASUS,N51Vf,Laptop,,
-ASUS,N51Vg,model,pending,https://jp.drvhub.net/laptops/asus/n51vg,ASUS,N51Vg,Laptop,,
-ASUS,N51Vn,model,pending,https://jp.drvhub.net/laptops/asus/n51vn,ASUS,N51Vn,Laptop,,
-ASUS,N53DA,model,pending,https://jp.drvhub.net/laptops/asus/n53da,ASUS,N53DA,Laptop,,
+ASUS,N45SF,model,pending,https://jp.drvhub.net/laptops/asus/n45sf,ASUS,N45SF,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35213&productflag=1
+ASUS,N45SL,model,pending,https://jp.drvhub.net/laptops/asus/n45sl,ASUS,N45SL,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35213&productflag=1
+ASUS,N46JV,model,pending,https://jp.drvhub.net/laptops/asus/n46jv,ASUS,N46JV,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35213&productflag=1
+ASUS,N46VB,model,pending,https://jp.drvhub.net/laptops/asus/n46vb,ASUS,N46VB,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35213&productflag=1
+ASUS,N46VJ,model,pending,https://jp.drvhub.net/laptops/asus/n46vj,ASUS,N46VJ,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35213&productflag=1
+ASUS,N46VM,model,pending,https://jp.drvhub.net/laptops/asus/n46vm,ASUS,N46VM,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35213&productflag=1
+ASUS,N46VZ,model,pending,https://jp.drvhub.net/laptops/asus/n46vz,ASUS,N46VZ,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35213&productflag=1
+ASUS,N50Vc,model,pending,https://jp.drvhub.net/laptops/asus/n50vc,ASUS,N50Vc,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35213&productflag=1
+ASUS,N50Vn,model,pending,https://jp.drvhub.net/laptops/asus/n50vn,ASUS,N50Vn,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35213&productflag=1
+ASUS,N51Vf,model,pending,https://jp.drvhub.net/laptops/asus/n51vf,ASUS,N51Vf,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35213&productflag=1
+ASUS,N51Vg,model,pending,https://jp.drvhub.net/laptops/asus/n51vg,ASUS,N51Vg,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35213&productflag=1
+ASUS,N51Vn,model,pending,https://jp.drvhub.net/laptops/asus/n51vn,ASUS,N51Vn,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35213&productflag=1
+ASUS,N53DA,model,pending,https://jp.drvhub.net/laptops/asus/n53da,ASUS,N53DA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35213&productflag=1
 ASUS,N53Jf,model,pending,https://jp.drvhub.net/laptops/asus/n53jf,ASUS,N53Jf,Laptop,,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx
 ASUS,N53Jg,model,pending,https://jp.drvhub.net/laptops/asus/n53jg,ASUS,N53Jg,Laptop,,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx
 ASUS,N53Jl,model,pending,https://jp.drvhub.net/laptops/asus/n53jl,ASUS,N53Jl,Laptop,,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx
 ASUS,N53Jn,model,pending,https://jp.drvhub.net/laptops/asus/n53jn,ASUS,N53Jn,Laptop,,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx
 ASUS,N53Jq,model,pending,https://jp.drvhub.net/laptops/asus/n53jq,ASUS,N53Jq,Laptop,,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx
-ASUS,N53SM,model,pending,https://jp.drvhub.net/laptops/asus/n53sm,ASUS,N53SM,Laptop,,
+ASUS,N53SM,model,pending,https://jp.drvhub.net/laptops/asus/n53sm,ASUS,N53SM,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35213&productflag=1
 ASUS,N53SN,model,pending,https://jp.drvhub.net/laptops/asus/n53sn,ASUS,N53SN,Laptop,,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx
 ASUS,N53SV,model,pending,https://jp.drvhub.net/laptops/asus/n53sv,ASUS,N53SV,Laptop,,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx
-ASUS,N53Ta,model,pending,https://jp.drvhub.net/laptops/asus/n53ta,ASUS,N53Ta,Laptop,,
-ASUS,N53TK,model,pending,https://jp.drvhub.net/laptops/asus/n53tk,ASUS,N53TK,Laptop,,
-ASUS,N55SF,model,pending,https://jp.drvhub.net/laptops/asus/n55sf,ASUS,N55SF,Laptop,,
-ASUS,N55SL,model,pending,https://jp.drvhub.net/laptops/asus/n55sl,ASUS,N55SL,Laptop,,
-ASUS,N56DP,model,pending,https://jp.drvhub.net/laptops/asus/n56dp,ASUS,N56DP,Laptop,,
-ASUS,N56DY,model,pending,https://jp.drvhub.net/laptops/asus/n56dy,ASUS,N56DY,Laptop,,
-ASUS,N56JK,model,pending,https://jp.drvhub.net/laptops/asus/n56jk,ASUS,N56JK,Laptop,,
-ASUS,N56JN,model,pending,https://jp.drvhub.net/laptops/asus/n56jn,ASUS,N56JN,Laptop,,
-ASUS,N56JR,model,pending,https://jp.drvhub.net/laptops/asus/n56jr,ASUS,N56JR,Laptop,,
+ASUS,N53Ta,model,pending,https://jp.drvhub.net/laptops/asus/n53ta,ASUS,N53Ta,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35213&productflag=1
+ASUS,N53TK,model,pending,https://jp.drvhub.net/laptops/asus/n53tk,ASUS,N53TK,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35213&productflag=1
+ASUS,N55SF,model,pending,https://jp.drvhub.net/laptops/asus/n55sf,ASUS,N55SF,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35213&productflag=1
+ASUS,N55SL,model,pending,https://jp.drvhub.net/laptops/asus/n55sl,ASUS,N55SL,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35213&productflag=1
+ASUS,N56DP,model,pending,https://jp.drvhub.net/laptops/asus/n56dp,ASUS,N56DP,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35213&productflag=1
+ASUS,N56DY,model,pending,https://jp.drvhub.net/laptops/asus/n56dy,ASUS,N56DY,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35213&productflag=1
+ASUS,N56JK,model,pending,https://jp.drvhub.net/laptops/asus/n56jk,ASUS,N56JK,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35213&productflag=1
+ASUS,N56JN,model,pending,https://jp.drvhub.net/laptops/asus/n56jn,ASUS,N56JN,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35213&productflag=1
+ASUS,N56JR,model,pending,https://jp.drvhub.net/laptops/asus/n56jr,ASUS,N56JR,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35213&productflag=1
 ASUS,N56JRH,model,pending,https://jp.drvhub.net/laptops/asus/n56jrh,ASUS,N56JRH,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/N56/N56JRH
-ASUS,N56VB,model,pending,https://jp.drvhub.net/laptops/asus/n56vb,ASUS,N56VB,Laptop,,
-ASUS,N56VJ,model,pending,https://jp.drvhub.net/laptops/asus/n56vj,ASUS,N56VJ,Laptop,,
-ASUS,N56VM,model,pending,https://jp.drvhub.net/laptops/asus/n56vm,ASUS,N56VM,Laptop,,
-ASUS,N56VV,model,pending,https://jp.drvhub.net/laptops/asus/n56vv,ASUS,N56VV,Laptop,,
-ASUS,N56VZ,model,pending,https://jp.drvhub.net/laptops/asus/n56vz,ASUS,N56VZ,Laptop,,
+ASUS,N56VB,model,pending,https://jp.drvhub.net/laptops/asus/n56vb,ASUS,N56VB,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35213&productflag=1
+ASUS,N56VJ,model,pending,https://jp.drvhub.net/laptops/asus/n56vj,ASUS,N56VJ,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35213&productflag=1
+ASUS,N56VM,model,pending,https://jp.drvhub.net/laptops/asus/n56vm,ASUS,N56VM,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35213&productflag=1
+ASUS,N56VV,model,pending,https://jp.drvhub.net/laptops/asus/n56vv,ASUS,N56VV,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35213&productflag=1
+ASUS,N56VZ,model,pending,https://jp.drvhub.net/laptops/asus/n56vz,ASUS,N56VZ,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35213&productflag=1
 ASUS,N60Dp,model,pending,https://jp.drvhub.net/laptops/asus/n60dp,ASUS,N60Dp,Laptop,,
 ASUS,N61Da,model,pending,https://jp.drvhub.net/laptops/asus/n61da,ASUS,N61Da,Laptop,,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx
 ASUS,N61Ja,model,pending,https://jp.drvhub.net/laptops/asus/n61ja,ASUS,N61Ja,Laptop,,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx
@@ -19385,19 +19385,19 @@ ASUS,N71Vn,model,pending,https://jp.drvhub.net/laptops/asus/n71vn,ASUS,N71Vn,Lap
 ASUS,N73JF,model,pending,https://jp.drvhub.net/laptops/asus/n73jf,ASUS,N73JF,Laptop,,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx
 ASUS,N73JG,model,pending,https://jp.drvhub.net/laptops/asus/n73jg,ASUS,N73JG,Laptop,,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx
 ASUS,N73Jn,model,pending,https://jp.drvhub.net/laptops/asus/n73jn,ASUS,N73Jn,Laptop,,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx
-ASUS,N73JQ,model,pending,https://jp.drvhub.net/laptops/asus/n73jq,ASUS,N73JQ,Laptop,,
+ASUS,N73JQ,model,pending,https://jp.drvhub.net/laptops/asus/n73jq,ASUS,N73JQ,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35213&productflag=1
 ASUS,N73SM,model,pending,https://jp.drvhub.net/laptops/asus/n73sm,ASUS,N73SM,Laptop,,
 ASUS,N73SV,model,pending,https://jp.drvhub.net/laptops/asus/n73sv,ASUS,N73SV,Laptop,,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx
-ASUS,N75SF,model,pending,https://jp.drvhub.net/laptops/asus/n75sf,ASUS,N75SF,Laptop,,
-ASUS,N75SL,model,pending,https://jp.drvhub.net/laptops/asus/n75sl,ASUS,N75SL,Laptop,,
-ASUS,N76VB,model,pending,https://jp.drvhub.net/laptops/asus/n76vb,ASUS,N76VB,Laptop,,
-ASUS,N76VJ,model,pending,https://jp.drvhub.net/laptops/asus/n76vj,ASUS,N76VJ,Laptop,,
-ASUS,N76VM,model,pending,https://jp.drvhub.net/laptops/asus/n76vm,ASUS,N76VM,Laptop,,
-ASUS,N76VZ,model,pending,https://jp.drvhub.net/laptops/asus/n76vz,ASUS,N76VZ,Laptop,,
+ASUS,N75SF,model,pending,https://jp.drvhub.net/laptops/asus/n75sf,ASUS,N75SF,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35213&productflag=1
+ASUS,N75SL,model,pending,https://jp.drvhub.net/laptops/asus/n75sl,ASUS,N75SL,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35213&productflag=1
+ASUS,N76VB,model,pending,https://jp.drvhub.net/laptops/asus/n76vb,ASUS,N76VB,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35213&productflag=1
+ASUS,N76VJ,model,pending,https://jp.drvhub.net/laptops/asus/n76vj,ASUS,N76VJ,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35213&productflag=1
+ASUS,N76VM,model,pending,https://jp.drvhub.net/laptops/asus/n76vm,ASUS,N76VM,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35213&productflag=1
+ASUS,N76VZ,model,pending,https://jp.drvhub.net/laptops/asus/n76vz,ASUS,N76VZ,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35213&productflag=1
 ASUS,N80Vb,model,pending,https://jp.drvhub.net/laptops/asus/n80vb,ASUS,N80Vb,Laptop,,
-ASUS,N80Vm,model,pending,https://jp.drvhub.net/laptops/asus/n80vm,ASUS,N80Vm,Laptop,,
-ASUS,N81Vg,model,pending,https://jp.drvhub.net/laptops/asus/n81vg,ASUS,N81Vg,Laptop,,
-ASUS,N81Vp,model,pending,https://jp.drvhub.net/laptops/asus/n81vp,ASUS,N81Vp,Laptop,,
+ASUS,N80Vm,model,pending,https://jp.drvhub.net/laptops/asus/n80vm,ASUS,N80Vm,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35213&productflag=1
+ASUS,N81Vg,model,pending,https://jp.drvhub.net/laptops/asus/n81vg,ASUS,N81Vg,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35213&productflag=1
+ASUS,N81Vp,model,pending,https://jp.drvhub.net/laptops/asus/n81vp,ASUS,N81Vp,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35213&productflag=1
 ASUS,N82JG,model,pending,https://jp.drvhub.net/laptops/asus/n82jg,ASUS,N82JG,Laptop,,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx
 ASUS,N82JQ,model,pending,https://jp.drvhub.net/laptops/asus/n82jq,ASUS,N82JQ,Laptop,,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx
 ASUS,N82JV,model,pending,https://jp.drvhub.net/laptops/asus/n82jv,ASUS,N82JV,Laptop,,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx
@@ -19419,7 +19419,7 @@ ASUS,EXPERTBOOK P3406CCAP,model,pending,https://jp.drvhub.net/laptops/asus/exper
 ASUS,EXPERTBOOK P3540FA,model,pending,https://jp.drvhub.net/laptops/asus/expertbook-p3540fa,ASUS,P3540FA,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=17
 ASUS,EXPERTBOOK P3605CVA,model,pending,https://jp.drvhub.net/laptops/asus/expertbook-p3605cva,ASUS,P3605CVA,Laptop,,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx
 ASUS,EXPERTBOOK P3606CCAP,model,pending,https://jp.drvhub.net/laptops/asus/expertbook-p3606ccap,ASUS,P3606CCAP,Laptop,,
-ASUS,EXPERTBOOK P5405CAA,model,pending,https://jp.drvhub.net/laptops/asus/expertbook-p5405caa,ASUS,P5405CAA,Laptop,,
+ASUS,EXPERTBOOK P5405CAA,model,pending,https://jp.drvhub.net/laptops/asus/expertbook-p5405caa,ASUS,P5405CAA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=14001&productflag=1
 ASUS,EXPERTBOOK P5405CSA,model,pending,https://jp.drvhub.net/laptops/asus/expertbook-p5405csa,ASUS,P5405CSA,Laptop,,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx
 ASUS,EXPERTBOOK P5405CSA V5405CSA,model,pending,https://jp.drvhub.net/laptops/asus/expertbook-p5405csa-v5405csa,ASUS,P5405CSA,Laptop,,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx
 ASUS,EXPERTBOOK P5440FA,model,pending,https://jp.drvhub.net/laptops/asus/expertbook-p5440fa,ASUS,P5440FA,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240108144316635_ASUS_System_Control_Interface_v1modellist.pdf#page=2
@@ -19427,47 +19427,47 @@ ASUS,TUF A16 TUF607NUQ,model,pending,https://jp.drvhub.net/laptops/asus/tuf-a16-
 ASUS,TUF A16 TUF608UHI,model,pending,https://jp.drvhub.net/laptops/asus/tuf-a16-tuf608uhi,ASUS,TUF608UHI,Laptop,,
 ASUS,U20A,model,pending,https://jp.drvhub.net/laptops/asus/u20a,ASUS,U20A,Laptop,,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx
 ASUS,U24A,model,pending,https://jp.drvhub.net/laptops/asus/u24a,ASUS,U24A,Laptop,,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx
-ASUS,U24E,model,pending,https://jp.drvhub.net/laptops/asus/u24e,ASUS,U24E,Laptop,,
+ASUS,U24E,model,pending,https://jp.drvhub.net/laptops/asus/u24e,ASUS,U24E,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35305&productflag=1
 ASUS,U30Jc,model,pending,https://jp.drvhub.net/laptops/asus/u30jc,ASUS,U30Jc,Laptop,,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx
 ASUS,U30Sd,model,pending,https://jp.drvhub.net/laptops/asus/u30sd,ASUS,U30Sd,Laptop,,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx
 ASUS,U31F,model,pending,https://jp.drvhub.net/laptops/asus/u31f,ASUS,U31F,Laptop,,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx
 ASUS,U31Jg,model,pending,https://jp.drvhub.net/laptops/asus/u31jg,ASUS,U31Jg,Laptop,,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx
-ASUS,U31SD,model,pending,https://jp.drvhub.net/laptops/asus/u31sd,ASUS,U31SD,Laptop,,
-ASUS,U31SG,model,pending,https://jp.drvhub.net/laptops/asus/u31sg,ASUS,U31SG,Laptop,,
-ASUS,U32U,model,pending,https://jp.drvhub.net/laptops/asus/u32u,ASUS,U32U,Laptop,,
-ASUS,U32VJ,model,pending,https://jp.drvhub.net/laptops/asus/u32vj,ASUS,U32VJ,Laptop,,
-ASUS,U32VM,model,pending,https://jp.drvhub.net/laptops/asus/u32vm,ASUS,U32VM,Laptop,,
+ASUS,U31SD,model,pending,https://jp.drvhub.net/laptops/asus/u31sd,ASUS,U31SD,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35305&productflag=1
+ASUS,U31SG,model,pending,https://jp.drvhub.net/laptops/asus/u31sg,ASUS,U31SG,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35305&productflag=1
+ASUS,U32U,model,pending,https://jp.drvhub.net/laptops/asus/u32u,ASUS,U32U,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35305&productflag=1
+ASUS,U32VJ,model,pending,https://jp.drvhub.net/laptops/asus/u32vj,ASUS,U32VJ,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35305&productflag=1
+ASUS,U32VM,model,pending,https://jp.drvhub.net/laptops/asus/u32vm,ASUS,U32VM,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35305&productflag=1
 ASUS,U33Jc,model,pending,https://jp.drvhub.net/laptops/asus/u33jc,ASUS,U33Jc,Laptop,,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx
 ASUS,U35F,model,pending,https://jp.drvhub.net/laptops/asus/u35f,ASUS,U35F,Laptop,,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx
 ASUS,U35JC,model,pending,https://jp.drvhub.net/laptops/asus/u35jc,ASUS,U35JC,Laptop,,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx
 ASUS,U36JC,model,pending,https://jp.drvhub.net/laptops/asus/u36jc,ASUS,U36JC,Laptop,,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx
-ASUS,U36SD,model,pending,https://jp.drvhub.net/laptops/asus/u36sd,ASUS,U36SD,Laptop,,
-ASUS,U36SG,model,pending,https://jp.drvhub.net/laptops/asus/u36sg,ASUS,U36SG,Laptop,,
-ASUS,U37VC,model,pending,https://jp.drvhub.net/laptops/asus/u37vc,ASUS,U37VC,Laptop,,
-ASUS,U38DT,model,pending,https://jp.drvhub.net/laptops/asus/u38dt,ASUS,U38DT,Laptop,,
+ASUS,U36SD,model,pending,https://jp.drvhub.net/laptops/asus/u36sd,ASUS,U36SD,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35305&productflag=1
+ASUS,U36SG,model,pending,https://jp.drvhub.net/laptops/asus/u36sg,ASUS,U36SG,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35305&productflag=1
+ASUS,U37VC,model,pending,https://jp.drvhub.net/laptops/asus/u37vc,ASUS,U37VC,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35305&productflag=1
+ASUS,U38DT,model,pending,https://jp.drvhub.net/laptops/asus/u38dt,ASUS,U38DT,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35305&productflag=1
 ASUS,U38N,model,pending,https://jp.drvhub.net/laptops/asus/u38n,ASUS,U38N,Laptop,,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx
-ASUS,U40Sd,model,pending,https://jp.drvhub.net/laptops/asus/u40sd,ASUS,U40Sd,Laptop,,
+ASUS,U40Sd,model,pending,https://jp.drvhub.net/laptops/asus/u40sd,ASUS,U40Sd,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35305&productflag=1
 ASUS,U41JF,model,pending,https://jp.drvhub.net/laptops/asus/u41jf,ASUS,U41JF,Laptop,,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx
-ASUS,U41SV,model,pending,https://jp.drvhub.net/laptops/asus/u41sv,ASUS,U41SV,Laptop,,
+ASUS,U41SV,model,pending,https://jp.drvhub.net/laptops/asus/u41sv,ASUS,U41SV,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35305&productflag=1
 ASUS,U43F,model,pending,https://jp.drvhub.net/laptops/asus/u43f,ASUS,U43F,Laptop,,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx
-ASUS,U43SD,model,pending,https://jp.drvhub.net/laptops/asus/u43sd,ASUS,U43SD,Laptop,,
-ASUS,U44SG,model,pending,https://jp.drvhub.net/laptops/asus/u44sg,ASUS,U44SG,Laptop,,
+ASUS,U43SD,model,pending,https://jp.drvhub.net/laptops/asus/u43sd,ASUS,U43SD,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35305&productflag=1
+ASUS,U44SG,model,pending,https://jp.drvhub.net/laptops/asus/u44sg,ASUS,U44SG,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35305&productflag=1
 ASUS,U45JC,model,pending,https://jp.drvhub.net/laptops/asus/u45jc,ASUS,U45JC,Laptop,,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx
-ASUS,U46E,model,pending,https://jp.drvhub.net/laptops/asus/u46e,ASUS,U46E,Laptop,,
-ASUS,U46SM,model,pending,https://jp.drvhub.net/laptops/asus/u46sm,ASUS,U46SM,Laptop,,
-ASUS,U46SV,model,pending,https://jp.drvhub.net/laptops/asus/u46sv,ASUS,U46SV,Laptop,,
-ASUS,U47A,model,pending,https://jp.drvhub.net/laptops/asus/u47a,ASUS,U47A,Laptop,,
-ASUS,U47VC,model,pending,https://jp.drvhub.net/laptops/asus/u47vc,ASUS,U47VC,Laptop,,
+ASUS,U46E,model,pending,https://jp.drvhub.net/laptops/asus/u46e,ASUS,U46E,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35305&productflag=1
+ASUS,U46SM,model,pending,https://jp.drvhub.net/laptops/asus/u46sm,ASUS,U46SM,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35305&productflag=1
+ASUS,U46SV,model,pending,https://jp.drvhub.net/laptops/asus/u46sv,ASUS,U46SV,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35305&productflag=1
+ASUS,U47A,model,pending,https://jp.drvhub.net/laptops/asus/u47a,ASUS,U47A,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35305&productflag=1
+ASUS,U47VC,model,pending,https://jp.drvhub.net/laptops/asus/u47vc,ASUS,U47VC,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35305&productflag=1
 ASUS,U50A,model,pending,https://jp.drvhub.net/laptops/asus/u50a,ASUS,U50A,Laptop,,
 ASUS,U50F,model,pending,https://jp.drvhub.net/laptops/asus/u50f,ASUS,U50F,Laptop,,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx
 ASUS,U50Vg,model,pending,https://jp.drvhub.net/laptops/asus/u50vg,ASUS,U50Vg,Laptop,,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx
 ASUS,U52F,model,pending,https://jp.drvhub.net/laptops/asus/u52f,ASUS,U52F,Laptop,,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx
 ASUS,U53Jc,model,pending,https://jp.drvhub.net/laptops/asus/u53jc,ASUS,U53Jc,Laptop,,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx
-ASUS,U53SD,model,pending,https://jp.drvhub.net/laptops/asus/u53sd,ASUS,U53SD,Laptop,,
-ASUS,U56E,model,pending,https://jp.drvhub.net/laptops/asus/u56e,ASUS,U56E,Laptop,,
+ASUS,U53SD,model,pending,https://jp.drvhub.net/laptops/asus/u53sd,ASUS,U53SD,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35305&productflag=1
+ASUS,U56E,model,pending,https://jp.drvhub.net/laptops/asus/u56e,ASUS,U56E,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35305&productflag=1
 ASUS,U80A,model,pending,https://jp.drvhub.net/laptops/asus/u80a,ASUS,U80A,Laptop,,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx
 ASUS,U80V,model,pending,https://jp.drvhub.net/laptops/asus/u80v,ASUS,U80V,Laptop,,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx
-ASUS,U82U,model,pending,https://jp.drvhub.net/laptops/asus/u82u,ASUS,U82U,Laptop,,
+ASUS,U82U,model,pending,https://jp.drvhub.net/laptops/asus/u82u,ASUS,U82U,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35305&productflag=1
 ASUS,UL20A,model,pending,https://jp.drvhub.net/laptops/asus/ul20a,ASUS,UL20A,Laptop,,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx
 ASUS,UL20FT,model,pending,https://jp.drvhub.net/laptops/asus/ul20ft,ASUS,UL20FT,Laptop,,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx
 ASUS,UL30A,model,pending,https://jp.drvhub.net/laptops/asus/ul30a,ASUS,UL30A,Laptop,,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx
@@ -19479,7 +19479,7 @@ ASUS,UL50Vg,model,pending,https://jp.drvhub.net/laptops/asus/ul50vg,ASUS,UL50Vg,
 ASUS,UL50VT,model,pending,https://jp.drvhub.net/laptops/asus/ul50vt,ASUS,UL50VT,Laptop,,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx
 ASUS,UL80AG,model,pending,https://jp.drvhub.net/laptops/asus/ul80ag,ASUS,UL80AG,Laptop,,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx
 ASUS,UL80Jt,model,pending,https://jp.drvhub.net/laptops/asus/ul80jt,ASUS,UL80Jt,Laptop,,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx
-ASUS,UL80V,model,pending,https://jp.drvhub.net/laptops/asus/ul80v,ASUS,UL80V,Laptop,,
+ASUS,UL80V,model,pending,https://jp.drvhub.net/laptops/asus/ul80v,ASUS,UL80V,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35305&productflag=1
 ASUS,UL80VT,model,pending,https://jp.drvhub.net/laptops/asus/ul80vt,ASUS,UL80VT,Laptop,,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx
 ASUS,UX21A,model,pending,https://jp.drvhub.net/laptops/asus/ux21a,ASUS,UX21A,Laptop,,
 ASUS,UX21E,model,pending,https://jp.drvhub.net/laptops/asus/ux21e,ASUS,UX21E,Laptop,,
@@ -19521,7 +19521,7 @@ ASUS,UX330UAK,model,pending,https://jp.drvhub.net/laptops/asus/ux330uak,ASUS,UX3
 ASUS,UX330UAR,model,pending,https://jp.drvhub.net/laptops/asus/ux330uar,ASUS,UX330UAR,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/UX330/UX330UAR
 ASUS,UX331UA,model,pending,https://jp.drvhub.net/laptops/asus/ux331ua,ASUS,UX331UA,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/UX331/UX331UA
 ASUS,UX331UN,model,pending,https://jp.drvhub.net/laptops/asus/ux331un,ASUS,UX331UN,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/UX331/UX331UN
-ASUS,UX360CA,model,pending,https://jp.drvhub.net/laptops/asus/ux360ca,ASUS,UX360CA,Laptop,,
+ASUS,UX360CA,model,pending,https://jp.drvhub.net/laptops/asus/ux360ca,ASUS,UX360CA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=27762&productflag=1
 ASUS,UX360CAK,model,pending,https://jp.drvhub.net/laptops/asus/ux360cak,ASUS,UX360CAK,Laptop,,
 ASUS,UX360UA,model,pending,https://jp.drvhub.net/laptops/asus/ux360ua,ASUS,UX360UA,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/UX360/UX360UA
 ASUS,UX360UAK,model,pending,https://jp.drvhub.net/laptops/asus/ux360uak,ASUS,UX360UAK,Laptop,,
@@ -19538,16 +19538,16 @@ ASUS,UX430UN,model,pending,https://jp.drvhub.net/laptops/asus/ux430un,ASUS,UX430
 ASUS,UX430UNR,model,pending,https://jp.drvhub.net/laptops/asus/ux430unr,ASUS,UX430UNR,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/UX430/UX430UNR
 ASUS,UX430UQ,model,pending,https://jp.drvhub.net/laptops/asus/ux430uq,ASUS,UX430UQ,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/UX430/UX430UQ
 ASUS,UX431DA,model,pending,https://jp.drvhub.net/laptops/asus/ux431da,ASUS,UX431DA,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=19
-ASUS,UX461UA,model,pending,https://jp.drvhub.net/laptops/asus/ux461ua,ASUS,UX461UA,Laptop,,
-ASUS,UX461UN,model,pending,https://jp.drvhub.net/laptops/asus/ux461un,ASUS,UX461UN,Laptop,,
+ASUS,UX461UA,model,pending,https://jp.drvhub.net/laptops/asus/ux461ua,ASUS,UX461UA,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35305&productflag=1
+ASUS,UX461UN,model,pending,https://jp.drvhub.net/laptops/asus/ux461un,ASUS,UX461UN,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35305&productflag=1
 ASUS,UX490UA,model,pending,https://jp.drvhub.net/laptops/asus/ux490ua,ASUS,UX490UA,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/UX490/UX490UA
 ASUS,UX490UAR,model,pending,https://jp.drvhub.net/laptops/asus/ux490uar,ASUS,UX490UAR,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/UX490/UX490UAR
 ASUS,UX50V,model,pending,https://jp.drvhub.net/laptops/asus/ux50v,ASUS,UX50V,Laptop,,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx
-ASUS,UX510UW,model,pending,https://jp.drvhub.net/laptops/asus/ux510uw,ASUS,UX510UW,Laptop,,
+ASUS,UX510UW,model,pending,https://jp.drvhub.net/laptops/asus/ux510uw,ASUS,UX510UW,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35305&productflag=1
 ASUS,UX510UWK,model,pending,https://jp.drvhub.net/laptops/asus/ux510uwk,ASUS,UX510UWK,Laptop,,
-ASUS,UX510UX,model,pending,https://jp.drvhub.net/laptops/asus/ux510ux,ASUS,UX510UX,Laptop,,
+ASUS,UX510UX,model,pending,https://jp.drvhub.net/laptops/asus/ux510ux,ASUS,UX510UX,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35305&productflag=1
 ASUS,UX510UXK,model,pending,https://jp.drvhub.net/laptops/asus/ux510uxk,ASUS,UX510UXK,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/UX510/UX510UXK
-ASUS,UX51VZ,model,pending,https://jp.drvhub.net/laptops/asus/ux51vz,ASUS,UX51VZ,Laptop,,
+ASUS,UX51VZ,model,pending,https://jp.drvhub.net/laptops/asus/ux51vz,ASUS,UX51VZ,Laptop,,https://www.asus.com/support/api/product.asmx/GetPDLevel?website=us&type=2&typeid=35305&productflag=1
 ASUS,UX51VZA,model,pending,https://jp.drvhub.net/laptops/asus/ux51vza,ASUS,UX51VZA,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/UX51/UX51VZA
 ASUS,UX52VS,model,pending,https://jp.drvhub.net/laptops/asus/ux52vs,ASUS,UX52VS,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/UX52/UX52VS
 ASUS,UX530UQ,model,pending,https://jp.drvhub.net/laptops/asus/ux530uq,ASUS,UX530UQ,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/UX530/UX530UQ
@@ -22150,10 +22150,10 @@ Shuttle,DS437T,model,pending,https://jp.drvhub.net/laptops/shuttle/ds437t,Shuttl
 Shuttle,DS57U,model,pending,https://jp.drvhub.net/laptops/shuttle/ds57u,Shuttle,DS57U,Other,MiniPc,https://faq.shuttle.eu/faq%3Asoftware%3Awindows?s%5B%5D=2025
 Shuttle,DS67U,model,pending,https://jp.drvhub.net/laptops/shuttle/ds67u,Shuttle,DS67U,Other,MiniPc,https://faq.shuttle.eu/faq%3Asoftware%3Awindows?s%5B%5D=2025
 Shuttle,NC02U,model,pending,https://jp.drvhub.net/laptops/shuttle/nc02u,Shuttle,NC02U,Other,MiniPc,https://faq.shuttle.eu/faq%3Asoftware%3Awindows?s%5B%5D=2025
-ZOTAC,ZBOX-ID18,model,pending,https://jp.drvhub.net/laptops/zotac/zbox-id18,ZOTAC,ZBOX-ID18,Other,MiniPc,
-ZOTAC,ZBOXNANO-AQ01,model,pending,https://jp.drvhub.net/laptops/zotac/zboxnano-aq01,ZOTAC,ZBOXNANO-AQ01,Other,MiniPc,
-ZOTAC,ZBOXNANO-AQ02,model,pending,https://jp.drvhub.net/laptops/zotac/zboxnano-aq02,ZOTAC,ZBOXNANO-AQ02,Other,MiniPc,
-ECS,B75H2-M2,model,pending,https://jp.drvhub.net/laptops/ecs/b75h2-m2,ECS,B75H2-M2,DiyDesktop,,
+ZOTAC,ZBOX-ID18,model,pending,https://jp.drvhub.net/laptops/zotac/zbox-id18,ZOTAC,ZBOX-ID18,Other,MiniPc,https://www.zotac.com/old_zotac/fileadmin/Redakteure/Products/Pdf/master_zbox-id18_v1.pdf
+ZOTAC,ZBOXNANO-AQ01,model,pending,https://jp.drvhub.net/laptops/zotac/zboxnano-aq01,ZOTAC,ZBOXNANO-AQ01,Other,MiniPc,https://www.zotac.com/id/files/download/mini_pcs?page=401
+ZOTAC,ZBOXNANO-AQ02,model,pending,https://jp.drvhub.net/laptops/zotac/zboxnano-aq02,ZOTAC,ZBOXNANO-AQ02,Other,MiniPc,https://www.zotac.com/id/files/download/mini_pcs?page=401
+ECS,B75H2-M2,model,pending,https://jp.drvhub.net/laptops/ecs/b75h2-m2,ECS,B75H2-M2,DiyDesktop,,https://campaign.ecs.com.tw/ECSWebSite/Product/Product_SPEC/EN/Motherboard/B75H2-M2%20-LL-V1-DO-0-RR-/Socket%201155-LL-Intel-RR-
 ECS,B75H2-M4,model,pending,https://jp.drvhub.net/laptops/ecs/b75h2-m4,ECS,B75H2-M4,DiyDesktop,,
 Allied Telesis,AT-2450F (ACPI) PCI 10Mb Fiber Ethernet Adapter,model,pending,https://jp.drvhub.net/devices/network/allied-telesis/at-2450f-acpi-pci-10mb-fiber-ethernet-adapter-1,Allied Telesis,AT-2450F,Other,NetworkAdapter,
 Allied Telesis,AT-2450F PCI 10Mb Fiber Ethernet Adapter,model,pending,https://jp.drvhub.net/devices/network/allied-telesis/at-2450f-pci-10mb-fiber-ethernet-adapter,Allied Telesis,AT-2450F,Other,NetworkAdapter,
