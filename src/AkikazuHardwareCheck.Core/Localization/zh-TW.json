@@ -350,6 +350,7 @@
   "rescue.catalogNoResults": "找不到相符型號",
   "rescue.catalogResults": "找到 {0} 筆記錄",
   "rescue.catalogApproximateResults": "找到 {0} 個相近型號，請核對完整型號及修訂",
+  "rescue.catalogManualRevision": "請查看網卡標籤上的 H/W Ver.，再手動選擇對應版本。",
   "rescue.catalogPending": "待核對",
   "rescue.catalogIndexed": "已收錄原廠套件",
   "rescue.catalogListed": "廠商已列出 WLAN 驅動程式",

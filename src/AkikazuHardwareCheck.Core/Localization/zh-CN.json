@@ -350,6 +350,7 @@
   "rescue.catalogNoResults": "未找到匹配型号",
   "rescue.catalogResults": "找到 {0} 条记录",
   "rescue.catalogApproximateResults": "找到 {0} 个相近型号，请核对完整型号及修订",
+  "rescue.catalogManualRevision": "请查看网卡标签上的 H/W Ver.，再手动选择对应修订。",
   "rescue.catalogPending": "待核对",
   "rescue.catalogIndexed": "已收录原厂包",
   "rescue.catalogListed": "厂商已列出 WLAN 驱动",

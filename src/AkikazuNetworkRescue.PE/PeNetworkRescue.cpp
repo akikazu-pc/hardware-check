@@ -1,6 +1,8 @@
 #define WIN32_LEAN_AND_MEAN
 #define NOMINMAX
 #define USE_SP_ALTPLATFORM_INFO_V3 1
+#include <cwctype>
+#include <map>
 #include <windows.h>
 #include <setupapi.h>
 #include <cfgmgr32.h>
@@ -176,7 +178,7 @@ static std::wstring InfField(INFCONTEXT& context, DWORD index)
 }
 
 static std::wstring MatchNetworkInf(const fs::path& path, DWORD build, const std::vector<std::wstring>& ids,
-    std::wstring& name)
+    std::wstring& name, std::vector<std::wstring>& matchedIds)
 {
     const auto inf = SetupOpenInfFileW(path.c_str(), nullptr, INF_STYLE_WIN4, nullptr);
     if (inf == INVALID_HANDLE_VALUE) {
@@ -206,13 +208,16 @@ static std::wstring MatchNetworkInf(const fs::path& path, DWORD build, const std
                 const auto model = InfField(line, 2);
                 for (const auto& id : ids) {
                     if (_wcsicmp(model.c_str(), id.c_str()) == 0) {
-                        matched = id;
-                        name = InfField(line, 0);
+                        matchedIds.push_back(id);
+                        if (matched.empty()) {
+                            matched = id;
+                            name = InfField(line, 0);
+                        }
                         break;
                     }
                 }
-            } while (matched.empty() && SetupFindNextLine(&line, &line));
-        } while (matched.empty() && SetupFindNextLine(&manufacturer, &manufacturer));
+            } while (SetupFindNextLine(&line, &line));
+        } while (SetupFindNextLine(&manufacturer, &manufacturer));
     }
     SetupCloseInfFile(inf);
     return matched;
@@ -275,7 +280,25 @@ struct DriverMatch {
     fs::path path;
     std::wstring id;
     std::wstring name;
+    std::vector<std::wstring> matchedIds;
 };
+
+static bool CanInstallAll(const std::vector<DriverMatch>& matches)
+{
+    if (matches.size() < 2) return false;
+    std::map<std::wstring, size_t> owners;
+    for (size_t index = 0; index < matches.size(); ++index) {
+        for (auto id : matches[index].matchedIds) {
+            // Ignore revision, subsystem and interface suffixes when checking for overlap.
+            const size_t suffix = id.find(L'&', id.find(L'&') + 1);
+            id.resize(suffix == std::wstring::npos ? id.size() : suffix);
+            for (auto& character : id) character = static_cast<wchar_t>(towupper(character));
+            const auto entry = owners.emplace(id, index);
+            if (!entry.second && entry.first->second != index) return false;
+        }
+    }
+    return true;
+}
 
 static std::vector<DriverMatch> ScanDrivers(const fs::path& bundle, DWORD build, bool missingOnly = false)
 {
@@ -295,9 +318,10 @@ static std::vector<DriverMatch> ScanDrivers(const fs::path& bundle, DWORD build,
                 continue;
             }
             std::wstring name;
-            auto id = MatchNetworkInf(it->path(), build, ids, name);
+            std::vector<std::wstring> matchedIds;
+            auto id = MatchNetworkInf(it->path(), build, ids, name, matchedIds);
             if (!id.empty() && VerifyNetworkDriver(it->path())) {
-                candidates.push_back({ it->path(), std::move(id), std::move(name) });
+                candidates.push_back({ it->path(), std::move(id), std::move(name), std::move(matchedIds) });
             }
         }
     }

@@ -4,6 +4,27 @@ namespace AkikazuHardwareCheck.Core.Tests;
 
 public sealed class RescueModelCatalogTests
 {
+    [Fact]
+    public void FindsCasperN200UnderBothDocumentedCategories()
+    {
+        foreach (var category in new[] { RescueDeviceTag.BrandedDesktop, RescueDeviceTag.WindowsTablet })
+        {
+            var result = Assert.Single(RescueModelCatalog.Search("Casper Nirvana N200", RescueDeviceCategory.Other, category));
+            Assert.Equal(category, result.DeviceTag);
+        }
+    }
+
+    [Theory]
+    [InlineData("C1")]
+    [InlineData("D1")]
+    public void DLinkRevisionRequiresManualSelection(string revision)
+    {
+        var result = Assert.Single(RescueModelCatalog.Search($"DWA-182 rev {revision}", RescueDeviceCategory.Other,
+            RescueDeviceTag.NetworkAdapter), row => row.Model == $"DWA-182 rev {revision}");
+        Assert.True(result.RequiresRevisionSelection);
+        Assert.Null(result.DriverPage);
+    }
+
     [Theory]
     [InlineData("NEC", "PC-VKT13HZG4", "nec/pc-vkt13hzg4")]
     [InlineData("Panasonic", "CF-191AYSXBM", "panasonic/cf-191aysxbm")]

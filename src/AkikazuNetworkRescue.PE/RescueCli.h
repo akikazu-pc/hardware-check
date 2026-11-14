@@ -170,7 +170,7 @@ static int RunCli(const fs::path& bundle, bool isPe, int language)
         for (const auto& match : matches) {
             labels.push_back(match.name + L"  " + match.path.filename().wstring() + L" [" + match.id + L"]");
         }
-        const bool installAll = (isPe || deployment || setup) && matches.size() > 1;
+        const bool installAll = (isPe || deployment || setup) && CanInstallAll(matches);
         if (installAll) {
             labels.push_back(std::wstring(text.installAll) + L" (" + std::to_wstring(matches.size()) + L")");
         }

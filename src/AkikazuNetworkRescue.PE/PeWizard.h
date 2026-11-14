@@ -573,7 +573,7 @@ static int RunPeAction(const fs::path& bundle, const PeText& text, bool setup)
             labels.push_back(match.name + L"  " + match.path.filename().wstring() + L"  [" + match.id + L"]");
         }
         // Multiple missing NICs can need different INFs; offer one action that installs all of them.
-        const bool installAllOffered = matches.size() > 1;
+        const bool installAllOffered = CanInstallAll(matches);
         if (installAllOffered) {
             labels.push_back(std::wstring(text.installAll) + L" (" + std::to_wstring(matches.size()) + L")");
         }

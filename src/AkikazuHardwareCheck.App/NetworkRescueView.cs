@@ -533,6 +533,7 @@ internal sealed class NetworkRescueView : UserControl
         {
             $"{entry.Brand}  {entry.Model}",
             entry.IsSeries ? _t["rescue.catalogSeries"] : "",
+            entry.RequiresRevisionSelection ? _t["rescue.catalogManualRevision"] : "",
             entry.Platform,
             entry.Type is "laptop" or "laptop-os-record" ? entry.Windows : "",
             $"{_t[entry.DeviceTag == RescueDeviceTag.NetworkAdapter ? "rescue.adapter" : "rescue.wifiModel"]}  {(entry.Module.Length == 0 || entry.Module == "pending" ? _t["rescue.catalogPending"] : entry.Module)}",

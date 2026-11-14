@@ -96,11 +96,7 @@ def model_key(brand, model):
     )
 
 
-def driverhub_rows(existing):
-    occupied = {model_key(row[1], label) for row in existing
-                for label in (row[2], *row[13].split("|")) if label}
-    with (ROOT / "docs/network-rescue-model-gaps.csv").open(encoding="utf-8-sig", newline="") as stream:
-        occupied.update(model_key(row["brand"], row["model"]) for row in csv.DictReader(stream))
+def driverhub_rows():
     groups = defaultdict(list)
     model_groups = defaultdict(set)
     with (ROOT / "docs/network-rescue-driverhub-model-candidates.csv").open(
@@ -109,16 +105,12 @@ def driverhub_rows(existing):
         for entry in csv.DictReader(stream):
             if entry["granularity"] in {"model", "manual-revision"}:
                 key = model_key(entry["catalogBrand"], entry["comparisonModel"])
-                groups[key].append(entry)
+                groups[key, entry["category"], entry["tag"]].append(entry)
                 model_groups[model_key(entry["catalogBrand"], entry["model"])].add(key)
-    for key, entries in groups.items():
+    for entries in groups.values():
         brand = entries[0]["catalogBrand"]
         aliases = dict.fromkeys(entry[field] for entry in entries for field in ("model", "comparisonModel")
                                 if field == "comparisonModel" or len(model_groups[model_key(brand, entry[field])]) == 1)
-        keys = {model_key(brand, label) for label in aliases}
-        if key in occupied or not keys.isdisjoint(occupied):
-            continue
-        occupied.update(keys)
         entry = next((row for row in entries if row["brand"].casefold() == brand.casefold()), entries[0])
         model = entry["model"] if entry["model"] in aliases else entry["comparisonModel"]
         if entry["granularity"] == "manual-revision":
@@ -162,7 +154,7 @@ def main():
     for source, brand, category, tag in OEM_SOURCES:
         root = devices if category == "Other" else args.state
         rows.extend(oem_rows(root, source, brand, category, tag, indexed))
-    rows.extend(driverhub_rows(rows))
+    rows.extend(driverhub_rows())
 
     with (ROOT / "docs/network-rescue-model-gaps.csv").open(encoding="utf-8-sig", newline="") as stream:
         header = next(csv.reader(stream))

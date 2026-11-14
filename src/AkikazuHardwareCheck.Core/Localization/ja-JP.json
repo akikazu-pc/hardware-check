@@ -350,6 +350,7 @@
   "rescue.catalogNoResults": "一致する型番がありません",
   "rescue.catalogResults": "{0} 件",
   "rescue.catalogApproximateResults": "近い型番が {0} 件あります。型番とリビジョンをご確認ください",
+  "rescue.catalogManualRevision": "アダプターのラベルにある H/W Ver. を確認し、該当するリビジョンを選択してください。",
   "rescue.catalogPending": "確認待ち",
   "rescue.catalogIndexed": "メーカーのパッケージを収録済み",
   "rescue.catalogListed": "メーカーが WLAN ドライバーを掲載",
