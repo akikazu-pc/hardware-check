@@ -11,6 +11,8 @@ public sealed class RescueModelCatalogTests
         {
             var result = Assert.Single(RescueModelCatalog.Search("Casper Nirvana N200", RescueDeviceCategory.Other, category));
             Assert.Equal(category, result.DeviceTag);
+            Assert.Equal(category == RescueDeviceTag.BrandedDesktop ? "www.casper.com.tr" : "file.casper.com.tr",
+                result.ModelEvidence?.Host);
         }
     }
 
@@ -22,6 +24,7 @@ public sealed class RescueModelCatalogTests
         var result = Assert.Single(RescueModelCatalog.Search($"DWA-182 rev {revision}", RescueDeviceCategory.Other,
             RescueDeviceTag.NetworkAdapter), row => row.Model == $"DWA-182 rev {revision}");
         Assert.True(result.RequiresRevisionSelection);
+        Assert.Equal(revision == "C1" ? "legacyfiles.us.dlink.com" : "support.dlink.com", result.ModelEvidence?.Host);
         Assert.Null(result.DriverPage);
     }
 

@@ -121,7 +121,8 @@ def driverhub_rows():
                else "exact-network-id-and-install")
         yield (kind, brand, model, "", "", "third-party-model-candidate", "",
                gap, entry["source"], entry["status"], entry["status"],
-               category, entry["tag"], "|".join(label for label in aliases if label != model and "|" not in label), "")
+               category, entry["tag"], "|".join(label for label in aliases if label != model and "|" not in label), "",
+               entry["manufacturerEvidence"])
 
 
 def main():
@@ -160,8 +161,9 @@ def main():
         header = next(csv.reader(stream))
     with args.output.open("w", encoding="utf-8", newline="") as stream:
         writer = csv.writer(stream, lineterminator="\n")
-        writer.writerow([*header, "aliases", "driverPage"])
-        writer.writerows(sorted(rows, key=lambda row: (row[11], row[1].casefold(), row[2].casefold(), row[8], row[13])))
+        writer.writerow([*header, "aliases", "driverPage", "manufacturerEvidence"])
+        writer.writerows(row if len(row) == 15 or row[15] else row[:15]
+                         for row in sorted(rows, key=lambda row: (row[11], row[1].casefold(), row[2].casefold(), row[8], row[13])))
     print(dict(Counter(row[11] for row in rows)))
 
 

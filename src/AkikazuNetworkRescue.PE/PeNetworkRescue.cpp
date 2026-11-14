@@ -205,15 +205,17 @@ static std::wstring MatchNetworkInf(const fs::path& path, DWORD build, const std
                 continue;
             }
             do {
-                const auto model = InfField(line, 2);
-                for (const auto& id : ids) {
-                    if (_wcsicmp(model.c_str(), id.c_str()) == 0) {
-                        matchedIds.push_back(id);
-                        if (matched.empty()) {
-                            matched = id;
-                            name = InfField(line, 0);
-                        }
-                        break;
+                const auto fieldCount = SetupGetFieldCount(&line);
+                for (DWORD field = 2; field <= fieldCount; ++field) {
+                    const auto model = InfField(line, field);
+                    const auto id = std::find_if(ids.begin(), ids.end(), [&](const auto& value) {
+                        return _wcsicmp(model.c_str(), value.c_str()) == 0;
+                    });
+                    if (id == ids.end()) continue;
+                    matchedIds.push_back(*id);
+                    if (matched.empty()) {
+                        matched = *id;
+                        name = InfField(line, 0);
                     }
                 }
             } while (SetupFindNextLine(&line, &line));

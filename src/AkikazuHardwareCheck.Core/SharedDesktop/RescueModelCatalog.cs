@@ -13,7 +13,8 @@ public enum RescueDeviceTag
 
 public sealed record RescueCatalogModel(string Type, string Brand, string Model, string Platform, string Windows,
     string Module, string Windows10Evidence, string Windows11Evidence, Uri? Source, Uri? DriverPage, bool IsSeries,
-    RescueDeviceCategory Category, RescueDeviceTag? DeviceTag, bool RequiresRevisionSelection = false);
+    RescueDeviceCategory Category, RescueDeviceTag? DeviceTag, bool RequiresRevisionSelection = false,
+    Uri? ModelEvidence = null);
 
 public static class RescueModelCatalog
 {
@@ -234,6 +235,7 @@ public static class RescueModelCatalog
         var tagColumn = Array.IndexOf(header, "deviceTag");
         var aliasesColumn = Array.IndexOf(header, "aliases");
         var driverPageColumn = Array.IndexOf(header, "driverPage");
+        var evidenceColumn = Array.IndexOf(header, "manufacturerEvidence");
         while (csv.ReadFields() is { Length: >= 11 } row)
         {
             var source = Https(row[8]);
@@ -254,7 +256,7 @@ public static class RescueModelCatalog
                 : null;
             var model = new RescueCatalogModel(row[0], row[1], row[2], row[3], row[4], row[6],
                 row[9], row[10], source, driverPage, row[5] is "product-series" or "oem-series-catalog", category, tag,
-                row[7] == "manual-revision-selection");
+                row[7] == "manual-revision-selection", Https(ReadColumn(row, evidenceColumn)));
             var aliases = ReadColumn(row, aliasesColumn)?.Split('|',
                 StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries) ?? [];
             yield return new CatalogRow(model, aliases);

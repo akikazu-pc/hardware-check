@@ -53,6 +53,7 @@ internal sealed class NetworkRescueView : UserControl
     private readonly ListView _catalogResults = ListViewTable.Create();
     private readonly TextBox _catalogDetails = new() { Dock = DockStyle.Fill, Multiline = true, ReadOnly = true, ScrollBars = ScrollBars.Vertical };
     private readonly LinkLabel _catalogDriverPage = new() { AutoSize = true };
+    private readonly LinkLabel _catalogModelEvidence = new() { AutoSize = true };
     private readonly LinkLabel _catalogSource = new() { AutoSize = true };
     private NetworkDeviceDiagnostic? _diagnostic;
     private string? _scanStatusKey;
@@ -107,6 +108,7 @@ internal sealed class NetworkRescueView : UserControl
         _catalogTag.SelectedIndexChanged += (_, _) => SearchCatalog();
         _catalogResults.SelectedIndexChanged += (_, _) => ShowCatalogDetails();
         _catalogDriverPage.LinkClicked += (_, _) => OpenCatalogPage(driverPage: true);
+        _catalogModelEvidence.LinkClicked += (_, _) => OpenPage(SelectedCatalogEntry?.ModelEvidence?.AbsoluteUri);
         _catalogSource.LinkClicked += (_, _) => OpenCatalogPage(driverPage: false);
         _adapterLink.LinkClicked += async (_, _) =>
         {
@@ -218,6 +220,7 @@ internal sealed class NetworkRescueView : UserControl
         _catalogCategory.AccessibleName = t["rescue.catalogAllDevices"];
         _catalogTag.AccessibleName = t["rescue.catalogAllTags"];
         _catalogDriverPage.Text = t["rescue.officialDrivers"];
+
         _catalogSource.Text = t["rescue.catalogSource"];
         _catalogResults.Columns[0].Text = t["rescue.catalogBrand"];
         _catalogResults.Columns[1].Text = t["rescue.catalogModel"];
@@ -528,6 +531,9 @@ internal sealed class NetworkRescueView : UserControl
     {
         var entry = SelectedCatalogEntry;
         _catalogDriverPage.Visible = entry?.DriverPage is not null;
+        _catalogModelEvidence.Text = _t[entry?.RequiresRevisionSelection == true
+            ? "rescue.catalogRevisionSupport" : "rescue.catalogModelEvidence"];
+        _catalogModelEvidence.Visible = entry?.ModelEvidence is not null && entry.ModelEvidence != entry.Source;
         _catalogSource.Visible = entry?.Source is not null && entry.Source != entry.DriverPage;
         _catalogDetails.Text = entry is null ? "" : string.Join(Environment.NewLine, new[]
         {
@@ -1292,6 +1298,7 @@ internal sealed class NetworkRescueView : UserControl
         var links = new FlowLayoutPanel { Dock = DockStyle.Fill, AutoSize = true };
         links.Controls.Add(_catalogDriverPage);
         links.Controls.Add(_catalogSource);
+        links.Controls.Add(_catalogModelEvidence);
         var search = new TableLayoutPanel { Dock = DockStyle.Top, AutoSize = true, ColumnCount = 1, RowCount = 2 };
         var filters = new FlowLayoutPanel { Dock = DockStyle.Top, AutoSize = true };
         filters.Controls.Add(_catalogCategory);

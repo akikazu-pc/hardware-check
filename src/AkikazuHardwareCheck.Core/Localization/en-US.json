@@ -350,6 +350,8 @@
   "rescue.catalogNoResults": "No matching models",
   "rescue.catalogResults": "{0} results",
   "rescue.catalogApproximateResults": "Found {0} similar models. Check the full model and revision.",
+  "rescue.catalogRevisionSupport": "Official revision information",
+  "rescue.catalogModelEvidence": "Model evidence",
   "rescue.catalogManualRevision": "Check H/W Ver. on the adapter label and select the matching revision.",
   "rescue.catalogPending": "Pending verification",
   "rescue.catalogIndexed": "OEM package indexed",
