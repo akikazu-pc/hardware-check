@@ -1,13 +1,11 @@
 using AkikazuHardwareCheck.Core.Configuration;
-using AkikazuHardwareCheck.Core.SharedDesktop;
 using Microsoft.Win32;
 
 namespace AkikazuHardwareCheck.App;
 
 /// <summary>
 /// Current-user auto-start. It never needs administrator rights and never touches machine-wide entries. The value
-/// points at the primary installed module's host, not at whichever version happened to be running; the installer
-/// rewrites it again on install, upgrade and uninstall.
+/// points at the running Hardware Check executable.
 /// </summary>
 internal static class StartupRegistration
 {
@@ -36,7 +34,7 @@ internal static class StartupRegistration
             return;
         }
 
-        if ((PrimaryInstalledHostPath() ?? Environment.ProcessPath) is not { } path)
+        if (Environment.ProcessPath is not { } path)
         {
             return;
         }
@@ -45,23 +43,4 @@ internal static class StartupRegistration
         key.SetValue(VALUE_NAME, $"\"{path}\" {TRAY_ARGUMENT}", RegistryValueKind.String);
     }
 
-    private static string? PrimaryInstalledHostPath()
-    {
-        // A portable copy must keep pointing at itself; only a process that is itself a registered shared host
-        // should be redirected to the primary installed module.
-        if (Environment.ProcessPath is not { } processPath)
-        {
-            return null;
-        }
-
-        var modules = SharedModuleDiscovery.ReadCurrentUser();
-        if (!modules.Any(module => string.Equals(module.HostPath, processPath, StringComparison.OrdinalIgnoreCase)))
-        {
-            return null;
-        }
-
-        return (modules.FirstOrDefault(module => module.Module == SharedModuleId.HardwareCheck)
-                ?? modules.FirstOrDefault(module => module.Module == SharedModuleId.NetworkRescue))
-            ?.HostPath;
-    }
 }

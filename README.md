@@ -22,11 +22,9 @@ Windows 硬件检测、快速压力测试与诊断验收工具。
 | `licenses/` | 第三方许可证全文 |
 | `third-party/pawnio/` | 未修改的官方 PawnIO 安装程序，嵌入程序 |
 
-## 共享桌面原型
+## 断网急救
 
-硬件测试与断网急救的共享主窗口、两个安装身份、入口导航和每会话单实例首轮原型见
-[共享桌面原型](docs/shared-desktop-prototype.md)。安装与验证脚本在 `scripts/prototype/`。该原型不包含真实驱动安装、
-MSI 或 Store 提审，不作为发行物。
+独立项目负责断网急救、WinPE 和离线驱动包。 [Offline Wi-Fi Rescue](https://github.com/akikazu-pc/offline-wifi-rescue)
 
 ## 构建与测试
 

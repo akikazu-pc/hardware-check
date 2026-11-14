@@ -4,7 +4,6 @@ using System.Globalization;
 using AkikazuHardwareCheck.Core.Configuration;
 using AkikazuHardwareCheck.Core.Hardware;
 using AkikazuHardwareCheck.Core.Localization;
-using AkikazuHardwareCheck.Core.SharedDesktop;
 
 namespace AkikazuHardwareCheck.App;
 
@@ -13,7 +12,7 @@ internal static class Program
     public const string REMOVE_DRIVER_ARGUMENT = "--remove-driver";
     public const string KEYBOARD_JAPANESE_ARGUMENT = "--keyboard-106";
 
-    public const string INSTALL_NETWORK_DRIVER_ARGUMENT = "--install-network-driver";
+    private const string NO_ELEVATE_ARGUMENT = "--no-elevate";
 
     private const string INSTANCE_MUTEX_NAME = "Local\\AkikazuHardwareCheck.SingleInstance";
     private const uint SEM_FAILCRITICALERRORS = 0x0001;
@@ -36,35 +35,12 @@ internal static class Program
             return;
         }
 
-        if (args is [INSTALL_NETWORK_DRIVER_ARGUMENT, var infPath, var hardwareId, var expectedHash])
-        {
-            Environment.ExitCode = (int)(DistributionProfile.Current.Channel != DistributionChannel.Store &&
-                Elevation.IsAdministrator()
-                    ? OfflineDriverInstaller.Install(infPath, hardwareId, expectedHash)
-                    : OfflineInstallResult.InstallationFailed);
-            return;
-        }
-
-        if (args is ["--portable-rescue", ..] && args.Length <= 2 &&
-            DistributionProfile.Current.Channel != DistributionChannel.Store)
-        {
-            RunPortableRescue(args.Length == 2 ? AppLanguage.Parse(args[1]) : null);
-            return;
-        }
-
         StartupTrace.Record("main");
-        var startup = SharedDesktopStartupPolicy.Resolve(
-            args,
-            SharedModuleDiscovery.ReadCurrentUser(),
-            DistributionProfile.Current.Channel == DistributionChannel.Store);
-        StartupTrace.Record("modules-ready");
-
-        // CPU temperatures need administrator rights, so the hardware module asks for them right away and staff answer
-        // one Windows prompt. The rescue module never asks at startup: only its later driver action may elevate.
+        // CPU temperatures need administrator rights, so the application asks for them right away and staff answer
+        // one Windows prompt.
         // Declining is not an error: this copy then keeps running with what ordinary rights can read.
-        if (startup.ActiveModule == SharedModuleId.HardwareCheck &&
-            DistributionProfile.Current.AllowsElevation &&
-            !startup.NoElevate &&
+        if (DistributionProfile.Current.AllowsElevation &&
+            !args.Contains(NO_ELEVATE_ARGUMENT, StringComparer.OrdinalIgnoreCase) &&
             !Elevation.IsAdministrator() &&
             Environment.ProcessPath is { } path)
         {
@@ -84,8 +60,7 @@ internal static class Program
         InstallCrashGuard();
         StartupTrace.Record("guard-ready");
 
-        // Only one main window is allowed across both entries. A second launch asks the existing window to show the
-        // requested module, then exits without creating another window. The mutex is per Windows session (Local\).
+        // Only one main window is allowed per session. A second launch asks the existing window to show, then exits without creating another window. The mutex is per Windows session (Local\).
         Mutex instance;
         bool createdNew;
         try
@@ -96,7 +71,7 @@ internal static class Program
         {
             // An elevated first instance may own a mutex this process cannot open. Treat it as the existing instance
             // and use the file request, which works across integrity levels.
-            SingleInstanceListener.NotifyExisting(startup.RequestedModule);
+            SingleInstanceListener.NotifyExisting();
             StartupTrace.Record("second-instance");
             return;
         }
@@ -105,7 +80,7 @@ internal static class Program
         {
             if (!createdNew)
             {
-                SingleInstanceListener.NotifyExisting(startup.RequestedModule);
+                SingleInstanceListener.NotifyExisting();
                 StartupTrace.Record("second-instance");
                 return;
             }
@@ -118,7 +93,7 @@ internal static class Program
             try
             {
                 StartupTrace.Record("main-form-start");
-                var main = new MainForm(startup.StartHidden, startup);
+                var main = new MainForm(args.Contains("--tray", StringComparer.OrdinalIgnoreCase));
                 StartupTrace.Record("main-form-created");
                 StartupTrace.Record("message-loop");
                 Application.Run(main);
@@ -130,50 +105,6 @@ internal static class Program
                 ExitSilently(exception);
             }
         }
-    }
-
-    private static void RunPortableRescue(string? languageOverride)
-    {
-        ApplicationConfiguration.Initialize();
-        InstallCrashGuard();
-        Application.SetColorMode(SystemColorMode.System);
-        using var instance = new Mutex(true, @"Local\Akikazu.NetworkRescue.Portable", out var created);
-        if (!created)
-        {
-            return;
-        }
-
-        var currentLanguage = languageOverride ?? AppLanguage.FromCulture(CultureInfo.CurrentUICulture.Name);
-        var translator = Translator.Load(currentLanguage);
-        using var window = new Form
-        {
-            Text = translator[SharedModuleId.NetworkRescue.DisplayNameKey()],
-            Icon = Ui.AppIcon,
-            StartPosition = FormStartPosition.CenterScreen,
-            ClientSize = new Size(1100, 720),
-        };
-        var languages = new ToolStripDropDownButton(translator["rescue.pe.language"]);
-        var rescue = new NetworkRescueView(translator, [], Path.Combine(AppContext.BaseDirectory, "driver-packs"));
-        string[] languageLabels = ["日本語", "简体中文", "繁體中文", "English"];
-        foreach (var (language, label) in AppLanguage.Supported.Zip(languageLabels))
-        {
-            var item = new ToolStripMenuItem(label) { Checked = language == currentLanguage };
-            item.Click += (_, _) =>
-            {
-                var selected = Translator.Load(language);
-                window.Text = selected[SharedModuleId.NetworkRescue.DisplayNameKey()];
-                languages.Text = selected["rescue.pe.language"];
-                foreach (ToolStripMenuItem option in languages.DropDownItems)
-                {
-                    option.Checked = option == item;
-                }
-                rescue.ApplyLanguage(selected);
-            };
-            languages.DropDownItems.Add(item);
-        }
-        rescue.AddPortableMenus(languages);
-        window.Controls.Add(rescue);
-        Application.Run(window);
     }
 
     /// <summary>
@@ -266,7 +197,7 @@ internal static class Program
     private static string ElevationArguments(string[] args) =>
         string.Join(
             ' ',
-            args.Where(argument => !string.Equals(argument, SharedDesktopContract.NO_ELEVATE_ARGUMENT, StringComparison.OrdinalIgnoreCase))
-                .Append(SharedDesktopContract.NO_ELEVATE_ARGUMENT)
+            args.Where(argument => !string.Equals(argument, NO_ELEVATE_ARGUMENT, StringComparison.OrdinalIgnoreCase))
+                .Append(NO_ELEVATE_ARGUMENT)
                 .Select(argument => argument.Contains(' ') ? $"\"{argument}\"" : argument));
 }

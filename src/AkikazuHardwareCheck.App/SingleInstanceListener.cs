@@ -1,13 +1,10 @@
 using System.Diagnostics;
-using System.Text;
-using System.Text.Json;
-using AkikazuHardwareCheck.Core.SharedDesktop;
 
 namespace AkikazuHardwareCheck.App;
 
 /// <summary>
 /// A second launch leaves a small request file instead of opening another window. A file works across Windows
-/// integrity levels (the hardware copy may be elevated while the rescue entry is not) and survives the short window
+/// integrity levels and survives the short window
 /// between the mutex being taken and the running window being ready. The running instance consumes the file on its
 /// UI timer; the second process exits immediately.
 /// </summary>
@@ -24,7 +21,7 @@ internal static class SingleInstanceListener
         "launch-requests",
         $"session-{Process.GetCurrentProcess().SessionId}");
 
-    public static bool NotifyExisting(SharedModuleId? module)
+    public static bool NotifyExisting()
     {
         try
         {
@@ -32,10 +29,7 @@ internal static class SingleInstanceListener
             var name = $"{DateTime.UtcNow.Ticks:D19}-{Environment.ProcessId}-{Guid.NewGuid():N}.json";
             var path = Path.Combine(RequestFolder, name);
             var temporary = path + REQUEST_TEMP_SUFFIX;
-            File.WriteAllText(
-                temporary,
-                JsonSerializer.Serialize(new LaunchRequest(module?.ToContractId(), DateTimeOffset.UtcNow)),
-                new UTF8Encoding(false));
+            File.WriteAllText(temporary, "{}");
             File.Move(temporary, path);
             return true;
         }
@@ -45,45 +39,30 @@ internal static class SingleInstanceListener
         }
     }
 
-    /// <summary>Null means "show the existing window"; a module means "show it on that page".</summary>
-    public static IReadOnlyList<SharedModuleId?> ConsumeRequests()
+    public static bool ConsumeRequests()
     {
-        var requests = new List<SharedModuleId?>();
+        var pending = false;
         try
         {
-            if (!Directory.Exists(RequestFolder))
+            if (Directory.Exists(RequestFolder))
             {
-                return requests;
-            }
-
-            foreach (var path in Directory.EnumerateFiles(RequestFolder, REQUEST_FILE_PATTERN).Order(StringComparer.Ordinal))
-            {
-                try
+                foreach (var path in Directory.EnumerateFiles(RequestFolder, REQUEST_FILE_PATTERN))
                 {
-                    var request = JsonSerializer.Deserialize<LaunchRequest>(File.ReadAllText(path, Encoding.UTF8));
-                    requests.Add(SharedModuleIds.TryParse(request?.Module, out var module) ? module : null);
-                }
-                catch (Exception exception) when (exception is IOException or UnauthorizedAccessException or JsonException or DecoderFallbackException)
-                {
-                    // A damaged request only loses its navigation hint; the window is still restored.
-                    requests.Add(null);
-                }
-                finally
-                {
+                    pending = true;
                     TryDelete(path);
                 }
             }
         }
         catch (Exception exception) when (exception is IOException or UnauthorizedAccessException)
         {
-            // If the folder is temporarily unavailable, the next tick tries again.
+            // Try again on the next tick if the folder is temporarily unavailable.
         }
 
-        return requests;
+        return pending;
     }
 
     /// <summary>
-    /// Requests written by an earlier process must not pull this window to an old page. A request from a concurrent
+    /// Requests written by an earlier process must not restore this window. A request from a concurrent
     /// second launch is written after this process started, so it is kept even when it arrives before the timer runs.
     /// </summary>
     public static void ClearStaleRequests()
@@ -134,6 +113,4 @@ internal static class SingleInstanceListener
             // Another tick or a later launch can remove it.
         }
     }
-
-    private sealed record LaunchRequest(string? Module, DateTimeOffset RequestedAt);
 }

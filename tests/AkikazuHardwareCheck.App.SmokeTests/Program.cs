@@ -6,7 +6,6 @@ using AkikazuHardwareCheck.Core.Configuration;
 using AkikazuHardwareCheck.Core.Localization;
 using AkikazuHardwareCheck.Core.Models;
 using AkikazuHardwareCheck.Core.Monitoring;
-using AkikazuHardwareCheck.Core.SharedDesktop;
 using Microsoft.Win32;
 
 namespace AkikazuHardwareCheck.App.SmokeTests;
@@ -71,50 +70,6 @@ internal static class Program
         catch (Exception exception)
         {
             failures.Add($"MainForm: {exception}");
-        }
-
-        try
-        {
-            if (DistributionProfile.Current.Channel == DistributionChannel.Website)
-            {
-                using var dual = new MainForm(false, Startup(SharedModuleId.NetworkRescue, includeHardware: true));
-                _ = dual.Handle;
-                if (dual.ActiveModule != SharedModuleId.NetworkRescue || !dual.IsModuleNavigationVisible || dual.IsHardwarePageVisible || !dual.IsRescuePageVisible)
-                {
-                    failures.Add("Shared shell: the dual install did not open on the rescue page with navigation.");
-                }
-
-                dual.SetActiveModule(SharedModuleId.HardwareCheck);
-                if (dual.ActiveModule != SharedModuleId.HardwareCheck || !dual.IsHardwarePageVisible || dual.IsRescuePageVisible)
-                {
-                    failures.Add("Shared shell: navigation did not switch to the hardware page.");
-                }
-
-                using var rescueOnly = new MainForm(false, Startup(SharedModuleId.NetworkRescue, includeHardware: false));
-                _ = rescueOnly.Handle;
-                if (rescueOnly.ActiveModule != SharedModuleId.NetworkRescue || rescueOnly.IsModuleNavigationVisible || !rescueOnly.IsRescuePageVisible || rescueOnly.IsHardwarePageVisible)
-                {
-                    failures.Add("Shared shell: a rescue-only install did not show exactly the rescue page.");
-                }
-            }
-            else
-            {
-                var modules = Startup(SharedModuleId.NetworkRescue, includeHardware: true).Modules;
-                var requested = SharedDesktopStartupPolicy.Resolve(
-                    ["--module", SharedModuleIds.NETWORK_RESCUE],
-                    modules,
-                    storeChannel: true);
-                using var store = new MainForm(false, requested);
-                _ = store.Handle;
-                if (store.ActiveModule != SharedModuleId.HardwareCheck || store.IsModuleNavigationVisible || store.IsRescuePageVisible)
-                {
-                    failures.Add("Store shell: the rescue module leaked into the Store build.");
-                }
-            }
-        }
-        catch (Exception exception)
-        {
-            failures.Add($"Shared shell: {exception}");
         }
 
         if (failures.Count == 0)
@@ -198,7 +153,7 @@ internal static class Program
     {
         try
         {
-            using var main = new MainForm(false, Startup(SharedModuleId.NetworkRescue, includeHardware: true));
+            using var main = new MainForm();
             main.StartPosition = FormStartPosition.Manual;
             main.Location = Point.Empty;
             main.TopMost = true;
@@ -330,17 +285,6 @@ internal static class Program
             Capture(main, Path.Combine(folder, "main.png"));
         }
 
-        using (var shared = new MainForm(false, Startup(SharedModuleId.NetworkRescue, includeHardware: true)))
-        {
-            shared.StartPosition = FormStartPosition.Manual;
-            shared.Location = Point.Empty;
-            shared.TopMost = true;
-            shared.Show();
-            shared.BringToFront();
-            Pump(1500);
-            Capture(shared, Path.Combine(folder, "shared-rescue.png"));
-        }
-
         using (var settings = new SettingsForm(t, new AppSettings(), font))
         {
             settings.TopMost = true;
@@ -422,42 +366,6 @@ internal static class Program
     private static HardwareInventory MinimalHardware() => new(
         new ProbeEnvironment(null, WindowsActivation.Unknown, false, false),
         [], [], null, null, [], [], []);
-
-    private static SharedDesktopStartup Startup(SharedModuleId active, bool includeHardware)
-    {
-        var hardware = new InstalledModule(
-            SharedModuleId.HardwareCheck,
-            "0.2.0",
-            1,
-            "0.2.0",
-            @"C:\ProgramData\Akikazu\HardwareCheck",
-            Environment.ProcessPath ?? "AkikazuHardwareCheck.exe",
-            $"--module {SharedModuleIds.HARDWARE_CHECK}",
-            SharedDesktopContract.INSTALL_IDENTITY_HARDWARE,
-            SharedDesktopContract.UNINSTALL_KEY_HARDWARE);
-        var rescue = new InstalledModule(
-            SharedModuleId.NetworkRescue,
-            "0.1.0",
-            1,
-            "0.2.0",
-            @"C:\ProgramData\Akikazu\NetworkRescue",
-            Environment.ProcessPath ?? "AkikazuHardwareCheck.exe",
-            "--module network-rescue",
-            SharedDesktopContract.INSTALL_IDENTITY_RESCUE,
-            SharedDesktopContract.UNINSTALL_KEY_RESCUE);
-        var modules = includeHardware ? new[] { hardware, rescue } : new[] { rescue };
-        var available = includeHardware
-            ? new[] { SharedModuleId.HardwareCheck, SharedModuleId.NetworkRescue }
-            : new[] { SharedModuleId.NetworkRescue };
-        return new SharedDesktopStartup(
-            active,
-            includeHardware ? SharedModuleId.HardwareCheck : SharedModuleId.NetworkRescue,
-            active,
-            false,
-            true,
-            available,
-            modules);
-    }
 
     private static void Pump(int milliseconds)
     {

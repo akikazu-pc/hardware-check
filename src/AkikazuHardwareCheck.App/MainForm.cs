@@ -11,7 +11,6 @@ using AkikazuHardwareCheck.Core.Localization;
 using AkikazuHardwareCheck.Core.Models;
 using AkikazuHardwareCheck.Core.Monitoring;
 using AkikazuHardwareCheck.Core.Reporting;
-using AkikazuHardwareCheck.Core.SharedDesktop;
 using AkikazuHardwareCheck.Core.Testing;
 
 namespace AkikazuHardwareCheck.App;
@@ -106,15 +105,6 @@ internal sealed class MainForm : Form
     private readonly System.Windows.Forms.Timer _clockTimer = new() { Interval = CLOCK_INTERVAL_MS };
     private readonly System.Windows.Forms.Timer _windowStateTimer = new() { Interval = WINDOW_STATE_SAVE_DELAY_MS };
     private readonly System.Windows.Forms.Timer _launchRequestTimer = new() { Interval = 300 };
-    private readonly SharedDesktopStartup _startup;
-    private readonly IReadOnlyList<SharedModuleId> _availableModules;
-    private readonly Control _hardwarePage;
-    private readonly NetworkRescueView? _rescueView;
-    private FlowLayoutPanel? _moduleNav;
-    private RadioButton? _hardwareNav;
-    private RadioButton? _rescueNav;
-    private SharedModuleId _activeModule;
-    private bool _isSwitchingModule;
     private bool _hardwareStarted;
     private TableLayoutPanel? _rootPanel;
     private TableLayoutPanel? _bodyPanel;
@@ -176,34 +166,14 @@ internal sealed class MainForm : Form
     private bool _isExiting;
     private readonly bool _startHidden;
 
-    public MainForm(bool startHidden = false, SharedDesktopStartup? startup = null)
+    public MainForm(bool startHidden = false)
     {
-        var resolvedStartup = startup ?? SharedDesktopStartupPolicy.Resolve(
-            [],
-            SharedModuleDiscovery.ReadCurrentUser(),
-            DistributionProfile.Current.Channel == DistributionChannel.Store);
-        if (DistributionProfile.Current.Channel == DistributionChannel.Store)
-        {
-            // Defence in depth: a Store build must never expose the website-installed rescue module even if a caller
-            // hands MainForm a startup record that still lists it.
-            resolvedStartup = SharedDesktopStartupPolicy.Resolve([], resolvedStartup.Modules, storeChannel: true);
-        }
-
-        _startup = resolvedStartup;
-        _startHidden = startHidden || _startup.StartHidden;
-        _availableModules = _startup.AvailableModules;
-        _activeModule = _startup.ActiveModule;
+        _startHidden = startHidden;
         _t = Translator.Load(_settings.Language is { } saved && AppLanguage.Parse(saved) is { } language
             ? language
             : AppLanguage.FromCulture(CultureInfo.CurrentUICulture.Name));
 
-        _hardwarePage = BuildRootPanel();
-        if (_availableModules.Contains(SharedModuleId.NetworkRescue))
-        {
-            _rescueView = new NetworkRescueView(_t, _startup.Modules);
-        }
-
-        Controls.Add(BuildModuleShell());
+        Controls.Add(BuildRootPanel());
         BuildContextMenu();
         AttachContextMenu(this);
         Ui.ScaleButtons(this);
@@ -224,7 +194,7 @@ internal sealed class MainForm : Form
         ApplyBackground();
         ApplyLanguage();
         ApplyPanels();
-        SetActiveModule(_activeModule, initial: true);
+        UpdateCommandStates();
         TopMost = _settings.IsAlwaysOnTop;
         UpdateTrayIcon();
         // Autostart starts without a taskbar button, so hiding in OnShown does not have to recreate the window.
@@ -235,12 +205,6 @@ internal sealed class MainForm : Form
     }
 
     private bool IsTestRunning => _testStop is not null;
-
-    private bool HasHardwareModule => _availableModules.Contains(SharedModuleId.HardwareCheck);
-
-    private string ActiveModuleName => _activeModule == SharedModuleId.HardwareCheck
-        ? _t["ui.appName"]
-        : _t[_activeModule.DisplayNameKey()];
 
     protected override void OnShown(EventArgs e)
     {
@@ -259,20 +223,13 @@ internal sealed class MainForm : Form
         // Paint the shell and the "reading" placeholders before WMI work starts, so the window never appears as a
         // blank white surface on a slow first run.
         Refresh();
-        if (_activeModule == SharedModuleId.HardwareCheck)
-        {
-            EnsureHardwareStarted();
-        }
-        else
-        {
-            _rescueView?.RefreshStatus();
-        }
+        EnsureHardwareStarted();
 
         // Re-run the split layout after the show/DPI pass. Without this, a restored large window can keep zero-width
         // content until the user resizes it.
         BeginInvoke(new Action(() =>
         {
-            if (!IsDisposed && !_isClosing && _activeModule == SharedModuleId.HardwareCheck)
+            if (!IsDisposed && !_isClosing)
             {
                 ApplyBodyWidths();
                 PerformLayout();
@@ -303,7 +260,7 @@ internal sealed class MainForm : Form
             // paint. Let the layout pass finish first.
             BeginInvoke(new Action(() =>
             {
-                if (!IsDisposed && !_isClosing && _settings.FloatingEnabled && _activeModule == SharedModuleId.HardwareCheck)
+                if (!IsDisposed && !_isClosing && _settings.FloatingEnabled)
                 {
                     ShowFloating(activate: false);
                 }
@@ -351,7 +308,7 @@ internal sealed class MainForm : Form
     {
         switch (keyData)
         {
-            case Keys.F5 when _activeModule == SharedModuleId.HardwareCheck:
+            case Keys.F5:
                 StartIfAllowed(_startButton, () =>
                 {
                     if (!IsTestRunning)
@@ -360,7 +317,7 @@ internal sealed class MainForm : Form
                     }
                 });
                 return true;
-            case Keys.F7 when _activeModule == SharedModuleId.HardwareCheck:
+            case Keys.F7:
                 GenerateReport();
                 return true;
             case Keys.Escape when IsTestRunning:
@@ -370,7 +327,7 @@ internal sealed class MainForm : Form
                 }
 
                 return true;
-            case Keys.Control | Keys.C when _activeModule == SharedModuleId.HardwareCheck && ActiveControl is not TextBoxBase:
+            case Keys.Control | Keys.C when ActiveControl is not TextBoxBase:
                 CopyConfiguration();
                 return true;
             default:
@@ -491,15 +448,8 @@ internal sealed class MainForm : Form
         }
 
         ShowAuxiliaryWindows();
-        if (_activeModule == SharedModuleId.HardwareCheck)
-        {
-            ApplyBodyWidths();
-            EnsureHardwareStarted();
-        }
-        else
-        {
-            _rescueView?.RefreshStatus();
-        }
+        ApplyBodyWidths();
+        EnsureHardwareStarted();
 
         Activate();
         BringToFront();
@@ -515,15 +465,8 @@ internal sealed class MainForm : Form
         }
 
         ShowAuxiliaryWindows();
-        if (_activeModule == SharedModuleId.HardwareCheck)
-        {
-            ApplyBodyWidths();
-            EnsureHardwareStarted();
-        }
-        else
-        {
-            _rescueView?.RefreshStatus();
-        }
+        ApplyBodyWidths();
+        EnsureHardwareStarted();
 
         Activate();
         BringToFront();
@@ -560,7 +503,7 @@ internal sealed class MainForm : Form
         // it missing from the notification area until Explorer restarts, so only its menu and state change here.
         if (_trayIcon is null)
         {
-            _trayIcon = new NotifyIcon { Icon = Ui.AppIcon, Text = ActiveModuleName };
+            _trayIcon = new NotifyIcon { Icon = Ui.AppIcon, Text = _t["ui.appName"] };
             _trayIcon.DoubleClick += (_, _) => RestoreFromTray();
         }
 
@@ -578,7 +521,7 @@ internal sealed class MainForm : Form
             _trayCrosshairItem.Checked = _settings.CrosshairEnabled;
         }
 
-        _trayIcon.Text = ActiveModuleName;
+        _trayIcon.Text = _t["ui.appName"];
         _trayIcon.Visible = true;
     }
 
@@ -599,22 +542,18 @@ internal sealed class MainForm : Form
     {
         var menu = new ContextMenuStrip();
         menu.Items.Add(Item(_t["tray.open"], (_, _) => RestoreFromTray()));
-        _trayCrosshairItem = null;
-        if (HasHardwareModule)
+        menu.Items.Add(Item(_t["tray.floating"], (_, _) => ShowFloating()));
+        _trayCrosshairItem = new ToolStripMenuItem(_t["crosshair.toggle"]) { Checked = _settings.CrosshairEnabled };
+        _trayCrosshairItem.Click += (_, _) => ToggleCrosshair();
+        menu.Items.Add(_trayCrosshairItem);
+        menu.Items.Add(Item(_t["tray.chart"], (_, _) => ShowLiveChart()));
+        menu.Items.Add(Item(_t["tray.diagnostic"], (_, _) => ShowMaintenance()));
+        if (DistributionProfile.Current.AllowsSystemCleanup)
         {
-            menu.Items.Add(Item(_t["tray.floating"], (_, _) => ShowFloating()));
-            _trayCrosshairItem = new ToolStripMenuItem(_t["crosshair.toggle"]) { Checked = _settings.CrosshairEnabled };
-            _trayCrosshairItem.Click += (_, _) => ToggleCrosshair();
-            menu.Items.Add(_trayCrosshairItem);
-            menu.Items.Add(Item(_t["tray.chart"], (_, _) => ShowLiveChart()));
-            menu.Items.Add(Item(_t["tray.diagnostic"], (_, _) => ShowMaintenance()));
-            if (DistributionProfile.Current.AllowsSystemCleanup)
-            {
-                menu.Items.Add(Item(_t["ui.junkCleanup"], (_, _) => ShowJunkCleanup()));
-            }
-
-            menu.Items.Add(new ToolStripSeparator());
+            menu.Items.Add(Item(_t["ui.junkCleanup"], (_, _) => ShowJunkCleanup()));
         }
+
+        menu.Items.Add(new ToolStripSeparator());
 
         menu.Items.Add(Item(_t["tray.settings"], (_, _) => OpenSettingsForm()));
         menu.Items.Add(new ToolStripSeparator());
@@ -690,138 +629,9 @@ internal sealed class MainForm : Form
         return root;
     }
 
-    /// <summary>
-    /// One window hosts the installed pages. The navigation strip only appears when both modules are installed; a
-    /// single install shows just its page, so the rescue entry is not a hidden tab on a hardware-only machine.
-    /// </summary>
-    private Control BuildModuleShell()
-    {
-        var shell = new TableLayoutPanel { Dock = DockStyle.Fill, ColumnCount = 1, RowCount = 2, Margin = new Padding(0) };
-        shell.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100));
-        shell.RowStyles.Add(new RowStyle(SizeType.AutoSize));
-        shell.RowStyles.Add(new RowStyle(SizeType.Percent, 100));
-
-        _moduleNav = new FlowLayoutPanel
-        {
-            AutoSize = true,
-            AutoSizeMode = AutoSizeMode.GrowAndShrink,
-            Dock = DockStyle.Top,
-            WrapContents = false,
-            Margin = new Padding(0),
-            Padding = new Padding(Ui.SPACING * 2, Ui.SPACING * 2, Ui.SPACING * 2, 0),
-            Visible = _availableModules.Count > 1,
-        };
-        _hardwareNav = ModuleNavButton(_t["module.hardware"], SharedModuleId.HardwareCheck);
-        _rescueNav = ModuleNavButton(_t["module.rescue"], SharedModuleId.NetworkRescue);
-        if (_availableModules.Contains(SharedModuleId.HardwareCheck))
-        {
-            _moduleNav.Controls.Add(_hardwareNav);
-        }
-
-        if (_availableModules.Contains(SharedModuleId.NetworkRescue))
-        {
-            _moduleNav.Controls.Add(_rescueNav);
-        }
-
-        shell.Controls.Add(_moduleNav, 0, 0);
-
-        var content = new Panel { Dock = DockStyle.Fill, Margin = new Padding(0) };
-        _hardwarePage.Dock = DockStyle.Fill;
-        content.Controls.Add(_hardwarePage);
-        if (_rescueView is not null)
-        {
-            content.Controls.Add(_rescueView);
-        }
-
-        shell.Controls.Add(content, 0, 1);
-        return shell;
-    }
-
-    private RadioButton ModuleNavButton(string text, SharedModuleId module)
-    {
-        var button = new RadioButton
-        {
-            Text = text,
-            Appearance = Appearance.Button,
-            AutoSize = true,
-            UseVisualStyleBackColor = true,
-            Margin = new Padding(0, 0, Ui.SPACING, 0),
-        };
-        button.CheckedChanged += (_, _) =>
-        {
-            if (button.Checked && !_isSwitchingModule)
-            {
-                SetActiveModule(module);
-            }
-        };
-        return button;
-    }
-
-    internal void SetActiveModule(SharedModuleId module, bool initial = false)
-    {
-        if (!_availableModules.Contains(module))
-        {
-            return;
-        }
-
-        _isSwitchingModule = true;
-        try
-        {
-            _activeModule = module;
-            _hardwarePage.Visible = module == SharedModuleId.HardwareCheck;
-            if (_rescueView is not null)
-            {
-                _rescueView.Visible = module == SharedModuleId.NetworkRescue;
-            }
-
-            if (_hardwareNav is not null)
-            {
-                _hardwareNav.Checked = module == SharedModuleId.HardwareCheck;
-            }
-
-            if (_rescueNav is not null)
-            {
-                _rescueNav.Checked = module == SharedModuleId.NetworkRescue;
-            }
-
-            UpdateWindowTitle();
-            UpdateTrayIcon();
-            BuildMenu();
-            UpdateCommandStates();
-            if (module == SharedModuleId.NetworkRescue)
-            {
-                _rescueView?.RefreshStatus();
-            }
-            else
-            {
-                ApplyBodyWidths();
-            }
-        }
-        finally
-        {
-            _isSwitchingModule = false;
-        }
-
-        // The hardware page needs its own initialization on first entry. Construction and smoke tests do not show the
-        // form, so the page must not start WMI or the sensor driver just because a test selected it.
-        if (module == SharedModuleId.HardwareCheck && Visible && !initial)
-        {
-            EnsureHardwareStarted();
-        }
-    }
-
-    internal SharedModuleId ActiveModule => _activeModule;
-
-    internal bool IsModuleNavigationVisible => _moduleNav is not null && _availableModules.Count > 1;
-
-    internal bool IsHardwarePageVisible => _activeModule == SharedModuleId.HardwareCheck;
-
-    internal bool IsRescuePageVisible => _activeModule == SharedModuleId.NetworkRescue && _rescueView is not null;
-
     private void UpdateWindowTitle()
     {
-        var version = _startup.Find(_activeModule)?.Version ?? CheckReport.CurrentToolVersion;
-        Text = $"{ActiveModuleName} v{version}";
+        Text = $"{_t["ui.appName"]} v{CheckReport.CurrentToolVersion}";
     }
 
     private void ProcessLaunchRequests()
@@ -831,21 +641,10 @@ internal sealed class MainForm : Form
             return;
         }
 
-        var requests = SingleInstanceListener.ConsumeRequests();
-        if (requests.Count == 0)
+        if (SingleInstanceListener.ConsumeRequests())
         {
-            return;
+            RestoreFromExternalLaunch();
         }
-
-        foreach (var request in requests)
-        {
-            if (request is { } module && _availableModules.Contains(module))
-            {
-                SetActiveModule(module);
-            }
-        }
-
-        RestoreFromExternalLaunch();
     }
 
     private TableLayoutPanel BuildFooter()
@@ -1191,58 +990,49 @@ internal sealed class MainForm : Form
 
         var menu = new NativeMenu();
         var file = menu.AddSubmenu(_t["ui.menuFile"]);
-        if (_activeModule == SharedModuleId.HardwareCheck)
-        {
-            NativeMenu.AddItem(file, MenuCommand.Report, $"{_t["ui.report"]}\tF7");
-            NativeMenu.AddSeparator(file);
-            NativeMenu.AddItem(file, MenuCommand.OpenReport, _t["ui.openReport"]);
-            NativeMenu.AddItem(file, MenuCommand.OpenFolder, _t["ui.openFolder"]);
-            NativeMenu.AddSeparator(file);
-        }
+        NativeMenu.AddItem(file, MenuCommand.Report, $"{_t["ui.report"]}\tF7");
+        NativeMenu.AddSeparator(file);
+        NativeMenu.AddItem(file, MenuCommand.OpenReport, _t["ui.openReport"]);
+        NativeMenu.AddItem(file, MenuCommand.OpenFolder, _t["ui.openFolder"]);
+        NativeMenu.AddSeparator(file);
 
         NativeMenu.AddItem(file, MenuCommand.Exit, _t["ui.exit"]);
 
-        if (_activeModule == SharedModuleId.HardwareCheck)
+        var tools = menu.AddSubmenu(_t["ui.menuTools"]);
+        NativeMenu.AddItem(tools, MenuCommand.Reload, _t["ui.reload"]);
+        if (DistributionProfile.Current.AllowsElevation)
         {
-            var tools = menu.AddSubmenu(_t["ui.menuTools"]);
-            NativeMenu.AddItem(tools, MenuCommand.Reload, _t["ui.reload"]);
-            if (DistributionProfile.Current.AllowsElevation)
-            {
-                NativeMenu.AddItem(tools, MenuCommand.RestartToFirmware, _t["ui.restartToFirmware"]);
-                NativeMenu.AddItem(tools, MenuCommand.KeyboardFix, _t["ui.keyboardFix"]);
-            }
-            NativeMenu.AddItem(tools, MenuCommand.Copy, $"{_t["ui.copy"]}\tCtrl+C");
-            NativeMenu.AddSeparator(tools);
-            NativeMenu.AddItem(tools, MenuCommand.AdvancedInfo, _t["ui.advancedInfo"]);
-            NativeMenu.AddItem(tools, MenuCommand.Maintenance, _t["ui.maintenance"]);
-            if (DistributionProfile.Current.AllowsSystemCleanup)
-            {
-                NativeMenu.AddItem(tools, MenuCommand.JunkCleanup, _t["ui.junkCleanup"]);
-            }
-            NativeMenu.AddItem(tools, MenuCommand.NetworkSpeedTest, _t["networkTest.title"]);
-            NativeMenu.AddItem(tools, MenuCommand.DisplayInfo, _t["displayInfo.title"]);
-            NativeMenu.AddSeparator(tools);
-            NativeMenu.AddItem(tools, MenuCommand.Crosshair, _t["crosshair.toggle"]);
-            NativeMenu.AddItem(tools, MenuCommand.ScreenRuler, _t["ruler.toggle"]);
-            NativeMenu.AddItem(tools, MenuCommand.GameHud, _t["hud.toggle"]);
-            NativeMenu.AddItem(tools, MenuCommand.TestWindow, _t["ui.testWindow"]);
-            NativeMenu.AddItem(tools, MenuCommand.HardwareWindow, _t["ui.hardwareWindow"]);
+            NativeMenu.AddItem(tools, MenuCommand.RestartToFirmware, _t["ui.restartToFirmware"]);
+            NativeMenu.AddItem(tools, MenuCommand.KeyboardFix, _t["ui.keyboardFix"]);
         }
+        NativeMenu.AddItem(tools, MenuCommand.Copy, $"{_t["ui.copy"]}\tCtrl+C");
+        NativeMenu.AddSeparator(tools);
+        NativeMenu.AddItem(tools, MenuCommand.AdvancedInfo, _t["ui.advancedInfo"]);
+        NativeMenu.AddItem(tools, MenuCommand.Maintenance, _t["ui.maintenance"]);
+        if (DistributionProfile.Current.AllowsSystemCleanup)
+        {
+            NativeMenu.AddItem(tools, MenuCommand.JunkCleanup, _t["ui.junkCleanup"]);
+        }
+        NativeMenu.AddItem(tools, MenuCommand.NetworkSpeedTest, _t["networkTest.title"]);
+        NativeMenu.AddItem(tools, MenuCommand.DisplayInfo, _t["displayInfo.title"]);
+        NativeMenu.AddSeparator(tools);
+        NativeMenu.AddItem(tools, MenuCommand.Crosshair, _t["crosshair.toggle"]);
+        NativeMenu.AddItem(tools, MenuCommand.ScreenRuler, _t["ruler.toggle"]);
+        NativeMenu.AddItem(tools, MenuCommand.GameHud, _t["hud.toggle"]);
+        NativeMenu.AddItem(tools, MenuCommand.TestWindow, _t["ui.testWindow"]);
+        NativeMenu.AddItem(tools, MenuCommand.HardwareWindow, _t["ui.hardwareWindow"]);
 
         menu.AddBarItem(MenuCommand.Settings, _t["ui.settings"]);
 
-        if (_activeModule == SharedModuleId.HardwareCheck)
-        {
-            var view = menu.AddSubmenu(_t["ui.menuView"]);
-            NativeMenu.AddItem(view, MenuCommand.ShowHardware, _t["ui.showHardware"]);
-            NativeMenu.AddItem(view, MenuCommand.ShowMonitor, _t["ui.showMonitor"]);
-            NativeMenu.AddItem(view, MenuCommand.Floating, _t["tray.floating"]);
-            NativeMenu.AddSeparator(view);
-            NativeMenu.AddItem(view, MenuCommand.BackgroundColor, _t["ui.backgroundColor"]);
-            NativeMenu.AddItem(view, MenuCommand.BackgroundImage, _t["ui.backgroundImage"]);
-            NativeMenu.AddItem(view, MenuCommand.BackgroundAdjust, _t["ui.backgroundAdjust"]);
-            NativeMenu.AddItem(view, MenuCommand.BackgroundReset, _t["ui.backgroundReset"]);
-        }
+        var view = menu.AddSubmenu(_t["ui.menuView"]);
+        NativeMenu.AddItem(view, MenuCommand.ShowHardware, _t["ui.showHardware"]);
+        NativeMenu.AddItem(view, MenuCommand.ShowMonitor, _t["ui.showMonitor"]);
+        NativeMenu.AddItem(view, MenuCommand.Floating, _t["tray.floating"]);
+        NativeMenu.AddSeparator(view);
+        NativeMenu.AddItem(view, MenuCommand.BackgroundColor, _t["ui.backgroundColor"]);
+        NativeMenu.AddItem(view, MenuCommand.BackgroundImage, _t["ui.backgroundImage"]);
+        NativeMenu.AddItem(view, MenuCommand.BackgroundAdjust, _t["ui.backgroundAdjust"]);
+        NativeMenu.AddItem(view, MenuCommand.BackgroundReset, _t["ui.backgroundReset"]);
 
         var language = menu.AddSubmenu(_t["ui.menuLanguage"]);
         for (var index = 0; index < LanguageChoices.Length; index++)
@@ -1792,17 +1582,6 @@ internal sealed class MainForm : Form
             cleanupItem.Text = _t["ui.junkCleanup"];
         }
 
-        if (_hardwareNav is not null)
-        {
-            _hardwareNav.Text = _t["module.hardware"];
-        }
-
-        if (_rescueNav is not null)
-        {
-            _rescueNav.Text = _t["module.rescue"];
-        }
-
-        _rescueView?.ApplyLanguage(_t);
         ApplyEmphasis();
         UpdateWindowTitle();
         _copyrightLink.Text = _t["ui.copyright", DateTime.Today.Year];
@@ -1866,7 +1645,7 @@ internal sealed class MainForm : Form
         RenderResults();
         UpdateCommandStates();
         FitMessages();
-        if (showFloating && _activeModule == SharedModuleId.HardwareCheck && HasHardwareModule && IsHandleCreated)
+        if (showFloating && IsHandleCreated)
         {
             ShowFloating(activate: false);
         }
