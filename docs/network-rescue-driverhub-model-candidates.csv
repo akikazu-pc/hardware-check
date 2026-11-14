@@ -6,9 +6,9 @@ NEC,PC-VKA11HGG6QD4,model,pending,https://jp.drvhub.net/laptops/nec/pc-vka11hgg6
 NEC,PC-VKT12SGG4,model,pending,https://jp.drvhub.net/laptops/nec/pc-vkt12sgg4,NEC,PC-VKT12SGG4,Laptop,,https://support.nec-lavie.jp/navigate/support/info/2024/announce/softbank/index.html
 NEC,PC-VKL24XZG1,model,pending,https://jp.drvhub.net/laptops/nec/pc-vkl24xzg1,NEC,PC-VKL24XZG1,Laptop,,https://www.bizpc.nec.co.jp/bangai/pcseek/information_menu_frame?KATA=PC-VKL24XZG1&SALE_KBN=
 NEC,PC-BL350AW6B,model,pending,https://jp.drvhub.net/laptops/nec/pc-bl350aw6b,NEC,PC-BL350AW6B,Laptop,,
-NEC,PC-GL18CRHAY,model,pending,https://jp.drvhub.net/laptops/nec/pc-gl18crhay,NEC,PC-GL18CRHAY,Laptop,,
-NEC,PC-GN12S78AA,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn12s78aa,NEC,PC-GN12S78AA,Laptop,,
-NEC,PC-GN164K5LH,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn164k5lh,NEC,PC-GN164K5LH,Laptop,,
+NEC,PC-GL18CRHAY,model,pending,https://jp.drvhub.net/laptops/nec/pc-gl18crhay,NEC,PC-GL18CRHAY,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-GN12S78AA,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn12s78aa,NEC,PC-GN12S78AA,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update_19h1/pclist/data/list.xml
+NEC,PC-GN164K5LH,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn164k5lh,NEC,PC-GN164K5LH,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
 Panasonic,CF-191AYSXBM,model,pending,https://jp.drvhub.net/laptops/panasonic/cf-191aysxbm,Panasonic,CF-191AYSXBM,Laptop,,
 Panasonic,CF-193H150FW,model,pending,https://jp.drvhub.net/laptops/panasonic/cf-193h150fw,Panasonic,CF-193H150FW,Laptop,,
 Panasonic,CF-19ADNUHFL,model,pending,https://jp.drvhub.net/laptops/panasonic/cf-19adnuhfl,Panasonic,CF-19ADNUHFL,Laptop,,
@@ -9042,133 +9042,133 @@ MSI,Vector GP78HX 13VG,model,pending,https://jp.drvhub.net/laptops/msi/vector-gp
 MSI,Vector GP78HX 13VH,model,pending,https://jp.drvhub.net/laptops/msi/vector-gp78hx-13vh,MSI,Vector GP78HX 13VH,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/MSI/Vector/Vector%20GP78HX%2013VH
 MSI,Vector GP78HX 13VI,model,pending,https://jp.drvhub.net/laptops/msi/vector-gp78hx-13vi,MSI,Vector GP78HX 13VI,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/MSI/Vector/Vector%20GP78HX%2013VI
 NEC,PC-BL350BW6R,model,pending,https://jp.drvhub.net/laptops/nec/pc-bl350bw6r,NEC,PC-BL350BW6R,Laptop,,
-NEC,PC-GL186Y3GZ,model,pending,https://jp.drvhub.net/laptops/nec/pc-gl186y3gz,NEC,PC-GL186Y3GZ,Laptop,,
+NEC,PC-GL186Y3GZ,model,pending,https://jp.drvhub.net/laptops/nec/pc-gl186y3gz,NEC,PC-GL186Y3GZ,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
 NEC,PC-GL18GN5AJ,model,pending,https://jp.drvhub.net/laptops/nec/pc-gl18gn5aj,NEC,PC-GL18GN5AJ,Laptop,,
 NEC,PC-GL21DD5AS,model,pending,https://jp.drvhub.net/laptops/nec/pc-gl21dd5as,NEC,PC-GL21DD5AS,Laptop,,
 NEC,PC-GL247EDAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-gl247edaw,NEC,PC-GL247EDAW,Laptop,,
 NEC,PC-GL247TDGS,model,pending,https://jp.drvhub.net/laptops/nec/pc-gl247tdgs,NEC,PC-GL247TDGS,Laptop,,
 NEC,PC-GL24DVHDV,model,pending,https://jp.drvhub.net/laptops/nec/pc-gl24dvhdv,NEC,PC-GL24DVHDV,Laptop,,
 NEC,PC-GL255RHAU,model,pending,https://jp.drvhub.net/laptops/nec/pc-gl255rhau,NEC,PC-GL255RHAU,Laptop,,
-NEC,PC-GL25DUTAZ,model,pending,https://jp.drvhub.net/laptops/nec/pc-gl25dutaz,NEC,PC-GL25DUTAZ,Laptop,,
+NEC,PC-GL25DUTAZ,model,pending,https://jp.drvhub.net/laptops/nec/pc-gl25dutaz,NEC,PC-GL25DUTAZ,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
 NEC,PC-GL267FFDU,model,pending,https://jp.drvhub.net/laptops/nec/pc-gl267ffdu,NEC,PC-GL267FFDU,Laptop,,
 NEC,PC-GL267GFAU,model,pending,https://jp.drvhub.net/laptops/nec/pc-gl267gfau,NEC,PC-GL267GFAU,Laptop,,
 NEC,PC-GL26E612E,model,pending,https://jp.drvhub.net/laptops/nec/pc-gl26e612e,NEC,PC-GL26E612E,Laptop,,
 NEC,PC-GL277DDGW,model,pending,https://jp.drvhub.net/laptops/nec/pc-gl277ddgw,NEC,PC-GL277DDGW,Laptop,,
-NEC,PC-GN10S7RAH,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn10s7rah,NEC,PC-GN10S7RAH,Laptop,,
-NEC,PC-GN11FJRLD,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn11fjrld,NEC,PC-GN11FJRLD,Laptop,,
+NEC,PC-GN10S7RAH,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn10s7rah,NEC,PC-GN10S7RAH,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-GN11FJRLD,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn11fjrld,NEC,PC-GN11FJRLD,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
 NEC,PC-GN11VAEAZ,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn11vaeaz,NEC,PC-GN11VAEAZ,Laptop,,https://support.nec-lavie.jp/navigate/support/info/2024/announce/office/ms_2024.html
 NEC,PC-GN122ABAZ,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn122abaz,NEC,PC-GN122ABAZ,Laptop,,https://support.nec-lavie.jp/navigate/support/info/2024/announce/office/ms_2024.html
 NEC,PC-GN122ADAZ,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn122adaz,NEC,PC-GN122ADAZ,Laptop,,https://support.nec-lavie.jp/navigate/support/info/2024/announce/office/ms_2024.html
-NEC,PC-GN12NBEAS,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn12nbeas,NEC,PC-GN12NBEAS,Laptop,,
-NEC,PC-GN12NBFAS,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn12nbfas,NEC,PC-GN12NBFAS,Laptop,,
-NEC,PC-GN12S88AD,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn12s88ad,NEC,PC-GN12S88AD,Laptop,,
+NEC,PC-GN12NBEAS,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn12nbeas,NEC,PC-GN12NBEAS,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_25h2/pclist/data/list.xml
+NEC,PC-GN12NBFAS,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn12nbfas,NEC,PC-GN12NBFAS,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_25h2/pclist/data/list.xml
+NEC,PC-GN12S88AD,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn12s88ad,NEC,PC-GN12S88AD,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update_20h1/pclist/data/list.xml
 NEC,PC-GN12ZJZAY,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn12zjzay,NEC,PC-GN12ZJZAY,Laptop,,https://support.nec-lavie.jp/navigate/support/info/2024/announce/office/ms_2024.html
 NEC,PC-GN1343NAY,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn1343nay,NEC,PC-GN1343NAY,Laptop,,https://support.nec-lavie.jp/navigate/support/info/2024/announce/office/ms_2024.html
 NEC,PC-GN135JYAY,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn135jyay,NEC,PC-GN135JYAY,Laptop,,https://support.nec-lavie.jp/navigate/support/info/2024/announce/office/ms_2024.html
 NEC,PC-GN135JYDY,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn135jydy,NEC,PC-GN135JYDY,Laptop,,https://support.nec-lavie.jp/navigate/support/info/2024/announce/office/ms_2024.html
 NEC,PC-GN135JZAY,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn135jzay,NEC,PC-GN135JZAY,Laptop,,https://support.nec-lavie.jp/navigate/support/info/2024/announce/office/ms_2024.html
-NEC,PC-GN13S78AF,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn13s78af,NEC,PC-GN13S78AF,Laptop,,
-NEC,PC-GN13S78GF,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn13s78gf,NEC,PC-GN13S78GF,Laptop,,
-NEC,PC-GN13T88AD,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn13t88ad,NEC,PC-GN13T88AD,Laptop,,
-NEC,PC-GN14CWSD3,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn14cwsd3,NEC,PC-GN14CWSD3,Laptop,,
-NEC,PC-GN15CJSA4,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn15cjsa4,NEC,PC-GN15CJSA4,Laptop,,
-NEC,PC-GN16434GE,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn16434ge,NEC,PC-GN16434GE,Laptop,,
-NEC,PC-GN1643ZGF,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn1643zgf,NEC,PC-GN1643ZGF,Laptop,,
-NEC,PC-GN164JDAF,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn164jdaf,NEC,PC-GN164JDAF,Laptop,,
-NEC,PC-GN164JFAF,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn164jfaf,NEC,PC-GN164JFAF,Laptop,,
-NEC,PC-GN164RGAH,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn164rgah,NEC,PC-GN164RGAH,Laptop,,
-NEC,PC-GN164ZEDG,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn164zedg,NEC,PC-GN164ZEDG,Laptop,,
-NEC,PC-GN165FDDD,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn165fddd,NEC,PC-GN165FDDD,Laptop,,
-NEC,PC-GN16CJSAA,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn16cjsaa,NEC,PC-GN16CJSAA,Laptop,,
-NEC,PC-GN174Z2G2,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn174z2g2,NEC,PC-GN174Z2G2,Laptop,,
-NEC,PC-GN17663AW,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn17663aw,NEC,PC-GN17663AW,Laptop,,
+NEC,PC-GN13S78AF,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn13s78af,NEC,PC-GN13S78AF,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-GN13S78GF,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn13s78gf,NEC,PC-GN13S78GF,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-GN13T88AD,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn13t88ad,NEC,PC-GN13T88AD,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update_20h1/pclist/data/list.xml
+NEC,PC-GN14CWSD3,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn14cwsd3,NEC,PC-GN14CWSD3,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-GN15CJSA4,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn15cjsa4,NEC,PC-GN15CJSA4,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-GN16434GE,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn16434ge,NEC,PC-GN16434GE,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-GN1643ZGF,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn1643zgf,NEC,PC-GN1643ZGF,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-GN164JDAF,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn164jdaf,NEC,PC-GN164JDAF,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-GN164JFAF,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn164jfaf,NEC,PC-GN164JFAF,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-GN164RGAH,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn164rgah,NEC,PC-GN164RGAH,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-GN164ZEDG,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn164zedg,NEC,PC-GN164ZEDG,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-GN165FDDD,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn165fddd,NEC,PC-GN165FDDD,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-GN16CJSAA,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn16cjsaa,NEC,PC-GN16CJSAA,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update_19h1/pclist/data/list.xml
+NEC,PC-GN174Z2G2,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn174z2g2,NEC,PC-GN174Z2G2,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-GN17663AW,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn17663aw,NEC,PC-GN17663AW,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_26h2/pclist/data/list.xml
 NEC,PC-GN176ADAZ,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn176adaz,NEC,PC-GN176ADAZ,Laptop,,https://support.nec-lavie.jp/navigate/support/info/2024/announce/office/ms_2024.html
 NEC,PC-GN176BCGW,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn176bcgw,NEC,PC-GN176BCGW,Laptop,,https://support.nec-lavie.jp/navigate/support/info/2024/announce/office/ms_2024.html
 NEC,PC-GN177JYAY,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn177jyay,NEC,PC-GN177JYAY,Laptop,,https://support.nec-lavie.jp/navigate/support/info/2024/announce/office/ms_2024.html
 NEC,PC-GN177JYLY,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn177jyly,NEC,PC-GN177JYLY,Laptop,,https://support.nec-lavie.jp/navigate/support/info/2024/announce/office/ms_2024.html
-NEC,PC-GN177RRLZ,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn177rrlz,NEC,PC-GN177RRLZ,Laptop,,
-NEC,PC-GN17CJSA6,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn17cjsa6,NEC,PC-GN17CJSA6,Laptop,,
-NEC,PC-GN17CJSA7,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn17cjsa7,NEC,PC-GN17CJSA7,Laptop,,
-NEC,PC-GN17CNSA6,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn17cnsa6,NEC,PC-GN17CNSA6,Laptop,,
-NEC,PC-GN18634GE,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn18634ge,NEC,PC-GN18634GE,Laptop,,
-NEC,PC-GN1863VGF,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn1863vgf,NEC,PC-GN1863VGF,Laptop,,
-NEC,PC-GN1863YAF,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn1863yaf,NEC,PC-GN1863YAF,Laptop,,
-NEC,PC-GN1863YGF,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn1863ygf,NEC,PC-GN1863YGF,Laptop,,
-NEC,PC-GN1863ZGF,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn1863zgf,NEC,PC-GN1863ZGF,Laptop,,
-NEC,PC-GN186J4LH,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn186j4lh,NEC,PC-GN186J4LH,Laptop,,
-NEC,PC-GN186JDDF,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn186jddf,NEC,PC-GN186JDDF,Laptop,,
-NEC,PC-GN186JFAF,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn186jfaf,NEC,PC-GN186JFAF,Laptop,,
-NEC,PC-GN186ULLH,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn186ullh,NEC,PC-GN186ULLH,Laptop,,
+NEC,PC-GN177RRLZ,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn177rrlz,NEC,PC-GN177RRLZ,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_26h2/pclist/data/list.xml
+NEC,PC-GN17CJSA6,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn17cjsa6,NEC,PC-GN17CJSA6,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-GN17CJSA7,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn17cjsa7,NEC,PC-GN17CJSA7,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-GN17CNSA6,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn17cnsa6,NEC,PC-GN17CNSA6,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-GN18634GE,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn18634ge,NEC,PC-GN18634GE,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-GN1863VGF,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn1863vgf,NEC,PC-GN1863VGF,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-GN1863YAF,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn1863yaf,NEC,PC-GN1863YAF,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-GN1863YGF,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn1863ygf,NEC,PC-GN1863YGF,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-GN1863ZGF,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn1863zgf,NEC,PC-GN1863ZGF,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-GN186J4LH,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn186j4lh,NEC,PC-GN186J4LH,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-GN186JDDF,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn186jddf,NEC,PC-GN186JDDF,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-GN186JFAF,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn186jfaf,NEC,PC-GN186JFAF,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-GN186ULLH,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn186ullh,NEC,PC-GN186ULLH,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
 NEC,PC-GN18797GS,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn18797gs,NEC,PC-GN18797GS,Laptop,,
-NEC,PC-GN187AEDC,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn187aedc,NEC,PC-GN187AEDC,Laptop,,
-NEC,PC-GN187DEDC,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn187dedc,NEC,PC-GN187DEDC,Laptop,,
-NEC,PC-GN187DELC,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn187delc,NEC,PC-GN187DELC,Laptop,,
-NEC,PC-GN187ERDC,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn187erdc,NEC,PC-GN187ERDC,Laptop,,
-NEC,PC-GN187FDAD,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn187fdad,NEC,PC-GN187FDAD,Laptop,,
-NEC,PC-GN187GDAD,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn187gdad,NEC,PC-GN187GDAD,Laptop,,
-NEC,PC-GN18BCDGV,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn18bcdgv,NEC,PC-GN18BCDGV,Laptop,,
-NEC,PC-GN18CJTAF,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn18cjtaf,NEC,PC-GN18CJTAF,Laptop,,
-NEC,PC-GN18CRHAH,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn18crhah,NEC,PC-GN18CRHAH,Laptop,,
-NEC,PC-GN18H1SDD,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn18h1sdd,NEC,PC-GN18H1SDD,Laptop,,
-NEC,PC-GN18HQRAF,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn18hqraf,NEC,PC-GN18HQRAF,Laptop,,
-NEC,PC-GN18HQRDF,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn18hqrdf,NEC,PC-GN18HQRDF,Laptop,,
-NEC,PC-GN19DJU56,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn19dju56,NEC,PC-GN19DJU56,Laptop,,
-NEC,PC-GN19DLSA7,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn19dlsa7,NEC,PC-GN19DLSA7,Laptop,,
-NEC,PC-GN202FSA4,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn202fsa4,NEC,PC-GN202FSA4,Laptop,,
+NEC,PC-GN187AEDC,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn187aedc,NEC,PC-GN187AEDC,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-GN187DEDC,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn187dedc,NEC,PC-GN187DEDC,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-GN187DELC,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn187delc,NEC,PC-GN187DELC,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-GN187ERDC,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn187erdc,NEC,PC-GN187ERDC,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-GN187FDAD,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn187fdad,NEC,PC-GN187FDAD,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-GN187GDAD,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn187gdad,NEC,PC-GN187GDAD,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-GN18BCDGV,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn18bcdgv,NEC,PC-GN18BCDGV,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_25h2/pclist/data/list.xml
+NEC,PC-GN18CJTAF,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn18cjtaf,NEC,PC-GN18CJTAF,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-GN18CRHAH,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn18crhah,NEC,PC-GN18CRHAH,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-GN18H1SDD,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn18h1sdd,NEC,PC-GN18H1SDD,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update_20h1/pclist/data/list.xml
+NEC,PC-GN18HQRAF,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn18hqraf,NEC,PC-GN18HQRAF,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update_20h1/pclist/data/list.xml
+NEC,PC-GN18HQRDF,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn18hqrdf,NEC,PC-GN18HQRDF,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update_20h1/pclist/data/list.xml
+NEC,PC-GN19DJU56,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn19dju56,NEC,PC-GN19DJU56,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-GN19DLSA7,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn19dlsa7,NEC,PC-GN19DLSA7,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-GN202FSA4,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn202fsa4,NEC,PC-GN202FSA4,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
 NEC,PC-GN20A72AY,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn20a72ay,NEC,PC-GN20A72AY,Laptop,,https://support.nec-lavie.jp/navigate/support/info/2024/announce/office/ms_2024.html
-NEC,PC-GN20CBDAS,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn20cbdas,NEC,PC-GN20CBDAS,Laptop,,
-NEC,PC-GN212RGAH,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn212rgah,NEC,PC-GN212RGAH,Laptop,,
+NEC,PC-GN20CBDAS,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn20cbdas,NEC,PC-GN20CBDAS,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_25h2/pclist/data/list.xml
+NEC,PC-GN212RGAH,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn212rgah,NEC,PC-GN212RGAH,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
 NEC,PC-GN216BBAZ,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn216bbaz,NEC,PC-GN216BBAZ,Laptop,,https://support.nec-lavie.jp/navigate/support/info/2024/announce/office/ms_2024.html
-NEC,PC-GN21EBDAV,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn21ebdav,NEC,PC-GN21EBDAV,Laptop,,
-NEC,PC-GN21ESCAY,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn21escay,NEC,PC-GN21ESCAY,Laptop,,
-NEC,PC-GN224FSA4,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn224fsa4,NEC,PC-GN224FSA4,Laptop,,
-NEC,PC-GN227BADF,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn227badf,NEC,PC-GN227BADF,Laptop,,
-NEC,PC-GN227DADF,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn227dadf,NEC,PC-GN227DADF,Laptop,,
-NEC,PC-GN22NSDAD,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn22nsdad,NEC,PC-GN22NSDAD,Laptop,,
-NEC,PC-GN232FSA6,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn232fsa6,NEC,PC-GN232FSA6,Laptop,,
-NEC,PC-GN232FSA8,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn232fsa8,NEC,PC-GN232FSA8,Laptop,,
-NEC,PC-GN232JDAF,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn232jdaf,NEC,PC-GN232JDAF,Laptop,,
-NEC,PC-GN234FSA7,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn234fsa7,NEC,PC-GN234FSA7,Laptop,,
-NEC,PC-GN234FSA8,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn234fsa8,NEC,PC-GN234FSA8,Laptop,,
-NEC,PC-GN234V2A7,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn234v2a7,NEC,PC-GN234V2A7,Laptop,,
-NEC,PC-GN23DRHAH,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn23drhah,NEC,PC-GN23DRHAH,Laptop,,
+NEC,PC-GN21EBDAV,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn21ebdav,NEC,PC-GN21EBDAV,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_25h2/pclist/data/list.xml
+NEC,PC-GN21ESCAY,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn21escay,NEC,PC-GN21ESCAY,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_26h2/pclist/data/list.xml
+NEC,PC-GN224FSA4,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn224fsa4,NEC,PC-GN224FSA4,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-GN227BADF,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn227badf,NEC,PC-GN227BADF,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-GN227DADF,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn227dadf,NEC,PC-GN227DADF,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-GN22NSDAD,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn22nsdad,NEC,PC-GN22NSDAD,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update_20h1/pclist/data/list.xml
+NEC,PC-GN232FSA6,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn232fsa6,NEC,PC-GN232FSA6,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-GN232FSA8,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn232fsa8,NEC,PC-GN232FSA8,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-GN232JDAF,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn232jdaf,NEC,PC-GN232JDAF,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update_20h1/pclist/data/list.xml
+NEC,PC-GN234FSA7,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn234fsa7,NEC,PC-GN234FSA7,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-GN234FSA8,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn234fsa8,NEC,PC-GN234FSA8,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-GN234V2A7,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn234v2a7,NEC,PC-GN234V2A7,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-GN23DRHAH,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn23drhah,NEC,PC-GN23DRHAH,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
 NEC,PC-GN23GDDGZ,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn23gddgz,NEC,PC-GN23GDDGZ,Laptop,,
-NEC,PC-GN242FRAA,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn242fraa,NEC,PC-GN242FRAA,Laptop,,
-NEC,PC-GN242U3GA,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn242u3ga,NEC,PC-GN242U3GA,Laptop,,
-NEC,PC-GN245JGAS,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn245jgas,NEC,PC-GN245JGAS,Laptop,,
-NEC,PC-GN245LGAS,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn245lgas,NEC,PC-GN245LGAS,Laptop,,
-NEC,PC-GN246BCG4,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn246bcg4,NEC,PC-GN246BCG4,Laptop,,
-NEC,PC-GN246W1A5,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn246w1a5,NEC,PC-GN246W1A5,Laptop,,
-NEC,PC-GN246W1G4,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn246w1g4,NEC,PC-GN246W1G4,Laptop,,
-NEC,PC-GN246Y3A6,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn246y3a6,NEC,PC-GN246Y3A6,Laptop,,
+NEC,PC-GN242FRAA,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn242fraa,NEC,PC-GN242FRAA,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update_19h1/pclist/data/list.xml
+NEC,PC-GN242U3GA,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn242u3ga,NEC,PC-GN242U3GA,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update_20h1/pclist/data/list.xml
+NEC,PC-GN245JGAS,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn245jgas,NEC,PC-GN245JGAS,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_25h2/pclist/data/list.xml
+NEC,PC-GN245LGAS,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn245lgas,NEC,PC-GN245LGAS,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_25h2/pclist/data/list.xml
+NEC,PC-GN246BCG4,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn246bcg4,NEC,PC-GN246BCG4,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-GN246W1A5,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn246w1a5,NEC,PC-GN246W1A5,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-GN246W1G4,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn246w1g4,NEC,PC-GN246W1G4,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-GN246Y3A6,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn246y3a6,NEC,PC-GN246Y3A6,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
 NEC,PC-GN247AGG2,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn247agg2,NEC,PC-GN247AGG2,Laptop,,https://support.nec-lavie.jp/navigate/support/info/2025/announce/u6/u6_201405.html
 NEC,PC-GN247CGA2,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn247cga2,NEC,PC-GN247CGA2,Laptop,,https://support.nec-lavie.jp/navigate/support/info/2025/announce/u6/u6_201405.html
-NEC,PC-GN247GGGY,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn247gggy,NEC,PC-GN247GGGY,Laptop,,
-NEC,PC-GN254FSA9,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn254fsa9,NEC,PC-GN254FSA9,Laptop,,
-NEC,PC-GN254FSAA,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn254fsaa,NEC,PC-GN254FSAA,Laptop,,
-NEC,PC-GN254U1AA,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn254u1aa,NEC,PC-GN254U1AA,Laptop,,
-NEC,PC-GN254U1GA,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn254u1ga,NEC,PC-GN254U1GA,Laptop,,
-NEC,PC-GN254V1AA,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn254v1aa,NEC,PC-GN254V1AA,Laptop,,
-NEC,PC-GN254W1AA,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn254w1aa,NEC,PC-GN254W1AA,Laptop,,
-NEC,PC-GN256W1G7,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn256w1g7,NEC,PC-GN256W1G7,Laptop,,
-NEC,PC-GN256W3A9,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn256w3a9,NEC,PC-GN256W3A9,Laptop,,
-NEC,PC-GN256W3G7,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn256w3g7,NEC,PC-GN256W3G7,Laptop,,
-NEC,PC-GN256Y3A9,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn256y3a9,NEC,PC-GN256Y3A9,Laptop,,
+NEC,PC-GN247GGGY,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn247gggy,NEC,PC-GN247GGGY,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_26h2/pclist/data/list.xml
+NEC,PC-GN254FSA9,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn254fsa9,NEC,PC-GN254FSA9,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-GN254FSAA,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn254fsaa,NEC,PC-GN254FSAA,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update_19h1/pclist/data/list.xml
+NEC,PC-GN254U1AA,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn254u1aa,NEC,PC-GN254U1AA,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update_20h1/pclist/data/list.xml
+NEC,PC-GN254U1GA,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn254u1ga,NEC,PC-GN254U1GA,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update_20h1/pclist/data/list.xml
+NEC,PC-GN254V1AA,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn254v1aa,NEC,PC-GN254V1AA,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update_20h1/pclist/data/list.xml
+NEC,PC-GN254W1AA,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn254w1aa,NEC,PC-GN254W1AA,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update_20h1/pclist/data/list.xml
+NEC,PC-GN256W1G7,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn256w1g7,NEC,PC-GN256W1G7,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-GN256W3A9,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn256w3a9,NEC,PC-GN256W3A9,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-GN256W3G7,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn256w3g7,NEC,PC-GN256W3G7,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-GN256Y3A9,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn256y3a9,NEC,PC-GN256Y3A9,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
 NEC,PC-GN25F1SDC,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn25f1sdc,NEC,PC-GN25F1SDC,Laptop,,
-NEC,PC-GN265HGGY,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn265hggy,NEC,PC-GN265HGGY,Laptop,,
-NEC,PC-GN265TSA3,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn265tsa3,NEC,PC-GN265TSA3,Laptop,,
-NEC,PC-GN268GGGY,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn268gggy,NEC,PC-GN268GGGY,Laptop,,
-NEC,PC-GN268HGGY,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn268hggy,NEC,PC-GN268HGGY,Laptop,,
-NEC,PC-GN276FRGB,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn276frgb,NEC,PC-GN276FRGB,Laptop,,
-NEC,PC-GN276U1GA,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn276u1ga,NEC,PC-GN276U1GA,Laptop,,
-NEC,PC-GN276V1GA,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn276v1ga,NEC,PC-GN276V1GA,Laptop,,
+NEC,PC-GN265HGGY,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn265hggy,NEC,PC-GN265HGGY,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_26h2/pclist/data/list.xml
+NEC,PC-GN265TSA3,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn265tsa3,NEC,PC-GN265TSA3,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-GN268GGGY,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn268gggy,NEC,PC-GN268GGGY,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_26h2/pclist/data/list.xml
+NEC,PC-GN268HGGY,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn268hggy,NEC,PC-GN268HGGY,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_26h2/pclist/data/list.xml
+NEC,PC-GN276FRGB,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn276frgb,NEC,PC-GN276FRGB,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update_20h1/pclist/data/list.xml
+NEC,PC-GN276U1GA,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn276u1ga,NEC,PC-GN276U1GA,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update_20h1/pclist/data/list.xml
+NEC,PC-GN276V1GA,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn276v1ga,NEC,PC-GN276V1GA,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update_20h1/pclist/data/list.xml
 NEC,PC-GN27BBBDZ,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn27bbbdz,NEC,PC-GN27BBBDZ,Laptop,,https://support.nec-lavie.jp/navigate/support/info/2024/announce/office/ms_2024.html
-NEC,PC-GN286BCAN,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn286bcan,NEC,PC-GN286BCAN,Laptop,,
-NEC,PC-GN286J4DN,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn286j4dn,NEC,PC-GN286J4DN,Laptop,,
-NEC,PC-GN286RLGN,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn286rlgn,NEC,PC-GN286RLGN,Laptop,,
-NEC,PC-GN287AAAS,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn287aaas,NEC,PC-GN287AAAS,Laptop,,
-NEC,PC-GN287JGAS,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn287jgas,NEC,PC-GN287JGAS,Laptop,,
-NEC,PC-GN287TUAS,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn287tuas,NEC,PC-GN287TUAS,Laptop,,
+NEC,PC-GN286BCAN,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn286bcan,NEC,PC-GN286BCAN,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_25h2/pclist/data/list.xml
+NEC,PC-GN286J4DN,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn286j4dn,NEC,PC-GN286J4DN,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_25h2/pclist/data/list.xml
+NEC,PC-GN286RLGN,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn286rlgn,NEC,PC-GN286RLGN,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_25h2/pclist/data/list.xml
+NEC,PC-GN287AAAS,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn287aaas,NEC,PC-GN287AAAS,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_25h2/pclist/data/list.xml
+NEC,PC-GN287JGAS,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn287jgas,NEC,PC-GN287JGAS,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_25h2/pclist/data/list.xml
+NEC,PC-GN287TUAS,model,pending,https://jp.drvhub.net/laptops/nec/pc-gn287tuas,NEC,PC-GN287TUAS,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_25h2/pclist/data/list.xml
 NEC,PC-LL350VG1Y,model,pending,https://jp.drvhub.net/laptops/nec/pc-ll350vg1y,NEC,PC-LL350VG1Y,Laptop,,
 NEC,PC-LL370DS6B,model,pending,https://jp.drvhub.net/laptops/nec/pc-ll370ds6b,NEC,PC-LL370DS6B,Laptop,,
 NEC,PC-LL550GD,model,pending,https://jp.drvhub.net/laptops/nec/pc-ll550gd,NEC,PC-LL550GD,Laptop,,
@@ -9241,22 +9241,22 @@ NEC,PC-LL750LS6G,model,pending,https://jp.drvhub.net/laptops/nec/pc-ll750ls6g,NE
 NEC,PC-LL750LS6R,model,pending,https://jp.drvhub.net/laptops/nec/pc-ll750ls6r,NEC,PC-LL750LS6R,Laptop,,
 NEC,PC-LL750LS6W,model,pending,https://jp.drvhub.net/laptops/nec/pc-ll750ls6w,NEC,PC-LL750LS6W,Laptop,,
 NEC,PC-LL750MG,model,pending,https://jp.drvhub.net/laptops/nec/pc-ll750mg,NEC,PC-LL750MG,Laptop,,
-NEC,PC-LL750MSB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ll750msb,NEC,PC-LL750MSB,Laptop,,
-NEC,PC-LL750MSB-BG,model,pending,https://jp.drvhub.net/laptops/nec/pc-ll750msb-bg,NEC,PC-LL750MSB-BG,Laptop,,
-NEC,PC-LL750MSB-KS,model,pending,https://jp.drvhub.net/laptops/nec/pc-ll750msb-ks,NEC,PC-LL750MSB-KS,Laptop,,
-NEC,PC-LL750MSG,model,pending,https://jp.drvhub.net/laptops/nec/pc-ll750msg,NEC,PC-LL750MSG,Laptop,,
-NEC,PC-LL750MSG-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-ll750msg-e3,NEC,PC-LL750MSG-E3,Laptop,,
-NEC,PC-LL750MSR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ll750msr,NEC,PC-LL750MSR,Laptop,,
-NEC,PC-LL750MSR-KS,model,pending,https://jp.drvhub.net/laptops/nec/pc-ll750msr-ks,NEC,PC-LL750MSR-KS,Laptop,,
-NEC,PC-LL750MSW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ll750msw,NEC,PC-LL750MSW,Laptop,,
-NEC,PC-LL750MSW-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-ll750msw-e3,NEC,PC-LL750MSW-E3,Laptop,,
-NEC,PC-LL750MSW-KS,model,pending,https://jp.drvhub.net/laptops/nec/pc-ll750msw-ks,NEC,PC-LL750MSW-KS,Laptop,,
-NEC,PC-LL750NSB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ll750nsb,NEC,PC-LL750NSB,Laptop,,
-NEC,PC-LL750NSG,model,pending,https://jp.drvhub.net/laptops/nec/pc-ll750nsg,NEC,PC-LL750NSG,Laptop,,
-NEC,PC-LL750NSG-KS,model,pending,https://jp.drvhub.net/laptops/nec/pc-ll750nsg-ks,NEC,PC-LL750NSG-KS,Laptop,,
-NEC,PC-LL750NSR-KS,model,pending,https://jp.drvhub.net/laptops/nec/pc-ll750nsr-ks,NEC,PC-LL750NSR-KS,Laptop,,
-NEC,PC-LL750NSW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ll750nsw,NEC,PC-LL750NSW,Laptop,,
-NEC,PC-LL750NSW-KS,model,pending,https://jp.drvhub.net/laptops/nec/pc-ll750nsw-ks,NEC,PC-LL750NSW-KS,Laptop,,
+NEC,PC-LL750MSB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ll750msb,NEC,PC-LL750MSB,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LL750MSB-BG,model,pending,https://jp.drvhub.net/laptops/nec/pc-ll750msb-bg,NEC,PC-LL750MSB-BG,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LL750MSB-KS,model,pending,https://jp.drvhub.net/laptops/nec/pc-ll750msb-ks,NEC,PC-LL750MSB-KS,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LL750MSG,model,pending,https://jp.drvhub.net/laptops/nec/pc-ll750msg,NEC,PC-LL750MSG,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LL750MSG-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-ll750msg-e3,NEC,PC-LL750MSG-E3,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LL750MSR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ll750msr,NEC,PC-LL750MSR,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LL750MSR-KS,model,pending,https://jp.drvhub.net/laptops/nec/pc-ll750msr-ks,NEC,PC-LL750MSR-KS,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LL750MSW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ll750msw,NEC,PC-LL750MSW,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LL750MSW-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-ll750msw-e3,NEC,PC-LL750MSW-E3,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LL750MSW-KS,model,pending,https://jp.drvhub.net/laptops/nec/pc-ll750msw-ks,NEC,PC-LL750MSW-KS,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LL750NSB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ll750nsb,NEC,PC-LL750NSB,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LL750NSG,model,pending,https://jp.drvhub.net/laptops/nec/pc-ll750nsg,NEC,PC-LL750NSG,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LL750NSG-KS,model,pending,https://jp.drvhub.net/laptops/nec/pc-ll750nsg-ks,NEC,PC-LL750NSG-KS,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LL750NSR-KS,model,pending,https://jp.drvhub.net/laptops/nec/pc-ll750nsr-ks,NEC,PC-LL750NSR-KS,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LL750NSW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ll750nsw,NEC,PC-LL750NSW,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LL750NSW-KS,model,pending,https://jp.drvhub.net/laptops/nec/pc-ll750nsw-ks,NEC,PC-LL750NSW-KS,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
 NEC,PC-LL750RG1B,model,pending,https://jp.drvhub.net/laptops/nec/pc-ll750rg1b,NEC,PC-LL750RG1B,Laptop,,
 NEC,PC-LL750RSG,model,pending,https://jp.drvhub.net/laptops/nec/pc-ll750rsg,NEC,PC-LL750RSG,Laptop,,https://support.nec-lavie.jp/navigate/support/info/2025/announce/u6/u6_201401.html
 NEC,PC-LL750RSR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ll750rsr,NEC,PC-LL750RSR,Laptop,,https://support.nec-lavie.jp/navigate/support/info/2025/announce/u6/u6_201401.html
@@ -9275,7 +9275,7 @@ NEC,PC-LL750WG3EB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ll750wg3eb,
 NEC,PC-LL750WG6R,model,pending,https://jp.drvhub.net/laptops/nec/pc-ll750wg6r,NEC,PC-LL750WG6R,Laptop,,
 NEC,PC-LL750WG6W,model,pending,https://jp.drvhub.net/laptops/nec/pc-ll750wg6w,NEC,PC-LL750WG6W,Laptop,,
 NEC,PC-LL850ES6B,model,pending,https://jp.drvhub.net/laptops/nec/pc-ll850es6b,NEC,PC-LL850ES6B,Laptop,,
-NEC,PC-LL850MSB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ll850msb,NEC,PC-LL850MSB,Laptop,,
+NEC,PC-LL850MSB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ll850msb,NEC,PC-LL850MSB,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
 NEC,PC-LL850SSB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ll850ssb,NEC,PC-LL850SSB,Laptop,,https://support.nec-lavie.jp/navigate/support/info/2025/announce/u6/u6_201405.html
 NEC,PC-LL850SSW-J,model,pending,https://jp.drvhub.net/laptops/nec/pc-ll850ssw-j,NEC,PC-LL850SSW-J,Laptop,,https://support.nec-lavie.jp/navigate/support/info/2025/announce/u6/u6_201405.html
 NEC,PC-LM350BS6W,model,pending,https://jp.drvhub.net/laptops/nec/pc-lm350bs6w,NEC,PC-LM350BS6W,Laptop,,
@@ -9323,29 +9323,29 @@ NEC,PC-LS150LS1KSW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls150ls1ks
 NEC,PC-LS150LS1TB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls150ls1tb,NEC,PC-LS150LS1TB,Laptop,,
 NEC,PC-LS150LS6B,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls150ls6b,NEC,PC-LS150LS6B,Laptop,,
 NEC,PC-LS150LS6W,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls150ls6w,NEC,PC-LS150LS6W,Laptop,,
-NEC,PC-LS150MSB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls150msb,NEC,PC-LS150MSB,Laptop,,
-NEC,PC-LS150MSR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls150msr,NEC,PC-LS150MSR,Laptop,,
-NEC,PC-LS150MSR-T1,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls150msr-t1,NEC,PC-LS150MSR-T1,Laptop,,
-NEC,PC-LS150MSW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls150msw,NEC,PC-LS150MSW,Laptop,,
-NEC,PC-LS150MSW-KS,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls150msw-ks,NEC,PC-LS150MSW-KS,Laptop,,
-NEC,PC-LS150NSB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls150nsb,NEC,PC-LS150NSB,Laptop,,
-NEC,PC-LS150NSR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls150nsr,NEC,PC-LS150NSR,Laptop,,
-NEC,PC-LS150NSW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls150nsw,NEC,PC-LS150NSW,Laptop,,
-NEC,PC-LS150RSB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls150rsb,NEC,PC-LS150RSB,Laptop,,
-NEC,PC-LS150RSR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls150rsr,NEC,PC-LS150RSR,Laptop,,
-NEC,PC-LS150RSR-KS,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls150rsr-ks,NEC,PC-LS150RSR-KS,Laptop,,
-NEC,PC-LS150RSR-T1,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls150rsr-t1,NEC,PC-LS150RSR-T1,Laptop,,
-NEC,PC-LS150RSW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls150rsw,NEC,PC-LS150RSW,Laptop,,
-NEC,PC-LS150RSW-T1,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls150rsw-t1,NEC,PC-LS150RSW-T1,Laptop,,
-NEC,PC-LS150SSB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls150ssb,NEC,PC-LS150SSB,Laptop,,
-NEC,PC-LS150SSR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls150ssr,NEC,PC-LS150SSR,Laptop,,
-NEC,PC-LS150SSR-T1,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls150ssr-t1,NEC,PC-LS150SSR-T1,Laptop,,
-NEC,PC-LS150SSW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls150ssw,NEC,PC-LS150SSW,Laptop,,
-NEC,PC-LS150SSW-KS,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls150ssw-ks,NEC,PC-LS150SSW-KS,Laptop,,
-NEC,PC-LS150TSR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls150tsr,NEC,PC-LS150TSR,Laptop,,
-NEC,PC-LS150TSR-KS,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls150tsr-ks,NEC,PC-LS150TSR-KS,Laptop,,
-NEC,PC-LS150TSW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls150tsw,NEC,PC-LS150TSW,Laptop,,
-NEC,PC-LS150TSW-J,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls150tsw-j,NEC,PC-LS150TSW-J,Laptop,,
+NEC,PC-LS150MSB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls150msb,NEC,PC-LS150MSB,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS150MSR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls150msr,NEC,PC-LS150MSR,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS150MSR-T1,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls150msr-t1,NEC,PC-LS150MSR-T1,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS150MSW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls150msw,NEC,PC-LS150MSW,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS150MSW-KS,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls150msw-ks,NEC,PC-LS150MSW-KS,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS150NSB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls150nsb,NEC,PC-LS150NSB,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS150NSR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls150nsr,NEC,PC-LS150NSR,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS150NSW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls150nsw,NEC,PC-LS150NSW,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS150RSB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls150rsb,NEC,PC-LS150RSB,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS150RSR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls150rsr,NEC,PC-LS150RSR,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS150RSR-KS,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls150rsr-ks,NEC,PC-LS150RSR-KS,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS150RSR-T1,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls150rsr-t1,NEC,PC-LS150RSR-T1,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS150RSW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls150rsw,NEC,PC-LS150RSW,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS150RSW-T1,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls150rsw-t1,NEC,PC-LS150RSW-T1,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS150SSB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls150ssb,NEC,PC-LS150SSB,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS150SSR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls150ssr,NEC,PC-LS150SSR,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS150SSR-T1,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls150ssr-t1,NEC,PC-LS150SSR-T1,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS150SSW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls150ssw,NEC,PC-LS150SSW,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS150SSW-KS,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls150ssw-ks,NEC,PC-LS150SSW-KS,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS150TSR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls150tsr,NEC,PC-LS150TSR,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS150TSR-KS,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls150tsr-ks,NEC,PC-LS150TSR-KS,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS150TSW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls150tsw,NEC,PC-LS150TSW,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS150TSW-J,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls150tsw-j,NEC,PC-LS150TSW-J,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
 NEC,PC-LS350BS1KB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls350bs1kb,NEC,PC-LS350BS1KB,Laptop,,
 NEC,PC-LS350CS1EW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls350cs1ew,NEC,PC-LS350CS1EW,Laptop,,
 NEC,PC-LS350CS2KS,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls350cs2ks,NEC,PC-LS350CS2KS,Laptop,,
@@ -9358,21 +9358,21 @@ NEC,PC-LS350FS2SW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls350fs2sw,
 NEC,PC-LS350HS1JR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls350hs1jr,NEC,PC-LS350HS1JR,Laptop,,
 NEC,PC-LS350HS6W,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls350hs6w,NEC,PC-LS350HS6W,Laptop,,
 NEC,PC-LS350LS1YB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls350ls1yb,NEC,PC-LS350LS1YB,Laptop,,
-NEC,PC-LS350MSB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls350msb,NEC,PC-LS350MSB,Laptop,,
-NEC,PC-LS350MSR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls350msr,NEC,PC-LS350MSR,Laptop,,
-NEC,PC-LS350MSW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls350msw,NEC,PC-LS350MSW,Laptop,,
-NEC,PC-LS350NSR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls350nsr,NEC,PC-LS350NSR,Laptop,,
-NEC,PC-LS350RSB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls350rsb,NEC,PC-LS350RSB,Laptop,,
-NEC,PC-LS350RSR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls350rsr,NEC,PC-LS350RSR,Laptop,,
-NEC,PC-LS350RSW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls350rsw,NEC,PC-LS350RSW,Laptop,,
-NEC,PC-LS350RSW-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls350rsw-e3,NEC,PC-LS350RSW-E3,Laptop,,
-NEC,PC-LS350SSB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls350ssb,NEC,PC-LS350SSB,Laptop,,
-NEC,PC-LS350SSW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls350ssw,NEC,PC-LS350SSW,Laptop,,
-NEC,PC-LS350TSB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls350tsb,NEC,PC-LS350TSB,Laptop,,
-NEC,PC-LS350TSB-YC,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls350tsb-yc,NEC,PC-LS350TSB-YC,Laptop,,
-NEC,PC-LS350TSR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls350tsr,NEC,PC-LS350TSR,Laptop,,
-NEC,PC-LS350TSW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls350tsw,NEC,PC-LS350TSW,Laptop,,
-NEC,PC-LS350TSW-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls350tsw-e3,NEC,PC-LS350TSW-E3,Laptop,,
+NEC,PC-LS350MSB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls350msb,NEC,PC-LS350MSB,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS350MSR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls350msr,NEC,PC-LS350MSR,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS350MSW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls350msw,NEC,PC-LS350MSW,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS350NSR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls350nsr,NEC,PC-LS350NSR,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS350RSB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls350rsb,NEC,PC-LS350RSB,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS350RSR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls350rsr,NEC,PC-LS350RSR,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS350RSW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls350rsw,NEC,PC-LS350RSW,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS350RSW-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls350rsw-e3,NEC,PC-LS350RSW-E3,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS350SSB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls350ssb,NEC,PC-LS350SSB,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS350SSW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls350ssw,NEC,PC-LS350SSW,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS350TSB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls350tsb,NEC,PC-LS350TSB,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS350TSB-YC,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls350tsb-yc,NEC,PC-LS350TSB-YC,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS350TSR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls350tsr,NEC,PC-LS350TSR,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS350TSW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls350tsw,NEC,PC-LS350TSW,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS350TSW-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls350tsw-e3,NEC,PC-LS350TSW-E3,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
 NEC,PC-LS450JS1YB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls450js1yb,NEC,PC-LS450JS1YB,Laptop,,
 NEC,PC-LS450JS6R,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls450js6r,NEC,PC-LS450JS6R,Laptop,,
 NEC,PC-LS450JS6W,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls450js6w,NEC,PC-LS450JS6W,Laptop,,
@@ -9405,294 +9405,294 @@ NEC,PC-LS550HS3EB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls550hs3eb,
 NEC,PC-LS550J26B,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls550j26b,NEC,PC-LS550J26B,Laptop,,
 NEC,PC-LS550LS1KSB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls550ls1ksb,NEC,PC-LS550LS1KSB,Laptop,,
 NEC,PC-LS550LS1YG,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls550ls1yg,NEC,PC-LS550LS1YG,Laptop,,
-NEC,PC-LS550MSB-Y,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls550msb-y,NEC,PC-LS550MSB-Y,Laptop,,
-NEC,PC-LS550MSR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls550msr,NEC,PC-LS550MSR,Laptop,,
-NEC,PC-LS550MSR-Y,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls550msr-y,NEC,PC-LS550MSR-Y,Laptop,,
-NEC,PC-LS550MSW-E31,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls550msw-e31,NEC,PC-LS550MSW-E31,Laptop,,
-NEC,PC-LS550MSW-E32,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls550msw-e32,NEC,PC-LS550MSW-E32,Laptop,,
-NEC,PC-LS550MSW-J,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls550msw-j,NEC,PC-LS550MSW-J,Laptop,,
-NEC,PC-LS550MSW-KS2,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls550msw-ks2,NEC,PC-LS550MSW-KS2,Laptop,,
-NEC,PC-LS550MSW-Y,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls550msw-y,NEC,PC-LS550MSW-Y,Laptop,,
-NEC,PC-LS550NSB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls550nsb,NEC,PC-LS550NSB,Laptop,,
-NEC,PC-LS550NSR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls550nsr,NEC,PC-LS550NSR,Laptop,,
-NEC,PC-LS550NSW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls550nsw,NEC,PC-LS550NSW,Laptop,,
-NEC,PC-LS550NSW-KS,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls550nsw-ks,NEC,PC-LS550NSW-KS,Laptop,,
-NEC,PC-LS550RSB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls550rsb,NEC,PC-LS550RSB,Laptop,,
-NEC,PC-LS550RSR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls550rsr,NEC,PC-LS550RSR,Laptop,,
-NEC,PC-LS550RSW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls550rsw,NEC,PC-LS550RSW,Laptop,,
-NEC,PC-LS550SSW-Y,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls550ssw-y,NEC,PC-LS550SSW-Y,Laptop,,
-NEC,PC-LS550TSB-KS,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls550tsb-ks,NEC,PC-LS550TSB-KS,Laptop,,
-NEC,PC-LS550TSR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls550tsr,NEC,PC-LS550TSR,Laptop,,
-NEC,PC-LS550TSW-Y,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls550tsw-y,NEC,PC-LS550TSW-Y,Laptop,,
-NEC,PC-LS700NSB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls700nsb,NEC,PC-LS700NSB,Laptop,,
-NEC,PC-LS700NSR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls700nsr,NEC,PC-LS700NSR,Laptop,,
-NEC,PC-LS700NSR-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls700nsr-e3,NEC,PC-LS700NSR-E3,Laptop,,
-NEC,PC-LS700NSW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls700nsw,NEC,PC-LS700NSW,Laptop,,
-NEC,PC-LS700RSR-T,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls700rsr-t,NEC,PC-LS700RSR-T,Laptop,,
-NEC,PC-LS700SSB-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls700ssb-e3,NEC,PC-LS700SSB-E3,Laptop,,
-NEC,PC-LS700TSB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls700tsb,NEC,PC-LS700TSB,Laptop,,
+NEC,PC-LS550MSB-Y,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls550msb-y,NEC,PC-LS550MSB-Y,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS550MSR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls550msr,NEC,PC-LS550MSR,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS550MSR-Y,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls550msr-y,NEC,PC-LS550MSR-Y,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS550MSW-E31,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls550msw-e31,NEC,PC-LS550MSW-E31,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS550MSW-E32,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls550msw-e32,NEC,PC-LS550MSW-E32,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS550MSW-J,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls550msw-j,NEC,PC-LS550MSW-J,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS550MSW-KS2,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls550msw-ks2,NEC,PC-LS550MSW-KS2,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS550MSW-Y,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls550msw-y,NEC,PC-LS550MSW-Y,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS550NSB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls550nsb,NEC,PC-LS550NSB,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS550NSR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls550nsr,NEC,PC-LS550NSR,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS550NSW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls550nsw,NEC,PC-LS550NSW,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS550NSW-KS,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls550nsw-ks,NEC,PC-LS550NSW-KS,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS550RSB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls550rsb,NEC,PC-LS550RSB,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS550RSR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls550rsr,NEC,PC-LS550RSR,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS550RSW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls550rsw,NEC,PC-LS550RSW,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS550SSW-Y,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls550ssw-y,NEC,PC-LS550SSW-Y,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS550TSB-KS,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls550tsb-ks,NEC,PC-LS550TSB-KS,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS550TSR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls550tsr,NEC,PC-LS550TSR,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS550TSW-Y,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls550tsw-y,NEC,PC-LS550TSW-Y,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS700NSB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls700nsb,NEC,PC-LS700NSB,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS700NSR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls700nsr,NEC,PC-LS700NSR,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS700NSR-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls700nsr-e3,NEC,PC-LS700NSR-E3,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS700NSW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls700nsw,NEC,PC-LS700NSW,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS700RSR-T,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls700rsr-t,NEC,PC-LS700RSR-T,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS700SSB-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls700ssb-e3,NEC,PC-LS700SSB-E3,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LS700TSB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ls700tsb,NEC,PC-LS700TSB,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
 NEC,PC-LZ550JS,model,pending,https://jp.drvhub.net/laptops/nec/pc-lz550js,NEC,PC-LZ550JS,Laptop,,
-NEC,PC-LZ550SSB,model,pending,https://jp.drvhub.net/laptops/nec/pc-lz550ssb,NEC,PC-LZ550SSB,Laptop,,
-NEC,PC-LZ550TSB,model,pending,https://jp.drvhub.net/laptops/nec/pc-lz550tsb,NEC,PC-LZ550TSB,Laptop,,
-NEC,PC-LZ650NSB,model,pending,https://jp.drvhub.net/laptops/nec/pc-lz650nsb,NEC,PC-LZ650NSB,Laptop,,
-NEC,PC-LZ650SSS,model,pending,https://jp.drvhub.net/laptops/nec/pc-lz650sss,NEC,PC-LZ650SSS,Laptop,,
-NEC,PC-LZ650TSS,model,pending,https://jp.drvhub.net/laptops/nec/pc-lz650tss,NEC,PC-LZ650TSS,Laptop,,
-NEC,PC-LZ750MSS,model,pending,https://jp.drvhub.net/laptops/nec/pc-lz750mss,NEC,PC-LZ750MSS,Laptop,,
-NEC,PC-N1255BAW-YC,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1255baw-yc,NEC,PC-N1255BAW-YC,Laptop,,
-NEC,PC-N1355FAM,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1355fam,NEC,PC-N1355FAM,Laptop,,
-NEC,PC-N1355FAM-YC,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1355fam-yc,NEC,PC-N1355FAM-YC,Laptop,,
+NEC,PC-LZ550SSB,model,pending,https://jp.drvhub.net/laptops/nec/pc-lz550ssb,NEC,PC-LZ550SSB,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LZ550TSB,model,pending,https://jp.drvhub.net/laptops/nec/pc-lz550tsb,NEC,PC-LZ550TSB,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LZ650NSB,model,pending,https://jp.drvhub.net/laptops/nec/pc-lz650nsb,NEC,PC-LZ650NSB,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LZ650SSS,model,pending,https://jp.drvhub.net/laptops/nec/pc-lz650sss,NEC,PC-LZ650SSS,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LZ650TSS,model,pending,https://jp.drvhub.net/laptops/nec/pc-lz650tss,NEC,PC-LZ650TSS,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LZ750MSS,model,pending,https://jp.drvhub.net/laptops/nec/pc-lz750mss,NEC,PC-LZ750MSS,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-N1255BAW-YC,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1255baw-yc,NEC,PC-N1255BAW-YC,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_25h2/pclist/data/list.xml
+NEC,PC-N1355FAM,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1355fam,NEC,PC-N1355FAM,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_26h2/pclist/data/list.xml
+NEC,PC-N1355FAM-YC,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1355fam-yc,NEC,PC-N1355FAM-YC,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_26h2/pclist/data/list.xml
 NEC,PC-N1355JAM,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1355jam,NEC,PC-N1355JAM,Laptop,,https://support.nec-lavie.jp/navigate/rescue/ultracare/jpn/products.html
 NEC,PC-N1355JAS-J,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1355jas-j,NEC,PC-N1355JAS-J,Laptop,,https://support.nec-lavie.jp/navigate/rescue/ultracare/jpn/products.html
 NEC,PC-N1355JAS-YC,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1355jas-yc,NEC,PC-N1355JAS-YC,Laptop,,https://support.nec-lavie.jp/navigate/rescue/ultracare/jpn/products.html
 NEC,PC-N135CDSL,model,pending,https://jp.drvhub.net/laptops/nec/pc-n135cdsl,NEC,PC-N135CDSL,Laptop,,
-NEC,PC-N1375DAL,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1375dal,NEC,PC-N1375DAL,Laptop,,
-NEC,PC-N1375FAL,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1375fal,NEC,PC-N1375FAL,Laptop,,
-NEC,PC-N1455HAL,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1455hal,NEC,PC-N1455HAL,Laptop,,
+NEC,PC-N1375DAL,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1375dal,NEC,PC-N1375DAL,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_25h2/pclist/data/list.xml
+NEC,PC-N1375FAL,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1375fal,NEC,PC-N1375FAL,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_26h2/pclist/data/list.xml
+NEC,PC-N1455HAL,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1455hal,NEC,PC-N1455HAL,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_26h2/pclist/data/list.xml
 NEC,PC-N145CHAL,model,pending,https://jp.drvhub.net/laptops/nec/pc-n145chal,NEC,PC-N145CHAL,Laptop,,https://support.nec-lavie.jp/navigate/support/info/2024/announce/office/ms_2024.html
-NEC,PC-N1475CAL,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1475cal,NEC,PC-N1475CAL,Laptop,,
-NEC,PC-N1475HAL,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1475hal,NEC,PC-N1475HAL,Laptop,,
-NEC,PC-N1515CAW-H4,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1515caw-h4,NEC,PC-N1515CAW-H4,Laptop,,
-NEC,PC-N1535BZW-2,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1535bzw-2,NEC,PC-N1535BZW-2,Laptop,,
-NEC,PC-N1535EAL,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1535eal,NEC,PC-N1535EAL,Laptop,,
-NEC,PC-N1535GAL,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1535gal,NEC,PC-N1535GAL,Laptop,,
-NEC,PC-N1535GAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1535gaw,NEC,PC-N1535GAW,Laptop,,
-NEC,PC-N1535GAW-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1535gaw-e3,NEC,PC-N1535GAW-E3,Laptop,,
-NEC,PC-N1536AAB-J,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1536aab-j,NEC,PC-N1536AAB-J,Laptop,,
-NEC,PC-N1536EAW-N,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1536eaw-n,NEC,PC-N1536EAW-N,Laptop,,
-NEC,PC-N153CEAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-n153ceaw,NEC,PC-N153CEAW,Laptop,,
-NEC,PC-N153CGAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-n153cgaw,NEC,PC-N153CGAW,Laptop,,
+NEC,PC-N1475CAL,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1475cal,NEC,PC-N1475CAL,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_25h2/pclist/data/list.xml
+NEC,PC-N1475HAL,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1475hal,NEC,PC-N1475HAL,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_26h2/pclist/data/list.xml
+NEC,PC-N1515CAW-H4,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1515caw-h4,NEC,PC-N1515CAW-H4,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_25h2/pclist/data/list.xml
+NEC,PC-N1535BZW-2,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1535bzw-2,NEC,PC-N1535BZW-2,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_25h2/pclist/data/list.xml
+NEC,PC-N1535EAL,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1535eal,NEC,PC-N1535EAL,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_25h2/pclist/data/list.xml
+NEC,PC-N1535GAL,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1535gal,NEC,PC-N1535GAL,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_26h2/pclist/data/list.xml
+NEC,PC-N1535GAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1535gaw,NEC,PC-N1535GAW,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_26h2/pclist/data/list.xml
+NEC,PC-N1535GAW-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1535gaw-e3,NEC,PC-N1535GAW-E3,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_26h2/pclist/data/list.xml
+NEC,PC-N1536AAB-J,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1536aab-j,NEC,PC-N1536AAB-J,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-N1536EAW-N,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1536eaw-n,NEC,PC-N1536EAW-N,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_25h2/pclist/data/list.xml
+NEC,PC-N153CEAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-n153ceaw,NEC,PC-N153CEAW,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_25h2/pclist/data/list.xml
+NEC,PC-N153CGAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-n153cgaw,NEC,PC-N153CGAW,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_26h2/pclist/data/list.xml
 NEC,PC-N153DFAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-n153dfaw,NEC,PC-N153DFAW,Laptop,,https://support.nec-lavie.jp/navigate/support/info/2024/announce/office/ms_2024.html
-NEC,PC-N1555AAR-YC,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1555aar-yc,NEC,PC-N1555AAR-YC,Laptop,,
+NEC,PC-N1555AAR-YC,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1555aar-yc,NEC,PC-N1555AAR-YC,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
 NEC,PC-N1555GAL2-Y,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1555gal2-y,NEC,PC-N1555GAL2-Y,Laptop,,
 NEC,PC-N155EJAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-n155ejaw,NEC,PC-N155EJAW,Laptop,,https://support.nec-lavie.jp/navigate/rescue/ultracare/jpn/products.html
-NEC,PC-N1565AAL,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1565aal,NEC,PC-N1565AAL,Laptop,,
-NEC,PC-N1565AAR,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1565aar,NEC,PC-N1565AAR,Laptop,,
-NEC,PC-N1565AAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1565aaw,NEC,PC-N1565AAW,Laptop,,
-NEC,PC-N1565AAW-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1565aaw-e3,NEC,PC-N1565AAW-E3,Laptop,,
-NEC,PC-N1565CAL,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1565cal,NEC,PC-N1565CAL,Laptop,,
-NEC,PC-N1565CAR,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1565car,NEC,PC-N1565CAR,Laptop,,
-NEC,PC-N1565CAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1565caw,NEC,PC-N1565CAW,Laptop,,
-NEC,PC-N1566AZW-2,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1566azw-2,NEC,PC-N1566AZW-2,Laptop,,
-NEC,PC-N1566FKL,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1566fkl,NEC,PC-N1566FKL,Laptop,,
-NEC,PC-N156CAAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-n156caaw,NEC,PC-N156CAAW,Laptop,,
-NEC,PC-N156CEAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-n156ceaw,NEC,PC-N156CEAW,Laptop,,
-NEC,PC-N156CGAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-n156cgaw,NEC,PC-N156CGAW,Laptop,,
-NEC,PC-N156DCAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-n156dcaw,NEC,PC-N156DCAW,Laptop,,
+NEC,PC-N1565AAL,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1565aal,NEC,PC-N1565AAL,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-N1565AAR,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1565aar,NEC,PC-N1565AAR,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-N1565AAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1565aaw,NEC,PC-N1565AAW,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-N1565AAW-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1565aaw-e3,NEC,PC-N1565AAW-E3,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-N1565CAL,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1565cal,NEC,PC-N1565CAL,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_25h2/pclist/data/list.xml
+NEC,PC-N1565CAR,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1565car,NEC,PC-N1565CAR,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_25h2/pclist/data/list.xml
+NEC,PC-N1565CAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1565caw,NEC,PC-N1565CAW,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_25h2/pclist/data/list.xml
+NEC,PC-N1566AZW-2,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1566azw-2,NEC,PC-N1566AZW-2,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-N1566FKL,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1566fkl,NEC,PC-N1566FKL,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_26h2/pclist/data/list.xml
+NEC,PC-N156CAAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-n156caaw,NEC,PC-N156CAAW,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_25h2/pclist/data/list.xml
+NEC,PC-N156CEAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-n156ceaw,NEC,PC-N156CEAW,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_25h2/pclist/data/list.xml
+NEC,PC-N156CGAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-n156cgaw,NEC,PC-N156CGAW,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_26h2/pclist/data/list.xml
+NEC,PC-N156DCAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-n156dcaw,NEC,PC-N156DCAW,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_25h2/pclist/data/list.xml
 NEC,PC-N156DGAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-n156dgaw,NEC,PC-N156DGAW,Laptop,,https://support.nec-lavie.jp/navigate/support/info/2024/announce/office/ms_2024.html
-NEC,PC-N1570FAL,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1570fal,NEC,PC-N1570FAL,Laptop,,
-NEC,PC-N1570GAL,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1570gal,NEC,PC-N1570GAL,Laptop,,
-NEC,PC-N1570GAL-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1570gal-e3,NEC,PC-N1570GAL-E3,Laptop,,
-NEC,PC-N1570GAL-YC,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1570gal-yc,NEC,PC-N1570GAL-YC,Laptop,,
-NEC,PC-N1570GAR,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1570gar,NEC,PC-N1570GAR,Laptop,,
-NEC,PC-N1570GAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1570gaw,NEC,PC-N1570GAW,Laptop,,
-NEC,PC-N1573EAL,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1573eal,NEC,PC-N1573EAL,Laptop,,
-NEC,PC-N1574EAB-J,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1574eab-j,NEC,PC-N1574EAB-J,Laptop,,
-NEC,PC-N1575AAL,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1575aal,NEC,PC-N1575AAL,Laptop,,
-NEC,PC-N1575AAL-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1575aal-e3,NEC,PC-N1575AAL-E3,Laptop,,
-NEC,PC-N1575AAR-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1575aar-e3,NEC,PC-N1575AAR-E3,Laptop,,
-NEC,PC-N1575AZW-2,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1575azw-2,NEC,PC-N1575AZW-2,Laptop,,
-NEC,PC-N1575CAL,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1575cal,NEC,PC-N1575CAL,Laptop,,
-NEC,PC-N1575CAR,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1575car,NEC,PC-N1575CAR,Laptop,,
-NEC,PC-N1575EAL-YC,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1575eal-yc,NEC,PC-N1575EAL-YC,Laptop,,
-NEC,PC-N1575EAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1575eaw,NEC,PC-N1575EAW,Laptop,,
-NEC,PC-N1576CAW-J,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1576caw-j,NEC,PC-N1576CAW-J,Laptop,,
-NEC,PC-N157CAAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-n157caaw,NEC,PC-N157CAAW,Laptop,,
+NEC,PC-N1570FAL,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1570fal,NEC,PC-N1570FAL,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_26h2/pclist/data/list.xml
+NEC,PC-N1570GAL,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1570gal,NEC,PC-N1570GAL,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_26h2/pclist/data/list.xml
+NEC,PC-N1570GAL-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1570gal-e3,NEC,PC-N1570GAL-E3,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_26h2/pclist/data/list.xml
+NEC,PC-N1570GAL-YC,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1570gal-yc,NEC,PC-N1570GAL-YC,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_26h2/pclist/data/list.xml
+NEC,PC-N1570GAR,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1570gar,NEC,PC-N1570GAR,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_26h2/pclist/data/list.xml
+NEC,PC-N1570GAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1570gaw,NEC,PC-N1570GAW,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_26h2/pclist/data/list.xml
+NEC,PC-N1573EAL,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1573eal,NEC,PC-N1573EAL,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_25h2/pclist/data/list.xml
+NEC,PC-N1574EAB-J,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1574eab-j,NEC,PC-N1574EAB-J,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_25h2/pclist/data/list.xml
+NEC,PC-N1575AAL,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1575aal,NEC,PC-N1575AAL,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-N1575AAL-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1575aal-e3,NEC,PC-N1575AAL-E3,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-N1575AAR-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1575aar-e3,NEC,PC-N1575AAR-E3,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-N1575AZW-2,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1575azw-2,NEC,PC-N1575AZW-2,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-N1575CAL,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1575cal,NEC,PC-N1575CAL,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_25h2/pclist/data/list.xml
+NEC,PC-N1575CAR,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1575car,NEC,PC-N1575CAR,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_25h2/pclist/data/list.xml
+NEC,PC-N1575EAL-YC,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1575eal-yc,NEC,PC-N1575EAL-YC,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_25h2/pclist/data/list.xml
+NEC,PC-N1575EAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1575eaw,NEC,PC-N1575EAW,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_25h2/pclist/data/list.xml
+NEC,PC-N1576CAW-J,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1576caw-j,NEC,PC-N1576CAW-J,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_25h2/pclist/data/list.xml
+NEC,PC-N157CAAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-n157caaw,NEC,PC-N157CAAW,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_25h2/pclist/data/list.xml
 NEC,PC-N157DGAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-n157dgab,NEC,PC-N157DGAB,Laptop,,https://support.nec-lavie.jp/navigate/rescue/ultracare/jpn/products.html
-NEC,PC-N1585AAL,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1585aal,NEC,PC-N1585AAL,Laptop,,
-NEC,PC-N1585AZL-2,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1585azl-2,NEC,PC-N1585AZL-2,Laptop,,
-NEC,PC-N1585CAL,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1585cal,NEC,PC-N1585CAL,Laptop,,
-NEC,PC-N1585CAL-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1585cal-e3,NEC,PC-N1585CAL-E3,Laptop,,
-NEC,PC-N1585EAL,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1585eal,NEC,PC-N1585EAL,Laptop,,
-NEC,PC-N1635HAL,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1635hal,NEC,PC-N1635HAL,Laptop,,
+NEC,PC-N1585AAL,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1585aal,NEC,PC-N1585AAL,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-N1585AZL-2,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1585azl-2,NEC,PC-N1585AZL-2,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-N1585CAL,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1585cal,NEC,PC-N1585CAL,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_25h2/pclist/data/list.xml
+NEC,PC-N1585CAL-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1585cal-e3,NEC,PC-N1585CAL-E3,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_25h2/pclist/data/list.xml
+NEC,PC-N1585EAL,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1585eal,NEC,PC-N1585EAL,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_25h2/pclist/data/list.xml
+NEC,PC-N1635HAL,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1635hal,NEC,PC-N1635HAL,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_26h2/pclist/data/list.xml
 NEC,PC-N1635JAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1635jaw,NEC,PC-N1635JAW,Laptop,,https://support.nec-lavie.jp/navigate/rescue/ultracare/jpn/products.html
-NEC,PC-N1655JKL,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1655jkl,NEC,PC-N1655JKL,Laptop,,
-NEC,PC-N1656HAL-Y,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1656hal-y,NEC,PC-N1656HAL-Y,Laptop,,
-NEC,PC-N1670HAE,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1670hae,NEC,PC-N1670HAE,Laptop,,
-NEC,PC-N1670HAE-YC,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1670hae-yc,NEC,PC-N1670HAE-YC,Laptop,,
-NEC,PC-N1670HAL,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1670hal,NEC,PC-N1670HAL,Laptop,,
-NEC,PC-N1670HAL-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1670hal-e3,NEC,PC-N1670HAL-E3,Laptop,,
-NEC,PC-N1675HAE,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1675hae,NEC,PC-N1675HAE,Laptop,,
-NEC,PC-N1675HAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1675haw,NEC,PC-N1675HAW,Laptop,,
+NEC,PC-N1655JKL,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1655jkl,NEC,PC-N1655JKL,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_26h2/pclist/data/list.xml
+NEC,PC-N1656HAL-Y,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1656hal-y,NEC,PC-N1656HAL-Y,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_26h2/pclist/data/list.xml
+NEC,PC-N1670HAE,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1670hae,NEC,PC-N1670HAE,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_26h2/pclist/data/list.xml
+NEC,PC-N1670HAE-YC,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1670hae-yc,NEC,PC-N1670HAE-YC,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_26h2/pclist/data/list.xml
+NEC,PC-N1670HAL,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1670hal,NEC,PC-N1670HAL,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_26h2/pclist/data/list.xml
+NEC,PC-N1670HAL-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1670hal-e3,NEC,PC-N1670HAL-E3,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_26h2/pclist/data/list.xml
+NEC,PC-N1675HAE,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1675hae,NEC,PC-N1675HAE,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_26h2/pclist/data/list.xml
+NEC,PC-N1675HAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1675haw,NEC,PC-N1675HAW,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_26h2/pclist/data/list.xml
 NEC,PC-N1675JAE,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1675jae,NEC,PC-N1675JAE,Laptop,,https://support.nec-lavie.jp/navigate/rescue/ultracare/jpn/products.html
 NEC,PC-N1675JAL,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1675jal,NEC,PC-N1675JAL,Laptop,,https://support.nec-lavie.jp/navigate/rescue/ultracare/jpn/products.html
-NEC,PC-N1675JAL-E5,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1675jal-e5,NEC,PC-N1675JAL-E5,Laptop,,
+NEC,PC-N1675JAL-E5,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1675jal-e5,NEC,PC-N1675JAL-E5,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_26h2/pclist/data/list.xml
 NEC,PC-N1675JAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1675jaw,NEC,PC-N1675JAW,Laptop,,https://support.nec-lavie.jp/navigate/rescue/ultracare/jpn/products.html
 NEC,PC-N1675KAE,model,pending,https://jp.drvhub.net/laptops/nec/pc-n1675kae,NEC,PC-N1675KAE,Laptop,,https://support.nec-lavie.jp/navigate/rescue/ultracare/jpn/products.html
-NEC,PC-NM150GAL,model,pending,https://jp.drvhub.net/laptops/nec/pc-nm150gal,NEC,PC-NM150GAL,Laptop,,
-NEC,PC-NM150KAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-nm150kab,NEC,PC-NM150KAB,Laptop,,
-NEC,PC-NM150KAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-nm150kaw,NEC,PC-NM150KAW,Laptop,,
-NEC,PC-NM150MAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-nm150maw,NEC,PC-NM150MAW,Laptop,,
-NEC,PC-NM550GAL,model,pending,https://jp.drvhub.net/laptops/nec/pc-nm550gal,NEC,PC-NM550GAL,Laptop,,
-NEC,PC-NM550MAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-nm550mab,NEC,PC-NM550MAB,Laptop,,
-NEC,PC-NM550MAB-2,model,pending,https://jp.drvhub.net/laptops/nec/pc-nm550mab-2,NEC,PC-NM550MAB-2,Laptop,,
-NEC,PC-NM550MAB-YC,model,pending,https://jp.drvhub.net/laptops/nec/pc-nm550mab-yc,NEC,PC-NM550MAB-YC,Laptop,,
-NEC,PC-NM550MAG,model,pending,https://jp.drvhub.net/laptops/nec/pc-nm550mag,NEC,PC-NM550MAG,Laptop,,
-NEC,PC-NM560MAW-J,model,pending,https://jp.drvhub.net/laptops/nec/pc-nm560maw-j,NEC,PC-NM560MAW-J,Laptop,,
-NEC,PC-NM750MAB-E1,model,pending,https://jp.drvhub.net/laptops/nec/pc-nm750mab-e1,NEC,PC-NM750MAB-E1,Laptop,,
-NEC,PC-NM750RAG,model,pending,https://jp.drvhub.net/laptops/nec/pc-nm750rag,NEC,PC-NM750RAG,Laptop,,
-NEC,PC-NS100A1W,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns100a1w,NEC,PC-NS100A1W,Laptop,,
-NEC,PC-NS100A2W,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns100a2w,NEC,PC-NS100A2W,Laptop,,
-NEC,PC-NS100F2W,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns100f2w,NEC,PC-NS100F2W,Laptop,,
-NEC,PC-NS100K2B-H4,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns100k2b-h4,NEC,PC-NS100K2B-H4,Laptop,,
-NEC,PC-NS10EJ2S,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns10ej2s,NEC,PC-NS10EJ2S,Laptop,,
-NEC,PC-NS10EK2S,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns10ek2s,NEC,PC-NS10EK2S,Laptop,,
-NEC,PC-NS10EM2W,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns10em2w,NEC,PC-NS10EM2W,Laptop,,
-NEC,PC-NS150AAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns150aaw,NEC,PC-NS150AAW,Laptop,,
-NEC,PC-NS150AAW-KS,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns150aaw-ks,NEC,PC-NS150AAW-KS,Laptop,,
-NEC,PC-NS150BAR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns150bar,NEC,PC-NS150BAR,Laptop,,
-NEC,PC-NS150BAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns150baw,NEC,PC-NS150BAW,Laptop,,
-NEC,PC-NS150BAW-KS,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns150baw-ks,NEC,PC-NS150BAW-KS,Laptop,,
-NEC,PC-NS150CAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns150cab,NEC,PC-NS150CAB,Laptop,,
-NEC,PC-NS150CAR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns150car,NEC,PC-NS150CAR,Laptop,,
-NEC,PC-NS150CAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns150caw,NEC,PC-NS150CAW,Laptop,,
-NEC,PC-NS150DAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns150daw,NEC,PC-NS150DAW,Laptop,,
-NEC,PC-NS150EAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns150eab,NEC,PC-NS150EAB,Laptop,,
-NEC,PC-NS150EAB-KS,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns150eab-ks,NEC,PC-NS150EAB-KS,Laptop,,
-NEC,PC-NS150FAR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns150far,NEC,PC-NS150FAR,Laptop,,
-NEC,PC-NS150FAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns150faw,NEC,PC-NS150FAW,Laptop,,
+NEC,PC-NM150GAL,model,pending,https://jp.drvhub.net/laptops/nec/pc-nm150gal,NEC,PC-NM150GAL,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update_19h1/pclist/data/list.xml
+NEC,PC-NM150KAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-nm150kab,NEC,PC-NM150KAB,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update_20h1/pclist/data/list.xml
+NEC,PC-NM150KAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-nm150kaw,NEC,PC-NM150KAW,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update_20h1/pclist/data/list.xml
+NEC,PC-NM150MAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-nm150maw,NEC,PC-NM150MAW,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update_20h1/pclist/data/list.xml
+NEC,PC-NM550GAL,model,pending,https://jp.drvhub.net/laptops/nec/pc-nm550gal,NEC,PC-NM550GAL,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update_19h1/pclist/data/list.xml
+NEC,PC-NM550MAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-nm550mab,NEC,PC-NM550MAB,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-NM550MAB-2,model,pending,https://jp.drvhub.net/laptops/nec/pc-nm550mab-2,NEC,PC-NM550MAB-2,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-NM550MAB-YC,model,pending,https://jp.drvhub.net/laptops/nec/pc-nm550mab-yc,NEC,PC-NM550MAB-YC,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-NM550MAG,model,pending,https://jp.drvhub.net/laptops/nec/pc-nm550mag,NEC,PC-NM550MAG,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-NM560MAW-J,model,pending,https://jp.drvhub.net/laptops/nec/pc-nm560maw-j,NEC,PC-NM560MAW-J,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-NM750MAB-E1,model,pending,https://jp.drvhub.net/laptops/nec/pc-nm750mab-e1,NEC,PC-NM750MAB-E1,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-NM750RAG,model,pending,https://jp.drvhub.net/laptops/nec/pc-nm750rag,NEC,PC-NM750RAG,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-NS100A1W,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns100a1w,NEC,PC-NS100A1W,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS100A2W,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns100a2w,NEC,PC-NS100A2W,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS100F2W,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns100f2w,NEC,PC-NS100F2W,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS100K2B-H4,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns100k2b-h4,NEC,PC-NS100K2B-H4,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update_20h1/pclist/data/list.xml
+NEC,PC-NS10EJ2S,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns10ej2s,NEC,PC-NS10EJ2S,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update_20h1/pclist/data/list.xml
+NEC,PC-NS10EK2S,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns10ek2s,NEC,PC-NS10EK2S,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update_20h1/pclist/data/list.xml
+NEC,PC-NS10EM2W,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns10em2w,NEC,PC-NS10EM2W,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update_20h1/pclist/data/list.xml
+NEC,PC-NS150AAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns150aaw,NEC,PC-NS150AAW,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS150AAW-KS,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns150aaw-ks,NEC,PC-NS150AAW-KS,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS150BAR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns150bar,NEC,PC-NS150BAR,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS150BAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns150baw,NEC,PC-NS150BAW,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS150BAW-KS,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns150baw-ks,NEC,PC-NS150BAW-KS,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS150CAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns150cab,NEC,PC-NS150CAB,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS150CAR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns150car,NEC,PC-NS150CAR,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS150CAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns150caw,NEC,PC-NS150CAW,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS150DAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns150daw,NEC,PC-NS150DAW,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS150EAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns150eab,NEC,PC-NS150EAB,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS150EAB-KS,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns150eab-ks,NEC,PC-NS150EAB-KS,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS150FAR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns150far,NEC,PC-NS150FAR,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS150FAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns150faw,NEC,PC-NS150FAW,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
 NEC,PC-NS150GAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns150gab,NEC,PC-NS150GAB,Laptop,,
 NEC,PC-NS150GAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns150gaw,NEC,PC-NS150GAW,Laptop,,
-NEC,PC-NS150GAW-KS,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns150gaw-ks,NEC,PC-NS150GAW-KS,Laptop,,
-NEC,PC-NS150HAG,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns150hag,NEC,PC-NS150HAG,Laptop,,
-NEC,PC-NS150HAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns150haw,NEC,PC-NS150HAW,Laptop,,
-NEC,PC-NS150KAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns150kab,NEC,PC-NS150KAB,Laptop,,
-NEC,PC-NS150NAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns150nab,NEC,PC-NS150NAB,Laptop,,
-NEC,PC-NS150NAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns150naw,NEC,PC-NS150NAW,Laptop,,
-NEC,PC-NS200R2W-S4,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns200r2w-s4,NEC,PC-NS200R2W-S4,Laptop,,
-NEC,PC-NS20AJ2S,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns20aj2s,NEC,PC-NS20AJ2S,Laptop,,
-NEC,PC-NS20AM2W,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns20am2w,NEC,PC-NS20AM2W,Laptop,,
-NEC,PC-NS230JAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns230jaw,NEC,PC-NS230JAW,Laptop,,
-NEC,PC-NS300KAR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns300kar,NEC,PC-NS300KAR,Laptop,,
-NEC,PC-NS300KAW-YC,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns300kaw-yc,NEC,PC-NS300KAW-YC,Laptop,,
-NEC,PC-NS300MAB-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns300mab-e3,NEC,PC-NS300MAB-E3,Laptop,,
-NEC,PC-NS300MAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns300maw,NEC,PC-NS300MAW,Laptop,,
-NEC,PC-NS300RAB-T,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns300rab-t,NEC,PC-NS300RAB-T,Laptop,,
-NEC,PC-NS300RAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns300raw,NEC,PC-NS300RAW,Laptop,,
-NEC,PC-NS310RAW-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns310raw-e3,NEC,PC-NS310RAW-E3,Laptop,,
-NEC,PC-NS350AAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns350aab,NEC,PC-NS350AAB,Laptop,,
-NEC,PC-NS350AAR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns350aar,NEC,PC-NS350AAR,Laptop,,
-NEC,PC-NS350AAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns350aaw,NEC,PC-NS350AAW,Laptop,,
-NEC,PC-NS350BAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns350bab,NEC,PC-NS350BAB,Laptop,,
-NEC,PC-NS350BAR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns350bar,NEC,PC-NS350BAR,Laptop,,
-NEC,PC-NS350BAR-KS,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns350bar-ks,NEC,PC-NS350BAR-KS,Laptop,,
-NEC,PC-NS350BAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns350baw,NEC,PC-NS350BAW,Laptop,,
-NEC,PC-NS350BAW-KS,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns350baw-ks,NEC,PC-NS350BAW-KS,Laptop,,
-NEC,PC-NS350CAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns350cab,NEC,PC-NS350CAB,Laptop,,
-NEC,PC-NS350CAR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns350car,NEC,PC-NS350CAR,Laptop,,
-NEC,PC-NS350DAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns350dab,NEC,PC-NS350DAB,Laptop,,
-NEC,PC-NS350DAR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns350dar,NEC,PC-NS350DAR,Laptop,,
-NEC,PC-NS350DAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns350daw,NEC,PC-NS350DAW,Laptop,,
-NEC,PC-NS350EAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns350eab,NEC,PC-NS350EAB,Laptop,,
-NEC,PC-NS350EAB-YC,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns350eab-yc,NEC,PC-NS350EAB-YC,Laptop,,
-NEC,PC-NS350EAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns350eaw,NEC,PC-NS350EAW,Laptop,,
-NEC,PC-NS350EAW-KS,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns350eaw-ks,NEC,PC-NS350EAW-KS,Laptop,,
-NEC,PC-NS350EAW-Y,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns350eaw-y,NEC,PC-NS350EAW-Y,Laptop,,
-NEC,PC-NS350FAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns350fab,NEC,PC-NS350FAB,Laptop,,
+NEC,PC-NS150GAW-KS,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns150gaw-ks,NEC,PC-NS150GAW-KS,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update_19h1/pclist/data/list.xml
+NEC,PC-NS150HAG,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns150hag,NEC,PC-NS150HAG,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update_20h1/pclist/data/list.xml
+NEC,PC-NS150HAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns150haw,NEC,PC-NS150HAW,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update_20h1/pclist/data/list.xml
+NEC,PC-NS150KAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns150kab,NEC,PC-NS150KAB,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-NS150NAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns150nab,NEC,PC-NS150NAB,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-NS150NAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns150naw,NEC,PC-NS150NAW,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-NS200R2W-S4,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns200r2w-s4,NEC,PC-NS200R2W-S4,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_25h2/pclist/data/list.xml
+NEC,PC-NS20AJ2S,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns20aj2s,NEC,PC-NS20AJ2S,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update_20h1/pclist/data/list.xml
+NEC,PC-NS20AM2W,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns20am2w,NEC,PC-NS20AM2W,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update_20h1/pclist/data/list.xml
+NEC,PC-NS230JAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns230jaw,NEC,PC-NS230JAW,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update_20h1/pclist/data/list.xml
+NEC,PC-NS300KAR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns300kar,NEC,PC-NS300KAR,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update_20h1/pclist/data/list.xml
+NEC,PC-NS300KAW-YC,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns300kaw-yc,NEC,PC-NS300KAW-YC,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update_20h1/pclist/data/list.xml
+NEC,PC-NS300MAB-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns300mab-e3,NEC,PC-NS300MAB-E3,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update_20h1/pclist/data/list.xml
+NEC,PC-NS300MAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns300maw,NEC,PC-NS300MAW,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update_20h1/pclist/data/list.xml
+NEC,PC-NS300RAB-T,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns300rab-t,NEC,PC-NS300RAB-T,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-NS300RAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns300raw,NEC,PC-NS300RAW,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-NS310RAW-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns310raw-e3,NEC,PC-NS310RAW-E3,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update_20h1/pclist/data/list.xml
+NEC,PC-NS350AAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns350aab,NEC,PC-NS350AAB,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS350AAR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns350aar,NEC,PC-NS350AAR,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS350AAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns350aaw,NEC,PC-NS350AAW,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS350BAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns350bab,NEC,PC-NS350BAB,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS350BAR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns350bar,NEC,PC-NS350BAR,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS350BAR-KS,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns350bar-ks,NEC,PC-NS350BAR-KS,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS350BAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns350baw,NEC,PC-NS350BAW,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS350BAW-KS,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns350baw-ks,NEC,PC-NS350BAW-KS,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS350CAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns350cab,NEC,PC-NS350CAB,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS350CAR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns350car,NEC,PC-NS350CAR,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS350DAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns350dab,NEC,PC-NS350DAB,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS350DAR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns350dar,NEC,PC-NS350DAR,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS350DAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns350daw,NEC,PC-NS350DAW,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS350EAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns350eab,NEC,PC-NS350EAB,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS350EAB-YC,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns350eab-yc,NEC,PC-NS350EAB-YC,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS350EAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns350eaw,NEC,PC-NS350EAW,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS350EAW-KS,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns350eaw-ks,NEC,PC-NS350EAW-KS,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS350EAW-Y,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns350eaw-y,NEC,PC-NS350EAW-Y,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS350FAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns350fab,NEC,PC-NS350FAB,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
 NEC,PC-NS350GAR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns350gar,NEC,PC-NS350GAR,Laptop,,
-NEC,PC-NS350HAR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns350har,NEC,PC-NS350HAR,Laptop,,
-NEC,PC-NS350HAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns350haw,NEC,PC-NS350HAW,Laptop,,
-NEC,PC-NS350HAW-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns350haw-e3,NEC,PC-NS350HAW-E3,Laptop,,
-NEC,PC-NS350HAW-Y,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns350haw-y,NEC,PC-NS350HAW-Y,Laptop,,
-NEC,PC-NS350HAW-YC,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns350haw-yc,NEC,PC-NS350HAW-YC,Laptop,,
-NEC,PC-NS500RAW-YC,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns500raw-yc,NEC,PC-NS500RAW-YC,Laptop,,
-NEC,PC-NS550BAW-Y,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns550baw-y,NEC,PC-NS550BAW-Y,Laptop,,
-NEC,PC-NS550CAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns550cab,NEC,PC-NS550CAB,Laptop,,
-NEC,PC-NS560EAW-J,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns560eaw-j,NEC,PC-NS560EAW-J,Laptop,,
-NEC,PC-NS600GAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns600gaw,NEC,PC-NS600GAW,Laptop,,
-NEC,PC-NS600HAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns600haw,NEC,PC-NS600HAW,Laptop,,
-NEC,PC-NS600JAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns600jaw,NEC,PC-NS600JAW,Laptop,,
-NEC,PC-NS600KAR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns600kar,NEC,PC-NS600KAR,Laptop,,
-NEC,PC-NS600MAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns600maw,NEC,PC-NS600MAW,Laptop,,
-NEC,PC-NS600MAW-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns600maw-e3,NEC,PC-NS600MAW-E3,Laptop,,
-NEC,PC-NS600NAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns600naw,NEC,PC-NS600NAW,Laptop,,
-NEC,PC-NS600RAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns600raw,NEC,PC-NS600RAW,Laptop,,
-NEC,PC-NS600RAW-2,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns600raw-2,NEC,PC-NS600RAW-2,Laptop,,
-NEC,PC-NS600RAW-8,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns600raw-8,NEC,PC-NS600RAW-8,Laptop,,
-NEC,PC-NS610NAW-KS,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns610naw-ks,NEC,PC-NS610NAW-KS,Laptop,,
-NEC,PC-NS630JAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns630jaw,NEC,PC-NS630JAW,Laptop,,
-NEC,PC-NS650GAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns650gaw,NEC,PC-NS650GAW,Laptop,,
-NEC,PC-NS700AAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700aab,NEC,PC-NS700AAB,Laptop,,
-NEC,PC-NS700AAB-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700aab-e3,NEC,PC-NS700AAB-E3,Laptop,,
-NEC,PC-NS700AAR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700aar,NEC,PC-NS700AAR,Laptop,,
-NEC,PC-NS700AAW-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700aaw-e3,NEC,PC-NS700AAW-E3,Laptop,,
-NEC,PC-NS700AAW-J,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700aaw-j,NEC,PC-NS700AAW-J,Laptop,,
-NEC,PC-NS700BAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700bab,NEC,PC-NS700BAB,Laptop,,
-NEC,PC-NS700BAR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700bar,NEC,PC-NS700BAR,Laptop,,
-NEC,PC-NS700BAR-KS,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700bar-ks,NEC,PC-NS700BAR-KS,Laptop,,
-NEC,PC-NS700BAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700baw,NEC,PC-NS700BAW,Laptop,,
-NEC,PC-NS700DAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700dab,NEC,PC-NS700DAB,Laptop,,
-NEC,PC-NS700EAB-KS,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700eab-ks,NEC,PC-NS700EAB-KS,Laptop,,
-NEC,PC-NS700EAR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700ear,NEC,PC-NS700EAR,Laptop,,
-NEC,PC-NS700EAR-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700ear-e3,NEC,PC-NS700EAR-E3,Laptop,,
-NEC,PC-NS700FAR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700far,NEC,PC-NS700FAR,Laptop,,
-NEC,PC-NS700GAB-KS,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700gab-ks,NEC,PC-NS700GAB-KS,Laptop,,
+NEC,PC-NS350HAR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns350har,NEC,PC-NS350HAR,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update_20h1/pclist/data/list.xml
+NEC,PC-NS350HAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns350haw,NEC,PC-NS350HAW,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update_20h1/pclist/data/list.xml
+NEC,PC-NS350HAW-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns350haw-e3,NEC,PC-NS350HAW-E3,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update_20h1/pclist/data/list.xml
+NEC,PC-NS350HAW-Y,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns350haw-y,NEC,PC-NS350HAW-Y,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update_20h1/pclist/data/list.xml
+NEC,PC-NS350HAW-YC,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns350haw-yc,NEC,PC-NS350HAW-YC,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update_20h1/pclist/data/list.xml
+NEC,PC-NS500RAW-YC,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns500raw-yc,NEC,PC-NS500RAW-YC,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-NS550BAW-Y,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns550baw-y,NEC,PC-NS550BAW-Y,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS550CAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns550cab,NEC,PC-NS550CAB,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS560EAW-J,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns560eaw-j,NEC,PC-NS560EAW-J,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS600GAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns600gaw,NEC,PC-NS600GAW,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update_19h1/pclist/data/list.xml
+NEC,PC-NS600HAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns600haw,NEC,PC-NS600HAW,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update_20h1/pclist/data/list.xml
+NEC,PC-NS600JAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns600jaw,NEC,PC-NS600JAW,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-NS600KAR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns600kar,NEC,PC-NS600KAR,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-NS600MAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns600maw,NEC,PC-NS600MAW,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update_20h1/pclist/data/list.xml
+NEC,PC-NS600MAW-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns600maw-e3,NEC,PC-NS600MAW-E3,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update_20h1/pclist/data/list.xml
+NEC,PC-NS600NAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns600naw,NEC,PC-NS600NAW,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-NS600RAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns600raw,NEC,PC-NS600RAW,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-NS600RAW-2,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns600raw-2,NEC,PC-NS600RAW-2,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-NS600RAW-8,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns600raw-8,NEC,PC-NS600RAW-8,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-NS610NAW-KS,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns610naw-ks,NEC,PC-NS610NAW-KS,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-NS630JAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns630jaw,NEC,PC-NS630JAW,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-NS650GAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns650gaw,NEC,PC-NS650GAW,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update_19h1/pclist/data/list.xml
+NEC,PC-NS700AAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700aab,NEC,PC-NS700AAB,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS700AAB-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700aab-e3,NEC,PC-NS700AAB-E3,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS700AAR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700aar,NEC,PC-NS700AAR,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS700AAW-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700aaw-e3,NEC,PC-NS700AAW-E3,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS700AAW-J,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700aaw-j,NEC,PC-NS700AAW-J,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS700BAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700bab,NEC,PC-NS700BAB,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS700BAR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700bar,NEC,PC-NS700BAR,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS700BAR-KS,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700bar-ks,NEC,PC-NS700BAR-KS,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS700BAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700baw,NEC,PC-NS700BAW,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS700DAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700dab,NEC,PC-NS700DAB,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS700EAB-KS,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700eab-ks,NEC,PC-NS700EAB-KS,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS700EAR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700ear,NEC,PC-NS700EAR,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS700EAR-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700ear-e3,NEC,PC-NS700EAR-E3,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS700FAR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700far,NEC,PC-NS700FAR,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS700GAB-KS,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700gab-ks,NEC,PC-NS700GAB-KS,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update_19h1/pclist/data/list.xml
 NEC,PC-NS700GAR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700gar,NEC,PC-NS700GAR,Laptop,,
-NEC,PC-NS700GAR-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700gar-e3,NEC,PC-NS700GAR-E3,Laptop,,
-NEC,PC-NS700GAR-YC,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700gar-yc,NEC,PC-NS700GAR-YC,Laptop,,
-NEC,PC-NS700GAW-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700gaw-e3,NEC,PC-NS700GAW-E3,Laptop,,
-NEC,PC-NS700GAW-KS,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700gaw-ks,NEC,PC-NS700GAW-KS,Laptop,,
-NEC,PC-NS700JAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700jab,NEC,PC-NS700JAB,Laptop,,
-NEC,PC-NS700JAG,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700jag,NEC,PC-NS700JAG,Laptop,,
-NEC,PC-NS700KAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700kab,NEC,PC-NS700KAB,Laptop,,
-NEC,PC-NS700KAB-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700kab-e3,NEC,PC-NS700KAB-E3,Laptop,,
-NEC,PC-NS700KAR-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700kar-e3,NEC,PC-NS700KAR-E3,Laptop,,
-NEC,PC-NS700KAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700kaw,NEC,PC-NS700KAW,Laptop,,
-NEC,PC-NS700KAW-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700kaw-e3,NEC,PC-NS700KAW-E3,Laptop,,
-NEC,PC-NS700KAW-J,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700kaw-j,NEC,PC-NS700KAW-J,Laptop,,
-NEC,PC-NS700MAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700mab,NEC,PC-NS700MAB,Laptop,,
-NEC,PC-NS700NAB-N,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700nab-n,NEC,PC-NS700NAB-N,Laptop,,
-NEC,PC-NS700RAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700rab,NEC,PC-NS700RAB,Laptop,,
-NEC,PC-NS700RAB-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700rab-e3,NEC,PC-NS700RAB-E3,Laptop,,
-NEC,PC-NS70CMAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns70cmaw,NEC,PC-NS70CMAW,Laptop,,
-NEC,PC-NS70CRAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns70craw,NEC,PC-NS70CRAW,Laptop,,
-NEC,PC-NS710FAW-J,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns710faw-j,NEC,PC-NS710FAW-J,Laptop,,
-NEC,PC-NS750AAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns750aab,NEC,PC-NS750AAB,Laptop,,
-NEC,PC-NS750AAG-KS,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns750aag-ks,NEC,PC-NS750AAG-KS,Laptop,,
-NEC,PC-NS750AAR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns750aar,NEC,PC-NS750AAR,Laptop,,
-NEC,PC-NS750AAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns750aaw,NEC,PC-NS750AAW,Laptop,,
-NEC,PC-NS750AAW-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns750aaw-e3,NEC,PC-NS750AAW-E3,Laptop,,
-NEC,PC-NS750BAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns750bab,NEC,PC-NS750BAB,Laptop,,
-NEC,PC-NS750BAG,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns750bag,NEC,PC-NS750BAG,Laptop,,
-NEC,PC-NS750BAG-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns750bag-e3,NEC,PC-NS750BAG-E3,Laptop,,
-NEC,PC-NS750BAR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns750bar,NEC,PC-NS750BAR,Laptop,,
-NEC,PC-NS750BAR-KS,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns750bar-ks,NEC,PC-NS750BAR-KS,Laptop,,
-NEC,PC-NS750BAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns750baw,NEC,PC-NS750BAW,Laptop,,
-NEC,PC-NS750CAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns750cab,NEC,PC-NS750CAB,Laptop,,
-NEC,PC-NS750CAR-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns750car-e3,NEC,PC-NS750CAR-E3,Laptop,,
-NEC,PC-NS750CAR-KS,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns750car-ks,NEC,PC-NS750CAR-KS,Laptop,,
-NEC,PC-NS750CAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns750caw,NEC,PC-NS750CAW,Laptop,,
-NEC,PC-NS750CAW-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns750caw-e3,NEC,PC-NS750CAW-E3,Laptop,,
-NEC,PC-NS750DAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns750dab,NEC,PC-NS750DAB,Laptop,,
-NEC,PC-NS750DAB-J,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns750dab-j,NEC,PC-NS750DAB-J,Laptop,,
-NEC,PC-NS750DAG,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns750dag,NEC,PC-NS750DAG,Laptop,,
-NEC,PC-NS750DAG-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns750dag-e3,NEC,PC-NS750DAG-E3,Laptop,,
-NEC,PC-NS750EAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns750eab,NEC,PC-NS750EAB,Laptop,,
-NEC,PC-NS750EAG,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns750eag,NEC,PC-NS750EAG,Laptop,,
-NEC,PC-NS750EAR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns750ear,NEC,PC-NS750EAR,Laptop,,
-NEC,PC-NS750FAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns750fab,NEC,PC-NS750FAB,Laptop,,
+NEC,PC-NS700GAR-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700gar-e3,NEC,PC-NS700GAR-E3,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update_19h1/pclist/data/list.xml
+NEC,PC-NS700GAR-YC,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700gar-yc,NEC,PC-NS700GAR-YC,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update_19h1/pclist/data/list.xml
+NEC,PC-NS700GAW-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700gaw-e3,NEC,PC-NS700GAW-E3,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update_19h1/pclist/data/list.xml
+NEC,PC-NS700GAW-KS,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700gaw-ks,NEC,PC-NS700GAW-KS,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update_19h1/pclist/data/list.xml
+NEC,PC-NS700JAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700jab,NEC,PC-NS700JAB,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-NS700JAG,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700jag,NEC,PC-NS700JAG,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-NS700KAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700kab,NEC,PC-NS700KAB,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-NS700KAB-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700kab-e3,NEC,PC-NS700KAB-E3,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-NS700KAR-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700kar-e3,NEC,PC-NS700KAR-E3,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-NS700KAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700kaw,NEC,PC-NS700KAW,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-NS700KAW-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700kaw-e3,NEC,PC-NS700KAW-E3,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-NS700KAW-J,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700kaw-j,NEC,PC-NS700KAW-J,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-NS700MAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700mab,NEC,PC-NS700MAB,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-NS700NAB-N,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700nab-n,NEC,PC-NS700NAB-N,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-NS700RAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700rab,NEC,PC-NS700RAB,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-NS700RAB-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns700rab-e3,NEC,PC-NS700RAB-E3,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-NS70CMAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns70cmaw,NEC,PC-NS70CMAW,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-NS70CRAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns70craw,NEC,PC-NS70CRAW,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-NS710FAW-J,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns710faw-j,NEC,PC-NS710FAW-J,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS750AAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns750aab,NEC,PC-NS750AAB,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS750AAG-KS,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns750aag-ks,NEC,PC-NS750AAG-KS,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS750AAR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns750aar,NEC,PC-NS750AAR,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS750AAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns750aaw,NEC,PC-NS750AAW,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS750AAW-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns750aaw-e3,NEC,PC-NS750AAW-E3,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS750BAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns750bab,NEC,PC-NS750BAB,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS750BAG,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns750bag,NEC,PC-NS750BAG,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS750BAG-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns750bag-e3,NEC,PC-NS750BAG-E3,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS750BAR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns750bar,NEC,PC-NS750BAR,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS750BAR-KS,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns750bar-ks,NEC,PC-NS750BAR-KS,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS750BAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns750baw,NEC,PC-NS750BAW,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS750CAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns750cab,NEC,PC-NS750CAB,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS750CAR-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns750car-e3,NEC,PC-NS750CAR-E3,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS750CAR-KS,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns750car-ks,NEC,PC-NS750CAR-KS,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS750CAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns750caw,NEC,PC-NS750CAW,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS750CAW-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns750caw-e3,NEC,PC-NS750CAW-E3,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS750DAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns750dab,NEC,PC-NS750DAB,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS750DAB-J,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns750dab-j,NEC,PC-NS750DAB-J,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS750DAG,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns750dag,NEC,PC-NS750DAG,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS750DAG-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns750dag-e3,NEC,PC-NS750DAG-E3,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS750EAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns750eab,NEC,PC-NS750EAB,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS750EAG,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns750eag,NEC,PC-NS750EAG,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS750EAR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns750ear,NEC,PC-NS750EAR,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS750FAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns750fab,NEC,PC-NS750FAB,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
 NEC,PC-NS750GAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns750gab,NEC,PC-NS750GAB,Laptop,,
 NEC,PC-NS750GAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns750gaw,NEC,PC-NS750GAW,Laptop,,
-NEC,PC-NS750GAW-KS,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns750gaw-ks,NEC,PC-NS750GAW-KS,Laptop,,
-NEC,PC-NS750HAL,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns750hal,NEC,PC-NS750HAL,Laptop,,
-NEC,PC-NS750HAR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns750har,NEC,PC-NS750HAR,Laptop,,
-NEC,PC-NS750HAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns750haw,NEC,PC-NS750HAW,Laptop,,
-NEC,PC-NS850BAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns850bab,NEC,PC-NS850BAB,Laptop,,
-NEC,PC-NS850NAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns850nab,NEC,PC-NS850NAB,Laptop,,
-NEC,PC-NX350JAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-nx350jab,NEC,PC-NX350JAB,Laptop,,
-NEC,PC-NX750JAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-nx750jab,NEC,PC-NX750JAB,Laptop,,
-NEC,PC-NX750JAG,model,pending,https://jp.drvhub.net/laptops/nec/pc-nx750jag,NEC,PC-NX750JAG,Laptop,,
-NEC,PC-NX750JAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-nx750jaw,NEC,PC-NX750JAW,Laptop,,
-NEC,PC-NX750LAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-nx750lab,NEC,PC-NX750LAB,Laptop,,
-NEC,PC-NX750LAG,model,pending,https://jp.drvhub.net/laptops/nec/pc-nx750lag,NEC,PC-NX750LAG,Laptop,,
-NEC,PC-NX750NAG,model,pending,https://jp.drvhub.net/laptops/nec/pc-nx750nag,NEC,PC-NX750NAG,Laptop,,
-NEC,PC-NX850JAG,model,pending,https://jp.drvhub.net/laptops/nec/pc-nx850jag,NEC,PC-NX850JAG,Laptop,,
-NEC,PC-NX850JAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-nx850jaw,NEC,PC-NX850JAW,Laptop,,
-NEC,PC-NX850LAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-nx850lab,NEC,PC-NX850LAB,Laptop,,
-NEC,PC-NX850LAG-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-nx850lag-e3,NEC,PC-NX850LAG-E3,Laptop,,
-NEC,PC-NX850NAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-nx850nab,NEC,PC-NX850NAB,Laptop,,
-NEC,PC-NX850NAG,model,pending,https://jp.drvhub.net/laptops/nec/pc-nx850nag,NEC,PC-NX850NAG,Laptop,,
-NEC,PC-NX850NAR-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-nx850nar-e3,NEC,PC-NX850NAR-E3,Laptop,,
-NEC,PC-NX860NAG-J,model,pending,https://jp.drvhub.net/laptops/nec/pc-nx860nag-j,NEC,PC-NX860NAG-J,Laptop,,
+NEC,PC-NS750GAW-KS,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns750gaw-ks,NEC,PC-NS750GAW-KS,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update_19h1/pclist/data/list.xml
+NEC,PC-NS750HAL,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns750hal,NEC,PC-NS750HAL,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update_19h1/pclist/data/list.xml
+NEC,PC-NS750HAR,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns750har,NEC,PC-NS750HAR,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update_19h1/pclist/data/list.xml
+NEC,PC-NS750HAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns750haw,NEC,PC-NS750HAW,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update_19h1/pclist/data/list.xml
+NEC,PC-NS850BAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns850bab,NEC,PC-NS850BAB,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-NS850NAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-ns850nab,NEC,PC-NS850NAB,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-NX350JAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-nx350jab,NEC,PC-NX350JAB,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update_20h1/pclist/data/list.xml
+NEC,PC-NX750JAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-nx750jab,NEC,PC-NX750JAB,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-NX750JAG,model,pending,https://jp.drvhub.net/laptops/nec/pc-nx750jag,NEC,PC-NX750JAG,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-NX750JAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-nx750jaw,NEC,PC-NX750JAW,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-NX750LAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-nx750lab,NEC,PC-NX750LAB,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-NX750LAG,model,pending,https://jp.drvhub.net/laptops/nec/pc-nx750lag,NEC,PC-NX750LAG,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-NX750NAG,model,pending,https://jp.drvhub.net/laptops/nec/pc-nx750nag,NEC,PC-NX750NAG,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-NX850JAG,model,pending,https://jp.drvhub.net/laptops/nec/pc-nx850jag,NEC,PC-NX850JAG,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-NX850JAW,model,pending,https://jp.drvhub.net/laptops/nec/pc-nx850jaw,NEC,PC-NX850JAW,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-NX850LAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-nx850lab,NEC,PC-NX850LAB,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-NX850LAG-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-nx850lag-e3,NEC,PC-NX850LAG-E3,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-NX850NAB,model,pending,https://jp.drvhub.net/laptops/nec/pc-nx850nab,NEC,PC-NX850NAB,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-NX850NAG,model,pending,https://jp.drvhub.net/laptops/nec/pc-nx850nag,NEC,PC-NX850NAG,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-NX850NAR-E3,model,pending,https://jp.drvhub.net/laptops/nec/pc-nx850nar-e3,NEC,PC-NX850NAR-E3,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
+NEC,PC-NX860NAG-J,model,pending,https://jp.drvhub.net/laptops/nec/pc-nx860nag-j,NEC,PC-NX860NAG-J,Laptop,,https://support.nec-lavie.jp/navigate/support/win11/update_23h2/pclist/data/list.xml
 NEC,PC-VK112SGG5,model,pending,https://jp.drvhub.net/laptops/nec/pc-vk112sgg5,NEC,PC-VK112SGG5,Laptop,,https://support.nec-lavie.jp/navigate/support/info/2024/announce/softbank/index.html
 NEC,PC-VK112SGH4,model,pending,https://jp.drvhub.net/laptops/nec/pc-vk112sgh4,NEC,PC-VK112SGH4,Laptop,,https://support.nec-lavie.jp/navigate/support/info/2024/announce/softbank/index.html
 NEC,PC-VK11FT1BV,model,pending,https://jp.drvhub.net/laptops/nec/pc-vk11ft1bv,NEC,PC-VK11FT1BV,Laptop,,https://support.nec-lavie.jp/navigate/support/info/2024/announce/softbank/index.html
@@ -15477,8 +15477,8 @@ Toshiba,dynabook RZ83/CW,model,pending,https://jp.drvhub.net/laptops/toshiba/dyn
 Toshiba,dynabook RZ83/VB,model,pending,https://jp.drvhub.net/laptops/toshiba/dynabook-rz83-vb,Toshiba,dynabook RZ83/VB,Laptop,,https://dynabook.com/assistpc/repaircenter/partslimit/b2c/dynabook_r_series-c.pdf#page=4
 Toshiba,dynabook S29/TG,model,pending,https://jp.drvhub.net/laptops/toshiba/dynabook-s29-tg,Toshiba,dynabook S29/TG,Laptop,,https://dynabook.com/assistpc/repaircenter/partslimit/b2c/dynabook_s_series-c.pdf#page=1
 Toshiba,dynabook Satellite B241/W2CE,model,pending,https://jp.drvhub.net/laptops/toshiba/dynabook-satellite-b241w2ce,Toshiba,dynabook Satellite B241/W2CE,Laptop,,
-Toshiba,dynabook Satellite B25/21MB,model,pending,https://jp.drvhub.net/laptops/toshiba/dynabook-satellite-b25-21mb,Toshiba,dynabook Satellite B25/21MB,Laptop,,
-Toshiba,dynabook Satellite B25/25MB,model,pending,https://jp.drvhub.net/laptops/toshiba/dynabook-satellite-b25-25mb,Toshiba,dynabook Satellite B25/25MB,Laptop,,
+Toshiba,dynabook Satellite B25/21MB,model,pending,https://jp.drvhub.net/laptops/toshiba/dynabook-satellite-b25-21mb,Toshiba,dynabook Satellite B25/21MB,Laptop,,https://dynabook.com/direct/pc-static/before2016/pc1/catalog/2014/b25m/spec_win7.html
+Toshiba,dynabook Satellite B25/25MB,model,pending,https://jp.drvhub.net/laptops/toshiba/dynabook-satellite-b25-25mb,Toshiba,dynabook Satellite B25/25MB,Laptop,,https://dynabook.com/direct/pc-static/before2016/pc1/catalog/2014/b25m/spec_win7.html
 Toshiba,dynabook Satellite B252/21G,model,pending,https://jp.drvhub.net/laptops/toshiba/dynabook-satellite-b252-21g,Toshiba,dynabook Satellite B252/21G,Laptop,,
 Toshiba,dynabook Satellite B252/22G,model,pending,https://jp.drvhub.net/laptops/toshiba/dynabook-satellite-b252-22g,Toshiba,dynabook Satellite B252/22G,Laptop,,
 Toshiba,dynabook Satellite B252/F,model,pending,https://jp.drvhub.net/laptops/toshiba/dynabook-satellite-b252-f,Toshiba,dynabook Satellite B252/F,Laptop,,
@@ -19957,25 +19957,25 @@ HP,Compaq Presario CQ57-380ER,model,pending,https://jp.drvhub.net/laptops/hp/com
 HP,Compaq Presario CQ58-150SR,model,pending,https://jp.drvhub.net/laptops/hp/compaq-presario-cq58-150sr,HP,Compaq Presario CQ58-150SR,Laptop,,
 HP,Compaq Presario CQ61-214TX,model,pending,https://jp.drvhub.net/laptops/hp/compaq-presario-cq61-214tx,HP,Compaq Presario CQ61-214TX,Laptop,,
 HP,Compaq nx9110 (DU435EA#ABB),model,pending,https://jp.drvhub.net/laptops/hp/compaq-nx9110-du435eaabb,HP,DU435EA#ABB,Laptop,,
-HP,Compaq nw9440 (EG862AV),model,pending,https://jp.drvhub.net/laptops/hp/compaq-nw9440-eg862av,HP,EG862AV,Laptop,,
+HP,Compaq nw9440 (EG862AV),model,pending,https://jp.drvhub.net/laptops/hp/compaq-nw9440-eg862av,HP,EG862AV,Laptop,,https://partsurfer.hp.com/?searchtext=EG862AV
 HP,Pavilion dv4000 (EH468UA#ABA),model,pending,https://jp.drvhub.net/laptops/hp/pavilion-dv4000-eh468ua-aba,HP,EH468UA#ABA,Laptop,,
 HP,Pavilion dv4000 (EH477UA#ABA),model,pending,https://jp.drvhub.net/laptops/hp/pavilion-dv4000-eh477ua-aba,HP,EH477UA#ABA,Laptop,,
-HP,Compaq nc6400 (EH517AV),model,pending,https://jp.drvhub.net/laptops/hp/compaq-nc6400-eh517av,HP,EH517AV,Laptop,,
-HP,Compaq nc6400 (EH519AV),model,pending,https://jp.drvhub.net/laptops/hp/compaq-nc6400-eh519av,HP,EH519AV,Laptop,,
-HP,Compaq nc6400 (EH520AV),model,pending,https://jp.drvhub.net/laptops/hp/compaq-nc6400-eh520av,HP,EH520AV,Laptop,,
-HP,Compaq nc6400 (EH522AV),model,pending,https://jp.drvhub.net/laptops/hp/compaq-nc6400-eh522av,HP,EH522AV,Laptop,,
-HP,Compaq nx6310 (EJ360AV),model,pending,https://jp.drvhub.net/laptops/hp/compaq-nx6310-ej360av,HP,EJ360AV,Laptop,,
+HP,Compaq nc6400 (EH517AV),model,pending,https://jp.drvhub.net/laptops/hp/compaq-nc6400-eh517av,HP,EH517AV,Laptop,,https://partsurfer.hp.com/?searchtext=EH517AV
+HP,Compaq nc6400 (EH519AV),model,pending,https://jp.drvhub.net/laptops/hp/compaq-nc6400-eh519av,HP,EH519AV,Laptop,,https://partsurfer.hp.com/?searchtext=EH519AV
+HP,Compaq nc6400 (EH520AV),model,pending,https://jp.drvhub.net/laptops/hp/compaq-nc6400-eh520av,HP,EH520AV,Laptop,,https://partsurfer.hp.com/?searchtext=EH520AV
+HP,Compaq nc6400 (EH522AV),model,pending,https://jp.drvhub.net/laptops/hp/compaq-nc6400-eh522av,HP,EH522AV,Laptop,,https://partsurfer.hp.com/?searchtext=EH522AV
+HP,Compaq nx6310 (EJ360AV),model,pending,https://jp.drvhub.net/laptops/hp/compaq-nx6310-ej360av,HP,EJ360AV,Laptop,,https://partsurfer.hp.com/?searchtext=EJ360AV
 HP,Compaq nx6310 (EJ369AV),model,pending,https://jp.drvhub.net/laptops/hp/compaq-nx6310-ej369av,HP,EJ369AV,Laptop,,
-HP,Compaq nx6320 (EJ371AV),model,pending,https://jp.drvhub.net/laptops/hp/compaq-nx6320-ej371av,HP,EJ371AV,Laptop,,
+HP,Compaq nx6320 (EJ371AV),model,pending,https://jp.drvhub.net/laptops/hp/compaq-nx6320-ej371av,HP,EJ371AV,Laptop,,https://partsurfer.hp.com/?searchtext=EJ371AV
 HP,Compaq nc4200 (EK740AW#ABU),model,pending,https://jp.drvhub.net/laptops/hp/compaq-nc4200-ek740awabu,HP,EK740AW#ABU,Laptop,,
 HP,Compaq nx6115 (EM002LA#ACH),model,pending,https://jp.drvhub.net/laptops/hp/compaq-nx6115-em002la-ach,HP,EM002LA#ACH,Laptop,,
-HP,Compaq nc8430 (EM741AV),model,pending,https://jp.drvhub.net/laptops/hp/compaq-nc8430-em741av,HP,EM741AV,Laptop,,
-HP,Compaq nc4400 (EN004AV),model,pending,https://jp.drvhub.net/laptops/hp/compaq-nc4400-en004av,HP,EN004AV,Laptop,,
+HP,Compaq nc8430 (EM741AV),model,pending,https://jp.drvhub.net/laptops/hp/compaq-nc8430-em741av,HP,EM741AV,Laptop,,https://partsurfer.hp.com/?searchtext=EM741AV
+HP,Compaq nc4400 (EN004AV),model,pending,https://jp.drvhub.net/laptops/hp/compaq-nc4400-en004av,HP,EN004AV,Laptop,,https://partsurfer.hp.com/?searchtext=EN004AV
 HP,Compaq nx7400 (EN353UA#ABA),model,pending,https://jp.drvhub.net/laptops/hp/compaq-nx7400-en353ua-aba,HP,EN353UA#ABA,Laptop,,
 HP,Compaq nc6320 (EN369UT#ABA),model,pending,https://jp.drvhub.net/laptops/hp/compaq-nc6320-en369ut-aba,HP,EN369UT#ABA,Laptop,,
 HP,Pavilion dv4000 (EN419EA#ABZ),model,pending,https://jp.drvhub.net/laptops/hp/pavilion-dv4000-en419ea-abz,HP,EN419EA#ABZ,Laptop,,
 HP,Pavilion dv4000 (EN443EA#AB8),model,pending,https://jp.drvhub.net/laptops/hp/pavilion-dv4000-en443ea-ab8,HP,EN443EA#AB8,Laptop,,
-HP,Compaq nx6325 (EQ423AV),model,pending,https://jp.drvhub.net/laptops/hp/compaq-nx6325-eq423av,HP,EQ423AV,Laptop,,
+HP,Compaq nx6325 (EQ423AV),model,pending,https://jp.drvhub.net/laptops/hp/compaq-nx6325-eq423av,HP,EQ423AV,Laptop,,https://partsurfer.hp.com/?searchtext=EQ423AV
 HP,Compaq nx6115 (ER698LA#ABM),model,pending,https://jp.drvhub.net/laptops/hp/compaq-nx6115-er698laabm,HP,ER698LA#ABM,Laptop,,
 HP,Compaq nx9420 (ES443ET#ABE),model,pending,https://jp.drvhub.net/laptops/hp/compaq-nx9420-es443et-abe,HP,ES443ET#ABE,Laptop,,
 HP,Compaq nx9420 (ES444ET#ABE),model,pending,https://jp.drvhub.net/laptops/hp/compaq-nx9420-es444et-abe,HP,ES444ET#ABE,Laptop,,
@@ -20055,7 +20055,7 @@ HP,Compaq 6910p (GB950EA#ABU),model,pending,https://jp.drvhub.net/laptops/hp/com
 HP,Compaq 6910p (GB950EA#ACB),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6910p-gb950ea-acb,HP,GB950EA#ACB,Laptop,,
 HP,Compaq 6910p (GB950EA#AKC),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6910p-gb950eaakc,HP,GB950EA#AKC,Laptop,,
 HP,Compaq 6910p (GB950EA#UUG),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6910p-gb950eauug,HP,GB950EA#UUG,Laptop,,
-HP,Compaq 6910p (GB951EA),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6910p-gb951ea,HP,GB951EA,Laptop,,
+HP,Compaq 6910p (GB951EA),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6910p-gb951ea,HP,GB951EA,Laptop,,https://partsurfer.hp.com/?searchtext=GB951EA
 HP,Compaq 6910p (GB951EA#ACB),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6910p-gb951ea-acb,HP,GB951EA#ACB,Laptop,,
 HP,Compaq 6530b (GB974EA#ACB),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6530b-gb974ea-acb,HP,GB974EA#ACB,Laptop,,
 HP,Compaq 6530b (GB976ET#ABF),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6530b-gb976et-abf,HP,GB976ET#ABF,Laptop,,
@@ -20113,7 +20113,7 @@ HP,Compaq 2510p (GM651AW#ABB),model,pending,https://jp.drvhub.net/laptops/hp/com
 HP,Compaq 6710s (GP167PA#ACJ),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6710s-gp167pa-acj,HP,GP167PA#ACJ,Laptop,,
 HP,Compaq 6710b (GP189PA#ABJ),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6710b-gp189paabj,HP,GP189PA#ABJ,Laptop,,
 HP,Compaq 6910p (GP221LA#ABM),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6910p-gp221la-abm,HP,GP221LA#ABM,Laptop,,
-HP,Compaq nw8440 (GR506EP),model,pending,https://jp.drvhub.net/laptops/hp/compaq-nw8440-gr506ep,HP,GR506EP,Laptop,,
+HP,Compaq nw8440 (GR506EP),model,pending,https://jp.drvhub.net/laptops/hp/compaq-nw8440-gr506ep,HP,GR506EP,Laptop,,https://partsurfer.hp.com/?searchtext=GR506EP
 HP,Compaq nw8440 (GR506EP#ABU),model,pending,https://jp.drvhub.net/laptops/hp/compaq-nw8440-gr506ep-abu,HP,GR506EP#ABU,Laptop,,
 HP,Compaq nw8440 (GR506EP#AK8),model,pending,https://jp.drvhub.net/laptops/hp/compaq-nw8440-gr506ep-ak8,HP,GR506EP#AK8,Laptop,,
 HP,Compaq 6710b (GR614ES#ABD),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6710b-gr614es-abd,HP,GR614ES#ABD,Laptop,,
@@ -20147,14 +20147,14 @@ HP,Compaq 6510b (GR695EA#ACB),model,pending,https://jp.drvhub.net/laptops/hp/com
 HP,Compaq 6510b (GR728ES#ABV),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6510b-gr728es-abv,HP,GR728ES#ABV,Laptop,,
 HP,Compaq 6910p (GR734ES#ABV),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6910p-gr734esabv,HP,GR734ES#ABV,Laptop,,
 HP,Compaq 6715s (GR822ES#ABB),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6715s-gr822esabb,HP,GR822ES#ABB,Laptop,,
-HP,Compaq 6715s (GS561AV),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6715s-gs561av,HP,GS561AV,Laptop,,
+HP,Compaq 6715s (GS561AV),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6715s-gs561av,HP,GS561AV,Laptop,,https://partsurfer.hp.com/?searchtext=GS561AV
 HP,Compaq 6910p (GT338UC#ABM),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6910p-gt338uc-abm,HP,GT338UC#ABM,Laptop,,
 HP,Compaq 8710p (GU064LA#ABM),model,pending,https://jp.drvhub.net/laptops/hp/compaq-8710p-gu064la-abm,HP,GU064LA#ABM,Laptop,,
 HP,Compaq 8710w (GU065LA#AC4),model,pending,https://jp.drvhub.net/laptops/hp/compaq-8710w-gu065la-ac4,HP,GU065LA#AC4,Laptop,,
 HP,Compaq 6910p (GU360UC#ABA),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6910p-gu360ucaba,HP,GU360UC#ABA,Laptop,,
 HP,Compaq 6715b (GU475EC#ABF),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6715b-gu475ecabf,HP,GU475EC#ABF,Laptop,,
-HP,Compaq 6730b (GW687AV),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6730b-gw687av,HP,GW687AV,Laptop,,
-HP,Compaq 6530b (GW688AV),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6530b-gw688av,HP,GW688AV,Laptop,,
+HP,Compaq 6730b (GW687AV),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6730b-gw687av,HP,GW687AV,Laptop,,https://partsurfer.hp.com/?searchtext=GW687AV
+HP,Compaq 6530b (GW688AV),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6530b-gw688av,HP,GW688AV,Laptop,,https://partsurfer.hp.com/?searchtext=GW688AV
 HP,Compaq 6510b (GW705UC#ABA),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6510b-gw705uc-aba,HP,GW705UC#ABA,Laptop,,
 HP,Compaq 6510b (GW705UC#ABM),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6510b-gw705ucabm,HP,GW705UC#ABM,Laptop,,
 HP,Compaq 6910p (GX016UC#ABM),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6910p-gx016uc-abm,HP,GX016UC#ABM,Laptop,,
@@ -20187,20 +20187,20 @@ HP,Compaq 6510b (KE134EA#ACB),model,pending,https://jp.drvhub.net/laptops/hp/com
 HP,Compaq 6510b (KE135ET#ABD),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6510b-ke135etabd,HP,KE135ET#ABD,Laptop,,
 HP,Compaq 6510b (KE194ES#ABB),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6510b-ke194es-abb,HP,KE194ES#ABB,Laptop,,
 HP,Compaq 6910p (KE220ES#ACB),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6910p-ke220es-acb,HP,KE220ES#ACB,Laptop,,
-HP,Compaq 6730b (KE717AV),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6730b-ke717av,HP,KE717AV,Laptop,,
-HP,Compaq 6730b (KE718AV),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6730b-ke718av,HP,KE718AV,Laptop,,
-HP,Compaq 6530b (KE821AV),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6530b-ke821av,HP,KE821AV,Laptop,,
+HP,Compaq 6730b (KE717AV),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6730b-ke717av,HP,KE717AV,Laptop,,https://partsurfer.hp.com/?searchtext=KE717AV
+HP,Compaq 6730b (KE718AV),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6730b-ke718av,HP,KE718AV,Laptop,,https://partsurfer.hp.com/?searchtext=KE718AV
+HP,Compaq 6530b (KE821AV),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6530b-ke821av,HP,KE821AV,Laptop,,https://partsurfer.hp.com/?searchtext=KE821AV
 HP,Compaq 6535b (KF767AV#156),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6535b-kf767av-156,HP,KF767AV#156,Laptop,,
-HP,Compaq 6710b (KL509AV),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6710b-kl509av,HP,KL509AV,Laptop,,
-HP,Compaq 6710b (KL510AV),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6710b-kl510av,HP,KL510AV,Laptop,,
-HP,Compaq 6710b (KL511AV),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6710b-kl511av,HP,KL511AV,Laptop,,
+HP,Compaq 6710b (KL509AV),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6710b-kl509av,HP,KL509AV,Laptop,,https://partsurfer.hp.com/?searchtext=KL509AV
+HP,Compaq 6710b (KL510AV),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6710b-kl510av,HP,KL510AV,Laptop,,https://partsurfer.hp.com/?searchtext=KL510AV
+HP,Compaq 6710b (KL511AV),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6710b-kl511av,HP,KL511AV,Laptop,,https://partsurfer.hp.com/?searchtext=KL511AV
 HP,Compaq 6710b (KQ240LA#ABM),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6710b-kq240la-abm,HP,KQ240LA#ABM,Laptop,,
 HP,Compaq 6710b (KQ241LA#ABM),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6710b-kq241la-abm,HP,KQ241LA#ABM,Laptop,,
 HP,Compaq 6715s (KQ851LA#ABM),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6715s-kq851la-abm,HP,KQ851LA#ABM,Laptop,,
 HP,Compaq 6710b (KR413EC#ABZ),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6710b-kr413ec-abz,HP,KR413EC#ABZ,Laptop,,
 HP,Compaq 6715b (KR902UT#ABA),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6715b-kr902ut-aba,HP,KR902UT#ABA,Laptop,,
 HP,Compaq 6730b (KR970UT#ABA),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6730b-kr970ut-aba,HP,KR970UT#ABA,Laptop,,
-HP,Compaq 6730b (KR971UT),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6730b-kr971ut,HP,KR971UT,Laptop,,
+HP,Compaq 6730b (KR971UT),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6730b-kr971ut,HP,KR971UT,Laptop,,https://partsurfer.hp.com/?searchtext=KR971UT
 HP,Compaq 6730b (KR972UT#ABA),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6730b-kr972utaba,HP,KR972UT#ABA,Laptop,,
 HP,Compaq 6730b (KR975UA#ABA),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6730b-kr975uaaba,HP,KR975UA#ABA,Laptop,,
 HP,Compaq 6730b (KR975UA#ABC),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6730b-kr975ua-abc,HP,KR975UA#ABC,Laptop,,
@@ -20210,7 +20210,7 @@ HP,Compaq 6710b (KS267PA#ABJ),model,pending,https://jp.drvhub.net/laptops/hp/com
 HP,Compaq 6910p (KU186ES#ABD),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6910p-ku186es-abd,HP,KU186ES#ABD,Laptop,,
 HP,Compaq 6730b (KU216ET#AK8),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6730b-ku216et-ak8,HP,KU216ET#AK8,Laptop,,
 HP,Compaq 6730b (KU216ET#UUG),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6730b-ku216et-uug,HP,KU216ET#UUG,Laptop,,
-HP,Compaq 6730s (KU433ET),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6730s-ku433et,HP,KU433ET,Laptop,,
+HP,Compaq 6730s (KU433ET),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6730s-ku433et,HP,KU433ET,Laptop,,https://partsurfer.hp.com/?searchtext=KU433ET
 HP,Compaq 6730b (KU441ET#ABE),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6730b-ku441et-abe,HP,KU441ET#ABE,Laptop,,
 HP,Compaq 6730b (KU442ET#ABH),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6730b-ku442etabh,HP,KU442ET#ABH,Laptop,,
 HP,Compaq 6730b (KU442ET#AK8),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6730b-ku442et-ak8,HP,KU442ET#AK8,Laptop,,
@@ -20233,7 +20233,7 @@ HP,Compaq 6530b (NB012EA#ACB),model,pending,https://jp.drvhub.net/laptops/hp/com
 HP,Compaq 6530b (NB012ET#ABF),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6530b-nb012et-abf,HP,NB012ET#ABF,Laptop,,
 HP,Compaq 6730b (NB018EA#AKB),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6730b-nb018eaakb,HP,NB018EA#AKB,Laptop,,
 HP,Compaq 6730b (NB018EA#AKC),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6730b-nb018ea-akc,HP,NB018EA#AKC,Laptop,,
-HP,Compaq 6730b (NB018ET),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6730b-nb018et,HP,NB018ET,Laptop,,
+HP,Compaq 6730b (NB018ET),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6730b-nb018et,HP,NB018ET,Laptop,,https://partsurfer.hp.com/?searchtext=NB018ET
 HP,Compaq 6730b (NB018ET#ABD),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6730b-nb018et-abd,HP,NB018ET#ABD,Laptop,,
 HP,Compaq 6730b (NB018ET#ABH),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6730b-nb018et-abh,HP,NB018ET#ABH,Laptop,,
 HP,Compaq 6730b (NB020ET#ABU),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6730b-nb020etabu,HP,NB020ET#ABU,Laptop,,
@@ -20286,10 +20286,10 @@ HP,Pavilion dv6700,model,pending,https://jp.drvhub.net/laptops/hp/pavilion-dv670
 HP,Pavilion dv9500,model,pending,https://jp.drvhub.net/laptops/hp/pavilion-dv9500,HP,Pavilion dv9500,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/Pavilion/Pavilion%20dv9500
 HP,Pavilion dv9700,model,pending,https://jp.drvhub.net/laptops/hp/pavilion-dv9700,HP,Pavilion dv9700,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/Pavilion/Pavilion%20dv9700
 HP,Pavilion tx2000,model,pending,https://jp.drvhub.net/laptops/hp/pavilion-tx2000,HP,Pavilion tx2000,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/Pavilion/Pavilion%20tx2000
-HP,Compaq nx6120 (PC423AV),model,pending,https://jp.drvhub.net/laptops/hp/compaq-nx6120-pc423av,HP,PC423AV,Laptop,,
+HP,Compaq nx6120 (PC423AV),model,pending,https://jp.drvhub.net/laptops/hp/compaq-nx6120-pc423av,HP,PC423AV,Laptop,,https://partsurfer.hp.com/?searchtext=PC423AV
 HP,Compaq nw8240 (PG818EA#ABB),model,pending,https://jp.drvhub.net/laptops/hp/compaq-nw8240-pg818eaabb,HP,PG818EA#ABB,Laptop,,
 HP,Compaq nc6120 (PG823ET#ABZ),model,pending,https://jp.drvhub.net/laptops/hp/compaq-nc6120-pg823et-abz,HP,PG823ET#ABZ,Laptop,,
-HP,Compaq nc6220 (PL814AV),model,pending,https://jp.drvhub.net/laptops/hp/compaq-nc6220-pl814av,HP,PL814AV,Laptop,,
+HP,Compaq nc6220 (PL814AV),model,pending,https://jp.drvhub.net/laptops/hp/compaq-nc6220-pl814av,HP,PL814AV,Laptop,,https://partsurfer.hp.com/?searchtext=PL814AV
 HP,Compaq nx6110 (PT603AA#ABF),model,pending,https://jp.drvhub.net/laptops/hp/compaq-nx6110-pt603aaabf,HP,PT603AA#ABF,Laptop,,
 HP,Compaq nx6125 (PY418ET#ABE),model,pending,https://jp.drvhub.net/laptops/hp/compaq-nx6125-py418et-abe,HP,PY418ET#ABE,Laptop,,
 HP,Compaq nc8230 (PY521EA#ACB),model,pending,https://jp.drvhub.net/laptops/hp/compaq-nc8230-py521ea-acb,HP,PY521EA#ACB,Laptop,,
@@ -20315,10 +20315,10 @@ HP,Pavilion dv6000 (RG253UA#ABA),model,pending,https://jp.drvhub.net/laptops/hp/
 HP,Pavilion dv5000 (RG912EA#AB9),model,pending,https://jp.drvhub.net/laptops/hp/pavilion-dv5000-rg912ea-ab9,HP,RG912EA#AB9,Laptop,,
 HP,Pavilion dv5000 (RG937EA#ABZ),model,pending,https://jp.drvhub.net/laptops/hp/pavilion-dv5000-rg937ea-abz,HP,RG937EA#ABZ,Laptop,,
 HP,Compaq nx7400 (RH195LA#ABM),model,pending,https://jp.drvhub.net/laptops/hp/compaq-nx7400-rh195la-abm,HP,RH195LA#ABM,Laptop,,
-HP,Compaq 6910p (RH240AV),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6910p-rh240av,HP,RH240AV,Laptop,,
-HP,Compaq 6910p (RH241AV),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6910p-rh241av,HP,RH241AV,Laptop,,
+HP,Compaq 6910p (RH240AV),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6910p-rh240av,HP,RH240AV,Laptop,,https://partsurfer.hp.com/?searchtext=RH240AV
+HP,Compaq 6910p (RH241AV),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6910p-rh241av,HP,RH241AV,Laptop,,https://partsurfer.hp.com/?searchtext=RH241AV
 HP,Compaq 6910p (RH243EA),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6910p-rh243ea,HP,RH243EA,Laptop,,
-HP,Compaq 6910p (RH244AV),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6910p-rh244av,HP,RH244AV,Laptop,,
+HP,Compaq 6910p (RH244AV),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6910p-rh244av,HP,RH244AV,Laptop,,https://partsurfer.hp.com/?searchtext=RH244AV
 HP,Compaq nx6310 (RH329EA#ACB),model,pending,https://jp.drvhub.net/laptops/hp/compaq-nx6310-rh329eaacb,HP,RH329EA#ACB,Laptop,,
 HP,Compaq nx7400 (RH399ET#ABE),model,pending,https://jp.drvhub.net/laptops/hp/compaq-nx7400-rh399etabe,HP,RH399ET#ABE,Laptop,,
 HP,Compaq nx7400 (RH405EA#ACB),model,pending,https://jp.drvhub.net/laptops/hp/compaq-nx7400-rh405ea-acb,HP,RH405EA#ACB,Laptop,,
@@ -20345,10 +20345,10 @@ HP,Compaq nc6400 (RH561EA#ACB),model,pending,https://jp.drvhub.net/laptops/hp/co
 HP,Compaq nc6400 (RH563EA#ACB),model,pending,https://jp.drvhub.net/laptops/hp/compaq-nc6400-rh563eaacb,HP,RH563EA#ACB,Laptop,,
 HP,Compaq nc4400 (RH571ET#ABF),model,pending,https://jp.drvhub.net/laptops/hp/compaq-nc4400-rh571etabf,HP,RH571ET#ABF,Laptop,,
 HP,Compaq nx7300 (RH685EA#ABZ),model,pending,https://jp.drvhub.net/laptops/hp/compaq-nx7300-rh685ea-abz,HP,RH685EA#ABZ,Laptop,,
-HP,Compaq 6710b (RJ459AV),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6710b-rj459av,HP,RJ459AV,Laptop,,
-HP,Compaq 6510b (RJ559AV),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6510b-rj559av,HP,RJ559AV,Laptop,,
+HP,Compaq 6710b (RJ459AV),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6710b-rj459av,HP,RJ459AV,Laptop,,https://partsurfer.hp.com/?searchtext=RJ459AV
+HP,Compaq 6510b (RJ559AV),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6510b-rj559av,HP,RJ559AV,Laptop,,https://partsurfer.hp.com/?searchtext=RJ559AV
 HP,Compaq nc6400 (RJ661AW#ACB),model,pending,https://jp.drvhub.net/laptops/hp/compaq-nc6400-rj661aw-acb,HP,RJ661AW#ACB,Laptop,,
-HP,Compaq 6715b (RK156AV),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6715b-rk156av,HP,RK156AV,Laptop,,
+HP,Compaq 6715b (RK156AV),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6715b-rk156av,HP,RK156AV,Laptop,,https://partsurfer.hp.com/?searchtext=RK156AV
 HP,Compaq nc6400 (RK818US#ABA),model,pending,https://jp.drvhub.net/laptops/hp/compaq-nc6400-rk818us-aba,HP,RK818US#ABA,Laptop,,
 HP,Compaq nc4400 (RL880AW#ABB),model,pending,https://jp.drvhub.net/laptops/hp/compaq-nc4400-rl880awabb,HP,RL880AW#ABB,Laptop,,
 HP,Compaq nc6400 (RM100AW#ABA),model,pending,https://jp.drvhub.net/laptops/hp/compaq-nc6400-rm100awaba,HP,RM100AW#ABA,Laptop,,
@@ -20380,7 +20380,7 @@ HP,Compaq nx7300 (RU464EA#ACB),model,pending,https://jp.drvhub.net/laptops/hp/co
 HP,Compaq nx7300 (RU465EA#ACB),model,pending,https://jp.drvhub.net/laptops/hp/compaq-nx7300-ru465eaacb,HP,RU465EA#ACB,Laptop,,
 HP,Compaq nx9420 (RU527ES#ACB),model,pending,https://jp.drvhub.net/laptops/hp/compaq-nx9420-ru527esacb,HP,RU527ES#ACB,Laptop,,
 HP,Compaq nx9420 (RU529ES#ACB),model,pending,https://jp.drvhub.net/laptops/hp/compaq-nx9420-ru529esacb,HP,RU529ES#ACB,Laptop,,
-HP,Compaq 2710p (RU541EA),model,pending,https://jp.drvhub.net/laptops/hp/compaq-2710p-ru541ea,HP,RU541EA,Laptop,,
+HP,Compaq 2710p (RU541EA),model,pending,https://jp.drvhub.net/laptops/hp/compaq-2710p-ru541ea,HP,RU541EA,Laptop,,https://partsurfer.hp.com/?searchtext=RU541EA
 HP,Compaq nc6400 (RU626ET#ABF),model,pending,https://jp.drvhub.net/laptops/hp/compaq-nc6400-ru626et-abf,HP,RU626ET#ABF,Laptop,,
 HP,Compaq 6715s (RU655EA#UUZ),model,pending,https://jp.drvhub.net/laptops/hp/compaq-6715s-ru655eauuz,HP,RU655EA#UUZ,Laptop,,
 HP,Compaq nc4400 (RW494US#ABA),model,pending,https://jp.drvhub.net/laptops/hp/compaq-nc4400-rw494us-aba,HP,RW494US#ABA,Laptop,,
@@ -21347,9 +21347,9 @@ MSI,Vector 18 HX AI A2XWHG,model,pending,https://jp.drvhub.net/laptops/msi/vecto
 MSI,Vector 18 HX AI A2XWIG,model,pending,https://jp.drvhub.net/laptops/msi/vector-18-hx-ai-a2xwig,MSI,Vector 18 HX AI A2XWIG,Laptop,,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx
 MSI,Vector 18 HX AI A2XWJG,model,pending,https://jp.drvhub.net/laptops/msi/vector-18-hx-ai-a2xwjg,MSI,Vector 18 HX AI A2XWJG,Laptop,,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx
 NEC,PC-LE150JSP2,model,pending,https://jp.drvhub.net/laptops/nec/pc-le150jsp2,NEC,PC-LE150JSP2,Laptop,,
-NEC,PC-LE150M2W,model,pending,https://jp.drvhub.net/laptops/nec/pc-le150m2w,NEC,PC-LE150M2W,Laptop,,
-NEC,PC-LE150N1W,model,pending,https://jp.drvhub.net/laptops/nec/pc-le150n1w,NEC,PC-LE150N1W,Laptop,,
-NEC,PC-LE150S2W,model,pending,https://jp.drvhub.net/laptops/nec/pc-le150s2w,NEC,PC-LE150S2W,Laptop,,
+NEC,PC-LE150M2W,model,pending,https://jp.drvhub.net/laptops/nec/pc-le150m2w,NEC,PC-LE150M2W,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LE150N1W,model,pending,https://jp.drvhub.net/laptops/nec/pc-le150n1w,NEC,PC-LE150N1W,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
+NEC,PC-LE150S2W,model,pending,https://jp.drvhub.net/laptops/nec/pc-le150s2w,NEC,PC-LE150S2W,Laptop,,https://support.nec-lavie.jp/navigate/support/win10/update/pclist/data/list.xml
 NEC,PC-VEE11R5A63QA,model,pending,https://jp.drvhub.net/laptops/nec/pc-vee11r5a63qa,NEC,PC-VEE11R5A63QA,Laptop,,
 NEC,PC-VEE11R5D64G8,model,pending,https://jp.drvhub.net/laptops/nec/pc-vee11r5d64g8,NEC,PC-VEE11R5D64G8,Laptop,,
 NEC,PC-VEE11R5D64G9,model,pending,https://jp.drvhub.net/laptops/nec/pc-vee11r5d64g9,NEC,PC-VEE11R5D64G9,Laptop,,
@@ -21801,11 +21801,11 @@ Sony,VGN-CS26L P,model,pending,https://jp.drvhub.net/laptops/sony/vgn-cs26l-p,So
 Sony,VGN-CS26S Q,model,pending,https://jp.drvhub.net/laptops/sony/vgn-cs26s-q,Sony,VGN-CS26S Q,Laptop,,
 Sony,VGN-CS31MR P,model,pending,https://jp.drvhub.net/laptops/sony/vgn-cs31mr-p,Sony,VGN-CS31MR P,Laptop,,
 Sony,VGN-CS31MR W,model,pending,https://jp.drvhub.net/laptops/sony/vgn-cs31mr-w,Sony,VGN-CS31MR W,Laptop,,
-Sony,VGN-CS31S P,model,pending,https://jp.drvhub.net/laptops/sony/vgn-cs31s-p,Sony,VGN-CS31S P,Laptop,,
+Sony,VGN-CS31S P,model,pending,https://jp.drvhub.net/laptops/sony/vgn-cs31s-p,Sony,VGN-CS31S P,Laptop,,https://cdn.cnetcontent.com/b6/bb/b6bb1128-ab51-4b1c-9a64-9969d1f08c8c.pdf#page=1
 Sony,VGN-CS31S Q,model,pending,https://jp.drvhub.net/laptops/sony/vgn-cs31s-q,Sony,VGN-CS31S Q,Laptop,,
-Sony,VGN-CS31S R,model,pending,https://jp.drvhub.net/laptops/sony/vgn-cs31s-r,Sony,VGN-CS31S R,Laptop,,
+Sony,VGN-CS31S R,model,pending,https://jp.drvhub.net/laptops/sony/vgn-cs31s-r,Sony,VGN-CS31S R,Laptop,,https://www.mrmemory.co.uk/memory-ram-upgrades/sony/vaio-laptop/vgn-cs31s-r
 Sony,VGN-CS31S T,model,pending,https://jp.drvhub.net/laptops/sony/vgn-cs31s-t,Sony,VGN-CS31S T,Laptop,,
-Sony,VGN-CS31S W,model,pending,https://jp.drvhub.net/laptops/sony/vgn-cs31s-w,Sony,VGN-CS31S W,Laptop,,
+Sony,VGN-CS31S W,model,pending,https://jp.drvhub.net/laptops/sony/vgn-cs31s-w,Sony,VGN-CS31S W,Laptop,,https://www.kingston.com/en/memory/search/model/57215/sony-vaio-vgn-cs31s-w
 Sony,VGN-CS31SR P,model,pending,https://jp.drvhub.net/laptops/sony/vgn-cs31sr-p,Sony,VGN-CS31SR P,Laptop,,
 Sony,VGN-CS31SR Q,model,pending,https://jp.drvhub.net/laptops/sony/vgn-cs31sr-q,Sony,VGN-CS31SR Q,Laptop,,
 Sony,VGN-CS36GJ P,model,pending,https://jp.drvhub.net/laptops/sony/vgn-cs36gj-p,Sony,VGN-CS36GJ P,Laptop,,
@@ -22383,8 +22383,8 @@ PLANET,ENW-9702 PCI Express GbE Adapter,model,pending,https://jp.drvhub.net/devi
 PLANET,WNL-9331 802.11n Wireless PCI Card,model,pending,https://jp.drvhub.net/devices/network/planet/wnl-9331-802-11n-wireless-pci-card,PLANET,WNL-9331,Other,NetworkAdapter,
 Sitecom,PCI Fast 10/100 Ethernet Adapter LN-020,model,pending,https://jp.drvhub.net/devices/network/sitecom/pci-fast-10-100-ethernet-adapter-ln-020,Sitecom,LN-020,Other,NetworkAdapter,
 Sitecom,Gigabit Ethernet Adapter LN-027v2,model,pending,https://jp.drvhub.net/devices/network/sitecom/gigabit-ethernet-adapter-ln-027v2,Sitecom,LN-027,Other,NetworkAdapter,
-Sitecom,Gigabit-Ethernet PCI Adapter LN-027,model,pending,https://jp.drvhub.net/devices/network/sitecom/gigabit-ethernet-pci-adapter-ln-027,Sitecom,LN-027,Other,NetworkAdapter,
-Sitecom,USB2.0-to-Fast Ethernet Adapter LN-030,model,pending,https://jp.drvhub.net/devices/network/sitecom/usb2-0-to-fast-ethernet-adapter-ln-030,Sitecom,LN-030,Other,NetworkAdapter,
+Sitecom,Gigabit-Ethernet PCI Adapter LN-027,model,pending,https://jp.drvhub.net/devices/network/sitecom/gigabit-ethernet-pci-adapter-ln-027,Sitecom,LN-027,Other,NetworkAdapter,https://web.archive.org/web/20160408223324id_/http://www.sitecomlearningcentre.com:80/be-fr/products/ln-027v2002/network-pci-card-10-100-1000
+Sitecom,USB2.0-to-Fast Ethernet Adapter LN-030,model,pending,https://jp.drvhub.net/devices/network/sitecom/usb2-0-to-fast-ethernet-adapter-ln-030,Sitecom,LN-030,Other,NetworkAdapter,https://web.archive.org/web/20160628072846id_/http://www.sitecomlearningcentre.com:80/it/products/ln-030v2001/usb-2-0-network-adapter-10-100
 Sitecom,Wireless Network Cardbus Card 54Mbps WL-100i,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-network-cardbus-card-54mbps-wl-100i,Sitecom,WL-100I,Other,NetworkAdapter,
 Sitecom,Wireless Network PCI Card 54Mbps WL-110i,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-network-pci-card-54mbps-wl-110i,Sitecom,WL-110I,Other,NetworkAdapter,
 Sitecom,Wireless Network PC Card 54G WL-112,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-network-pc-card-54g-wl-112,Sitecom,WL-112,Other,NetworkAdapter,https://man.openbsd.org/ral.4
@@ -22395,12 +22395,12 @@ Sitecom,Wireless Network PCI Adapter 54G WL-115,model,pending,https://jp.drvhub.
 Sitecom,Wireless Network PCI Adapter 54G WL-115v2,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-network-pci-adapter-54g-wl-115v2,Sitecom,WL-115,Other,NetworkAdapter,
 Sitecom,Wireless Network Cardbus Card 54Mbps WL-120v2,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-network-cardbus-card-54mbps-wl-120v2,Sitecom,WL-120,Other,NetworkAdapter,
 Sitecom,Wireless Network PCI Card 54Mbps WL-121v2,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-network-pci-card-54mbps-wl-121v2,Sitecom,WL-121,Other,NetworkAdapter,
-Sitecom,Wirless Network PC Card MiMoXR WL-150,model,pending,https://jp.drvhub.net/devices/network/sitecom/wirless-network-pc-card-mimoxr-wl-150,Sitecom,WL-150,Other,NetworkAdapter,
-Sitecom,Wireless Network PCI Adapter MiMoXR WL-151,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-network-pci-adapter-mimoxr-wl-151,Sitecom,WL-151,Other,NetworkAdapter,
-Sitecom,WL-168 Wireless Network USB Adapter 54g,model,pending,https://jp.drvhub.net/devices/network/sitecom/wl-168-wireless-network-usb-adapter-54g,Sitecom,WL-168,Other,NetworkAdapter,
+Sitecom,Wirless Network PC Card MiMoXR WL-150,model,pending,https://jp.drvhub.net/devices/network/sitecom/wirless-network-pc-card-mimoxr-wl-150,Sitecom,WL-150,Other,NetworkAdapter,https://web.archive.org/web/20160417033328id_/http://www.sitecomlearningcentre.com:80/es/products/wl-150v1001/wlan-cardbus-card-mimo-xr
+Sitecom,Wireless Network PCI Adapter MiMoXR WL-151,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-network-pci-adapter-mimoxr-wl-151,Sitecom,WL-151,Other,NetworkAdapter,https://web.archive.org/web/20160507023010id_/http://www.sitecomlearningcentre.com:80/products/wl-151v1001/wlan-pci-card-mimo-xr/contact
+Sitecom,WL-168 Wireless Network USB Adapter 54g,model,pending,https://jp.drvhub.net/devices/network/sitecom/wl-168-wireless-network-usb-adapter-54g,Sitecom,WL-168,Other,NetworkAdapter,https://web.archive.org/web/20160628080027id_/http://www.sitecomlearningcentre.com:80/it/products/wl-168v1003/wlan-usb-adapter-54g
 Sitecom,Wireless Network PC Card turbo g WL-170,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-network-pc-card-turbo-g-wl-170,Sitecom,WL-170,Other,NetworkAdapter,
-Sitecom,Wireless Network PCI Adapter turbo g WL-171,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-network-pci-adapter-turbo-g-wl-171,Sitecom,WL-171,Other,NetworkAdapter,
-Sitecom,Wireless Network PCI Card turbo g WL-171,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-network-pci-card-turbo-g-wl-171,Sitecom,WL-171,Other,NetworkAdapter,
+Sitecom,Wireless Network PCI Adapter turbo g WL-171,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-network-pci-adapter-turbo-g-wl-171,Sitecom,WL-171,Other,NetworkAdapter,https://web.archive.org/web/20160818165908id_/http://www.sitecomlearningcentre.com:80/nl/products/wl-171v1001/wlan-54g-turbo-pci-card
+Sitecom,Wireless Network PCI Card turbo g WL-171,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-network-pci-card-turbo-g-wl-171,Sitecom,WL-171,Other,NetworkAdapter,https://web.archive.org/web/20160818165908id_/http://www.sitecomlearningcentre.com:80/nl/products/wl-171v1001/wlan-54g-turbo-pci-card
 Sitecom,Wireless Network USB adapter Turbo g WL-172,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-network-usb-adapter-turbo-g-wl-172,Sitecom,WL-172,Other,NetworkAdapter,https://man.openbsd.org/rum.4
 Sitecom,Wireless Network USB Adapter 54G Turbo WL-177,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-network-usb-adapter-54g-turbo-wl-177,Sitecom,WL-177,Other,NetworkAdapter,
 Sitecom,Wireless-N Network PC Card WL-180,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-n-network-pc-card-wl-180,Sitecom,WL-180,Other,NetworkAdapter,
@@ -22414,14 +22414,14 @@ Sitecom,Wireless-N USB Adapter WL-315,model,pending,https://jp.drvhub.net/device
 Sitecom,Wireless-N Cardbus Adapter WL-319,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-n-cardbus-adapter-wl-319,Sitecom,WL-319,Other,NetworkAdapter,
 Sitecom,300N Wireless PCI Adapter WL-320,model,pending,https://jp.drvhub.net/devices/network/sitecom/300n-wireless-pci-adapter-wl-320,Sitecom,WL-320,Other,NetworkAdapter,
 Sitecom,Wireless-N PCI Adapter WL-320,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-n-pci-adapter-wl-320-1,Sitecom,WL-320,Other,NetworkAdapter,
-Sitecom,300N USB Gaming Adapter WL-321,model,pending,https://jp.drvhub.net/devices/network/sitecom/300n-usb-gaming-adapter-wl-321,Sitecom,WL-321,Other,NetworkAdapter,
-Sitecom,Intelligent Wireless Gaming Adapter WL-321,model,pending,https://jp.drvhub.net/devices/network/sitecom/intelligent-wireless-gaming-adapter-wl-321,Sitecom,WL-321,Other,NetworkAdapter,
+Sitecom,300N USB Gaming Adapter WL-321,model,pending,https://jp.drvhub.net/devices/network/sitecom/300n-usb-gaming-adapter-wl-321,Sitecom,WL-321,Other,NetworkAdapter,https://web.archive.org/web/20160628073203id_/http://www.sitecomlearningcentre.com:80/it/products/wl-321v1001/300n-xr-gaming-adapter
+Sitecom,Intelligent Wireless Gaming Adapter WL-321,model,pending,https://jp.drvhub.net/devices/network/sitecom/intelligent-wireless-gaming-adapter-wl-321,Sitecom,WL-321,Other,NetworkAdapter,https://web.archive.org/web/20160628073203id_/http://www.sitecomlearningcentre.com:80/it/products/wl-321v1001/300n-xr-gaming-adapter
 Sitecom,Wireless-N USB Adapter WL-323,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-n-usb-adapter-wl-323,Sitecom,WL-323,Other,NetworkAdapter,
 Sitecom,Wireless Network USB Adapter 300N WL-324,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-network-usb-adapter-300n-wl-324,Sitecom,WL-324,Other,NetworkAdapter,
 Sitecom,300N Wireless Dualband USB adapter WL-329,model,pending,https://jp.drvhub.net/devices/network/sitecom/300n-wireless-dualband-usb-adapter-wl-329,Sitecom,WL-329,Other,NetworkAdapter,
-Sitecom,150N USB Adapter X1 WL-343,model,pending,https://jp.drvhub.net/devices/network/sitecom/150n-usb-adapter-x1-wl-343,Sitecom,WL-343,Other,NetworkAdapter,
-Sitecom,300N USB adapter X2 WL-344,model,pending,https://jp.drvhub.net/devices/network/sitecom/300n-usb-adapter-x2-wl-344,Sitecom,WL-344,Other,NetworkAdapter,
-Sitecom,300N Wireless USB adapter X3 WL-345,model,pending,https://jp.drvhub.net/devices/network/sitecom/300n-wireless-usb-adapter-x3-wl-345,Sitecom,WL-345,Other,NetworkAdapter,
+Sitecom,150N USB Adapter X1 WL-343,model,pending,https://jp.drvhub.net/devices/network/sitecom/150n-usb-adapter-x1-wl-343,Sitecom,WL-343,Other,NetworkAdapter,https://web.archive.org/web/20160614103441id_/http://www.sitecomlearningcentre.com:80/it/products/wl-343v1001/150n-usb-adapter-x1
+Sitecom,300N USB adapter X2 WL-344,model,pending,https://jp.drvhub.net/devices/network/sitecom/300n-usb-adapter-x2-wl-344,Sitecom,WL-344,Other,NetworkAdapter,https://web.archive.org/web/20160308072631id_/http://www.sitecomlearningcentre.com:80/be/products/wl-344v1001/300n-usb-adapter-x2
+Sitecom,300N Wireless USB adapter X3 WL-345,model,pending,https://jp.drvhub.net/devices/network/sitecom/300n-wireless-usb-adapter-x3-wl-345,Sitecom,WL-345,Other,NetworkAdapter,https://web.archive.org/web/20160320195217id_/http://www.sitecomlearningcentre.com:80/products/wl-345v1001/300n-usb-adapter-x3/faq/basic/5268/my%20computer%20often%20loses%20the%20connection.%20how%20can%20i%20prevent%20that?
 Sitecom,150N Wireless micro USB adapter WL-349v4,model,pending,https://jp.drvhub.net/devices/network/sitecom/150n-wireless-micro-usb-adapter-wl-349v4,Sitecom,WL-349,Other,NetworkAdapter,
 Sitecom,150N Wireless USB Adapter WL-349v1 002,model,pending,https://jp.drvhub.net/devices/network/sitecom/150n-wireless-usb-adapter-wl-349v1-002,Sitecom,WL-349,Other,NetworkAdapter,
 Sitecom,150N Wireless USB adapter WL-349v2,model,pending,https://jp.drvhub.net/devices/network/sitecom/150n-wireless-usb-adapter-wl-349v2,Sitecom,WL-349,Other,NetworkAdapter,
@@ -22432,10 +22432,10 @@ Sitecom,300N Wireless USB Adapter WL-352v2,model,pending,https://jp.drvhub.net/d
 Sitecom,300N Wireless USB Adapter WL-352v2 001,model,pending,https://jp.drvhub.net/devices/network/sitecom/300n-wireless-usb-adapter-wl-352v2-001,Sitecom,WL-352,Other,NetworkAdapter,
 Sitecom,300N Wireless USB Adapter WL-352v3,model,pending,https://jp.drvhub.net/devices/network/sitecom/300n-wireless-usb-adapter-wl-352v3,Sitecom,WL-352,Other,NetworkAdapter,
 Sitecom,Wireless Nano USB Adapter 150N WL-353,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-nano-usb-adapter-150n-wl-353,Sitecom,WL-353,Other,NetworkAdapter,https://man.openbsd.org/rsu.4
-Sitecom,Wireless High-Gain USB Adapter 300N X2 WL-356,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-high-gain-usb-adapter-300n-x2-wl-356,Sitecom,WL-356,Other,NetworkAdapter,
+Sitecom,Wireless High-Gain USB Adapter 300N X2 WL-356,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-high-gain-usb-adapter-300n-x2-wl-356,Sitecom,WL-356,Other,NetworkAdapter,https://web.archive.org/web/20160628080123id_/http://www.sitecomlearningcentre.com:80/it/products/wl-356v1001/300n-high-gain-usb-adapter
 Sitecom,Wireless Micro USB Adapter 300N X3 WL-358v1 002,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-micro-usb-adapter-300n-x3-wl-358v1-002,Sitecom,WL-358,Other,NetworkAdapter,
 Sitecom,Wireless Micro USB Adapter X3 WL-360,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-micro-usb-adapter-x3-wl-360,Sitecom,WL-360,Other,NetworkAdapter,
-Sitecom,Wireless Micro USB Adapter 300N X3 WL-364,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-micro-usb-adapter-300n-x3-wl-364,Sitecom,WL-364,Other,NetworkAdapter,
+Sitecom,Wireless Micro USB Adapter 300N X3 WL-364,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-micro-usb-adapter-300n-x3-wl-364,Sitecom,WL-364,Other,NetworkAdapter,https://web.archive.org/web/20160628080133id_/http://www.sitecomlearningcentre.com:80/it/products/wl-364v1001/300n-usb-adapter-x3
 Sitecom,Wireless Ultra Nano USB Adapter 150N X1 WL-365,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-ultra-nano-usb-adapter-150n-x1-wl-365,Sitecom,WL-365,Other,NetworkAdapter,https://man.openbsd.org/urtwn.4
 Sitecom,Wireless Network USB Adapter 54g WL-603,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-network-usb-adapter-54g-wl-603,Sitecom,WL-603,Other,NetworkAdapter,https://man.openbsd.org/zyd.4
 Sitecom,Wireless Network Micro USB Adapter 54g WL-608v3_001,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-network-micro-usb-adapter-54g-wl-608v3-001,Sitecom,WL-608,Other,NetworkAdapter,
