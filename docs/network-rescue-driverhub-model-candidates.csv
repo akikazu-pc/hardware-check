@@ -32,8 +32,8 @@ Fujitsu,AMILO Li 1818,model,pending,https://jp.drvhub.net/laptops/fujitsu/amilo-
 Fujitsu,ESPRIMO D9500,model,pending,https://jp.drvhub.net/laptops/fujitsu/esprimo-d9500,Fujitsu,ESPRIMO D9500,Laptop,,https://support.ts.fujitsu.com/Search/SWP1084546.asp
 Fujitsu,ESPRIMO D9510,model,pending,https://jp.drvhub.net/laptops/fujitsu/esprimo-d9510,Fujitsu,ESPRIMO D9510,Laptop,,https://support.ts.fujitsu.com/Search/SWP1084562.asp
 GPD,G1617-01,model,pending,https://jp.drvhub.net/laptops/gpd/g1617-01,GPD,G1617-01,Other,Handheld,
-Valve,Galileo,model,pending,https://jp.drvhub.net/laptops/valve/galileo,Valve,Steam Deck OLED,Other,Handheld,
-Valve,Jupiter,model,pending,https://jp.drvhub.net/laptops/valve/jupiter,Valve,Steam Deck LCD,Other,Handheld,
+Valve,Galileo,model,pending,https://jp.drvhub.net/laptops/valve/galileo,Valve,Steam Deck OLED,Other,Handheld,https://kernel.googlesource.com/pub/scm/linux/kernel/git/torvalds/linux/%2B/cdd1fa91a6b8c7cd93b3abf9f3ef05b8ce741b61/drivers/gpu/drm/drm_panel_orientation_quirks.c
+Valve,Jupiter,model,pending,https://jp.drvhub.net/laptops/valve/jupiter,Valve,Steam Deck LCD,Other,Handheld,https://kernel.googlesource.com/pub/scm/linux/kernel/git/torvalds/linux/%2B/cdd1fa91a6b8c7cd93b3abf9f3ef05b8ce741b61/drivers/gpu/drm/drm_panel_orientation_quirks.c
 ACE,TravelMate 5542,model,pending,https://jp.drvhub.net/laptops/ace/travelmate-5542-2,Acer,TravelMate 5542,Laptop,,
 Acer,Aspire 115-31,model,pending,https://jp.drvhub.net/laptops/acer/aspire-115-31,Acer,Aspire 115-31,Laptop,,
 Acer,Aspire 14 AS14-39,model,pending,https://jp.drvhub.net/laptops/acer/aspire-14-as14-39,Acer,AS14-39,Laptop,,
@@ -18884,10 +18884,10 @@ TP-LINK,TL-WN820N_821N 11N Wireless Adapter,model,pending,https://jp.drvhub.net/
 Microsoft,Surface 2,model,pending,https://jp.drvhub.net/laptops/microsoft/surface-2,Microsoft,Surface 2,Other,WindowsTablet,https://learn.microsoft.com/en-us/surface/surface-driver-firmware-lifecycle-support
 Microsoft,Surface 3,model,pending,https://jp.drvhub.net/laptops/microsoft/surface-3,Microsoft,Surface 3,Other,WindowsTablet,https://learn.microsoft.com/en-us/surface/surface-driver-firmware-lifecycle-support
 Microsoft,Surface Go,model,pending,https://jp.drvhub.net/laptops/microsoft/surface-go,Microsoft,Surface Go,Other,WindowsTablet,https://learn.microsoft.com/en-us/surface/surface-driver-firmware-lifecycle-support
-Microsoft,Surface Pro 5,model,pending,https://jp.drvhub.net/laptops/microsoft/surface-pro-5,Microsoft,Surface Pro 5,Other,WindowsTablet,
+Microsoft,Surface Pro 5,model,pending,https://jp.drvhub.net/laptops/microsoft/surface-pro-5,Microsoft,Surface Pro 5,Other,WindowsTablet,https://learn.microsoft.com/en-us/surface/surface-driver-firmware-lifecycle-support
 Microsoft,Surface Pro 7+,model,pending,https://jp.drvhub.net/laptops/microsoft/surface-pro-7-2,Microsoft,Surface Pro 7+,Other,WindowsTablet,https://learn.microsoft.com/en-us/surface/surface-driver-firmware-lifecycle-support
 Microsoft,Surface Pro 9,model,pending,https://jp.drvhub.net/laptops/microsoft/surface-pro-9,Microsoft,Surface Pro 9,Other,WindowsTablet,https://learn.microsoft.com/en-us/surface/surface-driver-firmware-lifecycle-support
-Microsoft,Surface Pro X,model,pending,https://jp.drvhub.net/laptops/microsoft/surface-pro-x,Microsoft,Surface Pro X,Other,WindowsTablet,
+Microsoft,Surface Pro X,model,pending,https://jp.drvhub.net/laptops/microsoft/surface-pro-x,Microsoft,Surface Pro X,Other,WindowsTablet,https://support.microsoft.com/en-us/surface/battery/surface-charging-requirements-and-power-supplies-surface-pro
 Haier,7G-Series,series-generation,pending,https://jp.drvhub.net/laptops/haier/7g-series,Haier,7G-Series,,,
 HP,15 Series,series-generation,pending,https://jp.drvhub.net/laptops/hp/15-series,HP,15 Series,,,
 HP,ELITEBOOK,series-generation,pending,https://jp.drvhub.net/laptops/hp/elitebook,HP,ELITEBOOK,,,
@@ -18905,7 +18905,7 @@ Panasonic,CF-54-2,series-generation,pending,https://jp.drvhub.net/laptops/panaso
 PCSMART,PCSGOBAM14-Series,series-generation,pending,https://jp.drvhub.net/laptops/pcsmart/pcsgobam14-series,PCSMART,PCSGOBAM14-Series,,,
 Shuttle,X50V5,model,pending,https://jp.drvhub.net/laptops/shuttle/x50v5,Shuttle,X50V5,Other,AllInOne,https://faq.shuttle.eu/faq%3Asoftware%3Awindows?s%5B%5D=2025
 Shuttle,X50V6,model,pending,https://jp.drvhub.net/laptops/shuttle/x50v6,Shuttle,X50V6,Other,AllInOne,https://faq.shuttle.eu/faq%3Asoftware%3Awindows?s%5B%5D=2025
-GPD,WIN2,model,pending,https://jp.drvhub.net/laptops/gpd/win2,GPD,WIN 2,Other,Handheld,
+GPD,WIN2,model,pending,https://jp.drvhub.net/laptops/gpd/win2,GPD,WIN 2,Other,Handheld,https://www.gpd.hk/sdfwerwerhwejrhwehrjwe
 ASUS,1025C,model,pending,https://jp.drvhub.net/laptops/asus/1025c,ASUS,1025C,Laptop,,https://esg.asus.com/english/file/ASUS_J-moss_Eee-Series.pdf#page=1
 ASUS,1025CE,model,pending,https://jp.drvhub.net/laptops/asus/1025ce,ASUS,1025CE,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/1025/1025CE
 ASUS,EXPERTBOOK B1400CBA,model,pending,https://jp.drvhub.net/laptops/asus/expertbook-b1400cba,ASUS,B1400CBA,Laptop,,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx
@@ -21739,7 +21739,7 @@ Sony,VGN-CR31ZR N,model,pending,https://jp.drvhub.net/laptops/sony/vgn-cr31zr-n,
 Sony,VGN-CR31ZR R,model,pending,https://jp.drvhub.net/laptops/sony/vgn-cr31zr-r,Sony,VGN-CR31ZR R,Laptop,,
 Sony,VGN-CR322H B,model,pending,https://jp.drvhub.net/laptops/sony/vgn-cr322h-b,Sony,VGN-CR322H B,Laptop,,
 Sony,VGN-CR323 W,model,pending,https://jp.drvhub.net/laptops/sony/vgn-cr323-w,Sony,VGN-CR323 W,Laptop,,
-Sony,VGN-CR32G B,model,pending,https://jp.drvhub.net/laptops/sony/vgn-cr32g-b,Sony,VGN-CR32G B,Laptop,,
+Sony,VGN-CR32G B,model,pending,https://jp.drvhub.net/laptops/sony/vgn-cr32g-b,Sony,VGN-CR32G B,Laptop,,https://www.sony.com.hk/press/pdf/20080205_01e.pdf
 Sony,VGN-CR353 B,model,pending,https://jp.drvhub.net/laptops/sony/vgn-cr353-b,Sony,VGN-CR353 B,Laptop,,https://www.sony.com.hk/press/pdf/20080617_01e.pdf
 Sony,VGN-CR353 P,model,pending,https://jp.drvhub.net/laptops/sony/vgn-cr353-p,Sony,VGN-CR353 P,Laptop,,https://www.sony.com.hk/press/pdf/20080617_01e.pdf
 Sony,VGN-CR353 R,model,pending,https://jp.drvhub.net/laptops/sony/vgn-cr353-r,Sony,VGN-CR353 R,Laptop,,https://www.sony.com.hk/press/pdf/20080617_01e.pdf
@@ -21749,9 +21749,9 @@ Sony,VGN-CR354 P,model,pending,https://jp.drvhub.net/laptops/sony/vgn-cr354-p,So
 Sony,VGN-CR355 R,model,pending,https://jp.drvhub.net/laptops/sony/vgn-cr355-r,Sony,VGN-CR355 R,Laptop,,
 Sony,VGN-CR356 R,model,pending,https://jp.drvhub.net/laptops/sony/vgn-cr356-r,Sony,VGN-CR356 R,Laptop,,
 Sony,VGN-CR357 L,model,pending,https://jp.drvhub.net/laptops/sony/vgn-cr357-l,Sony,VGN-CR357 L,Laptop,,
-Sony,VGN-CR35G B,model,pending,https://jp.drvhub.net/laptops/sony/vgn-cr35g-b,Sony,VGN-CR35G B,Laptop,,
-Sony,VGN-CR35G P,model,pending,https://jp.drvhub.net/laptops/sony/vgn-cr35g-p,Sony,VGN-CR35G P,Laptop,,
-Sony,VGN-CR35G R,model,pending,https://jp.drvhub.net/laptops/sony/vgn-cr35g-r,Sony,VGN-CR35G R,Laptop,,
+Sony,VGN-CR35G B,model,pending,https://jp.drvhub.net/laptops/sony/vgn-cr35g-b,Sony,VGN-CR35G B,Laptop,,https://www.sony.com.hk/press/pdf/20080205_01e.pdf
+Sony,VGN-CR35G P,model,pending,https://jp.drvhub.net/laptops/sony/vgn-cr35g-p,Sony,VGN-CR35G P,Laptop,,https://www.sony.com.hk/press/pdf/20080205_01e.pdf
+Sony,VGN-CR35G R,model,pending,https://jp.drvhub.net/laptops/sony/vgn-cr35g-r,Sony,VGN-CR35G R,Laptop,,https://www.sony.com.hk/press/pdf/20080205_01e.pdf
 Sony,VGN-CR35L P,model,pending,https://jp.drvhub.net/laptops/sony/vgn-cr35l-p,Sony,VGN-CR35L P,Laptop,,
 Sony,VGN-CR35L W,model,pending,https://jp.drvhub.net/laptops/sony/vgn-cr35l-w,Sony,VGN-CR35L W,Laptop,,
 Sony,VGN-CR35S B,model,pending,https://jp.drvhub.net/laptops/sony/vgn-cr35s-b,Sony,VGN-CR35S B,Laptop,,
@@ -22473,7 +22473,7 @@ ZyXEL,G-220F 802.11g Wireless USB Adapter,model,pending,https://jp.drvhub.net/de
 ZyXEL,G-260 802.11g Wireless USB Adapter,model,pending,https://jp.drvhub.net/devices/network/zyxel/g-260-802-11g-wireless-usb-adapter,ZyXEL,G-260,Other,NetworkAdapter,
 ZyXEL,G-320H IEEE 802.11g Wireless PCI Adapter,model,pending,https://jp.drvhub.net/devices/network/zyxel/g-320h-ieee-802-11g-wireless-pci-adapter,ZyXEL,G-320H,Other,NetworkAdapter,
 ZyXEL,G-360 802.11g Wireless PCI Card,model,pending,https://jp.drvhub.net/devices/network/zyxel/g-360-802-11g-wireless-pci-card,ZyXEL,G-360,Other,NetworkAdapter,
-Microsoft,"Surface Pro with 5G, 11th Edition",model,pending,https://jp.drvhub.net/laptops/microsoft/surface-pro-with-5g-11th-edition,Microsoft,"Surface Pro with 5G, 11th Edition",Other,WindowsTablet,
+Microsoft,"Surface Pro with 5G, 11th Edition",model,pending,https://jp.drvhub.net/laptops/microsoft/surface-pro-with-5g-11th-edition,Microsoft,"Surface Pro with 5G, 11th Edition",Other,WindowsTablet,https://support.microsoft.com/en-us/surface/battery/surface-charging-requirements-and-power-supplies-surface-pro
 Acer,Aspire one,series-generation,pending,https://jp.drvhub.net/laptops/acer/aspire-one,Acer,Aspire one,,,
 Acer,Aspire one Pro,series-generation,pending,https://jp.drvhub.net/laptops/acer/aspire-one-pro,Acer,Aspire one Pro,,,
 ASUS,A8N,series-generation,pending,https://jp.drvhub.net/laptops/asus/a8n,ASUS,A8N,,,
