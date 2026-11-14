@@ -1398,7 +1398,7 @@ Acer,TravelMate X349-G2-M,model,pending,https://jp.drvhub.net/laptops/acer/trave
 Acer,TravelMate X349-M,model,pending,https://jp.drvhub.net/laptops/acer/travelmate-x349-m,Acer,TravelMate X349-M,Laptop,,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx
 Acer,TravelMate X40-51-M,model,pending,https://jp.drvhub.net/laptops/acer/travelmate-x40-51-m,Acer,TravelMate X40-51-M,Laptop,,
 Acer,TravelMate X483,model,pending,https://jp.drvhub.net/laptops/acer/travelmate-x483,Acer,TravelMate X483,Laptop,,
-ASUS,1000H,model,pending,https://jp.drvhub.net/laptops/asus/1000h,ASUS,1000H,Laptop,,
+ASUS,1000H,model,pending,https://jp.drvhub.net/laptops/asus/1000h,ASUS,1000H,Laptop,,https://esg.asus.com/english/file/ASUS_J-moss_Eee-Series.pdf#page=1
 ASUS,1000HD,model,pending,https://jp.drvhub.net/laptops/asus/1000hd,ASUS,1000HD,Laptop,,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx
 ASUS,1000HE,model,pending,https://jp.drvhub.net/laptops/asus/1000he,ASUS,1000HE,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/1000/1000HE
 ASUS,1000HG,model,pending,https://jp.drvhub.net/laptops/asus/1000hg,ASUS,1000HG,Laptop,,
@@ -1418,10 +1418,10 @@ ASUS,1005PE,model,pending,https://jp.drvhub.net/laptops/asus/1005pe,ASUS,1005PE,
 ASUS,1005PX,model,pending,https://jp.drvhub.net/laptops/asus/1005px,ASUS,1005PX,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/1005/1005PX
 ASUS,1005PXD,model,pending,https://jp.drvhub.net/laptops/asus/1005pxd,ASUS,1005PXD,Laptop,,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx
 ASUS,1008HA,model,pending,https://jp.drvhub.net/laptops/asus/1008ha,ASUS,1008HA,Laptop,,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx
-ASUS,1008P,model,pending,https://jp.drvhub.net/laptops/asus/1008p,ASUS,1008P,Laptop,,
+ASUS,1008P,model,pending,https://jp.drvhub.net/laptops/asus/1008p,ASUS,1008P,Laptop,,https://esg.asus.com/english/file/ASUS_J-moss_Eee-Series.pdf#page=1
 ASUS,1011CX,model,pending,https://jp.drvhub.net/laptops/asus/1011cx,ASUS,1011CX,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/1011/1011CX
 ASUS,1011PX,model,pending,https://jp.drvhub.net/laptops/asus/1011px,ASUS,1011PX,Laptop,,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx
-ASUS,1015B,model,pending,https://jp.drvhub.net/laptops/asus/1015b,ASUS,1015B,Laptop,,
+ASUS,1015B,model,pending,https://jp.drvhub.net/laptops/asus/1015b,ASUS,1015B,Laptop,,https://esg.asus.com/english/file/ASUS_J-moss_Eee-Series.pdf#page=1
 ASUS,1015BX,model,pending,https://jp.drvhub.net/laptops/asus/1015bx,ASUS,1015BX,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/1015/1015BX
 ASUS,1015BXO,model,pending,https://jp.drvhub.net/laptops/asus/1015bxo,ASUS,1015BXO,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/1015/1015BXO
 ASUS,1015CX,model,pending,https://jp.drvhub.net/laptops/asus/1015cx,ASUS,1015CX,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/1015/1015CX
@@ -3394,14 +3394,14 @@ ASUS,Vivobook X7600PC,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-
 ASUS,Vivobook X7600PC N7600PC,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x7600pc-n7600pc,ASUS,Vivobook X7600PC N7600PC,Laptop,,
 ASUS,Vivobook X7600PCB N7600PC,model,pending,https://jp.drvhub.net/laptops/asus/vivobook-x7600pcb-n7600pc,ASUS,Vivobook X7600PCB N7600PC,Laptop,,
 ASUS,X101CH,model,pending,https://jp.drvhub.net/laptops/asus/x101ch,ASUS,X101CH,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/X101/X101CH
-ASUS,X101H,model,pending,https://jp.drvhub.net/laptops/asus/x101h,ASUS,X101H,Laptop,,
+ASUS,X101H,model,pending,https://jp.drvhub.net/laptops/asus/x101h,ASUS,X101H,Laptop,,https://esg.asus.com/english/file/ASUS_J-moss_Eee-Series.pdf#page=1
 ASUS,X102BA,model,pending,https://jp.drvhub.net/laptops/asus/x102ba,ASUS,X102BA,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/X102/X102BA
 ASUS,X1605ZA,model,pending,https://jp.drvhub.net/laptops/asus/x1605za,ASUS,X1605ZA,Laptop,,https://km-ap.asus.com/uploads/AttachLibrarys/8a53fc79-6a00-4a96-8408-a7e886967aef/20240506160932760_ASUS_System_Control_Interface_v3modellist.pdf#page=21
 ASUS,X200CA,model,pending,https://jp.drvhub.net/laptops/asus/x200ca,ASUS,X200CA,Laptop,,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx
 ASUS,X200CAP,model,pending,https://jp.drvhub.net/laptops/asus/x200cap,ASUS,X200CAP,Laptop,,
 ASUS,X200LA,model,pending,https://jp.drvhub.net/laptops/asus/x200la,ASUS,X200LA,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/X200/X200LA
 ASUS,X200MA,model,pending,https://jp.drvhub.net/laptops/asus/x200ma,ASUS,X200MA,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/X200/X200MA
-ASUS,X201E,model,pending,https://jp.drvhub.net/laptops/asus/x201e,ASUS,X201E,Laptop,,
+ASUS,X201E,model,pending,https://jp.drvhub.net/laptops/asus/x201e,ASUS,X201E,Laptop,,https://esg.asus.com/english/file/ASUS_J-moss_Eee-Series.pdf#page=1
 ASUS,X201EP,model,pending,https://jp.drvhub.net/laptops/asus/x201ep,ASUS,X201EP,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/X201/X201EP
 ASUS,X201EV,model,pending,https://jp.drvhub.net/laptops/asus/x201ev,ASUS,X201EV,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/X201/X201EV
 ASUS,X202E,model,pending,https://jp.drvhub.net/laptops/asus/x202e,ASUS,X202E,Laptop,,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx
@@ -6180,30 +6180,30 @@ HP,EliteBook 1040 G9,model,pending,https://jp.drvhub.net/laptops/hp/elitebook-10
 HP,EliteBook 1050 G1,model,pending,https://jp.drvhub.net/laptops/hp/elitebook-1050-g1,HP,EliteBook 1050 G1,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/EliteBook/EliteBook%201050%20G1
 HP,EliteBook 2170p,model,pending,https://jp.drvhub.net/laptops/hp/elitebook-2170p,HP,EliteBook 2170p,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/EliteBook/EliteBook%202170p
 HP,EliteBook 2530p,model,pending,https://jp.drvhub.net/laptops/hp/elitebook-2530p,HP,EliteBook 2530p,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/EliteBook/EliteBook%202530p
-HP,EliteBook 2530p (KR059AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-2530p-kr059av,HP,EliteBook 2530p (KR059AV),Laptop,,
+HP,EliteBook 2530p (KR059AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-2530p-kr059av,HP,EliteBook 2530p (KR059AV),Laptop,,https://partsurfer.hp.com/?searchtext=KR059AV
 HP,EliteBook 2530p (NA958ET#ABE),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-2530p-na958et-abe,HP,EliteBook 2530p (NA958ET#ABE),Laptop,,
 HP,EliteBook 2540p,model,pending,https://jp.drvhub.net/laptops/hp/elitebook-2540p,HP,EliteBook 2540p,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/EliteBook/EliteBook%202540p
-HP,EliteBook 2540p (VB715AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-2540p-vb715av,HP,EliteBook 2540p (VB715AV),Laptop,,
-HP,EliteBook 2540p (VB841AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-2540p-vb841av,HP,EliteBook 2540p (VB841AV),Laptop,,
+HP,EliteBook 2540p (VB715AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-2540p-vb715av,HP,EliteBook 2540p (VB715AV),Laptop,,https://partsurfer.hp.com/?searchtext=VB715AV
+HP,EliteBook 2540p (VB841AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-2540p-vb841av,HP,EliteBook 2540p (VB841AV),Laptop,,https://partsurfer.hp.com/?searchtext=VB841AV
 HP,EliteBook 2540p (VB841PA),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-2540p-vb841pa,HP,EliteBook 2540p (VB841PA),Laptop,,
-HP,EliteBook 2540p (VB845AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-2540p-vb845av,HP,EliteBook 2540p (VB845AV),Laptop,,
+HP,EliteBook 2540p (VB845AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-2540p-vb845av,HP,EliteBook 2540p (VB845AV),Laptop,,https://partsurfer.hp.com/?searchtext=VB845AV
 HP,EliteBook 2540p (VB854AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-2540p-vb854av,HP,EliteBook 2540p (VB854AV),Laptop,,
 HP,EliteBook 2540p (VW756EC#ABB),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-2540p-vw756ec-abb,HP,EliteBook 2540p (VW756EC#ABB),Laptop,,
-HP,EliteBook 2540p (WP884ET),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-2540p-wp884et,HP,EliteBook 2540p (WP884ET),Laptop,,
-HP,EliteBook 2540p (WR014PA),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-2540p-wr014pa,HP,EliteBook 2540p (WR014PA),Laptop,,
-HP,EliteBook 2540p (XD199LS),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-2540p-xd199ls,HP,EliteBook 2540p (XD199LS),Laptop,,
-HP,EliteBook 2540p (XT930UT),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-2540p-xt930ut,HP,EliteBook 2540p (XT930UT),Laptop,,
+HP,EliteBook 2540p (WP884ET),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-2540p-wp884et,HP,EliteBook 2540p (WP884ET),Laptop,,https://partsurfer.hp.com/?searchtext=WP884ET
+HP,EliteBook 2540p (WR014PA),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-2540p-wr014pa,HP,EliteBook 2540p (WR014PA),Laptop,,https://partsurfer.hp.com/?searchtext=WR014PA
+HP,EliteBook 2540p (XD199LS),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-2540p-xd199ls,HP,EliteBook 2540p (XD199LS),Laptop,,https://partsurfer.hp.com/?searchtext=XD199LS
+HP,EliteBook 2540p (XT930UT),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-2540p-xt930ut,HP,EliteBook 2540p (XT930UT),Laptop,,https://partsurfer.hp.com/?searchtext=XT930UT
 HP,EliteBook 2560p,model,pending,https://jp.drvhub.net/laptops/hp/elitebook-2560p,HP,EliteBook 2560p,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/EliteBook/EliteBook%202560p
-HP,EliteBook 2560p (A7C01PC),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-2560p-a7c01pc,HP,EliteBook 2560p (A7C01PC),Laptop,,
+HP,EliteBook 2560p (A7C01PC),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-2560p-a7c01pc,HP,EliteBook 2560p (A7C01PC),Laptop,,https://partsurfer.hp.com/?searchtext=A7C01PC
 HP,EliteBook 2560p (A9S71PC#ABG),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-2560p-a9s71pc-abg,HP,EliteBook 2560p (A9S71PC#ABG),Laptop,,
 HP,EliteBook 2560p (LJ459LA#ABM),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-2560p-lj459laabm,HP,EliteBook 2560p (LJ459LA#ABM),Laptop,,
 HP,EliteBook 2560p (QD044EP#ABF),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-2560p-qd044ep-abf,HP,EliteBook 2560p (QD044EP#ABF),Laptop,,
 HP,EliteBook 2560p (QDO67EP),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-2560p-qdo67ep,HP,EliteBook 2560p (QDO67EP),Laptop,,
-HP,EliteBook 2560p (SN358UP),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-2560p-sn358up,HP,EliteBook 2560p (SN358UP),Laptop,,
-HP,EliteBook 2560p (SN370UP),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-2560p-sn370up,HP,EliteBook 2560p (SN370UP),Laptop,,
-HP,EliteBook 2560p (SQ598UP),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-2560p-sq598up,HP,EliteBook 2560p (SQ598UP),Laptop,,
+HP,EliteBook 2560p (SN358UP),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-2560p-sn358up,HP,EliteBook 2560p (SN358UP),Laptop,,https://partsurfer.hp.com/?searchtext=SN358UP
+HP,EliteBook 2560p (SN370UP),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-2560p-sn370up,HP,EliteBook 2560p (SN370UP),Laptop,,https://partsurfer.hp.com/?searchtext=SN370UP
+HP,EliteBook 2560p (SQ598UP),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-2560p-sq598up,HP,EliteBook 2560p (SQ598UP),Laptop,,https://partsurfer.hp.com/?searchtext=SQ598UP
 HP,EliteBook 2560p (XB208AV#AB2),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-2560p-xb208avab2,HP,EliteBook 2560p (XB208AV#AB2),Laptop,,
-HP,EliteBook 2560p (XB208AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-2560p-xb208av,HP,EliteBook 2560p (XB208AV),Laptop,,
+HP,EliteBook 2560p (XB208AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-2560p-xb208av,HP,EliteBook 2560p (XB208AV),Laptop,,https://partsurfer.hp.com/?searchtext=XB208AV
 HP,EliteBook 2560p (XB208AV)XB20,model,pending,https://jp.drvhub.net/laptops/hp/elitebook-2560p-xb208av-xb20,HP,EliteBook 2560p (XB208AV)XB20,Laptop,,
 HP,EliteBook 2570p,model,pending,https://jp.drvhub.net/laptops/hp/elitebook-2570p,HP,EliteBook 2570p,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/EliteBook/EliteBook%202570p
 HP,EliteBook 2730p,model,pending,https://jp.drvhub.net/laptops/hp/elitebook-2730p,HP,EliteBook 2730p,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/EliteBook/EliteBook%202730p
@@ -6249,10 +6249,10 @@ HP,EliteBook 660 G11,model,pending,https://jp.drvhub.net/laptops/hp/elitebook-66
 HP,EliteBook 665 G11,model,pending,https://jp.drvhub.net/laptops/hp/elitebook-665-g11,HP,EliteBook 665 G11,Laptop,,
 HP,EliteBook 6930p,model,pending,https://jp.drvhub.net/laptops/hp/elitebook-6930p,HP,EliteBook 6930p,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/EliteBook/EliteBook%206930p
 HP,EliteBook 6930p (00000),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-6930p-00000,HP,EliteBook 6930p (00000),Laptop,,
-HP,EliteBook 6930p (KK082AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-6930p-kk082av,HP,EliteBook 6930p (KK082AV),Laptop,,
+HP,EliteBook 6930p (KK082AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-6930p-kk082av,HP,EliteBook 6930p (KK082AV),Laptop,,https://partsurfer.hp.com/?searchtext=KK082AV
 HP,EliteBook 6930p (NH453UC#ABB),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-6930p-nh453ucabb,HP,EliteBook 6930p (NH453UC#ABB),Laptop,,
 HP,EliteBook 6930p (NX954LA#ABM),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-6930p-nx954la-abm,HP,EliteBook 6930p (NX954LA#ABM),Laptop,,
-HP,EliteBook 6930p (SG310UC),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-6930p-sg310uc,HP,EliteBook 6930p (SG310UC),Laptop,,
+HP,EliteBook 6930p (SG310UC),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-6930p-sg310uc,HP,EliteBook 6930p (SG310UC),Laptop,,https://partsurfer.hp.com/?searchtext=SG310UC
 HP,EliteBook 720 G1,model,pending,https://jp.drvhub.net/laptops/hp/elitebook-720-g1,HP,EliteBook 720 G1,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/EliteBook/EliteBook%20720%20G1
 HP,EliteBook 720 G2,model,pending,https://jp.drvhub.net/laptops/hp/elitebook-720-g2,HP,EliteBook 720 G2,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/EliteBook/EliteBook%20720%20G2
 HP,EliteBook 725 G2,model,pending,https://jp.drvhub.net/laptops/hp/elitebook-725-g2,HP,EliteBook 725 G2,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/EliteBook/EliteBook%20725%20G2
@@ -6357,37 +6357,37 @@ HP,EliteBook 8440p (CZC04067JF),model,pending,https://jp.drvhub.net/laptops/hp/e
 HP,EliteBook 8440p (CZC103G169),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8440p-czc103g169,HP,EliteBook 8440p (CZC103G169),Laptop,,
 HP,EliteBook 8440p (CZC1246FTB),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8440p-czc1246ftb,HP,EliteBook 8440p (CZC1246FTB),Laptop,,
 HP,EliteBook 8440p (EWRW45234R23,model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8440p-ewrw45234r23,HP,EliteBook 8440p (EWRW45234R23,Laptop,,
-HP,EliteBook 8440p (NU546AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8440p-nu546av,HP,EliteBook 8440p (NU546AV),Laptop,,
+HP,EliteBook 8440p (NU546AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8440p-nu546av,HP,EliteBook 8440p (NU546AV),Laptop,,https://partsurfer.hp.com/?searchtext=NU546AV
 HP,EliteBook 8440p (QWERT),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8440p-qwert,HP,EliteBook 8440p (QWERT),Laptop,,
 HP,EliteBook 8440p (SH923UC#ABA),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8440p-sh923ucaba,HP,EliteBook 8440p (SH923UC#ABA),Laptop,,
-HP,EliteBook 8440p (SJ017UC),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8440p-sj017uc,HP,EliteBook 8440p (SJ017UC),Laptop,,
+HP,EliteBook 8440p (SJ017UC),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8440p-sj017uc,HP,EliteBook 8440p (SJ017UC),Laptop,,https://partsurfer.hp.com/?searchtext=SJ017UC
 HP,EliteBook 8440p (SJ073UP#ABA),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8440p-sj073upaba,HP,EliteBook 8440p (SJ073UP#ABA),Laptop,,
 HP,EliteBook 8440p (SJ237UP#ABM),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8440p-sj237upabm,HP,EliteBook 8440p (SJ237UP#ABM),Laptop,,
-HP,EliteBook 8440p (SJ237UP),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8440p-sj237up,HP,EliteBook 8440p (SJ237UP),Laptop,,
+HP,EliteBook 8440p (SJ237UP),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8440p-sj237up,HP,EliteBook 8440p (SJ237UP),Laptop,,https://partsurfer.hp.com/?searchtext=SJ237UP
 HP,EliteBook 8440p (SJ484UC,model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8440p-sj484uc,HP,EliteBook 8440p (SJ484UC,Laptop,,
 HP,EliteBook 8440p (SJ484UC#ABA),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8440p-sj484uc-aba,HP,EliteBook 8440p (SJ484UC#ABA),Laptop,,
 HP,EliteBook 8440p (SJ48UC#ABA),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8440p-sj48uc-aba,HP,EliteBook 8440p (SJ48UC#ABA),Laptop,,
 HP,EliteBook 8440p (SJ4UC#ABA),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8440p-sj4uc-aba,HP,EliteBook 8440p (SJ4UC#ABA),Laptop,,
-HP,EliteBook 8440p (SL737UP),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8440p-sl737up,HP,EliteBook 8440p (SL737UP),Laptop,,
+HP,EliteBook 8440p (SL737UP),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8440p-sl737up,HP,EliteBook 8440p (SL737UP),Laptop,,https://partsurfer.hp.com/?searchtext=SL737UP
 HP,EliteBook 8440p (SM258UC),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8440p-sm258uc,HP,EliteBook 8440p (SM258UC),Laptop,,
 HP,EliteBook 8440p (SM793UP#ABA),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8440p-sm793up-aba,HP,EliteBook 8440p (SM793UP#ABA),Laptop,,
-HP,EliteBook 8440p (VD484AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8440p-vd484av,HP,EliteBook 8440p (VD484AV),Laptop,,
-HP,EliteBook 8440p (VD485AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8440p-vd485av,HP,EliteBook 8440p (VD485AV),Laptop,,
-HP,EliteBook 8440p (VD487AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8440p-vd487av,HP,EliteBook 8440p (VD487AV),Laptop,,
-HP,EliteBook 8440p (VD489AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8440p-vd489av,HP,EliteBook 8440p (VD489AV),Laptop,,
+HP,EliteBook 8440p (VD484AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8440p-vd484av,HP,EliteBook 8440p (VD484AV),Laptop,,https://partsurfer.hp.com/?searchtext=VD484AV
+HP,EliteBook 8440p (VD485AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8440p-vd485av,HP,EliteBook 8440p (VD485AV),Laptop,,https://partsurfer.hp.com/?searchtext=VD485AV
+HP,EliteBook 8440p (VD487AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8440p-vd487av,HP,EliteBook 8440p (VD487AV),Laptop,,https://partsurfer.hp.com/?searchtext=VD487AV
+HP,EliteBook 8440p (VD489AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8440p-vd489av,HP,EliteBook 8440p (VD489AV),Laptop,,https://partsurfer.hp.com/?searchtext=VD489AV
 HP,EliteBook 8440p (VQ402EP#AK8),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8440p-vq402ep-ak8,HP,EliteBook 8440p (VQ402EP#AK8),Laptop,,
-HP,EliteBook 8440p (VQ664EA),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8440p-vq664ea,HP,EliteBook 8440p (VQ664EA),Laptop,,
+HP,EliteBook 8440p (VQ664EA),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8440p-vq664ea,HP,EliteBook 8440p (VQ664EA),Laptop,,https://partsurfer.hp.com/?searchtext=VQ664EA
 HP,EliteBook 8440p (VQ664ET#ABU),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8440p-vq664etabu,HP,EliteBook 8440p (VQ664ET#ABU),Laptop,,
 HP,EliteBook 8440p (VW657EC#ABA),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8440p-vw657ec-aba,HP,EliteBook 8440p (VW657EC#ABA),Laptop,,
 HP,EliteBook 8440p (VW762PA#B1L),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8440p-vw762pab1l,HP,EliteBook 8440p (VW762PA#B1L),Laptop,,
 HP,EliteBook 8440p (WH256UT#ABA),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8440p-wh256ut-aba,HP,EliteBook 8440p (WH256UT#ABA),Laptop,,
 HP,EliteBook 8440p (WJ681AW#ABA),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8440p-wj681awaba,HP,EliteBook 8440p (WJ681AW#ABA),Laptop,,
 HP,EliteBook 8440p (WJ681AW#AC4),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8440p-wj681aw-ac4,HP,EliteBook 8440p (WJ681AW#AC4),Laptop,,
-HP,EliteBook 8440p (WJ681AW),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8440p-wj681aw,HP,EliteBook 8440p (WJ681AW),Laptop,,
+HP,EliteBook 8440p (WJ681AW),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8440p-wj681aw,HP,EliteBook 8440p (WJ681AW),Laptop,,https://partsurfer.hp.com/?searchtext=WJ681AW
 HP,EliteBook 8440p (WJ683AW#ABA),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8440p-wj683awaba,HP,EliteBook 8440p (WJ683AW#ABA),Laptop,,
-HP,EliteBook 8440p (WN014LA),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8440p-wn014la,HP,EliteBook 8440p (WN014LA),Laptop,,
+HP,EliteBook 8440p (WN014LA),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8440p-wn014la,HP,EliteBook 8440p (WN014LA),Laptop,,https://partsurfer.hp.com/?searchtext=WN014LA
 HP,EliteBook 8440p (XN704EA#ACB),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8440p-xn704ea-acb,HP,EliteBook 8440p (XN704EA#ACB),Laptop,,
-HP,EliteBook 8440p (XT917UT),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8440p-xt917ut,HP,EliteBook 8440p (XT917UT),Laptop,,
+HP,EliteBook 8440p (XT917UT),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8440p-xt917ut,HP,EliteBook 8440p (XT917UT),Laptop,,https://partsurfer.hp.com/?searchtext=XT917UT
 HP,EliteBook 8440w,model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8440w,HP,EliteBook 8440w,Laptop,,
 HP,EliteBook 8440w (SJ871UP#ABA),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8440w-sj871upaba,HP,EliteBook 8440w (SJ871UP#ABA),Laptop,,
 HP,EliteBook 845 G10,model,pending,https://jp.drvhub.net/laptops/hp/elitebook-845-g10,HP,EliteBook 845 G10,Laptop,,
@@ -6406,32 +6406,32 @@ HP,EliteBook 8460p (B9Y99US#ABA),model,pending,https://jp.drvhub.net/laptops/hp/
 HP,EliteBook 8460p (IOEOIR),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8460p-ioeoir,HP,EliteBook 8460p (IOEOIR),Laptop,,
 HP,EliteBook 8460p (JACKMA),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8460p-jackma,HP,EliteBook 8460p (JACKMA),Laptop,,
 HP,EliteBook 8460p (JL427AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8460p-jl427av,HP,EliteBook 8460p (JL427AV),Laptop,,
-HP,EliteBook 8460p (LG741EA),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8460p-lg741ea,HP,EliteBook 8460p (LG741EA),Laptop,,
+HP,EliteBook 8460p (LG741EA),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8460p-lg741ea,HP,EliteBook 8460p (LG741EA),Laptop,,https://partsurfer.hp.com/?searchtext=LG741EA
 HP,EliteBook 8460p (LG745EA#ABD),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8460p-lg745eaabd,HP,EliteBook 8460p (LG745EA#ABD),Laptop,,
-HP,EliteBook 8460p (LG746EA),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8460p-lg746ea,HP,EliteBook 8460p (LG746EA),Laptop,,
+HP,EliteBook 8460p (LG746EA),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8460p-lg746ea,HP,EliteBook 8460p (LG746EA),Laptop,,https://partsurfer.hp.com/?searchtext=LG746EA
 HP,EliteBook 8460p (LJ427A),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8460p-lj427a,HP,EliteBook 8460p (LJ427A),Laptop,,
-HP,EliteBook 8460p (LJ427AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8460p-lj427av,HP,EliteBook 8460p (LJ427AV),Laptop,,
-HP,EliteBook 8460p (LJ428AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8460p-lj428av,HP,EliteBook 8460p (LJ428AV),Laptop,,
-HP,EliteBook 8460p (LJ429AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8460p-lj429av,HP,EliteBook 8460p (LJ429AV),Laptop,,
+HP,EliteBook 8460p (LJ427AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8460p-lj427av,HP,EliteBook 8460p (LJ427AV),Laptop,,https://partsurfer.hp.com/?searchtext=LJ427AV
+HP,EliteBook 8460p (LJ428AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8460p-lj428av,HP,EliteBook 8460p (LJ428AV),Laptop,,https://partsurfer.hp.com/?searchtext=LJ428AV
+HP,EliteBook 8460p (LJ429AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8460p-lj429av,HP,EliteBook 8460p (LJ429AV),Laptop,,https://partsurfer.hp.com/?searchtext=LJ429AV
 HP,EliteBook 8460p (LJ541UT#ABA),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8460p-lj541utaba,HP,EliteBook 8460p (LJ541UT#ABA),Laptop,,
 HP,EliteBook 8460p (LP937AV#111),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8460p-lp937av-111,HP,EliteBook 8460p (LP937AV#111),Laptop,,
 HP,EliteBook 8460p (LQ166AW#AC4),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8460p-lq166aw-ac4,HP,EliteBook 8460p (LQ166AW#AC4),Laptop,,
-HP,EliteBook 8460p (LQ166AW),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8460p-lq166aw,HP,EliteBook 8460p (LQ166AW),Laptop,,
+HP,EliteBook 8460p (LQ166AW),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8460p-lq166aw,HP,EliteBook 8460p (LQ166AW),Laptop,,https://partsurfer.hp.com/?searchtext=LQ166AW
 HP,EliteBook 8460p (QU808US#ABA),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8460p-qu808us-aba,HP,EliteBook 8460p (QU808US#ABA),Laptop,,
 HP,EliteBook 8460p (QWERTYUIOP),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8460p-qwertyuiop,HP,EliteBook 8460p (QWERTYUIOP),Laptop,,
-HP,EliteBook 8460p (SM735UP),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8460p-sm735up,HP,EliteBook 8460p (SM735UP),Laptop,,
-HP,EliteBook 8460p (SM811UC),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8460p-sm811uc,HP,EliteBook 8460p (SM811UC),Laptop,,
-HP,EliteBook 8460p (SM903UC),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8460p-sm903uc,HP,EliteBook 8460p (SM903UC),Laptop,,
+HP,EliteBook 8460p (SM735UP),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8460p-sm735up,HP,EliteBook 8460p (SM735UP),Laptop,,https://partsurfer.hp.com/?searchtext=SM735UP
+HP,EliteBook 8460p (SM811UC),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8460p-sm811uc,HP,EliteBook 8460p (SM811UC),Laptop,,https://partsurfer.hp.com/?searchtext=SM811UC
+HP,EliteBook 8460p (SM903UC),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8460p-sm903uc,HP,EliteBook 8460p (SM903UC),Laptop,,https://partsurfer.hp.com/?searchtext=SM903UC
 HP,EliteBook 8460p (SN188UC#ABF),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8460p-sn188ucabf,HP,EliteBook 8460p (SN188UC#ABF),Laptop,,
-HP,EliteBook 8460p (SN188UC),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8460p-sn188uc,HP,EliteBook 8460p (SN188UC),Laptop,,
+HP,EliteBook 8460p (SN188UC),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8460p-sn188uc,HP,EliteBook 8460p (SN188UC),Laptop,,https://partsurfer.hp.com/?searchtext=SN188UC
 HP,EliteBook 8460p (SN838UC),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8460p-sn838uc,HP,EliteBook 8460p (SN838UC),Laptop,,
-HP,EliteBook 8460p (SP238UP),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8460p-sp238up,HP,EliteBook 8460p (SP238UP),Laptop,,
+HP,EliteBook 8460p (SP238UP),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8460p-sp238up,HP,EliteBook 8460p (SP238UP),Laptop,,https://partsurfer.hp.com/?searchtext=SP238UP
 HP,EliteBook 8460p (SP590UC#ABA),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8460p-sp590uc-aba,HP,EliteBook 8460p (SP590UC#ABA),Laptop,,
 HP,EliteBook 8460p (WX558AV#ABA),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8460p-wx558avaba,HP,EliteBook 8460p (WX558AV#ABA),Laptop,,
-HP,EliteBook 8460p (WX558AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8460p-wx558av,HP,EliteBook 8460p (WX558AV),Laptop,,
-HP,EliteBook 8460p (WX562AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8460p-wx562av,HP,EliteBook 8460p (WX562AV),Laptop,,
+HP,EliteBook 8460p (WX558AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8460p-wx558av,HP,EliteBook 8460p (WX558AV),Laptop,,https://partsurfer.hp.com/?searchtext=WX558AV
+HP,EliteBook 8460p (WX562AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8460p-wx562av,HP,EliteBook 8460p (WX562AV),Laptop,,https://partsurfer.hp.com/?searchtext=WX562AV
 HP,EliteBook 8460w,model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8460w,HP,EliteBook 8460w,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/EliteBook/EliteBook%208460w
-HP,EliteBook 8460w (XU079UT),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8460w-xu079ut,HP,EliteBook 8460w (XU079UT),Laptop,,
+HP,EliteBook 8460w (XU079UT),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8460w-xu079ut,HP,EliteBook 8460w (XU079UT),Laptop,,https://partsurfer.hp.com/?searchtext=XU079UT
 HP,EliteBook 8470p,model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8470p,HP,EliteBook 8470p,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/EliteBook/EliteBook%208470p
 HP,EliteBook 8470w,model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8470w,HP,EliteBook 8470w,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/EliteBook/EliteBook%208470w
 HP,EliteBook 848 G3,model,pending,https://jp.drvhub.net/laptops/hp/elitebook-848-g3,HP,EliteBook 848 G3,Laptop,,
@@ -6447,25 +6447,25 @@ HP,EliteBook 850 G7,model,pending,https://jp.drvhub.net/laptops/hp/elitebook-850
 HP,EliteBook 850 G8,model,pending,https://jp.drvhub.net/laptops/hp/elitebook-850-g8,HP,EliteBook 850 G8,Laptop,,
 HP,EliteBook 850 G8 3G0A0PA-5CG1190X4K,model,pending,https://jp.drvhub.net/laptops/hp/elitebook-850-g8-3g0a0pa-5cg1190x4k,HP,EliteBook 850 G8 3G0A0PA-5CG1190X4K,Laptop,,
 HP,EliteBook 8530p,model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8530p,HP,EliteBook 8530p,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/EliteBook/EliteBook%208530p
-HP,EliteBook 8530p (GW682AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8530p-gw682av,HP,EliteBook 8530p (GW682AV),Laptop,,
-HP,EliteBook 8530p (KR151AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8530p-kr151av,HP,EliteBook 8530p (KR151AV),Laptop,,
+HP,EliteBook 8530p (GW682AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8530p-gw682av,HP,EliteBook 8530p (GW682AV),Laptop,,https://partsurfer.hp.com/?searchtext=GW682AV
+HP,EliteBook 8530p (KR151AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8530p-kr151av,HP,EliteBook 8530p (KR151AV),Laptop,,https://partsurfer.hp.com/?searchtext=KR151AV
 HP,EliteBook 8530w,model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8530w,HP,EliteBook 8530w,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/EliteBook/EliteBook%208530w
 HP,EliteBook 8530w (FU463ET#ABF),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8530w-fu463et-abf,HP,EliteBook 8530w (FU463ET#ABF),Laptop,,
-HP,EliteBook 8530w (GW680AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8530w-gw680av,HP,EliteBook 8530w (GW680AV),Laptop,,
+HP,EliteBook 8530w (GW680AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8530w-gw680av,HP,EliteBook 8530w (GW680AV),Laptop,,https://partsurfer.hp.com/?searchtext=GW680AV
 HP,EliteBook 8530w (NU914AW#ABM),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8530w-nu914awabm,HP,EliteBook 8530w (NU914AW#ABM),Laptop,,
 HP,EliteBook 8540p,model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8540p,HP,EliteBook 8540p,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/EliteBook/EliteBook%208540p
-HP,EliteBook 8540p (NU486AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8540p-nu486av,HP,EliteBook 8540p (NU486AV),Laptop,,
+HP,EliteBook 8540p (NU486AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8540p-nu486av,HP,EliteBook 8540p (NU486AV),Laptop,,https://partsurfer.hp.com/?searchtext=NU486AV
 HP,EliteBook 8540p (SN830UC#ABA),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8540p-sn830ucaba,HP,EliteBook 8540p (SN830UC#ABA),Laptop,,
 HP,EliteBook 8540p (WD918EA#UUZ),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8540p-wd918ea-uuz,HP,EliteBook 8540p (WD918EA#UUZ),Laptop,,
-HP,EliteBook 8540p (WD920EA),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8540p-wd920ea,HP,EliteBook 8540p (WD920EA),Laptop,,
+HP,EliteBook 8540p (WD920EA),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8540p-wd920ea,HP,EliteBook 8540p (WD920EA),Laptop,,https://partsurfer.hp.com/?searchtext=WD920EA
 HP,EliteBook 8540p (WD921EA#ABD),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8540p-wd921ea-abd,HP,EliteBook 8540p (WD921EA#ABD),Laptop,,
-HP,EliteBook 8540p (WD921EA),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8540p-wd921ea,HP,EliteBook 8540p (WD921EA),Laptop,,
+HP,EliteBook 8540p (WD921EA),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8540p-wd921ea,HP,EliteBook 8540p (WD921EA),Laptop,,https://partsurfer.hp.com/?searchtext=WD921EA
 HP,EliteBook 8540p (WH251UT#ABA),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8540p-wh251utaba,HP,EliteBook 8540p (WH251UT#ABA),Laptop,,
-HP,EliteBook 8540p (WH252UT),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8540p-wh252ut,HP,EliteBook 8540p (WH252UT),Laptop,,
-HP,EliteBook 8540p (WH254UA),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8540p-wh254ua,HP,EliteBook 8540p (WH254UA),Laptop,,
-HP,EliteBook 8540p (XT923UT),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8540p-xt923ut,HP,EliteBook 8540p (XT923UT),Laptop,,
+HP,EliteBook 8540p (WH252UT),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8540p-wh252ut,HP,EliteBook 8540p (WH252UT),Laptop,,https://partsurfer.hp.com/?searchtext=WH252UT
+HP,EliteBook 8540p (WH254UA),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8540p-wh254ua,HP,EliteBook 8540p (WH254UA),Laptop,,https://partsurfer.hp.com/?searchtext=WH254UA
+HP,EliteBook 8540p (XT923UT),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8540p-xt923ut,HP,EliteBook 8540p (XT923UT),Laptop,,https://partsurfer.hp.com/?searchtext=XT923UT
 HP,EliteBook 8540w,model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8540w,HP,EliteBook 8540w,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/EliteBook/EliteBook%208540w
-HP,EliteBook 8540w (QL577US),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8540w-ql577us,HP,EliteBook 8540w (QL577US),Laptop,,
+HP,EliteBook 8540w (QL577US),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8540w-ql577us,HP,EliteBook 8540w (QL577US),Laptop,,https://partsurfer.hp.com/?searchtext=QL577US
 HP,EliteBook 8540w (QM624US#ABA),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8540w-qm624usaba,HP,EliteBook 8540w (QM624US#ABA),Laptop,,
 HP,EliteBook 8540w (QR284US),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8540w-qr284us,HP,EliteBook 8540w (QR284US),Laptop,,
 HP,EliteBook 8540w (SJ985UP#AC4),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8540w-sj985up-ac4,HP,EliteBook 8540w (SJ985UP#AC4),Laptop,,
@@ -6477,31 +6477,31 @@ HP,EliteBook 856,model,pending,https://jp.drvhub.net/laptops/hp/elitebook-856,HP
 HP,EliteBook 8560p,model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8560p,HP,EliteBook 8560p,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/EliteBook/EliteBook%208560p
 HP,EliteBook 8560p (4CZ12121SQ),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8560p-4cz12121sq,HP,EliteBook 8560p (4CZ12121SQ),Laptop,,
 HP,EliteBook 8560p (8560P2G320),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8560p-8560p2g320,HP,EliteBook 8560p (8560P2G320),Laptop,,
-HP,EliteBook 8560p (LG732EA),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8560p-lg732ea,HP,EliteBook 8560p (LG732EA),Laptop,,
-HP,EliteBook 8560p (LG732ET),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8560p-lg732et,HP,EliteBook 8560p (LG732ET),Laptop,,
+HP,EliteBook 8560p (LG732EA),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8560p-lg732ea,HP,EliteBook 8560p (LG732EA),Laptop,,https://partsurfer.hp.com/?searchtext=LG732EA
+HP,EliteBook 8560p (LG732ET),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8560p-lg732et,HP,EliteBook 8560p (LG732ET),Laptop,,https://partsurfer.hp.com/?searchtext=LG732ET
 HP,EliteBook 8560p (LG735EA#ACQ),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8560p-lg735ea-acq,HP,EliteBook 8560p (LG735EA#ACQ),Laptop,,
 HP,EliteBook 8560p (LG735EA#AK8),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8560p-lg735ea-ak8,HP,EliteBook 8560p (LG735EA#AK8),Laptop,,
-HP,EliteBook 8560p (LG737EA),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8560p-lg737ea,HP,EliteBook 8560p (LG737EA),Laptop,,
-HP,EliteBook 8560p (LQ322AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8560p-lq322av,HP,EliteBook 8560p (LQ322AV),Laptop,,
-HP,EliteBook 8560p (LW946PA),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8560p-lw946pa,HP,EliteBook 8560p (LW946PA),Laptop,,
+HP,EliteBook 8560p (LG737EA),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8560p-lg737ea,HP,EliteBook 8560p (LG737EA),Laptop,,https://partsurfer.hp.com/?searchtext=LG737EA
+HP,EliteBook 8560p (LQ322AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8560p-lq322av,HP,EliteBook 8560p (LQ322AV),Laptop,,https://partsurfer.hp.com/?searchtext=LQ322AV
+HP,EliteBook 8560p (LW946PA),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8560p-lw946pa,HP,EliteBook 8560p (LW946PA),Laptop,,https://partsurfer.hp.com/?searchtext=LW946PA
 HP,EliteBook 8560p (LX001PA#ABJ),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8560p-lx001pa-abj,HP,EliteBook 8560p (LX001PA#ABJ),Laptop,,
-HP,EliteBook 8560p (SN995UP),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8560p-sn995up,HP,EliteBook 8560p (SN995UP),Laptop,,
-HP,EliteBook 8560p (WX787AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8560p-wx787av,HP,EliteBook 8560p (WX787AV),Laptop,,
+HP,EliteBook 8560p (SN995UP),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8560p-sn995up,HP,EliteBook 8560p (SN995UP),Laptop,,https://partsurfer.hp.com/?searchtext=SN995UP
+HP,EliteBook 8560p (WX787AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8560p-wx787av,HP,EliteBook 8560p (WX787AV),Laptop,,https://partsurfer.hp.com/?searchtext=WX787AV
 HP,EliteBook 8560p (WX787AV)WX78,model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8560p-wx787av-wx78,HP,EliteBook 8560p (WX787AV)WX78,Laptop,,
-HP,EliteBook 8560p (WX788AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8560p-wx788av,HP,EliteBook 8560p (WX788AV),Laptop,,
+HP,EliteBook 8560p (WX788AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8560p-wx788av,HP,EliteBook 8560p (WX788AV),Laptop,,https://partsurfer.hp.com/?searchtext=WX788AV
 HP,EliteBook 8560p (WXL788AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8560p-wxl788av,HP,EliteBook 8560p (WXL788AV),Laptop,,
 HP,EliteBook 8560w,model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8560w,HP,EliteBook 8560w,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/EliteBook/EliteBook%208560w
 HP,EliteBook 8560w (616213R-999),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8560w-616213r-999,HP,EliteBook 8560w (616213R-999),Laptop,,
-HP,EliteBook 8560w (H1S65UC),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8560w-h1s65uc,HP,EliteBook 8560w (H1S65UC),Laptop,,
+HP,EliteBook 8560w (H1S65UC),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8560w-h1s65uc,HP,EliteBook 8560w (H1S65UC),Laptop,,https://partsurfer.hp.com/?searchtext=H1S65UC
 HP,EliteBook 8560w (LG664EA#AK8),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8560w-lg664eaak8,HP,EliteBook 8560w (LG664EA#AK8),Laptop,,
 HP,EliteBook 8560w (LG664EA)LG66,model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8560w-lg664ea-lg66,HP,EliteBook 8560w (LG664EA)LG66,Laptop,,
 HP,EliteBook 8560w (QC578PA#ACJ),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8560w-qc578pa-acj,HP,EliteBook 8560w (QC578PA#ACJ),Laptop,,
 HP,EliteBook 8560w (SM858UC#ABU),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8560w-sm858uc-abu,HP,EliteBook 8560w (SM858UC#ABU),Laptop,,
-HP,EliteBook 8560w (SN652UP),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8560w-sn652up,HP,EliteBook 8560w (SN652UP),Laptop,,
+HP,EliteBook 8560w (SN652UP),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8560w-sn652up,HP,EliteBook 8560w (SN652UP),Laptop,,https://partsurfer.hp.com/?searchtext=SN652UP
 HP,EliteBook 8560w (SP128UP#ABA),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8560w-sp128upaba,HP,EliteBook 8560w (SP128UP#ABA),Laptop,,
-HP,EliteBook 8560w (SP972UC),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8560w-sp972uc,HP,EliteBook 8560w (SP972UC),Laptop,,
-HP,EliteBook 8560w (WX563AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8560w-wx563av,HP,EliteBook 8560w (WX563AV),Laptop,,
-HP,EliteBook 8560w (XX058AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8560w-xx058av,HP,EliteBook 8560w (XX058AV),Laptop,,
+HP,EliteBook 8560w (SP972UC),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8560w-sp972uc,HP,EliteBook 8560w (SP972UC),Laptop,,https://partsurfer.hp.com/?searchtext=SP972UC
+HP,EliteBook 8560w (WX563AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8560w-wx563av,HP,EliteBook 8560w (WX563AV),Laptop,,https://partsurfer.hp.com/?searchtext=WX563AV
+HP,EliteBook 8560w (XX058AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8560w-xx058av,HP,EliteBook 8560w (XX058AV),Laptop,,https://partsurfer.hp.com/?searchtext=XX058AV
 HP,EliteBook 8570p,model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8570p,HP,EliteBook 8570p,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/EliteBook/EliteBook%208570p
 HP,EliteBook 8570w,model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8570w,HP,EliteBook 8570w,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/EliteBook/EliteBook%208570w
 HP,EliteBook 860 G10,model,pending,https://jp.drvhub.net/laptops/hp/elitebook-860-g10,HP,EliteBook 860 G10,Laptop,,
@@ -6512,15 +6512,15 @@ HP,EliteBook 865 G11,model,pending,https://jp.drvhub.net/laptops/hp/elitebook-86
 HP,EliteBook 865 G9,model,pending,https://jp.drvhub.net/laptops/hp/elitebook-865-g9,HP,EliteBook 865 G9,Laptop,,
 HP,EliteBook 8730w,model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8730w,HP,EliteBook 8730w,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/EliteBook/EliteBook%208730w
 HP,EliteBook 8740w,model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8740w,HP,EliteBook 8740w,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/EliteBook/EliteBook%208740w
-HP,EliteBook 8740w (BW231US),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8740w-bw231us,HP,EliteBook 8740w (BW231US),Laptop,,
-HP,EliteBook 8740w (VG305AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8740w-vg305av,HP,EliteBook 8740w (VG305AV),Laptop,,
+HP,EliteBook 8740w (BW231US),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8740w-bw231us,HP,EliteBook 8740w (BW231US),Laptop,,https://partsurfer.hp.com/?searchtext=BW231US
+HP,EliteBook 8740w (VG305AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8740w-vg305av,HP,EliteBook 8740w (VG305AV),Laptop,,https://partsurfer.hp.com/?searchtext=VG305AV
 HP,"EliteBook 8740w (VG305AV,HP)",model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8740w-vg305av-hp,HP,"EliteBook 8740w (VG305AV,HP)",Laptop,,
-HP,EliteBook 8740w (WD941EA),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8740w-wd941ea,HP,EliteBook 8740w (WD941EA),Laptop,,
+HP,EliteBook 8740w (WD941EA),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8740w-wd941ea,HP,EliteBook 8740w (WD941EA),Laptop,,https://partsurfer.hp.com/?searchtext=WD941EA
 HP,EliteBook 8760w,model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8760w,HP,EliteBook 8760w,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/EliteBook/EliteBook%208760w
 HP,EliteBook 8760w (A2F70EC#ABA),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8760w-a2f70ec-aba,HP,EliteBook 8760w (A2F70EC#ABA),Laptop,,
 HP,EliteBook 8760w (SP900UC#ABA),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8760w-sp900uc-aba,HP,EliteBook 8760w (SP900UC#ABA),Laptop,,
-HP,EliteBook 8760w (WX720AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8760w-wx720av,HP,EliteBook 8760w (WX720AV),Laptop,,
-HP,EliteBook 8760w (XU100UT),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8760w-xu100ut,HP,EliteBook 8760w (XU100UT),Laptop,,
+HP,EliteBook 8760w (WX720AV),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8760w-wx720av,HP,EliteBook 8760w (WX720AV),Laptop,,https://partsurfer.hp.com/?searchtext=WX720AV
+HP,EliteBook 8760w (XU100UT),model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8760w-xu100ut,HP,EliteBook 8760w (XU100UT),Laptop,,https://partsurfer.hp.com/?searchtext=XU100UT
 HP,EliteBook 8770w,model,pending,https://jp.drvhub.net/laptops/hp/elitebook-8770w,HP,EliteBook 8770w,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/EliteBook/EliteBook%208770w
 HP,EliteBook Folio 1020 G1,model,pending,https://jp.drvhub.net/laptops/hp/elitebook-folio-1020-g1,HP,EliteBook Folio 1020 G1,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/EliteBook/EliteBook%20Folio%201020%20G1
 HP,EliteBook Folio 1020 G1 SE,model,pending,https://jp.drvhub.net/laptops/hp/elitebook-folio-1020-g1-se,HP,EliteBook Folio 1020 G1 SE,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/EliteBook/EliteBook%20Folio%201020%20G1%20SE
@@ -6924,7 +6924,7 @@ HP,ProBook 4 G1iR,model,pending,https://jp.drvhub.net/laptops/hp/probook-4-g1ir,
 HP,ProBook 4 G1q Next Gen AI,model,pending,https://jp.drvhub.net/laptops/hp/probook-4-g1q-next-gen-ai,HP,ProBook 4 G1q Next Gen AI,Laptop,,
 HP,ProBook 4 G2i Next Gen AI,model,pending,https://jp.drvhub.net/laptops/hp/probook-4-g2i-next-gen-ai,HP,ProBook 4 G2i Next Gen AI,Laptop,,
 HP,ProBook 4230s,model,pending,https://jp.drvhub.net/laptops/hp/probook-4230s,HP,ProBook 4230s,Laptop,,
-HP,ProBook 4230s (LH966PA),model,pending,https://jp.drvhub.net/laptops/hp/probook-4230s-lh966pa,HP,ProBook 4230s (LH966PA),Laptop,,
+HP,ProBook 4230s (LH966PA),model,pending,https://jp.drvhub.net/laptops/hp/probook-4230s-lh966pa,HP,ProBook 4230s (LH966PA),Laptop,,https://partsurfer.hp.com/?searchtext=LH966PA
 HP,ProBook 4230s (LJ835PA)LJ835P,model,pending,https://jp.drvhub.net/laptops/hp/probook-4230s-lj835pa-lj835p,HP,ProBook 4230s (LJ835PA)LJ835P,Laptop,,
 HP,ProBook 430 G1,model,pending,https://jp.drvhub.net/laptops/hp/probook-430-g1,HP,ProBook 430 G1,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/ProBook/ProBook%20430%20G1
 HP,ProBook 430 G2,model,pending,https://jp.drvhub.net/laptops/hp/probook-430-g2,HP,ProBook 430 G2,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/ProBook/ProBook%20430%20G2
@@ -6938,20 +6938,20 @@ HP,ProBook 430 G7 hp probook 430 g7,model,pending,https://jp.drvhub.net/laptops/
 HP,ProBook 430 G8,model,pending,https://jp.drvhub.net/laptops/hp/probook-430-g8,HP,ProBook 430 G8,Laptop,,
 HP,ProBook 4310s,model,pending,https://jp.drvhub.net/laptops/hp/probook-4310s,HP,ProBook 4310s,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/ProBook/ProBook%204310s
 HP,ProBook 4320s,model,pending,https://jp.drvhub.net/laptops/hp/probook-4320s,HP,ProBook 4320s,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/ProBook/ProBook%204320s
-HP,ProBook 4320s (WC355AV),model,pending,https://jp.drvhub.net/laptops/hp/probook-4320s-wc355av,HP,ProBook 4320s (WC355AV),Laptop,,
-HP,ProBook 4320s (WK508EA),model,pending,https://jp.drvhub.net/laptops/hp/probook-4320s-wk508ea,HP,ProBook 4320s (WK508EA),Laptop,,
+HP,ProBook 4320s (WC355AV),model,pending,https://jp.drvhub.net/laptops/hp/probook-4320s-wc355av,HP,ProBook 4320s (WC355AV),Laptop,,https://partsurfer.hp.com/?searchtext=WC355AV
+HP,ProBook 4320s (WK508EA),model,pending,https://jp.drvhub.net/laptops/hp/probook-4320s-wk508ea,HP,ProBook 4320s (WK508EA),Laptop,,https://partsurfer.hp.com/?searchtext=WK508EA
 HP,ProBook 4320s (WS910EA#AC B),model,pending,https://jp.drvhub.net/laptops/hp/probook-4320s-ws910ea-ac-b,HP,ProBook 4320s (WS910EA#AC B),Laptop,,
-HP,ProBook 4320s (WW239LA),model,pending,https://jp.drvhub.net/laptops/hp/probook-4320s-ww239la,HP,ProBook 4320s (WW239LA),Laptop,,
+HP,ProBook 4320s (WW239LA),model,pending,https://jp.drvhub.net/laptops/hp/probook-4320s-ww239la,HP,ProBook 4320s (WW239LA),Laptop,,https://partsurfer.hp.com/?searchtext=WW239LA
 HP,ProBook 4321s,model,pending,https://jp.drvhub.net/laptops/hp/probook-4321s,HP,ProBook 4321s,Laptop,,
 HP,ProBook 4321s (XD073PA#AB2),model,pending,https://jp.drvhub.net/laptops/hp/probook-4321s-xd073pa-ab2,HP,ProBook 4321s (XD073PA#AB2),Laptop,,
 HP,ProBook 4330s,model,pending,https://jp.drvhub.net/laptops/hp/probook-4330s,HP,ProBook 4330s,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/ProBook/ProBook%204330s
-HP,ProBook 4330s (LW813EA),model,pending,https://jp.drvhub.net/laptops/hp/probook-4330s-lw813ea,HP,ProBook 4330s (LW813EA),Laptop,,
+HP,ProBook 4330s (LW813EA),model,pending,https://jp.drvhub.net/laptops/hp/probook-4330s-lw813ea,HP,ProBook 4330s (LW813EA),Laptop,,https://partsurfer.hp.com/?searchtext=LW813EA
 HP,ProBook 4330s (LW819EA#ACB),model,pending,https://jp.drvhub.net/laptops/hp/probook-4330s-lw819ea-acb,HP,ProBook 4330s (LW819EA#ACB),Laptop,,
-HP,ProBook 4330s (LW819EA),model,pending,https://jp.drvhub.net/laptops/hp/probook-4330s-lw819ea,HP,ProBook 4330s (LW819EA),Laptop,,
+HP,ProBook 4330s (LW819EA),model,pending,https://jp.drvhub.net/laptops/hp/probook-4330s-lw819ea,HP,ProBook 4330s (LW819EA),Laptop,,https://partsurfer.hp.com/?searchtext=LW819EA
 HP,ProBook 4330s (LW965PA#UUF),model,pending,https://jp.drvhub.net/laptops/hp/probook-4330s-lw965pauuf,HP,ProBook 4330s (LW965PA#UUF),Laptop,,
 HP,ProBook 4330s (XX945EA#ACB),model,pending,https://jp.drvhub.net/laptops/hp/probook-4330s-xx945eaacb,HP,ProBook 4330s (XX945EA#ACB),Laptop,,
 HP,ProBook 4330s (XX971EA#UUW),model,pending,https://jp.drvhub.net/laptops/hp/probook-4330s-xx971ea-uuw,HP,ProBook 4330s (XX971EA#UUW),Laptop,,
-HP,ProBook 4330s (XZ692AV),model,pending,https://jp.drvhub.net/laptops/hp/probook-4330s-xz692av,HP,ProBook 4330s (XZ692AV),Laptop,,
+HP,ProBook 4330s (XZ692AV),model,pending,https://jp.drvhub.net/laptops/hp/probook-4330s-xz692av,HP,ProBook 4330s (XZ692AV),Laptop,,https://partsurfer.hp.com/?searchtext=XZ692AV
 HP,ProBook 4330s (XZ693AV),model,pending,https://jp.drvhub.net/laptops/hp/probook-4330s-xz693av,HP,ProBook 4330s (XZ693AV),Laptop,,
 HP,ProBook 4331s,model,pending,https://jp.drvhub.net/laptops/hp/probook-4331s,HP,ProBook 4331s,Laptop,,
 HP,ProBook 4340s,model,pending,https://jp.drvhub.net/laptops/hp/probook-4340s,HP,ProBook 4340s,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/ProBook/ProBook%204340s
@@ -6989,7 +6989,7 @@ HP,ProBook 4411s,model,pending,https://jp.drvhub.net/laptops/hp/probook-4411s,HP
 HP,ProBook 4415s,model,pending,https://jp.drvhub.net/laptops/hp/probook-4415s,HP,ProBook 4415s,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/ProBook/ProBook%204415s
 HP,ProBook 4416s,model,pending,https://jp.drvhub.net/laptops/hp/probook-4416s,HP,ProBook 4416s,Laptop,,
 HP,ProBook 4420s,model,pending,https://jp.drvhub.net/laptops/hp/probook-4420s,HP,ProBook 4420s,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/ProBook/ProBook%204420s
-HP,ProBook 4420s (XL416LA),model,pending,https://jp.drvhub.net/laptops/hp/probook-4420s-xl416la,HP,ProBook 4420s (XL416LA),Laptop,,
+HP,ProBook 4420s (XL416LA),model,pending,https://jp.drvhub.net/laptops/hp/probook-4420s-xl416la,HP,ProBook 4420s (XL416LA),Laptop,,https://partsurfer.hp.com/?searchtext=XL416LA
 HP,ProBook 4421s,model,pending,https://jp.drvhub.net/laptops/hp/probook-4421s,HP,ProBook 4421s,Laptop,,
 HP,ProBook 4425s,model,pending,https://jp.drvhub.net/laptops/hp/probook-4425s,HP,ProBook 4425s,Laptop,,
 HP,ProBook 4430s,model,pending,https://jp.drvhub.net/laptops/hp/probook-4430s,HP,ProBook 4430s,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/ProBook/ProBook%204430s
@@ -6999,7 +6999,7 @@ HP,ProBook 4430s (A7K50L),model,pending,https://jp.drvhub.net/laptops/hp/probook
 HP,ProBook 4430s (QG684PA#UUF),model,pending,https://jp.drvhub.net/laptops/hp/probook-4430s-qg684pauuf,HP,ProBook 4430s (QG684PA#UUF),Laptop,,
 HP,ProBook 4430s (QJ674AV),model,pending,https://jp.drvhub.net/laptops/hp/probook-4430s-qj674av,HP,ProBook 4430s (QJ674AV),Laptop,,
 HP,ProBook 4430s (VN),model,pending,https://jp.drvhub.net/laptops/hp/probook-4430s-vn,HP,ProBook 4430s (VN),Laptop,,
-HP,ProBook 4430s (XB140AV),model,pending,https://jp.drvhub.net/laptops/hp/probook-4430s-xb140av,HP,ProBook 4430s (XB140AV),Laptop,,
+HP,ProBook 4430s (XB140AV),model,pending,https://jp.drvhub.net/laptops/hp/probook-4430s-xb140av,HP,ProBook 4430s (XB140AV),Laptop,,https://partsurfer.hp.com/?searchtext=XB140AV
 HP,ProBook 4431s,model,pending,https://jp.drvhub.net/laptops/hp/probook-4431s,HP,ProBook 4431s,Laptop,,
 HP,ProBook 4436s,model,pending,https://jp.drvhub.net/laptops/hp/probook-4436s,HP,ProBook 4436s,Laptop,,
 HP,ProBook 4440s,model,pending,https://jp.drvhub.net/laptops/hp/probook-4440s,HP,ProBook 4440s,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/ProBook/ProBook%204440s
@@ -7045,55 +7045,55 @@ HP,ProBook 4515s,model,pending,https://jp.drvhub.net/laptops/hp/probook-4515s,HP
 HP,ProBook 4515s (NX500EA#ACB),model,pending,https://jp.drvhub.net/laptops/hp/probook-4515s-nx500ea-acb,HP,ProBook 4515s (NX500EA#ACB),Laptop,,
 HP,ProBook 4520s,model,pending,https://jp.drvhub.net/laptops/hp/probook-4520s,HP,ProBook 4520s,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/ProBook/ProBook%204520s
 HP,ProBook 4520s (QAZWSXE),model,pending,https://jp.drvhub.net/laptops/hp/probook-4520s-qazwsxe,HP,ProBook 4520s (QAZWSXE),Laptop,,
-HP,ProBook 4520s (WK511EA),model,pending,https://jp.drvhub.net/laptops/hp/probook-4520s-wk511ea,HP,ProBook 4520s (WK511EA),Laptop,,
+HP,ProBook 4520s (WK511EA),model,pending,https://jp.drvhub.net/laptops/hp/probook-4520s-wk511ea,HP,ProBook 4520s (WK511EA),Laptop,,https://partsurfer.hp.com/?searchtext=WK511EA
 HP,ProBook 4520s (WS944ES#ABT),model,pending,https://jp.drvhub.net/laptops/hp/probook-4520s-ws944es-abt,HP,ProBook 4520s (WS944ES#ABT),Laptop,,
 HP,ProBook 4520s (WT061ES#ABZ),model,pending,https://jp.drvhub.net/laptops/hp/probook-4520s-wt061es-abz,HP,ProBook 4520s (WT061ES#ABZ),Laptop,,
 HP,ProBook 4520s (WT296EA#AKD),model,pending,https://jp.drvhub.net/laptops/hp/probook-4520s-wt296eaakd,HP,ProBook 4520s (WT296EA#AKD),Laptop,,
 HP,ProBook 4520s (WT297EA#AB6),model,pending,https://jp.drvhub.net/laptops/hp/probook-4520s-wt297eaab6,HP,ProBook 4520s (WT297EA#AB6),Laptop,,
 HP,ProBook 4520s (XN573EA#ABF),model,pending,https://jp.drvhub.net/laptops/hp/probook-4520s-xn573eaabf,HP,ProBook 4520s (XN573EA#ABF),Laptop,,
-HP,ProBook 4520s (XT943UT),model,pending,https://jp.drvhub.net/laptops/hp/probook-4520s-xt943ut,HP,ProBook 4520s (XT943UT),Laptop,,
-HP,ProBook 4520s (XX755EA),model,pending,https://jp.drvhub.net/laptops/hp/probook-4520s-xx755ea,HP,ProBook 4520s (XX755EA),Laptop,,
+HP,ProBook 4520s (XT943UT),model,pending,https://jp.drvhub.net/laptops/hp/probook-4520s-xt943ut,HP,ProBook 4520s (XT943UT),Laptop,,https://partsurfer.hp.com/?searchtext=XT943UT
+HP,ProBook 4520s (XX755EA),model,pending,https://jp.drvhub.net/laptops/hp/probook-4520s-xx755ea,HP,ProBook 4520s (XX755EA),Laptop,,https://partsurfer.hp.com/?searchtext=XX755EA
 HP,ProBook 4520s (XX762EA#ACB),model,pending,https://jp.drvhub.net/laptops/hp/probook-4520s-xx762eaacb,HP,ProBook 4520s (XX762EA#ACB),Laptop,,
 HP,ProBook 4520s (XX923ES#AB8),model,pending,https://jp.drvhub.net/laptops/hp/probook-4520s-xx923esab8,HP,ProBook 4520s (XX923ES#AB8),Laptop,,
 HP,ProBook 4525s,model,pending,https://jp.drvhub.net/laptops/hp/probook-4525s,HP,ProBook 4525s,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/ProBook/ProBook%204525s
 HP,ProBook 453,model,pending,https://jp.drvhub.net/laptops/hp/probook-453,HP,ProBook 453,Laptop,,
 HP,ProBook 4530s,model,pending,https://jp.drvhub.net/laptops/hp/probook-4530s,HP,ProBook 4530s,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/ProBook/ProBook%204530s
 HP,ProBook 4530s (0000000),model,pending,https://jp.drvhub.net/laptops/hp/probook-4530s-0000000,HP,ProBook 4530s (0000000),Laptop,,
-HP,ProBook 4530s (A1D18EA),model,pending,https://jp.drvhub.net/laptops/hp/probook-4530s-a1d18ea,HP,ProBook 4530s (A1D18EA),Laptop,,
+HP,ProBook 4530s (A1D18EA),model,pending,https://jp.drvhub.net/laptops/hp/probook-4530s-a1d18ea,HP,ProBook 4530s (A1D18EA),Laptop,,https://partsurfer.hp.com/?searchtext=A1D18EA
 HP,ProBook 4530s (A1D23EA#BCM),model,pending,https://jp.drvhub.net/laptops/hp/probook-4530s-a1d23eabcm,HP,ProBook 4530s (A1D23EA#BCM),Laptop,,
 HP,ProBook 4530s (A1D40EA#ACB),model,pending,https://jp.drvhub.net/laptops/hp/probook-4530s-a1d40eaacb,HP,ProBook 4530s (A1D40EA#ACB),Laptop,,
 HP,ProBook 4530s (A1D40EA#AKD),model,pending,https://jp.drvhub.net/laptops/hp/probook-4530s-a1d40eaakd,HP,ProBook 4530s (A1D40EA#AKD),Laptop,,
-HP,ProBook 4530s (A1D40EA),model,pending,https://jp.drvhub.net/laptops/hp/probook-4530s-a1d40ea,HP,ProBook 4530s (A1D40EA),Laptop,,
+HP,ProBook 4530s (A1D40EA),model,pending,https://jp.drvhub.net/laptops/hp/probook-4530s-a1d40ea,HP,ProBook 4530s (A1D40EA),Laptop,,https://partsurfer.hp.com/?searchtext=A1D40EA
 HP,ProBook 4530s (A1D43EA#AKD),model,pending,https://jp.drvhub.net/laptops/hp/probook-4530s-a1d43eaakd,HP,ProBook 4530s (A1D43EA#AKD),Laptop,,
-HP,ProBook 4530s (A1D46EA),model,pending,https://jp.drvhub.net/laptops/hp/probook-4530s-a1d46ea,HP,ProBook 4530s (A1D46EA),Laptop,,
+HP,ProBook 4530s (A1D46EA),model,pending,https://jp.drvhub.net/laptops/hp/probook-4530s-a1d46ea,HP,ProBook 4530s (A1D46EA),Laptop,,https://partsurfer.hp.com/?searchtext=A1D46EA
 HP,ProBook 4530s (A6C15PA#UUF),model,pending,https://jp.drvhub.net/laptops/hp/probook-4530s-a6c15pa-uuf,HP,ProBook 4530s (A6C15PA#UUF),Laptop,,
 HP,ProBook 4530s (A7K05UT#ABA),model,pending,https://jp.drvhub.net/laptops/hp/probook-4530s-a7k05utaba,HP,ProBook 4530s (A7K05UT#ABA),Laptop,,
 HP,ProBook 4530s (A7K22LT#ABM),model,pending,https://jp.drvhub.net/laptops/hp/probook-4530s-a7k22ltabm,HP,ProBook 4530s (A7K22LT#ABM),Laptop,,
-HP,ProBook 4530s (A7K22LT),model,pending,https://jp.drvhub.net/laptops/hp/probook-4530s-a7k22lt,HP,ProBook 4530s (A7K22LT),Laptop,,
+HP,ProBook 4530s (A7K22LT),model,pending,https://jp.drvhub.net/laptops/hp/probook-4530s-a7k22lt,HP,ProBook 4530s (A7K22LT),Laptop,,https://partsurfer.hp.com/?searchtext=A7K22LT
 HP,ProBook 4530s (A9D68PA#AB1),model,pending,https://jp.drvhub.net/laptops/hp/probook-4530s-a9d68pa-ab1,HP,ProBook 4530s (A9D68PA#AB1),Laptop,,
 HP,ProBook 4530s (B0W34ES#ABV),model,pending,https://jp.drvhub.net/laptops/hp/probook-4530s-b0w34es-abv,HP,ProBook 4530s (B0W34ES#ABV),Laptop,,
 HP,ProBook 4530s (B0W70ES),model,pending,https://jp.drvhub.net/laptops/hp/probook-4530s-b0w70es,HP,ProBook 4530s (B0W70ES),Laptop,,
 HP,ProBook 4530s (B0X66EA#ACB),model,pending,https://jp.drvhub.net/laptops/hp/probook-4530s-b0x66ea-acb,HP,ProBook 4530s (B0X66EA#ACB),Laptop,,
 HP,ProBook 4530s (B0X98EA#ACQ),model,pending,https://jp.drvhub.net/laptops/hp/probook-4530s-b0x98eaacq,HP,ProBook 4530s (B0X98EA#ACQ),Laptop,,
-HP,ProBook 4530s (LH309EA),model,pending,https://jp.drvhub.net/laptops/hp/probook-4530s-lh309ea,HP,ProBook 4530s (LH309EA),Laptop,,
-HP,ProBook 4530s (LH313EA),model,pending,https://jp.drvhub.net/laptops/hp/probook-4530s-lh313ea,HP,ProBook 4530s (LH313EA),Laptop,,
+HP,ProBook 4530s (LH309EA),model,pending,https://jp.drvhub.net/laptops/hp/probook-4530s-lh309ea,HP,ProBook 4530s (LH309EA),Laptop,,https://partsurfer.hp.com/?searchtext=LH309EA
+HP,ProBook 4530s (LH313EA),model,pending,https://jp.drvhub.net/laptops/hp/probook-4530s-lh313ea,HP,ProBook 4530s (LH313EA),Laptop,,https://partsurfer.hp.com/?searchtext=LH313EA
 HP,ProBook 4530s (LJ518UT#ABA),model,pending,https://jp.drvhub.net/laptops/hp/probook-4530s-lj518ut-aba,HP,ProBook 4530s (LJ518UT#ABA),Laptop,,
-HP,ProBook 4530s (LW843EA),model,pending,https://jp.drvhub.net/laptops/hp/probook-4530s-lw843ea,HP,ProBook 4530s (LW843EA),Laptop,,
+HP,ProBook 4530s (LW843EA),model,pending,https://jp.drvhub.net/laptops/hp/probook-4530s-lw843ea,HP,ProBook 4530s (LW843EA),Laptop,,https://partsurfer.hp.com/?searchtext=LW843EA
 HP,ProBook 4530s (LW851EA#ABF),model,pending,https://jp.drvhub.net/laptops/hp/probook-4530s-lw851eaabf,HP,ProBook 4530s (LW851EA#ABF),Laptop,,
-HP,ProBook 4530s (LW859EA),model,pending,https://jp.drvhub.net/laptops/hp/probook-4530s-lw859ea,HP,ProBook 4530s (LW859EA),Laptop,,
-HP,ProBook 4530s (LW862EA),model,pending,https://jp.drvhub.net/laptops/hp/probook-4530s-lw862ea,HP,ProBook 4530s (LW862EA),Laptop,,
+HP,ProBook 4530s (LW859EA),model,pending,https://jp.drvhub.net/laptops/hp/probook-4530s-lw859ea,HP,ProBook 4530s (LW859EA),Laptop,,https://partsurfer.hp.com/?searchtext=LW859EA
+HP,ProBook 4530s (LW862EA),model,pending,https://jp.drvhub.net/laptops/hp/probook-4530s-lw862ea,HP,ProBook 4530s (LW862EA),Laptop,,https://partsurfer.hp.com/?searchtext=LW862EA
 HP,ProBook 4530s (LY470EA#UUG),model,pending,https://jp.drvhub.net/laptops/hp/probook-4530s-ly470eauug,HP,ProBook 4530s (LY470EA#UUG),Laptop,,
-HP,ProBook 4530s (QJ763AV),model,pending,https://jp.drvhub.net/laptops/hp/probook-4530s-qj763av,HP,ProBook 4530s (QJ763AV),Laptop,,
-HP,ProBook 4530s (XB173AV),model,pending,https://jp.drvhub.net/laptops/hp/probook-4530s-xb173av,HP,ProBook 4530s (XB173AV),Laptop,,
+HP,ProBook 4530s (QJ763AV),model,pending,https://jp.drvhub.net/laptops/hp/probook-4530s-qj763av,HP,ProBook 4530s (QJ763AV),Laptop,,https://partsurfer.hp.com/?searchtext=QJ763AV
+HP,ProBook 4530s (XB173AV),model,pending,https://jp.drvhub.net/laptops/hp/probook-4530s-xb173av,HP,ProBook 4530s (XB173AV),Laptop,,https://partsurfer.hp.com/?searchtext=XB173AV
 HP,ProBook 4530s (XU015UT#ABA)XU,model,pending,https://jp.drvhub.net/laptops/hp/probook-4530s-xu015ut-aba-xu,HP,ProBook 4530s (XU015UT#ABA)XU,Laptop,,
 HP,ProBook 4530s (XX958EA#ACQ),model,pending,https://jp.drvhub.net/laptops/hp/probook-4530s-xx958ea-acq,HP,ProBook 4530s (XX958EA#ACQ),Laptop,,
 HP,ProBook 4530s (XX964EA#AKD),model,pending,https://jp.drvhub.net/laptops/hp/probook-4530s-xx964ea-akd,HP,ProBook 4530s (XX964EA#AKD),Laptop,,
-HP,ProBook 4530s (XX965EA),model,pending,https://jp.drvhub.net/laptops/hp/probook-4530s-xx965ea,HP,ProBook 4530s (XX965EA),Laptop,,
+HP,ProBook 4530s (XX965EA),model,pending,https://jp.drvhub.net/laptops/hp/probook-4530s-xx965ea,HP,ProBook 4530s (XX965EA),Laptop,,https://partsurfer.hp.com/?searchtext=XX965EA
 HP,ProBook 4535s,model,pending,https://jp.drvhub.net/laptops/hp/probook-4535s,HP,ProBook 4535s,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/ProBook/ProBook%204535s
-HP,ProBook 4535s (A6E35EA),model,pending,https://jp.drvhub.net/laptops/hp/probook-4535s-a6e35ea,HP,ProBook 4535s (A6E35EA),Laptop,,
+HP,ProBook 4535s (A6E35EA),model,pending,https://jp.drvhub.net/laptops/hp/probook-4535s-a6e35ea,HP,ProBook 4535s (A6E35EA),Laptop,,https://partsurfer.hp.com/?searchtext=A6E35EA
 HP,ProBook 4535s (A7K36UT#ABA),model,pending,https://jp.drvhub.net/laptops/hp/probook-4535s-a7k36utaba,HP,ProBook 4535s (A7K36UT#ABA),Laptop,,
 HP,ProBook 4535s (LG845EA#ACB),model,pending,https://jp.drvhub.net/laptops/hp/probook-4535s-lg845ea-acb,HP,ProBook 4535s (LG845EA#ACB),Laptop,,
-HP,ProBook 4535s (LG845EA),model,pending,https://jp.drvhub.net/laptops/hp/probook-4535s-lg845ea,HP,ProBook 4535s (LG845EA),Laptop,,
+HP,ProBook 4535s (LG845EA),model,pending,https://jp.drvhub.net/laptops/hp/probook-4535s-lg845ea,HP,ProBook 4535s (LG845EA),Laptop,,https://partsurfer.hp.com/?searchtext=LG845EA
 HP,ProBook 4535s (LG850EA#ACB),model,pending,https://jp.drvhub.net/laptops/hp/probook-4535s-lg850eaacb,HP,ProBook 4535s (LG850EA#ACB),Laptop,,
 HP,ProBook 4535s (LY500ES#ACB),model,pending,https://jp.drvhub.net/laptops/hp/probook-4535s-ly500es-acb,HP,ProBook 4535s (LY500ES#ACB),Laptop,,
 HP,ProBook 4540s,model,pending,https://jp.drvhub.net/laptops/hp/probook-4540s,HP,ProBook 4540s,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/ProBook/ProBook%204540s
@@ -7124,27 +7124,27 @@ HP,ProBook 4710s (VQ731EA#ACB),model,pending,https://jp.drvhub.net/laptops/hp/pr
 HP,ProBook 4720s,model,pending,https://jp.drvhub.net/laptops/hp/probook-4720s,HP,ProBook 4720s,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/ProBook/ProBook%204720s
 HP,ProBook 4720s (XX814EA#AKD),model,pending,https://jp.drvhub.net/laptops/hp/probook-4720s-xx814eaakd,HP,ProBook 4720s (XX814EA#AKD),Laptop,,
 HP,ProBook 4720s (XX839EA#ACB),model,pending,https://jp.drvhub.net/laptops/hp/probook-4720s-xx839eaacb,HP,ProBook 4720s (XX839EA#ACB),Laptop,,
-HP,ProBook 4720s (XX839EA),model,pending,https://jp.drvhub.net/laptops/hp/probook-4720s-xx839ea,HP,ProBook 4720s (XX839EA),Laptop,,
+HP,ProBook 4720s (XX839EA),model,pending,https://jp.drvhub.net/laptops/hp/probook-4720s-xx839ea,HP,ProBook 4720s (XX839EA),Laptop,,https://partsurfer.hp.com/?searchtext=XX839EA
 HP,ProBook 4730s,model,pending,https://jp.drvhub.net/laptops/hp/probook-4730s,HP,ProBook 4730s,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/ProBook/ProBook%204730s
 HP,ProBook 4730s (A1D63EA#BCM),model,pending,https://jp.drvhub.net/laptops/hp/probook-4730s-a1d63ea-bcm,HP,ProBook 4730s (A1D63EA#BCM),Laptop,,
-HP,ProBook 4730s (A1D63EA),model,pending,https://jp.drvhub.net/laptops/hp/probook-4730s-a1d63ea,HP,ProBook 4730s (A1D63EA),Laptop,,
-HP,ProBook 4730s (A1D66EA),model,pending,https://jp.drvhub.net/laptops/hp/probook-4730s-a1d66ea,HP,ProBook 4730s (A1D66EA),Laptop,,
+HP,ProBook 4730s (A1D63EA),model,pending,https://jp.drvhub.net/laptops/hp/probook-4730s-a1d63ea,HP,ProBook 4730s (A1D63EA),Laptop,,https://partsurfer.hp.com/?searchtext=A1D63EA
+HP,ProBook 4730s (A1D66EA),model,pending,https://jp.drvhub.net/laptops/hp/probook-4730s-a1d66ea,HP,ProBook 4730s (A1D66EA),Laptop,,https://partsurfer.hp.com/?searchtext=A1D66EA
 HP,ProBook 4730s (A1E71EA#ABB),model,pending,https://jp.drvhub.net/laptops/hp/probook-4730s-a1e71ea-abb,HP,ProBook 4730s (A1E71EA#ABB),Laptop,,
-HP,ProBook 4730s (A1E72EA),model,pending,https://jp.drvhub.net/laptops/hp/probook-4730s-a1e72ea,HP,ProBook 4730s (A1E72EA),Laptop,,
+HP,ProBook 4730s (A1E72EA),model,pending,https://jp.drvhub.net/laptops/hp/probook-4730s-a1e72ea,HP,ProBook 4730s (A1E72EA),Laptop,,https://partsurfer.hp.com/?searchtext=A1E72EA
 HP,ProBook 4730s (B0W56ES#ABF),model,pending,https://jp.drvhub.net/laptops/hp/probook-4730s-b0w56es-abf,HP,ProBook 4730s (B0W56ES#ABF),Laptop,,
 HP,ProBook 4730s (LH346EA#ACB),model,pending,https://jp.drvhub.net/laptops/hp/probook-4730s-lh346ea-acb,HP,ProBook 4730s (LH346EA#ACB),Laptop,,
-HP,ProBook 4730s (LH348EA),model,pending,https://jp.drvhub.net/laptops/hp/probook-4730s-lh348ea,HP,ProBook 4730s (LH348EA),Laptop,,
+HP,ProBook 4730s (LH348EA),model,pending,https://jp.drvhub.net/laptops/hp/probook-4730s-lh348ea,HP,ProBook 4730s (LH348EA),Laptop,,https://partsurfer.hp.com/?searchtext=LH348EA
 HP,ProBook 4730s (LH357EA#ABF),model,pending,https://jp.drvhub.net/laptops/hp/probook-4730s-lh357eaabf,HP,ProBook 4730s (LH357EA#ABF),Laptop,,
 HP,ProBook 4740s,model,pending,https://jp.drvhub.net/laptops/hp/probook-4740s,HP,ProBook 4740s,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/ProBook/ProBook%204740s
 HP,ProBook 5220m,model,pending,https://jp.drvhub.net/laptops/hp/probook-5220m,HP,ProBook 5220m,Laptop,,
 HP,ProBook 5310m,model,pending,https://jp.drvhub.net/laptops/hp/probook-5310m,HP,ProBook 5310m,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/ProBook/ProBook%205310m
 HP,ProBook 5320m,model,pending,https://jp.drvhub.net/laptops/hp/probook-5320m,HP,ProBook 5320m,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/ProBook/ProBook%205320m
-HP,ProBook 5320m (LF477EC),model,pending,https://jp.drvhub.net/laptops/hp/probook-5320m-lf477ec,HP,ProBook 5320m (LF477EC),Laptop,,
-HP,ProBook 5320m (WS994EA),model,pending,https://jp.drvhub.net/laptops/hp/probook-5320m-ws994ea,HP,ProBook 5320m (WS994EA),Laptop,,
-HP,ProBook 5320m (WS996EA),model,pending,https://jp.drvhub.net/laptops/hp/probook-5320m-ws996ea,HP,ProBook 5320m (WS996EA),Laptop,,
+HP,ProBook 5320m (LF477EC),model,pending,https://jp.drvhub.net/laptops/hp/probook-5320m-lf477ec,HP,ProBook 5320m (LF477EC),Laptop,,https://partsurfer.hp.com/?searchtext=LF477EC
+HP,ProBook 5320m (WS994EA),model,pending,https://jp.drvhub.net/laptops/hp/probook-5320m-ws994ea,HP,ProBook 5320m (WS994EA),Laptop,,https://partsurfer.hp.com/?searchtext=WS994EA
+HP,ProBook 5320m (WS996EA),model,pending,https://jp.drvhub.net/laptops/hp/probook-5320m-ws996ea,HP,ProBook 5320m (WS996EA),Laptop,,https://partsurfer.hp.com/?searchtext=WS996EA
 HP,ProBook 5330m,model,pending,https://jp.drvhub.net/laptops/hp/probook-5330m,HP,ProBook 5330m,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/ProBook/ProBook%205330m
 HP,ProBook 5330m (A3R28ES),model,pending,https://jp.drvhub.net/laptops/hp/probook-5330m-a3r28es,HP,ProBook 5330m (A3R28ES),Laptop,,
-HP,ProBook 5330m (A6G29EA),model,pending,https://jp.drvhub.net/laptops/hp/probook-5330m-a6g29ea,HP,ProBook 5330m (A6G29EA),Laptop,,
+HP,ProBook 5330m (A6G29EA),model,pending,https://jp.drvhub.net/laptops/hp/probook-5330m-a6g29ea,HP,ProBook 5330m (A6G29EA),Laptop,,https://partsurfer.hp.com/?searchtext=A6G29EA
 HP,ProBook 630 G8,model,pending,https://jp.drvhub.net/laptops/hp/probook-630-g8,HP,ProBook 630 G8,Laptop,,
 HP,Probook 635 Aera G7,model,pending,https://jp.drvhub.net/laptops/hp/probook-635-aera-g7,HP,Probook 635 Aera G7,Laptop,,
 HP,ProBook 635 Aero G7,model,pending,https://jp.drvhub.net/laptops/hp/probook-635-aero-g7,HP,ProBook 635 Aero G7,Laptop,,
@@ -7155,7 +7155,7 @@ HP,ProBook 636,model,pending,https://jp.drvhub.net/laptops/hp/probook-636,HP,Pro
 HP,ProBook 6360b,model,pending,https://jp.drvhub.net/laptops/hp/probook-6360b,HP,ProBook 6360b,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/ProBook/ProBook%206360b
 HP,ProBook 6360b (A0001C02),model,pending,https://jp.drvhub.net/laptops/hp/probook-6360b-a0001c02,HP,ProBook 6360b (A0001C02),Laptop,,
 HP,ProBook 6360b (WY546AV#AK8),model,pending,https://jp.drvhub.net/laptops/hp/probook-6360b-wy546av-ak8,HP,ProBook 6360b (WY546AV#AK8),Laptop,,
-HP,ProBook 6360b (WY546AV),model,pending,https://jp.drvhub.net/laptops/hp/probook-6360b-wy546av,HP,ProBook 6360b (WY546AV),Laptop,,
+HP,ProBook 6360b (WY546AV),model,pending,https://jp.drvhub.net/laptops/hp/probook-6360b-wy546av,HP,ProBook 6360b (WY546AV),Laptop,,https://partsurfer.hp.com/?searchtext=WY546AV
 HP,ProBook 640 G1,model,pending,https://jp.drvhub.net/laptops/hp/probook-640-g1,HP,ProBook 640 G1,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/ProBook/ProBook%20640%20G1
 HP,ProBook 640 G1 USAO,model,pending,https://jp.drvhub.net/laptops/hp/probook-640-g1-usao,HP,ProBook 640 G1 USAO,Laptop,,
 HP,ProBook 640 G2,model,pending,https://jp.drvhub.net/laptops/hp/probook-640-g2,HP,ProBook 640 G2,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/ProBook/ProBook%20640%20G2
@@ -7180,35 +7180,35 @@ HP,ProBook 640 G8,model,pending,https://jp.drvhub.net/laptops/hp/probook-640-g8,
 HP,ProBook 640 G8 QEB2022A,model,pending,https://jp.drvhub.net/laptops/hp/probook-640-g8-qeb2022a,HP,ProBook 640 G8 QEB2022A,Laptop,,
 HP,PROBOOK 640G2 I5 -6300U,model,pending,https://jp.drvhub.net/laptops/hp/probook-640g2-i5-6300u,HP,PROBOOK 640G2 I5 -6300U,Laptop,,
 HP,ProBook 6440b,model,pending,https://jp.drvhub.net/laptops/hp/probook-6440b,HP,ProBook 6440b,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/ProBook/ProBook%206440b
-HP,ProBook 6440b (NT876AV),model,pending,https://jp.drvhub.net/laptops/hp/probook-6440b-nt876av,HP,ProBook 6440b (NT876AV),Laptop,,
-HP,ProBook 6440b (WZ646LA),model,pending,https://jp.drvhub.net/laptops/hp/probook-6440b-wz646la,HP,ProBook 6440b (WZ646LA),Laptop,,
+HP,ProBook 6440b (NT876AV),model,pending,https://jp.drvhub.net/laptops/hp/probook-6440b-nt876av,HP,ProBook 6440b (NT876AV),Laptop,,https://partsurfer.hp.com/?searchtext=NT876AV
+HP,ProBook 6440b (WZ646LA),model,pending,https://jp.drvhub.net/laptops/hp/probook-6440b-wz646la,HP,ProBook 6440b (WZ646LA),Laptop,,https://partsurfer.hp.com/?searchtext=WZ646LA
 HP,ProBook 6445b,model,pending,https://jp.drvhub.net/laptops/hp/probook-6445b,HP,ProBook 6445b,Laptop,,
 HP,ProBook 645 G1,model,pending,https://jp.drvhub.net/laptops/hp/probook-645-g1,HP,ProBook 645 G1,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/ProBook/ProBook%20645%20G1
 HP,ProBook 645 G2,model,pending,https://jp.drvhub.net/laptops/hp/probook-645-g2,HP,ProBook 645 G2,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/ProBook/ProBook%20645%20G2
 HP,ProBook 645 G3,model,pending,https://jp.drvhub.net/laptops/hp/probook-645-g3,HP,ProBook 645 G3,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/ProBook/ProBook%20645%20G3
 HP,ProBook 645 G4,model,pending,https://jp.drvhub.net/laptops/hp/probook-645-g4,HP,ProBook 645 G4,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/ProBook/ProBook%20645%20G4
 HP,ProBook 6450b,model,pending,https://jp.drvhub.net/laptops/hp/probook-6450b,HP,ProBook 6450b,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/ProBook/ProBook%206450b
-HP,ProBook 6450b (QP448US),model,pending,https://jp.drvhub.net/laptops/hp/probook-6450b-qp448us,HP,ProBook 6450b (QP448US),Laptop,,
-HP,ProBook 6450b (VZ243AV),model,pending,https://jp.drvhub.net/laptops/hp/probook-6450b-vz243av,HP,ProBook 6450b (VZ243AV),Laptop,,
+HP,ProBook 6450b (QP448US),model,pending,https://jp.drvhub.net/laptops/hp/probook-6450b-qp448us,HP,ProBook 6450b (QP448US),Laptop,,https://partsurfer.hp.com/?searchtext=QP448US
+HP,ProBook 6450b (VZ243AV),model,pending,https://jp.drvhub.net/laptops/hp/probook-6450b-vz243av,HP,ProBook 6450b (VZ243AV),Laptop,,https://partsurfer.hp.com/?searchtext=VZ243AV
 HP,ProBook 6450b (WD773EA#ACB),model,pending,https://jp.drvhub.net/laptops/hp/probook-6450b-wd773eaacb,HP,ProBook 6450b (WD773EA#ACB),Laptop,,
 HP,ProBook 6450b (WD773ET#ABF),model,pending,https://jp.drvhub.net/laptops/hp/probook-6450b-wd773etabf,HP,ProBook 6450b (WD773ET#ABF),Laptop,,
 HP,ProBook 6455b,model,pending,https://jp.drvhub.net/laptops/hp/probook-6455b,HP,ProBook 6455b,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/ProBook/ProBook%206455b
 HP,PROBOOK 646 G4,model,pending,https://jp.drvhub.net/laptops/hp/probook-646-g4,HP,PROBOOK 646 G4,Laptop,,
 HP,ProBook 6460b,model,pending,https://jp.drvhub.net/laptops/hp/probook-6460b,HP,ProBook 6460b,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/ProBook/ProBook%206460b
-HP,ProBook 6460b (A6B82PP),model,pending,https://jp.drvhub.net/laptops/hp/probook-6460b-a6b82pp,HP,ProBook 6460b (A6B82PP),Laptop,,
+HP,ProBook 6460b (A6B82PP),model,pending,https://jp.drvhub.net/laptops/hp/probook-6460b-a6b82pp,HP,ProBook 6460b (A6B82PP),Laptop,,https://partsurfer.hp.com/?searchtext=A6B82PP
 HP,ProBook 6460b (B9X02US#ABA),model,pending,https://jp.drvhub.net/laptops/hp/probook-6460b-b9x02usaba,HP,ProBook 6460b (B9X02US#ABA),Laptop,,
 HP,ProBook 6460b (H0E96EP#AC4),model,pending,https://jp.drvhub.net/laptops/hp/probook-6460b-h0e96epac4,HP,ProBook 6460b (H0E96EP#AC4),Laptop,,
 HP,ProBook 6460b (HP6460B4G),model,pending,https://jp.drvhub.net/laptops/hp/probook-6460b-hp6460b4g,HP,ProBook 6460b (HP6460B4G),Laptop,,
 HP,ProBook 6460b (LG644EA#AB9),model,pending,https://jp.drvhub.net/laptops/hp/probook-6460b-lg644eaab9,HP,ProBook 6460b (LG644EA#AB9),Laptop,,
 HP,ProBook 6460b (LQ178AW#ACB),model,pending,https://jp.drvhub.net/laptops/hp/probook-6460b-lq178aw-acb,HP,ProBook 6460b (LQ178AW#ACB),Laptop,,
-HP,ProBook 6460b (LR939LA),model,pending,https://jp.drvhub.net/laptops/hp/probook-6460b-lr939la,HP,ProBook 6460b (LR939LA),Laptop,,
+HP,ProBook 6460b (LR939LA),model,pending,https://jp.drvhub.net/laptops/hp/probook-6460b-lr939la,HP,ProBook 6460b (LR939LA),Laptop,,https://partsurfer.hp.com/?searchtext=LR939LA
 HP,ProBook 6460b (PROBOOK 6460B),model,pending,https://jp.drvhub.net/laptops/hp/probook-6460b-probook-6460b,HP,ProBook 6460b (PROBOOK 6460B),Laptop,,
 HP,ProBook 6460b (QW218US#ABA),model,pending,https://jp.drvhub.net/laptops/hp/probook-6460b-qw218us-aba,HP,ProBook 6460b (QW218US#ABA),Laptop,,
 HP,ProBook 6460b (SN665UP#AC4),model,pending,https://jp.drvhub.net/laptops/hp/probook-6460b-sn665up-ac4,HP,ProBook 6460b (SN665UP#AC4),Laptop,,
 HP,ProBook 6460b (SP936UC#ABF),model,pending,https://jp.drvhub.net/laptops/hp/probook-6460b-sp936ucabf,HP,ProBook 6460b (SP936UC#ABF),Laptop,,
 HP,ProBook 6460b (SP936UC#ABM),model,pending,https://jp.drvhub.net/laptops/hp/probook-6460b-sp936ucabm,HP,ProBook 6460b (SP936UC#ABM),Laptop,,
 HP,ProBook 6460b (SP936UC#AK8),model,pending,https://jp.drvhub.net/laptops/hp/probook-6460b-sp936ucak8,HP,ProBook 6460b (SP936UC#AK8),Laptop,,
-HP,ProBook 6460b (XU550AV),model,pending,https://jp.drvhub.net/laptops/hp/probook-6460b-xu550av,HP,ProBook 6460b (XU550AV),Laptop,,
+HP,ProBook 6460b (XU550AV),model,pending,https://jp.drvhub.net/laptops/hp/probook-6460b-xu550av,HP,ProBook 6460b (XU550AV),Laptop,,https://partsurfer.hp.com/?searchtext=XU550AV
 HP,ProBook 6460b (XU551AV#AB2),model,pending,https://jp.drvhub.net/laptops/hp/probook-6460b-xu551av-ab2,HP,ProBook 6460b (XU551AV#AB2),Laptop,,
 HP,ProBook 6460b (YQ336EC#AC4),model,pending,https://jp.drvhub.net/laptops/hp/probook-6460b-yq336ec-ac4,HP,ProBook 6460b (YQ336EC#AC4),Laptop,,
 HP,Probook 6460b - SPX,model,pending,https://jp.drvhub.net/laptops/hp/probook-6460b-spx,HP,Probook 6460b - SPX,Laptop,,
@@ -7228,7 +7228,7 @@ HP,ProBook 650 G5,model,pending,https://jp.drvhub.net/laptops/hp/probook-650-g5,
 HP,ProBook 650 G7,model,pending,https://jp.drvhub.net/laptops/hp/probook-650-g7,HP,ProBook 650 G7,Laptop,,
 HP,ProBook 650 G8,model,pending,https://jp.drvhub.net/laptops/hp/probook-650-g8,HP,ProBook 650 G8,Laptop,,
 HP,ProBook 6540b,model,pending,https://jp.drvhub.net/laptops/hp/probook-6540b,HP,ProBook 6540b,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/ProBook/ProBook%206540b
-HP,ProBook 6540b (NT875AV),model,pending,https://jp.drvhub.net/laptops/hp/probook-6540b-nt875av,HP,ProBook 6540b (NT875AV),Laptop,,
+HP,ProBook 6540b (NT875AV),model,pending,https://jp.drvhub.net/laptops/hp/probook-6540b-nt875av,HP,ProBook 6540b (NT875AV),Laptop,,https://partsurfer.hp.com/?searchtext=NT875AV
 HP,ProBook 6540b (WK447ES#UUG),model,pending,https://jp.drvhub.net/laptops/hp/probook-6540b-wk447esuug,HP,ProBook 6540b (WK447ES#UUG),Laptop,,
 HP,ProBook 6545b,model,pending,https://jp.drvhub.net/laptops/hp/probook-6545b,HP,ProBook 6545b,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/ProBook/ProBook%206545b
 HP,ProBook 6545b (MJU7HGT),model,pending,https://jp.drvhub.net/laptops/hp/probook-6545b-mju7hgt,HP,ProBook 6545b (MJU7HGT),Laptop,,
@@ -7238,24 +7238,24 @@ HP,ProBook 655 G3,model,pending,https://jp.drvhub.net/laptops/hp/probook-655-g3,
 HP,ProBook 6550b,model,pending,https://jp.drvhub.net/laptops/hp/probook-6550b,HP,ProBook 6550b,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/ProBook/ProBook%206550b
 HP,ProBook 6550b (CNU13900QY),model,pending,https://jp.drvhub.net/laptops/hp/probook-6550b-cnu13900qy,HP,ProBook 6550b (CNU13900QY),Laptop,,
 HP,ProBook 6550b (LK550LT#ABM),model,pending,https://jp.drvhub.net/laptops/hp/probook-6550b-lk550lt-abm,HP,ProBook 6550b (LK550LT#ABM),Laptop,,
-HP,ProBook 6550b (VZ245AV),model,pending,https://jp.drvhub.net/laptops/hp/probook-6550b-vz245av,HP,ProBook 6550b (VZ245AV),Laptop,,
+HP,ProBook 6550b (VZ245AV),model,pending,https://jp.drvhub.net/laptops/hp/probook-6550b-vz245av,HP,ProBook 6550b (VZ245AV),Laptop,,https://partsurfer.hp.com/?searchtext=VZ245AV
 HP,ProBook 6550b (WD696EA#AK8),model,pending,https://jp.drvhub.net/laptops/hp/probook-6550b-wd696ea-ak8,HP,ProBook 6550b (WD696EA#AK8),Laptop,,
-HP,ProBook 6550b (WD746EA),model,pending,https://jp.drvhub.net/laptops/hp/probook-6550b-wd746ea,HP,ProBook 6550b (WD746EA),Laptop,,
+HP,ProBook 6550b (WD746EA),model,pending,https://jp.drvhub.net/laptops/hp/probook-6550b-wd746ea,HP,ProBook 6550b (WD746EA),Laptop,,https://partsurfer.hp.com/?searchtext=WD746EA
 HP,ProBook 6550b (WK237ET#UUZ),model,pending,https://jp.drvhub.net/laptops/hp/probook-6550b-wk237etuuz,HP,ProBook 6550b (WK237ET#UUZ),Laptop,,
 HP,ProBook 6555b,model,pending,https://jp.drvhub.net/laptops/hp/probook-6555b,HP,ProBook 6555b,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/ProBook/ProBook%206555b
 HP,ProBook 6555b (CNU022N6F),model,pending,https://jp.drvhub.net/laptops/hp/probook-6555b-cnu022n6f,HP,ProBook 6555b (CNU022N6F),Laptop,,
 HP,ProBook 6555b (VM641AV),model,pending,https://jp.drvhub.net/laptops/hp/probook-6555b-vm641av,HP,ProBook 6555b (VM641AV),Laptop,,
 HP,ProBook 6560b,model,pending,https://jp.drvhub.net/laptops/hp/probook-6560b,HP,ProBook 6560b,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/ProBook/ProBook%206560b
-HP,ProBook 6560b (LE550AV),model,pending,https://jp.drvhub.net/laptops/hp/probook-6560b-le550av,HP,ProBook 6560b (LE550AV),Laptop,,
+HP,ProBook 6560b (LE550AV),model,pending,https://jp.drvhub.net/laptops/hp/probook-6560b-le550av,HP,ProBook 6560b (LE550AV),Laptop,,https://partsurfer.hp.com/?searchtext=LE550AV
 HP,ProBook 6560b (LG650ET#ABU),model,pending,https://jp.drvhub.net/laptops/hp/probook-6560b-lg650etabu,HP,ProBook 6560b (LG650ET#ABU),Laptop,,
 HP,ProBook 6560b (LG651EA#ACQ),model,pending,https://jp.drvhub.net/laptops/hp/probook-6560b-lg651ea-acq,HP,ProBook 6560b (LG651EA#ACQ),Laptop,,
 HP,ProBook 6560b (LG652EA#UUZ),model,pending,https://jp.drvhub.net/laptops/hp/probook-6560b-lg652ea-uuz,HP,ProBook 6560b (LG652EA#UUZ),Laptop,,
-HP,ProBook 6560b (LG652EA),model,pending,https://jp.drvhub.net/laptops/hp/probook-6560b-lg652ea,HP,ProBook 6560b (LG652EA),Laptop,,
-HP,ProBook 6560b (LG658EA),model,pending,https://jp.drvhub.net/laptops/hp/probook-6560b-lg658ea,HP,ProBook 6560b (LG658EA),Laptop,,
-HP,ProBook 6560b (LW953PA),model,pending,https://jp.drvhub.net/laptops/hp/probook-6560b-lw953pa,HP,ProBook 6560b (LW953PA),Laptop,,
+HP,ProBook 6560b (LG652EA),model,pending,https://jp.drvhub.net/laptops/hp/probook-6560b-lg652ea,HP,ProBook 6560b (LG652EA),Laptop,,https://partsurfer.hp.com/?searchtext=LG652EA
+HP,ProBook 6560b (LG658EA),model,pending,https://jp.drvhub.net/laptops/hp/probook-6560b-lg658ea,HP,ProBook 6560b (LG658EA),Laptop,,https://partsurfer.hp.com/?searchtext=LG658EA
+HP,ProBook 6560b (LW953PA),model,pending,https://jp.drvhub.net/laptops/hp/probook-6560b-lw953pa,HP,ProBook 6560b (LW953PA),Laptop,,https://partsurfer.hp.com/?searchtext=LW953PA
 HP,ProBook 6560b (LY443ET#ABF),model,pending,https://jp.drvhub.net/laptops/hp/probook-6560b-ly443etabf,HP,ProBook 6560b (LY443ET#ABF),Laptop,,
 HP,ProBook 6560b (P380ES),model,pending,https://jp.drvhub.net/laptops/hp/probook-6560b-p380es,HP,ProBook 6560b (P380ES),Laptop,,
-HP,ProBook 6560b (WX750AV),model,pending,https://jp.drvhub.net/laptops/hp/probook-6560b-wx750av,HP,ProBook 6560b (WX750AV),Laptop,,
+HP,ProBook 6560b (WX750AV),model,pending,https://jp.drvhub.net/laptops/hp/probook-6560b-wx750av,HP,ProBook 6560b (WX750AV),Laptop,,https://partsurfer.hp.com/?searchtext=WX750AV
 HP,ProBook 6565b,model,pending,https://jp.drvhub.net/laptops/hp/probook-6565b,HP,ProBook 6565b,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/ProBook/ProBook%206565b
 HP,ProBook 6570b,model,pending,https://jp.drvhub.net/laptops/hp/probook-6570b,HP,ProBook 6570b,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Hewlett-Packard/ProBook/ProBook%206570b
 HP,ProBook 830 G6,model,pending,https://jp.drvhub.net/laptops/hp/probook-830-g6,HP,ProBook 830 G6,Laptop,,
@@ -12846,7 +12846,7 @@ Sony,SVS13118FXB,model,pending,https://jp.drvhub.net/laptops/sony/svs13118fxb,So
 Sony,SVS13118GAB,model,pending,https://jp.drvhub.net/laptops/sony/svs13118gab,Sony,SVS13118GAB,Laptop,,
 Sony,SVS13118GBB,model,pending,https://jp.drvhub.net/laptops/sony/svs13118gbb,Sony,SVS13118GBB,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Sony/SVS1311/SVS13118GBB
 Sony,SVS13118GGB,model,pending,https://jp.drvhub.net/laptops/sony/svs13118ggb,Sony,SVS13118GGB,Laptop,,
-Sony,SVS131190X,model,pending,https://jp.drvhub.net/laptops/sony/svs131190x,Sony,SVS131190X,Laptop,,
+Sony,SVS131190X,model,pending,https://jp.drvhub.net/laptops/sony/svs131190x,Sony,SVS131190X,Laptop,,https://www.touchandscreen.de/SVS131190X
 Sony,SVS13119GJB,model,pending,https://jp.drvhub.net/laptops/sony/svs13119gjb,Sony,SVS13119GJB,Laptop,,https://www.sony.jp/support/vaio/products/sv/svs13119gjb.html
 Sony,SVS1311A4E,model,pending,https://jp.drvhub.net/laptops/sony/svs1311a4e,Sony,SVS1311A4E,Laptop,,
 Sony,SVS1311B4E,model,pending,https://jp.drvhub.net/laptops/sony/svs1311b4e,Sony,SVS1311B4E,Laptop,,
@@ -12874,7 +12874,7 @@ Sony,SVS13125CVR,model,pending,https://jp.drvhub.net/laptops/sony/svs13125cvr,So
 Sony,SVS13125PBB,model,pending,https://jp.drvhub.net/laptops/sony/svs13125pbb,Sony,SVS13125PBB,Laptop,,
 Sony,SVS13126PGB,model,pending,https://jp.drvhub.net/laptops/sony/svs13126pgb,Sony,SVS13126PGB,Laptop,,
 Sony,SVS13127PAB,model,pending,https://jp.drvhub.net/laptops/sony/svs13127pab,Sony,SVS13127PAB,Laptop,,
-Sony,SVS13127PXB,model,pending,https://jp.drvhub.net/laptops/sony/svs13127pxb,Sony,SVS13127PXB,Laptop,,
+Sony,SVS13127PXB,model,pending,https://jp.drvhub.net/laptops/sony/svs13127pxb,Sony,SVS13127PXB,Laptop,,https://www.touchandscreen.de/SVS13127PXB
 Sony,SVS13128CCW,model,pending,https://jp.drvhub.net/laptops/sony/svs13128ccw,Sony,SVS13128CCW,Laptop,,
 Sony,SVS13129CJB,model,pending,https://jp.drvhub.net/laptops/sony/svs13129cjb,Sony,SVS13129CJB,Laptop,,https://www.sony.jp/support/vaio/products/sv/svs13129cjb.html
 Sony,SVS13129CJS,model,pending,https://jp.drvhub.net/laptops/sony/svs13129cjs,Sony,SVS13129CJS,Laptop,,https://www.sony.jp/support/vaio/products/sv/svs13129cjs.html
@@ -12916,37 +12916,37 @@ Sony,SVS1313V9RB,model,pending,https://jp.drvhub.net/laptops/sony/svs1313v9rb,So
 Sony,SVS1313X9RB,model,pending,https://jp.drvhub.net/laptops/sony/svs1313x9rb,Sony,SVS1313X9RB,Laptop,,
 Sony,SVS13A15GGB,model,pending,https://jp.drvhub.net/laptops/sony/svs13a15ggb,Sony,SVS13A15GGB,Laptop,,
 Sony,SVS13A15GGN,model,pending,https://jp.drvhub.net/laptops/sony/svs13a15ggn,Sony,SVS13A15GGN,Laptop,,
-Sony,SVS13A15GLB,model,pending,https://jp.drvhub.net/laptops/sony/svs13a15glb,Sony,SVS13A15GLB,Laptop,,
+Sony,SVS13A15GLB,model,pending,https://jp.drvhub.net/laptops/sony/svs13a15glb,Sony,SVS13A15GLB,Laptop,,https://www.touchandscreen.de/SVS13A15GLB
 Sony,SVS13A15GNB,model,pending,https://jp.drvhub.net/laptops/sony/svs13a15gnb,Sony,SVS13A15GNB,Laptop,,
 Sony,SVS13A16GAB,model,pending,https://jp.drvhub.net/laptops/sony/svs13a16gab,Sony,SVS13A16GAB,Laptop,,
 Sony,SVS13A17GBB,model,pending,https://jp.drvhub.net/laptops/sony/svs13a17gbb,Sony,SVS13A17GBB,Laptop,,
-Sony,SVS13A190X,model,pending,https://jp.drvhub.net/laptops/sony/svs13a190x,Sony,SVS13A190X,Laptop,,
+Sony,SVS13A190X,model,pending,https://jp.drvhub.net/laptops/sony/svs13a190x,Sony,SVS13A190X,Laptop,,https://www.touchandscreen.de/SVS13A190X
 Sony,SVS13A1AJ,model,pending,https://jp.drvhub.net/laptops/sony/svs13a1aj,Sony,SVS13A1AJ,Laptop,,https://www.sony.jp/support/vaio/products/sv/svs13a1aj.html
 Sony,SVS13A1C5E,model,pending,https://jp.drvhub.net/laptops/sony/svs13a1c5e,Sony,SVS13A1C5E,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Sony/SVS13/SVS13A1C5E
-Sony,SVS13A1S9ES,model,pending,https://jp.drvhub.net/laptops/sony/svs13a1s9es,Sony,SVS13A1S9ES,Laptop,,
-Sony,SVS13A1V8RB,model,pending,https://jp.drvhub.net/laptops/sony/svs13a1v8rb,Sony,SVS13A1V8RB,Laptop,,
-Sony,SVS13A1X8RB,model,pending,https://jp.drvhub.net/laptops/sony/svs13a1x8rb,Sony,SVS13A1X8RB,Laptop,,
-Sony,SVS13A1X9ES,model,pending,https://jp.drvhub.net/laptops/sony/svs13a1x9es,Sony,SVS13A1X9ES,Laptop,,
-Sony,SVS13A1Z9ES,model,pending,https://jp.drvhub.net/laptops/sony/svs13a1z9es,Sony,SVS13A1Z9ES,Laptop,,
+Sony,SVS13A1S9ES,model,pending,https://jp.drvhub.net/laptops/sony/svs13a1s9es,Sony,SVS13A1S9ES,Laptop,,https://www.touchandscreen.de/SVS13A1S9ES
+Sony,SVS13A1V8RB,model,pending,https://jp.drvhub.net/laptops/sony/svs13a1v8rb,Sony,SVS13A1V8RB,Laptop,,https://www.touchandscreen.de/SVS13A1V8RB
+Sony,SVS13A1X8RB,model,pending,https://jp.drvhub.net/laptops/sony/svs13a1x8rb,Sony,SVS13A1X8RB,Laptop,,https://www.touchandscreen.de/SVS13A1X8RB
+Sony,SVS13A1X9ES,model,pending,https://jp.drvhub.net/laptops/sony/svs13a1x9es,Sony,SVS13A1X9ES,Laptop,,https://www.touchandscreen.de/SVS13A1X9ES
+Sony,SVS13A1Z9ES,model,pending,https://jp.drvhub.net/laptops/sony/svs13a1z9es,Sony,SVS13A1Z9ES,Laptop,,https://www.touchandscreen.de/SVS13A1Z9ES
 Sony,SVS13A25PBS,model,pending,https://jp.drvhub.net/laptops/sony/svs13a25pbs,Sony,SVS13A25PBS,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Sony/SVS13/SVS13A25PBS
-Sony,SVS13A25PGB,model,pending,https://jp.drvhub.net/laptops/sony/svs13a25pgb,Sony,SVS13A25PGB,Laptop,,
-Sony,SVS13A25PLB,model,pending,https://jp.drvhub.net/laptops/sony/svs13a25plb,Sony,SVS13A25PLB,Laptop,,
+Sony,SVS13A25PGB,model,pending,https://jp.drvhub.net/laptops/sony/svs13a25pgb,Sony,SVS13A25PGB,Laptop,,https://www.touchandscreen.de/SVS13A25PGB
+Sony,SVS13A25PLB,model,pending,https://jp.drvhub.net/laptops/sony/svs13a25plb,Sony,SVS13A25PLB,Laptop,,https://www.touchandscreen.de/SVS13A25PLB
 Sony,SVS13A2AJ,model,pending,https://jp.drvhub.net/laptops/sony/svs13a2aj,Sony,SVS13A2AJ,Laptop,,https://www.sony.jp/support/vaio/products/sv/svs13a2aj.html
-Sony,SVS13A2APXS,model,pending,https://jp.drvhub.net/laptops/sony/svs13a2apxs,Sony,SVS13A2APXS,Laptop,,
+Sony,SVS13A2APXS,model,pending,https://jp.drvhub.net/laptops/sony/svs13a2apxs,Sony,SVS13A2APXS,Laptop,,https://www.touchandscreen.de/SVS13A2APXS
 Sony,SVS13A2C5E,model,pending,https://jp.drvhub.net/laptops/sony/svs13a2c5e,Sony,SVS13A2C5E,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Sony/SVS13/SVS13A2C5E
 Sony,SVS13A2V9RS,model,pending,https://jp.drvhub.net/laptops/sony/svs13a2v9rs,Sony,SVS13A2V9RS,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Sony/SVS13/SVS13A2V9RS
-Sony,SVS13A2W9ES,model,pending,https://jp.drvhub.net/laptops/sony/svs13a2w9es,Sony,SVS13A2W9ES,Laptop,,
-Sony,SVS13A2X9RS,model,pending,https://jp.drvhub.net/laptops/sony/svs13a2x9rs,Sony,SVS13A2X9RS,Laptop,,
-Sony,SVS13A2Z9RS,model,pending,https://jp.drvhub.net/laptops/sony/svs13a2z9rs,Sony,SVS13A2Z9RS,Laptop,,
+Sony,SVS13A2W9ES,model,pending,https://jp.drvhub.net/laptops/sony/svs13a2w9es,Sony,SVS13A2W9ES,Laptop,,https://www.touchandscreen.de/SVS13A2W9ES
+Sony,SVS13A2X9RS,model,pending,https://jp.drvhub.net/laptops/sony/svs13a2x9rs,Sony,SVS13A2X9RS,Laptop,,https://www.touchandscreen.de/SVS13A2X9RS
+Sony,SVS13A2Z9RS,model,pending,https://jp.drvhub.net/laptops/sony/svs13a2z9rs,Sony,SVS13A2Z9RS,Laptop,,https://www.touchandscreen.de/SVS13A2Z9RS
 Sony,SVS13A36PGB,model,pending,https://jp.drvhub.net/laptops/sony/svs13a36pgb,Sony,SVS13A36PGB,Laptop,,
 Sony,SVS13A3AJ,model,pending,https://jp.drvhub.net/laptops/sony/svs13a3aj,Sony,SVS13A3AJ,Laptop,,https://www.sony.jp/support/vaio/products/sv/svs13a3aj.html
 Sony,SVS13A3AJC,model,pending,https://jp.drvhub.net/laptops/sony/svs13a3ajc,Sony,SVS13A3AJC,Laptop,,
 Sony,SVS13A3AJE,model,pending,https://jp.drvhub.net/laptops/sony/svs13a3aje,Sony,SVS13A3AJE,Laptop,,
-Sony,SVS13A3B4E,model,pending,https://jp.drvhub.net/laptops/sony/svs13a3b4e,Sony,SVS13A3B4E,Laptop,,
-Sony,SVS13A3C5E,model,pending,https://jp.drvhub.net/laptops/sony/svs13a3c5e,Sony,SVS13A3C5E,Laptop,,
-Sony,SVS13A3M9RS,model,pending,https://jp.drvhub.net/laptops/sony/svs13a3m9rs,Sony,SVS13A3M9RS,Laptop,,
-Sony,SVS13A3V9RS,model,pending,https://jp.drvhub.net/laptops/sony/svs13a3v9rs,Sony,SVS13A3V9RS,Laptop,,
-Sony,SVS13A3X9RS,model,pending,https://jp.drvhub.net/laptops/sony/svs13a3x9rs,Sony,SVS13A3X9RS,Laptop,,
+Sony,SVS13A3B4E,model,pending,https://jp.drvhub.net/laptops/sony/svs13a3b4e,Sony,SVS13A3B4E,Laptop,,https://www.touchandscreen.de/SVS13A3B4E
+Sony,SVS13A3C5E,model,pending,https://jp.drvhub.net/laptops/sony/svs13a3c5e,Sony,SVS13A3C5E,Laptop,,https://www.touchandscreen.de/SVS13A3C5E
+Sony,SVS13A3M9RS,model,pending,https://jp.drvhub.net/laptops/sony/svs13a3m9rs,Sony,SVS13A3M9RS,Laptop,,https://www.touchandscreen.de/SVS13A3M9RS
+Sony,SVS13A3V9RS,model,pending,https://jp.drvhub.net/laptops/sony/svs13a3v9rs,Sony,SVS13A3V9RS,Laptop,,https://www.touchandscreen.de/SVS13A3V9RS
+Sony,SVS13A3X9RS,model,pending,https://jp.drvhub.net/laptops/sony/svs13a3x9rs,Sony,SVS13A3X9RS,Laptop,,https://www.touchandscreen.de/SVS13A3X9RS
 Sony,SVS15112C5E,model,pending,https://jp.drvhub.net/laptops/sony/svs15112c5e,Sony,SVS15112C5E,Laptop,,
 Sony,SVS15115FBB,model,pending,https://jp.drvhub.net/laptops/sony/svs15115fbb,Sony,SVS15115FBB,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Sony/SVS1511/SVS15115FBB
 Sony,SVS15115FKB,model,pending,https://jp.drvhub.net/laptops/sony/svs15115fkb,Sony,SVS15115FKB,Laptop,,
@@ -13017,13 +13017,13 @@ Sony,SVS1513V9EB,model,pending,https://jp.drvhub.net/laptops/sony/svs1513v9eb,So
 Sony,SVS1513V9RB,model,pending,https://jp.drvhub.net/laptops/sony/svs1513v9rb,Sony,SVS1513V9RB,Laptop,,
 Sony,SVS1513X9RB,model,pending,https://jp.drvhub.net/laptops/sony/svs1513x9rb,Sony,SVS1513X9RB,Laptop,,
 Sony,SVS1513Z9EB,model,pending,https://jp.drvhub.net/laptops/sony/svs1513z9eb,Sony,SVS1513Z9EB,Laptop,,
-Sony,SVT11115FBS,model,pending,https://jp.drvhub.net/laptops/sony/svt11115fbs,Sony,SVT11115FBS,Laptop,,
-Sony,SVT11115FGS,model,pending,https://jp.drvhub.net/laptops/sony/svt11115fgs,Sony,SVT11115FGS,Laptop,,
-Sony,SVT11115FLS,model,pending,https://jp.drvhub.net/laptops/sony/svt11115fls,Sony,SVT11115FLS,Laptop,,
+Sony,SVT11115FBS,model,pending,https://jp.drvhub.net/laptops/sony/svt11115fbs,Sony,SVT11115FBS,Laptop,,https://www.touchandscreen.de/SVT11115FBS
+Sony,SVT11115FGS,model,pending,https://jp.drvhub.net/laptops/sony/svt11115fgs,Sony,SVT11115FGS,Laptop,,https://www.touchandscreen.de/SVT11115FGS
+Sony,SVT11115FLS,model,pending,https://jp.drvhub.net/laptops/sony/svt11115fls,Sony,SVT11115FLS,Laptop,,https://www.touchandscreen.de/SVT11115FLS
 Sony,SVT11119FJS,model,pending,https://jp.drvhub.net/laptops/sony/svt11119fjs,Sony,SVT11119FJS,Laptop,,https://www.sony.jp/support/vaio/products/sv/svt11119fjs.html
 Sony,SVT1111AJ,model,pending,https://jp.drvhub.net/laptops/sony/svt1111aj,Sony,SVT1111AJ,Laptop,,https://www.sony.jp/support/vaio/products/sv/svt1111aj.html
 Sony,SVT1111AJA,model,pending,https://jp.drvhub.net/laptops/sony/svt1111aja,Sony,SVT1111AJA,Laptop,,
-Sony,SVT1111C5E,model,pending,https://jp.drvhub.net/laptops/sony/svt1111c5e,Sony,SVT1111C5E,Laptop,,
+Sony,SVT1111C5E,model,pending,https://jp.drvhub.net/laptops/sony/svt1111c5e,Sony,SVT1111C5E,Laptop,,https://www.touchandscreen.de/SVT1111C5E
 Sony,SVT1111M1RS,model,pending,https://jp.drvhub.net/laptops/sony/svt1111m1rs,Sony,SVT1111M1RS,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Sony/SVT1111/SVT1111M1RS
 Sony,SVT1111X1RS,model,pending,https://jp.drvhub.net/laptops/sony/svt1111x1rs,Sony,SVT1111X1RS,Laptop,,
 Sony,SVT1111Z9RS,model,pending,https://jp.drvhub.net/laptops/sony/svt1111z9rs,Sony,SVT1111Z9RS,Laptop,,
@@ -13060,7 +13060,7 @@ Sony,SVT13118FXS,model,pending,https://jp.drvhub.net/laptops/sony/svt13118fxs,So
 Sony,SVT131190X,model,pending,https://jp.drvhub.net/laptops/sony/svt131190x,Sony,SVT131190X,Laptop,,
 Sony,SVT1311A4E,model,pending,https://jp.drvhub.net/laptops/sony/svt1311a4e,Sony,SVT1311A4E,Laptop,,
 Sony,SVT1311AJ,model,pending,https://jp.drvhub.net/laptops/sony/svt1311aj,Sony,SVT1311AJ,Laptop,,https://www.sony.jp/support/vaio/products/sv/svt1311aj.html
-Sony,SVT1311C5E,model,pending,https://jp.drvhub.net/laptops/sony/svt1311c5e,Sony,SVT1311C5E,Laptop,,
+Sony,SVT1311C5E,model,pending,https://jp.drvhub.net/laptops/sony/svt1311c5e,Sony,SVT1311C5E,Laptop,,https://www.touchandscreen.de/SVT1311C5E
 Sony,SVT1311EFYS,model,pending,https://jp.drvhub.net/laptops/sony/svt1311efys,Sony,SVT1311EFYS,Laptop,,
 Sony,SVT1311M1ES,model,pending,https://jp.drvhub.net/laptops/sony/svt1311m1es,Sony,SVT1311M1ES,Laptop,,
 Sony,SVT1311M1RS,model,pending,https://jp.drvhub.net/laptops/sony/svt1311m1rs,Sony,SVT1311M1RS,Laptop,,
@@ -13080,7 +13080,7 @@ Sony,SVT13128CJS,model,pending,https://jp.drvhub.net/laptops/sony/svt13128cjs,So
 Sony,SVT13128CXS,model,pending,https://jp.drvhub.net/laptops/sony/svt13128cxs,Sony,SVT13128CXS,Laptop,,
 Sony,SVT131290X,model,pending,https://jp.drvhub.net/laptops/sony/svt131290x,Sony,SVT131290X,Laptop,,
 Sony,SVT13129CJS,model,pending,https://jp.drvhub.net/laptops/sony/svt13129cjs,Sony,SVT13129CJS,Laptop,,https://www.sony.jp/support/vaio/products/sv/svt13129cjs.html
-Sony,SVT1312A4E,model,pending,https://jp.drvhub.net/laptops/sony/svt1312a4e,Sony,SVT1312A4E,Laptop,,
+Sony,SVT1312A4E,model,pending,https://jp.drvhub.net/laptops/sony/svt1312a4e,Sony,SVT1312A4E,Laptop,,https://www.touchandscreen.de/SVT1312A4E
 Sony,SVT1312C5E,model,pending,https://jp.drvhub.net/laptops/sony/svt1312c5e,Sony,SVT1312C5E,Laptop,,
 Sony,SVT1312L1RS,model,pending,https://jp.drvhub.net/laptops/sony/svt1312l1rs,Sony,SVT1312L1RS,Laptop,,
 Sony,SVT1312M1ES,model,pending,https://jp.drvhub.net/laptops/sony/svt1312m1es,Sony,SVT1312M1ES,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Sony/SVT1312/SVT1312M1ES
@@ -13110,32 +13110,32 @@ Sony,SVT1313M1RS,model,pending,https://jp.drvhub.net/laptops/sony/svt1313m1rs,So
 Sony,SVT1313S1ES,model,pending,https://jp.drvhub.net/laptops/sony/svt1313s1es,Sony,SVT1313S1ES,Laptop,,
 Sony,SVT1313V1ES,model,pending,https://jp.drvhub.net/laptops/sony/svt1313v1es,Sony,SVT1313V1ES,Laptop,,
 Sony,SVT1313X9RS,model,pending,https://jp.drvhub.net/laptops/sony/svt1313x9rs,Sony,SVT1313X9RS,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Sony/SVT1313/SVT1313X9RS
-Sony,SVT14112CXS,model,pending,https://jp.drvhub.net/laptops/sony/svt14112cxs,Sony,SVT14112CXS,Laptop,,
-Sony,SVT14113CNS,model,pending,https://jp.drvhub.net/laptops/sony/svt14113cns,Sony,SVT14113CNS,Laptop,,
-Sony,SVT14113CVS,model,pending,https://jp.drvhub.net/laptops/sony/svt14113cvs,Sony,SVT14113CVS,Laptop,,
-Sony,SVT14113CXS,model,pending,https://jp.drvhub.net/laptops/sony/svt14113cxs,Sony,SVT14113CXS,Laptop,,
+Sony,SVT14112CXS,model,pending,https://jp.drvhub.net/laptops/sony/svt14112cxs,Sony,SVT14112CXS,Laptop,,https://www.touchandscreen.de/SVT14112CXS
+Sony,SVT14113CNS,model,pending,https://jp.drvhub.net/laptops/sony/svt14113cns,Sony,SVT14113CNS,Laptop,,https://www.touchandscreen.de/SVT14113CNS
+Sony,SVT14113CVS,model,pending,https://jp.drvhub.net/laptops/sony/svt14113cvs,Sony,SVT14113CVS,Laptop,,https://www.touchandscreen.de/SVT14113CVS
+Sony,SVT14113CXS,model,pending,https://jp.drvhub.net/laptops/sony/svt14113cxs,Sony,SVT14113CXS,Laptop,,https://www.touchandscreen.de/SVT14113CXS
 Sony,SVT14115CBS,model,pending,https://jp.drvhub.net/laptops/sony/svt14115cbs,Sony,SVT14115CBS,Laptop,,
-Sony,SVT14115CLS,model,pending,https://jp.drvhub.net/laptops/sony/svt14115cls,Sony,SVT14115CLS,Laptop,,
+Sony,SVT14115CLS,model,pending,https://jp.drvhub.net/laptops/sony/svt14115cls,Sony,SVT14115CLS,Laptop,,https://www.touchandscreen.de/SVT14115CLS
 Sony,SVT14115CVS,model,pending,https://jp.drvhub.net/laptops/sony/svt14115cvs,Sony,SVT14115CVS,Laptop,,
 Sony,SVT14117CBS,model,pending,https://jp.drvhub.net/laptops/sony/svt14117cbs,Sony,SVT14117CBS,Laptop,,
 Sony,SVT14117CHS,model,pending,https://jp.drvhub.net/laptops/sony/svt14117chs,Sony,SVT14117CHS,Laptop,,
-Sony,SVT14117CXS,model,pending,https://jp.drvhub.net/laptops/sony/svt14117cxs,Sony,SVT14117CXS,Laptop,,
+Sony,SVT14117CXS,model,pending,https://jp.drvhub.net/laptops/sony/svt14117cxs,Sony,SVT14117CXS,Laptop,,https://www.touchandscreen.de/SVT14117CXS
 Sony,SVT14119CJS,model,pending,https://jp.drvhub.net/laptops/sony/svt14119cjs,Sony,SVT14119CJS,Laptop,,https://www.sony.jp/support/vaio/products/sv/svt14119cjs.html
-Sony,SVT1411BPXS,model,pending,https://jp.drvhub.net/laptops/sony/svt1411bpxs,Sony,SVT1411BPXS,Laptop,,
-Sony,SVT14126CXS,model,pending,https://jp.drvhub.net/laptops/sony/svt14126cxs,Sony,SVT14126CXS,Laptop,,
-Sony,SVT14127CLS,model,pending,https://jp.drvhub.net/laptops/sony/svt14127cls,Sony,SVT14127CLS,Laptop,,
-Sony,SVT14127CXS,model,pending,https://jp.drvhub.net/laptops/sony/svt14127cxs,Sony,SVT14127CXS,Laptop,,
-Sony,SVT1412ACXS,model,pending,https://jp.drvhub.net/laptops/sony/svt1412acxs,Sony,SVT1412ACXS,Laptop,,
+Sony,SVT1411BPXS,model,pending,https://jp.drvhub.net/laptops/sony/svt1411bpxs,Sony,SVT1411BPXS,Laptop,,https://www.touchandscreen.de/SVT1411BPXS
+Sony,SVT14126CXS,model,pending,https://jp.drvhub.net/laptops/sony/svt14126cxs,Sony,SVT14126CXS,Laptop,,https://www.touchandscreen.de/SVT14126CXS
+Sony,SVT14127CLS,model,pending,https://jp.drvhub.net/laptops/sony/svt14127cls,Sony,SVT14127CLS,Laptop,,https://www.touchandscreen.de/SVT14127CLS
+Sony,SVT14127CXS,model,pending,https://jp.drvhub.net/laptops/sony/svt14127cxs,Sony,SVT14127CXS,Laptop,,https://www.touchandscreen.de/SVT14127CXS
+Sony,SVT1412ACXS,model,pending,https://jp.drvhub.net/laptops/sony/svt1412acxs,Sony,SVT1412ACXS,Laptop,,https://www.touchandscreen.de/SVT1412ACXS
 Sony,SVT15112CXS,model,pending,https://jp.drvhub.net/laptops/sony/svt15112cxs,Sony,SVT15112CXS,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Sony/SVT1511/SVT15112CXS
-Sony,SVT15114CXS,model,pending,https://jp.drvhub.net/laptops/sony/svt15114cxs,Sony,SVT15114CXS,Laptop,,
-Sony,SVT15114CYS,model,pending,https://jp.drvhub.net/laptops/sony/svt15114cys,Sony,SVT15114CYS,Laptop,,
-Sony,SVT15115CLS,model,pending,https://jp.drvhub.net/laptops/sony/svt15115cls,Sony,SVT15115CLS,Laptop,,
+Sony,SVT15114CXS,model,pending,https://jp.drvhub.net/laptops/sony/svt15114cxs,Sony,SVT15114CXS,Laptop,,https://www.touchandscreen.de/SVT15114CXS
+Sony,SVT15114CYS,model,pending,https://jp.drvhub.net/laptops/sony/svt15114cys,Sony,SVT15114CYS,Laptop,,https://www.touchandscreen.de/SVT15114CYS
+Sony,SVT15115CLS,model,pending,https://jp.drvhub.net/laptops/sony/svt15115cls,Sony,SVT15115CLS,Laptop,,https://www.touchandscreen.de/SVT15115CLS
 Sony,SVT15115CXS,model,pending,https://jp.drvhub.net/laptops/sony/svt15115cxs,Sony,SVT15115CXS,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/Sony/SVT1511/SVT15115CXS
-Sony,SVT15117CXS,model,pending,https://jp.drvhub.net/laptops/sony/svt15117cxs,Sony,SVT15117CXS,Laptop,,
+Sony,SVT15117CXS,model,pending,https://jp.drvhub.net/laptops/sony/svt15117cxs,Sony,SVT15117CXS,Laptop,,https://www.touchandscreen.de/SVT15117CXS
 Sony,SVT15118CJS,model,pending,https://jp.drvhub.net/laptops/sony/svt15118cjs,Sony,SVT15118CJS,Laptop,,https://www.sony.jp/support/vaio/products/sv/svt15118cjs.html
-Sony,SVT1511ACXS,model,pending,https://jp.drvhub.net/laptops/sony/svt1511acxs,Sony,SVT1511ACXS,Laptop,,
+Sony,SVT1511ACXS,model,pending,https://jp.drvhub.net/laptops/sony/svt1511acxs,Sony,SVT1511ACXS,Laptop,,https://www.touchandscreen.de/SVT1511ACXS
 Sony,SVT1511AJ,model,pending,https://jp.drvhub.net/laptops/sony/svt1511aj,Sony,SVT1511AJ,Laptop,,https://www.sony.jp/support/vaio/products/sv/svt1511aj.html
-Sony,SVT1511C5E,model,pending,https://jp.drvhub.net/laptops/sony/svt1511c5e,Sony,SVT1511C5E,Laptop,,
+Sony,SVT1511C5E,model,pending,https://jp.drvhub.net/laptops/sony/svt1511c5e,Sony,SVT1511C5E,Laptop,,https://www.touchandscreen.de/SVT1511C5E
 Sony,SVT1511M1ES,model,pending,https://jp.drvhub.net/laptops/sony/svt1511m1es,Sony,SVT1511M1ES,Laptop,,
 Sony,SVT1511M1RS,model,pending,https://jp.drvhub.net/laptops/sony/svt1511m1rs,Sony,SVT1511M1RS,Laptop,,
 Sony,SVT21215CXB,model,pending,https://jp.drvhub.net/laptops/sony/svt21215cxb,Sony,SVT21215CXB,Laptop,,
@@ -18714,7 +18714,7 @@ ASUS,XG-C100C 10G PCI-E Network Adapter,model,pending,https://jp.drvhub.net/devi
 ASUS,XG-C100C 10GbE Copper Ethernet Adapter,model,pending,https://jp.drvhub.net/devices/network/asus/xg-c100c-10gbe-copper-ethernet-adapter,ASUS,XG-C100C,Other,NetworkAdapter,
 ASUS,XG-C100F 10G SFP+ Network Adapter,model,pending,https://jp.drvhub.net/devices/network/asus/xg-c100f-10g-sfp-network-adapter,ASUS,XG-C100F,Other,NetworkAdapter,
 ASUS,XG-C100F 10GbE SFP+ Ethernet Adapter,model,pending,https://jp.drvhub.net/devices/network/asus/xg-c100f-10gbe-sfp-ethernet-adapter,ASUS,XG-C100F,Other,NetworkAdapter,
-D-Link,[CommView] D-Link DWA-160 rev B2,model,pending,https://jp.drvhub.net/devices/network/d-link/commview-d-link-dwa-160-rev-b2,D-Link,DWA-160 rev B2,Other,NetworkAdapter,
+D-Link,[CommView] D-Link DWA-160 rev B2,model,pending,https://jp.drvhub.net/devices/network/d-link/commview-d-link-dwa-160-rev-b2,D-Link,DWA-160 rev B2,Other,NetworkAdapter,https://man.openbsd.org/run.4
 D-Link,[CommView] D-Link DWA-160 rev C1,model,pending,https://jp.drvhub.net/devices/network/d-link/commview-d-link-dwa-160-rev-c1,D-Link,DWA-160 rev C1,Other,NetworkAdapter,
 D-Link,[CommView] D-Link DWA-180 rev A1,model,pending,https://jp.drvhub.net/devices/network/d-link/commview-d-link-dwa-180-rev-a1,D-Link,DWA-180 rev A1,Other,NetworkAdapter,
 D-Link,Air DWL-120 Wireless USB Adapter,model,pending,https://jp.drvhub.net/devices/network/d-link/air-dwl-120-wireless-usb-adapter,D-Link,DWL-120,Other,NetworkAdapter,https://legacy.us.dlink.com/pages/product.aspx?id=45702258065c4b6b8340f540d0e9dc44
@@ -18724,7 +18724,7 @@ D-Link,Air DWL-650 Wireless Cardbus Adapter,model,pending,https://jp.drvhub.net/
 D-Link,Air DWL-650 Wireless PC Card,model,pending,https://jp.drvhub.net/devices/network/d-link/air-dwl-650-wireless-pc-card,D-Link,DWL-650,Other,NetworkAdapter,
 D-Link,Air DWL-660 Wireless PC Card,model,pending,https://jp.drvhub.net/devices/network/d-link/air-dwl-660-wireless-pc-card,D-Link,DWL-660,Other,NetworkAdapter,
 D-Link,AirPlus AG DWL-AG122 Wireless USB Adapter,model,pending,https://jp.drvhub.net/devices/network/d-link/airplus-ag-dwl-ag122-wireless-usb-adapter,D-Link,DWL-AG122,Other,NetworkAdapter,
-D-Link,AirPlus DWL-650+ Wireless Cardbus Adapter,model,pending,https://jp.drvhub.net/devices/network/d-link/airplus-dwl-650-wireless-cardbus-adapter,D-Link,DWL-650+,Other,NetworkAdapter,
+D-Link,AirPlus DWL-650+ Wireless Cardbus Adapter,model,pending,https://jp.drvhub.net/devices/network/d-link/airplus-dwl-650-wireless-cardbus-adapter,D-Link,DWL-650+,Other,NetworkAdapter,https://man.openbsd.org/acx.4
 D-Link,AirPlus DWL-G650 Wireless Cardbus Adapter,model,pending,https://jp.drvhub.net/devices/network/d-link/airplus-dwl-g650-wireless-cardbus-adapter,D-Link,DWL-G650,Other,NetworkAdapter,
 D-Link,AirPlus G DWL-G510M Wireless PCI Adapter,model,pending,https://jp.drvhub.net/devices/network/d-link/airplus-g-dwl-g510m-wireless-pci-adapter,D-Link,DWL-G510M,Other,NetworkAdapter,
 D-Link,AirPlus G DWL-G520+A Wireless PCI Adapter,model,pending,https://jp.drvhub.net/devices/network/d-link/airplus-g-dwl-g520-a-wireless-pci-adapter,D-Link,DWL-G520+A,Other,NetworkAdapter,
@@ -18732,20 +18732,20 @@ D-Link,AirPlus G DWL-G630 Wireless Cardbus Adapter,model,pending,https://jp.drvh
 D-Link,AirPlus G DWL-G630M Wireless Cardbus Adapter,model,pending,https://jp.drvhub.net/devices/network/d-link/airplus-g-dwl-g630m-wireless-cardbus-adapter,D-Link,DWL-G630M,Other,NetworkAdapter,
 D-Link,AirPlus G DWL-G650+A Wireless Cardbus Adapter,model,pending,https://jp.drvhub.net/devices/network/d-link/airplus-g-dwl-g650-a-wireless-cardbus-adapter,D-Link,DWL-G650+A,Other,NetworkAdapter,
 D-Link,AirPlus G DWL-G650|A Wireless Cardbus Adapter,model,pending,https://jp.drvhub.net/devices/network/d-link/airplus-g-dwl-g650-a-wireless-cardbus-adapter-1,D-Link,DWL-G650,Other,NetworkAdapter,
-D-Link,AirPlus G+ DWL-G520+ Wireless PCI Adapter,model,pending,https://jp.drvhub.net/devices/network/d-link/airplus-g-dwl-g520-wireless-pci-adapter,D-Link,DWL-G520+,Other,NetworkAdapter,
-D-Link,AirPlus G+ DWL-G650+ Wireless Cardbus Adapter,model,pending,https://jp.drvhub.net/devices/network/d-link/airplus-g-dwl-g650-wireless-cardbus-adapter,D-Link,DWL-G650+,Other,NetworkAdapter,
-D-Link,AirPlus G+ DWL-G650+ Wireless Cardbus Adapterr,model,pending,https://jp.drvhub.net/devices/network/d-link/airplus-g-dwl-g650-wireless-cardbus-adapterr,D-Link,DWL-G650+,Other,NetworkAdapter,
+D-Link,AirPlus G+ DWL-G520+ Wireless PCI Adapter,model,pending,https://jp.drvhub.net/devices/network/d-link/airplus-g-dwl-g520-wireless-pci-adapter,D-Link,DWL-G520+,Other,NetworkAdapter,https://man.openbsd.org/acx.4
+D-Link,AirPlus G+ DWL-G650+ Wireless Cardbus Adapter,model,pending,https://jp.drvhub.net/devices/network/d-link/airplus-g-dwl-g650-wireless-cardbus-adapter,D-Link,DWL-G650+,Other,NetworkAdapter,https://man.openbsd.org/acx.4
+D-Link,AirPlus G+ DWL-G650+ Wireless Cardbus Adapterr,model,pending,https://jp.drvhub.net/devices/network/d-link/airplus-g-dwl-g650-wireless-cardbus-adapterr,D-Link,DWL-G650+,Other,NetworkAdapter,https://man.openbsd.org/acx.4
 D-Link,AirPlus Xtreme G DWL-G650,model,pending,https://jp.drvhub.net/devices/network/d-link/airplus-xtreme-g-dwl-g650,D-Link,DWL-G650,Other,NetworkAdapter,
 D-Link,AirPlus Xtreme G DWL-G650 Adapter,model,pending,https://jp.drvhub.net/devices/network/d-link/airplus-xtreme-g-dwl-g650-adapter,D-Link,DWL-G650,Other,NetworkAdapter,
-D-Link,AirPlus XtremeG+ DWL-G520+ Wireless PCI Adapter,model,pending,https://jp.drvhub.net/devices/network/d-link/airplus-xtremeg-dwl-g520-wireless-pci-adapter,D-Link,DWL-G520+,Other,NetworkAdapter,
-D-Link,AirPlus XtremeG+ DWL-G650+ Wireless Cardbus Adapter,model,pending,https://jp.drvhub.net/devices/network/d-link/airplus-xtremeg-dwl-g650-wireless-cardbus-adapter,D-Link,DWL-G650+,Other,NetworkAdapter,
+D-Link,AirPlus XtremeG+ DWL-G520+ Wireless PCI Adapter,model,pending,https://jp.drvhub.net/devices/network/d-link/airplus-xtremeg-dwl-g520-wireless-pci-adapter,D-Link,DWL-G520+,Other,NetworkAdapter,https://man.openbsd.org/acx.4
+D-Link,AirPlus XtremeG+ DWL-G650+ Wireless Cardbus Adapter,model,pending,https://jp.drvhub.net/devices/network/d-link/airplus-xtremeg-dwl-g650-wireless-cardbus-adapter,D-Link,DWL-G650+,Other,NetworkAdapter,https://man.openbsd.org/acx.4
 D-Link,AirPremier AG DWL-AG660 Wireless Cardbus Adapter,model,pending,https://jp.drvhub.net/devices/network/d-link/airpremier-ag-dwl-ag660-wireless-cardbus-adapter,D-Link,DWL-AG660,Other,NetworkAdapter,
 D-Link,AirPremier DWL-AG122 USB 2.0 Wireless Network Adapter,model,pending,https://jp.drvhub.net/devices/network/d-link/airpremier-dwl-ag122-usb-2-0-wireless-network-adapter,D-Link,DWL-AG122,Other,NetworkAdapter,
 D-Link,AirPremier DWL-AG660 Wireless Cardbus Adapter,model,pending,https://jp.drvhub.net/devices/network/d-link/airpremier-dwl-ag660-wireless-cardbus-adapter,D-Link,DWL-AG660,Other,NetworkAdapter,
 D-Link,AirPremier DWL-G550 Wireless PCI Adapter,model,pending,https://jp.drvhub.net/devices/network/d-link/airpremier-dwl-g550-wireless-pci-adapter,D-Link,DWL-G550,Other,NetworkAdapter,
 D-Link,AirPremier DWL-G680 Wireless Cardbus Adapter,model,pending,https://jp.drvhub.net/devices/network/d-link/airpremier-dwl-g680-wireless-cardbus-adapter,D-Link,DWL-G680,Other,NetworkAdapter,
-D-Link,AirPro DWL-A650 Wireless Cardbus Adapter,model,pending,https://jp.drvhub.net/devices/network/d-link/airpro-dwl-a650-wireless-cardbus-adapter,D-Link,DWL-A650,Other,NetworkAdapter,
-D-Link,AirPro DWL-AB650 Multimode Wireless Cardbus Adapter,model,pending,https://jp.drvhub.net/devices/network/d-link/airpro-dwl-ab650-multimode-wireless-cardbus-adapter,D-Link,DWL-AB650,Other,NetworkAdapter,
+D-Link,AirPro DWL-A650 Wireless Cardbus Adapter,model,pending,https://jp.drvhub.net/devices/network/d-link/airpro-dwl-a650-wireless-cardbus-adapter,D-Link,DWL-A650,Other,NetworkAdapter,https://man.openbsd.org/ath.4
+D-Link,AirPro DWL-AB650 Multimode Wireless Cardbus Adapter,model,pending,https://jp.drvhub.net/devices/network/d-link/airpro-dwl-ab650-multimode-wireless-cardbus-adapter,D-Link,DWL-AB650,Other,NetworkAdapter,https://man.openbsd.org/ath.4
 D-Link,AirXpert DWL-AG650 Wireless Cardbus Adapter,model,pending,https://jp.drvhub.net/devices/network/d-link/airxpert-dwl-ag650-wireless-cardbus-adapter,D-Link,DWL-AG650,Other,NetworkAdapter,
 D-Link,DFE-500TX PCI Fast Ethernet Adapter,model,pending,https://jp.drvhub.net/devices/network/d-link/dfe-500tx-pci-fast-ethernet-adapter,D-Link,DFE-500TX,Other,NetworkAdapter,
 D-Link,DFE-520TX Fast Ethernet PCI Adapter,model,pending,https://jp.drvhub.net/devices/network/d-link/dfe-520tx-fast-ethernet-pci-adapter,D-Link,DFE-520TX,Other,NetworkAdapter,
@@ -18774,17 +18774,17 @@ D-Link,DGE-560T PCI Express Gigabit Ethernet Adapter,model,pending,https://jp.dr
 D-Link,DGE-570T 2 Port Gigabit Ethernet Server Adapter,model,pending,https://jp.drvhub.net/devices/network/d-link/dge-570t-2-port-gigabit-ethernet-server-adapter,D-Link,DGE-570T,Other,NetworkAdapter,
 D-Link,DGE-660TD Gigabit CardBus PC Card,model,pending,https://jp.drvhub.net/devices/network/d-link/dge-660td-gigabit-cardbus-pc-card,D-Link,DGE-660TD,Other,NetworkAdapter,
 D-Link,DUB-E251G 2.5G Ethernet Adapter,model,pending,https://jp.drvhub.net/devices/network/d-link/dub-e251g-2-5g-ethernet-adapter,D-Link,DUB-E251G,Other,NetworkAdapter,
-D-Link,DWA-110 Wireless G USB Adapter,model,pending,https://jp.drvhub.net/devices/network/d-link/dwa-110-wireless-g-usb-adapter,D-Link,DWA-110,Other,NetworkAdapter,
-D-Link,DWA-111 Wireless G USB Adapter,model,pending,https://jp.drvhub.net/devices/network/d-link/dwa-111-wireless-g-usb-adapter,D-Link,DWA-111,Other,NetworkAdapter,
+D-Link,DWA-110 Wireless G USB Adapter,model,pending,https://jp.drvhub.net/devices/network/d-link/dwa-110-wireless-g-usb-adapter,D-Link,DWA-110,Other,NetworkAdapter,https://man.openbsd.org/rum.4
+D-Link,DWA-111 Wireless G USB Adapter,model,pending,https://jp.drvhub.net/devices/network/d-link/dwa-111-wireless-g-usb-adapter,D-Link,DWA-111,Other,NetworkAdapter,https://man.openbsd.org/rum.4
 D-Link,DWA-113 Wireless N 150 USB Adapter,model,pending,https://jp.drvhub.net/devices/network/d-link/dwa-113-wireless-n-150-usb-adapter,D-Link,DWA-113,Other,NetworkAdapter,
 D-Link,DWA-123 Wireless N 150 Easy USB Adapter,model,pending,https://jp.drvhub.net/devices/network/d-link/dwa-123-wireless-n-150-easy-usb-adapter,D-Link,DWA-123,Other,NetworkAdapter,
 D-Link,DWA-123 Wireless N 150 USB Adapter,model,pending,https://jp.drvhub.net/devices/network/d-link/dwa-123-wireless-n-150-usb-adapter,D-Link,DWA-123,Other,NetworkAdapter,
 D-Link,DWA-125 Wireless 150 USB Adapter,model,pending,https://jp.drvhub.net/devices/network/d-link/dwa-125-wireless-150-usb-adapter,D-Link,DWA-125,Other,NetworkAdapter,https://legacy.us.dlink.com/pages/product.aspx?id=0dd27aa74f324966aa5dcbbc00347838
 D-Link,DWA-125 Wireless N 150 USB Adapter,model,pending,https://jp.drvhub.net/devices/network/d-link/dwa-125-wireless-n-150-usb-adapter,D-Link,DWA-125,Other,NetworkAdapter,https://legacy.us.dlink.com/pages/product.aspx?id=0dd27aa74f324966aa5dcbbc00347838
-D-Link,DWA-127 Wireless N 150 USB Adapter,model,pending,https://jp.drvhub.net/devices/network/d-link/dwa-127-wireless-n-150-usb-adapter,D-Link,DWA-127,Other,NetworkAdapter,
+D-Link,DWA-127 Wireless N 150 USB Adapter,model,pending,https://jp.drvhub.net/devices/network/d-link/dwa-127-wireless-n-150-usb-adapter,D-Link,DWA-127,Other,NetworkAdapter,https://man.openbsd.org/run.4
 D-Link,DWA-130 Wireless N USB Adapter,model,pending,https://jp.drvhub.net/devices/network/d-link/dwa-130-wireless-n-usb-adapter,D-Link,DWA-130,Other,NetworkAdapter,https://legacy.us.dlink.com/pages/product.aspx?id=cb238bfe7e6540979f94418bb7b5c9fb
 D-Link,DWA-132 Wireless N USB Adapter,model,pending,https://jp.drvhub.net/devices/network/d-link/dwa-132-wireless-n-usb-adapter,D-Link,DWA-132,Other,NetworkAdapter,
-D-Link,DWA-133 Wireless N USB Adapter,model,pending,https://jp.drvhub.net/devices/network/d-link/dwa-133-wireless-n-usb-adapter,D-Link,DWA-133,Other,NetworkAdapter,
+D-Link,DWA-133 Wireless N USB Adapter,model,pending,https://jp.drvhub.net/devices/network/d-link/dwa-133-wireless-n-usb-adapter,D-Link,DWA-133,Other,NetworkAdapter,https://man.openbsd.org/urtwn.4
 D-Link,DWA-135 Wireless N USB Adapter,model,pending,https://jp.drvhub.net/devices/network/d-link/dwa-135-wireless-n-usb-adapter,D-Link,DWA-135,Other,NetworkAdapter,https://legacy.us.dlink.com/pages/product.aspx?id=486c02f0b35c48f9a51feaae979e644c
 D-Link,DWA-137 Wireless N High-Gain USB Adapter,model,pending,https://jp.drvhub.net/devices/network/d-link/dwa-137-wireless-n-high-gain-usb-adapter,D-Link,DWA-137,Other,NetworkAdapter,
 D-Link,DWA-140 RangeBooster N USB Adapter,model,pending,https://jp.drvhub.net/devices/network/d-link/dwa-140-rangebooster-n-usb-adapter,D-Link,DWA-140,Other,NetworkAdapter,https://legacy.us.dlink.com/pages/product.aspx?id=07d30871939d4adb8c2e0d4f1d870397
@@ -18827,18 +18827,18 @@ D-Link,DXE-820T 10GBASE-T Dual Port PCI-E Adapter,model,pending,https://jp.drvhu
 D-Link,Wireless 108G DWA-120 USB Adapter,model,pending,https://jp.drvhub.net/devices/network/d-link/wireless-108g-dwa-120-usb-adapter,D-Link,DWA-120,Other,NetworkAdapter,
 D-Link,Wireless 108G DWA-520 Desktop Adapter,model,pending,https://jp.drvhub.net/devices/network/d-link/wireless-108g-dwa-520-desktop-adapter,D-Link,DWA-520,Other,NetworkAdapter,
 D-Link,Wireless 108G DWA-620 Notebook Adapter,model,pending,https://jp.drvhub.net/devices/network/d-link/wireless-108g-dwa-620-notebook-adapter,D-Link,DWA-620,Other,NetworkAdapter,
-D-Link,Wireless G DWA-110 USB Adapter,model,pending,https://jp.drvhub.net/devices/network/d-link/wireless-g-dwa-110-usb-adapter,D-Link,DWA-110,Other,NetworkAdapter,
+D-Link,Wireless G DWA-110 USB Adapter,model,pending,https://jp.drvhub.net/devices/network/d-link/wireless-g-dwa-110-usb-adapter,D-Link,DWA-110,Other,NetworkAdapter,https://man.openbsd.org/rum.4
 D-Link,Wireless G DWA-510 Desktop Adapter,model,pending,https://jp.drvhub.net/devices/network/d-link/wireless-g-dwa-510-desktop-adapter,D-Link,DWA-510,Other,NetworkAdapter,
 D-Link,Wireless G DWA-610 Notebook Adapter,model,pending,https://jp.drvhub.net/devices/network/d-link/wireless-g-dwa-610-notebook-adapter,D-Link,DWA-610,Other,NetworkAdapter,
 D-Link,Wireless N DWA-532 Desktop Adapter,model,pending,https://jp.drvhub.net/devices/network/d-link/wireless-n-dwa-532-desktop-adapter,D-Link,DWA-532,Other,NetworkAdapter,
 D-Link,Wireless N USB Adapter DWA-130,model,pending,https://jp.drvhub.net/devices/network/d-link/wireless-n-usb-adapter-dwa-130,D-Link,DWA-130,Other,NetworkAdapter,https://legacy.us.dlink.com/pages/product.aspx?id=cb238bfe7e6540979f94418bb7b5c9fb
 Netgear,108 Mbps Wireless PC Card WG511T,model,pending,https://jp.drvhub.net/devices/network/netgear/108-mbps-wireless-pc-card-wg511t,Netgear,WG511T,Other,NetworkAdapter,
 Netgear,108 Mbps Wireless PCI Adapter WG311T,model,pending,https://jp.drvhub.net/devices/network/netgear/108-mbps-wireless-pci-adapter-wg311t,Netgear,WG311T,Other,NetworkAdapter,
-Netgear,A6100 WiFi Adapter,model,pending,https://jp.drvhub.net/devices/network/netgear/a6100-wifi-adapter,Netgear,A6100,Other,NetworkAdapter,
+Netgear,A6100 WiFi Adapter,model,pending,https://jp.drvhub.net/devices/network/netgear/a6100-wifi-adapter,Netgear,A6100,Other,NetworkAdapter,https://www.downloads.netgear.com/files/GDC/datasheet/en/A6100.pdf#page=1
 Netgear,A6150 WiFi USB 2.0 Adapter,model,pending,https://jp.drvhub.net/devices/network/netgear/a6150-wifi-usb-2-0-adapter,Netgear,A6150,Other,NetworkAdapter,
 Netgear,A6200 WiFi Adapter,model,pending,https://jp.drvhub.net/devices/network/netgear/a6200-wifi-adapter,Netgear,A6200,Other,NetworkAdapter,
 Netgear,A6200V2 11AC Wireless USB 3.0 Adapter,model,pending,https://jp.drvhub.net/devices/network/netgear/a6200v2-11ac-wireless-usb-3-0-adapter,Netgear,A6200V2,Other,NetworkAdapter,
-Netgear,A6210 WiFi USB3.0 Adapter,model,pending,https://jp.drvhub.net/devices/network/netgear/a6210-wifi-usb3-0-adapter,Netgear,A6210,Other,NetworkAdapter,
+Netgear,A6210 WiFi USB3.0 Adapter,model,pending,https://jp.drvhub.net/devices/network/netgear/a6210-wifi-usb3-0-adapter,Netgear,A6210,Other,NetworkAdapter,https://www.downloads.netgear.com/files/GDC/datasheet/en/A6210.pdf#page=1
 Netgear,A7000 WiFi USB3.0 Adapter,model,pending,https://jp.drvhub.net/devices/network/netgear/a7000-wifi-usb3-0-adapter,Netgear,A7000,Other,NetworkAdapter,
 Netgear,A7500 WiFi 6 Adapter,model,pending,https://jp.drvhub.net/devices/network/netgear/a7500-wifi-6-adapter,Netgear,A7500,Other,NetworkAdapter,
 Netgear,A8000 WiFi 6/6E adapter,model,pending,https://jp.drvhub.net/devices/network/netgear/a8000-wifi-6-6e-adapter,Netgear,A8000,Other,NetworkAdapter,
@@ -18852,14 +18852,14 @@ Netgear,GA302T Gigabit Adapter,model,pending,https://jp.drvhub.net/devices/netwo
 Netgear,GA311 Gigabit Adapter,model,pending,https://jp.drvhub.net/devices/network/netgear/ga311-gigabit-adapter,Netgear,GA311,Other,NetworkAdapter,
 Netgear,RangeMax Duo Wireless-N USB Adapter WNDA3100,model,pending,https://jp.drvhub.net/devices/network/netgear/rangemax-duo-wireless-n-usb-adapter-wnda3100,Netgear,WNDA3100,Other,NetworkAdapter,
 Netgear,WG111 802.11g Wireless USB2.0 Adapter,model,pending,https://jp.drvhub.net/devices/network/netgear/wg111-802-11g-wireless-usb2-0-adapter,Netgear,WG111,Other,NetworkAdapter,
-Netgear,WG111T 108Mbps Wireless USB2.0 Adapter,model,pending,https://jp.drvhub.net/devices/network/netgear/wg111t-108mbps-wireless-usb2-0-adapter,Netgear,WG111T,Other,NetworkAdapter,
-Netgear,WG111T bootloader,model,pending,https://jp.drvhub.net/devices/network/netgear/wg111t-bootloader,Netgear,WG111T,Other,NetworkAdapter,
-Netgear,WG111T raf1@scidhuv.plus.com,model,pending,https://jp.drvhub.net/devices/network/netgear/wg111t-raf1atscidhuv-plus-com,Netgear,WG111T,Other,NetworkAdapter,
-Netgear,WG111v2 54Mbps Wireless USB 2.0 Adapter,model,pending,https://jp.drvhub.net/devices/network/netgear/wg111v2-54mbps-wireless-usb-2-0-adapter,Netgear,WG111v2,Other,NetworkAdapter,
-Netgear,WG111v3 54Mbps Wireless USB 2.0 Adapter,model,pending,https://jp.drvhub.net/devices/network/netgear/wg111v3-54mbps-wireless-usb-2-0-adapter,Netgear,WG111v3,Other,NetworkAdapter,
-Netgear,WG111v3 Wireless-G USB Adapter,model,pending,https://jp.drvhub.net/devices/network/netgear/wg111v3-wireless-g-usb-adapter,Netgear,WG111v3,Other,NetworkAdapter,
+Netgear,WG111T 108Mbps Wireless USB2.0 Adapter,model,pending,https://jp.drvhub.net/devices/network/netgear/wg111t-108mbps-wireless-usb2-0-adapter,Netgear,WG111T,Other,NetworkAdapter,https://man.openbsd.org/uath.4
+Netgear,WG111T bootloader,model,pending,https://jp.drvhub.net/devices/network/netgear/wg111t-bootloader,Netgear,WG111T,Other,NetworkAdapter,https://man.openbsd.org/uath.4
+Netgear,WG111T raf1@scidhuv.plus.com,model,pending,https://jp.drvhub.net/devices/network/netgear/wg111t-raf1atscidhuv-plus-com,Netgear,WG111T,Other,NetworkAdapter,https://man.openbsd.org/uath.4
+Netgear,WG111v2 54Mbps Wireless USB 2.0 Adapter,model,pending,https://jp.drvhub.net/devices/network/netgear/wg111v2-54mbps-wireless-usb-2-0-adapter,Netgear,WG111v2,Other,NetworkAdapter,https://man.openbsd.org/urtw.4
+Netgear,WG111v3 54Mbps Wireless USB 2.0 Adapter,model,pending,https://jp.drvhub.net/devices/network/netgear/wg111v3-54mbps-wireless-usb-2-0-adapter,Netgear,WG111v3,Other,NetworkAdapter,https://man.openbsd.org/urtw.4
+Netgear,WG111v3 Wireless-G USB Adapter,model,pending,https://jp.drvhub.net/devices/network/netgear/wg111v3-wireless-g-usb-adapter,Netgear,WG111v3,Other,NetworkAdapter,https://man.openbsd.org/urtw.4
 Netgear,WG121 802.11g Wireless USB2.0 Adapter,model,pending,https://jp.drvhub.net/devices/network/netgear/wg121-802-11g-wireless-usb2-0-adapter,Netgear,WG121,Other,NetworkAdapter,
-Netgear,WG311v2 802.11g Wireless PCI Adapter,model,pending,https://jp.drvhub.net/devices/network/netgear/wg311v2-802-11g-wireless-pci-adapter,Netgear,WG311v2,Other,NetworkAdapter,
+Netgear,WG311v2 802.11g Wireless PCI Adapter,model,pending,https://jp.drvhub.net/devices/network/netgear/wg311v2-802-11g-wireless-pci-adapter,Netgear,WG311v2,Other,NetworkAdapter,https://man.openbsd.org/acx.4
 Netgear,WG311v3 54Mbps Wireless PCI Adapter,model,pending,https://jp.drvhub.net/devices/network/netgear/wg311v3-54mbps-wireless-pci-adapter,Netgear,WG311v3,Other,NetworkAdapter,
 Netgear,WG311v3 802.11g Wireless PCI Adapter,model,pending,https://jp.drvhub.net/devices/network/netgear/wg311v3-802-11g-wireless-pci-adapter,Netgear,WG311v3,Other,NetworkAdapter,
 Netgear,WG511 54 Mbps Wireless PC Card,model,pending,https://jp.drvhub.net/devices/network/netgear/wg511-54-mbps-wireless-pc-card,Netgear,WG511,Other,NetworkAdapter,
@@ -18868,8 +18868,8 @@ Netgear,WN121T Wireless USB 2.0 Adapter,model,pending,https://jp.drvhub.net/devi
 Netgear,WN311T Wireless PCI Adapter,model,pending,https://jp.drvhub.net/devices/network/netgear/wn311t-wireless-pci-adapter,Netgear,WN311T,Other,NetworkAdapter,
 Netgear,WN711 RangeMax NEXT Wireless-N Expresscard adapter,model,pending,https://jp.drvhub.net/devices/network/netgear/wn711-rangemax-next-wireless-n-expresscard-adapter,Netgear,WN711,Other,NetworkAdapter,
 Netgear,WN711 RangeMax Wireless-N Expresscard Adapter,model,pending,https://jp.drvhub.net/devices/network/netgear/wn711-rangemax-wireless-n-expresscard-adapter,Netgear,WN711,Other,NetworkAdapter,
-Netgear,WNA1000M N150 Wireless USB Micro Adapter,model,pending,https://jp.drvhub.net/devices/network/netgear/wna1000m-n150-wireless-usb-micro-adapter,Netgear,WNA1000M,Other,NetworkAdapter,
-Netgear,WNA1000Mv2 N150 Wireless USB Micro Adapter,model,pending,https://jp.drvhub.net/devices/network/netgear/wna1000mv2-n150-wireless-usb-micro-adapter,Netgear,WNA1000Mv2,Other,NetworkAdapter,
+Netgear,WNA1000M N150 Wireless USB Micro Adapter,model,pending,https://jp.drvhub.net/devices/network/netgear/wna1000m-n150-wireless-usb-micro-adapter,Netgear,WNA1000M,Other,NetworkAdapter,https://man.openbsd.org/urtwn.4
+Netgear,WNA1000Mv2 N150 Wireless USB Micro Adapter,model,pending,https://jp.drvhub.net/devices/network/netgear/wna1000mv2-n150-wireless-usb-micro-adapter,Netgear,WNA1000Mv2,Other,NetworkAdapter,https://man.openbsd.org/urtwn.4
 Netgear,WNA1100 N150 Wireless USB Adapter,model,pending,https://jp.drvhub.net/devices/network/netgear/wna1100-n150-wireless-usb-adapter,Netgear,WNA1100,Other,NetworkAdapter,
 Netgear,WNA1100 Wireless-N 150 USB Adapter,model,pending,https://jp.drvhub.net/devices/network/netgear/wna1100-wireless-n-150-usb-adapter,Netgear,WNA1100,Other,NetworkAdapter,
 Netgear,WNA3100 N300 Wireless USB Adapter,model,pending,https://jp.drvhub.net/devices/network/netgear/wna3100-n300-wireless-usb-adapter,Netgear,WNA3100,Other,NetworkAdapter,
@@ -18879,7 +18879,7 @@ Netgear,WNDA3100v3 N600 Wireless Dual Band USB Adapter,model,pending,https://jp.
 Netgear,WNDA3200 Wireless 11N Dual-band USB Adapter,model,pending,https://jp.drvhub.net/devices/network/netgear/wnda3200-wireless-11n-dual-band-usb-adapter,Netgear,WNDA3200,Other,NetworkAdapter,
 Netgear,WNDA4100 N900 Wireless Dual Band USB Adapter,model,pending,https://jp.drvhub.net/devices/network/netgear/wnda4100-n900-wireless-dual-band-usb-adapter,Netgear,WNDA4100,Other,NetworkAdapter,
 Netgear,WNDA4200D Wireless Dual Band USB Adapter,model,pending,https://jp.drvhub.net/devices/network/netgear/wnda4200d-wireless-dual-band-usb-adapter,Netgear,WNDA4200D,Other,NetworkAdapter,
-TP-LINK,TL-WN620G 11G Wireless Adapter,model,pending,https://jp.drvhub.net/devices/network/tp-link/tl-wn620g-11g-wireless-adapter,TP-Link,TL-WN620G,Other,NetworkAdapter,
+TP-LINK,TL-WN620G 11G Wireless Adapter,model,pending,https://jp.drvhub.net/devices/network/tp-link/tl-wn620g-11g-wireless-adapter,TP-Link,TL-WN620G,Other,NetworkAdapter,https://man.openbsd.org/uath.4
 TP-LINK,TL-WN820N_821N 11N Wireless Adapter,model,pending,https://jp.drvhub.net/devices/network/tp-link/tl-wn820n-821n-11n-wireless-adapter,TP-Link,TL-WN820N,Other,NetworkAdapter,
 Microsoft,Surface 2,model,pending,https://jp.drvhub.net/laptops/microsoft/surface-2,Microsoft,Surface 2,Other,WindowsTablet,
 Microsoft,Surface 3,model,pending,https://jp.drvhub.net/laptops/microsoft/surface-3,Microsoft,Surface 3,Other,WindowsTablet,
@@ -18906,7 +18906,7 @@ PCSMART,PCSGOBAM14-Series,series-generation,pending,https://jp.drvhub.net/laptop
 Shuttle,X50V5,model,pending,https://jp.drvhub.net/laptops/shuttle/x50v5,Shuttle,X50V5,Other,AllInOne,
 Shuttle,X50V6,model,pending,https://jp.drvhub.net/laptops/shuttle/x50v6,Shuttle,X50V6,Other,AllInOne,
 GPD,WIN2,model,pending,https://jp.drvhub.net/laptops/gpd/win2,GPD,WIN 2,Other,Handheld,
-ASUS,1025C,model,pending,https://jp.drvhub.net/laptops/asus/1025c,ASUS,1025C,Laptop,,
+ASUS,1025C,model,pending,https://jp.drvhub.net/laptops/asus/1025c,ASUS,1025C,Laptop,,https://esg.asus.com/english/file/ASUS_J-moss_Eee-Series.pdf#page=1
 ASUS,1025CE,model,pending,https://jp.drvhub.net/laptops/asus/1025ce,ASUS,1025CE,Laptop,,https://github.com/linuxhw/DMI/tree/57b21bc6fdd863380e99c228c22aafcd1509528c/Notebook/ASUSTek%20Computer/1025/1025CE
 ASUS,EXPERTBOOK B1400CBA,model,pending,https://jp.drvhub.net/laptops/asus/expertbook-b1400cba,ASUS,B1400CBA,Laptop,,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx
 ASUS,EXPERTBOOK B1400CBA B1400CB,model,pending,https://jp.drvhub.net/laptops/asus/expertbook-b1400cba-b1400cb,ASUS,B1400CBA,Laptop,,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx
@@ -22209,7 +22209,7 @@ Belkin,F5D8013v1 Wireless N Notebook Card,model,pending,https://jp.drvhub.net/de
 Belkin,F5D8013v3 Wireless N Notebook Card,model,pending,https://jp.drvhub.net/devices/network/belkin/f5d8013v3-wireless-n-notebook-card,Belkin,F5D8013,Other,NetworkAdapter,
 Belkin,F5D8013v4 Wireless N Notebook Card,model,pending,https://jp.drvhub.net/devices/network/belkin/f5d8013v4-wireless-n-notebook-card,Belkin,F5D8013,Other,NetworkAdapter,
 Belkin,F5D8051v3 N1 Wireless USB Adapter,model,pending,https://jp.drvhub.net/devices/network/belkin/f5d8051v3-n1-wireless-usb-adapter,Belkin,F5D8051,Other,NetworkAdapter,
-Belkin,F5D8053 N Wireless USB Adapter,model,pending,https://jp.drvhub.net/devices/network/belkin/f5d8053-n-wireless-usb-adapter,Belkin,F5D8053,Other,NetworkAdapter,
+Belkin,F5D8053 N Wireless USB Adapter,model,pending,https://jp.drvhub.net/devices/network/belkin/f5d8053-n-wireless-usb-adapter,Belkin,F5D8053,Other,NetworkAdapter,https://man.openbsd.org/run.4
 Belkin,F5D8053v1 N Wireless USB Adapter,model,pending,https://jp.drvhub.net/devices/network/belkin/f5d8053v1-n-wireless-usb-adapter,Belkin,F5D8053,Other,NetworkAdapter,
 Belkin,F5D8053v3 N Wireless USB Adapter,model,pending,https://jp.drvhub.net/devices/network/belkin/f5d8053v3-n-wireless-usb-adapter,Belkin,F5D8053,Other,NetworkAdapter,
 Belkin,F5D8053v4 N Wireless USB Adapter,model,pending,https://jp.drvhub.net/devices/network/belkin/f5d8053v4-n-wireless-usb-adapter,Belkin,F5D8053,Other,NetworkAdapter,
@@ -22271,7 +22271,7 @@ BUFFALO,WLI-U2-KG54 Wireless LAN Adapter,model,pending,https://jp.drvhub.net/dev
 BUFFALO,WLI-U2-KG54-AI Wireless LAN Adapter,model,pending,https://jp.drvhub.net/devices/network/buffalo/wli-u2-kg54-ai-wireless-lan-adapter,BUFFALO,WLI-U2-KG54-AI,Other,NetworkAdapter,https://www.buffalo.jp/support/other/product_support_status_list.pdf#page=29
 BUFFALO,WLI-U2-KG54-BB,model,pending,https://jp.drvhub.net/devices/network/buffalo/wli-u2-kg54-bb,BUFFALO,WLI-U2-KG54-BB,Other,NetworkAdapter,
 BUFFALO,WLI-U2-KG54-BB Wireless LAN Adapter,model,pending,https://jp.drvhub.net/devices/network/buffalo/wli-u2-kg54-bb-wireless-lan-adapter,BUFFALO,WLI-U2-KG54-BB,Other,NetworkAdapter,
-BUFFALO,WLI-U2-KG54-YB Wireless LAN Adapter,model,pending,https://jp.drvhub.net/devices/network/buffalo/wli-u2-kg54-yb-wireless-lan-adapter,BUFFALO,WLI-U2-KG54-YB,Other,NetworkAdapter,
+BUFFALO,WLI-U2-KG54-YB Wireless LAN Adapter,model,pending,https://jp.drvhub.net/devices/network/buffalo/wli-u2-kg54-yb-wireless-lan-adapter,BUFFALO,WLI-U2-KG54-YB,Other,NetworkAdapter,https://man.openbsd.org/ural.4
 BUFFALO,WLI-U2-KG54L Wireless LAN Adapter,model,pending,https://jp.drvhub.net/devices/network/buffalo/wli-u2-kg54l-wireless-lan-adapter,BUFFALO,WLI-U2-KG54L,Other,NetworkAdapter,https://www.buffalo.jp/support/other/product_support_status_list.pdf#page=29
 BUFFALO,WLI-U2-SG54HP,model,pending,https://jp.drvhub.net/devices/network/buffalo/wli-u2-sg54hp,BUFFALO,WLI-U2-SG54HP,Other,NetworkAdapter,https://www.buffalo.jp/support/other/product_support_status_list.pdf#page=29
 BUFFALO,WLI-U2-SG54HP Wireless LAN Adapter,model,pending,https://jp.drvhub.net/devices/network/buffalo/wli-u2-sg54hp-wireless-lan-adapter,BUFFALO,WLI-U2-SG54HP,Other,NetworkAdapter,https://www.buffalo.jp/support/other/product_support_status_list.pdf#page=29
@@ -22293,9 +22293,9 @@ Edimax,EW-6822UMX Wi-Fi USB Adapter,model,pending,https://jp.drvhub.net/devices/
 Edimax,EW-7612PIn Wireless PCI-Express Adapter,model,pending,https://jp.drvhub.net/devices/network/edimax/ew-7612pin-wireless-pci-express-adapter,Edimax,EW-7612PIN,Other,NetworkAdapter,
 Edimax,EW-7822UMX Wi-Fi USB Adapter,model,pending,https://jp.drvhub.net/devices/network/edimax/ew-7822umx-wi-fi-usb-adapter,Edimax,EW-7822UMX,Other,NetworkAdapter,
 Gigabyte,GN-WB01GS USB WLAN Card,model,pending,https://jp.drvhub.net/devices/network/gigabyte/gn-wb01gs-usb-wlan-card,Gigabyte,GN-WB01GS,Other,NetworkAdapter,https://download.gigabyte.com/FileList/EBrochure/comm_ebrochure_p3p4.pdf#page=1
-Gigabyte,GN-WB30N 802.11n USB WLAN Card,model,pending,https://jp.drvhub.net/devices/network/gigabyte/gn-wb30n-802-11n-usb-wlan-card,Gigabyte,GN-WB30N,Other,NetworkAdapter,
-Gigabyte,GN-WB31N 802.11n USB WLAN Card,model,pending,https://jp.drvhub.net/devices/network/gigabyte/gn-wb31n-802-11n-usb-wlan-card,Gigabyte,GN-WB31N,Other,NetworkAdapter,
-Gigabyte,GN-WB32L 802.11n USB WLAN Card,model,pending,https://jp.drvhub.net/devices/network/gigabyte/gn-wb32l-802-11n-usb-wlan-card,Gigabyte,GN-WB32L,Other,NetworkAdapter,
+Gigabyte,GN-WB30N 802.11n USB WLAN Card,model,pending,https://jp.drvhub.net/devices/network/gigabyte/gn-wb30n-802-11n-usb-wlan-card,Gigabyte,GN-WB30N,Other,NetworkAdapter,https://man.openbsd.org/run.4
+Gigabyte,GN-WB31N 802.11n USB WLAN Card,model,pending,https://jp.drvhub.net/devices/network/gigabyte/gn-wb31n-802-11n-usb-wlan-card,Gigabyte,GN-WB31N,Other,NetworkAdapter,https://man.openbsd.org/run.4
+Gigabyte,GN-WB32L 802.11n USB WLAN Card,model,pending,https://jp.drvhub.net/devices/network/gigabyte/gn-wb32l-802-11n-usb-wlan-card,Gigabyte,GN-WB32L,Other,NetworkAdapter,https://man.openbsd.org/run.4
 Gigabyte,GN-WI01GS mini PCI WLAN Card,model,pending,https://jp.drvhub.net/devices/network/gigabyte/gn-wi01gs-mini-pci-wlan-card,Gigabyte,GN-WI01GS,Other,NetworkAdapter,https://download.gigabyte.com/FileList/EBrochure/comm_ebrochure_p5p6.pdf#page=1
 Gigabyte,GN-WI01GT (mini) PCI-E WLAN Card,model,pending,https://jp.drvhub.net/devices/network/gigabyte/gn-wi01gt-mini-pci-e-wlan-card,Gigabyte,GN-WI01GT,Other,NetworkAdapter,https://download.gigabyte.com/FileList/EBrochure/comm_ebrochure_p5p6.pdf#page=1
 Gigabyte,GN-WI01HT (mini) PCI WLAN Card,model,pending,https://jp.drvhub.net/devices/network/gigabyte/gn-wi01ht-mini-pci-wlan-card,Gigabyte,GN-WI01HT,Other,NetworkAdapter,https://download.gigabyte.com/FileList/EBrochure/comm_ebrochure_p5p6.pdf#page=1
@@ -22305,8 +22305,8 @@ Gigabyte,GN-WI05GS mini WLAN Card,model,pending,https://jp.drvhub.net/devices/ne
 Gigabyte,GN-WI06N (mini) PCI Express WLAN Card,model,pending,https://jp.drvhub.net/devices/network/gigabyte/gn-wi06n-mini-pci-express-wlan-card,Gigabyte,GN-WI06N,Other,NetworkAdapter,
 Gigabyte,GN-WI07HT (mini) PCI-E WLAN Card,model,pending,https://jp.drvhub.net/devices/network/gigabyte/gn-wi07ht-mini-pci-e-wlan-card,Gigabyte,GN-WI07HT,Other,NetworkAdapter,
 Gigabyte,GN-WI30N 802.11n mini PCI WLAN Card,model,pending,https://jp.drvhub.net/devices/network/gigabyte/gn-wi30n-802-11n-mini-pci-wlan-card,Gigabyte,GN-WI30N,Other,NetworkAdapter,
-Gigabyte,GN-WM01GM Cardbus MIMO WLAN Card,model,pending,https://jp.drvhub.net/devices/network/gigabyte/gn-wm01gm-cardbus-mimo-wlan-card,Gigabyte,GN-WM01GM,Other,NetworkAdapter,
-Gigabyte,GN-WM01GS Cardbus WLAN Card,model,pending,https://jp.drvhub.net/devices/network/gigabyte/gn-wm01gs-cardbus-wlan-card,Gigabyte,GN-WM01GS,Other,NetworkAdapter,
+Gigabyte,GN-WM01GM Cardbus MIMO WLAN Card,model,pending,https://jp.drvhub.net/devices/network/gigabyte/gn-wm01gm-cardbus-mimo-wlan-card,Gigabyte,GN-WM01GM,Other,NetworkAdapter,https://man.openbsd.org/ral.4
+Gigabyte,GN-WM01GS Cardbus WLAN Card,model,pending,https://jp.drvhub.net/devices/network/gigabyte/gn-wm01gs-cardbus-wlan-card,Gigabyte,GN-WM01GS,Other,NetworkAdapter,https://man.openbsd.org/ral.4
 Gigabyte,GN-WM01GT Cardbus WLAN Card,model,pending,https://jp.drvhub.net/devices/network/gigabyte/gn-wm01gt-cardbus-wlan-card,Gigabyte,GN-WM01GT,Other,NetworkAdapter,https://download.gigabyte.com/FileList/EBrochure/comm_ebrochure_p5p6.pdf#page=1
 Gigabyte,GN-WM02N Express WLAN Card,model,pending,https://jp.drvhub.net/devices/network/gigabyte/gn-wm02n-express-wlan-card,Gigabyte,GN-WM02N,Other,NetworkAdapter,
 Gigabyte,GN-WP01GM PCI MIMO WLAN Card,model,pending,https://jp.drvhub.net/devices/network/gigabyte/gn-wp01gm-pci-mimo-wlan-card,Gigabyte,GN-WP01GM,Other,NetworkAdapter,https://download.gigabyte.com/FileList/EBrochure/comm_ebrochure_p3p4.pdf#page=1
@@ -22361,8 +22361,8 @@ Linksys,WPC600N Wireless-N Notebook Adapter with Dual-Band,model,pending,https:/
 Linksys,WUSB100 RangePlus Wireless USB Adapter,model,pending,https://jp.drvhub.net/devices/network/linksys/wusb100-rangeplus-wireless-usb-adapter,Linksys,WUSB100,Other,NetworkAdapter,https://www.linksys.com/pages/linksys-product-end-of-life
 Linksys,WUSB100 v1 RangePlus Wireless USB Adapter,model,pending,https://jp.drvhub.net/devices/network/linksys/wusb100-v1-rangeplus-wireless-usb-adapter,Linksys,WUSB100,Other,NetworkAdapter,
 Linksys,WUSB100 v2 RangePlus Wireless USB Network Adapter,model,pending,https://jp.drvhub.net/devices/network/linksys/wusb100-v2-rangeplus-wireless-usb-network-adapter,Linksys,WUSB100,Other,NetworkAdapter,
-Linksys,WUSB200 w/RangeBooster Business Wireless-G USB Adapter,model,pending,https://jp.drvhub.net/devices/network/linksys/wusb200-w-rangebooster-business-wireless-g-usb-adapter,Linksys,WUSB200,Other,NetworkAdapter,
-Linksys,WUSB200 w/RangeBooster Business Wireless-G USB Network Adapter,model,pending,https://jp.drvhub.net/devices/network/linksys/wusb200-w-rangebooster-business-wireless-g-usb-network-adapter,Linksys,WUSB200,Other,NetworkAdapter,
+Linksys,WUSB200 w/RangeBooster Business Wireless-G USB Adapter,model,pending,https://jp.drvhub.net/devices/network/linksys/wusb200-w-rangebooster-business-wireless-g-usb-adapter,Linksys,WUSB200,Other,NetworkAdapter,https://man.openbsd.org/rum.4
+Linksys,WUSB200 w/RangeBooster Business Wireless-G USB Network Adapter,model,pending,https://jp.drvhub.net/devices/network/linksys/wusb200-w-rangebooster-business-wireless-g-usb-network-adapter,Linksys,WUSB200,Other,NetworkAdapter,https://man.openbsd.org/rum.4
 Linksys,Wireless-N USB Network Adapter WUSB300N,model,pending,https://jp.drvhub.net/devices/network/linksys/wireless-n-usb-network-adapter-wusb300n,Linksys,WUSB300N,Other,NetworkAdapter,https://www.linksys.com/pages/linksys-product-end-of-life
 Linksys,WUSB54G v4 Wireless-G USB Network Adapter,model,pending,https://jp.drvhub.net/devices/network/linksys/wusb54g-v4-wireless-g-usb-network-adapter,Linksys,WUSB54G,Other,NetworkAdapter,
 Linksys,WUSB54GC Compact Wireless-G USB Network Adapter,model,pending,https://jp.drvhub.net/devices/network/linksys/wusb54gc-compact-wireless-g-usb-network-adapter,Linksys,WUSB54GC,Other,NetworkAdapter,https://www.linksys.com/pages/linksys-product-end-of-life
@@ -22387,11 +22387,11 @@ Sitecom,Gigabit-Ethernet PCI Adapter LN-027,model,pending,https://jp.drvhub.net/
 Sitecom,USB2.0-to-Fast Ethernet Adapter LN-030,model,pending,https://jp.drvhub.net/devices/network/sitecom/usb2-0-to-fast-ethernet-adapter-ln-030,Sitecom,LN-030,Other,NetworkAdapter,
 Sitecom,Wireless Network Cardbus Card 54Mbps WL-100i,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-network-cardbus-card-54mbps-wl-100i,Sitecom,WL-100I,Other,NetworkAdapter,
 Sitecom,Wireless Network PCI Card 54Mbps WL-110i,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-network-pci-card-54mbps-wl-110i,Sitecom,WL-110I,Other,NetworkAdapter,
-Sitecom,Wireless Network PC Card 54G WL-112,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-network-pc-card-54g-wl-112,Sitecom,WL-112,Other,NetworkAdapter,
+Sitecom,Wireless Network PC Card 54G WL-112,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-network-pc-card-54g-wl-112,Sitecom,WL-112,Other,NetworkAdapter,https://man.openbsd.org/ral.4
 Sitecom,Wireless Network PC Card 54G WL-112v2,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-network-pc-card-54g-wl-112v2,Sitecom,WL-112,Other,NetworkAdapter,
 Sitecom,Wireless Network USB Adapter 54G WL-113_002,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-network-usb-adapter-54g-wl-113-002,Sitecom,WL-113,Other,NetworkAdapter,
 Sitecom,Wireless Network USB adapter 54g WL-113v1.002,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-network-usb-adapter-54g-wl-113v1-002,Sitecom,WL-113,Other,NetworkAdapter,
-Sitecom,Wireless Network PCI Adapter 54G WL-115,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-network-pci-adapter-54g-wl-115,Sitecom,WL-115,Other,NetworkAdapter,
+Sitecom,Wireless Network PCI Adapter 54G WL-115,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-network-pci-adapter-54g-wl-115,Sitecom,WL-115,Other,NetworkAdapter,https://man.openbsd.org/ral.4
 Sitecom,Wireless Network PCI Adapter 54G WL-115v2,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-network-pci-adapter-54g-wl-115v2,Sitecom,WL-115,Other,NetworkAdapter,
 Sitecom,Wireless Network Cardbus Card 54Mbps WL-120v2,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-network-cardbus-card-54mbps-wl-120v2,Sitecom,WL-120,Other,NetworkAdapter,
 Sitecom,Wireless Network PCI Card 54Mbps WL-121v2,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-network-pci-card-54mbps-wl-121v2,Sitecom,WL-121,Other,NetworkAdapter,
@@ -22401,16 +22401,16 @@ Sitecom,WL-168 Wireless Network USB Adapter 54g,model,pending,https://jp.drvhub.
 Sitecom,Wireless Network PC Card turbo g WL-170,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-network-pc-card-turbo-g-wl-170,Sitecom,WL-170,Other,NetworkAdapter,
 Sitecom,Wireless Network PCI Adapter turbo g WL-171,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-network-pci-adapter-turbo-g-wl-171,Sitecom,WL-171,Other,NetworkAdapter,
 Sitecom,Wireless Network PCI Card turbo g WL-171,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-network-pci-card-turbo-g-wl-171,Sitecom,WL-171,Other,NetworkAdapter,
-Sitecom,Wireless Network USB adapter Turbo g WL-172,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-network-usb-adapter-turbo-g-wl-172,Sitecom,WL-172,Other,NetworkAdapter,
+Sitecom,Wireless Network USB adapter Turbo g WL-172,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-network-usb-adapter-turbo-g-wl-172,Sitecom,WL-172,Other,NetworkAdapter,https://man.openbsd.org/rum.4
 Sitecom,Wireless Network USB Adapter 54G Turbo WL-177,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-network-usb-adapter-54g-turbo-wl-177,Sitecom,WL-177,Other,NetworkAdapter,
 Sitecom,Wireless-N Network PC Card WL-180,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-n-network-pc-card-wl-180,Sitecom,WL-180,Other,NetworkAdapter,
 Sitecom,Wireless-N Network PCI Card WL-181,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-n-network-pci-card-wl-181,Sitecom,WL-181,Other,NetworkAdapter,
-Sitecom,Wireless-N Network USB Card WL-182,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-n-network-usb-card-wl-182,Sitecom,WL-182,Other,NetworkAdapter,
-Sitecom,Wireless Network 300N USB Adapter WL-188,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-network-300n-usb-adapter-wl-188,Sitecom,WL-188,Other,NetworkAdapter,
+Sitecom,Wireless-N Network USB Card WL-182,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-n-network-usb-card-wl-182,Sitecom,WL-182,Other,NetworkAdapter,https://man.openbsd.org/run.4
+Sitecom,Wireless Network 300N USB Adapter WL-188,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-network-300n-usb-adapter-wl-188,Sitecom,WL-188,Other,NetworkAdapter,https://man.openbsd.org/run.4
 Sitecom,Wireless Network 54G-Turbo WPS Cardbus adapter WL-210,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-network-54g-turbo-wps-cardbus-adapter-wl-210,Sitecom,WL-210,Other,NetworkAdapter,
 Sitecom,Wireless Network 54G-Turbo WPS PCI adapter WL-211,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-network-54g-turbo-wps-pci-adapter-wl-211,Sitecom,WL-211,Other,NetworkAdapter,
 Sitecom,Wireless Network 54G-Turbo WPS USB adapter WL-212,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-network-54g-turbo-wps-usb-adapter-wl-212,Sitecom,WL-212,Other,NetworkAdapter,
-Sitecom,Wireless-N USB Adapter WL-315,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-n-usb-adapter-wl-315,Sitecom,WL-315,Other,NetworkAdapter,
+Sitecom,Wireless-N USB Adapter WL-315,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-n-usb-adapter-wl-315,Sitecom,WL-315,Other,NetworkAdapter,https://man.openbsd.org/run.4
 Sitecom,Wireless-N Cardbus Adapter WL-319,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-n-cardbus-adapter-wl-319,Sitecom,WL-319,Other,NetworkAdapter,
 Sitecom,300N Wireless PCI Adapter WL-320,model,pending,https://jp.drvhub.net/devices/network/sitecom/300n-wireless-pci-adapter-wl-320,Sitecom,WL-320,Other,NetworkAdapter,
 Sitecom,Wireless-N PCI Adapter WL-320,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-n-pci-adapter-wl-320-1,Sitecom,WL-320,Other,NetworkAdapter,
@@ -22431,13 +22431,13 @@ Sitecom,300N Wireless USB Adapter WL-352v1 002,model,pending,https://jp.drvhub.n
 Sitecom,300N Wireless USB Adapter WL-352v2,model,pending,https://jp.drvhub.net/devices/network/sitecom/300n-wireless-usb-adapter-wl-352v2,Sitecom,WL-352,Other,NetworkAdapter,
 Sitecom,300N Wireless USB Adapter WL-352v2 001,model,pending,https://jp.drvhub.net/devices/network/sitecom/300n-wireless-usb-adapter-wl-352v2-001,Sitecom,WL-352,Other,NetworkAdapter,
 Sitecom,300N Wireless USB Adapter WL-352v3,model,pending,https://jp.drvhub.net/devices/network/sitecom/300n-wireless-usb-adapter-wl-352v3,Sitecom,WL-352,Other,NetworkAdapter,
-Sitecom,Wireless Nano USB Adapter 150N WL-353,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-nano-usb-adapter-150n-wl-353,Sitecom,WL-353,Other,NetworkAdapter,
+Sitecom,Wireless Nano USB Adapter 150N WL-353,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-nano-usb-adapter-150n-wl-353,Sitecom,WL-353,Other,NetworkAdapter,https://man.openbsd.org/rsu.4
 Sitecom,Wireless High-Gain USB Adapter 300N X2 WL-356,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-high-gain-usb-adapter-300n-x2-wl-356,Sitecom,WL-356,Other,NetworkAdapter,
 Sitecom,Wireless Micro USB Adapter 300N X3 WL-358v1 002,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-micro-usb-adapter-300n-x3-wl-358v1-002,Sitecom,WL-358,Other,NetworkAdapter,
 Sitecom,Wireless Micro USB Adapter X3 WL-360,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-micro-usb-adapter-x3-wl-360,Sitecom,WL-360,Other,NetworkAdapter,
 Sitecom,Wireless Micro USB Adapter 300N X3 WL-364,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-micro-usb-adapter-300n-x3-wl-364,Sitecom,WL-364,Other,NetworkAdapter,
-Sitecom,Wireless Ultra Nano USB Adapter 150N X1 WL-365,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-ultra-nano-usb-adapter-150n-x1-wl-365,Sitecom,WL-365,Other,NetworkAdapter,
-Sitecom,Wireless Network USB Adapter 54g WL-603,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-network-usb-adapter-54g-wl-603,Sitecom,WL-603,Other,NetworkAdapter,
+Sitecom,Wireless Ultra Nano USB Adapter 150N X1 WL-365,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-ultra-nano-usb-adapter-150n-x1-wl-365,Sitecom,WL-365,Other,NetworkAdapter,https://man.openbsd.org/urtwn.4
+Sitecom,Wireless Network USB Adapter 54g WL-603,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-network-usb-adapter-54g-wl-603,Sitecom,WL-603,Other,NetworkAdapter,https://man.openbsd.org/zyd.4
 Sitecom,Wireless Network Micro USB Adapter 54g WL-608v3_001,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-network-micro-usb-adapter-54g-wl-608v3-001,Sitecom,WL-608,Other,NetworkAdapter,
 Sitecom,Wireless Network USB Adapter 54g WL-608v2 001,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-network-usb-adapter-54g-wl-608v2-001,Sitecom,WL-608,Other,NetworkAdapter,
 Sitecom,Wireless Dualband Network Adapter 300N X5 WLA-5000 v2 001,model,pending,https://jp.drvhub.net/devices/network/sitecom/wireless-dualband-network-adapter-300n-x5-wla-5000-v2-001,Sitecom,WLA-5000,Other,NetworkAdapter,
@@ -22457,17 +22457,17 @@ TRENDnet,TEW-648UBM Micro N150 Wireless USB Adapter,model,pending,https://jp.drv
 TRENDnet,TEW-807ECH AC1200 Dual Band Wireless PCIE Adapter,model,pending,https://jp.drvhub.net/devices/network/trendnet/tew-807ech-ac1200-dual-band-wireless-pcie-adapter,TRENDnet,TEW-807ECH,Other,NetworkAdapter,https://www.trendnet.com/support/discontinued-products.asp?Submit=Search&todo=search
 TRENDnet,TEW-808UBM AC1200 Nano USB Adapter,model,pending,https://jp.drvhub.net/devices/network/trendnet/tew-808ubm-ac1200-nano-usb-adapter,TRENDnet,TEW-808UBM,Other,NetworkAdapter,https://www.trendnet.com/support/discontinued-products.asp?Submit=Search&todo=search
 TRENDnet,TEW-809UB AC1900 Wireless USB Adapter,model,pending,https://jp.drvhub.net/devices/network/trendnet/tew-809ub-ac1900-wireless-usb-adapter,TRENDnet,TEW-809UB,Other,NetworkAdapter,https://www.trendnet.com/products/wireless/AC1900-High-Power-Dual-Band-Wireless-USB-Adapter-TEW-809UB
-ZyXEL,AG-220 Wireless USB Adapter,model,pending,https://jp.drvhub.net/devices/network/zyxel/ag-220-wireless-usb-adapter,ZyXEL,AG-220,Other,NetworkAdapter,
+ZyXEL,AG-220 Wireless USB Adapter,model,pending,https://jp.drvhub.net/devices/network/zyxel/ag-220-wireless-usb-adapter,ZyXEL,AG-220,Other,NetworkAdapter,https://static.us.zyxel.com/pdf/2019/04/zyxel_EOL_list_04_2019.pdf#page=6
 ZyXEL,AG-225H 802.11a/b/g Wi-Fi Finder & USB Adapter,model,pending,https://jp.drvhub.net/devices/network/zyxel/ag-225h-802-11a-b-g-wi-fi-finder-usb-adapter,ZyXEL,AG-225H,Other,NetworkAdapter,
 ZyXEL,AG-225H 802.11a/g Wi-Fi Finder & USB Adapter,model,pending,https://jp.drvhub.net/devices/network/zyxel/ag-225h-802-11a-g-wi-fi-finder-usb-adapter,ZyXEL,AG-225H,Other,NetworkAdapter,
 ZyXEL,AG-225H v2 802.11a/g Wi-Fi Finder & USB Adapter,model,pending,https://jp.drvhub.net/devices/network/zyxel/ag-225h-v2-802-11a-g-wi-fi-finder-usb-adapter,ZyXEL,AG-225H,Other,NetworkAdapter,
 ZyXEL,AG-320 IEEE 802.11a+g Wireless PCI Adapter,model,pending,https://jp.drvhub.net/devices/network/zyxel/ag-320-ieee-802-11a-g-wireless-pci-adapter,ZyXEL,AG-320,Other,NetworkAdapter,
-ZyXEL,G-120 IEEE 802.11g Wireless CardBus Adapter,model,pending,https://jp.drvhub.net/devices/network/zyxel/g-120-ieee-802-11g-wireless-cardbus-adapter,ZyXEL,G-120,Other,NetworkAdapter,
+ZyXEL,G-120 IEEE 802.11g Wireless CardBus Adapter,model,pending,https://jp.drvhub.net/devices/network/zyxel/g-120-ieee-802-11g-wireless-cardbus-adapter,ZyXEL,G-120,Other,NetworkAdapter,https://static.us.zyxel.com/pdf/2019/04/zyxel_EOL_list_04_2019.pdf#page=8
 ZyXEL,G-162 802.11g Wireless CardBus Card,model,pending,https://jp.drvhub.net/devices/network/zyxel/g-162-802-11g-wireless-cardbus-card,ZyXEL,G-162,Other,NetworkAdapter,
 ZyXEL,G-200v2 802.11b/g Wireless USB Adapter,model,pending,https://jp.drvhub.net/devices/network/zyxel/g-200v2-802-11b-g-wireless-usb-adapter,ZyXEL,G-200,Other,NetworkAdapter,
-ZyXEL,G-202 Wireless USB Adapter,model,pending,https://jp.drvhub.net/devices/network/zyxel/g-202-wireless-usb-adapter,ZyXEL,G-202,Other,NetworkAdapter,
+ZyXEL,G-202 Wireless USB Adapter,model,pending,https://jp.drvhub.net/devices/network/zyxel/g-202-wireless-usb-adapter,ZyXEL,G-202,Other,NetworkAdapter,https://static.us.zyxel.com/pdf/2019/04/zyxel_EOL_list_04_2019.pdf#page=7
 ZyXEL,G-220 v2 Wireless USB Adapter,model,pending,https://jp.drvhub.net/devices/network/zyxel/g-220-v2-wireless-usb-adapter,ZyXEL,G-220,Other,NetworkAdapter,
-ZyXEL,G-220 Wireless USB Adapter,model,pending,https://jp.drvhub.net/devices/network/zyxel/g-220-wireless-usb-adapter,ZyXEL,G-220,Other,NetworkAdapter,
+ZyXEL,G-220 Wireless USB Adapter,model,pending,https://jp.drvhub.net/devices/network/zyxel/g-220-wireless-usb-adapter,ZyXEL,G-220,Other,NetworkAdapter,https://man.openbsd.org/zyd.4
 ZyXEL,G-220v3 Wireless USB Adapter,model,pending,https://jp.drvhub.net/devices/network/zyxel/g-220v3-wireless-usb-adapter,ZyXEL,G-220,Other,NetworkAdapter,
 ZyXEL,G-220F 802.11g Wireless USB Adapter,model,pending,https://jp.drvhub.net/devices/network/zyxel/g-220f-802-11g-wireless-usb-adapter,ZyXEL,G-220F,Other,NetworkAdapter,
 ZyXEL,G-260 802.11g Wireless USB Adapter,model,pending,https://jp.drvhub.net/devices/network/zyxel/g-260-802-11g-wireless-usb-adapter,ZyXEL,G-260,Other,NetworkAdapter,
