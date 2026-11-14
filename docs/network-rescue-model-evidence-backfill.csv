@@ -1,0 +1,792 @@
+﻿brand,originalModel,DriverHub,evidence,rule,sheet,row
+Fujitsu,LIFEBOOK AH531,https://jp.drvhub.net/laptops/fujitsu/lifebook-ah531,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3071
+Fujitsu,LIFEBOOK AH530,https://jp.drvhub.net/laptops/fujitsu/lifebook-ah530,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3236
+Fujitsu,LIFEBOOK E754,https://jp.drvhub.net/laptops/fujitsu/lifebook-e754,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3134
+Fujitsu,LIFEBOOK E756,https://jp.drvhub.net/laptops/fujitsu/lifebook-e756,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,2149
+Acer,Aspire 3935,https://jp.drvhub.net/laptops/acer/aspire-3935,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,58
+Acer,Aspire 4732Z,https://jp.drvhub.net/laptops/acer/aspire-4732z,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,74
+Acer,Aspire 4937,https://jp.drvhub.net/laptops/acer/aspire-4937,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,43
+Acer,Aspire 5739,https://jp.drvhub.net/laptops/acer/aspire-5739,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,34
+Acer,Aspire A14-51GM,https://jp.drvhub.net/laptops/acer/aspire-a14-51gm,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,770
+Acer,Aspire A14-52M,https://jp.drvhub.net/laptops/acer/aspire-a14-52m,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,269
+Acer,Aspire A15-51P,https://jp.drvhub.net/laptops/acer/aspire-a15-51p,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,937
+Acer,Aspire A314-23P,https://jp.drvhub.net/laptops/acer/aspire-a314-23p,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1437
+Acer,Aspire A314-31,https://jp.drvhub.net/laptops/acer/aspire-a314-31,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,1299
+Acer,Aspire A314-42P,https://jp.drvhub.net/laptops/acer/aspire-a314-42p,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,963
+Acer,Aspire A315-21,https://jp.drvhub.net/laptops/acer/aspire-a315-21,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,1293
+Acer,Aspire A317-55P,https://jp.drvhub.net/laptops/acer/aspire-a317-55p,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1353
+Acer,Aspire A514-55G,https://jp.drvhub.net/laptops/acer/aspire-a514-55g,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1651
+Acer,Aspire A514-56M,https://jp.drvhub.net/laptops/acer/aspire-a514-56m,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1176
+Acer,Aspire A515-51,https://jp.drvhub.net/laptops/acer/aspire-a515-51,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,314
+Acer,Aspire A515-58GM,https://jp.drvhub.net/laptops/acer/aspire-a515-58gm,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1114
+Acer,Aspire A517-51,https://jp.drvhub.net/laptops/acer/aspire-a517-51,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,316
+Acer,Aspire A517-58GM,https://jp.drvhub.net/laptops/acer/aspire-a517-58gm,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1121
+Acer,Aspire A715-51G,https://jp.drvhub.net/laptops/acer/aspire-a715-51g,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1596
+Acer,Aspire A715-76,https://jp.drvhub.net/laptops/acer/aspire-a715-76,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1150
+Acer,Aspire E1-472,https://jp.drvhub.net/laptops/acer/aspire-e1-472,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,890
+Acer,Aspire E1-522,https://jp.drvhub.net/laptops/acer/aspire-e1-522,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,2832
+Acer,Aspire E1-571G,https://jp.drvhub.net/laptops/acer/aspire-e1-571g,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,569
+Acer,Aspire M3-581PTG,https://jp.drvhub.net/laptops/acer/aspire-m3-581ptg,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,568
+Acer,Aspire M3-581T,https://jp.drvhub.net/laptops/acer/aspire-m3-581t,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,528
+Acer,Aspire S3-392,https://jp.drvhub.net/laptops/acer/aspire-s3-392,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,879
+Acer,Aspire S7-391,https://jp.drvhub.net/laptops/acer/aspire-s7-391,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,889
+Acer,Extensa 2509,https://jp.drvhub.net/laptops/acer/extensa-2509,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,6858
+Acer,Extensa 2540,https://jp.drvhub.net/laptops/acer/extensa-2540,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,42
+Acer,Extensa 7630,https://jp.drvhub.net/laptops/acer/extensa-7630,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,162
+Acer,Spin SP111-31,https://jp.drvhub.net/laptops/acer/spin-sp111-31,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,1537
+Acer,Spin SP113-31,https://jp.drvhub.net/laptops/acer/spin-sp113-31,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,1555
+Acer,Spin SP315-51,https://jp.drvhub.net/laptops/acer/spin-sp315-51,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,1648
+Acer,Spin SP513-51,https://jp.drvhub.net/laptops/acer/spin-sp513-51,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,1651
+Acer,Spin SP513-52N,https://jp.drvhub.net/laptops/acer/spin-sp513-52n,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,1150
+Acer,Spin SP513-52NP,https://jp.drvhub.net/laptops/acer/spin-sp513-52np,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,879
+Acer,Spin SP714-51,https://jp.drvhub.net/laptops/acer/spin-sp714-51,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,1598
+Acer,Swift 3 SF314-54,https://jp.drvhub.net/laptops/acer/swift-3-sf314-54,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,544
+Acer,Swift SF113-31,https://jp.drvhub.net/laptops/acer/swift-sf113-31,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,63
+Acer,Swift SF114-31,https://jp.drvhub.net/laptops/acer/swift-sf114-31,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,1586
+Acer,Swift SF14-11,https://jp.drvhub.net/laptops/acer/swift-sf14-11,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,544
+Acer,Swift SF16-51,https://jp.drvhub.net/laptops/acer/swift-sf16-51,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,406
+Acer,Swift SF314-44,https://jp.drvhub.net/laptops/acer/swift-sf314-44,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1623
+Acer,Swift SF314-512,https://jp.drvhub.net/laptops/acer/swift-sf314-512,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1724
+Acer,Swift SF314-52,https://jp.drvhub.net/laptops/acer/swift-sf314-52,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,1280
+Acer,Swift SF314-54,https://jp.drvhub.net/laptops/acer/swift-sf314-54,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,544
+Acer,Swift SF314-55G,https://jp.drvhub.net/laptops/acer/swift-sf314-55g,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,546
+Acer,Swift SF314-71,https://jp.drvhub.net/laptops/acer/swift-sf314-71,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1561
+Acer,Swift SF315-41,https://jp.drvhub.net/laptops/acer/swift-sf315-41,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,61
+Acer,Swift SF315-41G,https://jp.drvhub.net/laptops/acer/swift-sf315-41g,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,60
+Acer,Swift SF315-51G,https://jp.drvhub.net/laptops/acer/swift-sf315-51g,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,1206
+Acer,Swift SF315-52,https://jp.drvhub.net/laptops/acer/swift-sf315-52,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,511
+Acer,Swift SF315-52G,https://jp.drvhub.net/laptops/acer/swift-sf315-52g,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,806
+Acer,Swift SF514-51,https://jp.drvhub.net/laptops/acer/swift-sf514-51,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,1628
+Acer,Swift SF514-52T,https://jp.drvhub.net/laptops/acer/swift-sf514-52t,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,1037
+Acer,Swift SF514-52TP,https://jp.drvhub.net/laptops/acer/swift-sf514-52tp,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,880
+Acer,Swift SF514-56T,https://jp.drvhub.net/laptops/acer/swift-sf514-56t,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1722
+Acer,Swift SF713-51,https://jp.drvhub.net/laptops/acer/swift-sf713-51,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,1604
+Acer,Swift SFG14-42,https://jp.drvhub.net/laptops/acer/swift-sfg14-42,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1208
+Acer,Swift SFG14-64,https://jp.drvhub.net/laptops/acer/swift-sfg14-64,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,50
+Acer,Swift SFG14-71,https://jp.drvhub.net/laptops/acer/swift-sfg14-71,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1253
+Acer,Swift SFG14-73,https://jp.drvhub.net/laptops/acer/swift-sfg14-73,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,708
+Acer,Swift SFG16-61,https://jp.drvhub.net/laptops/acer/swift-sfg16-61,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,113
+Acer,Swift SFG16-71,https://jp.drvhub.net/laptops/acer/swift-sfg16-71,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1192
+Acer,Swift SFG16-72,https://jp.drvhub.net/laptops/acer/swift-sfg16-72,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,696
+Acer,TravelMate 5730,https://jp.drvhub.net/laptops/acer/travelmate-5730,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,11
+Acer,TravelMate 6593,https://jp.drvhub.net/laptops/acer/travelmate-6593,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,8
+Acer,TravelMate 8331,https://jp.drvhub.net/laptops/acer/travelmate-8331,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,91
+Acer,TravelMate 8371,https://jp.drvhub.net/laptops/acer/travelmate-8371,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,92
+Acer,TravelMate B117-M,https://jp.drvhub.net/laptops/acer/travelmate-b117-m,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,1924
+Acer,TravelMate B117-MP,https://jp.drvhub.net/laptops/acer/travelmate-b117-mp,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1917
+Acer,TravelMate P243,https://jp.drvhub.net/laptops/acer/travelmate-p243,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,2769
+Acer,TravelMate P645,https://jp.drvhub.net/laptops/acer/travelmate-p645,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,2522
+Acer,TravelMate P648,https://jp.drvhub.net/laptops/acer/travelmate-p648,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,2061
+Acer,TravelMate X349-M,https://jp.drvhub.net/laptops/acer/travelmate-x349-m,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,1560
+ASUS,1000HD,https://jp.drvhub.net/laptops/asus/1000hd,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1112
+ASUS,1001HA,https://jp.drvhub.net/laptops/asus/1001ha,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1135
+ASUS,1001HAG,https://jp.drvhub.net/laptops/asus/1001hag,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1164
+ASUS,1001P,https://jp.drvhub.net/laptops/asus/1001p,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1187
+ASUS,1001PQ,https://jp.drvhub.net/laptops/asus/1001pq,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1290
+ASUS,1001PXD,https://jp.drvhub.net/laptops/asus/1001pxd,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1331
+ASUS,1002HA,https://jp.drvhub.net/laptops/asus/1002ha,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1123
+ASUS,1003HAG,https://jp.drvhub.net/laptops/asus/1003hag,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1102
+ASUS,1005HAG,https://jp.drvhub.net/laptops/asus/1005hag,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1120
+ASUS,1005PE,https://jp.drvhub.net/laptops/asus/1005pe,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1186
+ASUS,1005PXD,https://jp.drvhub.net/laptops/asus/1005pxd,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1358
+ASUS,1008HA,https://jp.drvhub.net/laptops/asus/1008ha,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1100
+ASUS,1011PX,https://jp.drvhub.net/laptops/asus/1011px,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1368
+ASUS,1015E,https://jp.drvhub.net/laptops/asus/1015e,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1394
+ASUS,1015P,https://jp.drvhub.net/laptops/asus/1015p,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1269
+ASUS,1015PE,https://jp.drvhub.net/laptops/asus/1015pe,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1270
+ASUS,1015PEG,https://jp.drvhub.net/laptops/asus/1015peg,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1268
+ASUS,1015PEM,https://jp.drvhub.net/laptops/asus/1015pem,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1311
+ASUS,1015PN,https://jp.drvhub.net/laptops/asus/1015pn,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1307
+ASUS,1015PX,https://jp.drvhub.net/laptops/asus/1015px,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1367
+ASUS,1015T,https://jp.drvhub.net/laptops/asus/1015t,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1337
+ASUS,1016P,https://jp.drvhub.net/laptops/asus/1016p,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1281
+ASUS,1016PT,https://jp.drvhub.net/laptops/asus/1016pt,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1390
+ASUS,1018P,https://jp.drvhub.net/laptops/asus/1018p,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1252
+ASUS,S101H,https://jp.drvhub.net/laptops/asus/s101h,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1122
+ASUS,S551LA,https://jp.drvhub.net/laptops/asus/s551la,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1731
+ASUS,S551LB,https://jp.drvhub.net/laptops/asus/s551lb,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1737
+ASUS,X200CA,https://jp.drvhub.net/laptops/asus/x200ca,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1728
+ASUS,X202E,https://jp.drvhub.net/laptops/asus/x202e,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1404
+ASUS,X301A,https://jp.drvhub.net/laptops/asus/x301a,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1406
+ASUS,X550LA,https://jp.drvhub.net/laptops/asus/x550la,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1743
+ASUS,X550LC,https://jp.drvhub.net/laptops/asus/x550lc,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1775
+ASUS,X750JA,https://jp.drvhub.net/laptops/asus/x750ja,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1716
+ASUS,X750JB,https://jp.drvhub.net/laptops/asus/x750jb,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1711
+ASUS,ZenBook UX534FTC FX504GM,https://jp.drvhub.net/laptops/asus/zenbook-ux534ftc-fx504gm,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,760
+Dell,Inspiron 3135,https://jp.drvhub.net/laptops/dell/inspiron-3135,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,2955
+Dell,Inspiron 3137,https://jp.drvhub.net/laptops/dell/inspiron-3137,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,2956
+Dell,Inspiron 3138,https://jp.drvhub.net/laptops/dell/inspiron-3138,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,2957
+Dell,Inspiron 5301,https://jp.drvhub.net/laptops/dell/inspiron-5301,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,2164
+Dell,Inspiron 5370,https://jp.drvhub.net/laptops/dell/inspiron-5370,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,1084
+Dell,Inspiron 5402,https://jp.drvhub.net/laptops/dell/inspiron-5402,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,2161
+Dell,Inspiron 5480,https://jp.drvhub.net/laptops/dell/inspiron-5480,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,540
+Dell,Inspiron 5485,https://jp.drvhub.net/laptops/dell/inspiron-5485,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,2304
+Dell,Inspiron 5505,https://jp.drvhub.net/laptops/dell/inspiron-5505,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,2318
+Dell,Inspiron 5585,https://jp.drvhub.net/laptops/dell/inspiron-5585,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,2303
+Dell,Inspiron 7380,https://jp.drvhub.net/laptops/dell/inspiron-7380,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,527
+Dell,Inspiron 7400,https://jp.drvhub.net/laptops/dell/inspiron-7400,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,2160
+Dell,Inspiron 7580,https://jp.drvhub.net/laptops/dell/inspiron-7580,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,528
+Dell,Latitude 2120,https://jp.drvhub.net/laptops/dell/latitude-2120,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,2622
+Dell,Latitude 3140,https://jp.drvhub.net/laptops/dell/latitude-3140,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1412
+Dell,Latitude 3180,https://jp.drvhub.net/laptops/dell/latitude-3180,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,687
+Dell,Latitude 3340,https://jp.drvhub.net/laptops/dell/latitude-3340,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1266
+Dell,Latitude 3380,https://jp.drvhub.net/laptops/dell/latitude-3380,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,221
+Dell,Latitude 3440,https://jp.drvhub.net/laptops/dell/latitude-3440,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1225
+Dell,Latitude 3450,https://jp.drvhub.net/laptops/dell/latitude-3450,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,739
+Dell,Latitude 3480,https://jp.drvhub.net/laptops/dell/latitude-3480,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,1452
+Dell,Latitude 3540,https://jp.drvhub.net/laptops/dell/latitude-3540,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1243
+Dell,Latitude 3550,https://jp.drvhub.net/laptops/dell/latitude-3550,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,746
+Dell,Latitude 3580,https://jp.drvhub.net/laptops/dell/latitude-3580,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,1444
+Dell,Latitude 5280,https://jp.drvhub.net/laptops/dell/latitude-5280,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,439
+Dell,Latitude 5289,https://jp.drvhub.net/laptops/dell/latitude-5289,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,1419
+Dell,Latitude 5340,https://jp.drvhub.net/laptops/dell/latitude-5340,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1265
+Dell,Latitude 5350,https://jp.drvhub.net/laptops/dell/latitude-5350,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,750
+Dell,Latitude 5450,https://jp.drvhub.net/laptops/dell/latitude-5450,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,754
+Dell,Latitude 5480,https://jp.drvhub.net/laptops/dell/latitude-5480,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,438
+Dell,Latitude 5540,https://jp.drvhub.net/laptops/dell/latitude-5540,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1241
+Dell,Latitude 5580,https://jp.drvhub.net/laptops/dell/latitude-5580,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,446
+Dell,Latitude 5591,https://jp.drvhub.net/laptops/dell/latitude-5591,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,434
+Dell,Latitude 7280,https://jp.drvhub.net/laptops/dell/latitude-7280,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,447
+Dell,Latitude 7330 Rugged Extreme,https://jp.drvhub.net/laptops/dell/latitude-7330-rugged-extreme,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1805
+Dell,Latitude 7340,https://jp.drvhub.net/laptops/dell/latitude-7340,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1264
+Dell,Latitude 7350,https://jp.drvhub.net/laptops/dell/latitude-7350,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,776
+Dell,Latitude 7350 Detachable,https://jp.drvhub.net/laptops/dell/latitude-7350-detachable,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,721
+Dell,Latitude 7380,https://jp.drvhub.net/laptops/dell/latitude-7380,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,442
+Dell,Latitude 7424 Rugged Extreme,https://jp.drvhub.net/laptops/dell/latitude-7424-rugged-extreme,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,484
+Dell,Latitude 7450,https://jp.drvhub.net/laptops/dell/latitude-7450,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,756
+Dell,Latitude 7455,https://jp.drvhub.net/laptops/dell/latitude-7455,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,567
+Dell,Latitude 7480,https://jp.drvhub.net/laptops/dell/latitude-7480,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,445
+Dell,Latitude 7530,https://jp.drvhub.net/laptops/dell/latitude-7530,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1796
+Dell,Latitude 7650,https://jp.drvhub.net/laptops/dell/latitude-7650,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,752
+Dell,Latitude E4200,https://jp.drvhub.net/laptops/dell/latitude-e4200,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,2580
+Dell,Latitude E5410,https://jp.drvhub.net/laptops/dell/latitude-e5410,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,2611
+Dell,Latitude E5420,https://jp.drvhub.net/laptops/dell/latitude-e5420,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,2624
+Dell,Latitude E5420m,https://jp.drvhub.net/laptops/dell/latitude-e5420m,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,2638
+Dell,Latitude E5450,https://jp.drvhub.net/laptops/dell/latitude-e5450,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,2633
+Dell,Latitude E5510,https://jp.drvhub.net/laptops/dell/latitude-e5510,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,2612
+Dell,Latitude E5520,https://jp.drvhub.net/laptops/dell/latitude-e5520,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,2625
+Dell,Latitude E5520m,https://jp.drvhub.net/laptops/dell/latitude-e5520m,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,2639
+Dell,Latitude E6220,https://jp.drvhub.net/laptops/dell/latitude-e6220,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,2648
+Dell,Latitude E6320,https://jp.drvhub.net/laptops/dell/latitude-e6320,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,2627
+Dell,Latitude E6420,https://jp.drvhub.net/laptops/dell/latitude-e6420,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,2629
+Dell,Latitude E6540,https://jp.drvhub.net/laptops/dell/latitude-e6540,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,2711
+Dell,Vostro 14 3430,https://jp.drvhub.net/laptops/dell/vostro-14-3430,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1226
+Dell,Vostro 14 3435,https://jp.drvhub.net/laptops/dell/vostro-14-3435,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1261
+Dell,Vostro 14-3468,https://jp.drvhub.net/laptops/dell/vostro-14-3468,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,227
+Dell,Vostro 1440,https://jp.drvhub.net/laptops/dell/vostro-1440,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,2670
+Dell,Vostro 1450,https://jp.drvhub.net/laptops/dell/vostro-1450,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,2671
+Dell,Vostro 15 3510,https://jp.drvhub.net/laptops/dell/vostro-15-3510,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1918
+Dell,Vostro 15 3535,https://jp.drvhub.net/laptops/dell/vostro-15-3535,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1262
+Dell,Vostro 15-3562,https://jp.drvhub.net/laptops/dell/vostro-15-3562,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,304
+Dell,Vostro 15-3568,https://jp.drvhub.net/laptops/dell/vostro-15-3568,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,228
+Dell,Vostro 15-3572,https://jp.drvhub.net/laptops/dell/vostro-15-3572,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,306
+Dell,Vostro 1550,https://jp.drvhub.net/laptops/dell/vostro-1550,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,2672
+Dell,Vostro 2421,https://jp.drvhub.net/laptops/dell/vostro-2421,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,2977
+Dell,Vostro 3350,https://jp.drvhub.net/laptops/dell/vostro-3350,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,2640
+Dell,Vostro 3401,https://jp.drvhub.net/laptops/dell/vostro-3401,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,2249
+Dell,Vostro 3405,https://jp.drvhub.net/laptops/dell/vostro-3405,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,2246
+Dell,Vostro 3425,https://jp.drvhub.net/laptops/dell/vostro-3425,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1755
+Dell,Vostro 3480,https://jp.drvhub.net/laptops/dell/vostro-3480,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,2430
+Dell,Vostro 3490,https://jp.drvhub.net/laptops/dell/vostro-3490,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,2461
+Dell,Vostro 3500,https://jp.drvhub.net/laptops/dell/vostro-3500,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,2106
+Dell,Vostro 3501,https://jp.drvhub.net/laptops/dell/vostro-3501,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,2248
+Dell,Vostro 3550,https://jp.drvhub.net/laptops/dell/vostro-3550,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,2641
+Dell,Vostro 3555,https://jp.drvhub.net/laptops/dell/vostro-3555,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,2673
+Dell,Vostro 3590,https://jp.drvhub.net/laptops/dell/vostro-3590,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,2460
+Dell,Vostro 5370,https://jp.drvhub.net/laptops/dell/vostro-5370,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,479
+Dell,Vostro 5460,https://jp.drvhub.net/laptops/dell/vostro-5460,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,2979
+Dell,Vostro 5470,https://jp.drvhub.net/laptops/dell/vostro-5470,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,2980
+Dell,Vostro 5471,https://jp.drvhub.net/laptops/dell/vostro-5471,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,501
+Dell,Vostro 5625,https://jp.drvhub.net/laptops/dell/vostro-5625,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1656
+Dell,Vostro V130,https://jp.drvhub.net/laptops/dell/vostro-v130,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,2620
+Dell,Vostro V131,https://jp.drvhub.net/laptops/dell/vostro-v131,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,2674
+Dell,XPS 13 9340,https://jp.drvhub.net/laptops/dell/xps-13-9340,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,893
+Dell,XPS 13 9345,https://jp.drvhub.net/laptops/dell/xps-13-9345,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,597
+Dell,XPS 13 9350,https://jp.drvhub.net/laptops/dell/xps-13-9350,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,483
+Dell,XPS 15 9530,https://jp.drvhub.net/laptops/dell/xps-15-9530,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1251
+Fujitsu,CELSIUS H700,https://jp.drvhub.net/laptops/fujitsu/celsius-h700,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3230
+Fujitsu,CELSIUS H710,https://jp.drvhub.net/laptops/fujitsu/celsius-h710,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3067
+Fujitsu,CELSIUS H720,https://jp.drvhub.net/laptops/fujitsu/celsius-h720,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3116
+Fujitsu,CELSIUS H730,https://jp.drvhub.net/laptops/fujitsu/celsius-h730,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3148
+Fujitsu,CELSIUS H760,https://jp.drvhub.net/laptops/fujitsu/celsius-h760,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,1847
+Fujitsu,CELSIUS H770,https://jp.drvhub.net/laptops/fujitsu/celsius-h770,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,1270
+Fujitsu,CELSIUS H780,https://jp.drvhub.net/laptops/fujitsu/celsius-h780,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,537
+Fujitsu,CELSIUS H910,https://jp.drvhub.net/laptops/fujitsu/celsius-h910,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3068
+Fujitsu,CELSIUS H920,https://jp.drvhub.net/laptops/fujitsu/celsius-h920,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3115
+Fujitsu,E780,https://jp.drvhub.net/laptops/fujitsu/e780,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3212
+Fujitsu,LIFEBOOK A530,https://jp.drvhub.net/laptops/fujitsu/lifebook-a530,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3235
+Fujitsu,LIFEBOOK AH530/HD6,https://jp.drvhub.net/laptops/fujitsu/lifebook-ah530-hd6,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3249
+Fujitsu,LIFEBOOK AH531/GFO,https://jp.drvhub.net/laptops/fujitsu/lifebook-ah531-gfo,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3072
+Fujitsu,LIFEBOOK AH550,https://jp.drvhub.net/laptops/fujitsu/lifebook-ah550,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3214
+Fujitsu,LIFEBOOK AH572,https://jp.drvhub.net/laptops/fujitsu/lifebook-ah572,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3066
+Fujitsu,LIFEBOOK BH531,https://jp.drvhub.net/laptops/fujitsu/lifebook-bh531,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3074
+Fujitsu,LIFEBOOK E448,https://jp.drvhub.net/laptops/fujitsu/lifebook-e448,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,384
+Fujitsu,LIFEBOOK E449,https://jp.drvhub.net/laptops/fujitsu/lifebook-e449,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,383
+Fujitsu,LIFEBOOK E458,https://jp.drvhub.net/laptops/fujitsu/lifebook-e458,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,198
+Fujitsu,LIFEBOOK E546,https://jp.drvhub.net/laptops/fujitsu/lifebook-e546,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,2154
+Fujitsu,LIFEBOOK E547,https://jp.drvhub.net/laptops/fujitsu/lifebook-e547,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,1520
+Fujitsu,LIFEBOOK E548,https://jp.drvhub.net/laptops/fujitsu/lifebook-e548,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,422
+Fujitsu,LIFEBOOK E556,https://jp.drvhub.net/laptops/fujitsu/lifebook-e556,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,2155
+Fujitsu,LIFEBOOK E557,https://jp.drvhub.net/laptops/fujitsu/lifebook-e557,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,1519
+Fujitsu,LIFEBOOK E558,https://jp.drvhub.net/laptops/fujitsu/lifebook-e558,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,421
+Fujitsu,LIFEBOOK E733,https://jp.drvhub.net/laptops/fujitsu/lifebook-e733,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3117
+Fujitsu,LIFEBOOK E734,https://jp.drvhub.net/laptops/fujitsu/lifebook-e734,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3135
+Fujitsu,LIFEBOOK E736,https://jp.drvhub.net/laptops/fujitsu/lifebook-e736,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,2151
+Fujitsu,LIFEBOOK E743,https://jp.drvhub.net/laptops/fujitsu/lifebook-e743,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3118
+Fujitsu,LIFEBOOK E744,https://jp.drvhub.net/laptops/fujitsu/lifebook-e744,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3136
+Fujitsu,LIFEBOOK E746,https://jp.drvhub.net/laptops/fujitsu/lifebook-e746,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,2150
+Fujitsu,LIFEBOOK E751,https://jp.drvhub.net/laptops/fujitsu/lifebook-e751,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3061
+Fujitsu,LIFEBOOK E752,https://jp.drvhub.net/laptops/fujitsu/lifebook-e752,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3095
+Fujitsu,LIFEBOOK E753,https://jp.drvhub.net/laptops/fujitsu/lifebook-e753,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3119
+Fujitsu,LIFEBOOK E780,https://jp.drvhub.net/laptops/fujitsu/lifebook-e780,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3212
+Fujitsu,LIFEBOOK E781,https://jp.drvhub.net/laptops/fujitsu/lifebook-e781,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3076
+Fujitsu,LIFEBOOK E782,https://jp.drvhub.net/laptops/fujitsu/lifebook-e782,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3096
+Fujitsu,LIFEBOOK E8420,https://jp.drvhub.net/laptops/fujitsu/lifebook-e8420,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3151
+Fujitsu,LIFEBOOK LH531,https://jp.drvhub.net/laptops/fujitsu/lifebook-lh531,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3073
+Fujitsu,LIFEBOOK LH772,https://jp.drvhub.net/laptops/fujitsu/lifebook-lh772,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3127
+Fujitsu,LIFEBOOK N532,https://jp.drvhub.net/laptops/fujitsu/lifebook-n532,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3104
+Fujitsu,LIFEBOOK NH532,https://jp.drvhub.net/laptops/fujitsu/lifebook-nh532,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3112
+Fujitsu,LIFEBOOK NH570,https://jp.drvhub.net/laptops/fujitsu/lifebook-nh570,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3210
+Fujitsu,LIFEBOOK NH751,https://jp.drvhub.net/laptops/fujitsu/lifebook-nh751,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3070
+Fujitsu,LIFEBOOK P3110,https://jp.drvhub.net/laptops/fujitsu/lifebook-p3110,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3199
+Fujitsu,LIFEBOOK P701,https://jp.drvhub.net/laptops/fujitsu/lifebook-p701,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3065
+Fujitsu,LIFEBOOK P702,https://jp.drvhub.net/laptops/fujitsu/lifebook-p702,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3097
+Fujitsu,LIFEBOOK P727,https://jp.drvhub.net/laptops/fujitsu/lifebook-p727,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,1502
+Fujitsu,LIFEBOOK P728,https://jp.drvhub.net/laptops/fujitsu/lifebook-p728,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,416
+Fujitsu,LIFEBOOK P770,https://jp.drvhub.net/laptops/fujitsu/lifebook-p770,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3224
+Fujitsu,LIFEBOOK P771,https://jp.drvhub.net/laptops/fujitsu/lifebook-p771,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3064
+Fujitsu,LIFEBOOK P8020,https://jp.drvhub.net/laptops/fujitsu/lifebook-p8020,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3165
+Fujitsu,LIFEBOOK P8110,https://jp.drvhub.net/laptops/fujitsu/lifebook-p8110,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3196
+Fujitsu,LIFEBOOK PH530,https://jp.drvhub.net/laptops/fujitsu/lifebook-ph530,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3241
+Fujitsu,LIFEBOOK S6420,https://jp.drvhub.net/laptops/fujitsu/lifebook-s6420,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3164
+Fujitsu,LIFEBOOK S710,https://jp.drvhub.net/laptops/fujitsu/lifebook-s710,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3211
+Fujitsu,LIFEBOOK S7220,https://jp.drvhub.net/laptops/fujitsu/lifebook-s7220,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3166
+Fujitsu,LIFEBOOK S751,https://jp.drvhub.net/laptops/fujitsu/lifebook-s751,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3062
+Fujitsu,LIFEBOOK S752,https://jp.drvhub.net/laptops/fujitsu/lifebook-s752,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3083
+Fujitsu,LIFEBOOK S760,https://jp.drvhub.net/laptops/fujitsu/lifebook-s760,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3215
+Fujitsu,LIFEBOOK S761,https://jp.drvhub.net/laptops/fujitsu/lifebook-s761,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3063
+Fujitsu,LIFEBOOK S762,https://jp.drvhub.net/laptops/fujitsu/lifebook-s762,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3084
+Fujitsu,LIFEBOOK S781,https://jp.drvhub.net/laptops/fujitsu/lifebook-s781,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3077
+Fujitsu,LIFEBOOK S782,https://jp.drvhub.net/laptops/fujitsu/lifebook-s782,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3099
+Fujitsu,LIFEBOOK S792,https://jp.drvhub.net/laptops/fujitsu/lifebook-s792,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3085
+Fujitsu,LIFEBOOK S904,https://jp.drvhub.net/laptops/fujitsu/lifebook-s904,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3131
+Fujitsu,LIFEBOOK S936,https://jp.drvhub.net/laptops/fujitsu/lifebook-s936,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,2011
+Fujitsu,LIFEBOOK S937,https://jp.drvhub.net/laptops/fujitsu/lifebook-s937,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,420
+Fujitsu,LIFEBOOK S938,https://jp.drvhub.net/laptops/fujitsu/lifebook-s938,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,411
+Fujitsu,LIFEBOOK SH531,https://jp.drvhub.net/laptops/fujitsu/lifebook-sh531,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3075
+Fujitsu,LIFEBOOK SH531/GFX,https://jp.drvhub.net/laptops/fujitsu/lifebook-sh531-gfx,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3078
+Fujitsu,LIFEBOOK SH572,https://jp.drvhub.net/laptops/fujitsu/lifebook-sh572,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3086
+Fujitsu,LIFEBOOK SH762,https://jp.drvhub.net/laptops/fujitsu/lifebook-sh762,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3114
+Fujitsu,LIFEBOOK SH772,https://jp.drvhub.net/laptops/fujitsu/lifebook-sh772,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3088
+Fujitsu,LIFEBOOK SH782,https://jp.drvhub.net/laptops/fujitsu/lifebook-sh782,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3100
+Fujitsu,LifeBook T4310,https://jp.drvhub.net/laptops/fujitsu/lifebook-t4310,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3198
+Fujitsu,LifeBook T5010,https://jp.drvhub.net/laptops/fujitsu/lifebook-t5010,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3160
+Fujitsu,LIFEBOOK T580,https://jp.drvhub.net/laptops/fujitsu/lifebook-t580,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3248
+Fujitsu,LIFEBOOK T726,https://jp.drvhub.net/laptops/fujitsu/lifebook-t726,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,1968
+Fujitsu,LIFEBOOK T730,https://jp.drvhub.net/laptops/fujitsu/lifebook-t730,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3240
+Fujitsu,LIFEBOOK T731,https://jp.drvhub.net/laptops/fujitsu/lifebook-t731,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3089
+Fujitsu,LIFEBOOK T732,https://jp.drvhub.net/laptops/fujitsu/lifebook-t732,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3105
+Fujitsu,LIFEBOOK T734,https://jp.drvhub.net/laptops/fujitsu/lifebook-t734,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3129
+Fujitsu,LIFEBOOK T900,https://jp.drvhub.net/laptops/fujitsu/lifebook-t900,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3216
+Fujitsu,LIFEBOOK T901,https://jp.drvhub.net/laptops/fujitsu/lifebook-t901,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3069
+Fujitsu,LIFEBOOK T902,https://jp.drvhub.net/laptops/fujitsu/lifebook-t902,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3101
+Fujitsu,LIFEBOOK T904,https://jp.drvhub.net/laptops/fujitsu/lifebook-t904,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3132
+Fujitsu,LIFEBOOK T936,https://jp.drvhub.net/laptops/fujitsu/lifebook-t936,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,1973
+Fujitsu,LIFEBOOK T937,https://jp.drvhub.net/laptops/fujitsu/lifebook-t937,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,1442
+Fujitsu,LIFEBOOK T938,https://jp.drvhub.net/laptops/fujitsu/lifebook-t938,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,415
+Fujitsu,LIFEBOOK TH700,https://jp.drvhub.net/laptops/fujitsu/lifebook-th700,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3242
+Fujitsu,LIFEBOOK U727,https://jp.drvhub.net/laptops/fujitsu/lifebook-u727,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,419
+Fujitsu,LIFEBOOK U728,https://jp.drvhub.net/laptops/fujitsu/lifebook-u728,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,414
+Fujitsu,LIFEBOOK U745,https://jp.drvhub.net/laptops/fujitsu/lifebook-u745,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,2517
+Fujitsu,LIFEBOOK U747,https://jp.drvhub.net/laptops/fujitsu/lifebook-u747,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,418
+Fujitsu,LIFEBOOK U748,https://jp.drvhub.net/laptops/fujitsu/lifebook-u748,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,413
+Fujitsu,LIFEBOOK U757,https://jp.drvhub.net/laptops/fujitsu/lifebook-u757,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,417
+Fujitsu,LIFEBOOK U758,https://jp.drvhub.net/laptops/fujitsu/lifebook-u758,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,412
+Fujitsu,LIFEBOOK U772,https://jp.drvhub.net/laptops/fujitsu/lifebook-u772,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,3102
+Fujitsu,LIFEBOOK U904,https://jp.drvhub.net/laptops/fujitsu/lifebook-u904,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,2920
+Fujitsu,LIFEBOOK U937,https://jp.drvhub.net/laptops/fujitsu/lifebook-u937,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,1345
+Fujitsu,LIFEBOOK U938,https://jp.drvhub.net/laptops/fujitsu/lifebook-u938,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,409
+Lenovo,IdeaPad 1 14AMN7,https://jp.drvhub.net/laptops/lenovo/ideapad-1-14amn7,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1476
+Lenovo,IdeaPad 1 14IAU7,https://jp.drvhub.net/laptops/lenovo/ideapad-1-14iau7,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1634
+Lenovo,IdeaPad 1 15AMN7,https://jp.drvhub.net/laptops/lenovo/ideapad-1-15amn7,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1477
+Lenovo,IdeaPad 1 15IAU7,https://jp.drvhub.net/laptops/lenovo/ideapad-1-15iau7,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1633
+Lenovo,IdeaPad 1 15IRU7,https://jp.drvhub.net/laptops/lenovo/ideapad-1-15iru7,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1269
+Lenovo,IdeaPad 3 14IAU7,https://jp.drvhub.net/laptops/lenovo/ideapad-3-14iau7,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1617
+Lenovo,IdeaPad 3 15IAU7,https://jp.drvhub.net/laptops/lenovo/ideapad-3-15iau7,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1615
+Lenovo,IdeaPad 3 17IAU7,https://jp.drvhub.net/laptops/lenovo/ideapad-3-17iau7,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1616
+Lenovo,IdeaPad Duet 3 10IGL5-LTE,https://jp.drvhub.net/laptops/lenovo/ideapad-duet-3-10igl5-lte,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,2327
+Lenovo,IdeaPad Duet 3 11IAN8,https://jp.drvhub.net/laptops/lenovo/ideapad-duet-3-11ian8,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1193
+Lenovo,IdeaPad Duet 5 12IRU8,https://jp.drvhub.net/laptops/lenovo/ideapad-duet-5-12iru8,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1231
+Lenovo,IdeaPad Flex 5 14ABR8,https://jp.drvhub.net/laptops/lenovo/ideapad-flex-5-14abr8,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1425
+Lenovo,IdeaPad Flex 5 14IAU7,https://jp.drvhub.net/laptops/lenovo/ideapad-flex-5-14iau7,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1707
+Lenovo,IdeaPad Flex 5 14IRU8,https://jp.drvhub.net/laptops/lenovo/ideapad-flex-5-14iru8,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1302
+Lenovo,IdeaPad Flex 5 16ABR8,https://jp.drvhub.net/laptops/lenovo/ideapad-flex-5-16abr8,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1426
+Lenovo,IdeaPad Flex 5 16IRU8,https://jp.drvhub.net/laptops/lenovo/ideapad-flex-5-16iru8,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1303
+Lenovo,IdeaPad Gaming 3 15ARH05,https://jp.drvhub.net/laptops/lenovo/ideapad-gaming-3-15arh05,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,2381
+Lenovo,IdeaPad Pro 5 14AHP9,https://jp.drvhub.net/laptops/lenovo/ideapad-pro-5-14ahp9,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,786
+Lenovo,IdeaPad Pro 5 14AKP10,https://jp.drvhub.net/laptops/lenovo/ideapad-pro-5-14akp10,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,148
+Lenovo,IdeaPad Pro 5 14IAH10,https://jp.drvhub.net/laptops/lenovo/ideapad-pro-5-14iah10,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,225
+Lenovo,IdeaPad Pro 5 14IMH9,https://jp.drvhub.net/laptops/lenovo/ideapad-pro-5-14imh9,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,836
+Lenovo,IdeaPad Pro 5 14IRH8,https://jp.drvhub.net/laptops/lenovo/ideapad-pro-5-14irh8,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1329
+Lenovo,IdeaPad Pro 5 16AHP9,https://jp.drvhub.net/laptops/lenovo/ideapad-pro-5-16ahp9,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,856
+Lenovo,IdeaPad Pro 5 16AKP10,https://jp.drvhub.net/laptops/lenovo/ideapad-pro-5-16akp10,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,177
+Lenovo,IdeaPad Pro 5 16IAH10,https://jp.drvhub.net/laptops/lenovo/ideapad-pro-5-16iah10,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,291
+Lenovo,IdeaPad Pro 5 16IMH9,https://jp.drvhub.net/laptops/lenovo/ideapad-pro-5-16imh9,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,958
+Lenovo,IdeaPad Slim 3 14ABR8,https://jp.drvhub.net/laptops/lenovo/ideapad-slim-3-14abr8,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1370
+Lenovo,IdeaPad Slim 3 14AHP10,https://jp.drvhub.net/laptops/lenovo/ideapad-slim-3-14ahp10,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,195
+Lenovo,IdeaPad Slim 3 14AMN8,https://jp.drvhub.net/laptops/lenovo/ideapad-slim-3-14amn8,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1383
+Lenovo,IdeaPad Slim 3 14ARP10,https://jp.drvhub.net/laptops/lenovo/ideapad-slim-3-14arp10,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,244
+Lenovo,IdeaPad Slim 3 14IAH8,https://jp.drvhub.net/laptops/lenovo/ideapad-slim-3-14iah8,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1059
+Lenovo,IdeaPad Slim 3 14IAN8,https://jp.drvhub.net/laptops/lenovo/ideapad-slim-3-14ian8,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1362
+Lenovo,IdeaPad Slim 3 14IRH8,https://jp.drvhub.net/laptops/lenovo/ideapad-slim-3-14irh8,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1056
+Lenovo,IdeaPad Slim 3 14IRU8,https://jp.drvhub.net/laptops/lenovo/ideapad-slim-3-14iru8,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1275
+Lenovo,IdeaPad Slim 3 14IRU9,https://jp.drvhub.net/laptops/lenovo/ideapad-slim-3-14iru9,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,845
+Lenovo,IdeaPad Slim 3 15ABR8,https://jp.drvhub.net/laptops/lenovo/ideapad-slim-3-15abr8,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1371
+Lenovo,IdeaPad Slim 3 15AHP10,https://jp.drvhub.net/laptops/lenovo/ideapad-slim-3-15ahp10,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,194
+Lenovo,IdeaPad Slim 3 15AMN8,https://jp.drvhub.net/laptops/lenovo/ideapad-slim-3-15amn8,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1382
+Lenovo,IdeaPad Slim 3 15ARP10,https://jp.drvhub.net/laptops/lenovo/ideapad-slim-3-15arp10,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,243
+Lenovo,IdeaPad Slim 3 15IAH8,https://jp.drvhub.net/laptops/lenovo/ideapad-slim-3-15iah8,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1058
+Lenovo,IdeaPad Slim 3 15IAN8,https://jp.drvhub.net/laptops/lenovo/ideapad-slim-3-15ian8,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1361
+Lenovo,IdeaPad Slim 3 15IRH8,https://jp.drvhub.net/laptops/lenovo/ideapad-slim-3-15irh8,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1055
+Lenovo,IdeaPad Slim 3 15IRU10,https://jp.drvhub.net/laptops/lenovo/ideapad-slim-3-15iru10,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,299
+Lenovo,IdeaPad Slim 3 15IRU9,https://jp.drvhub.net/laptops/lenovo/ideapad-slim-3-15iru9,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,838
+Lenovo,IdeaPad Slim 3 15ITN9,https://jp.drvhub.net/laptops/lenovo/ideapad-slim-3-15itn9,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,240
+Lenovo,IdeaPad Slim 3 16ABR8,https://jp.drvhub.net/laptops/lenovo/ideapad-slim-3-16abr8,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1368
+Lenovo,IdeaPad Slim 3 16AHP10,https://jp.drvhub.net/laptops/lenovo/ideapad-slim-3-16ahp10,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,193
+Lenovo,IdeaPad Slim 3 16ARP10,https://jp.drvhub.net/laptops/lenovo/ideapad-slim-3-16arp10,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,242
+Lenovo,IdeaPad Slim 3 16IAH8,https://jp.drvhub.net/laptops/lenovo/ideapad-slim-3-16iah8,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1057
+Lenovo,IdeaPad Slim 3 16IRH8,https://jp.drvhub.net/laptops/lenovo/ideapad-slim-3-16irh8,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1054
+Lenovo,IdeaPad Slim 3 16IRU8,https://jp.drvhub.net/laptops/lenovo/ideapad-slim-3-16iru8,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1299
+Lenovo,IdeaPad Slim 3 16IRU9,https://jp.drvhub.net/laptops/lenovo/ideapad-slim-3-16iru9,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,844
+Lenovo,IdeaPad Slim 5 13ARP10,https://jp.drvhub.net/laptops/lenovo/ideapad-slim-5-13arp10,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,447
+Lenovo,IdeaPad Slim 5 14AHP10,https://jp.drvhub.net/laptops/lenovo/ideapad-slim-5-14ahp10,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,239
+Lenovo,IdeaPad Slim 5 14AHP9,https://jp.drvhub.net/laptops/lenovo/ideapad-slim-5-14ahp9,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,808
+Lenovo,IdeaPad Slim 5 14AKP10,https://jp.drvhub.net/laptops/lenovo/ideapad-slim-5-14akp10,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,111
+Lenovo,IdeaPad Slim 5 14ARP10,https://jp.drvhub.net/laptops/lenovo/ideapad-slim-5-14arp10,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,238
+Lenovo,IdeaPad Slim 5 14IAH8,https://jp.drvhub.net/laptops/lenovo/ideapad-slim-5-14iah8,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1118
+Lenovo,IdeaPad Slim 5 14IMH9,https://jp.drvhub.net/laptops/lenovo/ideapad-slim-5-14imh9,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,906
+Lenovo,IdeaPad Slim 5 14IRH10,https://jp.drvhub.net/laptops/lenovo/ideapad-slim-5-14irh10,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,320
+Lenovo,IdeaPad Slim 5 14IRH10R,https://jp.drvhub.net/laptops/lenovo/ideapad-slim-5-14irh10r,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,312
+Lenovo,IdeaPad Slim 5 14IRL8,https://jp.drvhub.net/laptops/lenovo/ideapad-slim-5-14irl8,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1290
+Lenovo,IdeaPad Slim 5 14Q8X9,https://jp.drvhub.net/laptops/lenovo/ideapad-slim-5-14q8x9,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,502
+Lenovo,IdeaPad Slim 5 15ARP10,https://jp.drvhub.net/laptops/lenovo/ideapad-slim-5-15arp10,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,446
+Lenovo,IdeaPad Slim 5 15IRH9,https://jp.drvhub.net/laptops/lenovo/ideapad-slim-5-15irh9,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,857
+Lenovo,IdeaPad Slim 5 15IRH9R,https://jp.drvhub.net/laptops/lenovo/ideapad-slim-5-15irh9r,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,368
+Lenovo,IdeaPad Slim 5 15IRU9,https://jp.drvhub.net/laptops/lenovo/ideapad-slim-5-15iru9,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,858
+Lenovo,IdeaPad Slim 5 16ABR8,https://jp.drvhub.net/laptops/lenovo/ideapad-slim-5-16abr8,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1289
+Lenovo,IdeaPad Slim 5 16AHP10,https://jp.drvhub.net/laptops/lenovo/ideapad-slim-5-16ahp10,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,237
+Lenovo,IdeaPad Slim 5 16AHP9,https://jp.drvhub.net/laptops/lenovo/ideapad-slim-5-16ahp9,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,807
+Lenovo,IdeaPad Slim 5 16AKP10,https://jp.drvhub.net/laptops/lenovo/ideapad-slim-5-16akp10,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,110
+Lenovo,IdeaPad Slim 5 16ARP10,https://jp.drvhub.net/laptops/lenovo/ideapad-slim-5-16arp10,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,236
+Lenovo,IdeaPad Slim 5 16IAH8,https://jp.drvhub.net/laptops/lenovo/ideapad-slim-5-16iah8,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1117
+Lenovo,IdeaPad Slim 5 16IMH9,https://jp.drvhub.net/laptops/lenovo/ideapad-slim-5-16imh9,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,905
+Lenovo,IdeaPad Slim 5 16IRH10,https://jp.drvhub.net/laptops/lenovo/ideapad-slim-5-16irh10,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,321
+Lenovo,IdeaPad Slim 5 16IRH10R,https://jp.drvhub.net/laptops/lenovo/ideapad-slim-5-16irh10r,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,313
+Lenovo,IdeaPad Slim 5 16IRL8,https://jp.drvhub.net/laptops/lenovo/ideapad-slim-5-16irl8,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1309
+Lenovo,IdeaPad Slim 5 16IRU9,https://jp.drvhub.net/laptops/lenovo/ideapad-slim-5-16iru9,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,864
+Lenovo,Legion Slim 5 14APH8,https://jp.drvhub.net/laptops/lenovo/legion-slim-5-14aph8,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1048
+Lenovo,ThinkBook 13x G4 IMH,https://jp.drvhub.net/laptops/lenovo/thinkbook-13x-g4-imh,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,863
+Lenovo,ThinkBook 14 G2 ARE,https://jp.drvhub.net/laptops/lenovo/thinkbook-14-g2-are,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,2231
+Lenovo,ThinkBook 14 G5 IRL,https://jp.drvhub.net/laptops/lenovo/thinkbook-14-g5-irl,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1268
+Lenovo,ThinkBook 14 G6 ABP,https://jp.drvhub.net/laptops/lenovo/thinkbook-14-g6-abp,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1033
+Lenovo,ThinkBook 14 G7 IML,https://jp.drvhub.net/laptops/lenovo/thinkbook-14-g7-iml,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,769
+Lenovo,ThinkBook 14 G8 IAL,https://jp.drvhub.net/laptops/lenovo/thinkbook-14-g8-ial,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,124
+Lenovo,ThinkBook 14 G8 IRL,https://jp.drvhub.net/laptops/lenovo/thinkbook-14-g8-irl,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,404
+Lenovo,ThinkBook 15 G2 ARE,https://jp.drvhub.net/laptops/lenovo/thinkbook-15-g2-are,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,2230
+Lenovo,ThinkBook 16 G6 ABP,https://jp.drvhub.net/laptops/lenovo/thinkbook-16-g6-abp,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1011
+Lenovo,ThinkBook 16 G6 IRL,https://jp.drvhub.net/laptops/lenovo/thinkbook-16-g6-irl,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1012
+Lenovo,ThinkBook 16 G7 IML,https://jp.drvhub.net/laptops/lenovo/thinkbook-16-g7-iml,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,796
+Lenovo,ThinkBook 16 G7 QOY,https://jp.drvhub.net/laptops/lenovo/thinkbook-16-g7-qoy,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,422
+Lenovo,ThinkBook 16 G8 IAL,https://jp.drvhub.net/laptops/lenovo/thinkbook-16-g8-ial,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,125
+Lenovo,ThinkBook 16 G8 IRL,https://jp.drvhub.net/laptops/lenovo/thinkbook-16-g8-irl,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,403
+Lenovo,ThinkBook 16p G5 IRX,https://jp.drvhub.net/laptops/lenovo/thinkbook-16p-g5-irx,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,745
+Lenovo,ThinkBook X G2 IAH,https://jp.drvhub.net/laptops/lenovo/thinkbook-x-g2-iah,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,44
+Lenovo,Yoga 6 13ABR8,https://jp.drvhub.net/laptops/lenovo/yoga-6-13abr8,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1461
+Lenovo,Yoga 6 13ARE05,https://jp.drvhub.net/laptops/lenovo/yoga-6-13are05,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,2226
+Lenovo,Yoga 7 16IRL8,https://jp.drvhub.net/laptops/lenovo/yoga-7-16irl8,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1216
+Lenovo,Yoga Book 9 13IMU9,https://jp.drvhub.net/laptops/lenovo/yoga-book-9-13imu9,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,846
+Lenovo,Yoga Pro 7 14AHP9,https://jp.drvhub.net/laptops/lenovo/yoga-pro-7-14ahp9,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,785
+Lenovo,Yoga Pro 7 14AKP10,https://jp.drvhub.net/laptops/lenovo/yoga-pro-7-14akp10,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,146
+Lenovo,Yoga Pro 7 14ASP10,https://jp.drvhub.net/laptops/lenovo/yoga-pro-7-14asp10,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,175
+Lenovo,Yoga Pro 7 14ASP9,https://jp.drvhub.net/laptops/lenovo/yoga-pro-7-14asp9,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,486
+Lenovo,Yoga Pro 7 14IAH10,https://jp.drvhub.net/laptops/lenovo/yoga-pro-7-14iah10,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,226
+Lenovo,Yoga Pro 7 14IMH9,https://jp.drvhub.net/laptops/lenovo/yoga-pro-7-14imh9,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,851
+Lenovo,Yoga Pro 9 16IMH9,https://jp.drvhub.net/laptops/lenovo/yoga-pro-9-16imh9,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,876
+Lenovo,Yoga Slim 6 14APU8,https://jp.drvhub.net/laptops/lenovo/yoga-slim-6-14apu8,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1116
+Lenovo,Yoga Slim 6 14IRH8,https://jp.drvhub.net/laptops/lenovo/yoga-slim-6-14irh8,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1020
+Lenovo,Yoga Slim 7 14AKP10,https://jp.drvhub.net/laptops/lenovo/yoga-slim-7-14akp10,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,176
+Lenovo,Yoga Slim 7 14Q8X9,https://jp.drvhub.net/laptops/lenovo/yoga-slim-7-14q8x9,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,526
+Lenovo,Yoga Slim 7 15ILL9,https://jp.drvhub.net/laptops/lenovo/yoga-slim-7-15ill9,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,476
+Lenovo,Yoga Slim 9 14ILL10,https://jp.drvhub.net/laptops/lenovo/yoga-slim-9-14ill10,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,289
+Lenovo,Yoga Slim 9 14ITL5,https://jp.drvhub.net/laptops/lenovo/yoga-slim-9-14itl5,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,2227
+MSI,Crosshair 16 HX D14VGKG,https://jp.drvhub.net/laptops/msi/crosshair-16-hx-d14vgkg,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,683
+MSI,Crosshair 17 HX D14VGKG,https://jp.drvhub.net/laptops/msi/crosshair-17-hx-d14vgkg,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,653
+MSI,Cyborg 14 A13VF,https://jp.drvhub.net/laptops/msi/cyborg-14-a13vf,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,652
+MSI,Modern 14 C12M,https://jp.drvhub.net/laptops/msi/modern-14-c12m,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1533
+MSI,Modern 15 B12HW,https://jp.drvhub.net/laptops/msi/modern-15-b12hw,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1479
+MSI,Modern 15 B12M,https://jp.drvhub.net/laptops/msi/modern-15-b12m,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1018
+MSI,Modern 15 H B13M,https://jp.drvhub.net/laptops/msi/modern-15-h-b13m,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1076
+MSI,Pulse GL76 12UDK,https://jp.drvhub.net/laptops/msi/pulse-gl76-12udk,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1659
+MSI,Raider 18 HX A14VGG,https://jp.drvhub.net/laptops/msi/raider-18-hx-a14vgg,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,487
+MSI,Raider GE68 HX 14VGG,https://jp.drvhub.net/laptops/msi/raider-ge68-hx-14vgg,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,862
+MSI,Stealth 14Studio A13VG,https://jp.drvhub.net/laptops/msi/stealth-14studio-a13vg,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1187
+MSI,Titan 18 HX A14VIG,https://jp.drvhub.net/laptops/msi/titan-18-hx-a14vig,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,738
+MSI,Vector 17 HX A14VGG,https://jp.drvhub.net/laptops/msi/vector-17-hx-a14vgg,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,947
+Sony,SVE14119FJW,https://jp.drvhub.net/laptops/sony/sve14119fjw,https://www.sony.jp/support/vaio/products/sv/sve14119fjw.html,Sony exact notebook model link,,
+Sony,SVE14139CJW,https://jp.drvhub.net/laptops/sony/sve14139cjw,https://www.sony.jp/support/vaio/products/sv/sve14139cjw.html,Sony exact notebook model link,,
+Sony,SVE14A18FJB,https://jp.drvhub.net/laptops/sony/sve14a18fjb,https://www.sony.jp/support/vaio/products/sv/sve14a18fjb.html,Sony exact notebook model link,,
+Sony,SVE14A19FJB,https://jp.drvhub.net/laptops/sony/sve14a19fjb,https://www.sony.jp/support/vaio/products/sv/sve14a19fjb.html,Sony exact notebook model link,,
+Sony,SVE14A1AJ,https://jp.drvhub.net/laptops/sony/sve14a1aj,https://www.sony.jp/support/vaio/products/sv/sve14a1aj.html,Sony exact notebook model link,,
+Sony,SVE14A28CJB,https://jp.drvhub.net/laptops/sony/sve14a28cjb,https://www.sony.jp/support/vaio/products/sv/sve14a28cjb.html,Sony exact notebook model link,,
+Sony,SVE14A29CJS,https://jp.drvhub.net/laptops/sony/sve14a29cjs,https://www.sony.jp/support/vaio/products/sv/sve14a29cjs.html,Sony exact notebook model link,,
+Sony,SVE14A2AJ,https://jp.drvhub.net/laptops/sony/sve14a2aj,https://www.sony.jp/support/vaio/products/sv/sve14a2aj.html,Sony exact notebook model link,,
+Sony,SVE15115FJW,https://jp.drvhub.net/laptops/sony/sve15115fjw,https://www.sony.jp/support/vaio/products/sv/sve15115fjw.html,Sony exact notebook model link,,
+Sony,SVE15117FJB,https://jp.drvhub.net/laptops/sony/sve15117fjb,https://www.sony.jp/support/vaio/products/sv/sve15117fjb.html,Sony exact notebook model link,,
+Sony,SVE15117FJP,https://jp.drvhub.net/laptops/sony/sve15117fjp,https://www.sony.jp/support/vaio/products/sv/sve15117fjp.html,Sony exact notebook model link,,
+Sony,SVE15117FJW,https://jp.drvhub.net/laptops/sony/sve15117fjw,https://www.sony.jp/support/vaio/products/sv/sve15117fjw.html,Sony exact notebook model link,,
+Sony,SVE15118FJB,https://jp.drvhub.net/laptops/sony/sve15118fjb,https://www.sony.jp/support/vaio/products/sv/sve15118fjb.html,Sony exact notebook model link,,
+Sony,SVE15118FJW,https://jp.drvhub.net/laptops/sony/sve15118fjw,https://www.sony.jp/support/vaio/products/sv/sve15118fjw.html,Sony exact notebook model link,,
+Sony,SVE15119FJB,https://jp.drvhub.net/laptops/sony/sve15119fjb,https://www.sony.jp/support/vaio/products/sv/sve15119fjb.html,Sony exact notebook model link,,
+Sony,SVE15119FJP,https://jp.drvhub.net/laptops/sony/sve15119fjp,https://www.sony.jp/support/vaio/products/sv/sve15119fjp.html,Sony exact notebook model link,,
+Sony,SVE15119FJW,https://jp.drvhub.net/laptops/sony/sve15119fjw,https://www.sony.jp/support/vaio/products/sv/sve15119fjw.html,Sony exact notebook model link,,
+Sony,SVE1511AGJB,https://jp.drvhub.net/laptops/sony/sve1511agjb,https://www.sony.jp/support/vaio/products/sv/sve1511agjb.html,Sony exact notebook model link,,
+Sony,SVE1511AJ,https://jp.drvhub.net/laptops/sony/sve1511aj,https://www.sony.jp/support/vaio/products/sv/sve1511aj.html,Sony exact notebook model link,,
+Sony,SVE15123CJW,https://jp.drvhub.net/laptops/sony/sve15123cjw,https://www.sony.jp/support/vaio/products/sv/sve15123cjw.html,Sony exact notebook model link,,
+Sony,SVE15125CJP,https://jp.drvhub.net/laptops/sony/sve15125cjp,https://www.sony.jp/support/vaio/products/sv/sve15125cjp.html,Sony exact notebook model link,,
+Sony,SVE15125CJW,https://jp.drvhub.net/laptops/sony/sve15125cjw,https://www.sony.jp/support/vaio/products/sv/sve15125cjw.html,Sony exact notebook model link,,
+Sony,SVE15127CJB,https://jp.drvhub.net/laptops/sony/sve15127cjb,https://www.sony.jp/support/vaio/products/sv/sve15127cjb.html,Sony exact notebook model link,,
+Sony,SVE15127CJP,https://jp.drvhub.net/laptops/sony/sve15127cjp,https://www.sony.jp/support/vaio/products/sv/sve15127cjp.html,Sony exact notebook model link,,
+Sony,SVE15127CJW,https://jp.drvhub.net/laptops/sony/sve15127cjw,https://www.sony.jp/support/vaio/products/sv/sve15127cjw.html,Sony exact notebook model link,,
+Sony,SVE15128CJB,https://jp.drvhub.net/laptops/sony/sve15128cjb,https://www.sony.jp/support/vaio/products/sv/sve15128cjb.html,Sony exact notebook model link,,
+Sony,SVE15128CJP,https://jp.drvhub.net/laptops/sony/sve15128cjp,https://www.sony.jp/support/vaio/products/sv/sve15128cjp.html,Sony exact notebook model link,,
+Sony,SVE15128CJW,https://jp.drvhub.net/laptops/sony/sve15128cjw,https://www.sony.jp/support/vaio/products/sv/sve15128cjw.html,Sony exact notebook model link,,
+Sony,SVE15129CJS,https://jp.drvhub.net/laptops/sony/sve15129cjs,https://www.sony.jp/support/vaio/products/sv/sve15129cjs.html,Sony exact notebook model link,,
+Sony,SVE1512AJ,https://jp.drvhub.net/laptops/sony/sve1512aj,https://www.sony.jp/support/vaio/products/sv/sve1512aj.html,Sony exact notebook model link,,
+Sony,SVE15135CJW,https://jp.drvhub.net/laptops/sony/sve15135cjw,https://www.sony.jp/support/vaio/products/sv/sve15135cjw.html,Sony exact notebook model link,,
+Sony,SVE15136CJP,https://jp.drvhub.net/laptops/sony/sve15136cjp,https://www.sony.jp/support/vaio/products/sv/sve15136cjp.html,Sony exact notebook model link,,
+Sony,SVE15136CJW,https://jp.drvhub.net/laptops/sony/sve15136cjw,https://www.sony.jp/support/vaio/products/sv/sve15136cjw.html,Sony exact notebook model link,,
+Sony,SVE15137CJB,https://jp.drvhub.net/laptops/sony/sve15137cjb,https://www.sony.jp/support/vaio/products/sv/sve15137cjb.html,Sony exact notebook model link,,
+Sony,SVE15138CJB,https://jp.drvhub.net/laptops/sony/sve15138cjb,https://www.sony.jp/support/vaio/products/sv/sve15138cjb.html,Sony exact notebook model link,,
+Sony,SVE1711AJ,https://jp.drvhub.net/laptops/sony/sve1711aj,https://www.sony.jp/support/vaio/products/sv/sve1711aj.html,Sony exact notebook model link,,
+Sony,SVE1712AJ,https://jp.drvhub.net/laptops/sony/sve1712aj,https://www.sony.jp/support/vaio/products/sv/sve1712aj.html,Sony exact notebook model link,,
+Sony,SVE1713AJ,https://jp.drvhub.net/laptops/sony/sve1713aj,https://www.sony.jp/support/vaio/products/sv/sve1713aj.html,Sony exact notebook model link,,
+Sony,SVF13N1A1J,https://jp.drvhub.net/laptops/sony/svf13n1a1j,https://www.sony.jp/support/vaio/products/sv/svf13n1a1j.html,Sony exact notebook model link,,
+Sony,SVF1431A1J,https://jp.drvhub.net/laptops/sony/svf1431a1j,https://www.sony.jp/support/vaio/products/sv/svf1431a1j.html,Sony exact notebook model link,,
+Sony,SVF1432A1J,https://jp.drvhub.net/laptops/sony/svf1432a1j,https://www.sony.jp/support/vaio/products/sv/svf1432a1j.html,Sony exact notebook model link,,
+Sony,SVF14A19CJB,https://jp.drvhub.net/laptops/sony/svf14a19cjb,https://www.sony.jp/support/vaio/products/sv/svf14a19cjb.html,Sony exact notebook model link,,
+Sony,SVF14A19CJS,https://jp.drvhub.net/laptops/sony/svf14a19cjs,https://www.sony.jp/support/vaio/products/sv/svf14a19cjs.html,Sony exact notebook model link,,
+Sony,SVF14A1A1J,https://jp.drvhub.net/laptops/sony/svf14a1a1j,https://www.sony.jp/support/vaio/products/sv/svf14a1a1j.html,Sony exact notebook model link,,
+Sony,SVF14N1A1J,https://jp.drvhub.net/laptops/sony/svf14n1a1j,https://www.sony.jp/support/vaio/products/sv/svf14n1a1j.html,Sony exact notebook model link,,
+Sony,SVF14N29EJP,https://jp.drvhub.net/laptops/sony/svf14n29ejp,https://www.sony.jp/support/vaio/products/sv/svf14n29ejp.html,Sony exact notebook model link,,
+Sony,SVF15217CJW,https://jp.drvhub.net/laptops/sony/svf15217cjw,https://www.sony.jp/support/vaio/products/sv/svf15217cjw.html,Sony exact notebook model link,,
+Sony,SVF1521A1J,https://jp.drvhub.net/laptops/sony/svf1521a1j,https://www.sony.jp/support/vaio/products/sv/svf1521a1j.html,Sony exact notebook model link,,
+Sony,SVF15317DJB,https://jp.drvhub.net/laptops/sony/svf15317djb,https://www.sony.jp/support/vaio/products/sv/svf15317djb.html,Sony exact notebook model link,,
+Sony,SVF15317DJW,https://jp.drvhub.net/laptops/sony/svf15317djw,https://www.sony.jp/support/vaio/products/sv/svf15317djw.html,Sony exact notebook model link,,
+Sony,SVF15318DJW,https://jp.drvhub.net/laptops/sony/svf15318djw,https://www.sony.jp/support/vaio/products/sv/svf15318djw.html,Sony exact notebook model link,,
+Sony,SVF15319DJW,https://jp.drvhub.net/laptops/sony/svf15319djw,https://www.sony.jp/support/vaio/products/sv/svf15319djw.html,Sony exact notebook model link,,
+Sony,SVF1531A1J,https://jp.drvhub.net/laptops/sony/svf1531a1j,https://www.sony.jp/support/vaio/products/sv/svf1531a1j.html,Sony exact notebook model link,,
+Sony,SVF15327EJB,https://jp.drvhub.net/laptops/sony/svf15327ejb,https://www.sony.jp/support/vaio/products/sv/svf15327ejb.html,Sony exact notebook model link,,
+Sony,SVF15327EJW,https://jp.drvhub.net/laptops/sony/svf15327ejw,https://www.sony.jp/support/vaio/products/sv/svf15327ejw.html,Sony exact notebook model link,,
+Sony,SVF15329EJW,https://jp.drvhub.net/laptops/sony/svf15329ejw,https://www.sony.jp/support/vaio/products/sv/svf15329ejw.html,Sony exact notebook model link,,
+Sony,SVF1532A1J,https://jp.drvhub.net/laptops/sony/svf1532a1j,https://www.sony.jp/support/vaio/products/sv/svf1532a1j.html,Sony exact notebook model link,,
+Sony,SVF15A17CJB,https://jp.drvhub.net/laptops/sony/svf15a17cjb,https://www.sony.jp/support/vaio/products/sv/svf15a17cjb.html,Sony exact notebook model link,,
+Sony,SVF15A18CJB,https://jp.drvhub.net/laptops/sony/svf15a18cjb,https://www.sony.jp/support/vaio/products/sv/svf15a18cjb.html,Sony exact notebook model link,,
+Sony,SVF15A18CJP,https://jp.drvhub.net/laptops/sony/svf15a18cjp,https://www.sony.jp/support/vaio/products/sv/svf15a18cjp.html,Sony exact notebook model link,,
+Sony,SVF15A18CJS,https://jp.drvhub.net/laptops/sony/svf15a18cjs,https://www.sony.jp/support/vaio/products/sv/svf15a18cjs.html,Sony exact notebook model link,,
+Sony,SVF15A19CJS,https://jp.drvhub.net/laptops/sony/svf15a19cjs,https://www.sony.jp/support/vaio/products/sv/svf15a19cjs.html,Sony exact notebook model link,,
+Sony,SVF15A1A1J,https://jp.drvhub.net/laptops/sony/svf15a1a1j,https://www.sony.jp/support/vaio/products/sv/svf15a1a1j.html,Sony exact notebook model link,,
+Sony,SVF15N18DJB,https://jp.drvhub.net/laptops/sony/svf15n18djb,https://www.sony.jp/support/vaio/products/sv/svf15n18djb.html,Sony exact notebook model link,,
+Sony,SVF15N1A1J,https://jp.drvhub.net/laptops/sony/svf15n1a1j,https://www.sony.jp/support/vaio/products/sv/svf15n1a1j.html,Sony exact notebook model link,,
+Sony,SVF15N27EJB,https://jp.drvhub.net/laptops/sony/svf15n27ejb,https://www.sony.jp/support/vaio/products/sv/svf15n27ejb.html,Sony exact notebook model link,,
+Sony,SVF15N28EJB,https://jp.drvhub.net/laptops/sony/svf15n28ejb,https://www.sony.jp/support/vaio/products/sv/svf15n28ejb.html,Sony exact notebook model link,,
+Sony,SVS13119GJB,https://jp.drvhub.net/laptops/sony/svs13119gjb,https://www.sony.jp/support/vaio/products/sv/svs13119gjb.html,Sony exact notebook model link,,
+Sony,SVS13129CJB,https://jp.drvhub.net/laptops/sony/svs13129cjb,https://www.sony.jp/support/vaio/products/sv/svs13129cjb.html,Sony exact notebook model link,,
+Sony,SVS13129CJS,https://jp.drvhub.net/laptops/sony/svs13129cjs,https://www.sony.jp/support/vaio/products/sv/svs13129cjs.html,Sony exact notebook model link,,
+Sony,SVS1313AJ,https://jp.drvhub.net/laptops/sony/svs1313aj,https://www.sony.jp/support/vaio/products/sv/svs1313aj.html,Sony exact notebook model link,,
+Sony,SVS13A1AJ,https://jp.drvhub.net/laptops/sony/svs13a1aj,https://www.sony.jp/support/vaio/products/sv/svs13a1aj.html,Sony exact notebook model link,,
+Sony,SVS13A2AJ,https://jp.drvhub.net/laptops/sony/svs13a2aj,https://www.sony.jp/support/vaio/products/sv/svs13a2aj.html,Sony exact notebook model link,,
+Sony,SVS13A3AJ,https://jp.drvhub.net/laptops/sony/svs13a3aj,https://www.sony.jp/support/vaio/products/sv/svs13a3aj.html,Sony exact notebook model link,,
+Sony,SVS15119FJB,https://jp.drvhub.net/laptops/sony/svs15119fjb,https://www.sony.jp/support/vaio/products/sv/svs15119fjb.html,Sony exact notebook model link,,
+Sony,SVS1511AGJB,https://jp.drvhub.net/laptops/sony/svs1511agjb,https://www.sony.jp/support/vaio/products/sv/svs1511agjb.html,Sony exact notebook model link,,
+Sony,SVS1511AJ,https://jp.drvhub.net/laptops/sony/svs1511aj,https://www.sony.jp/support/vaio/products/sv/svs1511aj.html,Sony exact notebook model link,,
+Sony,SVS1513AJ,https://jp.drvhub.net/laptops/sony/svs1513aj,https://www.sony.jp/support/vaio/products/sv/svs1513aj.html,Sony exact notebook model link,,
+Sony,SVT11119FJS,https://jp.drvhub.net/laptops/sony/svt11119fjs,https://www.sony.jp/support/vaio/products/sv/svt11119fjs.html,Sony exact notebook model link,,
+Sony,SVT1111AJ,https://jp.drvhub.net/laptops/sony/svt1111aj,https://www.sony.jp/support/vaio/products/sv/svt1111aj.html,Sony exact notebook model link,,
+Sony,SVT11139CJS,https://jp.drvhub.net/laptops/sony/svt11139cjs,https://www.sony.jp/support/vaio/products/sv/svt11139cjs.html,Sony exact notebook model link,,
+Sony,SVT1311AJ,https://jp.drvhub.net/laptops/sony/svt1311aj,https://www.sony.jp/support/vaio/products/sv/svt1311aj.html,Sony exact notebook model link,,
+Sony,SVT13128CJS,https://jp.drvhub.net/laptops/sony/svt13128cjs,https://www.sony.jp/support/vaio/products/sv/svt13128cjs.html,Sony exact notebook model link,,
+Sony,SVT13129CJS,https://jp.drvhub.net/laptops/sony/svt13129cjs,https://www.sony.jp/support/vaio/products/sv/svt13129cjs.html,Sony exact notebook model link,,
+Sony,SVT13139CJS,https://jp.drvhub.net/laptops/sony/svt13139cjs,https://www.sony.jp/support/vaio/products/sv/svt13139cjs.html,Sony exact notebook model link,,
+Sony,SVT1313AJ,https://jp.drvhub.net/laptops/sony/svt1313aj,https://www.sony.jp/support/vaio/products/sv/svt1313aj.html,Sony exact notebook model link,,
+Sony,SVT14119CJS,https://jp.drvhub.net/laptops/sony/svt14119cjs,https://www.sony.jp/support/vaio/products/sv/svt14119cjs.html,Sony exact notebook model link,,
+Sony,SVT15118CJS,https://jp.drvhub.net/laptops/sony/svt15118cjs,https://www.sony.jp/support/vaio/products/sv/svt15118cjs.html,Sony exact notebook model link,,
+Sony,SVT1511AJ,https://jp.drvhub.net/laptops/sony/svt1511aj,https://www.sony.jp/support/vaio/products/sv/svt1511aj.html,Sony exact notebook model link,,
+Sony,SVT2121A1J,https://jp.drvhub.net/laptops/sony/svt2121a1j,https://www.sony.jp/support/vaio/products/sv/svt2121a1j.html,Sony exact notebook model link,,
+Sony,SVT21229EJB,https://jp.drvhub.net/laptops/sony/svt21229ejb,https://www.sony.jp/support/vaio/products/sv/svt21229ejb.html,Sony exact notebook model link,,
+Sony,VGN-CR90HS,https://jp.drvhub.net/laptops/sony/vgn-cr90hs,https://www.sony.jp/support/vaio/products/vgn/vgn-cr90hs.html,Sony exact notebook model link,,
+Sony,VGN-CS92JS,https://jp.drvhub.net/laptops/sony/vgn-cs92js,https://www.sony.jp/support/vaio/products/vgn/vgn-cs92js.html,Sony exact notebook model link,,
+Sony,VGN-FW74FB,https://jp.drvhub.net/laptops/sony/vgn-fw74fb,https://www.sony.jp/support/vaio/products/vgn/vgn-fw74fb.html,Sony exact notebook model link,,
+Sony,VGN-FW90S,https://jp.drvhub.net/laptops/sony/vgn-fw90s,https://www.sony.jp/support/vaio/products/vgn/vgn-fw90s.html,Sony exact notebook model link,,
+Sony,VGN-FZ52B2,https://jp.drvhub.net/laptops/sony/vgn-fz52b2,https://www.sony.jp/support/vaio/products/vgn/vgn-fz52b2.html,Sony exact notebook model link,,
+Sony,VGN-FZ62B,https://jp.drvhub.net/laptops/sony/vgn-fz62b,https://www.sony.jp/support/vaio/products/vgn/vgn-fz62b.html,Sony exact notebook model link,,
+Sony,VGN-FZ92HS,https://jp.drvhub.net/laptops/sony/vgn-fz92hs,https://www.sony.jp/support/vaio/products/vgn/vgn-fz92hs.html,Sony exact notebook model link,,
+Sony,VGN-FZ92S,https://jp.drvhub.net/laptops/sony/vgn-fz92s,https://www.sony.jp/support/vaio/products/vgn/vgn-fz92s.html,Sony exact notebook model link,,
+Sony,VGN-G3ABGS,https://jp.drvhub.net/laptops/sony/vgn-g3abgs,https://www.sony.jp/support/vaio/products/vgn/vgn-g3abgs.html,Sony exact notebook model link,,
+Sony,VGN-G3KANB,https://jp.drvhub.net/laptops/sony/vgn-g3kanb,https://www.sony.jp/support/vaio/products/vgn/vgn-g3kanb.html,Sony exact notebook model link,,
+Sony,VGN-NR71B2,https://jp.drvhub.net/laptops/sony/vgn-nr71b2,https://www.sony.jp/support/vaio/products/vgn/vgn-nr71b2.html,Sony exact notebook model link,,
+Sony,VGN-NR72B,https://jp.drvhub.net/laptops/sony/vgn-nr72b,https://www.sony.jp/support/vaio/products/vgn/vgn-nr72b.html,Sony exact notebook model link,,
+Sony,VGN-NW50JB,https://jp.drvhub.net/laptops/sony/vgn-nw50jb,https://www.sony.jp/support/vaio/products/vgn/vgn-nw50jb.html,Sony exact notebook model link,,
+Sony,VGN-NW91VS,https://jp.drvhub.net/laptops/sony/vgn-nw91vs,https://www.sony.jp/support/vaio/products/vgn/vgn-nw91vs.html,Sony exact notebook model link,,
+Sony,VGN-SZ93NS,https://jp.drvhub.net/laptops/sony/vgn-sz93ns,https://www.sony.jp/support/vaio/products/vgn/vgn-sz93ns.html,Sony exact notebook model link,,
+Sony,VGN-SZ95US,https://jp.drvhub.net/laptops/sony/vgn-sz95us,https://www.sony.jp/support/vaio/products/vgn/vgn-sz95us.html,Sony exact notebook model link,,
+Sony,VGN-TT70B,https://jp.drvhub.net/laptops/sony/vgn-tt70b,https://www.sony.jp/support/vaio/products/vgn/vgn-tt70b.html,Sony exact notebook model link,,
+Sony,VGN-TT90US,https://jp.drvhub.net/laptops/sony/vgn-tt90us,https://www.sony.jp/support/vaio/products/vgn/vgn-tt90us.html,Sony exact notebook model link,,
+Sony,VGN-TT91YS,https://jp.drvhub.net/laptops/sony/vgn-tt91ys,https://www.sony.jp/support/vaio/products/vgn/vgn-tt91ys.html,Sony exact notebook model link,,
+Sony,VGN-TZ71B,https://jp.drvhub.net/laptops/sony/vgn-tz71b,https://www.sony.jp/support/vaio/products/vgn/vgn-tz71b.html,Sony exact notebook model link,,
+Sony,VGN-TZ90NS,https://jp.drvhub.net/laptops/sony/vgn-tz90ns,https://www.sony.jp/support/vaio/products/vgn/vgn-tz90ns.html,Sony exact notebook model link,,
+Sony,VGN-TZ91S,https://jp.drvhub.net/laptops/sony/vgn-tz91s,https://www.sony.jp/support/vaio/products/vgn/vgn-tz91s.html,Sony exact notebook model link,,
+Sony,VGN-Z73FB,https://jp.drvhub.net/laptops/sony/vgn-z73fb,https://www.sony.jp/support/vaio/products/vgn/vgn-z73fb.html,Sony exact notebook model link,,
+Sony,VPCCA1AFJ,https://jp.drvhub.net/laptops/sony/vpcca1afj,https://www.sony.jp/support/vaio/products/vpc/vpcca1afj.html,Sony exact notebook model link,,
+Sony,VPCCA2AJ,https://jp.drvhub.net/laptops/sony/vpcca2aj,https://www.sony.jp/support/vaio/products/vpc/vpcca2aj.html,Sony exact notebook model link,,
+Sony,VPCCA3AJ,https://jp.drvhub.net/laptops/sony/vpcca3aj,https://www.sony.jp/support/vaio/products/vpc/vpcca3aj.html,Sony exact notebook model link,,
+Sony,VPCCA4AJ,https://jp.drvhub.net/laptops/sony/vpcca4aj,https://www.sony.jp/support/vaio/products/vpc/vpcca4aj.html,Sony exact notebook model link,,
+Sony,VPCCB2AJ,https://jp.drvhub.net/laptops/sony/vpccb2aj,https://www.sony.jp/support/vaio/products/vpc/vpccb2aj.html,Sony exact notebook model link,,
+Sony,VPCCB3AJ,https://jp.drvhub.net/laptops/sony/vpccb3aj,https://www.sony.jp/support/vaio/products/vpc/vpccb3aj.html,Sony exact notebook model link,,
+Sony,VPCCB4AJ,https://jp.drvhub.net/laptops/sony/vpccb4aj,https://www.sony.jp/support/vaio/products/vpc/vpccb4aj.html,Sony exact notebook model link,,
+Sony,VPCEA390X,https://jp.drvhub.net/laptops/sony/vpcea390x,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,8714
+Sony,VPCEA3AFJ,https://jp.drvhub.net/laptops/sony/vpcea3afj,https://www.sony.jp/support/vaio/products/vpc/vpcea3afj.html,Sony exact notebook model link,,
+Sony,VPCEA4AFJ,https://jp.drvhub.net/laptops/sony/vpcea4afj,https://www.sony.jp/support/vaio/products/vpc/vpcea4afj.html,Sony exact notebook model link,,
+Sony,VPCEB3AFJ,https://jp.drvhub.net/laptops/sony/vpceb3afj,https://www.sony.jp/support/vaio/products/vpc/vpceb3afj.html,Sony exact notebook model link,,
+Sony,VPCEB4AGJ,https://jp.drvhub.net/laptops/sony/vpceb4agj,https://www.sony.jp/support/vaio/products/vpc/vpceb4agj.html,Sony exact notebook model link,,
+Sony,VPCEC390X,https://jp.drvhub.net/laptops/sony/vpcec390x,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,8719
+Sony,VPCEG3AJ,https://jp.drvhub.net/laptops/sony/vpceg3aj,https://www.sony.jp/support/vaio/products/vpc/vpceg3aj.html,Sony exact notebook model link,,
+Sony,VPCEJ2AJ,https://jp.drvhub.net/laptops/sony/vpcej2aj,https://www.sony.jp/support/vaio/products/vpc/vpcej2aj.html,Sony exact notebook model link,,
+Sony,VPCEJ3AJ,https://jp.drvhub.net/laptops/sony/vpcej3aj,https://www.sony.jp/support/vaio/products/vpc/vpcej3aj.html,Sony exact notebook model link,,
+Sony,VPCF11AFJ,https://jp.drvhub.net/laptops/sony/vpcf11afj,https://www.sony.jp/support/vaio/products/vpc/vpcf11afj.html,Sony exact notebook model link,,
+Sony,VPCF14AFJ,https://jp.drvhub.net/laptops/sony/vpcf14afj,https://www.sony.jp/support/vaio/products/vpc/vpcf14afj.html,Sony exact notebook model link,,
+Sony,VPCF14AGJ,https://jp.drvhub.net/laptops/sony/vpcf14agj,https://www.sony.jp/support/vaio/products/vpc/vpcf14agj.html,Sony exact notebook model link,,
+Sony,VPCF21AFJ,https://jp.drvhub.net/laptops/sony/vpcf21afj,https://www.sony.jp/support/vaio/products/vpc/vpcf21afj.html,Sony exact notebook model link,,
+Sony,VPCF21AHJ,https://jp.drvhub.net/laptops/sony/vpcf21ahj,https://www.sony.jp/support/vaio/products/vpc/vpcf21ahj.html,Sony exact notebook model link,,
+Sony,VPCF22AJ,https://jp.drvhub.net/laptops/sony/vpcf22aj,https://www.sony.jp/support/vaio/products/vpc/vpcf22aj.html,Sony exact notebook model link,,
+Sony,VPCF23AJ,https://jp.drvhub.net/laptops/sony/vpcf23aj,https://www.sony.jp/support/vaio/products/vpc/vpcf23aj.html,Sony exact notebook model link,,
+Sony,VPCF24AJ,https://jp.drvhub.net/laptops/sony/vpcf24aj,https://www.sony.jp/support/vaio/products/vpc/vpcf24aj.html,Sony exact notebook model link,,
+Sony,VPCS11AFJ,https://jp.drvhub.net/laptops/sony/vpcs11afj,https://www.sony.jp/support/vaio/products/vpc/vpcs11afj.html,Sony exact notebook model link,,
+Sony,VPCS12AFJ,https://jp.drvhub.net/laptops/sony/vpcs12afj,https://www.sony.jp/support/vaio/products/vpc/vpcs12afj.html,Sony exact notebook model link,,
+Sony,VPCS14AFJ,https://jp.drvhub.net/laptops/sony/vpcs14afj,https://www.sony.jp/support/vaio/products/vpc/vpcs14afj.html,Sony exact notebook model link,,
+Sony,VPCSA2AJ,https://jp.drvhub.net/laptops/sony/vpcsa2aj,https://www.sony.jp/support/vaio/products/vpc/vpcsa2aj.html,Sony exact notebook model link,,
+Sony,VPCSA3AJ,https://jp.drvhub.net/laptops/sony/vpcsa3aj,https://www.sony.jp/support/vaio/products/vpc/vpcsa3aj.html,Sony exact notebook model link,,
+Sony,VPCSB1AFJ,https://jp.drvhub.net/laptops/sony/vpcsb1afj,https://www.sony.jp/support/vaio/products/vpc/vpcsb1afj.html,Sony exact notebook model link,,
+Sony,VPCSB1AGJ,https://jp.drvhub.net/laptops/sony/vpcsb1agj,https://www.sony.jp/support/vaio/products/vpc/vpcsb1agj.html,Sony exact notebook model link,,
+Sony,VPCSB2AJ,https://jp.drvhub.net/laptops/sony/vpcsb2aj,https://www.sony.jp/support/vaio/products/vpc/vpcsb2aj.html,Sony exact notebook model link,,
+Sony,VPCSB3AJ,https://jp.drvhub.net/laptops/sony/vpcsb3aj,https://www.sony.jp/support/vaio/products/vpc/vpcsb3aj.html,Sony exact notebook model link,,
+Sony,VPCSE1AJ,https://jp.drvhub.net/laptops/sony/vpcse1aj,https://www.sony.jp/support/vaio/products/vpc/vpcse1aj.html,Sony exact notebook model link,,
+Sony,VPCSE2AJ,https://jp.drvhub.net/laptops/sony/vpcse2aj,https://www.sony.jp/support/vaio/products/vpc/vpcse2aj.html,Sony exact notebook model link,,
+Sony,VPCYA2AJ,https://jp.drvhub.net/laptops/sony/vpcya2aj,https://www.sony.jp/support/vaio/products/vpc/vpcya2aj.html,Sony exact notebook model link,,
+Sony,VPCZ1290X,https://jp.drvhub.net/laptops/sony/vpcz1290x,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,8492
+Sony,VPCZ12AGJ,https://jp.drvhub.net/laptops/sony/vpcz12agj,https://www.sony.jp/support/vaio/products/vpc/vpcz12agj.html,Sony exact notebook model link,,
+Sony,VPCZ14AGJ,https://jp.drvhub.net/laptops/sony/vpcz14agj,https://www.sony.jp/support/vaio/products/vpc/vpcz14agj.html,Sony exact notebook model link,,
+Sony,VPCZ21AJ,https://jp.drvhub.net/laptops/sony/vpcz21aj,https://www.sony.jp/support/vaio/products/vpc/vpcz21aj.html,Sony exact notebook model link,,
+Sony,VPCZ23AJ,https://jp.drvhub.net/laptops/sony/vpcz23aj,https://www.sony.jp/support/vaio/products/vpc/vpcz23aj.html,Sony exact notebook model link,,
+ASUS,EXPERTBOOK B1403CTA,https://jp.drvhub.net/laptops/asus/expertbook-b1403cta,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,397
+ASUS,EXPERTBOOK B1403CVA,https://jp.drvhub.net/laptops/asus/expertbook-b1403cva,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,445
+ASUS,EXPERTBOOK B1403CVA B1403CVAB,https://jp.drvhub.net/laptops/asus/expertbook-b1403cva-b1403cvab,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,445
+ASUS,EXPERTBOOK B1403CVA BG1409CVA,https://jp.drvhub.net/laptops/asus/expertbook-b1403cva-bg1409cva,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,445
+ASUS,EXPERTBOOK B1503CTA,https://jp.drvhub.net/laptops/asus/expertbook-b1503cta,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,400
+ASUS,EXPERTBOOK B1503CTA P1503CTA,https://jp.drvhub.net/laptops/asus/expertbook-b1503cta-p1503cta,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,400
+ASUS,EXPERTBOOK B1503CTA PX563CTA,https://jp.drvhub.net/laptops/asus/expertbook-b1503cta-px563cta,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,400
+ASUS,EXPERTBOOK B1503CVA,https://jp.drvhub.net/laptops/asus/expertbook-b1503cva,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,441
+ASUS,EXPERTBOOK B1503CVA B1503CVAB,https://jp.drvhub.net/laptops/asus/expertbook-b1503cva-b1503cvab,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,441
+ASUS,EXPERTBOOK B1503CVA B1509CVA,https://jp.drvhub.net/laptops/asus/expertbook-b1503cva-b1509cva,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,441
+ASUS,EXPERTBOOK B1503CVA BR,https://jp.drvhub.net/laptops/asus/expertbook-b1503cva-br,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,441
+ASUS,EXPERTBOOK B1503CVA P1563CVA,https://jp.drvhub.net/laptops/asus/expertbook-b1503cva-p1563cva,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,441
+ASUS,EXPERTBOOK B3405CCA,https://jp.drvhub.net/laptops/asus/expertbook-b3405cca,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,79
+ASUS,EXPERTBOOK B3405CVA,https://jp.drvhub.net/laptops/asus/expertbook-b3405cva,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,196
+ASUS,EXPERTBOOK B3605CCA,https://jp.drvhub.net/laptops/asus/expertbook-b3605cca,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,76
+ASUS,EXPERTBOOK B3605CVA,https://jp.drvhub.net/laptops/asus/expertbook-b3605cva,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,172
+ASUS,EXPERTBOOK B5405CCA,https://jp.drvhub.net/laptops/asus/expertbook-b5405cca,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,87
+ASUS,EXPERTBOOK B5605CCA,https://jp.drvhub.net/laptops/asus/expertbook-b5605cca,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,82
+ASUS,EXPERTBOOK B5605CVA,https://jp.drvhub.net/laptops/asus/expertbook-b5605cva,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,187
+ASUS,EXPERTBOOK BM1403CDA,https://jp.drvhub.net/laptops/asus/expertbook-bm1403cda,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,437
+ASUS,EXPERTBOOK BM1503CDA,https://jp.drvhub.net/laptops/asus/expertbook-bm1503cda,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,438
+ASUS,ROG G703GI,https://jp.drvhub.net/laptops/asus/rog-g703gi,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,794
+ASUS,ROG G703GI YY,https://jp.drvhub.net/laptops/asus/rog-g703gi-yy,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,794
+ASUS,Strix 17 GL703GE,https://jp.drvhub.net/laptops/asus/strix-17-gl703ge,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,901
+ASUS,K40AF,https://jp.drvhub.net/laptops/asus/k40af,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1272
+ASUS,K40ID,https://jp.drvhub.net/laptops/asus/k40id,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1212
+ASUS,K40IE,https://jp.drvhub.net/laptops/asus/k40ie,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1195
+ASUS,K40IN,https://jp.drvhub.net/laptops/asus/k40in,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1073
+ASUS,K40IP,https://jp.drvhub.net/laptops/asus/k40ip,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1241
+ASUS,K42De,https://jp.drvhub.net/laptops/asus/k42de,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1299
+ASUS,K42Dr,https://jp.drvhub.net/laptops/asus/k42dr,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1297
+ASUS,K42DY,https://jp.drvhub.net/laptops/asus/k42dy,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1376
+ASUS,K42F,https://jp.drvhub.net/laptops/asus/k42f,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1204
+ASUS,K42JB,https://jp.drvhub.net/laptops/asus/k42jb,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1314
+ASUS,K42Jc,https://jp.drvhub.net/laptops/asus/k42jc,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1254
+ASUS,K42JE,https://jp.drvhub.net/laptops/asus/k42je,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1325
+ASUS,K42JK,https://jp.drvhub.net/laptops/asus/k42jk,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1315
+ASUS,K42Jr,https://jp.drvhub.net/laptops/asus/k42jr,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1193
+ASUS,K42Jv,https://jp.drvhub.net/laptops/asus/k42jv,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1253
+ASUS,K42JY,https://jp.drvhub.net/laptops/asus/k42jy,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1365
+ASUS,K42JZ,https://jp.drvhub.net/laptops/asus/k42jz,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1364
+ASUS,K42N,https://jp.drvhub.net/laptops/asus/k42n,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1298
+ASUS,K45A,https://jp.drvhub.net/laptops/asus/k45a,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1395
+ASUS,K50AF,https://jp.drvhub.net/laptops/asus/k50af,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1278
+ASUS,K50ID,https://jp.drvhub.net/laptops/asus/k50id,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1210
+ASUS,K50IE,https://jp.drvhub.net/laptops/asus/k50ie,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1211
+ASUS,K50IJ,https://jp.drvhub.net/laptops/asus/k50ij,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1082
+ASUS,K50IN,https://jp.drvhub.net/laptops/asus/k50in,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1079
+ASUS,K50IP,https://jp.drvhub.net/laptops/asus/k50ip,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1244
+ASUS,K51AE,https://jp.drvhub.net/laptops/asus/k51ae,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1232
+ASUS,K52De,https://jp.drvhub.net/laptops/asus/k52de,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1300
+ASUS,K52Dr,https://jp.drvhub.net/laptops/asus/k52dr,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1262
+ASUS,K52DY,https://jp.drvhub.net/laptops/asus/k52dy,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1389
+ASUS,K52F,https://jp.drvhub.net/laptops/asus/k52f,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1236
+ASUS,K52JB,https://jp.drvhub.net/laptops/asus/k52jb,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1243
+ASUS,K52Jc,https://jp.drvhub.net/laptops/asus/k52jc,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1257
+ASUS,K52Je,https://jp.drvhub.net/laptops/asus/k52je,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1316
+ASUS,K52JK,https://jp.drvhub.net/laptops/asus/k52jk,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1293
+ASUS,K52JT,https://jp.drvhub.net/laptops/asus/k52jt,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1360
+ASUS,K52JU,https://jp.drvhub.net/laptops/asus/k52ju,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1361
+ASUS,K52N,https://jp.drvhub.net/laptops/asus/k52n,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1260
+ASUS,K60IJ,https://jp.drvhub.net/laptops/asus/k60ij,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1117
+ASUS,K61IC,https://jp.drvhub.net/laptops/asus/k61ic,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1163
+ASUS,K70AE,https://jp.drvhub.net/laptops/asus/k70ae,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1208
+ASUS,K70IC,https://jp.drvhub.net/laptops/asus/k70ic,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1157
+ASUS,K70ID,https://jp.drvhub.net/laptops/asus/k70id,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1327
+ASUS,K72Dr,https://jp.drvhub.net/laptops/asus/k72dr,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1261
+ASUS,K72DY,https://jp.drvhub.net/laptops/asus/k72dy,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1369
+ASUS,K72F,https://jp.drvhub.net/laptops/asus/k72f,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1203
+ASUS,K72Jk,https://jp.drvhub.net/laptops/asus/k72jk,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1294
+ASUS,K72Jr,https://jp.drvhub.net/laptops/asus/k72jr,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1196
+ASUS,K72JT,https://jp.drvhub.net/laptops/asus/k72jt,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1359
+ASUS,K72JU,https://jp.drvhub.net/laptops/asus/k72ju,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1383
+ASUS,K73E,https://jp.drvhub.net/laptops/asus/k73e,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1386
+ASUS,K73SD,https://jp.drvhub.net/laptops/asus/k73sd,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1385
+ASUS,K75A,https://jp.drvhub.net/laptops/asus/k75a,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1398
+ASUS,N43JF,https://jp.drvhub.net/laptops/asus/n43jf,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1303
+ASUS,N43SL,https://jp.drvhub.net/laptops/asus/n43sl,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1377
+ASUS,N43SN,https://jp.drvhub.net/laptops/asus/n43sn,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1380
+ASUS,N53Jf,https://jp.drvhub.net/laptops/asus/n53jf,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1338
+ASUS,N53Jg,https://jp.drvhub.net/laptops/asus/n53jg,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1340
+ASUS,N53Jl,https://jp.drvhub.net/laptops/asus/n53jl,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1350
+ASUS,N53Jn,https://jp.drvhub.net/laptops/asus/n53jn,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1256
+ASUS,N53Jq,https://jp.drvhub.net/laptops/asus/n53jq,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1335
+ASUS,N53SN,https://jp.drvhub.net/laptops/asus/n53sn,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1363
+ASUS,N53SV,https://jp.drvhub.net/laptops/asus/n53sv,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1351
+ASUS,N61Da,https://jp.drvhub.net/laptops/asus/n61da,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1292
+ASUS,N61Ja,https://jp.drvhub.net/laptops/asus/n61ja,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1209
+ASUS,N61Jq,https://jp.drvhub.net/laptops/asus/n61jq,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1214
+ASUS,N61Jv,https://jp.drvhub.net/laptops/asus/n61jv,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1197
+ASUS,N61Vg,https://jp.drvhub.net/laptops/asus/n61vg,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1126
+ASUS,N61Vn,https://jp.drvhub.net/laptops/asus/n61vn,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1116
+ASUS,N71Ja,https://jp.drvhub.net/laptops/asus/n71ja,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1199
+ASUS,N71Jq,https://jp.drvhub.net/laptops/asus/n71jq,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1205
+ASUS,N71Jv,https://jp.drvhub.net/laptops/asus/n71jv,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1222
+ASUS,N71Vg,https://jp.drvhub.net/laptops/asus/n71vg,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1153
+ASUS,N71Vn,https://jp.drvhub.net/laptops/asus/n71vn,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1150
+ASUS,N73JF,https://jp.drvhub.net/laptops/asus/n73jf,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1302
+ASUS,N73JG,https://jp.drvhub.net/laptops/asus/n73jg,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1336
+ASUS,N73Jn,https://jp.drvhub.net/laptops/asus/n73jn,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1255
+ASUS,N73SV,https://jp.drvhub.net/laptops/asus/n73sv,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1366
+ASUS,N82JG,https://jp.drvhub.net/laptops/asus/n82jg,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1264
+ASUS,N82JQ,https://jp.drvhub.net/laptops/asus/n82jq,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1246
+ASUS,N82JV,https://jp.drvhub.net/laptops/asus/n82jv,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1233
+ASUS,EXPERTBOOK P5405CSA,https://jp.drvhub.net/laptops/asus/expertbook-p5405csa,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,449
+ASUS,EXPERTBOOK P5405CSA V5405CSA,https://jp.drvhub.net/laptops/asus/expertbook-p5405csa-v5405csa,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,449
+ASUS,U20A,https://jp.drvhub.net/laptops/asus/u20a,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1081
+ASUS,U24A,https://jp.drvhub.net/laptops/asus/u24a,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1403
+ASUS,U30Jc,https://jp.drvhub.net/laptops/asus/u30jc,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1213
+ASUS,U30Sd,https://jp.drvhub.net/laptops/asus/u30sd,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1391
+ASUS,U31F,https://jp.drvhub.net/laptops/asus/u31f,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1347
+ASUS,U31Jg,https://jp.drvhub.net/laptops/asus/u31jg,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1346
+ASUS,U33Jc,https://jp.drvhub.net/laptops/asus/u33jc,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1267
+ASUS,U35F,https://jp.drvhub.net/laptops/asus/u35f,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1304
+ASUS,U35JC,https://jp.drvhub.net/laptops/asus/u35jc,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1263
+ASUS,U36JC,https://jp.drvhub.net/laptops/asus/u36jc,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1354
+ASUS,U38N,https://jp.drvhub.net/laptops/asus/u38n,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1419
+ASUS,U41JF,https://jp.drvhub.net/laptops/asus/u41jf,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1348
+ASUS,U43F,https://jp.drvhub.net/laptops/asus/u43f,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1332
+ASUS,U45JC,https://jp.drvhub.net/laptops/asus/u45jc,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1265
+ASUS,U50F,https://jp.drvhub.net/laptops/asus/u50f,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1216
+ASUS,U50Vg,https://jp.drvhub.net/laptops/asus/u50vg,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1080
+ASUS,U52F,https://jp.drvhub.net/laptops/asus/u52f,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1392
+ASUS,U53Jc,https://jp.drvhub.net/laptops/asus/u53jc,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1239
+ASUS,U80A,https://jp.drvhub.net/laptops/asus/u80a,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1077
+ASUS,U80V,https://jp.drvhub.net/laptops/asus/u80v,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1078
+ASUS,UL20A,https://jp.drvhub.net/laptops/asus/ul20a,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1113
+ASUS,UL20FT,https://jp.drvhub.net/laptops/asus/ul20ft,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1251
+ASUS,UL30A,https://jp.drvhub.net/laptops/asus/ul30a,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1130
+ASUS,UL30JT,https://jp.drvhub.net/laptops/asus/ul30jt,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1240
+ASUS,UL30VT,https://jp.drvhub.net/laptops/asus/ul30vt,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1176
+ASUS,UL50Ag,https://jp.drvhub.net/laptops/asus/ul50ag,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1145
+ASUS,UL50AT,https://jp.drvhub.net/laptops/asus/ul50at,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1191
+ASUS,UL50Vg,https://jp.drvhub.net/laptops/asus/ul50vg,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1146
+ASUS,UL50VT,https://jp.drvhub.net/laptops/asus/ul50vt,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1177
+ASUS,UL80AG,https://jp.drvhub.net/laptops/asus/ul80ag,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1198
+ASUS,UL80Jt,https://jp.drvhub.net/laptops/asus/ul80jt,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1238
+ASUS,UL80VT,https://jp.drvhub.net/laptops/asus/ul80vt,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1174
+ASUS,UX32A,https://jp.drvhub.net/laptops/asus/ux32a,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1405
+ASUS,UX50V,https://jp.drvhub.net/laptops/asus/ux50v,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1074
+ASUS,X55A,https://jp.drvhub.net/laptops/asus/x55a,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1416
+ASUS,X55C,https://jp.drvhub.net/laptops/asus/x55c,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1420
+ASUS,X55U,https://jp.drvhub.net/laptops/asus/x55u,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1421
+ASUS,X75A,https://jp.drvhub.net/laptops/asus/x75a,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,1407
+Dell,Inspiron 13 5330,https://jp.drvhub.net/laptops/dell/inspiron-13-5330,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1399
+Dell,Inspiron 14 5430,https://jp.drvhub.net/laptops/dell/inspiron-14-5430,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1352
+Dell,Inspiron 14 5435,https://jp.drvhub.net/laptops/dell/inspiron-14-5435,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1288
+Dell,Inspiron 14 5440,https://jp.drvhub.net/laptops/dell/inspiron-14-5440,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,825
+Dell,Inspiron 14 5445,https://jp.drvhub.net/laptops/dell/inspiron-14-5445,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,832
+Dell,Inspiron 14 Plus 7430,https://jp.drvhub.net/laptops/dell/inspiron-14-plus-7430,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1235
+Dell,Inspiron 14 Plus 7440,https://jp.drvhub.net/laptops/dell/inspiron-14-plus-7440,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,896
+Dell,Inspiron 14 Plus 7441,https://jp.drvhub.net/laptops/dell/inspiron-14-plus-7441,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,566
+Dell,Inspiron 15 3510,https://jp.drvhub.net/laptops/dell/inspiron-15-3510,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1919
+Dell,Inspiron 15 3530,https://jp.drvhub.net/laptops/dell/inspiron-15-3530,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1260
+Dell,Inspiron 16 5630,https://jp.drvhub.net/laptops/dell/inspiron-16-5630,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1351
+Dell,Inspiron 16 5635,https://jp.drvhub.net/laptops/dell/inspiron-16-5635,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1283
+Dell,Inspiron 16 5640,https://jp.drvhub.net/laptops/dell/inspiron-16-5640,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,835
+Dell,Inspiron 16 5645,https://jp.drvhub.net/laptops/dell/inspiron-16-5645,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,841
+Dell,Inspiron 16 Plus 7630,https://jp.drvhub.net/laptops/dell/inspiron-16-plus-7630,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1224
+Dell,Inspiron 16 Plus 7640,https://jp.drvhub.net/laptops/dell/inspiron-16-plus-7640,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,897
+Dell,Inspiron M4040,https://jp.drvhub.net/laptops/dell/inspiron-m4040,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,2761
+Dell,Inspiron M5030,https://jp.drvhub.net/laptops/dell/inspiron-m5030,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,2618
+Dell,Inspiron M5040,https://jp.drvhub.net/laptops/dell/inspiron-m5040,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,2662
+Dell,Inspiron N4020,https://jp.drvhub.net/laptops/dell/inspiron-n4020,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,2609
+Dell,Inspiron N4030,https://jp.drvhub.net/laptops/dell/inspiron-n4030,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,2610
+Dell,Inspiron N5110,https://jp.drvhub.net/laptops/dell/inspiron-n5110,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,2642
+Dell,XPS 14 9440,https://jp.drvhub.net/laptops/dell/xps-14-9440,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,859
+Dell,XPS 16 9640,https://jp.drvhub.net/laptops/dell/xps-16-9640,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,782
+MSI,Bravo 15 B7ED,https://jp.drvhub.net/laptops/msi/bravo-15-b7ed,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1092
+MSI,Bravo 15 C7VFK,https://jp.drvhub.net/laptops/msi/bravo-15-c7vfk,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1036
+MSI,Bravo 17 C7VFK,https://jp.drvhub.net/laptops/msi/bravo-17-c7vfk,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1063
+MSI,Crosshair 16 HX AI D2XWGKG,https://jp.drvhub.net/laptops/msi/crosshair-16-hx-ai-d2xwgkg,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,5
+MSI,GE62 7RE,https://jp.drvhub.net/laptops/msi/ge62-7re,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,1515
+MSI,GE62VR 6RF,https://jp.drvhub.net/laptops/msi/ge62vr-6rf,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,1619
+MSI,GE72VR 6RF,https://jp.drvhub.net/laptops/msi/ge72vr-6rf,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,1618
+MSI,GE75 Raider 8SG,https://jp.drvhub.net/laptops/msi/ge75-raider-8sg,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,2242
+MSI,GF63 8RD,https://jp.drvhub.net/laptops/msi/gf63-8rd,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,697
+MSI,GF63 Thin 11UD,https://jp.drvhub.net/laptops/msi/gf63-thin-11ud,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,1826
+MSI,GL62 6QD,https://jp.drvhub.net/laptops/msi/gl62-6qd,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,1932
+MSI,GL72 6QD,https://jp.drvhub.net/laptops/msi/gl72-6qd,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,1918
+MSI,GP73 Leopard 8RD,https://jp.drvhub.net/laptops/msi/gp73-leopard-8rd,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,731
+MSI,GS63 Stealth 8RD,https://jp.drvhub.net/laptops/msi/gs63-stealth-8rd,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,738
+MSI,GS63VR 6RF,https://jp.drvhub.net/laptops/msi/gs63vr-6rf,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,1623
+MSI,GS63VR 7RG,https://jp.drvhub.net/laptops/msi/gs63vr-7rg,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,979
+MSI,GS73 7RE,https://jp.drvhub.net/laptops/msi/gs73-7re,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,1216
+MSI,GS73VR 6RF,https://jp.drvhub.net/laptops/msi/gs73vr-6rf,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,1616
+MSI,GS73VR 7RG,https://jp.drvhub.net/laptops/msi/gs73vr-7rg,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,1218
+MSI,Pulse 16 AI C1VGKG,https://jp.drvhub.net/laptops/msi/pulse-16-ai-c1vgkg,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,591
+MSI,Pulse 17 AI C1VGKG,https://jp.drvhub.net/laptops/msi/pulse-17-ai-c1vgkg,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,592
+MSI,Stealth 14 AI Studio A1VGG,https://jp.drvhub.net/laptops/msi/stealth-14-ai-studio-a1vgg,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,731
+MSI,Stealth 16 AI Studio A1VGG,https://jp.drvhub.net/laptops/msi/stealth-16-ai-studio-a1vgg,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,849
+MSI,Stealth 16 AI Studio A1VIG,https://jp.drvhub.net/laptops/msi/stealth-16-ai-studio-a1vig,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,728
+MSI,Stealth 18 AI Studio A1VIG,https://jp.drvhub.net/laptops/msi/stealth-18-ai-studio-a1vig,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,528
+MSI,Titan 18 HX AI A2XWJG,https://jp.drvhub.net/laptops/msi/titan-18-hx-ai-a2xwjg,https://www.energystar.gov/sites/default/files/2025-10/Computers_V8_Archived.xlsx,EPA main model number,Computers QPL V8,31
+Packard Bell,EasyNote TE69KB,https://jp.drvhub.net/laptops/packard-bell/easynote-te69kb,https://www.energystar.gov/sites/default/files/asset/document/Computers_V6_Archived.xlsx,EPA main model number,Computers QPL V6,2829
+Packard Bell,EasyNote TV11CM,https://jp.drvhub.net/laptops/packard-bell/easynote-tv11cm,https://www.energystar.gov/sites/default/files/asset/document/Computers_V5_Archived.xlsx,EPA main model number,Computers QPL V5,667
+Sony,SVP11218CJBI,https://jp.drvhub.net/laptops/sony/svp11218cjbi,https://www.sony.jp/support/vaio/products/sv/svp11218cjbi.html,Sony exact notebook model link,,
+Sony,SVP11219DJB,https://jp.drvhub.net/laptops/sony/svp11219djb,https://www.sony.jp/support/vaio/products/sv/svp11219djb.html,Sony exact notebook model link,,
+Sony,SVP1121A1J,https://jp.drvhub.net/laptops/sony/svp1121a1j,https://www.sony.jp/support/vaio/products/sv/svp1121a1j.html,Sony exact notebook model link,,
+Sony,SVP11228EJBI,https://jp.drvhub.net/laptops/sony/svp11228ejbi,https://www.sony.jp/support/vaio/products/sv/svp11228ejbi.html,Sony exact notebook model link,,
+Sony,SVP13219DJB,https://jp.drvhub.net/laptops/sony/svp13219djb,https://www.sony.jp/support/vaio/products/sv/svp13219djb.html,Sony exact notebook model link,,
+Sony,SVP1321A1J,https://jp.drvhub.net/laptops/sony/svp1321a1j,https://www.sony.jp/support/vaio/products/sv/svp1321a1j.html,Sony exact notebook model link,,
+Sony,SVP1321A2J,https://jp.drvhub.net/laptops/sony/svp1321a2j,https://www.sony.jp/support/vaio/products/sv/svp1321a2j.html,Sony exact notebook model link,,
